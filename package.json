@@ -1,0 +1,49 @@
+{
+    "name": "kahi-ui.nbn.dev",
+    "version": "0.3.0",
+    "scripts": {
+        "build:application": "svelte-kit build",
+        "dev:application": "svelte-kit dev --host 0.0.0.0",
+        "index:build": "node ./scripts/build-index.js",
+        "index:generate": "node ./scripts/generate-index.js",
+        "postinstall": "npm run postinstall:config && npm run postinstall:markdown && npm run postinstall:node && npm run postinstall:shared",
+        "postinstall:config": "cd ./packages/@kahi-docs-config;npm ci;cd ../../",
+        "postinstall:markdown": "cd ./packages/@kahi-docs-markdown;npm ci;cd ../../",
+        "postinstall:node": "cd ./packages/@kahi-docs-node;npm ci;cd ../../",
+        "postinstall:shared": "cd ./packages/@kahi-docs-shared;npm ci;cd ../../",
+        "format:application": "prettier --config .prettierrc --write ./src",
+        "preview:application": "svelte-kit preview --host 0.0.0.0",
+        "test": "npm run test:config && npm run test:markdown && npm run test:node && npm run test:shared",
+        "test:config": "cd ./packages/@kahi-docs-config;npm run test;cd ../../",
+        "test:markdown": "cd ./packages/@kahi-docs-markdown;npm run test;cd ../../",
+        "test:node": "cd ./packages/@kahi-docs-node;npm run test;cd ../../",
+        "test:shared": "cd ./packages/@kahi-docs-shared;npm run test;cd ../../"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-static": "^1.0.0-next.13",
+        "@sveltejs/kit": "^1.0.0-next.122",
+        "cheerio": "*",
+        "fast-glob": "^3.2.5",
+        "prettier": "^2.3.1",
+        "prettier-plugin-svelte": "^2.3.1",
+        "svelte": "^3.38.2",
+        "svelte-preprocess": "^4.7.3",
+        "typescript": "^4.3.2",
+        "vite": "^2.3.3"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">= 12.17.0"
+    },
+    "dependencies": {
+        "@kahi-docs/config": "file:packages/@kahi-docs-config",
+        "@kahi-docs/markdown": "file:packages/@kahi-docs-markdown",
+        "@kahi-docs/node": "file:packages/@kahi-docs-node",
+        "@kahi-docs/shared": "file:packages/@kahi-docs-shared",
+        "@kahi-ui/framework": "github:novacbn/kahi-ui#0.2.12",
+        "@novacbn/svelte-stork": "github:novacbn/svelte-stork#0.0.4",
+        "prismjs": "^1.23.0",
+        "svelte-feather": "github:novacbn/svelte-feather#0.1.0",
+        "svelte-pipeline": "github:novacbn/svelte-pipeline#0.1.2"
+    }
+}
