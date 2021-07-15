@@ -85,6 +85,8 @@
 <style>
     :global(.app-navigation) {
         grid-area: header;
+
+        height: 5.25rem;
     }
 
     :global(.app-navigation) :global(.app-navigation-search) {

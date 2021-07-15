@@ -34,6 +34,7 @@
     import {set_docs_navigation} from "@kahi-docs/shared";
 
     import AsideLayout from "../../components/layouts/AsideLayout.svelte";
+    import AsideNavigation from "../../components/navigation/AsideNavigation.svelte";
 
     export let items: INavigationMenu[];
 
@@ -42,7 +43,7 @@
 
 <AsideLayout>
     <svelte:fragment slot="aside">
-        <div class="box" data-palette="accent" style="grid-area: aside;">Aside Navigation</div>
+        <AsideNavigation />
     </svelte:fragment>
 
     <Container
