@@ -24,7 +24,7 @@
 
         grid-template-rows: auto 1fr auto;
 
-        min-width: 100%;
+        width: 100%;
         min-height: 100%;
     }
 
