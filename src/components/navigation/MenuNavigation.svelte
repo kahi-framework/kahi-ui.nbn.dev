@@ -1,6 +1,6 @@
 <script lang="ts">
-    import {Menu} from "@kahi-ui/framework";
     import type {DESIGN_ORIENTATION_VERTICAL_ARGUMENT} from "@kahi-ui/framework";
+    import {Badge, Menu, Spacer} from "@kahi-ui/framework";
 
     import type {INavigationMenu} from "@kahi-docs/config";
     import {noop} from "@kahi-docs/shared";
@@ -15,7 +15,7 @@
             {#if item.separator}
                 <!--
                     HACK: Svelte compiler complains when the `<svelte:fragment>` is not a direct
-                    decendent of Component
+                    decendent of a Component
                 -->
 
                 {#if "items" in item && item.items}
@@ -48,6 +48,14 @@
                                                 {/if}
 
                                                 {sub_item.text}
+
+                                                {#if sub_item.badge}
+                                                    <Spacer variation="inline" />
+
+                                                    <Badge palette="accent">
+                                                        {sub_item.badge}
+                                                    </Badge>
+                                                {/if}
                                             </a>
                                         </Menu.Item>
                                     {:else}
@@ -57,6 +65,14 @@
                                             {/if}
 
                                             {sub_item.text}
+
+                                            {#if sub_item.badge}
+                                                <Spacer variation="inline" />
+
+                                                <Badge palette="accent">
+                                                    {sub_item.badge}
+                                                </Badge>
+                                            {/if}
                                         </Menu.Button>
                                     {/if}
                                 {/each}

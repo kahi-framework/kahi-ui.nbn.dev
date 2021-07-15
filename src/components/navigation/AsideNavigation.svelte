@@ -26,7 +26,7 @@
     dismissible
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-    <Aside.Section margin_bottom="none" padding_y="medium">
+    <Aside.Section margin_bottom="none" padding_y="large">
         <MenuNavigation {items} />
     </Aside.Section>
 
@@ -50,11 +50,12 @@
 
         grid-area: aside;
 
-        width: 15rem;
+        width: 20rem;
         height: calc(100vh - 5.25rem);
     }
 
-    :global(.aside-navigation) :global(span[role="separator"]) {
+    :global(.aside-navigation) :global(span[role="separator"]),
+    :global(.aside-navigation) :global(.badge) {
         text-transform: uppercase;
     }
 

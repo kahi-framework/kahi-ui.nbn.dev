@@ -15,6 +15,8 @@ export interface INavigationMapOptions {
 }
 
 export interface INavigationItem {
+    badge?: string;
+
     icon?: typeof SvelteComponent;
 
     text?: string;
