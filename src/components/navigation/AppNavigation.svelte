@@ -21,14 +21,7 @@
     TODO: Do Dark Mode toggle
 -->
 
-<Omni.Container
-    class="app-navigation"
-    palette="dark"
-    variation="sticky"
-    width="100"
-    captive
-    dismissible
->
+<Omni.Container class="app-navigation" palette="dark" variation="sticky">
     <Omni.Header>
         <Anchor href={$applicationconfig.urls.base}>
             {$applicationconfig.application.title}

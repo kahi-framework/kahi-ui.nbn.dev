@@ -84,15 +84,11 @@
     }
 
     :global(.docs-container) > :global(.snippet-repl) {
-        width: 100%;
         height: min(60ex, 65vh);
     }
 
     :global(.docs-container) > :global(.snippet-highlight),
     :global(.docs-container) > :global(.snippet-repl) {
         margin: 1rem 0 0 0;
-
-        border: 1px solid rgb(var(--palette-foreground-text), 0.3);
-        border-radius: 0.375rem;
     }
 </style>

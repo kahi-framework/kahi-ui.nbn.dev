@@ -4,7 +4,7 @@
 
     import {applicationconfig} from "@kahi-docs/shared";
 
-    $: ({version} = $applicationconfig.metadata);
+    $: _version = $applicationconfig.metadata.version;
 </script>
 
 <Box padding_y="huge">
@@ -15,12 +15,12 @@
 
         <Text align="center">
             <Anchor
-                href="https://github.com/novacbn/kahi-ui/releases/{version}"
+                href="https://github.com/novacbn/kahi-ui/releases/{_version}"
                 rel="noopener noreferrer"
                 target="_blank"
             >
                 <Divider margin_y="tiny">
-                    v{version}
+                    v{_version}
                 </Divider>
             </Anchor>
 
