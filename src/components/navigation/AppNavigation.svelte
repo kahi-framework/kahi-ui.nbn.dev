@@ -1,8 +1,8 @@
 <script lang="ts">
     import {browser} from "$app/env";
-    import {Anchor, Portal, Omni, TextInput} from "@kahi-ui/framework";
+    import {Anchor, Divider, Portal, Omni, Text, TextInput} from "@kahi-ui/framework";
 
-    import {applicationconfig, appnavigation} from "@kahi-docs/shared";
+    import {applicationconfig, appnavigation, is_external_url} from "@kahi-docs/shared";
 
     import MenuNavigation from "./MenuNavigation.svelte";
     import SearchModal from "../search/SearchModal.svelte";
@@ -30,14 +30,43 @@
     dismissible
 >
     <Omni.Header>
-        <Anchor href={$applicationconfig.urls.base || "/"}>
+        <Anchor href={$applicationconfig.urls.base}>
             {$applicationconfig.application.title}
         </Anchor>
+
+        {#if $applicationconfig.application.sub_title}
+            <Divider orientation="vertical" />
+
+            {#if $applicationconfig.application.sub_href}
+                <!-- TODO: Could probably condense this with a property spread -->
+                {#if is_external_url($applicationconfig.application.sub_href)}
+                    <Anchor
+                        href={$applicationconfig.application.sub_href}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                    >
+                        <Text is="small" palette="light">
+                            {$applicationconfig.application.sub_title}
+                        </Text>
+                    </Anchor>
+                {:else}
+                    <Anchor href={$applicationconfig.application.sub_href}>
+                        <Text is="small" palette="light">
+                            {$applicationconfig.application.sub_title}
+                        </Text>
+                    </Anchor>
+                {/if}
+            {:else}
+                <Text is="small">
+                    {$applicationconfig.application.sub_title}
+                </Text>
+            {/if}
+        {/if}
     </Omni.Header>
 
     <Omni.Footer>
         {#if browser}
-            <Omni.Section class="app-navigation-search" padding_x="medium" max_width="prose">
+            <Omni.Section class="app-navigation-search" padding_x="huge" max_width="prose">
                 <TextInput
                     type="search"
                     placeholder="Search"

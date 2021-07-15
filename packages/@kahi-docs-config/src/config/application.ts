@@ -8,6 +8,12 @@ export interface IApplicationConfig {
     application: {
         description: string;
 
+        href: string;
+
+        sub_href: string;
+
+        sub_title: string;
+
         title: string;
     };
 
@@ -76,9 +82,17 @@ export function define_application(config: IApplicationPartialConfig = {}): IApp
         urls = {},
     } = config;
 
+    const {base = "/"} = urls;
+
     // HACK: These defaults are for whenever "Kahi Docs" moves to be a CLI
     // documentation platform built against a stable SvelteKit
-    const {description = "A Kahi Docs Site", title = "Kahi Docs"} = application;
+    const {
+        description = "A Kahi Docs Site",
+        href = base,
+        sub_href = "",
+        sub_title = "",
+        title = "Kahi Docs",
+    } = application;
 
     const {enabled: edit_enabled = false, url: edit_url} = edit as IEditPartial;
 
@@ -98,8 +112,6 @@ export function define_application(config: IApplicationPartialConfig = {}): IApp
 
     // TODO: what timestamp options should be presented?
     const {enabled: timestamp_enabled = true} = timestamp;
-
-    const {base = "/"} = urls;
 
     if (edit_enabled) {
         if (!edit_url) {
@@ -124,6 +136,9 @@ export function define_application(config: IApplicationPartialConfig = {}): IApp
     return {
         application: {
             description,
+            href,
+            sub_href,
+            sub_title,
             title,
         },
 
@@ -154,7 +169,7 @@ export function define_application(config: IApplicationPartialConfig = {}): IApp
         },
 
         urls: {
-            base: normalize_pathname(base),
+            base: normalize_pathname(base) || "/",
         },
     };
 }
