@@ -7,7 +7,7 @@
     import MenuNavigation from "./MenuNavigation.svelte";
     import SearchModal from "../search/SearchModal.svelte";
 
-    let omni_state: boolean = false;
+    let state: boolean = false;
     let search_state: boolean = false;
 
     function on_search_focus(event: FocusEvent) {

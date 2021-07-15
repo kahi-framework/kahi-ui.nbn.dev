@@ -34,7 +34,7 @@
     import {set_docs_navigation} from "@kahi-docs/shared";
 
     import AsideLayout from "../../components/layouts/AsideLayout.svelte";
-    import AsideNavigation from "../../components/navigation/AsideNavigation.svelte";
+    import DocsNavigation from "../../components/navigation/DocsNavigation.svelte";
 
     export let items: INavigationMenu[];
 
@@ -43,7 +43,7 @@
 
 <AsideLayout>
     <svelte:fragment slot="aside">
-        <AsideNavigation />
+        <DocsNavigation />
     </svelte:fragment>
 
     <Container
