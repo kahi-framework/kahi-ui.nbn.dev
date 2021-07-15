@@ -26,7 +26,7 @@
     dismissible
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-    <Aside.Section margin_bottom="none">
+    <Aside.Section margin_bottom="none" padding_y="medium">
         <MenuNavigation {items} />
     </Aside.Section>
 
@@ -52,6 +52,10 @@
 
         width: 15rem;
         height: calc(100vh - 5.25rem);
+    }
+
+    :global(.aside-navigation) :global(span[role="separator"]) {
+        text-transform: uppercase;
     }
 
     @media (max-width: 767.9px) {
