@@ -1,5 +1,5 @@
 import {Book} from "svelte-feather/components/Book";
-import {Github} from "svelte-feather/components/Github";
+import {Code} from "svelte-feather/components/Code";
 import {Package} from "svelte-feather/components/Package";
 
 import {define_navigation} from "@kahi-docs/config";
@@ -7,7 +7,7 @@ import {define_navigation} from "@kahi-docs/config";
 export default define_navigation({
     application: [
         {href: "/docs/framework/getting-started", text: "Documentation", icon: Book},
-        {href: "https://github.com/novacbn/kahi-ui", text: "GitHub", icon: Github},
+        {href: "https://github.com/novacbn/kahi-ui", text: "Source", icon: Code},
         {href: "https://github.com/novacbn/kahi-ui/releases", text: "Releases", icon: Package},
     ],
 
