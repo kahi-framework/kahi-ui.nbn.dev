@@ -12,12 +12,28 @@
     import type {INavigationMenu} from "@kahi-docs/config";
 
     import MenuNavigation from "./MenuNavigation.svelte";
+    import {onMount} from "svelte";
+
+    export let element: HTMLElement | null = null;
 
     export let items: INavigationMenu[];
     export let state: boolean = false;
+
+    onMount(() => {
+        if (!element) return;
+
+        const current_link = element.querySelector("a[aria-current]");
+        if (current_link) {
+            current_link.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+            });
+        }
+    });
 </script>
 
 <Aside.Container
+    bind:element
     class="aside-navigation"
     logic_id="aside-navigation"
     palette="dark"

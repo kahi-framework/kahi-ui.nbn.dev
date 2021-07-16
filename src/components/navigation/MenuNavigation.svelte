@@ -1,16 +1,26 @@
 <script lang="ts">
+    import {page} from "$app/stores";
     import type {
         DESIGN_HIDDEN_ARGUMENT,
         DESIGN_ORIENTATION_VERTICAL_ARGUMENT,
     } from "@kahi-ui/framework";
     import {Badge, Menu, Spacer} from "@kahi-ui/framework";
+    import type {Page} from "@sveltejs/kit";
 
-    import type {INavigationMenu} from "@kahi-docs/config";
-    import {noop} from "@kahi-docs/shared";
+    import type {INavigationAnchor, INavigationMenu} from "@kahi-docs/config";
+    import {normalize_pathname, noop, is_internal_url} from "@kahi-docs/shared";
 
     export let items: INavigationMenu[] = [];
     export let hidden: DESIGN_HIDDEN_ARGUMENT = false;
     export let orientation: DESIGN_ORIENTATION_VERTICAL_ARGUMENT | undefined = undefined;
+
+    function is_current(page: Page, anchor: INavigationAnchor): boolean {
+        if (is_internal_url(anchor.href)) {
+            return normalize_pathname(page.path) === normalize_pathname(anchor.href);
+        }
+
+        return false;
+    }
 </script>
 
 <Menu.Container {hidden} {orientation}>
@@ -37,7 +47,9 @@
                                     {#if "href" in sub_item}
                                         <Menu.Item>
                                             <a
-                                                aria-current={sub_item.current ? "page" : undefined}
+                                                aria-current={is_current($page, sub_item)
+                                                    ? "page"
+                                                    : undefined}
                                                 href={sub_item.href}
                                                 target={sub_item.is_external ? "_blank" : undefined}
                                                 rel={sub_item.is_external
@@ -94,7 +106,7 @@
         {:else if "href" in item}
             <Menu.Item>
                 <a
-                    current={item.current ? "page" : undefined}
+                    current={is_current($page, item) ? "page" : undefined}
                     href={item.href}
                     target={item.is_external ? "_blank" : undefined}
                     rel={item.is_external ? "noopener noreferrer" : undefined}
