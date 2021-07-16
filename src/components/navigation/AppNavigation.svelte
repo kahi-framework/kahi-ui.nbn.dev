@@ -1,6 +1,17 @@
 <script lang="ts">
     import {browser} from "$app/env";
-    import {Anchor, Divider, Portal, Omni, Text, TextInput} from "@kahi-ui/framework";
+    import {
+        Anchor,
+        Card,
+        ContextButton,
+        Divider,
+        Popover,
+        Portal,
+        Omni,
+        Text,
+        TextInput,
+    } from "@kahi-ui/framework";
+    import {MoreVertical} from "svelte-feather/components/MoreVertical";
 
     import {applicationconfig, appnavigation, is_external_url} from "@kahi-docs/shared";
 
@@ -71,7 +82,30 @@
         {/if}
 
         <Omni.Section>
-            <MenuNavigation items={$appnavigation} orientation="horizontal" />
+            <Popover
+                logic_id="app-navigation"
+                alignment_x="left"
+                spacing="medium"
+                hidden={["mobile", "tablet", "desktop"]}
+                dismissible
+                bind:state
+            >
+                <ContextButton palette="light" variation="clear" size="large" hidden="widescreen">
+                    <MoreVertical />
+                </ContextButton>
+
+                <Card.Container palette="auto" hidden="widescreen">
+                    <Card.Section>
+                        <MenuNavigation items={$appnavigation} />
+                    </Card.Section>
+                </Card.Container>
+            </Popover>
+
+            <MenuNavigation
+                items={$appnavigation}
+                orientation="horizontal"
+                hidden={["mobile", "tablet", "desktop"]}
+            />
         </Omni.Section>
     </Omni.Footer>
 </Omni.Container>
@@ -86,7 +120,7 @@
     :global(.app-navigation) {
         grid-area: header;
 
-        height: 5.25rem;
+        height: 5rem;
     }
 
     :global(.app-navigation) :global(.app-navigation-search) {

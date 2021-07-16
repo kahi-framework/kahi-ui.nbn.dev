@@ -30,5 +30,7 @@
 
     :global(.landing-layout) > :global(.landing-container) {
         grid-area: content;
+
+        overflow-x: hidden;
     }
 </style>

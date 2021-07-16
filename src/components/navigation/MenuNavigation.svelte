@@ -1,15 +1,19 @@
 <script lang="ts">
-    import type {DESIGN_ORIENTATION_VERTICAL_ARGUMENT} from "@kahi-ui/framework";
+    import type {
+        DESIGN_HIDDEN_ARGUMENT,
+        DESIGN_ORIENTATION_VERTICAL_ARGUMENT,
+    } from "@kahi-ui/framework";
     import {Badge, Menu, Spacer} from "@kahi-ui/framework";
 
     import type {INavigationMenu} from "@kahi-docs/config";
     import {noop} from "@kahi-docs/shared";
 
     export let items: INavigationMenu[] = [];
+    export let hidden: DESIGN_HIDDEN_ARGUMENT = false;
     export let orientation: DESIGN_ORIENTATION_VERTICAL_ARGUMENT | undefined = undefined;
 </script>
 
-<Menu.Container {orientation}>
+<Menu.Container {hidden} {orientation}>
     {#each items as item, index (index)}
         {#if "separator" in item}
             {#if item.separator}

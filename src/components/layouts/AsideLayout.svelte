@@ -33,5 +33,7 @@
 
     :global(.aside-layout) > :global(.aside-container) {
         grid-area: content;
+
+        overflow-x: hidden;
     }
 </style>

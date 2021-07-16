@@ -46,12 +46,7 @@
         <DocsNavigation />
     </svelte:fragment>
 
-    <Container
-        class="docs-container"
-        viewport={["mobile", "desktop:tablet", "widescreen:desktop"]}
-        padding_x="desktop:huge"
-        padding_bottom="large"
-    >
+    <Container class="docs-container" viewport="desktop" padding_bottom="large">
         <slot />
     </Container>
 </AsideLayout>

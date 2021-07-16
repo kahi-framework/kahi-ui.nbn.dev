@@ -46,12 +46,12 @@
 
     :global(.aside-navigation) {
         position: sticky !important;
-        top: 5.25rem;
+        top: 5rem;
 
         grid-area: aside;
 
         width: 20rem;
-        height: calc(100vh - 5.25rem);
+        height: calc(100vh - 5rem);
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
