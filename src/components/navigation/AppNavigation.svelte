@@ -1,3 +1,17 @@
+<script context="module" lang="ts">
+    import {viewports} from "@kahi-ui/framework";
+
+    // HACK: Would be nicer to do this via element hiding instead of JS. But since
+    // palette toggle is clientside /anyway/, we might as well do this quick and dirty
+
+    const _palette_viewports = viewports({mobile: true, tablet: true, desktop: true});
+
+    // HACK: This is here so when the parent changes
+    // (e.g. `LandingLayout` -> `AsideLayout`), the value doesn't get reset
+
+    const _search_viewports = viewports({mobile: true, tablet: true});
+</script>
+
 <script lang="ts">
     import {browser} from "$app/env";
     import {
@@ -10,22 +24,68 @@
         Omni,
         Text,
         TextInput,
+        htmlpalette,
+        prefersdark,
     } from "@kahi-ui/framework";
+    import {Moon} from "svelte-feather/components/Moon";
     import {MoreVertical} from "svelte-feather/components/MoreVertical";
+    import {Search} from "svelte-feather/components/Search";
+    import {Sun} from "svelte-feather/components/Sun";
 
-    import {applicationconfig, appnavigation, is_external_url} from "@kahi-docs/shared";
+    import type {IPreferenceThemeValues} from "@kahi-docs/shared";
+    import {
+        applicationconfig,
+        appnavigation,
+        is_external_url,
+        preferencetheme,
+    } from "@kahi-docs/shared";
 
     import MenuNavigation from "./MenuNavigation.svelte";
     import SearchModal from "../search/SearchModal.svelte";
 
-    let state: boolean = false;
+    const _htmlpalette = htmlpalette();
+    const _prefersdark = prefersdark();
+    const _preferencetheme = preferencetheme();
+
+    export let state: boolean = false;
     let search_state: boolean = false;
 
-    function on_search_focus(event: FocusEvent) {
+    function on_palette_click(event: MouseEvent) {
+        $_htmlpalette = _next_palette;
+        $_preferencetheme = _next_palette as IPreferenceThemeValues;
+    }
+
+    function on_search_focus(event: FocusEvent | MouseEvent) {
         const {target} = event;
         if (target instanceof HTMLInputElement) target.blur();
+
+        state = false;
         search_state = true;
     }
+
+    $: _next_palette =
+        (!$_htmlpalette && $_prefersdark) || $_htmlpalette === "dark" ? "light" : "dark";
+    $: _next_icon = _next_palette === "light" ? Sun : Moon;
+
+    $: _items = [
+        ...($_search_viewports
+            ? [
+                  {
+                      icon: Search,
+                      text: "Search",
+                      on_click: on_search_focus,
+                  },
+              ]
+            : []),
+        ...$appnavigation,
+        {
+            icon: _next_icon,
+            text: $_palette_viewports
+                ? _next_palette[0].toUpperCase() + _next_palette.slice(1)
+                : "",
+            on_click: on_palette_click,
+        },
+    ];
 </script>
 
 <!--
@@ -69,8 +129,8 @@
     </Omni.Header>
 
     <Omni.Footer>
-        {#if browser}
-            <Omni.Section class="app-navigation-search" padding_x="huge" max_width="prose">
+        {#if browser && !$_search_viewports}
+            <Omni.Section class="app-navigation-search" padding_x="large" max_width="prose">
                 <TextInput
                     type="search"
                     placeholder="Search"
@@ -85,7 +145,7 @@
             <Popover
                 logic_id="app-navigation"
                 alignment_x="left"
-                spacing="medium"
+                spacing="small"
                 hidden={["mobile", "tablet", "desktop"]}
                 dismissible
                 bind:state
@@ -96,13 +156,13 @@
 
                 <Card.Container palette="auto" hidden="widescreen">
                     <Card.Section>
-                        <MenuNavigation items={$appnavigation} />
+                        <MenuNavigation items={_items} />
                     </Card.Section>
                 </Card.Container>
             </Popover>
 
             <MenuNavigation
-                items={$appnavigation}
+                items={_items}
                 orientation="horizontal"
                 hidden={["mobile", "tablet", "desktop"]}
             />
@@ -121,6 +181,10 @@
         grid-area: header;
 
         height: 5rem;
+    }
+
+    :global(.app-navigation) :global(header) :global(small) {
+        font-size: 65%;
     }
 
     :global(.app-navigation) :global(.app-navigation-search) {

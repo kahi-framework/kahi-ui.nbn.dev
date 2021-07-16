@@ -16,7 +16,6 @@
     // TODO: Update `svelte-feather` with typings
     import {ArrowRight} from "svelte-feather/components/ArrowRight";
     import {Code} from "svelte-feather/components/Code";
-    import {Github} from "svelte-feather/components/Github";
     import {Grid as GridIcon} from "svelte-feather/components/Grid";
     import {Moon} from "svelte-feather/components/Moon";
     import {Zap} from "svelte-feather/components/Zap";
@@ -54,8 +53,8 @@
             size="large"
             variation="clear"
         >
-            <Github />
-            GitHub
+            <Code />
+            Source
         </Button>
     </Hero.Footer>
 </Hero.Container>
