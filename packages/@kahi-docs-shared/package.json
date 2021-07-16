@@ -22,6 +22,7 @@
     },
     "dependencies": {
         "@kahi-docs/config": "file:../@kahi-docs-config",
+        "@kahi-docs/markdown": "file:../@kahi-docs-markdown",
         "svelte-local-storage-store": "^0.2.3"
     },
     "peerDependencies": {

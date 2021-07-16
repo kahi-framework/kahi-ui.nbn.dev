@@ -59,3 +59,10 @@
         {/each}
     </Stack>
 {/each}
+
+<style>
+    :global(h2#properties ~ .stack h4) {
+        margin-top: 1em;
+        margin-bottom: 0.25em;
+    }
+</style>

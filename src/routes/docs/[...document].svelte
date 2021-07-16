@@ -28,9 +28,14 @@
 
 <script lang="ts">
     import type {IDocumentationRender} from "@kahi-docs/markdown";
-    import {applicationconfig} from "@kahi-docs/shared";
+    import {applicationconfig, set_docs_render} from "@kahi-docs/shared";
+
+    import DocumentationFooter from "../../components/documentation/DocumentationFooter.svelte";
+    import DocumentationReferences from "../../components/documentation/DocumentationReferences.svelte";
 
     export let documentation: IDocumentationRender;
+
+    set_docs_render(documentation);
 </script>
 
 <svelte:head>
@@ -38,3 +43,21 @@
 </svelte:head>
 
 {@html documentation.render}
+
+{#if Object.keys(documentation.properties.properties).length > 0}
+    <DocumentationReferences
+        references={documentation.properties.properties}
+        id="properties"
+        title="Properties"
+    />
+{/if}
+
+{#if Object.keys(documentation.properties.events).length > 0}
+    <DocumentationReferences
+        references={documentation.properties.events}
+        id="events"
+        title="Events"
+    />
+{/if}
+
+<DocumentationFooter />

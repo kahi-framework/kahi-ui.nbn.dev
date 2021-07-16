@@ -1,24 +1,18 @@
 <script lang="ts">
-    import {Clock} from "svelte-feather/components/Clock";
-    import {Github} from "svelte-feather/components/Github";
     import {Button, Divider, Figure, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
+    import {Clock} from "svelte-feather/components/Clock";
+    import {Code} from "svelte-feather/components/Code";
 
-    import type {IDocumentationRenderProperties} from "@kahi-docs/markdown";
-    import {substitute_value} from "@kahi-docs/shared";
+    import {applicationconfig, docsrender, substitute_value} from "@kahi-docs/shared";
 
-    import {
-        EDIT_ENABLED,
-        EDIT_TEXT,
-        EDIT_URL,
-        LOCALE_DEFAULT,
-        TIMESTAMP_ENABLED,
-        TIMESTAMP_TEXT,
-    } from "../../shared/environment";
+    $: _edit_url = substitute_value(
+        $applicationconfig.edit.url,
+        $docsrender.properties.identifier + ".md"
+    );
 
-    export let properties: IDocumentationRenderProperties;
-
-    $: _edit_url = substitute_value(EDIT_URL, properties.identifier + ".md");
-    $: _timestamp = new Date(properties.modified_at).toLocaleString(LOCALE_DEFAULT);
+    $: _timestamp = new Date($docsrender.properties.modified_at).toLocaleString(
+        $applicationconfig.locale.language
+    );
 </script>
 
 <Divider margin_y="large" />
@@ -30,25 +24,23 @@
     spacing="medium"
     width="100"
 >
-    {#if TIMESTAMP_ENABLED}
-        <Figure variation="icon" size="medium">
-            <Clock />
-        </Figure>
+    <Figure variation="icon" size="medium">
+        <Clock />
+    </Figure>
 
-        <div>
-            <Heading
-                is="h5"
-                align="center"
-                max_width={["widescreen:content-max", "desktop:content-max", "tablet:content-max"]}
-            >
-                {TIMESTAMP_TEXT}
-            </Heading>
+    <div>
+        <Heading
+            is="h5"
+            align="center"
+            max_width={["widescreen:content-max", "desktop:content-max", "tablet:content-max"]}
+        >
+            Last Modified
+        </Heading>
 
-            <Text is="small">{_timestamp}</Text>
-        </div>
-    {/if}
+        <Text is="small">{_timestamp}</Text>
+    </div>
 
-    {#if EDIT_ENABLED}
+    {#if $applicationconfig.edit.enabled}
         <Spacer hidden="mobile" />
 
         <div>
@@ -60,8 +52,8 @@
                 size="medium"
                 variation="clear"
             >
-                {EDIT_TEXT}
-                <Github />
+                View page in repository
+                <Code />
             </Button>
         </div>
     {/if}

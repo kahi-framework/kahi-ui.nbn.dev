@@ -1,4 +1,5 @@
 export * from "./stores/applicationconfig";
+export * from "./stores/docsrender";
 export * from "./stores/navigation";
 export * from "./stores/partialsconfig";
 export * from "./stores/preferences";
