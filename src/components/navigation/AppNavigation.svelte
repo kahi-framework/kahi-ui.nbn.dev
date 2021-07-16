@@ -45,14 +45,13 @@
 
     const _htmlpalette = htmlpalette();
     const _prefersdark = prefersdark();
-    const _preferencetheme = preferencetheme();
 
     export let state: boolean = false;
     let search_state: boolean = false;
 
     function on_palette_click(event: MouseEvent) {
         $_htmlpalette = _next_palette;
-        $_preferencetheme = _next_palette as IPreferenceThemeValues;
+        $preferencetheme = _next_palette as IPreferenceThemeValues;
     }
 
     function on_search_focus(event: FocusEvent | MouseEvent) {
@@ -67,6 +66,8 @@
         (!$_htmlpalette && $_prefersdark) || $_htmlpalette === "dark" ? "light" : "dark";
     $: _next_icon = _next_palette === "light" ? Sun : Moon;
 
+    $: if (!$_palette_viewports) state = false;
+
     $: _items = [
         ...($_search_viewports
             ? [
@@ -78,19 +79,19 @@
               ]
             : []),
         ...$appnavigation,
-        {
-            icon: _next_icon,
-            text: $_palette_viewports
-                ? _next_palette[0].toUpperCase() + _next_palette.slice(1)
-                : "",
-            on_click: on_palette_click,
-        },
+        ...(browser
+            ? [
+                  {
+                      icon: _next_icon,
+                      text: $_palette_viewports
+                          ? _next_palette[0].toUpperCase() + _next_palette.slice(1)
+                          : "",
+                      on_click: on_palette_click,
+                  },
+              ]
+            : []),
     ];
 </script>
-
-<!--
-    TODO: Do Dark Mode toggle
--->
 
 <Omni.Container class="app-navigation" palette="dark" variation="sticky">
     <Omni.Header>

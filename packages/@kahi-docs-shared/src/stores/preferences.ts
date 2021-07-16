@@ -6,9 +6,11 @@ export type IPreferenceThemeValues = "dark" | "light" | "";
 
 export type IPreferenceThemeStore = Writable<IPreferenceThemeValues>;
 
-export function preferencetheme(): IPreferenceThemeStore {
+function _preferencetheme(): IPreferenceThemeStore {
     // @ts-expect-error - HACK: Readable allows for optional callback
     if (typeof window === "undefined") return readable<IPreferenceThemeValues>("");
 
     return writable<IPreferenceThemeValues>("kahi-docs.preferences.theme", "");
 }
+
+export const preferencetheme = _preferencetheme();
