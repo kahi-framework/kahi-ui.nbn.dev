@@ -17,6 +17,7 @@
         const items = map_navigation_items<INavigationMenu>(NAVIGATION_CONFIG.documentation, {
             base: (context.application_config as IApplicationConfig).urls.base,
             default_prefetch: true,
+            default_title: "N/A",
             title_map: data.data,
         });
 

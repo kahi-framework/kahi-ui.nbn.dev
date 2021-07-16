@@ -70,7 +70,7 @@ export function map_navigation_items<T extends INavigationBar | INavigationMenu>
         base = "",
         default_no_scroll = false,
         default_prefetch = false,
-        default_title = "N/A",
+        default_title = "",
         title_map = {},
     } = options;
 
