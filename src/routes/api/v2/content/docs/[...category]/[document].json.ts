@@ -13,7 +13,8 @@ export const get: RequestHandler = async (request) => {
     const path = join(
         APPLICATION_CONFIG.paths.content,
         APPLICATION_CONFIG.paths.documentation,
-        `${category}/${document}.md`
+        category,
+        `${document}.md`
     );
 
     let render: IDocumentationRender;

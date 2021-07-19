@@ -29,7 +29,7 @@ function HighlightSnippet(
 ) {
     const rendered = Prism.highlight(text, Prism.languages[syntax], syntax);
 
-    return `<pre class="language-${syntax} snippet-highlight" data-document=${document_identifier} data-identifier="${identifier}"><code class="language-${syntax}">${rendered}</code></pre>`;
+    return `<pre class="language-${syntax} snippet-highlight"><code class="language-${syntax}">${rendered}</code></pre>`;
 }
 
 function REPLSnippet(identifier: string, document_identifier: string): string {
@@ -40,8 +40,11 @@ function REPLSnippet(identifier: string, document_identifier: string): string {
 
     // TODO: Accept variable content type prefix
 
-    return `<iframe class="snippet-repl" data-document=${document_identifier} data-identifier="${identifier}" src="/repl/${document_identifier}/${identifier}?rotation=horizontal" loading="lazy"></iframe>
-    <a href="/repl/docs/${document_identifier}/${identifier}?rotation=horizontal" hidden sveltekit:prefetch></a>`;
+    const content_type = "docs";
+    const src = `/repl/${content_type}/${document_identifier}/${identifier}?rotation=horizontal`;
+
+    return `<iframe class="snippet-repl" src="${src}" loading="lazy"></iframe>
+    <a href="${src}" hidden sveltekit:prefetch></a>`;
 }
 
 function ProcessSnippet(

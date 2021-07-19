@@ -16,3 +16,34 @@
 {:else}
     <REPLUnsupportedHero />
 {/if}
+
+<style>
+    :global(:root) {
+        --repl-divider-color: rgb(var(--palette-foreground-text), 0.3);
+        --repl-stack-height: 100vh;
+    }
+
+    :global(.codejar-linenumbers) {
+        height: max-content;
+        min-height: 100%;
+    }
+
+    :global(.repl-editor) {
+        border-radius: 0;
+    }
+
+    :global(.repl-render) :global(.context-backdrop),
+    :global(.repl-render) :global(.overlay) {
+        /**
+         * HACK: Used to have `ContextBackdrop` / `Overlay`s properly take up REPL viewports
+         * since renders aren't rendered in a separate srcdoc iframe yet.
+         */
+
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    :global(.repl-stack) {
+        height: 100vh;
+    }
+</style>

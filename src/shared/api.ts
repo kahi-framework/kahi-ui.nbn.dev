@@ -1,5 +1,5 @@
 import type {IApplicationConfig} from "@kahi-docs/config";
-import type {IDocumentationRender} from "@kahi-docs/markdown";
+import type {IDocumentationRender, ISnippet} from "@kahi-docs/markdown";
 
 export interface IRouteError {
     code: string;
@@ -22,4 +22,8 @@ export interface IDocumentationGet extends IRouteSuccess {
 
 export interface INavigationTitlesGet extends IRouteSuccess {
     data: Record<string, string | undefined>;
+}
+
+export interface ISnippetGet extends IRouteSuccess {
+    data: ISnippet;
 }
