@@ -14,6 +14,10 @@
 {#if browser}
     <slot />
 {:else}
+    <!-- 
+        TODO: Should the fall through should be compiling snippet in SSR mode and
+        rendering it here
+    -->
     <REPLUnsupportedHero />
 {/if}
 

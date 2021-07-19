@@ -79,7 +79,7 @@ export function SnippetsPlugin(md: MarkdownIt, options: ISnippetsPluginOptions) 
 
         snippets.push({
             identifier,
-            script: escape_html(code),
+            script: code,
             syntax,
             title,
         });

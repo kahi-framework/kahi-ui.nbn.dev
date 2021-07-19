@@ -33,17 +33,23 @@
 </script>
 
 <script lang="ts">
+    import type {SvelteComponent} from "svelte";
+    import {onMount} from "svelte";
+
     import type {ISnippet} from "@kahi-docs/markdown";
 
-    import REPLOverlay from "../../components/repl/REPLOverlay.svelte";
+    import REPLLoadingHero from "../../components/repl/REPLLoadingHero.svelte";
 
     export let snippet: ISnippet;
 
-    let view: "code" | "render" | "split" = "split";
-
-    function on_copy_click(event: MouseEvent) {}
+    let Component: typeof SvelteComponent;
+    onMount(async () => {
+        Component = (await import("../../components/repl/REPLEditor.svelte")).default;
+    });
 </script>
 
-hello world?
-
-<REPLOverlay bind:view on:copy_click={on_copy_click} />
+{#if Component}
+    <svelte:component this={Component} value={snippet.script} />
+{:else}
+    <REPLLoadingHero />
+{/if}
