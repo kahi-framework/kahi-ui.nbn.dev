@@ -36,10 +36,12 @@ function REPLSnippet(identifier: string, document_identifier: string): string {
     // HACK: Hidden anchor is needed for `adapter-static` to
     // find the embed for prerendering
 
-    // TODO: Accept prefixing base URL
+    // TODO: Accept variable prefixing base URL
+
+    // TODO: Accept variable content type prefix
 
     return `<iframe class="snippet-repl" data-document=${document_identifier} data-identifier="${identifier}" src="/repl/${document_identifier}/${identifier}?rotation=horizontal" loading="lazy"></iframe>
-    <a href="/repl/${document_identifier}/${identifier}?rotation=horizontal" hidden sveltekit:prefetch></a>`;
+    <a href="/repl/docs/${document_identifier}/${identifier}?rotation=horizontal" hidden sveltekit:prefetch></a>`;
 }
 
 function ProcessSnippet(

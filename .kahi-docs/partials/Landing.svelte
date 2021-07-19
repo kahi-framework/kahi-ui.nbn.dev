@@ -40,11 +40,6 @@
     </Hero.Section>
 
     <Hero.Footer>
-        <Button href="/docs/framework/getting-started" palette="accent" size="large">
-            Getting Started
-            <ArrowRight />
-        </Button>
-
         <Button
             href="https://github.com/novacbn/kahi-ui"
             rel="noopener noreferrer"
@@ -55,6 +50,11 @@
         >
             <Code />
             Source
+        </Button>
+
+        <Button href="/docs/framework/getting-started" palette="accent" size="large">
+            Getting Started
+            <ArrowRight />
         </Button>
     </Hero.Footer>
 </Hero.Container>
@@ -70,8 +70,14 @@
 
     <iframe
         class="snippet-repl"
-        src="/repl/samples/landing-page/landing-preview?rotation=horizontal"
+        src="/repl/docs/samples/landing-page/landing-preview?rotation=horizontal"
         loading="lazy"
+    />
+
+    <a
+        href="/repl/docs/samples/landing-page/landing-preview?rotation=horizontal"
+        hidden
+        sveltekit:prefetch
     />
 
     <Divider palette="accent" margin_y="huge" />

@@ -6,6 +6,6 @@
     <Hero.Header>Unsupported</Hero.Header>
     <Hero.Section>
         Your client <Text is="strong">does not</Text> support <Text is="strong">Javascript</Text>,
-        failed to load REPL.
+        failed to load <Text is="strong">REPL</Text>.
     </Hero.Section>
 </Hero.Container>
