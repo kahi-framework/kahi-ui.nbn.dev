@@ -15,7 +15,7 @@
     export let view: "code" | "render" | "split" = "split";
 </script>
 
-<Overlay class="repl-overlay" alignment_x="right" alignment_y="top" padding="small">
+<Overlay class="repl-overlay" alignment_x="right" alignment_y="bottom" padding="medium">
     <Card.Container palette="dark">
         <Card.Section padding="small">
             <Stack
