@@ -3,6 +3,7 @@
     import {createEventDispatcher} from "svelte";
     import {Code} from "svelte-feather/components/Code";
     import {Copy} from "svelte-feather/components/Copy";
+    import {ExternalLink} from "svelte-feather/components/ExternalLink";
     import {Image} from "svelte-feather/components/Image";
     import {Sidebar} from "svelte-feather/components/Sidebar";
 
@@ -23,7 +24,18 @@
                 spacing="tiny"
             >
                 <Button
+                    href={location.href}
+                    target="_blank"
                     palette="accent"
+                    variation="clear"
+                    size="tiny"
+                >
+                    <ExternalLink />
+                    Link
+                </Button>
+
+                <Button
+                    palette="affirmative"
                     variation="clear"
                     size="tiny"
                     on:click={(event) => dispatch("copy_click", event)}
