@@ -52,10 +52,16 @@
             Source
         </Button>
 
-        <Button href="/docs/framework/getting-started" palette="accent" size="large">
+        <a
+            role="button"
+            href="/docs/framework/getting-started"
+            data-palette="accent"
+            data-size="large"
+            sveltekit:prefetch
+        >
             Getting Started
             <ArrowRight />
-        </Button>
+        </a>
     </Hero.Footer>
 </Hero.Container>
 
