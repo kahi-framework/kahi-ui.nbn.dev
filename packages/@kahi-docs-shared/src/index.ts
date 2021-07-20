@@ -3,6 +3,7 @@ export * from "./stores/docsrender";
 export * from "./stores/navigation";
 export * from "./stores/partialsconfig";
 export * from "./stores/preferences";
+export * from "./stores/snippet";
 
 export * from "./util/functional";
 export * from "./util/html";

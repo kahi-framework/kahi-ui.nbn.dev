@@ -9,6 +9,8 @@
     import {viewports} from "@kahi-ui/framework";
     import {REPL_ROTATION, REPL_VIEWS, Split} from "svelte-pipeline/repl";
 
+    import {snippet} from "@kahi-docs/shared";
+
     import REPL_CONFIG from "../../../.kahi-docs/repl.config";
 
     import REPLLoadingHero from "./REPLLoadingHero.svelte";
@@ -21,7 +23,7 @@
         //tablet: true,
     });
 
-    export let value: string;
+    export let value: string = $snippet.script;
 
     let rotation: "horizontal" | "vertical" = (params.get("rotation") as any) || "vertical";
     let view: "code" | "render" | "split" = "split";

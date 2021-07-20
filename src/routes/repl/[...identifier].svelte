@@ -37,10 +37,13 @@
     import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
+    import {set_snippet} from "@kahi-docs/shared";
 
     import REPLLoadingHero from "../../components/repl/REPLLoadingHero.svelte";
 
     export let snippet: ISnippet;
+
+    set_snippet(snippet);
 
     let Component: typeof SvelteComponent;
     onMount(async () => {
@@ -49,7 +52,7 @@
 </script>
 
 {#if Component}
-    <svelte:component this={Component} value={snippet.script} />
+    <svelte:component this={Component} />
 {:else}
     <REPLLoadingHero />
 {/if}
