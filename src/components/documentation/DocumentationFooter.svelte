@@ -1,7 +1,7 @@
 <script lang="ts">
     import {Button, Divider, Figure, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
     import {Clock} from "svelte-feather/components/Clock";
-    import {Code} from "svelte-feather/components/Code";
+    import {ExternalLink} from "svelte-feather/components/ExternalLink";
 
     import {applicationconfig, docsrender, substitute_value} from "@kahi-docs/shared";
 
@@ -53,7 +53,7 @@
                 variation="clear"
             >
                 View page in repository
-                <Code />
+                <ExternalLink />
             </Button>
         </div>
     {/if}
