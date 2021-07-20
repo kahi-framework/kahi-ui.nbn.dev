@@ -43,8 +43,12 @@ function REPLSnippet(identifier: string, document_identifier: string): string {
     const content_type = "docs";
     const src = `/repl/${content_type}/${document_identifier}/${identifier}?rotation=horizontal`;
 
-    return `<iframe class="snippet-repl" src="${src}" loading="lazy"></iframe>
-    <a href="${src}" hidden sveltekit:prefetch></a>`;
+    return `<iframe
+    class="snippet-repl"
+    src="${src}"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="${src}" hidden sveltekit:prefetch></a>`;
 }
 
 function ProcessSnippet(

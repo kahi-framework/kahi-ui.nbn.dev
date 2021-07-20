@@ -77,6 +77,7 @@
     <iframe
         class="snippet-repl"
         src="/repl/docs/samples/landing-page/landing-preview?rotation=horizontal"
+        sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin"
         loading="lazy"
     />
 
