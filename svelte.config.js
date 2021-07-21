@@ -1,13 +1,7 @@
-import {readFileSync} from "fs";
-import {resolve} from "path";
 import {env} from "process";
 
 import adapter from "@sveltejs/adapter-static";
 import sveltePreprocess from "svelte-preprocess";
-
-const PACKAGE_FRAMEWORK = JSON.parse(
-    readFileSync(resolve("./node_modules/@kahi-ui/framework/package.json")).toString()
-);
 
 /** @type {import('@sveltejs/kit').Config} */
 export default {
@@ -24,8 +18,6 @@ export default {
 
             return {
                 define: {
-                    "import.meta.env.VITE_VERSION_TAG": `"${PACKAGE_FRAMEWORK.version}"`,
-
                     // HACK: Really /shouldn't/ be needed at all. Especially since I dynamically
                     // import `svelte-codejar`. But SvelteKit or Vite kept picking it up anyway
                     ...(NODE_ENV === "development"
