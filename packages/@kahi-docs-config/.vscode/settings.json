@@ -1,0 +1,23 @@
+{
+    "editor.formatOnSave": false,
+
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+
+    "[jsonc]": {
+        "editor.formatOnSave": true
+    },
+
+    "[markdown]": {
+        "editor.formatOnSave": true
+    },
+
+    "[typescript]": {
+        "editor.formatOnSave": true
+    }
+}
