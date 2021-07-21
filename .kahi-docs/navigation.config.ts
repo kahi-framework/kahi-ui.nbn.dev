@@ -137,9 +137,10 @@ export default define_navigation({
             items: [
                 {href: "/docs/stores/darkmode"},
                 {href: "/docs/stores/htmlpalette"},
+                {href: "/docs/stores/mediaquery"},
                 {href: "/docs/stores/prefersscheme"},
                 {href: "/docs/stores/scrolllock"},
-                {href: "/docs/stores/viewports"},
+                {href: "/docs/stores/viewport"},
             ],
         },
     ],
