@@ -16,7 +16,7 @@ export default define_application({
 
     edit: {
         enabled: true,
-        url: "https://github.com/novacbn/kahi-ui/blob/main/docs/%s",
+        url: "https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/%s",
     },
 
     paths: {
