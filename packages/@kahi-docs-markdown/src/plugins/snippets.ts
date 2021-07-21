@@ -2,7 +2,7 @@ import GithubSlugger from "github-slugger";
 import type MarkdownIt from "markdown-it";
 import Prism from "prismjs";
 
-import {escape_html, hash_string} from "@kahi-docs/shared";
+import {hash_string} from "@kahi-docs/shared";
 
 import "../syntaxes/prism-bash";
 import "../syntaxes/prism-svelte";
@@ -21,12 +21,7 @@ export interface ISnippetsPluginOptions extends IPluginOptions {
     identifier: string;
 }
 
-function HighlightSnippet(
-    text: string,
-    syntax: string,
-    identifier: string,
-    document_identifier: string
-) {
+function HighlightSnippet(text: string, syntax: string) {
     const rendered = Prism.highlight(text, Prism.languages[syntax], syntax);
 
     return `<pre class="language-${syntax} snippet-highlight"><code class="language-${syntax}">${rendered}</code></pre>`;
@@ -59,7 +54,7 @@ function ProcessSnippet(
     document_identifier: string
 ): string {
     if (mode === SNIPPET_MODES.repl) return REPLSnippet(identifier, document_identifier);
-    return HighlightSnippet(text, syntax, identifier, document_identifier);
+    return HighlightSnippet(text, syntax);
 }
 
 export function SnippetsPlugin(md: MarkdownIt, options: ISnippetsPluginOptions) {
