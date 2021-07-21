@@ -25,9 +25,8 @@ export default define_application({
     },
 
     urls: {
-        // TODO: When "Kahi Docs" is converted into a documentation
-        // platform, remove this setting
-        base: import.meta.env.BASE_URL,
+        // NOTE: This needs to be kept inline with any changes to `svelte.config.js`
+        base: "/",
     },
 
     metadata: {
