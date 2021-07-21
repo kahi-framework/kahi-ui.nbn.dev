@@ -1,11 +1,14 @@
 {
     "name": "kahi-ui.nbn.dev",
     "version": "0.3.0",
+    "type": "module",
     "scripts": {
         "build:application": "svelte-kit build",
         "dev:application": "svelte-kit dev --host 0.0.0.0",
+        "index": "npm run index:generate;npm run index:build",
         "index:build": "node ./scripts/build-index.js",
-        "index:generate": "node ./scripts/generate-index.js",
+        "index:generate": "node ./scripts/generate-index.build.js",
+        "index:test": "node ./scripts/test-index.js",
         "postinstall": "npm run postinstall:config && npm run postinstall:markdown && npm run postinstall:node && npm run postinstall:shared",
         "postinstall:config": "cd ./packages/@kahi-docs-config;npm ci;cd ../../",
         "postinstall:markdown": "cd ./packages/@kahi-docs-markdown;npm ci;cd ../../",
@@ -17,12 +20,14 @@
         "test:config": "cd ./packages/@kahi-docs-config;npm run test;cd ../../",
         "test:markdown": "cd ./packages/@kahi-docs-markdown;npm run test;cd ../../",
         "test:node": "cd ./packages/@kahi-docs-node;npm run test;cd ../../",
-        "test:shared": "cd ./packages/@kahi-docs-shared;npm run test;cd ../../"
+        "test:shared": "cd ./packages/@kahi-docs-shared;npm run test;cd ../../",
+        "watch:generate-index": "esbuild --bundle --watch --platform=node --outfile=./scripts/generate-index.build.js ./scripts/generate-index.js"
     },
     "devDependencies": {
         "@sveltejs/adapter-static": "^1.0.0-next.13",
         "@sveltejs/kit": "^1.0.0-next.122",
-        "cheerio": "*",
+        "cheerio": "^1.0.0-rc.10",
+        "esbuild": "^0.12.15",
         "fast-glob": "^3.2.5",
         "prettier": "^2.3.1",
         "prettier-plugin-svelte": "^2.3.1",
@@ -31,7 +36,6 @@
         "typescript": "^4.3.2",
         "vite": "^2.3.3"
     },
-    "type": "module",
     "engines": {
         "node": ">= 12.17.0"
     },

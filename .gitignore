@@ -2,3 +2,4 @@
 /node_modules/
 /bin/
 /build/
+/scripts/generate-index.build.js

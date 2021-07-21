@@ -1,24 +1,55 @@
-import fs from "fs";
-const {mkdir, writeFile} = fs.promises;
+import {join} from "path";
+import {mkdirSync, writeFileSync} from "fs";
 
-import fetch from "node-fetch";
+import {load} from "cheerio";
+import fg from "fast-glob";
 import {stringify} from "@iarna/toml";
 
-// TODO: Should be updated to index blog posts and updates (changelog) entries. And
-// should ideally rank relevant content higher. E.g. when browsing documentation, it
-// blog / updates should either not be present or futher down the list.
-//
-// However routes like the landing page should contain all entries at equal rank. Have to
-// investigate if Stork Search allows this to even be a thing
+import {read_documentation} from "@kahi-docs/markdown";
 
-async function fetch_index() {
-    const response = await fetch("http://localhost:3000/api/v1/meta/stork.json");
-    const index = (await response.json()).data;
+import APPLICATION_CONFIG from "../.kahi-docs/application.config";
 
-    return stringify(index);
+// TODO: This needs to be updated to support blog posts when available
+
+// TODO: Preferably we wouldn't need Cheerio, but Stork Search doesn't yet
+// have a method of filtering out specific selectors yet
+
+const PATH_DOCUMENTATION = join(
+    APPLICATION_CONFIG.paths.content,
+    APPLICATION_CONFIG.paths.documentation
+);
+
+const GLOB_DOCUMENTATION = join(PATH_DOCUMENTATION, "**/*.md");
+
+function StorkIndex(files) {
+    return {
+        input: {
+            url_prefix: `${APPLICATION_CONFIG.urls.base}docs/`,
+            files,
+        },
+    };
 }
 
-await mkdir("./build/stork", {recursive: true});
+function StorkFile(render) {
+    const $ = load(render.render);
 
-const index = await fetch_index();
-writeFile("./build/stork/index.toml", index);
+    $("iframe, hr, pre").remove();
+
+    return {
+        contents: $.text(),
+        filetype: "PlainText",
+        url: render.properties.identifier,
+        title: render.properties.title,
+    };
+}
+
+(async () => {
+    const files = fg.sync(GLOB_DOCUMENTATION);
+    const renders = await Promise.all(files.map((file) => read_documentation(file)));
+
+    const index = StorkIndex(renders.map((render) => StorkFile(render)));
+    const build = stringify(index);
+
+    mkdirSync("./build/stork", {recursive: true});
+    writeFileSync("./build/stork/index.toml", build);
+})();
