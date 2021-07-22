@@ -7,7 +7,7 @@
 
 <script lang="ts">
     import {viewports} from "@kahi-ui/framework";
-    import {REPL_ROTATION, REPL_VIEWS, Split} from "svelte-pipeline/repl";
+    import {REPL_ROTATION, REPL_VIEWS, Split} from "@novacbn/svelte-pipeline/repl";
 
     import {snippet} from "@kahi-docs/shared";
 
@@ -26,7 +26,7 @@
     export let value: string = $snippet.script;
 
     let rotation: "horizontal" | "vertical" = (params.get("rotation") as any) || "vertical";
-    let view: "code" | "render" | "split" = "split";
+    let view: "editor" | "render" | "split" = "split";
 
     let loaded: boolean = false;
     let error: string = "";
@@ -61,7 +61,7 @@
     $: {
         // TODO: When `svelte-pipeline` is updated to accept string values, remove this block
         switch (view) {
-            case "code":
+            case "editor":
                 repl_view = REPL_VIEWS.editor;
                 break;
             case "render":
