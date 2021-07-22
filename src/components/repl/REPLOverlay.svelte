@@ -13,7 +13,7 @@
 
     const dispatch = createEventDispatcher<$$Events>();
 
-    export let view: "code" | "render" | "split" = "split";
+    export let view: "editor" | "render" | "split" = "split";
 </script>
 
 <Overlay class="repl-overlay" alignment_x="right" alignment_y="bottom" padding="medium">
@@ -56,14 +56,14 @@
                 </Button>
 
                 <Button
-                    active={view === "code"}
+                    active={view === "editor"}
                     palette="light"
                     variation="clear"
                     size="tiny"
-                    on:click={() => (view = "code")}
+                    on:click={() => (view = "editor")}
                 >
                     <Code />
-                    Code
+                    Editor
                 </Button>
 
                 <Button

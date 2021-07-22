@@ -45,9 +45,9 @@
         "@kahi-docs/node": "file:packages/@kahi-docs-node",
         "@kahi-docs/shared": "file:packages/@kahi-docs-shared",
         "@kahi-ui/framework": "github:novacbn/kahi-ui#0.2.14",
+        "@novacbn/svelte-pipeline": "^0.2.0",
         "@novacbn/svelte-stork": "github:novacbn/svelte-stork#0.0.4",
         "prismjs": "^1.23.0",
-        "svelte-feather": "github:novacbn/svelte-feather#0.1.0",
-        "svelte-pipeline": "github:novacbn/svelte-pipeline#0.1.2"
+        "svelte-feather": "github:novacbn/svelte-feather#0.1.0"
     }
 }

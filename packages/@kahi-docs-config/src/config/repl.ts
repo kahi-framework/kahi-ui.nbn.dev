@@ -1,4 +1,4 @@
-import type {IPipelineContext, IPipelineImports} from "svelte-pipeline";
+import type {IPipelineContext, IPipelineImports} from "@novacbn/svelte-pipeline";
 
 export interface IREPLConfig {
     context: IPipelineContext;
