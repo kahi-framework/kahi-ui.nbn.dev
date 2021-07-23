@@ -96,4 +96,8 @@
     </svelte:fragment>
 </Split>
 
-<REPLOverlay bind:view on:copy_click={on_copy_click} />
+{#if loaded}
+    <REPLOverlay bind:view on:copy_click={on_copy_click} />
+{:else}
+    <REPLLoadingHero />
+{/if}
