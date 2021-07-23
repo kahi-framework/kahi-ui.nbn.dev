@@ -1,0 +1,13 @@
+.svst-attribution{padding:var(--svst-attribution-padding,.5em 1em);color:var(--svst-attribution-color,currentColor);font-size:var(--svst-attribution-font-size, .8em);opacity:var(--svst-attribution-opacity, .8)}.svst-attribution>a{text-decoration:var(--svst-attribution-text-decoration,underline)}.svst-attribution>a:link{color:var(--svst-attribution-link-color,#14a7cc)}.svst-attribution>a:visited{color:var(--svst-attribution-visited-color,#58208d)}.svst-attribution>a:hover{opacity:var(--svst-attribution-hover-opacity, 1)}.svst-message{padding:var(--svst-message-padding,.5em 1em);color:var(--svst-message-color,currentColor);font-size:var(--svst-message-font-size, 1em);opacity:var(--svst-message-opacity, .8)}.svst-highlight{background-color:var(--svst-highlight-background-color,#fcf92a)}.svst-entry-title{margin:0 0 var(--svst-entry-title-spacing,.8em) 0;font-size:var(--svst-entry-title-font-size, 1.1em);font-weight:var(--svst-entry-title-font-weight,bold)}.svst-excerpt{margin:0 0 var(--svst-excerpt-spacing,.8em) 0;line-height:var(--svst-excerpt-line-height, 1)}.svst-entry{display:flex;flex-direction:column;padding:var(--svst-entry-padding,1em);text-decoration:var(--svst-entry-text-decoration,none);cursor:var(--svst-entry-cursor,pointer)}.svst-entry,.svst-entry:link,.svst-entry:visited{color:var(--svst-entry-color,currentColor)}.svst-entry:hover{background-color:var(--svst-entry-hover-background-color,#98e2f4);opacity:var(--svst-entry-hover-opacity, 1)}.svst-result{display:list-item;padding:0;font-size:var(--svst-result-font-size, .8em)}.svst-result:not(:last-child){border-bottom:var(--svst-result-border,1px solid #e5e5e5)}.svst-results{flex-grow:1;margin:0;padding:0;border-top:var(--svst-results-border,1px solid #ccc);border-bottom:var(--svst-results-border,1px solid #ccc);list-style:none;overflow-y:auto}.svst-output{display:flex;flex-direction:column;max-height:var(--svst-output-max-height,auto);color:var(--svst-output-color,#000);font-size:var(--svst-output-font-size, 1em);font-weight:var(--svst-output-font-weight,400);font-family:var(
+            --svst-output-font-family,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Roboto,
+            Helvetica,
+            Arial,
+            sans-serif,
+            "Apple Color Emoji",
+            "Segoe UI Emoji",
+            "Segoe UI Symbol"
+        )}

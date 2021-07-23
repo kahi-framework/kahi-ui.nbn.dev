@@ -1,0 +1,1 @@
+.landing-layout{display:grid;grid-template-areas:"header" "content" "footer";grid-template-rows:auto 1fr auto;width:100%;min-height:100%}.landing-layout>.landing-container{grid-area:content;overflow-x:hidden}

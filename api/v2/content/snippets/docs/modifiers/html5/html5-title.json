@@ -1,0 +1,1 @@
+{"data":{"identifier":"html5-title","script":"<script>\n    import {Text} from \"@kahi-ui/framework\";\n</script>\n\n<Text title=\"I am some additional text!\">\n    Hover me!\n</Text>","syntax":"svelte","title":"HTML5 title"}}

@@ -1,0 +1,1 @@
+{"data":{"identifier":"textinput-field-character-size","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput\n    value=\"This input should be about 4 characters wide.\"\n    characters=\"4\"\n/>","syntax":"svelte","title":"TextInput Field Character Size"}}

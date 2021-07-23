@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        <title>HTML5 — Kahi UI</title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-19b00d26.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-58d36447.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-08cc8e69.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-d7e72b5e.js">
+		<link rel="modulepreload" href="/./_app/chunks/navigation.config-07463507.js">
+		<link rel="modulepreload" href="/./_app/chunks/snippet-b1cbe0be.js">
+		<link rel="modulepreload" href="/./_app/chunks/url-b5fabed9.js">
+		<link rel="modulepreload" href="/./_app/pages/docs/__layout.svelte-55884486.js">
+		<link rel="modulepreload" href="/./_app/chunks/SiteFooter-6f56caa4.js">
+		<link rel="modulepreload" href="/./_app/pages/docs/[...document].svelte-743381af.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-23649fcb.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/docs/__layout.svelte-4ce5b83b.css">
+		<link rel="stylesheet" href="/./_app/assets/SiteFooter-a12ef40f.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/docs/[...document].svelte-2b4975c3.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-19b00d26.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-d7e72b5e.js"),
+						import("/./_app/pages/docs/__layout.svelte-55884486.js"),
+						import("/./_app/pages/docs/[...document].svelte-743381af.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/docs/modifiers/html5",
+						query: new URLSearchParams(""),
+						params: {"document":"modifiers/html5"}
+					}
+				}
+			});
+		</script>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("kahi-docs.preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+<div class="aside-layout">
+
+<nav class="omni app-navigation" data-palette="dark" data-variation="sticky"><header><a href="/">Kahi UI</a>
+
+        <hr data-orientation="vertical">
+
+            
+                <a href="https://github.com/novacbn/kahi-ui/releases/0.2.14" rel="noopener noreferrer" target="_blank"><small data-palette="light">v0.2.14</small></a></header>
+
+    <footer>
+
+        <section><input role="presentation" id="app-navigation" type="checkbox">
+
+<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="context-button " data-hidden="widescreen" role="button" for="app-navigation" data-palette="light" data-size="large" data-variation="clear">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-more-vertical feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
+
+                <div data-hidden="widescreen" class="card " data-palette="auto"><section><nav class="menu"><ul><li><a href="/docs/framework/getting-started">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+                    Documentation</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+
+                    Source</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+                    Releases</a>
+            </li></ul></nav></section></div></div>
+
+            <nav class="menu" data-hidden="mobile tablet desktop" data-orientation="horizontal"><ul><li><a href="/docs/framework/getting-started">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+                    Documentation</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+
+                    Source</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+                    Releases</a>
+            </li></ul></nav></section></footer></nav>
+
+
+
+    <input role="presentation" id="aside-navigation" type="checkbox">
+
+    <label class="context-backdrop " for="aside-navigation"></label>
+
+<div data-hidden="mobile tablet" class="offscreen "><nav class="aside aside-navigation" data-palette="dark">
+    <section data-margin-bottom="none" data-padding-y="large"><nav class="menu"><ul>
+
+                <li><span role="separator">Framework
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/framework/getting-started" sveltekit:prefetch>
+
+                                                Getting Started
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/faq" sveltekit:prefetch>
+
+                                                F.A.Q.
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/browser-support" sveltekit:prefetch>
+
+                                                Browser Support
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/icons" sveltekit:prefetch>
+
+                                                Icons
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/responsivity" sveltekit:prefetch>
+
+                                                Responsivity
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Typography
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/typography/blockquote" sveltekit:prefetch>
+
+                                                Blockquote
+
+                                                </a>
+                                        </li><li><a href="/docs/typography/code" sveltekit:prefetch>
+
+                                                Code
+
+                                                </a>
+                                        </li><li><a href="/docs/typography/heading" sveltekit:prefetch>
+
+                                                Heading
+
+                                                </a>
+                                        </li><li><a href="/docs/typography/text" sveltekit:prefetch>
+
+                                                Text
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Embedded
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/embedded/figure" sveltekit:prefetch>
+
+                                                Figure
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Display
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/display/badge" sveltekit:prefetch>
+
+                                                Badge
+
+                                                </a>
+                                        </li><li><a href="/docs/display/list" sveltekit:prefetch>
+
+                                                List
+
+                                                </a>
+                                        </li><li><a href="/docs/display/table" sveltekit:prefetch>
+
+                                                Table
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Feedback
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/feedback/dot" sveltekit:prefetch>
+
+                                                Dot
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/ellipsis" sveltekit:prefetch>
+
+                                                Ellipsis
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/spinner" sveltekit:prefetch>
+
+                                                Spinner
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/wave" sveltekit:prefetch>
+
+                                                Wave
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Interactables
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/interactables/button" sveltekit:prefetch>
+
+                                                Button
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/check" sveltekit:prefetch>
+
+                                                Check
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/form" sveltekit:prefetch>
+
+                                                Form
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/radio" sveltekit:prefetch>
+
+                                                Radio
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/switch" sveltekit:prefetch>
+
+                                                Switch
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/textinput" sveltekit:prefetch>
+
+                                                TextInput
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Layouts
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/layouts/container" sveltekit:prefetch>
+
+                                                Container
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/divider" sveltekit:prefetch>
+
+                                                Divider
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/grid" sveltekit:prefetch>
+
+                                                Grid
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/group" sveltekit:prefetch>
+
+                                                Group
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/mosaic" sveltekit:prefetch>
+
+                                                Mosaic
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/scrollable" sveltekit:prefetch>
+
+                                                Scrollable
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/spacer" sveltekit:prefetch>
+
+                                                Spacer
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/stack" sveltekit:prefetch>
+
+                                                Stack
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Surfaces
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/surfaces/box" sveltekit:prefetch>
+
+                                                Box
+
+                                                </a>
+                                        </li><li><a href="/docs/surfaces/card" sveltekit:prefetch>
+
+                                                Card
+
+                                                </a>
+                                        </li><li><a href="/docs/surfaces/hero" sveltekit:prefetch>
+
+                                                Hero
+
+                                                </a>
+                                        </li><li><a href="/docs/surfaces/tile" sveltekit:prefetch>
+
+                                                Tile
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Navigation
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/navigation/anchor" sveltekit:prefetch>
+
+                                                Anchor
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/aside" sveltekit:prefetch>
+
+                                                Aside
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/breadcrumb" sveltekit:prefetch>
+
+                                                Breadcrumb
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/menu" sveltekit:prefetch>
+
+                                                Menu
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/omni" sveltekit:prefetch>
+
+                                                Omni
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Overlays
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/overlays/popover" sveltekit:prefetch>
+
+                                                Popover
+
+                                                </a>
+                                        </li><li><a href="/docs/overlays/offscreen" sveltekit:prefetch>
+
+                                                Offscreen
+
+                                                </a>
+                                        </li><li><a href="/docs/overlays/overlay" sveltekit:prefetch>
+
+                                                Overlay
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Utilities
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/utilities/contextbackdrop" sveltekit:prefetch>
+
+                                                ContextBackdrop
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/contextbutton" sveltekit:prefetch>
+
+                                                ContextButton
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/portal" sveltekit:prefetch>
+
+                                                Portal
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Modifiers
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a aria-current="page" href="/docs/modifiers/html5" sveltekit:prefetch>
+
+                                                HTML5
+
+                                                </a>
+                                        </li><li><a href="/docs/modifiers/hidden" sveltekit:prefetch>
+
+                                                Hidden
+
+                                                </a>
+                                        </li><li><a href="/docs/modifiers/sizings" sveltekit:prefetch>
+
+                                                Sizings
+
+                                                </a>
+                                        </li><li><a href="/docs/modifiers/spacings" sveltekit:prefetch>
+
+                                                Spacings
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Stores
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/stores/darkmode" sveltekit:prefetch>
+
+                                                darkmode
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/htmlpalette" sveltekit:prefetch>
+
+                                                htmlpalette
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/mediaquery" sveltekit:prefetch>
+
+                                                mediaquery
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/prefersscheme" sveltekit:prefetch>
+
+                                                prefersscheme
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/scrolllock" sveltekit:prefetch>
+
+                                                scrolllock
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/viewport" sveltekit:prefetch>
+
+                                                viewport
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li></ul></nav></section>
+
+    <label class="context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-size="large">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-menu feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label>
+
+    <label class="context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-palette="dark" data-size="large" data-variation="clear">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-x feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></label></nav></div>
+    
+
+    <main class="aside-container"><div class="container docs-container" data-padding-bottom="large" data-viewport="desktop">
+
+<!-- HTML_TAG_START --><h1 id="html5">HTML5</h1>
+<p>All Components have access to several common HTML5 global attributes.</p>
+<h2 id="class">class</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class" target="_blank" rel="noopener noreferrer"><code>class</code></a> allows you to apply CSS classes that you've defined to Components. However, you will have to use <code>:global</code> on your class names to bypass Svelte's local scoping.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/modifiers/html5/html5-class?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/modifiers/html5/html5-class?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="style">style</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style" target="_blank" rel="noopener noreferrer"><code>style</code></a> allows you to apply inline CSS properties to Components.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/modifiers/html5/html5-style?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/modifiers/html5/html5-style?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="id">id</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id" target="_blank" rel="noopener noreferrer"><code>id</code></a> allows you to set an identifier that other elements can target or targettable for scrolling by a <a href="https://developer.mozilla.org/en-US/docs/Web/API/URL/hash" target="_blank" rel="noopener noreferrer">URL fragment</a>.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/modifiers/html5/html5-id?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/modifiers/html5/html5-id?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="name">name</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/name" target="_blank" rel="noopener noreferrer"><code>name</code></a> allows you to set an identifier for the Component to set its value to in a form, or, can targettable by an <a href="../navigation/anchor"><code>Anchor</code></a>.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/modifiers/html5/html5-name?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/modifiers/html5/html5-name?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="title">title</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title" target="_blank" rel="noopener noreferrer"><code>title</code></a> allows you to set a timed effect to show a text tooltip whenever an end-user hovers for long enough. Typically you don't want to rely on this attribute for the UI. Rather use it for semantic and assistive purposes.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/modifiers/html5/html5-title?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/modifiers/html5/html5-title?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="tabindex">tabindex</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex" target="_blank" rel="noopener noreferrer"><code>tabindex</code></a> allows you to configure how the Browser cycles through elements in the current stacking context when they press their tab keyboard button, or similar.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/modifiers/html5/html5-tabindex?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/modifiers/html5/html5-tabindex?rotation=horizontal" hidden sveltekit:prefetch></a><!-- HTML_TAG_END -->
+
+<h2 id="properties">Properties</h2>
+
+<h3 id="properties-*">*</h3>
+
+    <div class="stack " data-spacing="medium"><div><h4 id="properties-*-class"><code>class</code>
+                </h4>
+
+                <hr>
+                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets a class name(s) on the Component.</p>
+<!-- HTML_TAG_END -->
+                        </span>
+                    </div>
+
+                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                    
+                                </code>
+                        </div>
+                    </div>
+                </div>
+            </div><div><h4 id="properties-*-style"><code>style</code>
+                </h4>
+
+                <hr>
+                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets inline CSS properties on the Component.</p>
+<!-- HTML_TAG_END -->
+                        </span>
+                    </div>
+
+                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                    
+                                </code>
+                        </div>
+                    </div>
+                </div>
+            </div><div><h4 id="properties-*-id"><code>id</code>
+                </h4>
+
+                <hr>
+                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets an identifier that other Components can target or useful for querying DOM by association.</p>
+<!-- HTML_TAG_END -->
+                        </span>
+                    </div>
+
+                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                    
+                                </code>
+                        </div>
+                    </div>
+                </div>
+            </div><div><h4 id="properties-*-name"><code>name</code>
+                </h4>
+
+                <hr>
+                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets an identifier that will be used in form submissions or targettable by specific Components like <code>Anchor</code>.</p>
+<!-- HTML_TAG_END -->
+                        </span>
+                    </div>
+
+                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                    
+                                </code>
+                        </div>
+                    </div>
+                </div>
+            </div><div><h4 id="properties-*-title"><code>title</code>
+                </h4>
+
+                <hr>
+                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets text for a tooltip whenever an end-user hovers the Component, and useful for assistive technologies.</p>
+<!-- HTML_TAG_END -->
+                        </span>
+                    </div>
+
+                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                    
+                                </code>
+                        </div>
+                    </div>
+                </div>
+            </div><div><h4 id="properties-*-tabindex"><code>tabindex</code>
+                </h4>
+
+                <hr>
+                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters how the Browser will cycle through the elements within the Component's current stacking context.</p>
+<!-- HTML_TAG_END -->
+                        </span>
+                    </div>
+
+                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+
+                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
+                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>number
+                                    
+                                </code><code>string
+                                    
+                                </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+<hr data-margin-y="large">
+
+<div class="stack documentation-footer" data-width="100" data-alignment="center" data-orientation="widescreen:horizontal desktop:horizontal tablet:horizontal" data-spacing="medium"><figure data-size="medium" data-variation="icon">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-clock feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></figure>
+
+    <div><h5 data-max-width="widescreen:content-max desktop:content-max tablet:content-max" data-align="center">Last Modified
+        </h5>
+
+        <small>6/25/2021, 9:55:20 AM</small></div>
+
+    <div data-hidden="mobile" class="spacer "></div>
+
+        <div><a role="button" data-palette="accent" data-size="medium" data-variation="clear" href="https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/modifiers/html5.md" rel="noopener noreferrer" target="_blank">View page in repository
+                
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-external-link feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div></div></div></main>
+
+    <footer class="site-footer"><div data-padding-y="huge" class="box "><div class="stack " data-alignment-x="center"><a href="https://github.com/novacbn/kahi-ui" rel="noopener noreferrer" target="_blank"><h2>Kahi UI</h2></a>
+
+        <p data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/0.2.14" rel="noopener noreferrer" target="_blank"><span data-margin-y="tiny" role="separator">v0.2.14</span></a>
+
+            Made and developed by
+            <br>
+
+            <a href="https://github.com/novacbn" rel="noopener noreferrer" target="_blank">NovacBN
+                
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-github feather-size-0.9em
+    " width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></p></div></div>
+</footer>
+</div>
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002F0.2.14\",\"sub_title\":\"v0.2.14\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"version\":\"0.2.14\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002Fnode_modules\u002F@kahi-ui\u002Fframework\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/navigation/documentation.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"\u002Fdocs\u002Fframework\u002Fgetting-started\":\"Getting Started\",\"\u002Fdocs\u002Fframework\u002Ffaq\":\"F.A.Q.\",\"\u002Fdocs\u002Fframework\u002Ficons\":\"Icons\",\"\u002Fdocs\u002Fframework\u002Fbrowser-support\":\"Browser Support\",\"\u002Fdocs\u002Fframework\u002Fresponsivity\":\"Responsivity\",\"\u002Fdocs\u002Ftypography\u002Fblockquote\":\"Blockquote\",\"\u002Fdocs\u002Ftypography\u002Fcode\":\"Code\",\"\u002Fdocs\u002Ftypography\u002Fheading\":\"Heading\",\"\u002Fdocs\u002Fembedded\u002Ffigure\":\"Figure\",\"\u002Fdocs\u002Ftypography\u002Ftext\":\"Text\",\"\u002Fdocs\u002Fdisplay\u002Flist\":\"List\",\"\u002Fdocs\u002Fdisplay\u002Fbadge\":\"Badge\",\"\u002Fdocs\u002Ffeedback\u002Fdot\":\"Dot\",\"\u002Fdocs\u002Ffeedback\u002Fellipsis\":\"Ellipsis\",\"\u002Fdocs\u002Ffeedback\u002Fwave\":\"Wave\",\"\u002Fdocs\u002Fdisplay\u002Ftable\":\"Table\",\"\u002Fdocs\u002Ffeedback\u002Fspinner\":\"Spinner\",\"\u002Fdocs\u002Finteractables\u002Fform\":\"Form\",\"\u002Fdocs\u002Finteractables\u002Fcheck\":\"Check\",\"\u002Fdocs\u002Finteractables\u002Fbutton\":\"Button\",\"\u002Fdocs\u002Finteractables\u002Fradio\":\"Radio\",\"\u002Fdocs\u002Finteractables\u002Fswitch\":\"Switch\",\"\u002Fdocs\u002Flayouts\u002Fdivider\":\"Divider\",\"\u002Fdocs\u002Flayouts\u002Fcontainer\":\"Container\",\"\u002Fdocs\u002Flayouts\u002Fgroup\":\"Group\",\"\u002Fdocs\u002Finteractables\u002Ftextinput\":\"TextInput\",\"\u002Fdocs\u002Flayouts\u002Fscrollable\":\"Scrollable\",\"\u002Fdocs\u002Flayouts\u002Fgrid\":\"Grid\",\"\u002Fdocs\u002Flayouts\u002Fmosaic\":\"Mosaic\",\"\u002Fdocs\u002Flayouts\u002Fspacer\":\"Spacer\",\"\u002Fdocs\u002Fsurfaces\u002Fbox\":\"Box\",\"\u002Fdocs\u002Flayouts\u002Fstack\":\"Stack\",\"\u002Fdocs\u002Fnavigation\u002Fanchor\":\"Anchor\",\"\u002Fdocs\u002Fsurfaces\u002Fhero\":\"Hero\",\"\u002Fdocs\u002Fsurfaces\u002Ftile\":\"Tile\",\"\u002Fdocs\u002Fsurfaces\u002Fcard\":\"Card\",\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\":\"Breadcrumb\",\"\u002Fdocs\u002Fnavigation\u002Fomni\":\"Omni\",\"\u002Fdocs\u002Fnavigation\u002Fmenu\":\"Menu\",\"\u002Fdocs\u002Fnavigation\u002Faside\":\"Aside\",\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\":\"ContextBackdrop\",\"\u002Fdocs\u002Foverlays\u002Fpopover\":\"Popover\",\"\u002Fdocs\u002Futilities\u002Fcontextbutton\":\"ContextButton\",\"\u002Fdocs\u002Foverlays\u002Foffscreen\":\"Offscreen\",\"\u002Fdocs\u002Foverlays\u002Foverlay\":\"Overlay\",\"\u002Fdocs\u002Futilities\u002Fportal\":\"Portal\",\"\u002Fdocs\u002Fmodifiers\u002Fhidden\":\"Hidden\",\"\u002Fdocs\u002Fmodifiers\u002Fhtml5\":\"HTML5\",\"\u002Fdocs\u002Fmodifiers\u002Fspacings\":\"Spacings\",\"\u002Fdocs\u002Fstores\u002Fdarkmode\":\"darkmode\",\"\u002Fdocs\u002Fmodifiers\u002Fsizings\":\"Sizings\",\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\":\"htmlpalette\",\"\u002Fdocs\u002Fstores\u002Fmediaquery\":\"mediaquery\",\"\u002Fdocs\u002Fstores\u002Fprefersscheme\":\"prefersscheme\",\"\u002Fdocs\u002Fstores\u002Fscrolllock\":\"scrolllock\",\"\u002Fdocs\u002Fstores\u002Fviewport\":\"viewport\"}}"}</script>
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/modifiers/html5.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":0,\"events\":{},\"identifier\":\"modifiers\u002Fhtml5\",\"modified_at\":1624629320354.833,\"properties\":{\"*\":[{\"name\":\"class\",\"description\":\"\u003Cp\u003ESets a class name(s) on the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"style\",\"description\":\"\u003Cp\u003ESets inline CSS properties on the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"id\",\"description\":\"\u003Cp\u003ESets an identifier that other Components can target or useful for querying DOM by association.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"name\",\"description\":\"\u003Cp\u003ESets an identifier that will be used in form submissions or targettable by specific Components like \u003Ccode\u003EAnchor\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"title\",\"description\":\"\u003Cp\u003ESets text for a tooltip whenever an end-user hovers the Component, and useful for assistive technologies.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"tabindex\",\"description\":\"\u003Cp\u003EAlters how the Browser will cycle through the elements within the Component's current stacking context.\u003C\u002Fp\u003E\\n\",\"types\":[\"number\",\"string\"]}]},\"sections\":[{\"identifier\":\"html5\",\"level\":1,\"text\":\"HTML5\"},{\"identifier\":\"class\",\"level\":2,\"text\":\"class\"},{\"identifier\":\"style\",\"level\":2,\"text\":\"style\"},{\"identifier\":\"id\",\"level\":2,\"text\":\"id\"},{\"identifier\":\"name\",\"level\":2,\"text\":\"name\"},{\"identifier\":\"title\",\"level\":2,\"text\":\"title\"},{\"identifier\":\"tabindex\",\"level\":2,\"text\":\"tabindex\"}],\"snippets\":[{\"identifier\":\"html5-class\",\"script\":\"\u003Cscript\u003E\\n    import {Text} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText class=\\\"my-text\\\"\u003E\\n    Lorem ipsum dolor sit amet, consectetur adipiscing\\n    elit.\\n\u003C\u002FText\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.my-text) {\\n        color: red;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"HTML5 class\"},{\"identifier\":\"html5-style\",\"script\":\"\u003Cscript\u003E\\n    import {Text} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText style=\\\"color:red;\\\"\u003E\\n    Lorem ipsum dolor sit amet, consectetur adipiscing\\n    elit.\\n\u003C\u002FText\u003E\",\"syntax\":\"svelte\",\"title\":\"HTML5 style\"},{\"identifier\":\"html5-id\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Anchor,\\n        Heading,\\n        Spacer,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAnchor href=\\\"#target-heading\\\"\u003E\\n    Scroll to Heading!\\n\u003C\u002FAnchor\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CHeading id=\\\"target-heading\\\"\u003EHello World!\u003C\u002FHeading\u003E\",\"syntax\":\"svelte\",\"title\":\"HTML5 id\"},{\"identifier\":\"html5-name\",\"script\":\"\u003Cscript\u003E\\n    import {Anchor} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAnchor target=\\\"target-iframe\\\" href=\\\"\u002F\\\"\u003E\\n    Open Landing Page\\n\u003C\u002FAnchor\u003E\\n\\n\u003Ciframe\\n    name=\\\"target-iframe\\\"\\n    width=\\\"100%\\\"\\n    height=\\\"256\\\"\\n\u002F\u003E\",\"syntax\":\"svelte\",\"title\":\"HTML5 name\"},{\"identifier\":\"html5-title\",\"script\":\"\u003Cscript\u003E\\n    import {Text} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText title=\\\"I am some additional text!\\\"\u003E\\n    Hover me!\\n\u003C\u002FText\u003E\",\"syntax\":\"svelte\",\"title\":\"HTML5 title\"},{\"identifier\":\"html5-tabindex\",\"script\":\"\u003Cscript\u003E\\n    import {Button} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CButton tabindex=\\\"3\\\"\u003EIndex #3\u003C\u002FButton\u003E\\n\u003CButton tabindex=\\\"1\\\"\u003EIndex #1\u003C\u002FButton\u003E\\n\u003CButton tabindex=\\\"-1\\\"\u003EUnselectable\u003C\u002FButton\u003E\\n\u003CButton tabindex=\\\"4\\\"\u003EIndex #4\u003C\u002FButton\u003E\\n\u003CButton tabindex=\\\"2\\\"\u003EIndex #2\u003C\u002FButton\u003E\",\"syntax\":\"svelte\",\"title\":\"HTML5 tabindex\"}],\"title\":\"HTML5\"},\"render\":\"\u003Ch1 id=\\\"html5\\\"\u003EHTML5\u003C\u002Fh1\u003E\\n\u003Cp\u003EAll Components have access to several common HTML5 global attributes.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"class\\\"\u003Eclass\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Fclass\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eclass\u003C\u002Fcode\u003E\u003C\u002Fa\u003E allows you to apply CSS classes that you've defined to Components. However, you will have to use \u003Ccode\u003E:global\u003C\u002Fcode\u003E on your class names to bypass Svelte's local scoping.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-class?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-class?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"style\\\"\u003Estyle\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Fstyle\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Estyle\u003C\u002Fcode\u003E\u003C\u002Fa\u003E allows you to apply inline CSS properties to Components.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-style?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-style?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"id\\\"\u003Eid\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Fid\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E allows you to set an identifier that other elements can target or targettable for scrolling by a \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FAPI\u002FURL\u002Fhash\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EURL fragment\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-id?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-id?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"name\\\"\u003Ename\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Fname\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ename\u003C\u002Fcode\u003E\u003C\u002Fa\u003E allows you to set an identifier for the Component to set its value to in a form, or, can targettable by an \u003Ca href=\\\"..\u002Fnavigation\u002Fanchor\\\"\u003E\u003Ccode\u003EAnchor\u003C\u002Fcode\u003E\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-name?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-name?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"title\\\"\u003Etitle\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Ftitle\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Etitle\u003C\u002Fcode\u003E\u003C\u002Fa\u003E allows you to set a timed effect to show a text tooltip whenever an end-user hovers for long enough. Typically you don't want to rely on this attribute for the UI. Rather use it for semantic and assistive purposes.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-title?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-title?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"tabindex\\\"\u003Etabindex\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Ftabindex\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Etabindex\u003C\u002Fcode\u003E\u003C\u002Fa\u003E allows you to configure how the Browser cycles through elements in the current stacking context when they press their tab keyboard button, or similar.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-tabindex?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fhtml5\u002Fhtml5-tabindex?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+
+    </body>
+</html>

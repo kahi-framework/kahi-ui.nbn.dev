@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-d5f694ff.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-7192d1b3.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js">
+		<link rel="modulepreload" href="/./_app/chunks/ShellAside.svelte_svelte&type=style&lang-109c4779.js">
+		<link rel="modulepreload" href="/./_app/chunks/attribute-0aaa2965.js">
+		<link rel="modulepreload" href="/./_app/chunks/preferences-8928e2ca.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js">
+		<link rel="modulepreload" href="/./_app/chunks/Spacer-15779275.js">
+		<link rel="modulepreload" href="/./_app/chunks/Overlay-4340c5e3.js">
+		<link rel="modulepreload" href="/./_app/chunks/prefersscheme-f135a31d.js">
+		<link rel="modulepreload" href="/./_app/chunks/Figure-dcddfcc0.js">
+		<link rel="modulepreload" href="/./_app/chunks/CardSection-3d682241.js">
+		<link rel="modulepreload" href="/./_app/chunks/HeroSection-871c3add.js">
+		<link rel="modulepreload" href="/./_app/chunks/Heading-d9af1089.js">
+		<link rel="modulepreload" href="/./_app/chunks/Anchor-01260e36.js">
+		<link rel="modulepreload" href="/./_app/chunks/OmniSection-77e9f906.js">
+		<link rel="modulepreload" href="/./_app/chunks/Code-1ddf3f91.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/__layout.reset.svelte-b66f8c45.css">
+		<link rel="stylesheet" href="/./_app/assets/ShellAside.svelte_svelte&type=style&lang-1834df9b.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/[category]/[documentation]/[snippet].svelte-95fde7e9.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-d5f694ff.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js"),
+						import("/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/repl/navigation/anchor/anchor-external-navigation",
+						query: new URLSearchParams(""),
+						params: {"category":"navigation","documentation":"anchor","snippet":"anchor-external-navigation"}
+					}
+				}
+			});
+		</script>
+
+        <title>Kahi UI :: Straight-forward Svelte UI for the Web</title>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
+        failed to load REPL.
+    </section></div>
+
+
+
+	<script type="svelte-data" url="/api/v1/content/navigation/anchor.json">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"{\"data\":{\"meta\":{\"identifier\":\"navigation\u002Fanchor\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fanchor\",\"title\":\"Anchor\",\"btime\":0,\"mtime\":1624631531428.6624,\"properties\":{\"Anchor\":[{\"name\":\"current\",\"description\":\"Changes the \u003Ccode\u003E\u003Ca href='https:\u002F\u002Fwww.digitala11y.com\u002Faria-current-state' rel='noopener noreferrer' target='_blank'\u003Earia-current\u003C\u002Fa\u003E\u003C\u002Fcode\u003E attribute, telling screen readers how to handle the link.\",\"types\":[\"date\",\"location\",\"page\",\"step\",\"time\",\"true\"]},{\"name\":\"disabled\",\"description\":\"Changes the \u003Ccode\u003E\u003Ca href='https:\u002F\u002Fwww.digitala11y.com\u002Faria-disabled-state' rel='noopener noreferrer' target='_blank'\u003Earia-disabled\u003C\u002Fa\u003E\u003C\u002Fcode\u003E attribute, telling screen readers how to handle the link and altering it to be greyed-out.\",\"types\":[\"boolean\"]},{\"name\":\"href\",\"description\":\"Changes the URL that \u003Ccode\u003EAnchor\u003C\u002Fcode\u003E navigates end-users to when clicked.\",\"types\":[\"string\"]},{\"name\":\"download\",\"description\":\"If linking to a downloadable file, this property will be used as the suggested file name.\",\"types\":[\"string\"]},{\"name\":\"rel\",\"description\":\"Sets how the \u003Ccode\u003EAnchor\u003C\u002Fcode\u003E relates to the current page, see \u003Ca href='https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-rel' rel='noopener noreferrer' target='_blank'\u003EMDN\u003C\u002Fa\u003E for more information.\",\"types\":[\"string\"]},{\"name\":\"target\",\"description\":\"Sets the target of the \u003Ccode\u003EAnchor\u003C\u002Fcode\u003E being navigated, see \u003Ca href='https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-target' rel='noopener noreferrer' target='_blank'\u003EMDN\u003C\u002Fa\u003E for more information.\",\"types\":[\"string\"]}]},\"sections\":[{\"identifier\":\"anchor\",\"level\":1,\"text\":\"Anchor\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"internal-navigation\",\"level\":2,\"text\":\"Internal Navigation\"},{\"identifier\":\"external-navigation\",\"level\":2,\"text\":\"External Navigation\"}],\"snippets\":[{\"identifier\":\"anchor-preview\",\"script\":\"&lt;script&gt;\\n    import {Anchor} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Anchor\\n    href=\\\"https:\u002F\u002Fgoogle.com\\\"\\n    target=\\\"_blank\\\"\\n    rel=\\\"noopener noreferrer\\\"\\n&gt;\\n    Goto google.com\\n&lt;\u002FAnchor&gt;\",\"syntax\":\"svelte\",\"title\":\"Anchor Preview\"},{\"identifier\":\"anchor-imports\",\"script\":\"&lt;script&gt;\\n    import {Anchor} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\",\"syntax\":\"html\",\"title\":\"Anchor Imports\"},{\"identifier\":\"anchor-internal-navigation\",\"script\":\"&lt;script&gt;\\n    import {Anchor} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Anchor href=\\\"#\\\"&gt;Kahi UI&lt;\u002FAnchor&gt;\",\"syntax\":\"svelte\",\"title\":\"Anchor Internal Navigation\"},{\"identifier\":\"anchor-external-navigation\",\"script\":\"&lt;script&gt;\\n    import {Anchor} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Anchor\\n    href=\\\"https:\u002F\u002Fgoogle.com\\\"\\n    target=\\\"_blank\\\"\\n    rel=\\\"noopener noreferrer\\\"\\n&gt;\\n    Goto google.com\\n&lt;\u002FAnchor&gt;\",\"syntax\":\"svelte\",\"title\":\"Anchor External Navigation\"}]},\"render\":\"\u003Ch1 id=\\\"anchor\\\"\u003EAnchor\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003EAnchor\u003C\u002Fcode\u003E are used for navigating from page to page, or to external websites.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fanchor data-identifier=\\\"anchor-preview\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fanchor\u002Fanchor-preview?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fanchor\u002Fanchor-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\" data-document=navigation\u002Fanchor data-identifier=\\\"anchor-imports\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EAnchor\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"internal-navigation\\\"\u003EInternal Navigation\u003C\u002Fh2\u003E\\n\u003Cp\u003EWhen navigating only to an internal Web Application route, you can just set \u003Ccode\u003Ehref\u003C\u002Fcode\u003E property with no other properties.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fanchor data-identifier=\\\"anchor-internal-navigation\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fanchor\u002Fanchor-internal-navigation?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fanchor\u002Fanchor-internal-navigation?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"external-navigation\\\"\u003EExternal Navigation\u003C\u002Fh2\u003E\\n\u003Cp\u003EWhen navigating to external links, for \u003Cstrong\u003Esecurity purposes\u003C\u002Fstrong\u003E it's recommended to set \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FLink_types\u002Fnoopener\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Erel=&quot;noopener&quot;\u003C\u002Fcode\u003E\u003C\u002Fa\u003E to prevent \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FAPI\u002FWindow\u002Fopener\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003EWindow.opener\u003C\u002Fcode\u003E\u003C\u002Fa\u003E from being set on the newly opened page. And also to set \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FLink_types\u002Fnoreferrer\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Erel=&quot;noreferrer&quot;\u003C\u002Fcode\u003E\u003C\u002Fa\u003E for \u003Cstrong\u003Eprivacy purposes\u003C\u002Fstrong\u003E, to prevent the Browser from sending the \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTTP\u002FHeaders\u002FReferer\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003EReferer\u003C\u002Fcode\u003E\u003C\u002Fa\u003E header to the new page.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fanchor data-identifier=\\\"anchor-external-navigation\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fanchor\u002Fanchor-external-navigation?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fanchor\u002Fanchor-external-navigation?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+
+    </body>
+</html>

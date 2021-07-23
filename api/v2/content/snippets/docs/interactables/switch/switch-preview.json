@@ -1,0 +1,1 @@
+{"data":{"identifier":"switch-preview","script":"<script>\n    import {Form, Switch} from \"@kahi-ui/framework\";\n</script>\n\n<Form.Label for=\"switch-preview\">\n    Remember Login?\n    <Switch palette=\"affirmative\" />\n</Form.Label>","syntax":"svelte","title":"Switch Preview"}}

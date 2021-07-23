@@ -1,0 +1,1 @@
+{"data":{"identifier":"badge-preview","script":"<script>\n    import {Badge} from \"@kahi-ui/framework\";\n</script>\n\n<Badge>This is a Badge!</Badge>","syntax":"svelte","title":"Badge Preview"}}

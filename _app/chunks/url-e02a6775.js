@@ -1,0 +1,1 @@
+const n="http://fake.invalid";function t(t,e){if(e=function(t){const{pathname:e}=new URL(t,n);return e.endsWith("/")?e.slice(0,-1):e}(e),!t)return e;let{hash:i,pathname:r,origin:a,search:c}=new URL(t,n);return r=r.endsWith("/")?r.slice(0,-1)+e:r+e,a=a===n?"":a,a+r+c+i}function e(t){let e;try{e=new URL(t,n)}catch(i){return!1}return e.origin!==n}export{t as a,e as i};

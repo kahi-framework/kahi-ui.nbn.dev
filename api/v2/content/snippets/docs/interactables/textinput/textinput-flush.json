@@ -1,0 +1,1 @@
+{"data":{"identifier":"textinput-flush","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\nInput some text:\n<TextInput\n    variation=\"flush\"\n    characters=\"20\"\n    value=\"This is a FLUSH TextInput\"\n/>","syntax":"svelte","title":"TextInput Flush"}}

@@ -1,0 +1,1 @@
+{"data":{"identifier":"anchor-preview","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>\n\n<Anchor\n    href=\"https://google.com\"\n    target=\"_blank\"\n    rel=\"noopener noreferrer\"\n>\n    Goto google.com\n</Anchor>","syntax":"svelte","title":"Anchor Preview"}}

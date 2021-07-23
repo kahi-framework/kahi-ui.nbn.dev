@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        <title>
+        Straight-forward Svelte UI for the Web :: Kahi UI
+    </title>
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-19b00d26.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-58d36447.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-08cc8e69.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/pages/__layout.svelte-d7e72b5e.js">
+		<link rel="modulepreload" href="/./_app/chunks/navigation.config-07463507.js">
+		<link rel="modulepreload" href="/./_app/chunks/snippet-b1cbe0be.js">
+		<link rel="modulepreload" href="/./_app/chunks/url-b5fabed9.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-0e02111e.js">
+		<link rel="modulepreload" href="/./_app/chunks/SiteFooter-6f56caa4.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/__layout.svelte-23649fcb.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-8d3a3078.css">
+		<link rel="stylesheet" href="/./_app/assets/SiteFooter-a12ef40f.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-19b00d26.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/__layout.svelte-d7e72b5e.js"),
+						import("/./_app/pages/index.svelte-0e02111e.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("kahi-docs.preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+
+
+<div class="landing-layout">
+
+<nav class="omni app-navigation" data-palette="dark" data-variation="sticky"><header><a href="/">Kahi UI</a>
+
+        <hr data-orientation="vertical">
+
+            
+                <a href="https://github.com/novacbn/kahi-ui/releases/0.2.14" rel="noopener noreferrer" target="_blank"><small data-palette="light">v0.2.14</small></a></header>
+
+    <footer>
+
+        <section><input role="presentation" id="app-navigation" type="checkbox">
+
+<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="context-button " data-hidden="widescreen" role="button" for="app-navigation" data-palette="light" data-size="large" data-variation="clear">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-more-vertical feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
+
+                <div data-hidden="widescreen" class="card " data-palette="auto"><section><nav class="menu"><ul><li><a href="/docs/framework/getting-started">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+                    Documentation</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+
+                    Source</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+                    Releases</a>
+            </li></ul></nav></section></div></div>
+
+            <nav class="menu" data-hidden="mobile tablet desktop" data-orientation="horizontal"><ul><li><a href="/docs/framework/getting-started">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+                    Documentation</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+
+                    Source</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+                    Releases</a>
+            </li></ul></nav></section></footer></nav>
+
+
+
+    <main class="landing-container"><div data-padding-y="huge" class="hero " data-palette="dark"><header>Easy to use Svelte UI for
+        <div class="box " data-palette="accent">rapid prototyping</div>
+        </header>
+
+    <section>Kahi UI is a composable and flexible design library for Svelte that allows you to go from <strong>0
+        </strong>
+        to <strong>60</strong> in no time.
+    </section>
+
+    <footer><a role="button" data-palette="light" data-size="large" data-variation="clear" href="https://github.com/novacbn/kahi-ui" rel="noopener noreferrer" target="_blank">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Source
+        </a>
+
+        <a role="button" href="/docs/framework/getting-started" data-palette="accent" data-size="large" sveltekit:prefetch>Getting Started
+            
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-arrow-right feather-size-default
+    " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a></footer></div>
+
+<div data-padding-y="huge" class="container " data-viewport="widescreen"><h3 data-padding-x="mobile:tiny" data-align="center" data-variation="headline">Straight-forward. Minimal Markup.
+    </h3>
+
+    <p data-margin-top="small" data-margin-bottom="large" data-align="center" data-size="huge"><small>Develop more UI without writing essays worth of markup.</small></p>
+
+    <iframe class="snippet-repl" src="/repl/docs/samples/landing-page/landing-preview?rotation=horizontal" sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"></iframe>
+
+    <a href="/repl/docs/samples/landing-page/landing-preview?rotation=horizontal" hidden sveltekit:prefetch></a>
+
+    <hr data-margin-y="huge" data-palette="accent">
+
+    <h3 data-padding-x="mobile:tiny" data-align="center" data-variation="headline">Features expected of a modern UI.
+    </h3>
+
+    <p data-margin-top="small" data-margin-bottom="large" data-align="center" data-size="huge"><small>Opinonated when needed. Flexible when wanted.</small></p>
+
+    <div class="grid " data-points="2 mobile:1" data-spacing="large tablet:medium mobile:medium"><div class="card "><header>Composable
+                <div class="spacer "></div>
+
+                <figure data-shape="pill" data-variation="icon"><div data-padding="medium" data-width="content-max" class="box " data-palette="accent">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-grid feather-size-1.25rem
+    " width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div></figure></header>
+
+            <section data-padding-bottom="medium"><p data-size="medium">Designed with <strong>Composability</strong> in mind, author new Components
+                    easily.
+                </p></section></div>
+
+        <div class="card "><header>Staticly Typed
+                <div class="spacer "></div>
+
+                <figure data-shape="pill" data-variation="icon"><div data-padding="medium" data-width="content-max" class="box " data-palette="accent">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-1.25rem
+    " width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div></figure></header>
+
+            <section data-padding-bottom="medium"><p data-size="medium">Created using <strong>Typescript</strong>, so a pleasent IDE experience
+                    comes out-of-box.
+                </p></section></div>
+
+        <div class="card "><header>Dark Mode
+                <div class="spacer "></div>
+
+                <figure data-shape="pill" data-variation="icon"><div data-padding="medium" data-width="content-max" class="box " data-palette="accent">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-moon feather-size-1.25rem
+    " width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div></figure></header>
+
+            <section data-padding-bottom="medium"><p data-size="medium">Supports automatic <strong>Dark Mode</strong>, or your choice from the
+                    built-in palette.
+                </p></section></div>
+
+        <div class="card "><header>Progressively Enhanced
+                <div class="spacer "></div>
+
+                <figure data-shape="pill" data-variation="icon"><div data-padding="medium" data-width="content-max" class="box " data-palette="accent">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-zap feather-size-1.25rem
+    " width="1.25rem" height="1.25rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div></figure></header>
+
+            <section data-padding-bottom="medium"><p data-size="medium">Most logic is embedded within <strong>HTML / CSS</strong>, with <strong>Javascript
+                    </strong>
+                    enhancing the <strong>UX</strong>.
+                </p></section></div></div></div></main>
+
+    <footer class="site-footer"><div data-padding-y="huge" class="box "><div class="stack " data-alignment-x="center"><a href="https://github.com/novacbn/kahi-ui" rel="noopener noreferrer" target="_blank"><h2>Kahi UI</h2></a>
+
+        <p data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/0.2.14" rel="noopener noreferrer" target="_blank"><span data-margin-y="tiny" role="separator">v0.2.14</span></a>
+
+            Made and developed by
+            <br>
+
+            <a href="https://github.com/novacbn" rel="noopener noreferrer" target="_blank">NovacBN
+                
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-github feather-size-0.9em
+    " width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></p></div></div>
+</footer>
+</div>
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002F0.2.14\",\"sub_title\":\"v0.2.14\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"version\":\"0.2.14\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002Fnode_modules\u002F@kahi-ui\u002Fframework\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
+
+    </body>
+</html>

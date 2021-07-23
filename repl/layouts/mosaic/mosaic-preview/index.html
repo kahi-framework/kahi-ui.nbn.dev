@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-d5f694ff.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-7192d1b3.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js">
+		<link rel="modulepreload" href="/./_app/chunks/ShellAside.svelte_svelte&type=style&lang-109c4779.js">
+		<link rel="modulepreload" href="/./_app/chunks/attribute-0aaa2965.js">
+		<link rel="modulepreload" href="/./_app/chunks/preferences-8928e2ca.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js">
+		<link rel="modulepreload" href="/./_app/chunks/Spacer-15779275.js">
+		<link rel="modulepreload" href="/./_app/chunks/Overlay-4340c5e3.js">
+		<link rel="modulepreload" href="/./_app/chunks/prefersscheme-f135a31d.js">
+		<link rel="modulepreload" href="/./_app/chunks/Figure-dcddfcc0.js">
+		<link rel="modulepreload" href="/./_app/chunks/CardSection-3d682241.js">
+		<link rel="modulepreload" href="/./_app/chunks/HeroSection-871c3add.js">
+		<link rel="modulepreload" href="/./_app/chunks/Heading-d9af1089.js">
+		<link rel="modulepreload" href="/./_app/chunks/Anchor-01260e36.js">
+		<link rel="modulepreload" href="/./_app/chunks/OmniSection-77e9f906.js">
+		<link rel="modulepreload" href="/./_app/chunks/Code-1ddf3f91.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/__layout.reset.svelte-b66f8c45.css">
+		<link rel="stylesheet" href="/./_app/assets/ShellAside.svelte_svelte&type=style&lang-1834df9b.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/[category]/[documentation]/[snippet].svelte-95fde7e9.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-d5f694ff.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js"),
+						import("/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/repl/layouts/mosaic/mosaic-preview",
+						query: new URLSearchParams(""),
+						params: {"category":"layouts","documentation":"mosaic","snippet":"mosaic-preview"}
+					}
+				}
+			});
+		</script>
+
+        <title>Kahi UI :: Straight-forward Svelte UI for the Web</title>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
+        failed to load REPL.
+    </section></div>
+
+
+
+	<script type="svelte-data" url="/api/v1/content/layouts/mosaic.json">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"{\"data\":{\"meta\":{\"identifier\":\"layouts\u002Fmosaic\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fmosaic\",\"title\":\"Mosaic\",\"btime\":0,\"mtime\":1624690895998.979,\"properties\":{\"Mosaic\":[{\"name\":\"sizing\",\"description\":\"Sets the minimum width each child item divided up into, out of the space available.\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SIZING}\"]},{\"name\":\"alignment\",\"description\":\"Adjusts where the child items will be placed within the \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E along both axis.\",\"types\":[\"center\",\"stretch\",\"{VIEWPORT}:{ALIGNMENT}\"]},{\"name\":\"alignment_x\",\"description\":\"Adjusts where the child items will be placed within the \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E along the horizontal axis.\",\"types\":[\"center\",\"stretch\",\"left\",\"right\",\"{VIEWPORT}:{ALIGNMENT}\"]},{\"name\":\"alignment_y\",\"description\":\"Adjusts where the child items will be placed within the \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E along the vertical axis.\",\"types\":[\"center\",\"stretch\",\"bottom\",\"top\",\"{VIEWPORT}:{ALIGNMENT}\"]},{\"name\":\"spacing\",\"description\":\"Adjusts the visual spacing between child items in the \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E.\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"spacing_x\",\"description\":\"Adjusts the horizontal visual spacing between child items in the \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E.\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"spacing_y\",\"description\":\"Adjusts the vertical visual spacing between child items in the \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E.\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]}]},\"sections\":[{\"identifier\":\"mosaic\",\"level\":1,\"text\":\"Mosaic\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"sizing\",\"level\":2,\"text\":\"Sizing\"},{\"identifier\":\"spacing\",\"level\":2,\"text\":\"Spacing\"}],\"snippets\":[{\"identifier\":\"mosaic-preview\",\"script\":\"&lt;script&gt;\\n    import {Box, Mosaic} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Mosaic\\n    class=\\\"mosaic-preview\\\"\\n    sizing=\\\"tiny\\\"\\n    spacing=\\\"medium\\\"\\n&gt;\\n    &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n    &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n\\n    &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n\\n    &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n    &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n\\n    &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n    &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n\\n    &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n    &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n&lt;\u002FMosaic&gt;\\n\\n&lt;style&gt;\\n    :global(.mosaic-preview .box) {\\n        height: 3rem;\\n    }\\n&lt;\u002Fstyle&gt;\",\"syntax\":\"svelte\",\"title\":\"Mosaic Preview\"},{\"identifier\":\"mosaic-imports\",\"script\":\"&lt;script&gt;\\n    import {Mosaic} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\",\"syntax\":\"html\",\"title\":\"Mosaic Imports\"},{\"identifier\":\"mosaic-sizing\",\"script\":\"&lt;script&gt;\\n    import {\\n        Box,\\n        Mosaic,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Stack\\n    class=\\\"mosaic-sizing\\\"\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n&gt;\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;TINY&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\" spacing=\\\"medium\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;SMALL&lt;\u002FText&gt;\\n\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"small\\\" spacing=\\\"medium\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;MEDIUM&lt;\u002FText&gt;\\n\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"medium\\\" spacing=\\\"medium\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;LARGE&lt;\u002FText&gt;\\n\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"large\\\" spacing=\\\"medium\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;HUGE&lt;\u002FText&gt;\\n\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"huge\\\" spacing=\\\"medium\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n&lt;\u002FStack&gt;\\n\\n&lt;style&gt;\\n    :global(.mosaic-sizing .mosaic .box) {\\n        height: 3rem;\\n    }\\n&lt;\u002Fstyle&gt;\",\"syntax\":\"svelte\",\"title\":\"Mosaic Sizing\"},{\"identifier\":\"mosaic-spacing\",\"script\":\"&lt;script&gt;\\n    import {\\n        Box,\\n        Mosaic,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Stack\\n    class=\\\"mosaic-spacing\\\"\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n&gt;\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;DEFAULT&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;TINY&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\" spacing=\\\"tiny\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;SMALL&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\" spacing=\\\"small\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;MEDIUM&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\" spacing=\\\"medium\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;LARGE&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\" spacing=\\\"large\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n\\n    &lt;div&gt;\\n        &lt;Text is=\\\"strong\\\"&gt;HUGE&lt;\u002FText&gt;\\n        &lt;Box palette=\\\"dark\\\" padding=\\\"small\\\"&gt;\\n            &lt;Mosaic sizing=\\\"tiny\\\" spacing=\\\"huge\\\"&gt;\\n                &lt;Box palette=\\\"alert\\\" \u002F&gt;\\n                &lt;Box palette=\\\"affirmative\\\" \u002F&gt;\\n                &lt;Box palette=\\\"negative\\\" \u002F&gt;\\n            &lt;\u002FMosaic&gt;\\n        &lt;\u002FBox&gt;\\n    &lt;\u002Fdiv&gt;\\n&lt;\u002FStack&gt;\\n\\n&lt;style&gt;\\n    :global(.mosaic-spacing .mosaic .box) {\\n        height: 3rem;\\n    }\\n&lt;\u002Fstyle&gt;\",\"syntax\":\"svelte\",\"title\":\"Mosaic Spacing\"}]},\"render\":\"\u003Ch1 id=\\\"mosaic\\\"\u003EMosaic\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003EMosaic\u003C\u002Fcode\u003E is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=layouts\u002Fmosaic data-identifier=\\\"mosaic-preview\\\" src=\\\"\u002Frepl\u002Flayouts\u002Fmosaic\u002Fmosaic-preview?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Flayouts\u002Fmosaic\u002Fmosaic-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\" data-document=layouts\u002Fmosaic data-identifier=\\\"mosaic-imports\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EMosaic\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"sizing\\\"\u003ESizing\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Esizing={[&quot;tiny&quot;, &quot;tablet:medium&quot;, &quot;mobile:medium&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can alter how large each \u003Ccode\u003EMosaic\u003C\u002Fcode\u003E item should be via the \u003Ccode\u003Esizing\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=layouts\u002Fmosaic data-identifier=\\\"mosaic-sizing\\\" src=\\\"\u002Frepl\u002Flayouts\u002Fmosaic\u002Fmosaic-sizing?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Flayouts\u002Fmosaic\u002Fmosaic-sizing?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"spacing\\\"\u003ESpacing\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Espacing={[&quot;medium&quot;, &quot;tablet:small&quot;, &quot;mobile:tiny&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can adjust the spacing between items via the \u003Ccode\u003Espacing\u003C\u002Fcode\u003E, \u003Ccode\u003Espacing_x\u003C\u002Fcode\u003E, and \u003Ccode\u003Espacing_y\u003C\u002Fcode\u003E properties.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=layouts\u002Fmosaic data-identifier=\\\"mosaic-spacing\\\" src=\\\"\u002Frepl\u002Flayouts\u002Fmosaic\u002Fmosaic-spacing?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Flayouts\u002Fmosaic\u002Fmosaic-spacing?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+
+    </body>
+</html>

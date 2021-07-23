@@ -1,0 +1,1 @@
+:root{--repl-divider-color:rgb(var(--palette-foreground-text), 0.3);--repl-stack-height:100vh}.codejar-linenumbers{height:max-content;min-height:100%}.repl-editor{border-radius:0}.repl-render .context-backdrop,.repl-render .overlay{width:100%!important;height:100%!important}.repl-stack{height:100vh}

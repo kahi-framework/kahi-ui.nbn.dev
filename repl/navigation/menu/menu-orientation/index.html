@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-d5f694ff.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-7192d1b3.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js">
+		<link rel="modulepreload" href="/./_app/chunks/ShellAside.svelte_svelte&type=style&lang-109c4779.js">
+		<link rel="modulepreload" href="/./_app/chunks/attribute-0aaa2965.js">
+		<link rel="modulepreload" href="/./_app/chunks/preferences-8928e2ca.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js">
+		<link rel="modulepreload" href="/./_app/chunks/Spacer-15779275.js">
+		<link rel="modulepreload" href="/./_app/chunks/Overlay-4340c5e3.js">
+		<link rel="modulepreload" href="/./_app/chunks/prefersscheme-f135a31d.js">
+		<link rel="modulepreload" href="/./_app/chunks/Figure-dcddfcc0.js">
+		<link rel="modulepreload" href="/./_app/chunks/CardSection-3d682241.js">
+		<link rel="modulepreload" href="/./_app/chunks/HeroSection-871c3add.js">
+		<link rel="modulepreload" href="/./_app/chunks/Heading-d9af1089.js">
+		<link rel="modulepreload" href="/./_app/chunks/Anchor-01260e36.js">
+		<link rel="modulepreload" href="/./_app/chunks/OmniSection-77e9f906.js">
+		<link rel="modulepreload" href="/./_app/chunks/Code-1ddf3f91.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/__layout.reset.svelte-b66f8c45.css">
+		<link rel="stylesheet" href="/./_app/assets/ShellAside.svelte_svelte&type=style&lang-1834df9b.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/[category]/[documentation]/[snippet].svelte-95fde7e9.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-d5f694ff.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js"),
+						import("/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/repl/navigation/menu/menu-orientation",
+						query: new URLSearchParams(""),
+						params: {"category":"navigation","documentation":"menu","snippet":"menu-orientation"}
+					}
+				}
+			});
+		</script>
+
+        <title>Kahi UI :: Straight-forward Svelte UI for the Web</title>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
+        failed to load REPL.
+    </section></div>
+
+
+
+	<script type="svelte-data" url="/api/v1/content/navigation/menu.json">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"{\"data\":{\"meta\":{\"identifier\":\"navigation\u002Fmenu\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fmenu\",\"title\":\"Menu\",\"btime\":0,\"mtime\":1624631663454.65,\"properties\":{\"Menu.Container\":[{\"name\":\"orientation\",\"description\":\"Renders the \u003Ccode\u003EMenu.Container\u003C\u002Fcode\u003E horizontally.\",\"types\":[\"horizontal\",\"{VIEWPORT}:horizontal\"]}],\"Menu.Anchor\":[{\"name\":\"active\",\"description\":\"Renders the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-pressed\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E as if it where being clicked.\",\"types\":[\"boolean\"]},{\"name\":\"disabled\",\"description\":\"Renders the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-disabled\u003C\u002Fcode\u003E attributes, and styles the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E partially transparent.\",\"types\":[\"boolean\"]},{\"name\":\"href\",\"description\":\"Renders the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;a role=\\\"button\\\"&gt;\u003C\u002Fcode\u003E and links to the specified \u003Ccode\u003Ehref\u003C\u002Fcode\u003E property.\",\"types\":[\"string\"]},{\"name\":\"download\",\"description\":\"If linking to a downloadable file, this property will be used as the suggested file name.\",\"types\":[\"string\"]},{\"name\":\"rel\",\"description\":\"Sets how the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E relates to the current page, see \u003Ca href='https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-rel' rel='noopener noreferrer' target='_blank'\u003EMDN\u003C\u002Fa\u003E for more information.\",\"types\":[\"string\"]},{\"name\":\"target\",\"description\":\"Sets the target of the \u003Ccode\u003EMenu.Anchor\u003C\u002Fcode\u003E being navigated, see \u003Ca href='https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-target' rel='noopener noreferrer' target='_blank'\u003EMDN\u003C\u002Fa\u003E for more information.\",\"types\":[\"string\"]}],\"Menu.Button\":[{\"name\":\"active\",\"description\":\"Renders the \u003Ccode\u003EMenu.Button\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-pressed\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003EMenu.Button\u003C\u002Fcode\u003E as if it where being clicked.\",\"types\":[\"boolean\"]},{\"name\":\"disabled\",\"description\":\"Renders the \u003Ccode\u003EMenu.Button\u003C\u002Fcode\u003E with \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E attributes, and styles the \u003Ccode\u003EMenu.Button\u003C\u002Fcode\u003E partially transparent.\",\"types\":[\"boolean\"]}]},\"sections\":[{\"identifier\":\"menu\",\"level\":1,\"text\":\"Menu\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"orientation\",\"level\":2,\"text\":\"Orientation\"},{\"identifier\":\"sub-menus\",\"level\":2,\"text\":\"Sub Menus\"},{\"identifier\":\"text-divider\",\"level\":2,\"text\":\"Text Divider\"}],\"snippets\":[{\"identifier\":\"menu-preview\",\"script\":\"&lt;script&gt;\\n    import {\\n        Menu,\\n        Spacer,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Menu.Container&gt;\\n    &lt;Menu.Button&gt;\\n        Copy\\n        &lt;Spacer \u002F&gt;\\n        &lt;Text is=\\\"kbd\\\"&gt;CTRL+C&lt;\u002FText&gt;\\n    &lt;\u002FMenu.Button&gt;\\n\\n    &lt;Menu.Button&gt;\\n        Cut\\n        &lt;Spacer \u002F&gt;\\n        &lt;Text is=\\\"kbd\\\"&gt;CTRL+X&lt;\u002FText&gt;\\n    &lt;\u002FMenu.Button&gt;\\n\\n    &lt;Menu.Divider \u002F&gt;\\n\\n    &lt;Menu.Button&gt;\\n        Delete\\n        &lt;Spacer \u002F&gt;\\n        &lt;Text is=\\\"kbd\\\"&gt;DEL&lt;\u002FText&gt;\\n    &lt;\u002FMenu.Button&gt;\\n&lt;\u002FMenu.Container&gt;\",\"syntax\":\"svelte\",\"title\":\"Menu Preview\"},{\"identifier\":\"menu-imports\",\"script\":\"&lt;script&gt;\\n    import {Menu} from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    const {\\n        Container,\\n        Anchor,\\n        Button,\\n        Divider,\\n        Heading,\\n        Item,\\n        SubMenu,\\n    } = Menu;\\n&lt;\u002Fscript&gt;\",\"syntax\":\"html\",\"title\":\"Menu Imports\"},{\"identifier\":\"menu-orientation\",\"script\":\"&lt;script&gt;\\n    import {Menu} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Menu.Container orientation=\\\"horizontal\\\"&gt;\\n    &lt;Menu.Button&gt;Documentation&lt;\u002FMenu.Button&gt;\\n    &lt;Menu.Button&gt;Github&lt;\u002FMenu.Button&gt;\\n    &lt;Menu.Button&gt;Releases&lt;\u002FMenu.Button&gt;\\n&lt;\u002FMenu.Container&gt;\",\"syntax\":\"svelte\",\"title\":\"Menu Orientation\"},{\"identifier\":\"menu-sub-menu\",\"script\":\"&lt;script&gt;\\n    import {\\n        Box,\\n        Menu,\\n        Spacer,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Box palette=\\\"negative\\\" padding=\\\"medium\\\"&gt;\\n    &lt;Menu.Container&gt;\\n        &lt;Menu.Heading&gt;\\n            FEEDBACK\\n            &lt;svelte:fragment slot=\\\"sub-menu\\\"&gt;\\n                &lt;Menu.SubMenu&gt;\\n                    &lt;Menu.Button active&gt;\\n                        Dot\\n                        &lt;Spacer \u002F&gt;\\n                        &lt;Text is=\\\"span\\\"&gt;ICON&lt;\u002FText&gt;\\n                    &lt;\u002FMenu.Button&gt;\\n\\n                    &lt;Menu.Button&gt;\\n                        Spinner\\n                        &lt;Spacer \u002F&gt;\\n                        &lt;Text is=\\\"span\\\"&gt;ICON&lt;\u002FText&gt;\\n                    &lt;\u002FMenu.Button&gt;\\n                &lt;\u002FMenu.SubMenu&gt;\\n            &lt;\u002Fsvelte:fragment&gt;\\n        &lt;\u002FMenu.Heading&gt;\\n\\n        &lt;Menu.Heading&gt;\\n            OVERLAYS\\n            &lt;svelte:fragment slot=\\\"sub-menu\\\"&gt;\\n                &lt;Menu.SubMenu&gt;\\n                    &lt;Menu.Button&gt;\\n                        Overlay\\n                        &lt;Spacer \u002F&gt;\\n                        &lt;Text is=\\\"span\\\"&gt;ICON&lt;\u002FText&gt;\\n                    &lt;\u002FMenu.Button&gt;\\n                &lt;\u002FMenu.SubMenu&gt;\\n            &lt;\u002Fsvelte:fragment&gt;\\n        &lt;\u002FMenu.Heading&gt;\\n    &lt;\u002FMenu.Container&gt;\\n&lt;\u002FBox&gt;\",\"syntax\":\"svelte\",\"title\":\"Menu Sub Menu\"},{\"identifier\":\"menu-text-divider\",\"script\":\"&lt;script&gt;\\n    import {\\n        Box,\\n        Menu,\\n        Spacer,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Box palette=\\\"negative\\\" padding=\\\"medium\\\"&gt;\\n    &lt;Menu.Container&gt;\\n        &lt;Menu.Divider&gt;\\n            FEEDBACK\\n            &lt;svelte:fragment slot=\\\"sub-menu\\\"&gt;\\n                &lt;Menu.SubMenu&gt;\\n                    &lt;Menu.Button active&gt;\\n                        Dot\\n                        &lt;Spacer \u002F&gt;\\n                        &lt;Text is=\\\"span\\\"&gt;ICON&lt;\u002FText&gt;\\n                    &lt;\u002FMenu.Button&gt;\\n\\n                    &lt;Menu.Button&gt;\\n                        Spinner\\n                        &lt;Spacer \u002F&gt;\\n                        &lt;Text is=\\\"span\\\"&gt;ICON&lt;\u002FText&gt;\\n                    &lt;\u002FMenu.Button&gt;\\n                &lt;\u002FMenu.SubMenu&gt;\\n            &lt;\u002Fsvelte:fragment&gt;\\n        &lt;\u002FMenu.Divider&gt;\\n    &lt;\u002FMenu.Container&gt;\\n&lt;\u002FBox&gt;\",\"syntax\":\"svelte\",\"title\":\"Menu Text Divider\"}]},\"render\":\"\u003Ch1 id=\\\"menu\\\"\u003EMenu\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003EMenu\u003C\u002Fcode\u003E renders a nestable list of actionable buttons and links. Typically used in context menus or used as the main content body of \u003Ca href=\\\".\u002Faside\\\"\u003E\u003Ccode\u003EAside\u003C\u002Fcode\u003E\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fmenu data-identifier=\\\"menu-preview\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-preview?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\" data-document=navigation\u002Fmenu data-identifier=\\\"menu-imports\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EMenu\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token keyword\\\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003E\\n        Container\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Anchor\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Button\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Divider\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Heading\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Item\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        SubMenu\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token operator\\\"\u003E=\u003C\u002Fspan\u003E Menu\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"orientation\\\"\u003EOrientation\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Eorientation={[&quot;tablet:horizontal&quot;, &quot;mobile:horizontal&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cblockquote data-palette=\\\"negative\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003EIMPORTANT\u003C\u002Fstrong\u003E: You should never use sub menus whenever using horizontal \u003Ccode\u003EMenu.Container\u003C\u002Fcode\u003E Components.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can alter the orientation of how the \u003Ccode\u003EMenu.Container\u003C\u002Fcode\u003E lays out the children.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fmenu data-identifier=\\\"menu-orientation\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-orientation?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-orientation?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"sub-menus\\\"\u003ESub Menus\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can nest more menus via \u003Ccode\u003E&lt;Menu.SubMenu&gt;\u003C\u002Fcode\u003E Component and using \u003Ccode\u003E&lt;svelte:fragment slot=&quot;sub-menu&quot;&gt;\u003C\u002Fcode\u003E in \u003Ccode\u003E&lt;Menu.Divider&gt;\u003C\u002Fcode\u003E or \u003Ccode\u003E&lt;Menu.Heading&gt;\u003C\u002Fcode\u003E Components.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fmenu data-identifier=\\\"menu-sub-menu\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-sub-menu?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-sub-menu?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"text-divider\\\"\u003EText Divider\u003C\u002Fh2\u003E\\n\u003Cp\u003EIn place of \u003Ccode\u003E&lt;Menu.Heading&gt;\u003C\u002Fcode\u003E you can also use \u003Ccode\u003E&lt;Menu.Divider&gt;\u003C\u002Fcode\u003E with text content.\u003C\u002Fp\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=navigation\u002Fmenu data-identifier=\\\"menu-text-divider\\\" src=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-text-divider?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fnavigation\u002Fmenu\u002Fmenu-text-divider?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+
+    </body>
+</html>

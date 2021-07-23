@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/./_app/start-d5f694ff.js">
+		<link rel="modulepreload" href="/./_app/chunks/vendor-7192d1b3.js">
+		<link rel="modulepreload" href="/./_app/chunks/preload-helper-9f12a5fd.js">
+		<link rel="modulepreload" href="/./_app/chunks/paths-45dac81d.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js">
+		<link rel="modulepreload" href="/./_app/chunks/ShellAside.svelte_svelte&type=style&lang-109c4779.js">
+		<link rel="modulepreload" href="/./_app/chunks/attribute-0aaa2965.js">
+		<link rel="modulepreload" href="/./_app/chunks/preferences-8928e2ca.js">
+		<link rel="modulepreload" href="/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js">
+		<link rel="modulepreload" href="/./_app/chunks/Spacer-15779275.js">
+		<link rel="modulepreload" href="/./_app/chunks/Overlay-4340c5e3.js">
+		<link rel="modulepreload" href="/./_app/chunks/prefersscheme-f135a31d.js">
+		<link rel="modulepreload" href="/./_app/chunks/Figure-dcddfcc0.js">
+		<link rel="modulepreload" href="/./_app/chunks/CardSection-3d682241.js">
+		<link rel="modulepreload" href="/./_app/chunks/HeroSection-871c3add.js">
+		<link rel="modulepreload" href="/./_app/chunks/Heading-d9af1089.js">
+		<link rel="modulepreload" href="/./_app/chunks/Anchor-01260e36.js">
+		<link rel="modulepreload" href="/./_app/chunks/OmniSection-77e9f906.js">
+		<link rel="modulepreload" href="/./_app/chunks/Code-1ddf3f91.js">
+		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/__layout.reset.svelte-b66f8c45.css">
+		<link rel="stylesheet" href="/./_app/assets/ShellAside.svelte_svelte&type=style&lang-1834df9b.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/repl/[category]/[documentation]/[snippet].svelte-95fde7e9.css">
+
+		<script type="module">
+			import { start } from "/./_app/start-d5f694ff.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":"/."},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/./_app/pages/repl/__layout.reset.svelte-fa1ce7ed.js"),
+						import("/./_app/pages/repl/[category]/[documentation]/[snippet].svelte-734aa55c.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/repl/modifiers/hidden/hidden-preview",
+						query: new URLSearchParams(""),
+						params: {"category":"modifiers","documentation":"hidden","snippet":"hidden-preview"}
+					}
+				}
+			});
+		</script>
+
+        <title>Kahi UI :: Straight-forward Svelte UI for the Web</title>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
+        failed to load REPL.
+    </section></div>
+
+
+
+	<script type="svelte-data" url="/api/v1/content/modifiers/hidden.json">{"status":200,"statusText":"","headers":{"content-type":"application/json"},"body":"{\"data\":{\"meta\":{\"identifier\":\"modifiers\u002Fhidden\",\"href\":\"\u002Fdocs\u002Fmodifiers\u002Fhidden\",\"title\":\"Hidden\",\"btime\":0,\"mtime\":1624629401727.3264,\"properties\":{\"*\":[{\"name\":\"hidden\",\"description\":\"Alters the Component to not render anything and take up physical space in a page's layout.\",\"types\":[\"boolean\",\"{VIEWPORT}\"]}]},\"sections\":[{\"identifier\":\"hidden\",\"level\":1,\"text\":\"Hidden\"}],\"snippets\":[{\"identifier\":\"hidden-preview\",\"script\":\"&lt;script&gt;\\n    import {Box} from \\\"@kahi-ui\u002Fframework\\\";\\n&lt;\u002Fscript&gt;\\n\\n&lt;Box palette=\\\"accent\\\" hidden={[\\\"mobile\\\", \\\"tablet\\\"]}&gt;\\n    I am visible on Desktop \u002F Widescreen Viewports.\\n&lt;\u002FBox&gt;\\n\\n&lt;Box\\n    palette=\\\"affirmative\\\"\\n    hidden={[\\\"desktop\\\", \\\"widescreen\\\"]}\\n&gt;\\n    I am visible on Mobile \u002F Tablet Viewports.\\n&lt;\u002FBox&gt;\",\"syntax\":\"svelte\",\"title\":\"Hidden Preview\"}]},\"render\":\"\u003Ch1 id=\\\"hidden\\\"\u003EHidden\u003C\u002Fh1\u003E\\n\u003Cp\u003EAll Components have access to the \u003Ccode\u003Edata-hidden\u003C\u002Fcode\u003E global HTML attribute via the \u003Ccode\u003Ehidden\u003C\u002Fcode\u003E property. Unlike the standard \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Fhidden\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ehidden\u003C\u002Fcode\u003E\u003C\u002Fa\u003E HTML attribute, \u003Ccode\u003Edata-hidden\u003C\u002Fcode\u003E supports \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003EResponsivity\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: The REPL currently does not support viewport values. Resize your Browser instead.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Ciframe class=\\\"snippet-repl\\\" data-document=modifiers\u002Fhidden data-identifier=\\\"hidden-preview\\\" src=\\\"\u002Frepl\u002Fmodifiers\u002Fhidden\u002Fhidden-preview?rotation=horizontal\\\" loading=\\\"lazy\\\"\u003E\u003C\u002Fiframe\u003E\\n    \u003Ca href=\\\"\u002Frepl\u002Fmodifiers\u002Fhidden\u002Fhidden-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+
+    </body>
+</html>

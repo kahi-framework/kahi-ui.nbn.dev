@@ -1,0 +1,1 @@
+{"data":{"identifier":"html5-style","script":"<script>\n    import {Text} from \"@kahi-ui/framework\";\n</script>\n\n<Text style=\"color:red;\">\n    Lorem ipsum dolor sit amet, consectetur adipiscing\n    elit.\n</Text>","syntax":"svelte","title":"HTML5 style"}}

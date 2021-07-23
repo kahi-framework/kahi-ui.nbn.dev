@@ -1,0 +1,1 @@
+{"data":{"identifier":"html5-name","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>\n\n<Anchor target=\"target-iframe\" href=\"/\">\n    Open Landing Page\n</Anchor>\n\n<iframe\n    name=\"target-iframe\"\n    width=\"100%\"\n    height=\"256\"\n/>","syntax":"svelte","title":"HTML5 name"}}
