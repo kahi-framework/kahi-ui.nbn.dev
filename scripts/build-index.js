@@ -1,6 +1,6 @@
-const {execSync} = require("child_process");
-const {existsSync, readFileSync} = require("fs");
-const {arch, platform} = require("os");
+import {execSync} from "child_process";
+import {existsSync, readFileSync} from "fs";
+import {arch, platform} from "os";
 
 const PACKAGE_FRAMEWORK = JSON.parse(
     readFileSync("./node_modules/@kahi-ui/framework/package.json").toString()
@@ -12,7 +12,9 @@ const TEMPLATE_BIN_PATH = ({arch, platform, extension}) =>
 const TEMPLATE_COMMAND_BIN = ({bin, input, output}) =>
     `${bin} build --input ${input} --output ${output}`;
 
-const TEMPLATE_OUTPUT_PATH = ({version}) => `./static/assets/stork/kahi-ui_docs_v${version}.st`;
+const TEMPLATE_INDEX_PATH = ({version}) => `./build/stork/index-${version}.toml`;
+
+const TEMPLATE_OUTPUT_PATH = ({version}) => `./build/assets/stork/kahi-ui_docs_v${version}.st`;
 
 function get_platform_extension() {
     switch (platform()) {
@@ -34,13 +36,21 @@ if (!existsSync(binary_path)) {
     throw new Error("bad platform to 'build-index' (platform is not currently supported)");
 }
 
+const index_path = TEMPLATE_INDEX_PATH({
+    version: PACKAGE_FRAMEWORK.version,
+});
+
+if (!existsSync(index_path)) {
+    throw new Error("bad platform to 'build-index' (index file not found)");
+}
+
 const output_path = TEMPLATE_OUTPUT_PATH({
     version: PACKAGE_FRAMEWORK.version,
 });
 
 const command = TEMPLATE_COMMAND_BIN({
     bin: binary_path,
-    input: "./build/stork/index.toml",
+    input: index_path,
     output: output_path,
 });
 
