@@ -1,6 +1,6 @@
-const {execSync} = require("child_process");
-const {existsSync, readFileSync} = require("fs");
-const {arch, platform} = require("os");
+import {execSync} from "child_process";
+import {existsSync, readFileSync} from "fs";
+import {arch, platform} from "os";
 
 const PACKAGE_FRAMEWORK = JSON.parse(
     readFileSync("./node_modules/@kahi-ui/framework/package.json").toString()
@@ -30,7 +30,7 @@ const binary_path = TEMPLATE_BIN_PATH({
 });
 
 if (!existsSync(binary_path)) {
-    throw new Error("bad platform to 'test-index' (platform is not currently supported)");
+    throw new Error("bad platform to 'dev-index' (platform is not currently supported)");
 }
 
 const input_path = TEMPLATE_INPUT_PATH({
