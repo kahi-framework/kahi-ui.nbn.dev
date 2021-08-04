@@ -72,7 +72,7 @@
     :global(.snippet-repl) {
         width: 100%;
 
-        border: 1px solid rgb(var(--palette-foreground-text), 0.3);
-        border-radius: 0.375rem;
+        border: 1px solid rgba(var(--palette-inverse-lightest), 0.5);
+        border-radius: var(--radius-small);
     }
 </style>

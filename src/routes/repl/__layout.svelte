@@ -23,7 +23,7 @@
 
 <style>
     :global(:root) {
-        --repl-divider-color: rgb(var(--palette-foreground-text), 0.3);
+        --repl-divider-color: rgba(var(--palette-inverse-lightest), 0.5);
         --repl-stack-height: 100vh;
     }
 

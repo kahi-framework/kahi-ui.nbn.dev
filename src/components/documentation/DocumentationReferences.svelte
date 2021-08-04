@@ -62,7 +62,7 @@
 
 <style>
     :global(h2#properties ~ .stack h4) {
-        margin-top: 1em;
-        margin-bottom: 0.25em;
+        margin-top: var(--spacing-local-medium);
+        margin-bottom: var(--spacing-local-tiny);
     }
 </style>

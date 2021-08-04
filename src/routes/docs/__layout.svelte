@@ -59,22 +59,22 @@
     :global(.docs-container) > :global(h4),
     :global(.docs-container) > :global(h5),
     :global(.docs-container) > :global(h6) {
-        margin-top: 1em;
+        margin-top: var(--spacing-local-medium);
         margin-bottom: 0.25em;
     }
 
     :global(.docs-container) > :global(blockquote),
     :global(.docs-container) > :global(p) {
-        margin-top: 1em;
+        margin-top: var(--spacing-local-medium);
     }
 
     :global(.docs-container) > :global(.scrollable),
     :global(.docs-container) > :global(ul) {
-        margin-top: 1rem;
+        margin-top: var(--spacing-root-medium);
     }
 
     :global(.docs-container) > :global(ul) {
-        margin-left: 2em;
+        margin-left: var(--spacing-root-large);
     }
 
     :global(.docs-container) > :global(.snippet-highlight) {
@@ -87,6 +87,6 @@
 
     :global(.docs-container) > :global(.snippet-highlight),
     :global(.docs-container) > :global(.snippet-repl) {
-        margin: 1rem 0 0 0;
+        margin: var(--spacing-root-medium) 0 0 0;
     }
 </style>
