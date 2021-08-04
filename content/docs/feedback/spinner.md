@@ -29,15 +29,15 @@ types=["dual"]
 </script>
 
 <Button palette="affirmative" disabled>
-    <Spinner variation="dual" />
+    <Spinner />
     Submit Ticket
 </Button>
 
 <Hero.Container margin_top="medium">
     <Hero.Header>Loading</Hero.Header>
-    <Hero.Section padding_bottom="medium">
+    <Hero.Footer>
         <Spinner size="medium" />
-    </Hero.Section>
+    </Hero.Footer>
 </Hero.Container>
 ```
 
@@ -169,6 +169,8 @@ You can change the size of the `Spinner` via the `size` property.
 ```
 
 ## Dual
+
+> **WARNING**: This feature has been deprecated for removal in the future.
 
 `Spinner` components also have a special variation to render with two rotating borders on either side.
 

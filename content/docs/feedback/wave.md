@@ -21,9 +21,9 @@ types=["tiny", "small", "medium", "large", "huge"]
 
 <Hero.Container margin_top="medium">
     <Hero.Header>Loading</Hero.Header>
-    <Hero.Section padding_bottom="medium">
-        <Wave size="tiny" />
-    </Hero.Section>
+    <Hero.Footer>
+        <Wave />
+    </Hero.Footer>
 </Hero.Container>
 ```
 
@@ -92,63 +92,6 @@ You can change the color palette of the `Wave` via the `palette` property.
 
 <style>
     :global(.wave-palette .wave) {
-        display: block;
-    }
-</style>
-```
-
-## Size
-
-You can change the size of the `Wave` via the `size` property.
-
-```svelte repl Wave Size
-<script>
-    import {
-        Stack,
-        Text,
-        Wave,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack
-    class="wave-size"
-    orientation="horizontal"
-    spacing="medium"
-    variation="wrap"
->
-    <div>
-        <Text is="strong">DEFAULT</Text>
-        <Wave />
-    </div>
-
-    <div>
-        <Text is="strong">TINY</Text>
-        <Wave size="tiny" />
-    </div>
-
-    <div>
-        <Text is="strong">SMALL</Text>
-        <Wave size="small" />
-    </div>
-
-    <div>
-        <Text is="strong">MEDIUM</Text>
-        <Wave size="medium" />
-    </div>
-
-    <div>
-        <Text is="strong">LARGE</Text>
-        <Wave size="large" />
-    </div>
-
-    <div>
-        <Text is="strong">HUGE</Text>
-        <Wave size="huge" />
-    </div>
-</Stack>
-
-<style>
-    :global(.wave-size .wave) {
         display: block;
     }
 </style>
