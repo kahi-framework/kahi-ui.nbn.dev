@@ -8,7 +8,7 @@ types=["lowest", "low", "medium", "high", "highest"]
 [[properties."Tile.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties."Tile.Container"]]
 name="variation"

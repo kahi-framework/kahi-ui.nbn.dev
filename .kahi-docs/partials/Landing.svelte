@@ -70,7 +70,7 @@
         Straight-forward. Minimal Markup.
     </Heading>
 
-    <Text align="center" size="small" variation="headline" margin_top="small" margin_bottom="large">
+    <Text align="center" size="tiny" variation="headline" margin_top="small" margin_bottom="large">
         <Text is="small">Develop more UI without writing essays worth of markup.</Text>
     </Text>
 
@@ -93,7 +93,7 @@
         Features expected of a modern UI.
     </Heading>
 
-    <Text align="center" size="small" variation="headline" margin_top="small" margin_bottom="large">
+    <Text align="center" size="tiny" variation="headline" margin_top="small" margin_bottom="large">
         <Text is="small">Opinonated when needed. Flexible when wanted.</Text>
     </Text>
 

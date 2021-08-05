@@ -40,7 +40,7 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 </script>
 
 <Box
-    palette="auto-inverse"
+    palette="inverse"
     padding_x="small"
     padding_y="tiny"
 >
@@ -84,7 +84,7 @@ You can adjust the spacing between the immediate siblings via the `spacing` prop
     <div>
         <Text is="strong">TINY</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             padding_x="small"
             padding_y="tiny"
         >
@@ -97,7 +97,7 @@ You can adjust the spacing between the immediate siblings via the `spacing` prop
     <div>
         <Text is="strong">SMALL</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             padding_x="small"
             padding_y="tiny"
         >
@@ -110,7 +110,7 @@ You can adjust the spacing between the immediate siblings via the `spacing` prop
     <div>
         <Text is="strong">MEDIUM</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             padding_x="small"
             padding_y="tiny"
         >
@@ -123,7 +123,7 @@ You can adjust the spacing between the immediate siblings via the `spacing` prop
     <div>
         <Text is="strong">LARGE</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             padding_x="small"
             padding_y="tiny"
         >
@@ -136,7 +136,7 @@ You can adjust the spacing between the immediate siblings via the `spacing` prop
     <div>
         <Text is="strong">HUGE</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             padding_x="small"
             padding_y="tiny"
         >
@@ -170,7 +170,7 @@ You can have the `Spacer` rendering as an inline `<span>` that defaults to `hori
     <div>
         <Text is="strong">BLOCK / DEFAULT</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             margin_top="small"
             padding_x="small"
             padding_y="tiny"
@@ -184,7 +184,7 @@ You can have the `Spacer` rendering as an inline `<span>` that defaults to `hori
     <div>
         <Text is="strong">INLINE / DEFAULT</Text>
         <Box
-            palette="auto-inverse"
+            palette="inverse"
             margin_top="small"
             padding_x="small"
             padding_y="tiny"

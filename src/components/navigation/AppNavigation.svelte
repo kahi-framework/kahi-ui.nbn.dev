@@ -151,12 +151,12 @@
                 dismissible
                 bind:state
             >
-                <ContextButton palette="light" variation="clear" size="large" hidden="widescreen">
+                <ContextButton palette="light" variation="clear" size="huge" hidden="widescreen">
                     <MoreVertical />
                 </ContextButton>
 
                 <Card.Container hidden="widescreen">
-                    <Card.Section>
+                    <Card.Section padding="medium">
                         <MenuNavigation items={_items} />
                     </Card.Section>
                 </Card.Container>
