@@ -156,7 +156,7 @@
                 </ContextButton>
 
                 <Card.Container hidden="widescreen">
-                    <Card.Section>
+                    <Card.Section padding="medium">
                         <MenuNavigation items={_items} />
                     </Card.Section>
                 </Card.Container>
