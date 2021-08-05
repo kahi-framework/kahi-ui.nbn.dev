@@ -22,7 +22,7 @@ types=["boolean"]
 [[properties."Aside.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties."Aside.Container"]]
 name="placement"

@@ -13,7 +13,7 @@ types=["center", "justify", "left", "right"]
 [[properties.Text]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Text]]
 name="size"

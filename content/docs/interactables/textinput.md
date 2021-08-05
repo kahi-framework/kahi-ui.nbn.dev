@@ -14,7 +14,7 @@ types=["email", "password", "search", "text", "url"]
 [[properties.TextInput]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.TextInput]]
 name="size"

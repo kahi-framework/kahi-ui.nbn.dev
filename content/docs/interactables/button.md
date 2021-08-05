@@ -2,7 +2,7 @@
 [[properties.Button]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Button]]
 name="size"
