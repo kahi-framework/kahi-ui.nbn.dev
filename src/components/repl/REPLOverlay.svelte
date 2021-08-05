@@ -18,7 +18,7 @@
 
 <Overlay
     class="repl-overlay"
-    alignment_x={["right", "mobile:left", "tablet:left"]}
+    alignment_x={["right", "mobile:left"]}
     alignment_y="bottom"
     padding="medium"
 >
