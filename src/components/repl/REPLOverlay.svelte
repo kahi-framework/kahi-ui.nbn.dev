@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Button, Card, Overlay, Stack} from "@kahi-ui/framework";
+    import {Card, Menu, Overlay} from "@kahi-ui/framework";
     import {createEventDispatcher} from "svelte";
     import {Code} from "svelte-feather/components/Code";
     import {Copy} from "svelte-feather/components/Copy";
@@ -16,72 +16,76 @@
     export let view: "editor" | "render" | "split" = "split";
 </script>
 
-<Overlay class="repl-overlay" alignment_x="right" alignment_y="bottom" padding="medium">
+<Overlay
+    class="repl-overlay"
+    alignment_x={["right", "mobile:left", "tablet:left"]}
+    alignment_y="bottom"
+    padding="medium"
+>
     <Card.Container palette="dark">
         <Card.Section padding="small">
-            <Stack
+            <Menu.Container
                 orientation={["tablet:horizontal", "desktop:horizontal", "widescreen:horizontal"]}
-                spacing="tiny"
+                sizing="tiny"
             >
-                <Button
+                <Menu.Anchor
                     href={location.href}
                     target="_blank"
                     palette="accent"
                     variation="clear"
-                    size="tiny"
                 >
                     <ExternalLink />
                     Link
-                </Button>
+                </Menu.Anchor>
 
-                <Button
+                <Menu.Button
                     palette="affirmative"
                     variation="clear"
-                    size="tiny"
                     on:click={(event) => dispatch("copy_click", event)}
                 >
                     <Copy />
                     Copy
-                </Button>
+                </Menu.Button>
 
-                <Button
+                <Menu.Button
                     active={view === "split"}
                     palette="light"
                     variation="clear"
-                    size="tiny"
                     on:click={() => (view = "split")}
                 >
                     <Sidebar />
                     Split
-                </Button>
+                </Menu.Button>
 
-                <Button
+                <Menu.Button
                     active={view === "editor"}
                     palette="light"
                     variation="clear"
-                    size="tiny"
                     on:click={() => (view = "editor")}
                 >
                     <Code />
                     Editor
-                </Button>
+                </Menu.Button>
 
-                <Button
+                <Menu.Button
                     active={view === "render"}
                     palette="light"
                     variation="clear"
-                    size="tiny"
                     on:click={() => (view = "render")}
                 >
                     <Image />
                     Render
-                </Button>
-            </Stack>
+                </Menu.Button>
+            </Menu.Container>
         </Card.Section>
     </Card.Container>
 </Overlay>
 
 <style>
+    :global(.repl-overlay) :global(.card:hover) {
+        transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
     :global(.repl-overlay) :global(.card:not(:hover)) {
         opacity: 0.2;
     }

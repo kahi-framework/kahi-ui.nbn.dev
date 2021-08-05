@@ -69,14 +69,21 @@
 <style>
     :global(:root) {
         --svst-attribution-padding: 0.5em 1em 0em 1em;
-        --svst-entry-hover-background-color: rgba(var(--palette-foreground-text), 0.1);
+        --svst-entry-hover-background-color: rgba(var(--palette-accent-bold), 0.2);
+        --svst-highlight-color: rgb(var(--palette-dark-normal));
         --svst-output-color: currentColor;
         --svst-output-font-size: 1.2em;
         --svst-output-max-height: 66vh;
+        --svst-result-border: 1px solid rgba(var(--palette-inverse-off-lightest), 0.4);
+        --svst-results-border: 1px solid rgba(var(--palette-inverse-off-lightest), 0.4);
     }
 
     :global(.search-modal) :global(.svst-entry) {
         color: currentColor !important;
         text-decoration: none !important;
+    }
+
+    :global(.search-modal) :global(.svst-highlight) {
+        color: var(--svst-highlight-color);
     }
 </style>

@@ -66,11 +66,11 @@
 </Hero.Container>
 
 <Container viewport="widescreen" padding_y="huge">
-    <Heading is="h3" align="center" variation="headline" padding_x="mobile:tiny">
+    <Heading is="h2" align="center" variation="headline" padding_x="mobile:tiny">
         Straight-forward. Minimal Markup.
     </Heading>
 
-    <Text align="center" size="huge" margin_top="small" margin_bottom="large">
+    <Text align="center" size="small" variation="headline" margin_top="small" margin_bottom="large">
         <Text is="small">Develop more UI without writing essays worth of markup.</Text>
     </Text>
 
@@ -89,11 +89,11 @@
 
     <Divider palette="accent" margin_y="huge" />
 
-    <Heading is="h3" align="center" variation="headline" padding_x="mobile:tiny">
+    <Heading is="h2" align="center" variation="headline" padding_x="mobile:tiny">
         Features expected of a modern UI.
     </Heading>
 
-    <Text align="center" size="huge" margin_top="small" margin_bottom="large">
+    <Text align="center" size="small" variation="headline" margin_top="small" margin_bottom="large">
         <Text is="small">Opinonated when needed. Flexible when wanted.</Text>
     </Text>
 
@@ -116,7 +116,7 @@
             <Card.Section padding_bottom="medium">
                 <Text size="medium">
                     Designed with <Text is="strong">Composability</Text> in mind, author new Components
-                    easily.
+                    <Text is="strong">easily</Text>.
                 </Text>
             </Card.Section>
         </Card.Container>
@@ -136,7 +136,7 @@
             <Card.Section padding_bottom="medium">
                 <Text size="medium">
                     Created using <Text is="strong">Typescript</Text>, so a pleasent IDE experience
-                    comes out-of-box.
+                    <Text is="strong">comes out-of-box</Text>.
                 </Text>
             </Card.Section>
         </Card.Container>
@@ -156,7 +156,7 @@
             <Card.Section padding_bottom="medium">
                 <Text size="medium">
                     Supports automatic <Text is="strong">Dark Mode</Text>, or your choice from the
-                    built-in palette.
+                    <Text is="strong">built-in palette</Text>.
                 </Text>
             </Card.Section>
         </Card.Container>

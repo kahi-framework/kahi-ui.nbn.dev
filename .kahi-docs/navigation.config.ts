@@ -13,12 +13,19 @@ export default define_navigation({
 
     documentation: [
         {
+            separator: "Resources",
+            items: [
+                {href: "/docs/resources/icons"},
+                {href: "/docs/resources/official"},
+                {href: "/docs/resources/community"},
+            ],
+        },
+        {
             separator: "Framework",
             items: [
                 {href: "/docs/framework/getting-started"},
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
-                {href: "/docs/framework/icons"},
                 {href: "/docs/framework/responsivity"},
             ],
         },
@@ -28,8 +35,8 @@ export default define_navigation({
             items: [
                 {href: "/docs/typography/blockquote"},
                 {href: "/docs/typography/code"},
-                {href: "/docs/typography/heading"},
-                {href: "/docs/typography/text"},
+                {href: "/docs/typography/heading", badge: "UPDATED"},
+                {href: "/docs/typography/text", badge: "UPDATED"},
             ],
         },
 
@@ -52,7 +59,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
-                {href: "/docs/feedback/spinner"},
+                {href: "/docs/feedback/spinner", badge: "UPDATED"},
                 {href: "/docs/feedback/wave"},
             ],
         },
@@ -60,12 +67,12 @@ export default define_navigation({
         {
             separator: "Interactables",
             items: [
-                {href: "/docs/interactables/button"},
+                {href: "/docs/interactables/button", badge: "UPDATED"},
                 {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
-                {href: "/docs/interactables/textinput"},
+                {href: "/docs/interactables/textinput", badge: "UPDATED"},
             ],
         },
 
@@ -99,7 +106,7 @@ export default define_navigation({
                 {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
                 {href: "/docs/navigation/breadcrumb"},
-                {href: "/docs/navigation/menu"},
+                {href: "/docs/navigation/menu", badge: "UPDATED"},
                 {href: "/docs/navigation/omni"},
             ],
         },

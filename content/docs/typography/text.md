@@ -27,8 +27,8 @@ types=["capitalize", "lowercase", "uppercase"]
 
 [[properties.Text]]
 name="variation"
-description="Removes parent container overflow from the render, clipping text with an ellipsis."
-types=["truncate"]
+description="`truncate` removes parent container overflow from the render, clipping text with an ellipsis."
+types=["headline", "truncate"]
 +++
 
 # Text
@@ -155,6 +155,107 @@ You can adjust the size of `Text` by passing the `size` property.
 
 <style>
     :global(.text-size > div) {
+        max-width: 25ch;
+    }
+</style>
+```
+
+## Palette
+
+You can change the color palette of the `Text` via the `palette` property.
+
+```svelte repl Text Palette
+<script>
+    import {Stack, Text} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    class="text-palette"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">DARK</Text>
+        <Text palette="dark">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">LIGHT</Text>
+        <Text palette="light">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">ALERT</Text>
+        <Text palette="alert">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">AFFIRMATIVE</Text>
+        <Text palette="affirmative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">NEGATIVE</Text>
+        <Text palette="negative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+</Stack>
+
+<style>
+    :global(.text-palette > div) {
         max-width: 25ch;
     }
 </style>

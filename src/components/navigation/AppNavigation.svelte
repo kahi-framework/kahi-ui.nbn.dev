@@ -155,7 +155,7 @@
                     <MoreVertical />
                 </ContextButton>
 
-                <Card.Container palette="auto" hidden="widescreen">
+                <Card.Container hidden="widescreen">
                     <Card.Section>
                         <MenuNavigation items={_items} />
                     </Card.Section>

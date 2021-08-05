@@ -36,7 +36,6 @@
     bind:element
     class="aside-navigation"
     logic_id="aside-navigation"
-    palette="dark"
     bind:state
     captive
     dismissible

@@ -3,3 +3,4 @@
 /bin/
 /build/
 /scripts/*.build.cjs
+/static/assets/stork/*.st

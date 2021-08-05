@@ -22,8 +22,8 @@ types=["capitalize", "lowercase", "uppercase"]
 
 [[properties.Heading]]
 name="variation"
-description="Removes parent container overflow from the render, clipping text with an ellipsis."
-types=["truncate"]
+description="`truncate` Removes parent container overflow from the render, clipping text with an ellipsis."
+types=["headline", "truncate"]
 +++
 
 # Heading
@@ -131,6 +131,93 @@ You can adjust the size of `Heading` by passing the `is` property.
 
 <style>
     :global(.heading-size > div) {
+        max-width: 25ch;
+    }
+</style>
+```
+
+## Palette
+
+You can change the color palette of the `Heading` via the `palette` property.
+
+```svelte repl Heading Palette
+<script>
+    import {
+        Heading,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    class="heading-palette"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Heading>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">DARK</Text>
+        <Heading palette="dark">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">LIGHT</Text>
+        <Heading palette="light">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">ALERT</Text>
+        <Heading palette="alert">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">AFFIRMATIVE</Text>
+        <Heading palette="affirmative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">NEGATIVE</Text>
+        <Heading palette="negative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+</Stack>
+
+<style>
+    :global(.heading-palette > div) {
         max-width: 25ch;
     }
 </style>
