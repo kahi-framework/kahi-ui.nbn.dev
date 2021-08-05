@@ -35,7 +35,7 @@
 
     export let documentation: IDocumentationRender;
 
-    set_docs_render(documentation);
+    $: set_docs_render(documentation);
 </script>
 
 <svelte:head>

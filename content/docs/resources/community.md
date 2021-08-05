@@ -1,3 +1,3 @@
 # Community
 
-Below you can find resources made other developers who use Kahi UI.
+Below you can find resources by other developers made with Kahi UI.
