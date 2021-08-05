@@ -40,7 +40,7 @@ types=["top", "left", "bottom", "right"]
 
 # Popover
 
-`Popover` is typically used for hiding content that'll slide into when actived via a button or something else.
+`Popover` is typically used for hiding content that'll slide onto the page when activated via a button or something else.
 
 ```svelte repl Popover Preview
 <script>
@@ -153,7 +153,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding="medium"
     >
@@ -186,7 +186,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `Popov
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding="medium"
     >
@@ -206,7 +206,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `Popov
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding="medium"
     >
@@ -241,7 +241,7 @@ You can adjust which side your content is placed on via the `placement` property
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding="medium"
     >
@@ -261,7 +261,7 @@ You can adjust which side your content is placed on via the `placement` property
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding="medium"
     >
@@ -296,7 +296,7 @@ You can align `Popover` content via the `alignment_x` and `alignment_y` properti
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding_x="huge"
         padding_y="medium"
@@ -316,7 +316,7 @@ You can align `Popover` content via the `alignment_x` and `alignment_y` properti
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding_x="huge"
         padding_y="medium"
@@ -337,7 +337,7 @@ You can align `Popover` content via the `alignment_x` and `alignment_y` properti
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding_x="huge"
         padding_y="medium"
@@ -361,7 +361,7 @@ You can align `Popover` content via the `alignment_x` and `alignment_y` properti
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding_x="medium"
         padding_y="huge"
@@ -382,7 +382,7 @@ You can align `Popover` content via the `alignment_x` and `alignment_y` properti
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding_x="medium"
         padding_y="huge"
@@ -404,7 +404,7 @@ You can align `Popover` content via the `alignment_x` and `alignment_y` properti
     </ContextButton>
 
     <Box
-        palette="auto-inverse"
+        palette="inverse"
         max_width="content-max"
         padding_x="medium"
         padding_y="huge"
