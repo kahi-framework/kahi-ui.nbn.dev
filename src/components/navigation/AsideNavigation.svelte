@@ -45,11 +45,11 @@
         <MenuNavigation {items} />
     </Aside.Section>
 
-    <ContextButton hidden={["desktop", "widescreen"]} size="large">
+    <ContextButton size="huge" hidden={["desktop", "widescreen"]}>
         <Menu />
     </ContextButton>
 
-    <ContextButton palette="dark" variation="clear" size="large" hidden={["desktop", "widescreen"]}>
+    <ContextButton size="huge" palette="dark" variation="clear" hidden={["desktop", "widescreen"]}>
         <X />
     </ContextButton>
 </Aside.Container>

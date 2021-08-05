@@ -151,7 +151,7 @@
                 dismissible
                 bind:state
             >
-                <ContextButton palette="light" variation="clear" size="large" hidden="widescreen">
+                <ContextButton palette="light" variation="clear" size="huge" hidden="widescreen">
                     <MoreVertical />
                 </ContextButton>
 
