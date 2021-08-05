@@ -27,7 +27,7 @@ types=["boolean"]
 [[properties.Button]]
 name="type"
 description="Renders the <code>Button</code> as a <code>&lt;input /&gt;</code> as a specific form type."
-types=["button", "submit"]
+types=["button", "reset", "submit"]
 
 [[properties.Button]]
 name="name"
@@ -247,5 +247,44 @@ You can change the size of the `Button` via the `size` property.
     <Button variation="outline" palette="negative">
         This is a NEGATIVE Button!
     </Button>
+</Stack>
+```
+
+## Types
+
+You can change make the `Button` an anchor by passing via the `href` property. And also, change the input type between `button` **(DEFAULT)**, `reset`, `submit` via the `type` property.
+
+```svelte repl Button Types
+<script>
+    import {Button, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    alignment_y="top"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button>This is a DEFAULT Button!</Button>
+
+    <Button
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        This is an ANCHOR Button!
+    </Button>
+
+    <Button value="This is an INPUT Button!" />
+
+    <Button
+        type="submit"
+        value="This is a SUBMIT Button!"
+    />
+
+    <Button
+        type="reset"
+        value="This is a RESET Button!"
+    />
 </Stack>
 ```
