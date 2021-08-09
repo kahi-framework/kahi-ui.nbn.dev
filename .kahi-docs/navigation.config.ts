@@ -140,6 +140,11 @@ export default define_navigation({
         },
 
         {
+            separator: "Actions",
+            items: [{href: "/docs/actions/click_outside", badge: "NEW"}],
+        },
+
+        {
             separator: "Stores",
             items: [
                 {href: "/docs/stores/darkmode"},
