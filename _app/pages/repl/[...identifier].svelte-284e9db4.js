@@ -1,1 +1,0 @@
-import"../../chunks/preload-helper-08cc8e69.js";import"../../chunks/vendor-dceccb02.js";import"../../chunks/snippet-b9ae7b8a.js";export{U as default,l as load}from"../../chunks/[...identifier]-fd4aa9d0.js";
