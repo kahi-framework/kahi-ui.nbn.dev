@@ -2,7 +2,7 @@
 
 `darkmode` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever either [`<html data-palette="dark">`](./htmlpalette.md) or [`prefersscheme("dark")`](./prefersscheme.md) is validated.
 
-> **NOTE**: Click the color scheme button in the Navigation Sidebar to see changes.
+> **NOTE**: Click the color scheme button in the Navigation topbar to see changes.
 
 ```svelte repl darkmode Preview
 <script>

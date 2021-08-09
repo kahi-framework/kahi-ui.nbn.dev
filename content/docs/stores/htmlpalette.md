@@ -2,7 +2,7 @@
 
 `htmlpalette` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which is bound to `<html data-palette="XXX">` and returns the changes to that attribute. Defaulting to `light` if not set.
 
-> **NOTE**: Click the color scheme button in the Navigation Sidebar to see changes.
+> **NOTE**: Click the color scheme button in the Navigation topbar to see changes.
 
 ```svelte repl htmlpalette Preview
 <script>
