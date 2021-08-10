@@ -12,10 +12,6 @@ Contributions are currently not being actively accepted aside from bug reports o
 
 Visit the [Browser Support](../framework/browser-support.md) documentation for more information.
 
-## Can I use the library without Typescript?
-
-Yes! However [`svelte-preprocess`](https://github.com/sveltejs/svelte-preprocess) is required to use this library, as it is built in Typescript with no packaging build step. That will be fixed when [SvelteKit](https://kit.svelte.dev)'s [package command](https://kit.svelte.dev/docs#packaging) supports type generation.
-
 ## Can I use the library without Svelte?
 
 Yes, however there is no official support to do so. Visit [Releases](https://github.com/novacbn/kahi-ui/releases) and grab the `.css` distributable files, and read the library source code on how to do markup, progressive enhancements, etc.

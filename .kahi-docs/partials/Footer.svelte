@@ -15,7 +15,7 @@
 
         <Text align="center">
             <Anchor
-                href="https://github.com/novacbn/kahi-ui/releases/{_version}"
+                href="https://github.com/novacbn/kahi-ui/releases/v{_version}"
                 rel="noopener noreferrer"
                 target="_blank"
             >

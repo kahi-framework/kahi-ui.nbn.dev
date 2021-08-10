@@ -9,7 +9,7 @@ const PACKAGE_FRAMEWORK = JSON.parse(
 export default define_application({
     application: {
         description: "Straight-forward Svelte UI for the Web",
-        sub_href: `https://github.com/novacbn/kahi-ui/releases/${PACKAGE_FRAMEWORK.version}`,
+        sub_href: `https://github.com/novacbn/kahi-ui/releases/v${PACKAGE_FRAMEWORK.version}`,
         sub_title: `v${PACKAGE_FRAMEWORK.version}`,
         title: "Kahi UI",
     },
