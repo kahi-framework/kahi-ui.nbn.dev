@@ -1,0 +1,82 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Test
+
+on:
+    [push, pull_request]
+
+jobs:
+    test-and-build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [16.x]
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2.3.1
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+
+            - name: Install
+              run: npm ci
+
+            - name: Test
+              run: npm run test
+
+            - name: Download Stork
+              run: |
+                  mkdir ./bin
+                  curl -L -o ./bin/stork.linux.x64 https://github.com/jameslittle230/stork/releases/download/v1.2.1/stork-ubuntu-latest
+                  chmod +x ./bin/stork.linux.x64
+                  npm ci
+
+            - name: Build Application
+              run: npm run build:application
+
+            - name: Build Search Index
+              run: |
+                  npm run build:generate-index
+                  npm run index:generate
+                  npm run index:build
+
+            - name: Upload Documentation Build
+              uses: actions/upload-artifact@v2
+              if: |
+                github.event_name != 'pull_request' &&
+                github.ref == 'refs/heads/main'
+              with:
+                name: sveltekit-build
+                path: build/
+
+    publish:
+        runs-on: ubuntu-latest
+        needs: test-and-build
+        if: |
+          github.event_name != 'pull_request' &&
+          github.ref == 'refs/heads/main'
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2.3.1
+
+            - name: Download Documentation Build
+              uses: actions/download-artifact@v2
+              with:
+                name: sveltekit-build
+                path: build
+
+            - name: Publish
+              uses: JamesIves/github-pages-deploy-action@4.1.4
+              with:
+                  branch: gh-pages
+                  folder: build
+                  git-config-name: github-actions[bot]
+                  git-config-email: github-actions[bot]@users.noreply.github.com
