@@ -3,6 +3,8 @@ const {lstat, readFile} = promises;
 
 import MarkdownIt from "markdown-it";
 
+import {read_timestamps} from "@kahi-docs/node";
+
 import type {IReferenceMap} from "../types/reference";
 import type {ISection} from "../types/section";
 import type {ISnippet} from "../types/snippet";
@@ -90,13 +92,17 @@ export async function read_documentation(
     if (!file_identifier) file_identifier = resolve_file_identifier(file_path);
     if (!parent_identifier) parent_identifier = resolve_parent_identifier(file_path);
 
-    const [buffer, stats] = await Promise.all([readFile(file_path), lstat(file_path)]);
+    const [buffer, timestamps] = await Promise.all([
+        readFile(file_path),
+        read_timestamps(file_path),
+    ]);
+
     const text = buffer.toString();
 
     return render_documentation(text, {
-        created_at: stats.birthtimeMs,
+        created_at: timestamps.birthtime,
         identifier: `${parent_identifier}/${file_identifier}`,
-        modified_at: stats.mtimeMs,
+        modified_at: timestamps.mtime,
     });
 }
 
