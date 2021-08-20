@@ -17,7 +17,7 @@ export interface IImportedSearch {
     Stork: any;
 }
 
-export const import_search = memoize<Promise<IImportedSearch>>(async () => {
+export const import_search = memoize(async () => {
     const [search_lib, search_components] = await Promise.all([
         import("@novacbn/svelte-stork"),
         // @ts-expect-error - HACK: Need to investigate better subpackage typing support
@@ -29,10 +29,10 @@ export const import_search = memoize<Promise<IImportedSearch>>(async () => {
         register: search_lib.register,
         search: search_lib.search,
         Stork: search_components,
-    };
+    } as IImportedSearch;
 });
 
-export const initialize_search = memoize<Promise<IImportedSearch>>(async () => {
+export const initialize_search = memoize(async () => {
     const imports = await import_search();
 
     // HACK: Using the `applicationconfig` Svelte Store is kind of a meh

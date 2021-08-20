@@ -1,9 +1,10 @@
 import {promises} from "fs";
-const {lstat, readFile} = promises;
+const {readFile} = promises;
 
 import MarkdownIt from "markdown-it";
 
 import {read_timestamps} from "@kahi-docs/node";
+import {memoize} from "@kahi-docs/shared";
 
 import type {IReferenceMap} from "../types/reference";
 import type {ISection} from "../types/section";
@@ -84,7 +85,7 @@ function DocumentationRenderProperties(
     };
 }
 
-export async function read_documentation(
+async function _read_documentation(
     file_path: string,
     file_identifier: string = "",
     parent_identifier: string = ""
@@ -105,6 +106,9 @@ export async function read_documentation(
         modified_at: timestamps.mtime,
     });
 }
+
+export const read_documentation =
+    process.env.NODE_ENV === "production" ? memoize(_read_documentation) : _read_documentation;
 
 export function render_documentation(
     text: string,
