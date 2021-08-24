@@ -155,13 +155,13 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
 
 <Tab.Container
     logic_name="tab-palette"
-    logic_state="tab-neutral"
+    logic_state="tab-default"
 >
-    <Tab.Group logic_id="tab-neutral">
-        <Tab.Label>Tab NEUTRAL</Tab.Label>
+    <Tab.Group logic_id="tab-default">
+        <Tab.Label>Tab DEFAULT</Tab.Label>
 
         <Tab.Section>
-            <Heading>Tab NEUTRAL Content</Heading>
+            <Heading>Tab DEFAULT Content</Heading>
         </Tab.Section>
     </Tab.Group>
 

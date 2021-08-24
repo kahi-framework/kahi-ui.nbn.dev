@@ -6,7 +6,7 @@ types=["contain", "cover", "fill", "none", "scale-down"]
 
 [[properties.Figure]]
 name="shape"
-description="Changes the Shape of the <code>Figure</code>."
+description="Changes the shape of the <code>Figure</code>."
 types=["pill", "rounded"]
 
 [[properties.Figure]]
