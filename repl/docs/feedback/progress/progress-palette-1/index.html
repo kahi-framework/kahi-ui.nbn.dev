@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/_app/start-896af6fa.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-7ba191f3.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-519b29a6.js">
+		<link rel="modulepreload" href="/_app/chunks/navigation.config-61478e78.js">
+		<link rel="modulepreload" href="/_app/chunks/snippet-752b3787.js">
+		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
+		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-54b21883.js">
+		<link rel="modulepreload" href="/_app/pages/repl/[...identifier].svelte-002413a0.js">
+		<link rel="modulepreload" href="/_app/chunks/[...identifier]-524e4fb8.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
+		<link rel="stylesheet" href="/_app/assets/pages/repl/__layout.svelte-6876fa8d.css">
+
+		<script type="module">
+			import { start } from "/_app/start-896af6fa.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-519b29a6.js"),
+						import("/_app/pages/repl/__layout.svelte-54b21883.js"),
+						import("/_app/pages/repl/[...identifier].svelte-002413a0.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/repl/docs/feedback/progress/progress-palette-1",
+						query: new URLSearchParams(""),
+						params: {"identifier":"docs/feedback/progress/progress-palette-1"}
+					}
+				}
+			});
+		</script>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("kahi-docs.preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
+        failed to load <strong>REPL</strong>.
+    </section></div>
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002Fv0.3.2\",\"sub_title\":\"v0.3.2\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"version\":\"0.3.2\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002Fnode_modules\u002F@kahi-ui\u002Fframework\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/snippets/docs/feedback/progress/progress-palette-1.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"identifier\":\"progress-palette-1\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Mosaic,\\n        Progress,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack spacing=\\\"medium\\\" variation=\\\"wrap\\\"\u003E\\n    \u003CStack\\n        orientation=\\\"horizontal\\\"\\n        spacing=\\\"medium\\\"\\n        variation=\\\"wrap\\\"\\n    \u003E\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n            \u003Cbr \u002F\u003E\\n\\n            \u003CProgress shape=\\\"circle\\\" value={0.5} \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ETINY\u003C\u002FText\u003E\\n            \u003Cbr \u002F\u003E\\n\\n            \u003CProgress\\n                shape=\\\"circle\\\"\\n                value={0.5}\\n                size=\\\"tiny\\\"\\n            \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ESMALL\u003C\u002FText\u003E\\n            \u003Cbr \u002F\u003E\\n\\n            \u003CProgress\\n                shape=\\\"circle\\\"\\n                value={0.5}\\n                size=\\\"small\\\"\\n            \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EMEDIUM\u003C\u002FText\u003E\\n            \u003Cbr \u002F\u003E\\n\\n            \u003CProgress\\n                shape=\\\"circle\\\"\\n                value={0.5}\\n                size=\\\"medium\\\"\\n            \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ELARGE\u003C\u002FText\u003E\\n            \u003Cbr \u002F\u003E\\n\\n            \u003CProgress\\n                shape=\\\"circle\\\"\\n                value={0.5}\\n                size=\\\"large\\\"\\n            \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EHUGE\u003C\u002FText\u003E\\n            \u003Cbr \u002F\u003E\\n\\n            \u003CProgress\\n                shape=\\\"circle\\\"\\n                value={0.5}\\n                size=\\\"huge\\\"\\n            \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n    \u003C\u002FStack\u003E\\n\\n    \u003CMosaic sizing=\\\"small\\\" spacing=\\\"medium\\\"\u003E\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n            \u003CProgress value={0.5} \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ETINY\u003C\u002FText\u003E\\n            \u003CProgress value={0.5} size=\\\"tiny\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ESMALL\u003C\u002FText\u003E\\n            \u003CProgress value={0.5} size=\\\"small\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EMEDIUM\u003C\u002FText\u003E\\n            \u003CProgress value={0.5} size=\\\"medium\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ELARGE\u003C\u002FText\u003E\\n            \u003CProgress value={0.5} size=\\\"large\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EHUGE\u003C\u002FText\u003E\\n            \u003CProgress value={0.5} size=\\\"huge\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n    \u003C\u002FMosaic\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Progress Palette\"}}"}</script>
+
+    </body>
+</html>

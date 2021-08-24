@@ -1,7 +1,7 @@
 /*!
  * Kahi UI - Framework
  *
- * v0.2.16
+ * v0.3.2
  */
 
 *, ::before, ::after {
@@ -131,8 +131,6 @@ input, button, textarea {
 
 img {
   border-style: solid;
-  display: block;
-  vertical-align: middle;
   max-width: 100%;
   height: auto;
 }
@@ -140,6 +138,11 @@ img {
 input::placeholder {
   opacity: 1;
   color: #a1a1aa;
+}
+
+img, svg {
+  display: block;
+  vertical-align: middle;
 }
 
 ol, ul {
@@ -827,6 +830,120 @@ small {
   font-size: var(--size-text-size);
 }
 
+.tab {
+  --flex-alignment-x: initial;
+  --sizing-text-size: var(--document-font-size);
+  --sizing-text-line-height: var(--document-font-line-height);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: var(--flex-alignment-x);
+}
+
+.tab > [type="radio"] {
+  display: none;
+}
+
+.tab > :is(a, label) {
+  all: unset;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  gap: var(--spacing-local-small);
+  line-height: var(--sizing-text-line-height);
+  padding-left: var(--spacing-local-small);
+  padding-right: var(--spacing-local-small);
+  padding-top: var(--spacing-local-tiny);
+  padding-bottom: var(--spacing-local-tiny);
+  font-size: var(--sizing-text-size);
+  transition: background-color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tab > section {
+  -webkit-box-ordinal-group: 10000;
+  -webkit-order: 9999;
+  -ms-flex-order: 9999;
+  order: 9999;
+  width: 100%;
+}
+
+.tab > :is(a:not([aria-current]), [type="radio"]:not(:checked) + label) + section {
+  display: none;
+}
+
+.tab[data-alignment-x="stretch"] > :is(a, label) {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label) {
+  text-decoration: none !important;
+  position: relative;
+  color: currentColor;
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label)::before {
+  position: absolute;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+  content: "";
+  inset: 0 0 -2px 0;
+  color: transparent;
+  transition: color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label):is(:focus, :hover, [aria-pressed="true"]) {
+  opacity: 0.5;
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label):is(:focus, :hover, [aria-pressed="true"])[data-palette] {
+  color: rgb(var(--palette-background-bold));
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label):is(:focus, :hover, [aria-pressed="true"])::before {
+  color: currentColor;
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label):is(:active, [aria-current]), .tab:not([data-variation~="borders"]) > [type="radio"]:checked + label {
+  opacity: 1;
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label):is(:active, [aria-current])[data-palette], .tab:not([data-variation~="borders"]) > [type="radio"]:checked + label[data-palette] {
+  color: rgb(var(--palette-background-bold));
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label):is(:active, [aria-current])::before, .tab:not([data-variation~="borders"]) > [type="radio"]:checked + label::before {
+  color: currentColor;
+}
+
+.tab:not([data-variation~="borders"]) > :is(a, label)[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.tab:not([data-variation~="borders"]) > section {
+  border-top-width: 2px;
+  border-style: solid;
+  border-color: rgba(var(--palette-inverse-off-lightest), 0.4);
+}
+
 .badge {
   --palette-background-normal: var(--palette-neutral-normal);
   --palette-foreground-normal: var(--palette-light-normal);
@@ -996,6 +1113,89 @@ span.ellipsis > span:nth-child(2) {
 
 .dot[data-palette] {
   background-color: rgb(var(--palette-background-bold));
+}
+
+[role="progressbar"] {
+    --palette-background-bold: var(--palette-neutral-bold);
+    --size-icon: var(--sizes-icon-medium);
+
+    --value: 0
+}
+
+[role="progressbar"]:empty {
+  width: 100%;
+  height: calc(var(--size-icon) * 0.25);
+  border-radius: var(--radius-pill);
+  background-image: linear-gradient(
+              to right,
+              rgb(var(--palette-background-bold)) 50%,
+              rgba(var(--palette-background-bold), 0.5) 50%
+          );
+  background-position: calc(100% - var(--value) * 100%) 0%;
+  background-size: 200% 100%;
+  transition: background-image 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              background-position 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[role="progressbar"]:empty:not([aria-valuenow]) {
+            animation: progress-bar-indeterminate 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        }
+
+[role="progressbar"]:not(:empty) svg {
+  height: var(--size-icon);
+  width: var(--size-icon);
+}
+
+[role="progressbar"]:not(:empty) circle {
+  fill: transparent;
+  stroke-width: 4px;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                  stroke-dashoffset 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[role="progressbar"]:not(:empty) circle:first-child {
+  stroke: rgba(var(--palette-background-bold), 0.5);
+}
+
+[role="progressbar"]:not(:empty) circle:last-child {
+            stroke: rgb(var(--palette-background-bold));
+            stroke-dasharray: 88px 88px;
+            stroke-dashoffset: calc(88px * (1 - var(--value)));
+        }
+
+[role="progressbar"]:not(:empty):not([aria-valuenow]) circle:last-child {
+                animation: progress-circle-indeterminate 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+                    infinite;
+            }
+
+@keyframes progress-bar-indeterminate {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    50% {
+        background-position: -100% 0%;
+    }
+
+    100% {
+        background-position: -100% 0%;
+    }
+}
+
+@keyframes progress-circle-indeterminate {
+    0% {
+        stroke-dashoffset: 88px;
+    }
+
+    50% {
+        stroke-dashoffset: -88px;
+    }
+
+    100% {
+        stroke-dashoffset: -88px;
+    }
 }
 
 .spinner {
