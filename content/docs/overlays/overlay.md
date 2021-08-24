@@ -92,9 +92,10 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
         </Card.Section>
 
         <Card.Footer>
-            <ContextButton variation="clear"
-                >Cancel</ContextButton
-            >
+            <ContextButton variation="clear">
+                Cancel
+            </ContextButton>
+
             <Button palette="negative">Delete</Button>
         </Card.Footer>
     </Card.Container>

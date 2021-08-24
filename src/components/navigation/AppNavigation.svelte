@@ -14,6 +14,7 @@
 
 <script lang="ts">
     import {browser} from "$app/env";
+    import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
         Anchor,
         Card,
@@ -40,8 +41,11 @@
         preferencetheme,
     } from "@kahi-docs/shared";
 
-    import MenuNavigation from "./MenuNavigation.svelte";
+    import {search_keybind} from "../../client/keybind";
+
     import SearchModal from "../search/SearchModal.svelte";
+
+    import MenuNavigation from "./MenuNavigation.svelte";
 
     const _htmlpalette = htmlpalette();
     const _prefersdark = prefersdark();
@@ -49,12 +53,17 @@
     export let state: boolean = false;
     let search_state: boolean = false;
 
-    function on_palette_click(event: MouseEvent) {
+    function on_palette_click(event: MouseEvent): void {
         $_htmlpalette = _next_palette;
         $preferencetheme = _next_palette as IPreferenceThemeValues;
     }
 
-    function on_search_focus(event: FocusEvent | MouseEvent) {
+    function on_search_bind(event: IKeybindEvent): void {
+        state = false;
+        search_state = true;
+    }
+
+    function on_search_focus(event: FocusEvent | MouseEvent): void {
         const {target} = event;
         if (target instanceof HTMLInputElement) target.blur();
 
@@ -92,6 +101,8 @@
             : []),
     ];
 </script>
+
+<svelte:window use:search_keybind={on_search_bind} />
 
 <Omni.Container class="app-navigation" palette="dark" variation="sticky">
     <Omni.Header>
@@ -134,7 +145,7 @@
             <Omni.Section class="app-navigation-search" padding_x="large" max_width="prose">
                 <TextInput
                     type="search"
-                    placeholder="Search"
+                    placeholder="[CTRL+/] Search"
                     variation="block"
                     align="center"
                     on:focus={on_search_focus}

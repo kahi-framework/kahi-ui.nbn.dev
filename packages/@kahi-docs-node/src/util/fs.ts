@@ -2,7 +2,7 @@ import * as fs from "fs";
 
 import {exec_git_timestamp} from "./git";
 
-// HACK: Couldn't import `constants` from the module...
+// HACK: Couldn't import `constants` / `promises` from the module via ES Modules...
 const {constants, promises} = fs;
 const {access, lstat} = promises;
 

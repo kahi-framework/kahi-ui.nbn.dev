@@ -24,8 +24,8 @@
         "test:shared": "cd ./packages/@kahi-docs-shared;npm run test;cd ../../"
     },
     "devDependencies": {
-        "@sveltejs/adapter-static": "^1.0.0-next.13",
-        "@sveltejs/kit": "^1.0.0-next.134",
+        "@sveltejs/adapter-static": "^1.0.0-next.17",
+        "@sveltejs/kit": "^1.0.0-next.156",
         "cheerio": "^1.0.0-rc.10",
         "esbuild": "^0.12.15",
         "fast-glob": "^3.2.5",
@@ -44,7 +44,7 @@
         "@kahi-docs/markdown": "file:packages/@kahi-docs-markdown",
         "@kahi-docs/node": "file:packages/@kahi-docs-node",
         "@kahi-docs/shared": "file:packages/@kahi-docs-shared",
-        "@kahi-ui/framework": "^0.3.0",
+        "@kahi-ui/framework": "^0.3.2",
         "@novacbn/svelte-pipeline": "^0.2.0",
         "@novacbn/svelte-stork": "github:novacbn/svelte-stork#0.0.4",
         "prismjs": "^1.23.0",

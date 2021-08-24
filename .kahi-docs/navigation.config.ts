@@ -20,6 +20,7 @@ export default define_navigation({
                 {href: "/docs/resources/community"},
             ],
         },
+
         {
             separator: "Framework",
             items: [
@@ -35,8 +36,8 @@ export default define_navigation({
             items: [
                 {href: "/docs/typography/blockquote"},
                 {href: "/docs/typography/code"},
-                {href: "/docs/typography/heading", badge: "UPDATED"},
-                {href: "/docs/typography/text", badge: "UPDATED"},
+                {href: "/docs/typography/heading"},
+                {href: "/docs/typography/text"},
             ],
         },
 
@@ -55,11 +56,17 @@ export default define_navigation({
         },
 
         {
+            separator: "Disclosure",
+            items: [{href: "/docs/disclosure/tab", badge: "NEW"}],
+        },
+
+        {
             separator: "Feedback",
             items: [
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
-                {href: "/docs/feedback/spinner", badge: "UPDATED"},
+                {href: "/docs/feedback/progress", badge: "NEW"},
+                {href: "/docs/feedback/spinner"},
                 {href: "/docs/feedback/wave"},
             ],
         },
@@ -67,12 +74,12 @@ export default define_navigation({
         {
             separator: "Interactables",
             items: [
-                {href: "/docs/interactables/button", badge: "UPDATED"},
+                {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
-                {href: "/docs/interactables/textinput", badge: "UPDATED"},
+                {href: "/docs/interactables/textinput"},
             ],
         },
 
@@ -106,7 +113,7 @@ export default define_navigation({
                 {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
                 {href: "/docs/navigation/breadcrumb"},
-                {href: "/docs/navigation/menu", badge: "UPDATED"},
+                {href: "/docs/navigation/menu"},
                 {href: "/docs/navigation/omni"},
             ],
         },
@@ -141,7 +148,10 @@ export default define_navigation({
 
         {
             separator: "Actions",
-            items: [{href: "/docs/actions/click_outside", badge: "NEW"}],
+            items: [
+                {href: "/docs/actions/click_outside"},
+                {href: "/docs/actions/keybind", badge: "NEW"},
+            ],
         },
 
         {
