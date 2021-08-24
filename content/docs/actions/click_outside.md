@@ -1,6 +1,6 @@
 # click_outside
 
-`click_outside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs an `on_click_outside(event: MouseEvent)` event listener whenever your assigned element is clicked outside of.
+`click_outside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_outside(event: MouseEvent): void` callback whenever your assigned element is clicked outside of.
 
 ```svelte repl click_outside Preview
 <script>
@@ -23,3 +23,7 @@
         : "I am currently not clicked..."}
 </div>
 ```
+
+## Compatibility
+
+Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
