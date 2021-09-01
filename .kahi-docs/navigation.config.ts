@@ -57,7 +57,7 @@ export default define_navigation({
 
         {
             separator: "Disclosure",
-            items: [{href: "/docs/disclosure/tab", badge: "NEW"}],
+            items: [{href: "/docs/disclosure/tab"}],
         },
 
         {
@@ -65,7 +65,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
-                {href: "/docs/feedback/progress", badge: "NEW"},
+                {href: "/docs/feedback/progress"},
                 {href: "/docs/feedback/spinner"},
                 {href: "/docs/feedback/wave"},
             ],
@@ -101,9 +101,9 @@ export default define_navigation({
             separator: "Surfaces",
             items: [
                 {href: "/docs/surfaces/box"},
-                {href: "/docs/surfaces/card"},
+                {href: "/docs/surfaces/card", badge: "UPDATED"},
                 {href: "/docs/surfaces/hero"},
-                {href: "/docs/surfaces/tile"},
+                {href: "/docs/surfaces/tile", badge: "UPDATED"},
             ],
         },
 
@@ -112,7 +112,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
-                {href: "/docs/navigation/breadcrumb"},
+                {href: "/docs/navigation/breadcrumb", badge: "UPDATED"},
                 {href: "/docs/navigation/menu"},
                 {href: "/docs/navigation/omni"},
             ],
@@ -148,10 +148,7 @@ export default define_navigation({
 
         {
             separator: "Actions",
-            items: [
-                {href: "/docs/actions/click_outside"},
-                {href: "/docs/actions/keybind", badge: "NEW"},
-            ],
+            items: [{href: "/docs/actions/click_outside"}, {href: "/docs/actions/keybind"}],
         },
 
         {

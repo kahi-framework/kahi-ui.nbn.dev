@@ -1,7 +1,7 @@
 +++
 [[properties."Card.Container"]]
 name="elevation"
-description="Alters how \"high\" the <code>Card</code> appears to be off the page."
+description="Alters how \"high\" the `Card` appears to be off the page."
 default="lowest"
 types=["lowest", "low", "medium", "high", "highest"]
 
@@ -11,8 +11,13 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties."Card.Container"]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `Card`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties."Card.Container"]]
 name="variation"
-description="Alters the appearance of the <code>Card</code>."
+description="Alters the appearance of the `Card`."
 types=["flush"]
 +++
 
@@ -396,9 +401,127 @@ You can set how "high" your `Card` will appear to be over top the page via the `
 </Mosaic>
 ```
 
+## Sizing
+
+You can sizes / spacings of the child elements via the `sizing` property.
+
+```svelte repl Card Sizing
+<script>
+    import {
+        Card,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    class="card-sizing"
+    orientation="horizontal"
+    spacing="medium"
+    alignment_y="top"
+    variation="wrap"
+>
+    <Card.Container>
+        <Card.Header>default</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container sizing="tiny">
+        <Card.Header>tiny</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container sizing="small">
+        <Card.Header>small</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container sizing="medium">
+        <Card.Header>medium</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container sizing="large">
+        <Card.Header>large</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container sizing="huge">
+        <Card.Header>huge</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+</Stack>
+
+<style>
+    :global(.card-sizing > .card) {
+        max-width: 35ch;
+    }
+</style>
+```
+
 ## Flush
 
-You can change the appearance of the `Card` to be flush with the rest of the Application content.
+You can change the appearance of the `Card` to be flush with the rest of the Application content via the `variation` property.
 
 ```svelte repl Card Flush
 <script>
