@@ -1168,8 +1168,11 @@ You can change the color palette of the Card via the palette property.
 Elevation
 You can set how "high" your Card will appear to be over top the page via the elevation property.
 
+Sizing
+You can sizes / spacings of the child elements via the sizing property.
+
 Flush
-You can change the appearance of the Card to be flush with the rest of the Application content.
+You can change the appearance of the Card to be flush with the rest of the Application content via the variation property.
 
 """
   filetype = "PlainText"
@@ -1201,6 +1204,9 @@ You can change the color palette of the Tile via the palette property.
 
 Elevation
 You can set how "high" your Tile will appear to be over top the page via the elevation property.
+
+Sizing
+You can sizes / spacings of the child elements via the sizing property.
 
 Flush
 You can change the appearance of the Tile to be flush with the rest of the Application content.
