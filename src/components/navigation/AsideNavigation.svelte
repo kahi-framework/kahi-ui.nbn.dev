@@ -14,7 +14,7 @@
     import MenuNavigation from "./MenuNavigation.svelte";
     import {onMount} from "svelte";
 
-    export let element: HTMLElement | null = null;
+    export let element: HTMLElement | undefined = undefined;
 
     export let items: INavigationMenu[];
     export let state: boolean = false;

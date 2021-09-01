@@ -23,7 +23,7 @@
     padding="medium"
 >
     <Card.Container palette="dark">
-        <Card.Section padding="small">
+        <Card.Section margin="small">
             <Menu.Container
                 orientation={["tablet:horizontal", "desktop:horizontal", "widescreen:horizontal"]}
                 sizing="tiny"
