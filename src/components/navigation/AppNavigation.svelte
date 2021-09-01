@@ -59,6 +59,8 @@
     }
 
     function on_search_bind(event: IKeybindEvent): void {
+        event.preventDefault();
+
         state = false;
         search_state = true;
     }
@@ -167,7 +169,7 @@
                 </ContextButton>
 
                 <Card.Container hidden="widescreen">
-                    <Card.Section padding="medium">
+                    <Card.Section margin="medium">
                         <MenuNavigation items={_items} />
                     </Card.Section>
                 </Card.Container>

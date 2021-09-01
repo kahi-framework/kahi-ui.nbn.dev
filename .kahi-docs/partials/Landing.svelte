@@ -107,7 +107,7 @@
                 <Spacer />
 
                 <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="medium" width="content-max">
+                    <Box palette="accent" padding="small" width="content-max">
                         <GridIcon size="1.25rem" />
                     </Box>
                 </Figure>
@@ -127,7 +127,7 @@
                 <Spacer />
 
                 <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="medium" width="content-max">
+                    <Box palette="accent" padding="small" width="content-max">
                         <Code size="1.25rem" />
                     </Box>
                 </Figure>
@@ -147,7 +147,7 @@
                 <Spacer />
 
                 <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="medium" width="content-max">
+                    <Box palette="accent" padding="small" width="content-max">
                         <Moon size="1.25rem" />
                     </Box>
                 </Figure>
@@ -167,7 +167,7 @@
                 <Spacer />
 
                 <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="medium" width="content-max">
+                    <Box palette="accent" padding="small" width="content-max">
                         <Zap size="1.25rem" />
                     </Box>
                 </Figure>

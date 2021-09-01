@@ -384,6 +384,132 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
 </Stack>
 ```
 
+## Sizing
+
+You can sizes / spacings of the child elements via the `sizing` property.
+
+```svelte repl Tile Elevation
+<script>
+    import {
+        Stack,
+        Text,
+        Tile,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    spacing="medium"
+    alignment_y="top"
+    variation="wrap"
+>
+    <Tile.Container width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>default</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+
+    <Tile.Container sizing="tiny" width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>tiny</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+
+    <Tile.Container sizing="small" width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>small</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+
+    <Tile.Container
+        sizing="medium"
+        width="content-max"
+    >
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>medium</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+
+    <Tile.Container sizing="large" width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>large</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+
+    <Tile.Container sizing="huge" width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>huge</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+</Stack>
+```
+
 ## Flush
 
 You can change the appearance of the `Tile` to be flush with the rest of the Application content.
