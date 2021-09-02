@@ -6,12 +6,12 @@ types=["string"]
 
 [[properties."Breadcrumb.Item"]]
 name="active"
-description="Alters the breadcrumb item to render bolder when active. Sets <code><a href='https://www.digitala11y.com/aria-current-state' rel='noopener noreferrer' target='_blank'>aria-current=\"page\"</a></code> on <code>Breadcrumb.Anchor</code>."
+description="Alters the breadcrumb item to render bolder when active. Sets [`aria-current=\"page\"`](https://www.digitala11y.com/aria-current-state) on `Breadcrumb.Anchor`."
 types=["boolean"]
 
 [[properties."Breadcrumb.Anchor"]]
 name="href"
-description="Changes the URL that <code>Breadcrumb.Anchor</code> navigates end-users to when clicked."
+description="Changes the URL that `Breadcrumb.Anchor` navigates end-users to when clicked."
 types=["string"]
 
 [[properties."Breadcrumb.Anchor"]]
@@ -21,13 +21,18 @@ types=["string"]
 
 [[properties."Breadcrumb.Anchor"]]
 name="rel"
-description="Sets how the <code>Breadcrumb.Anchor</code> relates to the current page, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets how the `Breadcrumb.Anchor` relates to the current page, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel) for more information."
 types=["string"]
 
 [[properties."Breadcrumb.Anchor"]]
 name="target"
-description="Sets the target of the <code>Breadcrumb.Anchor</code> being navigated, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets the target of the `Breadcrumb.Anchor` being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
+
+[[events."Breadcrumb.Anchor"]]
+name="click"
+description="Fires whenever the `Breadcrumb.Anchor` is clicked."
+types=["MouseEvent"]
 +++
 
 # Breadcrumb
