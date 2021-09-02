@@ -6,42 +6,42 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Button]]
 name="size"
-description="Renders the <code>Button</code> at a different sizes."
+description="Renders the `Button` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.Button]]
 name="variation"
-description="Changes the how the <code>Button</code> is rendered."
+description="Changes the how the `Button` is rendered."
 types=["clear", "outline"]
 
 [[properties.Button]]
 name="active"
-description="Renders the <code>Button</code> with <code>aria-pressed</code> attribute, and styles the <code>Button</code> as if it where being clicked."
+description="Renders the `Button` with `aria-pressed` attribute, and styles the `Button` as if it where being clicked."
 types=["boolean"]
 
 [[properties.Button]]
 name="disabled"
-description="Renders the <code>Button</code> with <code>disabled</code> / <code>aria-disabled</code> attributes, and styles the <code>Button</code> partially transparent."
+description="Renders the `Button` with `disabled` / `aria-disabled` attributes, and styles the `Button` partially transparent."
 types=["boolean"]
 
 [[properties.Button]]
 name="type"
-description="Renders the <code>Button</code> as a <code>&lt;input /&gt;</code> as a specific form type."
+description="Renders the `Button` as a `&lt;input /&gt;` as a specific form type."
 types=["button", "reset", "submit"]
 
 [[properties.Button]]
 name="name"
-description="Sets the form name of the <code>Button</code> whenever <code>Button.type</code> is set."
+description="Sets the form name of the `Button` whenever `Button.type` is set."
 types=["string"]
 
 [[properties.Button]]
 name="value"
-description="Sets the form value of the <code>Button</code> whenever <code>Button.type</code> is set."
+description="Sets the form value of the `Button` whenever `Button.type` is set."
 types=["string"]
 
 [[properties.Button]]
 name="href"
-description="Renders the <code>Button</code> as a <code>&lt;a role=\"button\"&gt;</code> and links to the specified <code>href</code> property."
+description="Renders the `Button` as a `&lt;a role=\"button\"&gt;` and links to the specified `href` property."
 types=["string"]
 
 [[properties.Button]]
@@ -51,18 +51,24 @@ types=["string"]
 
 [[properties.Button]]
 name="rel"
-description="Sets how the Anchor relates to the current page, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets how the Anchor relates to the current page, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel) for more information."
 types=["string"]
 
 [[properties.Button]]
 name="target"
-description="Sets the target of the Anchor being navigated, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets the target of the Anchor being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
 
 [[properties.Button]]
 name="for"
-description="Renders the <code>Button</code> as a <code>&lt;label role=\"button\"&gt;</code> which targets the element ID set to the <code>for</code> property."
+description="Renders the `Button` as a `&lt;label role=\"button\"&gt;` which targets the element ID set to the `for` property."
 types=["string"]
+
+[[events.Button]]
+name="click"
+description="Fires whenever the `Button` is clicked."
+types=["MouseEvent"]
+
 +++
 
 # Button
