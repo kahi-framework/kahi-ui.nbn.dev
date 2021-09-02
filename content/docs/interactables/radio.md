@@ -38,6 +38,31 @@ types=["boolean"]
 name="value"
 description="Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted."
 types=["string"]
+
+[[events.Radio]]
+name="blur"
+description="Fires whenever the `Radio` loses focus."
+types=["FocusEvent"]
+
+[[events.Radio]]
+name="change"
+description="Fires whenever the `Radio` has its value changed."
+types=["InputEvent"]
+
+[[events.Radio]]
+name="click"
+description="Fires whenever the `Radio` is clicked."
+types=["MouseEvent"]
+
+[[events.Radio]]
+name="focus"
+description="Fires whenever the `Radio` gains focus."
+types=["FocusEvent"]
+
+[[events.Radio]]
+name="input"
+description="Fires whenever the `Radio` has its value changed."
+types=["InputEvent"]
 +++
 
 # Radio

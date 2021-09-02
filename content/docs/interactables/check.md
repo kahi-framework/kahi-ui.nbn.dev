@@ -38,6 +38,31 @@ types=["boolean"]
 name="value"
 description="Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted."
 types=["string"]
+
+[[events.Check]]
+name="blur"
+description="Fires whenever the `Check` loses focus."
+types=["FocusEvent"]
+
+[[events.Check]]
+name="change"
+description="Fires whenever the `Check` has its value changed."
+types=["InputEvent"]
+
+[[events.Check]]
+name="click"
+description="Fires whenever the `Check` is clicked."
+types=["MouseEvent"]
+
+[[events.Check]]
+name="focus"
+description="Fires whenever the `Check` gains focus."
+types=["FocusEvent"]
+
+[[events.Check]]
+name="input"
+description="Fires whenever the `Check` has its value changed."
+types=["InputEvent"]
 +++
 
 # Check
