@@ -1,3 +1,10 @@
++++
+[[properties.Box]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
++++
+
 # Box
 
 `Box` is a surface primitive for encapsulating section content in a block of color.
