@@ -1,17 +1,17 @@
 +++
 [[properties.Anchor]]
 name="current"
-description="Changes the <code><a href='https://www.digitala11y.com/aria-current-state' rel='noopener noreferrer' target='_blank'>aria-current</a></code> attribute, telling screen readers how to handle the link."
+description="Changes the [`aria-current`](https://www.digitala11y.com/aria-current-state) attribute, telling screen readers how to handle the link."
 types=["date", "location", "page", "step", "time", "true"]
 
 [[properties.Anchor]]
 name="disabled"
-description="Changes the <code><a href='https://www.digitala11y.com/aria-disabled-state' rel='noopener noreferrer' target='_blank'>aria-disabled</a></code> attribute, telling screen readers how to handle the link and altering it to be greyed-out."
+description="Changes the [`aria-disabled`](https://www.digitala11y.com/aria-disabled-state) attribute, telling screen readers how to handle the link and altering it to be greyed-out."
 types=["boolean"]
 
 [[properties.Anchor]]
 name="href"
-description="Changes the URL that <code>Anchor</code> navigates end-users to when clicked."
+description="Changes the URL that `Anchor` navigates end-users to when clicked."
 types=["string"]
 
 [[properties.Anchor]]
@@ -21,13 +21,18 @@ types=["string"]
 
 [[properties.Anchor]]
 name="rel"
-description="Sets how the <code>Anchor</code> relates to the current page, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets how the `Anchor` relates to the current page, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel) for more information."
 types=["string"]
 
 [[properties.Anchor]]
 name="target"
-description="Sets the target of the <code>Anchor</code> being navigated, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets the target of the `Anchor` being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
+
+[[events.Anchor]]
+name="click"
+description="Fires whenever the `Anchor` is clicked."
+types=["MouseEvent"]
 +++
 
 # Anchor
