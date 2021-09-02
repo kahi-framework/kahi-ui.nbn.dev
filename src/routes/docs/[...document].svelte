@@ -28,7 +28,7 @@
 
 <script lang="ts">
     import {Heading, Tab} from "@kahi-ui/framework";
-    import type {IDocumentationRender} from "@kahi-docs/markdown";
+    import type {IDocumentationRender, IReferenceMap} from "@kahi-docs/markdown";
     import {applicationconfig, set_docs_render} from "@kahi-docs/shared";
 
     import DocumentationFooter from "../../components/documentation/DocumentationFooter.svelte";
@@ -36,17 +36,25 @@
 
     export let documentation: IDocumentationRender;
 
-    $: set_docs_render(documentation);
-
-    $: _has_events = Object.keys(documentation.properties.events).length > 0;
-    $: _has_properties = Object.keys(documentation.properties.properties).length > 0;
-
-    let _initial_tab: string;
-    $: {
-        if (_has_properties) _initial_tab = "tab-api-reference-properties";
-        else if (_has_events) _initial_tab = "tab-api-reference-events";
-        else _initial_tab = "tab-api-reference-slots";
+    function has_references(references: IReferenceMap): boolean {
+        return Object.keys(references).length > 0;
     }
+
+    function get_initial_tab(render: IDocumentationRender): string {
+        if (has_references(render.properties.properties)) return "tab-api-reference-properties";
+        else if (has_references(render.properties.events)) return "tab-api-reference-events";
+
+        return "";
+    }
+
+    function reset_initial_tab(render: IDocumentationRender): void {
+        tab_state = get_initial_tab(documentation);
+    }
+
+    let tab_state: string = get_initial_tab(documentation);
+
+    $: set_docs_render(documentation);
+    $: reset_initial_tab(documentation);
 </script>
 
 <svelte:head>
@@ -55,11 +63,11 @@
 
 {@html documentation.render}
 
-{#if _has_events || _has_properties}
+{#if tab_state}
     <Heading is="h2" id="api-reference">API Reference</Heading>
 
-    <Tab.Container logic_name="tab-api-reference" logic_state={_initial_tab}>
-        {#if _has_properties}
+    <Tab.Container logic_name="tab-api-reference" bind:logic_state={tab_state}>
+        {#if has_references(documentation.properties.properties)}
             <Tab.Group logic_id="tab-api-reference-properties">
                 <Tab.Label palette="accent">Properties</Tab.Label>
 
@@ -72,7 +80,7 @@
             </Tab.Group>
         {/if}
 
-        {#if _has_events}
+        {#if has_references(documentation.properties.events)}
             <Tab.Group logic_id="tab-api-reference-events">
                 <Tab.Label palette="accent">Events</Tab.Label>
 
