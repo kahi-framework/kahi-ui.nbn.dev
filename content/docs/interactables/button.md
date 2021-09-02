@@ -68,7 +68,6 @@ types=["string"]
 name="click"
 description="Fires whenever the `Button` is clicked."
 types=["MouseEvent"]
-
 +++
 
 # Button

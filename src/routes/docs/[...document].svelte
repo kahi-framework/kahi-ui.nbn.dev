@@ -48,7 +48,7 @@
     }
 
     function reset_initial_tab(render: IDocumentationRender): void {
-        tab_state = get_initial_tab(documentation);
+        tab_state = get_initial_tab(render);
     }
 
     let tab_state: string = get_initial_tab(documentation);
