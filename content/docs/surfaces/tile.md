@@ -386,9 +386,9 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
 
 ## Sizing
 
-You can sizes / spacings of the child elements via the `sizing` property.
+You can change the sizes / spacings of the child elements via the `sizing` property.
 
-```svelte repl Tile Elevation
+```svelte repl Tile Sizing
 <script>
     import {
         Stack,
@@ -512,7 +512,7 @@ You can sizes / spacings of the child elements via the `sizing` property.
 
 ## Flush
 
-You can change the appearance of the `Tile` to be flush with the rest of the Application content.
+You can change the appearance of the `Tile` to be flush with the rest of the Application content via the `variation` property.
 
 ```svelte repl Tile Flush
 <script>
