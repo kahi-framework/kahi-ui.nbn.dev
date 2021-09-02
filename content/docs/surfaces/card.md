@@ -403,7 +403,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
 
 ## Sizing
 
-You can sizes / spacings of the child elements via the `sizing` property.
+You can change the sizes / spacings of the child elements via the `sizing` property.
 
 ```svelte repl Card Sizing
 <script>
@@ -535,7 +535,7 @@ You can change the appearance of the `Card` to be flush with the rest of the App
 </script>
 
 <Card.Container
-    class="card-preview"
+    class="card-flush"
     palette="auto"
     variation="flush"
 >
@@ -567,7 +567,7 @@ You can change the appearance of the `Card` to be flush with the rest of the App
 </Card.Container>
 
 <style>
-    :global(.card-preview) {
+    :global(.card-flush) {
         max-width: 35ch;
     }
 </style>
