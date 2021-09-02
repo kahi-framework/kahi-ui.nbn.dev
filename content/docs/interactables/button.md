@@ -26,7 +26,7 @@ types=["boolean"]
 
 [[properties.Button]]
 name="type"
-description="Renders the `Button` as a `&lt;input /&gt;` as a specific form type."
+description="Renders the `Button` as a `<input />` as a specific form type."
 types=["button", "reset", "submit"]
 
 [[properties.Button]]
@@ -41,7 +41,7 @@ types=["string"]
 
 [[properties.Button]]
 name="href"
-description="Renders the `Button` as a `&lt;a role=\"button\"&gt;` and links to the specified `href` property."
+description="Renders the `Button` as a `<a role=\"button\">` and links to the specified `href` property."
 types=["string"]
 
 [[properties.Button]]
@@ -61,7 +61,7 @@ types=["string"]
 
 [[properties.Button]]
 name="for"
-description="Renders the `Button` as a `&lt;label role=\"button\"&gt;` which targets the element ID set to the `for` property."
+description="Renders the `Button` as a `<label role=\"button\">` which targets the element ID set to the `for` property."
 types=["string"]
 
 [[events.Button]]
