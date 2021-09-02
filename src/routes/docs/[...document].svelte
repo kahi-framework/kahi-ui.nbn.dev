@@ -27,6 +27,7 @@
 </script>
 
 <script lang="ts">
+    import {Heading, Tab} from "@kahi-ui/framework";
     import type {IDocumentationRender} from "@kahi-docs/markdown";
     import {applicationconfig, set_docs_render} from "@kahi-docs/shared";
 
@@ -36,6 +37,16 @@
     export let documentation: IDocumentationRender;
 
     $: set_docs_render(documentation);
+
+    $: _has_events = Object.keys(documentation.properties.events).length > 0;
+    $: _has_properties = Object.keys(documentation.properties.properties).length > 0;
+
+    let _initial_tab: string;
+    $: {
+        if (_has_properties) _initial_tab = "tab-api-reference-properties";
+        else if (_has_events) _initial_tab = "tab-api-reference-events";
+        else _initial_tab = "tab-api-reference-slots";
+    }
 </script>
 
 <svelte:head>
@@ -44,20 +55,36 @@
 
 {@html documentation.render}
 
-{#if Object.keys(documentation.properties.properties).length > 0}
-    <DocumentationReferences
-        references={documentation.properties.properties}
-        id="properties"
-        title="Properties"
-    />
-{/if}
+{#if _has_events || _has_properties}
+    <Heading is="h2" id="api-reference">API Reference</Heading>
 
-{#if Object.keys(documentation.properties.events).length > 0}
-    <DocumentationReferences
-        references={documentation.properties.events}
-        id="events"
-        title="Events"
-    />
+    <Tab.Container logic_name="tab-api-reference" logic_state={_initial_tab}>
+        {#if _has_properties}
+            <Tab.Group logic_id="tab-api-reference-properties">
+                <Tab.Label palette="accent">Properties</Tab.Label>
+
+                <Tab.Section>
+                    <DocumentationReferences
+                        references={documentation.properties.properties}
+                        id="properties"
+                    />
+                </Tab.Section>
+            </Tab.Group>
+        {/if}
+
+        {#if _has_events}
+            <Tab.Group logic_id="tab-api-reference-events">
+                <Tab.Label palette="accent">Events</Tab.Label>
+
+                <Tab.Section>
+                    <DocumentationReferences
+                        references={documentation.properties.events}
+                        id="events"
+                    />
+                </Tab.Section>
+            </Tab.Group>
+        {/if}
+    </Tab.Container>
 {/if}
 
 <DocumentationFooter />

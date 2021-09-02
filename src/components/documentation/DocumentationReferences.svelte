@@ -5,12 +5,9 @@
 
     export let id: string;
     export let references: IReferenceMap;
-    export let title: string;
 
     $: _components = Object.entries(references);
 </script>
-
-<Heading is="h2" {id}>{title}</Heading>
 
 {#each _components as [component, properties] (component)}
     <Heading is="h3" id="{id}-{component.toLowerCase()}">{component}</Heading>
