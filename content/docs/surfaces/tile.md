@@ -388,7 +388,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
-```svelte repl Tile Elevation
+```svelte repl Tile Sizing
 <script>
     import {
         Stack,
