@@ -36,6 +36,16 @@ name="placement"
 description="Adjusts where the child content will be placed within the <code>Popover</code> along the vertical axis."
 default="left"
 types=["top", "left", "bottom", "right"]
+
+[[events.Popover]]
+name="active"
+description="Fires whenever the `Popover` is activated."
+types=["CustomEvent<void>"]
+
+[[events.Popover]]
+name="dismiss"
+description="Fires whenever the `Popover` is dismissed."
+types=["CustomEvent<void>"]
 +++
 
 # Popover

@@ -51,6 +51,16 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child content in the <code>Overlay</code>."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+
+[[events.Overlay]]
+name="active"
+description="Fires whenever the `Overlay` is activated."
+types=["CustomEvent<void>"]
+
+[[events.Overlay]]
+name="dismiss"
+description="Fires whenever the `Overlay` is dismissed."
+types=["CustomEvent<void>"]
 +++
 
 # Overlay
