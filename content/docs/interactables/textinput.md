@@ -1,7 +1,7 @@
 +++
 [[properties.TextInput]]
 name="is"
-description="Changes the HTML tag used for rendering the <code>TextInput</code>."
+description="Changes the HTML tag used for rendering the `TextInput`."
 default="input"
 types=["input", "textarea"]
 
@@ -18,47 +18,47 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.TextInput]]
 name="size"
-description="Renders the <code>TextInput</code> at a different sizes."
+description="Renders the `TextInput` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.TextInput]]
 name="variation"
-description="Alters the rendered appearance of the <code>TextInput</code>."
+description="Alters the rendered appearance of the `TextInput`."
 types=["block", "flush"]
 
 [[properties.TextInput]]
 name="disabled"
-description="Renders the <code>TextInput</code> with <code>disabled</code> attribute, and styles the <code>TextInput</code> partially transparent."
+description="Renders the `TextInput` with `disabled` attribute, and styles the `TextInput` partially transparent."
 types=["boolean"]
 
 [[properties.TextInput]]
 name="required"
-description="Sets if the <code>TextInput</code> should be required, which will fail submission on a <code>&lt;form&gt;</code> if missing."
+description="Sets if the `TextInput` should be required, which will fail submission on a `<form>` if missing."
 types=["boolean"]
 
 [[properties.TextInput]]
 name="readonly"
-description="Sets if the <code>TextInput</code> should be readonly, which will prevent further edits."
+description="Sets if the `TextInput` should be readonly, which will prevent further edits."
 types=["boolean"]
 
 [[properties.TextInput]]
 name="name"
-description="Sets the form name of the <code>TextInput</code>."
+description="Sets the form name of the `TextInput`."
 types=["string"]
 
 [[properties.TextInput]]
 name="max_length"
-description="Sets the maximum amount of characters that the end-user <strong>CAN</strong> input, which will fail submission on a <code>&lt;form&gt;</code> if the input is invalid."
+description="Sets the maximum amount of characters that the end-user <strong>CAN</strong> input, which will fail submission on a `<form>` if the input is invalid."
 types=["number"]
 
 [[properties.TextInput]]
 name="min_length"
-description="Sets the minimum amount of characters that the end-user <strong>MUST</strong> input, which will fail submission on a <code>&lt;form&gt;</code> if the input is invalid."
+description="Sets the minimum amount of characters that the end-user <strong>MUST</strong> input, which will fail submission on a `<form>` if the input is invalid."
 types=["number"]
 
 [[properties.TextInput]]
 name="pattern"
-description="Sets a validation Regular Expression on <code>TextInput</code>, which will fail submission on a <code>&lt;form&gt;</code> if the input is invalid."
+description="Sets a validation Regular Expression on `TextInput`, which will fail submission on a `<form>` if the input is invalid."
 types=["RegExp", "string"]
 
 [[properties.TextInput]]
@@ -68,28 +68,53 @@ types=["string"]
 
 [[properties.TextInput]]
 name="value"
-description="Sets the text value of the <code>TextInput</code>."
+description="Sets the text value of the `TextInput`."
 types=["string"]
 
 [[properties.TextInput]]
 name="characters"
-description="Sets the width of the <code>TextInput</code> to an approximation of the amount of characters to display."
+description="Sets the width of the `TextInput` to an approximation of the amount of characters to display."
 types=["number", "string"]
 
 [[properties.TextInput]]
 name="lines"
-description="<strong>(TEXTAREA ONLY)</strong> Sets the height of the <code>TextInput</code> to an approximation of the amount of text lines to display."
+description="<strong>(TEXTAREA ONLY)</strong> Sets the height of the `TextInput` to an approximation of the amount of text lines to display."
 types=["number", "string"]
 
 [[properties.TextInput]]
 name="resizable"
-description="<strong>(TEXTAREA ONLY)</strong> Sets if the <code>TextArea</code> should be resizable by the end-user."
+description="<strong>(TEXTAREA ONLY)</strong> Sets if the `TextArea` should be resizable by the end-user."
 types=["boolean", "x", "y"]
 
 [[properties.TextInput]]
 name="spell_check"
 description="<strong>(TEXTAREA ONLY)</strong> Sets if Browser spellcheck should be enabled. Allows the Browser to automatically determine this, if unset."
 types=["boolean"]
+
+[[events.TextInput]]
+name="blur"
+description="Fires whenever the `TextInput` loses focus."
+types=["FocusEvent"]
+
+[[events.TextInput]]
+name="change"
+description="Fires whenever the `TextInput` loses focus and its value was changed."
+types=["InputEvent"]
+
+[[events.TextInput]]
+name="click"
+description="Fires whenever the `TextInput` is clicked."
+types=["MouseEvent"]
+
+[[events.TextInput]]
+name="focus"
+description="Fires whenever the `TextInput` gains focus."
+types=["FocusEvent"]
+
+[[events.TextInput]]
+name="input"
+description="Fires whenever the `TextInput` has its value changed."
+types=["InputEvent"]
 +++
 
 # TextInput

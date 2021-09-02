@@ -53,12 +53,14 @@
 </AsideLayout>
 
 <style>
-    :global(.docs-container) :global(h1),
-    :global(.docs-container) :global(h2),
-    :global(.docs-container) :global(h3),
-    :global(.docs-container) :global(h4),
-    :global(.docs-container) :global(h5),
-    :global(.docs-container) :global(h6) {
+    :global(.docs-container) > :global(h1),
+    :global(.docs-container) > :global(h2),
+    :global(.docs-container) > :global(h3),
+    :global(.docs-container) > :global(.tab) :global(h3),
+    :global(.docs-container) > :global(h4),
+    :global(.docs-container) > :global(.tab) :global(h4),
+    :global(.docs-container) > :global(h5),
+    :global(.docs-container) > :global(h6) {
         margin-top: var(--spacing-local-medium);
         margin-bottom: 0.25em;
     }

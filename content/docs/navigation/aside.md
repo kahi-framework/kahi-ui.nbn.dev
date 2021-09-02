@@ -34,6 +34,16 @@ types=["left", "right"]
 name="variation"
 description="Adjusts the <code>Aside.Container</code> to remain at the top of the Viewport, even when the parent body / element is scrolled."
 types=["sticky"]
+
+[[events."Aside.Container"]]
+name="active"
+description="Fires whenever the `Aside` is activated."
+types=["CustomEvent<void>"]
+
+[[events."Aside.Container"]]
+name="dismiss"
+description="Fires whenever the `Aside` is dismissed."
+types=["CustomEvent<void>"]
 +++
 
 # Aside

@@ -58,6 +58,16 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="loading"
 description="When the property is set and the `Tab.Section` view is not active, the child content is not rendered to DOM."
 types=["lazy"]
+
+[[events."Tab.Anchor"]]
+name="click"
+description="Fires whenever the `Tab.Anchor` is clicked."
+types=["MouseEvent"]
+
+[[events."Tab.Label"]]
+name="click"
+description="Fires whenever the `Tab.Label` is clicked."
+types=["MouseEvent"]
 +++
 
 # Tab

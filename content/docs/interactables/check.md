@@ -6,38 +6,63 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Check]]
 name="size"
-description="Renders the <code>Check</code> at a different sizes."
+description="Renders the `Check` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.Check]]
 name="variation"
-description="Alters the appearance of the <code>Check</code>."
+description="Alters the appearance of the `Check`."
 types=["flush"]
 
 [[properties.Check]]
 name="active"
-description="Renders the <code>Check</code> with <code>aria-pressed</code> attribute, and styles the <code>Check</code> as if it where being clicked."
+description="Renders the `Check` with `aria-pressed` attribute, and styles the `Check` as if it where being clicked."
 types=["boolean"]
 
 [[properties.Check]]
 name="disabled"
-description="Renders the <code>Check</code> with <code>disabled</code> attribute, and styles the <code>Check</code> partially transparent."
+description="Renders the `Check` with `disabled` attribute, and styles the `Check` partially transparent."
 types=["boolean"]
 
 [[properties.Check]]
 name="name"
-description="Sets the form name of the <code>Check</code>."
+description="Sets the form name of the `Check`."
 types=["string"]
 
 [[properties.Check]]
 name="state"
-description="Sets the checked state of the <code>Check</code>."
+description="Sets the checked state of the `Check`."
 types=["boolean"]
 
 [[properties.Check]]
 name="value"
-description="Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted."
+description="Sets the value sent whenever the parent `<form>` is submitted."
 types=["string"]
+
+[[events.Check]]
+name="blur"
+description="Fires whenever the `Check` loses focus."
+types=["FocusEvent"]
+
+[[events.Check]]
+name="change"
+description="Fires whenever the `Check` has its value changed."
+types=["InputEvent"]
+
+[[events.Check]]
+name="click"
+description="Fires whenever the `Check` is clicked."
+types=["MouseEvent"]
+
+[[events.Check]]
+name="focus"
+description="Fires whenever the `Check` gains focus."
+types=["FocusEvent"]
+
+[[events.Check]]
+name="input"
+description="Fires whenever the `Check` has its value changed."
+types=["InputEvent"]
 +++
 
 # Check

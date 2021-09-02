@@ -6,33 +6,58 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Switch]]
 name="size"
-description="Renders the <code>Switch</code> at a different sizes."
+description="Renders the `Switch` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.Switch]]
 name="active"
-description="Renders the <code>Switch</code> with <code>aria-pressed</code> attribute, and styles the <code>Switch</code> as if it where being clicked."
+description="Renders the `Switch` with `aria-pressed` attribute, and styles the `Switch` as if it where being clicked."
 types=["boolean"]
 
 [[properties.Switch]]
 name="disabled"
-description="Renders the <code>Switch</code> with <code>disabled</code> attribute, and styles the <code>Switch</code> partially transparent."
+description="Renders the `Switch` with `disabled` attribute, and styles the `Switch` partially transparent."
 types=["boolean"]
 
 [[properties.Switch]]
 name="name"
-description="Sets the form name of the <code>Switch</code>."
+description="Sets the form name of the `Switch`."
 types=["string"]
 
 [[properties.Switch]]
 name="state"
-description="Sets the checked state of the <code>Switch</code>."
+description="Sets the checked state of the `Switch`."
 types=["boolean"]
 
 [[properties.Switch]]
 name="value"
-description="Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted."
+description="Sets the value sent whenever the parent `<form>` is submitted."
 types=["string"]
+
+[[events.Switch]]
+name="blur"
+description="Fires whenever the `Switch` loses focus."
+types=["FocusEvent"]
+
+[[events.Switch]]
+name="change"
+description="Fires whenever the `Switch` has its value changed."
+types=["InputEvent"]
+
+[[events.Switch]]
+name="click"
+description="Fires whenever the `Switch` is clicked."
+types=["MouseEvent"]
+
+[[events.Switch]]
+name="focus"
+description="Fires whenever the `Switch` gains focus."
+types=["FocusEvent"]
+
+[[events.Switch]]
+name="input"
+description="Fires whenever the `Switch` has its value changed."
+types=["InputEvent"]
 +++
 
 # Switch

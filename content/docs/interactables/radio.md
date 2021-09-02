@@ -6,38 +6,63 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Radio]]
 name="size"
-description="Renders the <code>Radio</code> at a different sizes."
+description="Renders the `Radio` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.Radio]]
 name="variation"
-description="Alters the appearance of the <code>Radio</code>."
+description="Alters the appearance of the `Radio`."
 types=["flush"]
 
 [[properties.Radio]]
 name="active"
-description="Renders the <code>Radio</code> with <code>aria-pressed</code> attribute, and styles the <code>Radio</code> as if it where being clicked."
+description="Renders the `Radio` with `aria-pressed` attribute, and styles the `Radio` as if it where being clicked."
 types=["boolean"]
 
 [[properties.Radio]]
 name="disabled"
-description="Renders the <code>Radio</code> with <code>disabled</code> attribute, and styles the <code>Radio</code> partially transparent."
+description="Renders the `Radio` with `disabled` attribute, and styles the `Radio` partially transparent."
 types=["boolean"]
 
 [[properties.Radio]]
 name="name"
-description="Sets the form name of the <code>Radio</code>."
+description="Sets the form name of the `Radio`."
 types=["string"]
 
 [[properties.Radio]]
 name="state"
-description="Sets the checked state of the <code>Radio</code>."
+description="Sets the checked state of the `Radio`."
 types=["boolean"]
 
 [[properties.Radio]]
 name="value"
-description="Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted."
+description="Sets the value sent whenever the parent `<form>` is submitted."
 types=["string"]
+
+[[events.Radio]]
+name="blur"
+description="Fires whenever the `Radio` loses focus."
+types=["FocusEvent"]
+
+[[events.Radio]]
+name="change"
+description="Fires whenever the `Radio` has its value changed."
+types=["InputEvent"]
+
+[[events.Radio]]
+name="click"
+description="Fires whenever the `Radio` is clicked."
+types=["MouseEvent"]
+
+[[events.Radio]]
+name="focus"
+description="Fires whenever the `Radio` gains focus."
+types=["FocusEvent"]
+
+[[events.Radio]]
+name="input"
+description="Fires whenever the `Radio` has its value changed."
+types=["InputEvent"]
 +++
 
 # Radio

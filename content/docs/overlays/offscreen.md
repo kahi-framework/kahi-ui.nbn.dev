@@ -47,6 +47,16 @@ name="placement"
 description="Adjusts where the child content will be placed within the <code>Offscreen</code> along the vertical axis."
 default="left"
 types=["top", "left", "bottom", "right"]
+
+[[events.Offscreen]]
+name="active"
+description="Fires whenever the `Offscreen` is activated."
+types=["CustomEvent<void>"]
+
+[[events.Offscreen]]
+name="dismiss"
+description="Fires whenever the `Offscreen` is dismissed."
+types=["CustomEvent<void>"]
 +++
 
 # Offscreen
