@@ -78,6 +78,21 @@ types=["string"]
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[events."Menu.Anchor"]]
+name="click"
+description="Fires whenever the `Menu.Anchor` is clicked."
+types=["MouseEvent"]
+
+[[events."Menu.Button"]]
+name="click"
+description="Fires whenever the `Menu.Button` is clicked."
+types=["MouseEvent"]
+
+[[events."Menu.Label"]]
+name="click"
+description="Fires whenever the `Menu.Label` is clicked."
+types=["MouseEvent"]
 +++
 
 # Menu
