@@ -983,6 +983,7 @@ You can align Popover content via the alignment_x and alignment_y properties res
   [[input.files]]
   contents = """
 Community
+We have a community Discord Server where you can ask questions and talk to other kahi developers.
 Below you can find resources by other developers made with Kahi UI.
 """
   filetype = "PlainText"
