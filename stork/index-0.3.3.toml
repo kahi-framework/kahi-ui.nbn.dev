@@ -983,8 +983,21 @@ You can align Popover content via the alignment_x and alignment_y properties res
   [[input.files]]
   contents = """
 Community
-We have a community Discord Server where you can ask questions and talk to other kahi developers.
-Below you can find resources by other developers made with Kahi UI.
+Below you can find resources by other developers made with Kahi UI or related.
+Discussion / Support
+
+Other community channels besides the main repository for talking about or getting help with Kahi UI.
+
+
+Discord — Official support Discord, where you can talk to other Kahi UI developers.
+
+Icons
+
+Iconography projects that have been shown to work well with Kahi UI.
+
+
+Feather Icons — Lightweight SVG Icons, used by this documentation site.
+
 """
   filetype = "PlainText"
   url = "resources/community"
@@ -992,30 +1005,19 @@ Below you can find resources by other developers made with Kahi UI.
 
   [[input.files]]
   contents = """
-Icons
-By default the Kahi UI DOES NOT ship with Icons, although it DOES support inserting Icons at key-locations or make it possible to insert your own. Here are some suggestions of Icon libraries that have been known to work well with the Framework:
-
-
-Feather Icons — Lightweight SVG Icons, used by this documentation site.
-
-novacbn/svelte-feather — Svelte bindings for Feather, also used by this documentation site. (disclaimer: made by me)
-
-
-
-"""
-  filetype = "PlainText"
-  url = "resources/icons"
-  title = "Icons"
-
-  [[input.files]]
-  contents = """
 Official
 Below you can find resources made maintained by Kahi UI contributors.
 Showcase
 
+Projects that show off the Kahi UI framework.
+
+
 kahi-framework/kahi-ui.nbn.dev — Official documentation site.
 
 Templates
+
+Projects that can be used as a basis for your own project, showing how to integrate with various software.
+
 
 kahi-framework/kahi-ui-template-sveltekit — Official template for SvelteKit based on the npm init svelte@next starter.
 
