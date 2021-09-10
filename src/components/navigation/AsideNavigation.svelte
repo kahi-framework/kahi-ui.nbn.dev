@@ -42,7 +42,7 @@
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
     <Aside.Section margin_bottom="none" padding_y="large">
-        <MenuNavigation {items} />
+        <MenuNavigation sizing="small" {items} />
     </Aside.Section>
 
     <ContextButton size="huge" hidden={["desktop", "widescreen"]}>
@@ -61,11 +61,11 @@
 
     :global(.aside-navigation) {
         position: sticky !important;
-        top: 5rem;
+        top: 4.4rem;
 
         grid-area: aside;
 
-        width: 20rem;
+        width: 18rem;
         height: calc(100vh - 5rem);
     }
 

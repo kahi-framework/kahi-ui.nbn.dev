@@ -3,6 +3,7 @@
     import type {
         DESIGN_HIDDEN_ARGUMENT,
         DESIGN_ORIENTATION_VERTICAL_ARGUMENT,
+        DESIGN_SIZING_ARGUMENT,
     } from "@kahi-ui/framework";
     import {Badge, Menu, Spacer} from "@kahi-ui/framework";
     import type {Page} from "@sveltejs/kit";
@@ -13,6 +14,7 @@
     export let items: INavigationMenu[] = [];
     export let hidden: DESIGN_HIDDEN_ARGUMENT = false;
     export let orientation: DESIGN_ORIENTATION_VERTICAL_ARGUMENT | undefined = undefined;
+    export let sizing: DESIGN_SIZING_ARGUMENT | undefined = undefined;
 
     function is_current(page: Page, anchor: INavigationAnchor): boolean {
         if (is_internal_url(anchor.href)) {
@@ -23,7 +25,7 @@
     }
 </script>
 
-<Menu.Container {hidden} {orientation}>
+<Menu.Container {hidden} {orientation} {sizing}>
     {#each items as item, index (index)}
         {#if "separator" in item}
             {#if item.separator}
