@@ -148,6 +148,7 @@
                 <TextInput
                     type="search"
                     placeholder="[CTRL+/] Search"
+                    size="small"
                     variation="block"
                     align="center"
                     on:focus={on_search_focus}
@@ -178,6 +179,7 @@
             <MenuNavigation
                 items={_items}
                 orientation="horizontal"
+                sizing="small"
                 hidden={["mobile", "tablet", "desktop"]}
             />
         </Omni.Section>
@@ -194,7 +196,7 @@
     :global(.app-navigation) {
         grid-area: header;
 
-        height: 5rem;
+        height: 4.4rem;
     }
 
     :global(.app-navigation) :global(header) :global(small) {
