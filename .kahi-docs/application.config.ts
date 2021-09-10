@@ -30,6 +30,7 @@ export default define_application({
     },
 
     metadata: {
+        discord: "https://discord.com/invite/JvUbmJvUBG",
         version: PACKAGE_FRAMEWORK.version,
     },
 });

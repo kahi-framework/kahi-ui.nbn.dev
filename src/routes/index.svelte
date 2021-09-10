@@ -19,6 +19,4 @@
     {#if $partialsconfig.Landing}
         <svelte:component this={$partialsconfig.Landing} />
     {/if}
-
-    <svelte:fragment slot="footer" />
 </LandingLayout>
