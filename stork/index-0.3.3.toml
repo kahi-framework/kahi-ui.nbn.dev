@@ -242,9 +242,9 @@ Internet Explorer
 
 
 Estimated Minimum
-87+ November 2020
-87+ November 2020
-67+ May 2019
+88+ January 2021
+88+ January 2021
+84+ December 2020
 14.1+ April 2021
 NOT SUPPORTED
 NOT SUPPORTED
@@ -269,6 +269,8 @@ CSS Custom Properties
 Flexbox w/ Gap
 Grid
 inset
+:is
+:not w/ Selector List
 prefers-color-scheme
 
 Javascript
