@@ -16,11 +16,7 @@ export default define_navigation({
     documentation: [
         {
             separator: "Resources",
-            items: [
-                {href: "/docs/resources/icons"},
-                {href: "/docs/resources/official"},
-                {href: "/docs/resources/community"},
-            ],
+            items: [{href: "/docs/resources/official"}, {href: "/docs/resources/community"}],
         },
 
         {
