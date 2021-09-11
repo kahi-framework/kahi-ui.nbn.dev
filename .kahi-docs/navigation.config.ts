@@ -74,7 +74,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
-                {href: "/docs/interactables/form"},
+                {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput"},
@@ -99,9 +99,9 @@ export default define_navigation({
             separator: "Surfaces",
             items: [
                 {href: "/docs/surfaces/box"},
-                {href: "/docs/surfaces/card", badge: "UPDATED"},
+                {href: "/docs/surfaces/card"},
                 {href: "/docs/surfaces/hero"},
-                {href: "/docs/surfaces/tile", badge: "UPDATED"},
+                {href: "/docs/surfaces/tile"},
             ],
         },
 
@@ -110,7 +110,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
-                {href: "/docs/navigation/breadcrumb", badge: "UPDATED"},
+                {href: "/docs/navigation/breadcrumb"},
                 {href: "/docs/navigation/menu"},
                 {href: "/docs/navigation/omni"},
             ],
@@ -130,7 +130,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/utilities/contextbackdrop"},
                 {href: "/docs/utilities/contextbutton"},
-                {href: "/docs/utilities/portal"},
+                {href: "/docs/utilities/portal", badge: "UPDATED"},
             ],
         },
 
