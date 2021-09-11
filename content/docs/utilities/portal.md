@@ -1,14 +1,19 @@
 +++
-[[properties."Portal"]]
+[[properties.Portal]]
 name="target"
-description="Sets the <code>HTMLElement</code> or CSS selector used to target the new container element."
+description="Sets the `HTMLElement` or CSS selector used to target the new container element."
 default="document.body"
 types=["document.body", "HTMLElement", "string"] 
 
-[[properties."Portal"]]
+[[properties.Portal]]
 name="prepend"
-description="Sets the <code>Portal</code> to mounts its self before all other elements in the new container element, instead of after."
+description="Sets the `Portal` to mounts its self before all other elements in the new container element, instead of after."
 types=["boolean"]
+
+[[events.Portal]]
+name="mount"
+description="Fires whenever the `Portal` mounts to the target."
+types=["CustomEvent<void>"]
 +++
 
 # Portal
