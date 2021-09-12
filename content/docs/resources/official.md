@@ -12,4 +12,5 @@ Below you can find resources made maintained by Kahi UI contributors.
 
 > Projects that can be used as a basis for your own project, showing how to integrate with various software.
 
+-   [kahi-framework/kahi-ui-template-svelte](https://github.com/kahi-framework/kahi-ui-template-svelte) — Official template for Svelte based on `npx degit sveltejs/template my-svelte-project` starter.
 -   [kahi-framework/kahi-ui-template-sveltekit](https://github.com/kahi-framework/kahi-ui-template-sveltekit) — Official template for SvelteKit based on the `npm init svelte@next` starter.
