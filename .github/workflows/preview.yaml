@@ -46,11 +46,23 @@ jobs:
                   ARTIFACT_PATH: build
               run: unzip -d $ARTIFACT_PATH ./artifact.zip
 
+            - name: Set Pull Request Variable
+              run: echo "PULL_REQUEST=$(<./build/PULL_REQUEST)" >> $GITHUB_ENV
+
+            - name: Set Preview Domain Variable
+              run: echo "PREVIEW_DOMAIN=https://${{github.repository_owner}}-${{github.event.repository.name}}-pr-${{env.PULL_REQUEST}}-run-${{github.run_number}}.surge.sh" >> $GITHUB_ENV
+
             - name: Upload to Surge
-              uses: afc163/surge-preview@v1
+              run: npx surge --project ./build --domain $PREVIEW_DOMAIN --token ${{secrets.SURGE_TOKEN}}
+
+            - name: Comment PR w/ Preview
+              uses: actions/github-script@0.3.0
               with:
-                  github_token: ${{secrets.GITHUB_TOKEN}}
-                  surge_token: ${{secrets.SURGE_TOKEN}}
-                  dist: build
-                  build: echo 'noop'
-                  failOnError: true
+                  github-token: ${{secrets.GITHUB_TOKEN}}
+                  script: |
+                      await github.issues.createComment({
+                          owner: context.repo.owner,
+                          repo: context.repo.repo,
+                          issue_number: process.env.PULL_REQUEST,
+                          body: `Preview: ${process.env.PREVIEW_DOMAIN}`
+                      });

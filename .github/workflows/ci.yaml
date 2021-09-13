@@ -50,6 +50,10 @@ jobs:
                   npm run index:generate
                   npm run index:build
 
+            - name: Stash Pull Request
+              if: github.event_name == 'pull_request'
+              run: echo ${{github.event.number}} > ./build/PULL_REQUEST
+
             - name: Upload Documentation Build
               uses: actions/upload-artifact@v2
               if: |
