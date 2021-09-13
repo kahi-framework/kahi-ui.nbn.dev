@@ -1,0 +1,56 @@
+name: Preview
+
+on:
+    workflow_run:
+        workflows: ["Continuous Integration"]
+        types:
+            - completed
+
+jobs:
+    preview:
+        runs-on: ubuntu-latest
+        if: |
+            github.event.workflow_run.event == 'pull_request' &&
+            github.event.workflow_run.conclusion == 'success'
+
+        steps:
+            - name: Download Documentation Build
+              uses: actions/github-script@v3.1.0
+              env:
+                  ARTIFACT_NAME: sveltekit-build
+              with:
+                  script: |
+                      const fs = require("fs");
+
+                      const artifacts = await github.actions.listWorkflowRunArtifacts({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        run_id: ${{github.event.workflow_run.id}},
+                      });
+
+                      const artifact = artifacts.data.artifacts.filter((artifact) => {
+                        return artifact.name == process.env.ARTIFACT_NAME
+                      })[0];
+
+                      const download = await github.actions.downloadArtifact({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        artifact_id: artifact.id,
+                        archive_format: 'zip',
+                      });
+
+                      fs.writeFileSync('${{github.workspace}}/artifact.zip', Buffer.from(download.data));
+
+            - name: Unzip Artifact
+              env:
+                  ARTIFACT_PATH: build
+              run: unzip -d $ARTIFACT_PATH ./artifact.zip
+
+            - name: Upload to Surge
+              uses: afc163/surge-preview@v1
+              with:
+                  github_token: ${{secrets.GITHUB_TOKEN}}
+                  surge_token: ${{secrets.SURGE_TOKEN}}
+                  dist: build
+                  build: echo 'noop'
+                  failOnError: true
