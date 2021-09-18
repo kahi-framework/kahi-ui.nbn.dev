@@ -284,6 +284,16 @@ TODO: Run through the codebase and look for newer JS features used
 
   [[input.files]]
   contents = """
+Events
+Like binding normal DOM events with Svelte. Various Components in the framework support forwarding their element's native events, or supply their own events for their own specific logic.
+
+"""
+  filetype = "PlainText"
+  url = "framework/events"
+  title = "Events"
+
+  [[input.files]]
+  contents = """
 F.A.Q.
 Where can I get help?
 If you need help with something not properly documented or needs clarification, you can visit the Issue Tracker. File a new issue and it'll be addressed on a spare time effort. Alternatively, visit the Discord Server to talk to other Kahi UI developers.

@@ -1,0 +1,1 @@
+{"data":{"identifier":"events-preview","script":"<script>\n    import {Button} from \"@kahi-ui/framework\";\n\n    function on_click(event) {\n        console.log(\"I was clicked!\");\n    }\n</script>\n\n<Button on:click={on_click}>Click me!</Button>","syntax":"svelte","title":"Events Preview"}}
