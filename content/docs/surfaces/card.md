@@ -112,7 +112,7 @@ You can change the color palette of the `Card` via the `palette` property.
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>DEFAULT</Badge>
+            <Badge>NEUTRAL / DEFAULT</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -292,7 +292,30 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>lowest / default</Badge>
+            <Badge>LOWEST / DEFAULT</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container elevation="none">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>NONE</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -315,7 +338,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>low</Badge>
+            <Badge>LOW</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -338,7 +361,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>medium</Badge>
+            <Badge>MEDIUM</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -361,7 +384,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>high</Badge>
+            <Badge>HIGH</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -384,7 +407,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>highest</Badge>
+            <Badge>HIGHEST</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -422,7 +445,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     variation="wrap"
 >
     <Card.Container>
-        <Card.Header>default</Card.Header>
+        <Card.Header>DEFAULT</Card.Header>
 
         <Card.Section>
             <Text>
@@ -437,7 +460,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="tiny">
-        <Card.Header>tiny</Card.Header>
+        <Card.Header>TINY</Card.Header>
 
         <Card.Section>
             <Text>
@@ -452,7 +475,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="small">
-        <Card.Header>small</Card.Header>
+        <Card.Header>SMALL</Card.Header>
 
         <Card.Section>
             <Text>
@@ -467,7 +490,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="medium">
-        <Card.Header>medium</Card.Header>
+        <Card.Header>MEDIUM</Card.Header>
 
         <Card.Section>
             <Text>
@@ -482,7 +505,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="large">
-        <Card.Header>large</Card.Header>
+        <Card.Header>LARGE</Card.Header>
 
         <Card.Section>
             <Text>
@@ -497,7 +520,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="huge">
-        <Card.Header>huge</Card.Header>
+        <Card.Header>HUGE</Card.Header>
 
         <Card.Section>
             <Text>
