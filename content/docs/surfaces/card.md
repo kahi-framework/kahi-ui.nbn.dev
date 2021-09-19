@@ -444,6 +444,83 @@ You can set how "high" your `Card` will appear to be over top the page via the `
 </Mosaic>
 ```
 
+## Orientation
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
+
+You can set the `Card.Footer` to render vertically via the `orientation` property.
+
+```svelte repl Card Orientation
+<script>
+    import {
+        Badge,
+        Button,
+        Card,
+        Mosaic,
+        Spacer,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic sizing="medium" spacing="large">
+    <Card.Container>
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>HORIZONTAL / DEFAULT</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container>
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>VERTICAL</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+
+        <Card.Footer
+            orientation="vertical"
+            alignment_x="stretch"
+        >
+            <Button palette="accent">
+                Book Flight
+            </Button>
+            <Button variation="clear">Cancel</Button>
+        </Card.Footer>
+    </Card.Container>
+</Mosaic>
+```
+
 ## Sizing
 
 You can change the sizes / spacings of the child elements via the `sizing` property.

@@ -428,6 +428,80 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
 </Stack>
 ```
 
+## Orientation
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
+
+You can set the `Tile.Footer` to render vertically via the `orientation` property.
+
+```svelte repl Tile Orientation
+<script>
+    import {
+        Stack,
+        Text,
+        Tile,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack spacing="medium">
+    <Tile.Container width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    HORIZONTAL / DEFAULT
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Button palette="affirmative">
+                Add Friend
+            </Button>
+
+            <Button palette="negative">
+                Ban User
+            </Button>
+        </Tile.Footer>
+    </Tile.Container>
+
+    <Tile.Container
+        palette="accent"
+        width="content-max"
+    >
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">VERTICAL</Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer
+            orientation="vertical"
+            alignment_x="stretch"
+        >
+            <Button palette="affirmative">
+                Add Friend
+            </Button>
+
+            <Button palette="negative">
+                Ban User
+            </Button>
+        </Tile.Footer>
+    </Tile.Container>
+</Stack>
+```
+
 ## Sizing
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
