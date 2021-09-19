@@ -3,7 +3,7 @@
 name="elevation"
 description="Alters how \"high\" the <code>Tile</code> appears to be off the page."
 default="lowest"
-types=["lowest", "low", "medium", "high", "highest"]
+types=["none", "lowest", "low", "medium", "high", "highest"]
 
 [[properties."Tile.Container"]]
 name="palette"

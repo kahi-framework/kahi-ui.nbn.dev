@@ -3,7 +3,7 @@
 name="elevation"
 description="Alters how \"high\" the `Card` appears to be off the page."
 default="lowest"
-types=["lowest", "low", "medium", "high", "highest"]
+types=["none", "lowest", "low", "medium", "high", "highest"]
 
 [[properties."Card.Container"]]
 name="palette"
