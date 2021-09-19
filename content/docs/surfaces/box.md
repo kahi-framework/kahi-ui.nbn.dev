@@ -1,8 +1,19 @@
 +++
 [[properties.Box]]
+name="elevation"
+description="Alters how \"high\" the `Box` appears to be off the page."
+default="none"
+types=["none", "lowest", "low", "medium", "high", "highest"]
+
+[[properties.Box]]
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.Box]]
+name="shape"
+description="Changes the shape of the `Figure`."
+types=["pill", "rounded"]
 +++
 
 # Box
@@ -33,49 +44,234 @@ You can change the color palette of the `Box` via the `palette` property.
 <script>
     import {
         Box,
-        Stack,
+        Mosaic,
         Text,
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    orientation="horizontal"
-    spacing="medium"
-    variation="wrap"
->
+<Mosaic sizing="medium" spacing="large">
     <Box>
-        This is a
-        <Text is="strong">DEFAULT</Text> Box!
+        <Text is="strong">NEUTRAL / DEFAULT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
 
     <Box palette="accent">
-        This is a
-        <Text is="strong">ACCENT</Text> Box!
+        <Text is="strong">ACCENT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
 
     <Box palette="dark">
-        This is a
-        <Text is="strong">DARK</Text> Box!
+        <Text is="strong">DARK</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
 
     <Box palette="light">
-        This is a
-        <Text is="strong">LIGHT</Text> Box!
+        <Text is="strong">LIGHT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
 
     <Box palette="alert">
-        This is a
-        <Text is="strong">ALERT</Text> Box!
+        <Text is="strong">ALERT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
 
     <Box palette="affirmative">
-        This is a
-        <Text is="strong">AFFIRMATIVE</Text> Box!
+        <Text is="strong">AFFIRMATIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
 
     <Box palette="negative">
-        This is a
-        <Text is="strong">NEGATIVE</Text> Box!
+        <Text is="strong">NEGATIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
     </Box>
-</Stack>
+</Mosaic>
+```
+
+## Elevation
+
+You can set how "high" your `Box` will appear to be over top the page via the `elevation` property.
+
+```svelte repl Box Elevation
+<script>
+    import {
+        Box,
+        Mosaic,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic sizing="medium" spacing="large">
+    <Box>
+        <Text is="strong">NONE / DEFAULT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box elevation="lowest">
+        <Text is="strong">LOWEST</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box elevation="low">
+        <Text is="strong">LOW</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box elevation="medium">
+        <Text is="strong">MEDIUM</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box elevation="high">
+        <Text is="strong">HIGH</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box elevation="highest">
+        <Text is="strong">HIGHEST</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+</Mosaic>
+```
+
+## Shape
+
+You can modify the shape of the `Box` via the `shape` property.
+
+```svelte repl Box Shape
+<script>
+    import {
+        Box,
+        Mosaic,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic sizing="medium" spacing="large">
+    <Box>
+        <Text is="strong">NONE / DEFAULT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box shape="pill">
+        <Text is="strong">PILL</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box shape="rounded">
+        <Text is="strong">ROUNDED</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+</Mosaic>
 ```
