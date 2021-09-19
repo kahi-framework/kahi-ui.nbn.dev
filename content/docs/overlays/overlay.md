@@ -20,6 +20,11 @@ description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, t
 types=["boolean"]
 
 [[properties.Overlay]]
+name="orientation"
+description="Renders the `Overlay` children horizontally."
+types=["horizontal", "{VIEWPORT}:horizontal"]
+
+[[properties.Overlay]]
 name="alignment"
 description="Adjusts where the child content will be placed within the <code>Overlay</code> along both axis."
 default="center"
@@ -289,6 +294,28 @@ You can manually open / close the `Overlay` via the `state` property.
             <ContextButton>Dismiss</ContextButton>
         </Card.Footer>
     </Card.Container>
+</Overlay>
+```
+
+## Orientation
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
+
+You can set the `Overlay` to render horizontally via the `orientation` property.
+
+```svelte repl Overlay Orientation
+<script>
+    import {Box, Overlay} from "@kahi-ui/framework";
+</script>
+
+<Overlay
+    orientation="horizontal"
+    spacing="medium"
+    padding_bottom="medium"
+    padding_right="medium"
+>
+    <Box>I am the first Box!</Box>
+    <Box>And I am a sibling!</Box>
 </Overlay>
 ```
 
