@@ -437,6 +437,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
 ```svelte repl Tile Orientation
 <script>
     import {
+        Button,
         Stack,
         Text,
         Tile,

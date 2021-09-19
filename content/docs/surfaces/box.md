@@ -238,7 +238,7 @@ You can modify the shape of the `Box` via the `shape` property.
 </script>
 
 <Mosaic sizing="medium" spacing="large">
-    <Box>
+    <Box padding="huge">
         <Text is="strong">NONE / DEFAULT</Text>
 
         <Text>
@@ -250,7 +250,7 @@ You can modify the shape of the `Box` via the `shape` property.
         </Text>
     </Box>
 
-    <Box shape="pill">
+    <Box shape="pill" padding="huge">
         <Text is="strong">PILL</Text>
 
         <Text>
@@ -262,7 +262,7 @@ You can modify the shape of the `Box` via the `shape` property.
         </Text>
     </Box>
 
-    <Box shape="rounded">
+    <Box shape="rounded" padding="huge">
         <Text is="strong">ROUNDED</Text>
 
         <Text>
