@@ -14,6 +14,26 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="variation"
 description="Alters the appearance of the `Tile`."
 types=["flush"]
+
+[[properties."Tile.Footer"]]
+name="orientation"
+description="Renders the `Tile.Footer` vertically."
+types=["vertical", "{VIEWPORT}:vertical"]
+
+[[properties."Tile.Footer"]]
+name="alignment"
+description="Adjusts where the child items will be placed within the `Tile.Footer` along both axis."
+types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Tile.Footer"]]
+name="alignment_x"
+description="Adjusts where the child items will be placed within the `Tile.Footer` along the horizontal axis."
+types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Tile.Footer"]]
+name="alignment_y"
+description="Adjusts where the child items will be placed within the `Tile.Footer` along the vertical axis."
+types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 +++
 
 # Tile

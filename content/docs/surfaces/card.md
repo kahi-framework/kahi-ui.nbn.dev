@@ -19,6 +19,26 @@ types=["tiny", "small", "medium", "large", "huge"]
 name="variation"
 description="Alters the appearance of the `Card`."
 types=["flush"]
+
+[[properties."Card.Footer"]]
+name="orientation"
+description="Renders the `Card.Footer` vertically."
+types=["vertical", "{VIEWPORT}:vertical"]
+
+[[properties."Card.Footer"]]
+name="alignment"
+description="Adjusts where the child items will be placed within the `Card.Footer` along both axis."
+types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Card.Footer"]]
+name="alignment_x"
+description="Adjusts where the child items will be placed within the `Card.Footer` along the horizontal axis."
+types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Card.Footer"]]
+name="alignment_y"
+description="Adjusts where the child items will be placed within the `Card.Footer` along the vertical axis."
+types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 +++
 
 # Card
