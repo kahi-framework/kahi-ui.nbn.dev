@@ -12,7 +12,7 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Box]]
 name="shape"
-description="Changes the shape of the `Figure`."
+description="Changes the shape of the `Box`."
 types=["pill", "rounded"]
 +++
 
