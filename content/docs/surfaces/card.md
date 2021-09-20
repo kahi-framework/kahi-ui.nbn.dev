@@ -3,7 +3,7 @@
 name="elevation"
 description="Alters how \"high\" the `Card` appears to be off the page."
 default="lowest"
-types=["lowest", "low", "medium", "high", "highest"]
+types=["none", "lowest", "low", "medium", "high", "highest"]
 
 [[properties."Card.Container"]]
 name="palette"
@@ -19,6 +19,26 @@ types=["tiny", "small", "medium", "large", "huge"]
 name="variation"
 description="Alters the appearance of the `Card`."
 types=["flush"]
+
+[[properties."Card.Footer"]]
+name="orientation"
+description="Renders the `Card.Footer` vertically."
+types=["vertical", "{VIEWPORT}:vertical"]
+
+[[properties."Card.Footer"]]
+name="alignment"
+description="Adjusts where the child items will be placed within the `Card.Footer` along both axis."
+types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Card.Footer"]]
+name="alignment_x"
+description="Adjusts where the child items will be placed within the `Card.Footer` along the horizontal axis."
+types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Card.Footer"]]
+name="alignment_y"
+description="Adjusts where the child items will be placed within the `Card.Footer` along the vertical axis."
+types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 +++
 
 # Card
@@ -112,7 +132,7 @@ You can change the color palette of the `Card` via the `palette` property.
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>DEFAULT</Badge>
+            <Badge>NEUTRAL / DEFAULT</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -292,7 +312,30 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>lowest / default</Badge>
+            <Badge>LOWEST / DEFAULT</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container elevation="none">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>NONE</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -315,7 +358,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>low</Badge>
+            <Badge>LOW</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -338,7 +381,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>medium</Badge>
+            <Badge>MEDIUM</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -361,7 +404,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>high</Badge>
+            <Badge>HIGH</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -384,7 +427,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>highest</Badge>
+            <Badge>HIGHEST</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -397,6 +440,91 @@ You can set how "high" your `Card` will appear to be over top the page via the `
                 tincidunt non.
             </Text>
         </Card.Section>
+    </Card.Container>
+</Mosaic>
+```
+
+## Orientation
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
+
+You can set the `Card.Footer` to render vertically via the `orientation` property.
+
+```svelte repl Card Orientation
+<script>
+    import {
+        Badge,
+        Button,
+        Card,
+        Mosaic,
+        Spacer,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic sizing="medium" spacing="large">
+    <Card.Container>
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>HORIZONTAL / DEFAULT</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+
+        <Card.Footer>
+            <Button variation="clear">Cancel</Button>
+            <Button palette="accent">
+                Book Flight
+            </Button>
+        </Card.Footer>
+    </Card.Container>
+
+    <Card.Container>
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>VERTICAL</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+
+        <Card.Footer
+            orientation="vertical"
+            alignment_x="stretch"
+        >
+            <Button palette="accent">
+                Book Flight
+            </Button>
+
+            <Button variation="clear">Cancel</Button>
+        </Card.Footer>
     </Card.Container>
 </Mosaic>
 ```
@@ -422,7 +550,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     variation="wrap"
 >
     <Card.Container>
-        <Card.Header>default</Card.Header>
+        <Card.Header>DEFAULT</Card.Header>
 
         <Card.Section>
             <Text>
@@ -437,7 +565,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="tiny">
-        <Card.Header>tiny</Card.Header>
+        <Card.Header>TINY</Card.Header>
 
         <Card.Section>
             <Text>
@@ -452,7 +580,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="small">
-        <Card.Header>small</Card.Header>
+        <Card.Header>SMALL</Card.Header>
 
         <Card.Section>
             <Text>
@@ -467,7 +595,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="medium">
-        <Card.Header>medium</Card.Header>
+        <Card.Header>MEDIUM</Card.Header>
 
         <Card.Section>
             <Text>
@@ -482,7 +610,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="large">
-        <Card.Header>large</Card.Header>
+        <Card.Header>LARGE</Card.Header>
 
         <Card.Section>
             <Text>
@@ -497,7 +625,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Card.Container>
 
     <Card.Container sizing="huge">
-        <Card.Header>huge</Card.Header>
+        <Card.Header>HUGE</Card.Header>
 
         <Card.Section>
             <Text>

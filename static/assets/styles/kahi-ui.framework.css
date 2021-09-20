@@ -1,7 +1,7 @@
 /*!
  * Kahi UI - Framework
  *
- * v0.3.4
+ * v0.3.5
  */
 
 *, ::before, ::after {
@@ -1011,8 +1011,12 @@ ul {
 
 table {
   --palette-background-lightest: var(--palette-neutral-lightest);
+  --sizing-text-size: var(--document-font-size);
+  --sizing-text-line-height: var(--document-font-line-height);
   border-collapse: collapse;
+  line-height: var(--sizing-text-line-height);
   width: 100%;
+  font-size: var(--sizing-text-size);
 }
 
 /**
@@ -1050,10 +1054,10 @@ th, thead, td, tfoot, tr {
 }
 
 th, td {
-  padding-left: var(--spacing-root-medium);
-  padding-right: var(--spacing-root-medium);
-  padding-top: var(--spacing-root-small);
-  padding-bottom: var(--spacing-root-small);
+  padding-left: var(--spacing-local-medium);
+  padding-right: var(--spacing-local-medium);
+  padding-top: var(--spacing-local-small);
+  padding-bottom: var(--spacing-local-small);
   text-align: left;
 }
 
@@ -2308,6 +2312,11 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
 }
 
 .card {
+  --orientation-direction: row;
+  --orientation-flex-alignment-x: var(--flex-alignment-y);
+  --orientation-flex-alignment-y: var(--flex-alignment-x);
+  --flex-alignment-x: flex-end;
+  --flex-alignment-y: center;
   --elevation: var(--elevation-lowest);
   --palette-background-normal: var(--palette-auto-off-normal);
   --palette-foreground-normal: var(--palette-inverse-normal);
@@ -2343,14 +2352,18 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
 }
 
 .card > footer {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-}
+        align-items: var(--orientation-flex-alignment-x);
+        justify-content: var(--orientation-flex-alignment-y);
+
+        flex-direction: var(--orientation-direction);
+    }
 
 .card > header {
   font-weight: 700;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
   line-height: var(--font-content-line-height-medium);
   font-size: var(--font-content-size-local-medium);
 }
@@ -2372,10 +2385,6 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
   display: -webkit-flex;
   display: flex;
   gap: var(--spacing-local-small);
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 .card > :is(figure, footer, header):not(:first-child) {
@@ -2405,10 +2414,14 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
 }
 
 .box {
+  --elevation: none;
+  --shape-radius: none;
   --palette-background-normal: var(--palette-auto-off-normal);
   --palette-foreground-normal: var(--palette-inverse-normal);
   background-color: rgb(var(--palette-background-normal));
   color: rgb(var(--palette-foreground-normal));
+  border-radius: var(--shape-radius);
+  box-shadow: var(--elevation);
   transition: background-color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
           color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -2483,6 +2496,11 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
 }
 
 .tile {
+  --orientation-direction: row;
+  --orientation-flex-alignment-x: var(--flex-alignment-y);
+  --orientation-flex-alignment-y: var(--flex-alignment-x);
+  --flex-alignment-x: center;
+  --flex-alignment-y: center;
   --elevation: var(--elevation-lowest);
   --palette-background-normal: var(--palette-auto-off-normal);
   --palette-foreground-normal: var(--palette-inverse-normal);
@@ -2501,6 +2519,13 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
           color 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+.tile > figure {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
 .tile > figure > * {
   height: var(--font-headline-size-local-huge);
   width: var(--font-headline-size-local-huge);
@@ -2508,11 +2533,10 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
 
 .tile > footer {
   gap: var(--spacing-local-small);
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
   margin-left: auto;
+  align-items: var(--orientation-flex-alignment-x);
+  justify-content: var(--orientation-flex-alignment-y);
+  flex-direction: var(--orientation-direction);
 }
 
 .tile > section {
@@ -2539,13 +2563,6 @@ input[type="checkbox"][role="presentation"]:last-child + nav.omni, input[type="c
   font-weight: 700;
   line-height: var(--font-content-line-height-medium);
   font-size: var(--font-content-size-local-medium);
-}
-
-.tile > :is(figure, footer) {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 .tile > :is(figure, footer, section) {
@@ -3080,6 +3097,9 @@ input[type="checkbox"][role="presentation"]:checked + .offscreen > *, input[type
 }
 
 .overlay {
+  --orientation-direction: column;
+  --orientation-flex-alignment-x: var(--flex-alignment-x);
+  --orientation-flex-alignment-y: var(--flex-alignment-y);
   --flex-alignment-x: center;
   --flex-alignment-y: center;
   --spacing-x: 0;
@@ -3102,8 +3122,9 @@ input[type="checkbox"][role="presentation"]:checked + .offscreen > *, input[type
   top: 0px;
   width: 100vw;
   z-index: 2;
-  align-items: var(--flex-alignment-x);
-  justify-content: var(--flex-alignment-y);
+  align-items: var(--orientation-flex-alignment-x);
+  justify-content: var(--orientation-flex-alignment-y);
+  flex-direction: var(--orientation-direction);
   transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
           transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -3608,6 +3629,10 @@ input[type="checkbox"][role="presentation"]:checked
 
 [data-animation="pulse"] {
     animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+[data-elevation="none"] {
+    --elevation: none;
 }
 
 [data-elevation="lowest"] {
@@ -4891,6 +4916,18 @@ input[type="checkbox"][role="presentation"] {
 
 [data-resizable="y"] {
     resize: vertical;
+}
+
+[data-shape~="none"] {
+    --shape-radius: none;
+}
+
+[data-shape~="pill"] {
+    --shape-radius: var(--radius-pill);
+}
+
+[data-shape~="rounded"] {
+    --shape-radius: var(--radius-small);
 }
 
 [data-size="tiny"] {

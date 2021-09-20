@@ -1,9 +1,9 @@
 +++
 [[properties."Tile.Container"]]
 name="elevation"
-description="Alters how \"high\" the <code>Tile</code> appears to be off the page."
+description="Alters how \"high\" the `Tile` appears to be off the page."
 default="lowest"
-types=["lowest", "low", "medium", "high", "highest"]
+types=["none", "lowest", "low", "medium", "high", "highest"]
 
 [[properties."Tile.Container"]]
 name="palette"
@@ -12,8 +12,28 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties."Tile.Container"]]
 name="variation"
-description="Alters the appearance of the <code>Tile</code>."
+description="Alters the appearance of the `Tile`."
 types=["flush"]
+
+[[properties."Tile.Footer"]]
+name="orientation"
+description="Renders the `Tile.Footer` vertically."
+types=["vertical", "{VIEWPORT}:vertical"]
+
+[[properties."Tile.Footer"]]
+name="alignment"
+description="Adjusts where the child items will be placed within the `Tile.Footer` along both axis."
+types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Tile.Footer"]]
+name="alignment_x"
+description="Adjusts where the child items will be placed within the `Tile.Footer` along the horizontal axis."
+types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[properties."Tile.Footer"]]
+name="alignment_y"
+description="Adjusts where the child items will be placed within the `Tile.Footer` along the vertical axis."
+types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 +++
 
 # Tile
@@ -101,7 +121,7 @@ You can change the color palette of the `Tile` via the `palette` property.
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">DEFAULT</Text>
+            <Text is="small">NEUTRAL / DEFAULT</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -282,7 +302,31 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">lowest / default</Text>
+            <Text is="small">LOWEST / DEFAULT</Text>
+        </Tile.Footer>
+    </Tile.Container>
+
+    <Tile.Container
+        elevation="none"
+        width="content-max"
+    >
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    joined 2018 &bullet; last online
+                    2021/05/29
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Text is="small">NONE</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -306,7 +350,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">low</Text>
+            <Text is="small">LOW</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -330,7 +374,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">medium</Text>
+            <Text is="small">MEDIUM</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -354,7 +398,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">high</Text>
+            <Text is="small">HIGH</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -378,7 +422,82 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">highest</Text>
+            <Text is="small">HIGHEST</Text>
+        </Tile.Footer>
+    </Tile.Container>
+</Stack>
+```
+
+## Orientation
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
+
+You can set the `Tile.Footer` to render vertically via the `orientation` property.
+
+```svelte repl Tile Orientation
+<script>
+    import {
+        Button,
+        Stack,
+        Text,
+        Tile,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack spacing="medium">
+    <Tile.Container width="content-max">
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    HORIZONTAL / DEFAULT
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Button palette="affirmative">
+                Add Friend
+            </Button>
+
+            <Button palette="negative">
+                Ban User
+            </Button>
+        </Tile.Footer>
+    </Tile.Container>
+
+    <Tile.Container
+        palette="accent"
+        width="content-max"
+    >
+        <Tile.Figure shape="pill">
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">VERTICAL</Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer
+            orientation="vertical"
+            alignment_x="stretch"
+        >
+            <Button palette="affirmative">
+                Add Friend
+            </Button>
+
+            <Button palette="negative">
+                Ban User
+            </Button>
         </Tile.Footer>
     </Tile.Container>
 </Stack>
@@ -409,7 +528,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Figure>
 
         <Tile.Section>
-            <Tile.Header>default</Tile.Header>
+            <Tile.Header>DEFAULT</Tile.Header>
 
             <Text>
                 <Text is="small">
@@ -426,7 +545,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Figure>
 
         <Tile.Section>
-            <Tile.Header>tiny</Tile.Header>
+            <Tile.Header>TINY</Tile.Header>
 
             <Text>
                 <Text is="small">
@@ -443,7 +562,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Figure>
 
         <Tile.Section>
-            <Tile.Header>small</Tile.Header>
+            <Tile.Header>SMALL</Tile.Header>
 
             <Text>
                 <Text is="small">
@@ -463,7 +582,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Figure>
 
         <Tile.Section>
-            <Tile.Header>medium</Tile.Header>
+            <Tile.Header>MEDIUM</Tile.Header>
 
             <Text>
                 <Text is="small">
@@ -480,7 +599,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Figure>
 
         <Tile.Section>
-            <Tile.Header>large</Tile.Header>
+            <Tile.Header>LARGE</Tile.Header>
 
             <Text>
                 <Text is="small">
@@ -497,7 +616,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Figure>
 
         <Tile.Section>
-            <Tile.Header>huge</Tile.Header>
+            <Tile.Header>HUGE</Tile.Header>
 
             <Text>
                 <Text is="small">

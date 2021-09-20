@@ -1,7 +1,12 @@
 +++
 [[properties."Table.Container"]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `Table.Container`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties."Table.Container"]]
 name="variation"
-description="Alters how the <code>Table.Container</code> renders with various additions."
+description="Alters how the `Table.Container` renders with various additions."
 types=["borders", "stripes"]
 +++
 
@@ -381,6 +386,602 @@ You can make a `Table` have both borders **AND** stripes via the `variation` pro
         </Table.Row>
     </Table.Footer>
 </Table.Container>
+```
+
+## Sizing
+
+You can change the sizes / spacings of the child elements via the `sizing` property.
+
+```svelte repl Table Sizing
+<script>
+    import {
+        Code,
+        Stack,
+        Table,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack spacing="medium">
+    <div>
+        <Text is="strong">DEFAULT</Text>
+
+        <Table.Container variation="borders">
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+
+    <div>
+        <Text is="strong">TINY</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="tiny"
+        >
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="small"
+        >
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="medium"
+        >
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="large"
+        >
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="huge"
+        >
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+</Stack>
 ```
 
 ## Scrollable Tables

@@ -50,7 +50,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/display/badge"},
                 {href: "/docs/display/list"},
-                {href: "/docs/display/table"},
+                {href: "/docs/display/table", badge: "UPDATED"},
             ],
         },
 
@@ -75,7 +75,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
-                {href: "/docs/interactables/form", badge: "UPDATED"},
+                {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput"},
@@ -99,10 +99,10 @@ export default define_navigation({
         {
             separator: "Surfaces",
             items: [
-                {href: "/docs/surfaces/box"},
-                {href: "/docs/surfaces/card"},
+                {href: "/docs/surfaces/box", badge: "UPDATED"},
+                {href: "/docs/surfaces/card", badge: "UPDATED"},
                 {href: "/docs/surfaces/hero"},
-                {href: "/docs/surfaces/tile"},
+                {href: "/docs/surfaces/tile", badge: "UPDATED"},
             ],
         },
 
@@ -122,7 +122,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/overlays/popover"},
                 {href: "/docs/overlays/offscreen"},
-                {href: "/docs/overlays/overlay"},
+                {href: "/docs/overlays/overlay", badge: "UPDATED"},
             ],
         },
 
