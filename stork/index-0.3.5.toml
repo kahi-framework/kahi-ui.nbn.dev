@@ -101,6 +101,9 @@ You can make a Table have stripes via the variation property.
 Borders + Stripes
 You can make a Table have both borders AND stripes via the variation property.
 
+Sizing
+You can change the sizes / spacings of the child elements via the sizing property.
+
 Scrollable Tables
 You can make a Table scrollable by wrapping it with a Scrollable.
 
@@ -948,6 +951,12 @@ WARNING: If you use this to toggle the Overlay, instead of something like the Co
 
 You can manually open / close the Overlay via the state property.
 
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:horizontal", "widescreen:horizontal"]}
+
+You can set the Overlay to render horizontally via the orientation property.
+
 Alignment
 You can align Overlay content via the alignment, alignment_x, and alignment_y properties respectively.
 
@@ -1165,6 +1174,12 @@ Imports
 Palette
 You can change the color palette of the Box via the palette property.
 
+Elevation
+You can set how "high" your Box will appear to be over top the page via the elevation property.
+
+Shape
+You can modify the shape of the Box via the shape property.
+
 """
   filetype = "PlainText"
   url = "surfaces/box"
@@ -1181,6 +1196,12 @@ You can change the color palette of the Card via the palette property.
 
 Elevation
 You can set how "high" your Card will appear to be over top the page via the elevation property.
+
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:vertical", "widescreen:vertical"]}
+
+You can set the Card.Footer to render vertically via the orientation property.
 
 Sizing
 You can change the sizes / spacings of the child elements via the sizing property.
@@ -1218,6 +1239,12 @@ You can change the color palette of the Tile via the palette property.
 
 Elevation
 You can set how "high" your Tile will appear to be over top the page via the elevation property.
+
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:vertical", "widescreen:vertical"]}
+
+You can set the Tile.Footer to render vertically via the orientation property.
 
 Sizing
 You can change the sizes / spacings of the child elements via the sizing property.
@@ -1347,6 +1374,12 @@ Portal is used to render a layout outside of its original containing DOM tree, m
 Imports
 Compatibility
 Portal wraps your slotted content in a display: contents containing element, so keep that in mind in your CSS selectors. It also only remounts its self to the target on clientside Browsers with Javascript-enabled. So you need to plan a SSR-compatible fallback if using in a SSR scenario.
+Loading
+
+NOTE: Use the in-Browser developer tools to see this functionality in action.
+
+You can customize the slot loading behavior of Portal Components to not render their children, via the loading property.
+
 """
   filetype = "PlainText"
   url = "utilities/portal"
