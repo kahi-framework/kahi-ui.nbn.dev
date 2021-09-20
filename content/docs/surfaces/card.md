@@ -484,6 +484,13 @@ You can set the `Card.Footer` to render vertically via the `orientation` propert
                 tincidunt non.
             </Text>
         </Card.Section>
+
+        <Card.Footer>
+            <Button variation="clear">Cancel</Button>
+            <Button palette="accent">
+                Book Flight
+            </Button>
+        </Card.Footer>
     </Card.Container>
 
     <Card.Container>
@@ -515,6 +522,7 @@ You can set the `Card.Footer` to render vertically via the `orientation` propert
             <Button palette="accent">
                 Book Flight
             </Button>
+
             <Button variation="clear">Cancel</Button>
         </Card.Footer>
     </Card.Container>
