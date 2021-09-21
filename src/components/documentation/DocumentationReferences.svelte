@@ -17,7 +17,7 @@
     </Heading>
 
     <Scrollable>
-        <Table.Container width={["mobile:content-max", "tablet:content-max"]}>
+        <Table.Container min-width={["mobile:content-max", "tablet:content-max"]}>
             <Table.Header>
                 <Table.Row>
                     <Table.Heading>Name</Table.Heading>
