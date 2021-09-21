@@ -8,6 +8,11 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="size"
 description="Renders the <code>Wave</code> at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
+
+[[slots.Wave]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Wave

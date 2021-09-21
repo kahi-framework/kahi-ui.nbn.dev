@@ -13,6 +13,11 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="position"
 description="Sets higher positioning on the <code>Dot</code>."
 types=["floated", "raised"]
+
+[[slots.Dot]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Dot

@@ -3,6 +3,11 @@
 name="character"
 description="Changes the character being rendered for the animation."
 types=["string"]
+
+[[slots.Ellipsis]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Ellipsis
