@@ -14,25 +14,24 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-d5d81966.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-d4ff3b67.js">
+		<link rel="modulepreload" href="/_app/start-4cfd961d.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-f291696a.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-0ea27ca5.js">
-		<link rel="modulepreload" href="/_app/chunks/navigation.config-fdac7014.js">
-		<link rel="modulepreload" href="/_app/chunks/snippet-728284bd.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf5d1c8d.js">
+		<link rel="modulepreload" href="/_app/chunks/navigation.config-2ae47caf.js">
+		<link rel="modulepreload" href="/_app/chunks/snippet-ddc1109c.js">
 		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
-		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-579f19a3.js">
-		<link rel="modulepreload" href="/_app/chunks/SiteFooter-bba751ed.js">
-		<link rel="modulepreload" href="/_app/pages/docs/[...document].svelte-b8cacd36.js">
+		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-392668fb.js">
+		<link rel="modulepreload" href="/_app/chunks/SiteFooter-98f2d944.js">
+		<link rel="modulepreload" href="/_app/pages/docs/[...document].svelte-488e9374.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
 		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.svelte-14708b5c.css">
 		<link rel="stylesheet" href="/_app/assets/SiteFooter-4396fccc.css">
-		<link rel="stylesheet" href="/_app/assets/pages/docs/[...document].svelte-183acec3.css">
 
 		<script type="module">
-			import { start } from "/_app/start-d5d81966.js";
+			import { start } from "/_app/start-4cfd961d.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
@@ -45,9 +44,9 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-0ea27ca5.js"),
-						import("/_app/pages/docs/__layout.svelte-579f19a3.js"),
-						import("/_app/pages/docs/[...document].svelte-b8cacd36.js")
+						import("/_app/pages/__layout.svelte-cf5d1c8d.js"),
+						import("/_app/pages/docs/__layout.svelte-392668fb.js"),
+						import("/_app/pages/docs/[...document].svelte-488e9374.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -712,315 +711,249 @@
 
 <label for="tab-api-reference-properties" data-palette="accent">Properties</label>
 
-                <section><h3 id="properties-radio">Radio</h3>
+                <section><h3 id="properties-radio"><code>Radio
+        </code>
+    </h3>
 
-    <div class="stack " data-spacing="medium"><div><h4 id="properties-radio-palette"><code>palette</code>
-                </h4>
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
 
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+            <tbody><tr><td><code>palette</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the displayed color scheme.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the displayed color scheme.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>inverse
+                                        
+                                    </code><code>inherit
+                                        
+                                    </code><code>accent
+                                        
+                                    </code><code>dark
+                                        
+                                    </code><code>light
+                                        
+                                    </code><code>alert
+                                        
+                                    </code><code>affirmative
+                                        
+                                    </code><code>negative
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>size</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>inverse
-                                    
-                                </code><code>inherit
-                                    
-                                </code><code>accent
-                                    
-                                </code><code>dark
-                                    
-                                </code><code>light
-                                    
-                                </code><code>alert
-                                    
-                                </code><code>affirmative
-                                    
-                                </code><code>negative
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-size"><code>size</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Renders the <code>Radio</code> at a different sizes.</p>
+                        <td><!-- HTML_TAG_START --><p>Renders the <code>Radio</code> at a different sizes.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>variation</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-variation"><code>variation</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the appearance of the <code>Radio</code>.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the appearance of the <code>Radio</code>.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>flush
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>active</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>flush
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-active"><code>active</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Renders the <code>Radio</code> with <code>aria-pressed</code> attribute, and styles the <code>Radio</code> as if it where being clicked.</p>
+                        <td><!-- HTML_TAG_START --><p>Renders the <code>Radio</code> with <code>aria-pressed</code> attribute, and styles the <code>Radio</code> as if it where being clicked.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>boolean
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>disabled</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>boolean
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-disabled"><code>disabled</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Renders the <code>Radio</code> with <code>disabled</code> attribute, and styles the <code>Radio</code> partially transparent.</p>
+                        <td><!-- HTML_TAG_START --><p>Renders the <code>Radio</code> with <code>disabled</code> attribute, and styles the <code>Radio</code> partially transparent.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>boolean
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>name</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>boolean
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-name"><code>name</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets the form name of the <code>Radio</code>.</p>
+                        <td><!-- HTML_TAG_START --><p>Sets the form name of the <code>Radio</code>.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>state</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-state"><code>state</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets the checked state of the <code>Radio</code>.</p>
+                        <td><!-- HTML_TAG_START --><p>Sets the checked state of the <code>Radio</code>.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>boolean
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>value</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>boolean
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-radio-value"><code>value</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted.</p>
+                        <td><!-- HTML_TAG_START --><p>Sets the value sent whenever the parent <code>&lt;form&gt;</code> is submitted.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
     </div></section>
 
         <input role="presentation" type="radio" id="tab-api-reference-events" name="tab-api-reference" >
 
 <label for="tab-api-reference-events" data-palette="accent">Events</label>
 
-                <section><h3 id="events-radio">Radio</h3>
+                <section><h3 id="events-radio"><code>Radio
+        </code>
+    </h3>
 
-    <div class="stack " data-spacing="medium"><div><h4 id="events-radio-blur"><code>blur</code>
-                </h4>
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
 
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+            <tbody><tr><td><code>blur</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> loses focus.</p>
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> loses focus.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>FocusEvent
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>change</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>FocusEvent
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="events-radio-change"><code>change</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> has its value changed.</p>
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> has its value changed.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>InputEvent
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>click</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>InputEvent
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="events-radio-click"><code>click</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> is clicked.</p>
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> is clicked.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>MouseEvent
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>focus</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>MouseEvent
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="events-radio-focus"><code>focus</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> gains focus.</p>
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> gains focus.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>FocusEvent
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>input</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>FocusEvent
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="events-radio-input"><code>input</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> has its value changed.</p>
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>Radio</code> has its value changed.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>InputEvent
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div></section>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>InputEvent
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <input role="presentation" type="radio" id="tab-api-reference-slots" name="tab-api-reference" >
+
+<label for="tab-api-reference-slots" data-palette="accent">Slots</label>
+
+                <section><h3 id="slots-radio"><code>Radio
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>default</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Default unnamed slot. Renders the <code>Radio</code> inside a <code>&lt;label&gt;</code>, alongside the sibling slot content.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
     </div></section></div>
 
 <hr data-margin-y="large">
@@ -1032,7 +965,7 @@
     <div><h5 data-max-width="widescreen:content-max desktop:content-max tablet:content-max" data-align="center">Last Modified
         </h5>
 
-        <small>9/20/2021, 2:29:37 AM</small></div>
+        <small>9/21/2021, 4:51:52 AM</small></div>
 
     <div data-hidden="mobile" class="spacer "></div>
 
@@ -1061,7 +994,7 @@
 
 	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/navigation/documentation.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"\u002Fdocs\u002Fresources\u002Fofficial\":\"Official\",\"\u002Fdocs\u002Fresources\u002Fcommunity\":\"Community\",\"\u002Fdocs\u002Fframework\u002Fgetting-started\":\"Getting Started\",\"\u002Fdocs\u002Fframework\u002Ffaq\":\"F.A.Q.\",\"\u002Fdocs\u002Fframework\u002Fbrowser-support\":\"Browser Support\",\"\u002Fdocs\u002Fframework\u002Fresponsivity\":\"Responsivity\",\"\u002Fdocs\u002Fframework\u002Fevents\":\"Events\",\"\u002Fdocs\u002Ftypography\u002Fblockquote\":\"Blockquote\",\"\u002Fdocs\u002Ftypography\u002Fcode\":\"Code\",\"\u002Fdocs\u002Ftypography\u002Fheading\":\"Heading\",\"\u002Fdocs\u002Ftypography\u002Ftext\":\"Text\",\"\u002Fdocs\u002Fembedded\u002Ffigure\":\"Figure\",\"\u002Fdocs\u002Fdisplay\u002Fbadge\":\"Badge\",\"\u002Fdocs\u002Fdisplay\u002Flist\":\"List\",\"\u002Fdocs\u002Fdisplay\u002Ftable\":\"Table\",\"\u002Fdocs\u002Fdisclosure\u002Ftab\":\"Tab\",\"\u002Fdocs\u002Ffeedback\u002Fdot\":\"Dot\",\"\u002Fdocs\u002Ffeedback\u002Fellipsis\":\"Ellipsis\",\"\u002Fdocs\u002Ffeedback\u002Fprogress\":\"Progress\",\"\u002Fdocs\u002Ffeedback\u002Fspinner\":\"Spinner\",\"\u002Fdocs\u002Ffeedback\u002Fwave\":\"Wave\",\"\u002Fdocs\u002Finteractables\u002Fbutton\":\"Button\",\"\u002Fdocs\u002Finteractables\u002Fcheck\":\"Check\",\"\u002Fdocs\u002Finteractables\u002Fform\":\"Form\",\"\u002Fdocs\u002Finteractables\u002Fradio\":\"Radio\",\"\u002Fdocs\u002Finteractables\u002Fswitch\":\"Switch\",\"\u002Fdocs\u002Finteractables\u002Ftextinput\":\"TextInput\",\"\u002Fdocs\u002Flayouts\u002Fcontainer\":\"Container\",\"\u002Fdocs\u002Flayouts\u002Fdivider\":\"Divider\",\"\u002Fdocs\u002Flayouts\u002Fgrid\":\"Grid\",\"\u002Fdocs\u002Flayouts\u002Fgroup\":\"Group\",\"\u002Fdocs\u002Flayouts\u002Fmosaic\":\"Mosaic\",\"\u002Fdocs\u002Flayouts\u002Fscrollable\":\"Scrollable\",\"\u002Fdocs\u002Flayouts\u002Fspacer\":\"Spacer\",\"\u002Fdocs\u002Flayouts\u002Fstack\":\"Stack\",\"\u002Fdocs\u002Fsurfaces\u002Fbox\":\"Box\",\"\u002Fdocs\u002Fsurfaces\u002Fcard\":\"Card\",\"\u002Fdocs\u002Fsurfaces\u002Fhero\":\"Hero\",\"\u002Fdocs\u002Fsurfaces\u002Ftile\":\"Tile\",\"\u002Fdocs\u002Fnavigation\u002Fanchor\":\"Anchor\",\"\u002Fdocs\u002Fnavigation\u002Faside\":\"Aside\",\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\":\"Breadcrumb\",\"\u002Fdocs\u002Fnavigation\u002Fmenu\":\"Menu\",\"\u002Fdocs\u002Fnavigation\u002Fomni\":\"Omni\",\"\u002Fdocs\u002Foverlays\u002Fpopover\":\"Popover\",\"\u002Fdocs\u002Foverlays\u002Foffscreen\":\"Offscreen\",\"\u002Fdocs\u002Foverlays\u002Foverlay\":\"Overlay\",\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\":\"ContextBackdrop\",\"\u002Fdocs\u002Futilities\u002Fcontextbutton\":\"ContextButton\",\"\u002Fdocs\u002Futilities\u002Fportal\":\"Portal\",\"\u002Fdocs\u002Fmodifiers\u002Fhtml5\":\"HTML5\",\"\u002Fdocs\u002Fmodifiers\u002Fhidden\":\"Hidden\",\"\u002Fdocs\u002Fmodifiers\u002Fsizings\":\"Sizings\",\"\u002Fdocs\u002Fmodifiers\u002Fspacings\":\"Spacings\",\"\u002Fdocs\u002Factions\u002Fclick_outside\":\"click_outside\",\"\u002Fdocs\u002Factions\u002Fkeybind\":\"keybind\",\"\u002Fdocs\u002Fstores\u002Fdarkmode\":\"darkmode\",\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\":\"htmlpalette\",\"\u002Fdocs\u002Fstores\u002Fmediaquery\":\"mediaquery\",\"\u002Fdocs\u002Fstores\u002Fprefersscheme\":\"prefersscheme\",\"\u002Fdocs\u002Fstores\u002Fscrolllock\":\"scrolllock\",\"\u002Fdocs\u002Fstores\u002Fviewport\":\"viewport\"}}"}</script>
 
-	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/interactables/radio.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1632104977000,\"events\":{\"Radio\":[{\"name\":\"blur\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E loses focus.\u003C\u002Fp\u003E\\n\",\"types\":[\"FocusEvent\"]},{\"name\":\"change\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E has its value changed.\u003C\u002Fp\u003E\\n\",\"types\":[\"InputEvent\"]},{\"name\":\"click\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E is clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"MouseEvent\"]},{\"name\":\"focus\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E gains focus.\u003C\u002Fp\u003E\\n\",\"types\":[\"FocusEvent\"]},{\"name\":\"input\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E has its value changed.\u003C\u002Fp\u003E\\n\",\"types\":[\"InputEvent\"]}]},\"identifier\":\"interactables\u002Fradio\",\"modified_at\":1632104977000,\"properties\":{\"Radio\":[{\"name\":\"palette\",\"description\":\"\u003Cp\u003EAlters the displayed color scheme.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"inverse\",\"inherit\",\"accent\",\"dark\",\"light\",\"alert\",\"affirmative\",\"negative\"]},{\"name\":\"size\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E at a different sizes.\u003C\u002Fp\u003E\\n\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\"]},{\"name\":\"variation\",\"description\":\"\u003Cp\u003EAlters the appearance of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"flush\"]},{\"name\":\"active\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-pressed\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E as if it where being clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"disabled\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E with \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E partially transparent.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"name\",\"description\":\"\u003Cp\u003ESets the form name of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"state\",\"description\":\"\u003Cp\u003ESets the checked state of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"value\",\"description\":\"\u003Cp\u003ESets the value sent whenever the parent \u003Ccode\u003E&lt;form&gt;\u003C\u002Fcode\u003E is submitted.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}]},\"sections\":[{\"identifier\":\"radio\",\"level\":1,\"text\":\"Radio\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"states\",\"level\":2,\"text\":\"States\"},{\"identifier\":\"palette\",\"level\":2,\"text\":\"Palette\"},{\"identifier\":\"size\",\"level\":2,\"text\":\"Size\"},{\"identifier\":\"flush\",\"level\":2,\"text\":\"Flush\"}],\"snippets\":[{\"identifier\":\"radio-preview\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let logic_state = \\\"vanilla\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText is=\\\"strong\\\"\u003E\\n    Select an Ice Cream Flavor\\n    \u003CText is=\\\"sup\\\"\u003E{logic_state}\u003C\u002FText\u003E\\n\u003C\u002FText\u003E\\n\\n\u003CStack spacing=\\\"small\\\" margin_top=\\\"small\\\"\u003E\\n    \u003CForm.Group\\n        logic_name=\\\"radio-preview\\\"\\n        bind:logic_state\\n    \u003E\\n        \u003CRadio\\n            id=\\\"radio-preview-bubblegum\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"bubblegum\\\"\\n        \u003E\\n            Bubblegum\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"radio-preview-chocolate\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"chocolate\\\"\\n        \u003E\\n            Chocolate\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"radio-preview-vanilla\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"vanilla\\\"\\n        \u003E\\n            Vanilla\\n        \u003C\u002FRadio\u003E\\n    \u003C\u002FForm.Group\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Preview\"},{\"identifier\":\"radio-imports\",\"script\":\"\u003Cscript\u003E\\n    import {Radio} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\",\"syntax\":\"html\",\"title\":\"Radio Imports\"},{\"identifier\":\"radio-states\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    class=\\\"radio-states\\\"\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n        \u003CRadio \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003ESTATE\u003C\u002FText\u003E\\n        \u003CRadio state \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EACTIVE NO-STATE\u003C\u002FText\u003E\\n        \u003CRadio active \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EACTIVE STATE\u003C\u002FText\u003E\\n        \u003CRadio active state \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDISABLED NO-STATE\u003C\u002FText\u003E\\n        \u003CRadio disabled \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDISABLED STATE\u003C\u002FText\u003E\\n        \u003CRadio disabled state \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\u003C\u002FStack\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.radio-states strong) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio States\"},{\"identifier\":\"radio-palette\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Group logic_name=\\\"radio-palette\\\"\u003E\\n    \u003CStack\\n        class=\\\"radio-palette\\\"\\n        orientation=\\\"horizontal\\\"\\n        spacing=\\\"medium\\\"\\n        variation=\\\"wrap\\\"\\n    \u003E\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n            \u003CRadio \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EACCENT\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"accent\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDARK\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"dark\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ELIGHT\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"light\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EALERT\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"alert\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EAFFIRMATIVE\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"affirmative\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ENEGATIVE\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"negative\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n    \u003C\u002FStack\u003E\\n\u003C\u002FForm.Group\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.radio-palette strong) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Palette\"},{\"identifier\":\"radio-size\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Group logic_name=\\\"radio-size\\\"\u003E\\n    \u003CStack\\n        class=\\\"radio-size\\\"\\n        orientation=\\\"horizontal\\\"\\n        spacing=\\\"medium\\\"\\n        variation=\\\"wrap\\\"\\n    \u003E\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n            \u003CRadio \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ETINY\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"tiny\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ESMALL\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"small\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EMEDIUM\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"medium\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ELARGE\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"large\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EHUGE\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"huge\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n    \u003C\u002FStack\u003E\\n\u003C\u002FForm.Group\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.radio-size strong) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Size\"},{\"identifier\":\"radio-flush\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Menu,\\n        Radio,\\n        Spacer,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CMenu.Container\u003E\\n    \u003CMenu.Heading\u003ESort By\u003C\u002FMenu.Heading\u003E\\n\\n    \u003CForm.Group\\n        logic_name=\\\"radio-flush\\\"\\n        logic_state=\\\"ascending\\\"\\n    \u003E\\n        \u003CMenu.Label for=\\\"radio-flush-ascending\\\"\u003E\\n            Ascending\\n            \u003CSpacer \u002F\u003E\\n            \u003CRadio\\n                value=\\\"ascending\\\"\\n                palette=\\\"accent\\\"\\n                variation=\\\"flush\\\"\\n            \u002F\u003E\\n        \u003C\u002FMenu.Label\u003E\\n\\n        \u003CMenu.Label for=\\\"radio-flush-decending\\\"\u003E\\n            Decending\\n            \u003CSpacer \u002F\u003E\\n            \u003CRadio\\n                value=\\\"decending\\\"\\n                palette=\\\"accent\\\"\\n                variation=\\\"flush\\\"\\n            \u002F\u003E\\n        \u003C\u002FMenu.Label\u003E\\n    \u003C\u002FForm.Group\u003E\\n\u003C\u002FMenu.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Flush\"}],\"title\":\"Radio\"},\"render\":\"\u003Ch1 id=\\\"radio\\\"\u003ERadio\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003ERadio\u003C\u002Fcode\u003E is typically used to present a set of mutually-exclusive options to the end-user, which they can then choose from.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-preview?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003ERadio\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"states\\\"\u003EStates\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can control the state of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E via the \u003Ccode\u003Eactive\u003C\u002Fcode\u003E, \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E, and \u003Ccode\u003Estate\u003C\u002Fcode\u003E properties.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-states?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-states?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"palette\\\"\u003EPalette\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the color palette of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E via the \u003Ccode\u003Epalette\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-palette?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-palette?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"size\\\"\u003ESize\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the size of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E via the \u003Ccode\u003Esize\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-size?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-size?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"flush\\\"\u003EFlush\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the appearance of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E to be flush with the rest of the Application content via the \u003Ccode\u003Evariation\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-flush?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-flush?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/interactables/radio.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1632199912000,\"events\":{\"Radio\":[{\"name\":\"blur\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E loses focus.\u003C\u002Fp\u003E\\n\",\"types\":[\"FocusEvent\"]},{\"name\":\"change\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E has its value changed.\u003C\u002Fp\u003E\\n\",\"types\":[\"InputEvent\"]},{\"name\":\"click\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E is clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"MouseEvent\"]},{\"name\":\"focus\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E gains focus.\u003C\u002Fp\u003E\\n\",\"types\":[\"FocusEvent\"]},{\"name\":\"input\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E has its value changed.\u003C\u002Fp\u003E\\n\",\"types\":[\"InputEvent\"]}]},\"identifier\":\"interactables\u002Fradio\",\"modified_at\":1632199912000,\"properties\":{\"Radio\":[{\"name\":\"palette\",\"description\":\"\u003Cp\u003EAlters the displayed color scheme.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"inverse\",\"inherit\",\"accent\",\"dark\",\"light\",\"alert\",\"affirmative\",\"negative\"]},{\"name\":\"size\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E at a different sizes.\u003C\u002Fp\u003E\\n\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\"]},{\"name\":\"variation\",\"description\":\"\u003Cp\u003EAlters the appearance of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"flush\"]},{\"name\":\"active\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-pressed\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E as if it where being clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"disabled\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E with \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E partially transparent.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"name\",\"description\":\"\u003Cp\u003ESets the form name of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"state\",\"description\":\"\u003Cp\u003ESets the checked state of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"value\",\"description\":\"\u003Cp\u003ESets the value sent whenever the parent \u003Ccode\u003E&lt;form&gt;\u003C\u002Fcode\u003E is submitted.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}]},\"sections\":[{\"identifier\":\"radio\",\"level\":1,\"text\":\"Radio\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"states\",\"level\":2,\"text\":\"States\"},{\"identifier\":\"palette\",\"level\":2,\"text\":\"Palette\"},{\"identifier\":\"size\",\"level\":2,\"text\":\"Size\"},{\"identifier\":\"flush\",\"level\":2,\"text\":\"Flush\"}],\"slots\":{\"Radio\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot. Renders the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E inside a \u003Ccode\u003E&lt;label&gt;\u003C\u002Fcode\u003E, alongside the sibling slot content.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}]},\"snippets\":[{\"identifier\":\"radio-preview\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let logic_state = \\\"vanilla\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText is=\\\"strong\\\"\u003E\\n    Select an Ice Cream Flavor\\n    \u003CText is=\\\"sup\\\"\u003E{logic_state}\u003C\u002FText\u003E\\n\u003C\u002FText\u003E\\n\\n\u003CStack spacing=\\\"small\\\" margin_top=\\\"small\\\"\u003E\\n    \u003CForm.Group\\n        logic_name=\\\"radio-preview\\\"\\n        bind:logic_state\\n    \u003E\\n        \u003CRadio\\n            id=\\\"radio-preview-bubblegum\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"bubblegum\\\"\\n        \u003E\\n            Bubblegum\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"radio-preview-chocolate\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"chocolate\\\"\\n        \u003E\\n            Chocolate\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"radio-preview-vanilla\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"vanilla\\\"\\n        \u003E\\n            Vanilla\\n        \u003C\u002FRadio\u003E\\n    \u003C\u002FForm.Group\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Preview\"},{\"identifier\":\"radio-imports\",\"script\":\"\u003Cscript\u003E\\n    import {Radio} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\",\"syntax\":\"html\",\"title\":\"Radio Imports\"},{\"identifier\":\"radio-states\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    class=\\\"radio-states\\\"\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n        \u003CRadio \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003ESTATE\u003C\u002FText\u003E\\n        \u003CRadio state \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EACTIVE NO-STATE\u003C\u002FText\u003E\\n        \u003CRadio active \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EACTIVE STATE\u003C\u002FText\u003E\\n        \u003CRadio active state \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDISABLED NO-STATE\u003C\u002FText\u003E\\n        \u003CRadio disabled \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDISABLED STATE\u003C\u002FText\u003E\\n        \u003CRadio disabled state \u002F\u003E\\n    \u003C\u002Fdiv\u003E\\n\u003C\u002FStack\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.radio-states strong) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio States\"},{\"identifier\":\"radio-palette\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Group logic_name=\\\"radio-palette\\\"\u003E\\n    \u003CStack\\n        class=\\\"radio-palette\\\"\\n        orientation=\\\"horizontal\\\"\\n        spacing=\\\"medium\\\"\\n        variation=\\\"wrap\\\"\\n    \u003E\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n            \u003CRadio \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EACCENT\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"accent\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDARK\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"dark\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ELIGHT\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"light\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EALERT\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"alert\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EAFFIRMATIVE\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"affirmative\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ENEGATIVE\u003C\u002FText\u003E\\n            \u003CRadio palette=\\\"negative\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n    \u003C\u002FStack\u003E\\n\u003C\u002FForm.Group\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.radio-palette strong) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Palette\"},{\"identifier\":\"radio-size\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Group logic_name=\\\"radio-size\\\"\u003E\\n    \u003CStack\\n        class=\\\"radio-size\\\"\\n        orientation=\\\"horizontal\\\"\\n        spacing=\\\"medium\\\"\\n        variation=\\\"wrap\\\"\\n    \u003E\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n            \u003CRadio \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ETINY\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"tiny\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ESMALL\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"small\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EMEDIUM\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"medium\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003ELARGE\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"large\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n\\n        \u003Cdiv\u003E\\n            \u003CText is=\\\"strong\\\"\u003EHUGE\u003C\u002FText\u003E\\n            \u003CRadio size=\\\"huge\\\" \u002F\u003E\\n        \u003C\u002Fdiv\u003E\\n    \u003C\u002FStack\u003E\\n\u003C\u002FForm.Group\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.radio-size strong) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Size\"},{\"identifier\":\"radio-flush\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Menu,\\n        Radio,\\n        Spacer,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CMenu.Container\u003E\\n    \u003CMenu.Heading\u003ESort By\u003C\u002FMenu.Heading\u003E\\n\\n    \u003CForm.Group\\n        logic_name=\\\"radio-flush\\\"\\n        logic_state=\\\"ascending\\\"\\n    \u003E\\n        \u003CMenu.Label for=\\\"radio-flush-ascending\\\"\u003E\\n            Ascending\\n            \u003CSpacer \u002F\u003E\\n            \u003CRadio\\n                value=\\\"ascending\\\"\\n                palette=\\\"accent\\\"\\n                variation=\\\"flush\\\"\\n            \u002F\u003E\\n        \u003C\u002FMenu.Label\u003E\\n\\n        \u003CMenu.Label for=\\\"radio-flush-decending\\\"\u003E\\n            Decending\\n            \u003CSpacer \u002F\u003E\\n            \u003CRadio\\n                value=\\\"decending\\\"\\n                palette=\\\"accent\\\"\\n                variation=\\\"flush\\\"\\n            \u002F\u003E\\n        \u003C\u002FMenu.Label\u003E\\n    \u003C\u002FForm.Group\u003E\\n\u003C\u002FMenu.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Radio Flush\"}],\"title\":\"Radio\"},\"render\":\"\u003Ch1 id=\\\"radio\\\"\u003ERadio\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003ERadio\u003C\u002Fcode\u003E is typically used to present a set of mutually-exclusive options to the end-user, which they can then choose from.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-preview?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003ERadio\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"states\\\"\u003EStates\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can control the state of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E via the \u003Ccode\u003Eactive\u003C\u002Fcode\u003E, \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E, and \u003Ccode\u003Estate\u003C\u002Fcode\u003E properties.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-states?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-states?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"palette\\\"\u003EPalette\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the color palette of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E via the \u003Ccode\u003Epalette\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-palette?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-palette?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"size\\\"\u003ESize\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the size of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E via the \u003Ccode\u003Esize\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-size?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-size?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"flush\\\"\u003EFlush\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the appearance of the \u003Ccode\u003ERadio\u003C\u002Fcode\u003E to be flush with the rest of the Application content via the \u003Ccode\u003Evariation\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-flush?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fradio\u002Fradio-flush?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
 
     </body>
 </html>

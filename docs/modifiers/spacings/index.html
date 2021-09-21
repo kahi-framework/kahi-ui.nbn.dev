@@ -14,25 +14,24 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-d5d81966.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-d4ff3b67.js">
+		<link rel="modulepreload" href="/_app/start-4cfd961d.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-f291696a.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-0ea27ca5.js">
-		<link rel="modulepreload" href="/_app/chunks/navigation.config-fdac7014.js">
-		<link rel="modulepreload" href="/_app/chunks/snippet-728284bd.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-cf5d1c8d.js">
+		<link rel="modulepreload" href="/_app/chunks/navigation.config-2ae47caf.js">
+		<link rel="modulepreload" href="/_app/chunks/snippet-ddc1109c.js">
 		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
-		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-579f19a3.js">
-		<link rel="modulepreload" href="/_app/chunks/SiteFooter-bba751ed.js">
-		<link rel="modulepreload" href="/_app/pages/docs/[...document].svelte-b8cacd36.js">
+		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-392668fb.js">
+		<link rel="modulepreload" href="/_app/chunks/SiteFooter-98f2d944.js">
+		<link rel="modulepreload" href="/_app/pages/docs/[...document].svelte-488e9374.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
 		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
 		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.svelte-14708b5c.css">
 		<link rel="stylesheet" href="/_app/assets/SiteFooter-4396fccc.css">
-		<link rel="stylesheet" href="/_app/assets/pages/docs/[...document].svelte-183acec3.css">
 
 		<script type="module">
-			import { start } from "/_app/start-d5d81966.js";
+			import { start } from "/_app/start-4cfd961d.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
@@ -45,9 +44,9 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-0ea27ca5.js"),
-						import("/_app/pages/docs/__layout.svelte-579f19a3.js"),
-						import("/_app/pages/docs/[...document].svelte-b8cacd36.js")
+						import("/_app/pages/__layout.svelte-cf5d1c8d.js"),
+						import("/_app/pages/docs/__layout.svelte-392668fb.js"),
+						import("/_app/pages/docs/[...document].svelte-488e9374.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -703,486 +702,372 @@
 
 <label for="tab-api-reference-properties" data-palette="accent">Properties</label>
 
-                <section><h3 id="properties-*">*</h3>
+                <section><h3 id="properties-*"><code>*
+        </code>
+    </h3>
 
-    <div class="stack " data-spacing="medium"><div><h4 id="properties-*-margin"><code>margin</code>
-                </h4>
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
 
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
+            <tbody><tr><td><code>margin</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing around the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing around the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>margin_x</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-margin_x"><code>margin_x</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing around the horizontal axis of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing around the horizontal axis of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>margin_y</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-margin_y"><code>margin_y</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing around the vertical axis of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing around the vertical axis of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>margin_left</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-margin_left"><code>margin_left</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing to the left of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing to the left of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>margin_top</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-margin_top"><code>margin_top</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing to the top of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing to the top of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>margin_right</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-margin_right"><code>margin_right</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing to the right of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing to the right of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>margin_bottom</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-margin_bottom"><code>margin_bottom</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the visual spacing to the bottom of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the visual spacing to the bottom of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
-                                    
-                                </code><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding"><code>padding</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding_x</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding_x"><code>padding_x</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing along the horizontal axis of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing along the horizontal axis of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding_y</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding_y"><code>padding_y</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing along the vertical axis of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing along the vertical axis of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding_left</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding_left"><code>padding_left</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the left side of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the left side of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding_top</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding_top"><code>padding_top</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the top side of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the top side of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding_right</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding_right"><code>padding_right</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the right side of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the right side of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>padding_bottom</code>
+                        </td>
 
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div><div><h4 id="properties-*-padding_bottom"><code>padding_bottom</code>
-                </h4>
-
-                <hr>
-                <div class="stack " data-spacing="medium"><div class="stack " data-orientation="horizontal"><strong>Description</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <span data-max-width="prose" data-align="right"><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the bottom side of the Component.</p>
+                        <td><!-- HTML_TAG_START --><p>Alters the inner visual spacing on the bottom side of the Component.</p>
 <!-- HTML_TAG_END -->
-                        </span>
-                    </div>
+                        </td>
 
-                    <div class="stack " data-orientation="horizontal"><strong>Types</strong>
-
-                        <div class="spacer " data-orientation="horizontal" data-spacing="huge"></div>
-                        <div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
-                                    
-                                </code><code>tiny
-                                    
-                                </code><code>small
-                                    
-                                </code><code>medium
-                                    
-                                </code><code>large
-                                    
-                                </code><code>huge
-                                    
-                                </code><code>{VIEWPORT}:{SPACING}
-                                    
-                                </code>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>none
+                                        
+                                    </code><code>tiny
+                                        
+                                    </code><code>small
+                                        
+                                    </code><code>medium
+                                        
+                                    </code><code>large
+                                        
+                                    </code><code>huge
+                                        
+                                    </code><code>{VIEWPORT}:{SPACING}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
     </div></section>
+
+        
 
         </div>
 
@@ -1195,7 +1080,7 @@
     <div><h5 data-max-width="widescreen:content-max desktop:content-max tablet:content-max" data-align="center">Last Modified
         </h5>
 
-        <small>9/20/2021, 2:29:37 AM</small></div>
+        <small>9/21/2021, 4:51:52 AM</small></div>
 
     <div data-hidden="mobile" class="spacer "></div>
 
@@ -1224,7 +1109,7 @@
 
 	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/navigation/documentation.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"\u002Fdocs\u002Fresources\u002Fofficial\":\"Official\",\"\u002Fdocs\u002Fresources\u002Fcommunity\":\"Community\",\"\u002Fdocs\u002Fframework\u002Fgetting-started\":\"Getting Started\",\"\u002Fdocs\u002Fframework\u002Ffaq\":\"F.A.Q.\",\"\u002Fdocs\u002Fframework\u002Fbrowser-support\":\"Browser Support\",\"\u002Fdocs\u002Fframework\u002Fresponsivity\":\"Responsivity\",\"\u002Fdocs\u002Fframework\u002Fevents\":\"Events\",\"\u002Fdocs\u002Ftypography\u002Fblockquote\":\"Blockquote\",\"\u002Fdocs\u002Ftypography\u002Fcode\":\"Code\",\"\u002Fdocs\u002Ftypography\u002Fheading\":\"Heading\",\"\u002Fdocs\u002Ftypography\u002Ftext\":\"Text\",\"\u002Fdocs\u002Fembedded\u002Ffigure\":\"Figure\",\"\u002Fdocs\u002Fdisplay\u002Fbadge\":\"Badge\",\"\u002Fdocs\u002Fdisplay\u002Flist\":\"List\",\"\u002Fdocs\u002Fdisplay\u002Ftable\":\"Table\",\"\u002Fdocs\u002Fdisclosure\u002Ftab\":\"Tab\",\"\u002Fdocs\u002Ffeedback\u002Fdot\":\"Dot\",\"\u002Fdocs\u002Ffeedback\u002Fellipsis\":\"Ellipsis\",\"\u002Fdocs\u002Ffeedback\u002Fprogress\":\"Progress\",\"\u002Fdocs\u002Ffeedback\u002Fspinner\":\"Spinner\",\"\u002Fdocs\u002Ffeedback\u002Fwave\":\"Wave\",\"\u002Fdocs\u002Finteractables\u002Fbutton\":\"Button\",\"\u002Fdocs\u002Finteractables\u002Fcheck\":\"Check\",\"\u002Fdocs\u002Finteractables\u002Fform\":\"Form\",\"\u002Fdocs\u002Finteractables\u002Fradio\":\"Radio\",\"\u002Fdocs\u002Finteractables\u002Fswitch\":\"Switch\",\"\u002Fdocs\u002Finteractables\u002Ftextinput\":\"TextInput\",\"\u002Fdocs\u002Flayouts\u002Fcontainer\":\"Container\",\"\u002Fdocs\u002Flayouts\u002Fdivider\":\"Divider\",\"\u002Fdocs\u002Flayouts\u002Fgrid\":\"Grid\",\"\u002Fdocs\u002Flayouts\u002Fgroup\":\"Group\",\"\u002Fdocs\u002Flayouts\u002Fmosaic\":\"Mosaic\",\"\u002Fdocs\u002Flayouts\u002Fscrollable\":\"Scrollable\",\"\u002Fdocs\u002Flayouts\u002Fspacer\":\"Spacer\",\"\u002Fdocs\u002Flayouts\u002Fstack\":\"Stack\",\"\u002Fdocs\u002Fsurfaces\u002Fbox\":\"Box\",\"\u002Fdocs\u002Fsurfaces\u002Fcard\":\"Card\",\"\u002Fdocs\u002Fsurfaces\u002Fhero\":\"Hero\",\"\u002Fdocs\u002Fsurfaces\u002Ftile\":\"Tile\",\"\u002Fdocs\u002Fnavigation\u002Fanchor\":\"Anchor\",\"\u002Fdocs\u002Fnavigation\u002Faside\":\"Aside\",\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\":\"Breadcrumb\",\"\u002Fdocs\u002Fnavigation\u002Fmenu\":\"Menu\",\"\u002Fdocs\u002Fnavigation\u002Fomni\":\"Omni\",\"\u002Fdocs\u002Foverlays\u002Fpopover\":\"Popover\",\"\u002Fdocs\u002Foverlays\u002Foffscreen\":\"Offscreen\",\"\u002Fdocs\u002Foverlays\u002Foverlay\":\"Overlay\",\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\":\"ContextBackdrop\",\"\u002Fdocs\u002Futilities\u002Fcontextbutton\":\"ContextButton\",\"\u002Fdocs\u002Futilities\u002Fportal\":\"Portal\",\"\u002Fdocs\u002Fmodifiers\u002Fhtml5\":\"HTML5\",\"\u002Fdocs\u002Fmodifiers\u002Fhidden\":\"Hidden\",\"\u002Fdocs\u002Fmodifiers\u002Fsizings\":\"Sizings\",\"\u002Fdocs\u002Fmodifiers\u002Fspacings\":\"Spacings\",\"\u002Fdocs\u002Factions\u002Fclick_outside\":\"click_outside\",\"\u002Fdocs\u002Factions\u002Fkeybind\":\"keybind\",\"\u002Fdocs\u002Fstores\u002Fdarkmode\":\"darkmode\",\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\":\"htmlpalette\",\"\u002Fdocs\u002Fstores\u002Fmediaquery\":\"mediaquery\",\"\u002Fdocs\u002Fstores\u002Fprefersscheme\":\"prefersscheme\",\"\u002Fdocs\u002Fstores\u002Fscrolllock\":\"scrolllock\",\"\u002Fdocs\u002Fstores\u002Fviewport\":\"viewport\"}}"}</script>
 
-	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/modifiers/spacings.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1632104977000,\"events\":{},\"identifier\":\"modifiers\u002Fspacings\",\"modified_at\":1632104977000,\"properties\":{\"*\":[{\"name\":\"margin\",\"description\":\"\u003Cp\u003EAlters the visual spacing around the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_x\",\"description\":\"\u003Cp\u003EAlters the visual spacing around the horizontal axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_y\",\"description\":\"\u003Cp\u003EAlters the visual spacing around the vertical axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_left\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the left of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_top\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the top of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_right\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the right of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_bottom\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the bottom of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_x\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing along the horizontal axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_y\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing along the vertical axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_left\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the left side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_top\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the top side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_right\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the right side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_bottom\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the bottom side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]}]},\"sections\":[{\"identifier\":\"spacings\",\"level\":1,\"text\":\"Spacings\"},{\"identifier\":\"margin\",\"level\":2,\"text\":\"Margin\"},{\"identifier\":\"padding\",\"level\":2,\"text\":\"Padding\"},{\"identifier\":\"directional\",\"level\":2,\"text\":\"Directional\"}],\"snippets\":[{\"identifier\":\"spacings-margin\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"none\\\"\u003ENONE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"tiny\\\"\u003ETINY\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"small\\\"\u003ESMALL\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"medium\\\"\u003E\\n            MEDIUM\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"large\\\"\u003ELARGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"huge\\\"\u003EHUGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Margin\"},{\"identifier\":\"spacings-padding\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"none\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ENONE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"tiny\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ETINY\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"small\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ESMALL\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"medium\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003EMEDIUM\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"large\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ELARGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"huge\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003EHUGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Padding\"},{\"identifier\":\"spacings-direction\",\"script\":\"\u003Cscript\u003E\\n    import {Box, Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CBox palette=\\\"affirmative\\\" padding_y=\\\"small\\\"\u003E\\n    \u003CCode\u003Epadding_y=\\\"small\\\"\u003C\u002FCode\u003E\\n\u003C\u002FBox\u003E\\n\\n\u003CBox palette=\\\"negative\\\" margin_top=\\\"large\\\"\u003E\\n    \u003CCode\u003Emargin_top=\\\"large\\\"\u003C\u002FCode\u003E\\n\u003C\u002FBox\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Direction\"}],\"title\":\"Spacings\"},\"render\":\"\u003Ch1 id=\\\"spacings\\\"\u003ESpacings\u003C\u002Fh1\u003E\\n\u003Cp\u003EAll Components have access to the global margin and padding HTML data attributes. All of which, supports \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003EResponitivity\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"margin\\\"\u003EMargin\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Emargin={[&quot;small&quot;, &quot;tablet:large&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can set margins for your Components via the \u003Ccode\u003Emargin\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-margin?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-margin?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"padding\\\"\u003EPadding\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Epadding={[&quot;small&quot;, &quot;tablet:large&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can set paddings for your Components via the \u003Ccode\u003Epadding\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-padding?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-padding?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"directional\\\"\u003EDirectional\u003C\u002Fh2\u003E\\n\u003Cp\u003EAll \u003Ccode\u003ESpacings\u003C\u002Fcode\u003E properties have directional support via the \u003Ccode\u003E*_x\u003C\u002Fcode\u003E, \u003Ccode\u003E*_y\u003C\u002Fcode\u003E, \u003Ccode\u003E*_left\u003C\u002Fcode\u003E, \u003Ccode\u003E*_top\u003C\u002Fcode\u003E, \u003Ccode\u003E*_right\u003C\u002Fcode\u003E, and \u003Ccode\u003E*_bottom\u003C\u002Fcode\u003E suffixes.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-direction?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-direction?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/modifiers/spacings.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1632199912000,\"events\":{},\"identifier\":\"modifiers\u002Fspacings\",\"modified_at\":1632199912000,\"properties\":{\"*\":[{\"name\":\"margin\",\"description\":\"\u003Cp\u003EAlters the visual spacing around the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_x\",\"description\":\"\u003Cp\u003EAlters the visual spacing around the horizontal axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_y\",\"description\":\"\u003Cp\u003EAlters the visual spacing around the vertical axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_left\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the left of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_top\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the top of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_right\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the right of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_bottom\",\"description\":\"\u003Cp\u003EAlters the visual spacing to the bottom of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_x\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing along the horizontal axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_y\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing along the vertical axis of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_left\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the left side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_top\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the top side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_right\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the right side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_bottom\",\"description\":\"\u003Cp\u003EAlters the inner visual spacing on the bottom side of the Component.\u003C\u002Fp\u003E\\n\",\"types\":[\"none\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"{VIEWPORT}:{SPACING}\"]}]},\"sections\":[{\"identifier\":\"spacings\",\"level\":1,\"text\":\"Spacings\"},{\"identifier\":\"margin\",\"level\":2,\"text\":\"Margin\"},{\"identifier\":\"padding\",\"level\":2,\"text\":\"Padding\"},{\"identifier\":\"directional\",\"level\":2,\"text\":\"Directional\"}],\"slots\":{},\"snippets\":[{\"identifier\":\"spacings-margin\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"none\\\"\u003ENONE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"tiny\\\"\u003ETINY\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"small\\\"\u003ESMALL\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"medium\\\"\u003E\\n            MEDIUM\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"large\\\"\u003ELARGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"alert\\\" margin=\\\"huge\\\"\u003EHUGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Margin\"},{\"identifier\":\"spacings-padding\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"none\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ENONE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"tiny\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ETINY\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"small\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ESMALL\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"medium\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003EMEDIUM\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"large\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003ELARGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" padding=\\\"huge\\\"\u003E\\n        \u003CBox palette=\\\"negative\\\"\u003EHUGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Padding\"},{\"identifier\":\"spacings-direction\",\"script\":\"\u003Cscript\u003E\\n    import {Box, Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CBox palette=\\\"affirmative\\\" padding_y=\\\"small\\\"\u003E\\n    \u003CCode\u003Epadding_y=\\\"small\\\"\u003C\u002FCode\u003E\\n\u003C\u002FBox\u003E\\n\\n\u003CBox palette=\\\"negative\\\" margin_top=\\\"large\\\"\u003E\\n    \u003CCode\u003Emargin_top=\\\"large\\\"\u003C\u002FCode\u003E\\n\u003C\u002FBox\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Direction\"}],\"title\":\"Spacings\"},\"render\":\"\u003Ch1 id=\\\"spacings\\\"\u003ESpacings\u003C\u002Fh1\u003E\\n\u003Cp\u003EAll Components have access to the global margin and padding HTML data attributes. All of which, supports \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003EResponitivity\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"margin\\\"\u003EMargin\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Emargin={[&quot;small&quot;, &quot;tablet:large&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can set margins for your Components via the \u003Ccode\u003Emargin\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-margin?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-margin?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"padding\\\"\u003EPadding\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsivity\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Epadding={[&quot;small&quot;, &quot;tablet:large&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can set paddings for your Components via the \u003Ccode\u003Epadding\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-padding?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-padding?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"directional\\\"\u003EDirectional\u003C\u002Fh2\u003E\\n\u003Cp\u003EAll \u003Ccode\u003ESpacings\u003C\u002Fcode\u003E properties have directional support via the \u003Ccode\u003E*_x\u003C\u002Fcode\u003E, \u003Ccode\u003E*_y\u003C\u002Fcode\u003E, \u003Ccode\u003E*_left\u003C\u002Fcode\u003E, \u003Ccode\u003E*_top\u003C\u002Fcode\u003E, \u003Ccode\u003E*_right\u003C\u002Fcode\u003E, and \u003Ccode\u003E*_bottom\u003C\u002Fcode\u003E suffixes.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-direction?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fmodifiers\u002Fspacings\u002Fspacings-direction?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
 
     </body>
 </html>
