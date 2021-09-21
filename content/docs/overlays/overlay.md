@@ -66,6 +66,11 @@ types=["CustomEvent<void>"]
 name="dismiss"
 description="Fires whenever the `Overlay` is dismissed."
 types=["CustomEvent<void>"]
+
+[[slots.Overlay]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Overlay

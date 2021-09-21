@@ -57,6 +57,11 @@ types=["CustomEvent<void>"]
 name="dismiss"
 description="Fires whenever the `Offscreen` is dismissed."
 types=["CustomEvent<void>"]
+
+[[slots.Offscreen]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Offscreen

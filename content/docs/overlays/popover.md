@@ -46,6 +46,11 @@ types=["CustomEvent<void>"]
 name="dismiss"
 description="Fires whenever the `Popover` is dismissed."
 types=["CustomEvent<void>"]
+
+[[slots.Popover]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Popover
