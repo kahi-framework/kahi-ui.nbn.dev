@@ -1,3 +1,10 @@
++++
+[[slots.Scrollable]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
++++
+
 # Scrollable
 
 `Scrollable` is a layout primitive for encapsulating a given available space into its own scrollable context.

@@ -29,6 +29,11 @@ types=["capitalize", "lowercase", "uppercase"]
 name="variation"
 description="`truncate` removes parent container overflow from the render, clipping text with an ellipsis."
 types=["headline", "truncate"]
+
+[[slots.Text]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Text

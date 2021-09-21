@@ -63,6 +63,11 @@ types=["FocusEvent"]
 name="input"
 description="Fires whenever the `Check` has its value changed."
 types=["InputEvent"]
+
+[[slots.Check]]
+name="default"
+description="Default unnamed slot. Renders the `Check` inside a `<label>`, alongside the sibling slot content."
+types=["{}"]
 +++
 
 # Check

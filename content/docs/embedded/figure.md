@@ -1,23 +1,28 @@
 +++
 [[properties.Figure]]
 name="fit"
-description="Alters how the media of the <code>Figure</code> should fit within its containing box."
+description="Alters how the media of the `Figure` should fit within its containing box."
 types=["contain", "cover", "fill", "none", "scale-down"]
 
 [[properties.Figure]]
 name="shape"
-description="Changes the shape of the <code>Figure</code>."
+description="Changes the shape of the `Figure`."
 types=["pill", "rounded"]
 
 [[properties.Figure]]
 name="size"
-description="Changes how big the <code>Figure</code> should be forced to render, while keeping the aspect ratio. When <code>variation=\"icon\"</code>, sizes are smaller and aspect ratio is ignored."
+description="Changes how big the `Figure` should be forced to render, while keeping the aspect ratio. When `variation=\"icon\"`, sizes are smaller and aspect ratio is ignored."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.Figure]]
 name="variation"
-description="Alters how some of the other properties changes the <code>Figure</code>, e.g. <code>size</code>"
+description="Alters how some of the other properties changes the `Figure`. e.g. `size`"
 types=["icon"]
+
+[[slots.Figure]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Figure

@@ -10,7 +10,7 @@ name="align"
 description="Changes how the text is aligned within the containing box."
 types=["center", "justify", "left", "right"]
 
-[[properties.Text]]
+[[properties.Heading]]
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
@@ -24,6 +24,11 @@ types=["capitalize", "lowercase", "uppercase"]
 name="variation"
 description="`truncate` Removes parent container overflow from the render, clipping text with an ellipsis."
 types=["headline", "truncate"]
+
+[[slots.Heading]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Heading

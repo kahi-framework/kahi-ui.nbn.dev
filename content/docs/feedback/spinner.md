@@ -13,6 +13,11 @@ types=["tiny", "small", "medium", "large", "huge"]
 name="variation"
 description="Changes the how the <code>Spinner</code> is rendered."
 types=["dual"]
+
+[[slots.Spinner]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Spinner

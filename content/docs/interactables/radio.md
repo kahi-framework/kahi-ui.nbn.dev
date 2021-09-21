@@ -63,6 +63,11 @@ types=["FocusEvent"]
 name="input"
 description="Fires whenever the `Radio` has its value changed."
 types=["InputEvent"]
+
+[[slots.Radio]]
+name="default"
+description="Default unnamed slot. Renders the `Radio` inside a `<label>`, alongside the sibling slot content."
+types=["{}"]
 +++
 
 # Radio

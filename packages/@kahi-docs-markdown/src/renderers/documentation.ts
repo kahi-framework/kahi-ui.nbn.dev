@@ -43,6 +43,8 @@ export interface IDocumentationRenderProperties extends IFrontmatterProperties {
 
     sections: ISection[];
 
+    slots: IReferenceMap;
+
     snippets: ISnippet[];
 
     title: string;
@@ -70,6 +72,7 @@ function DocumentationRenderProperties(
         identifier,
         modified_at,
         properties: documentation_properties,
+        slots,
         title,
     } = properties;
 
@@ -80,6 +83,7 @@ function DocumentationRenderProperties(
         modified_at: modified_at ? Date.parse(modified_at) : options.modified_at ?? -1,
         properties: documentation_properties,
         sections: cache.sections ?? [],
+        slots,
         snippets: cache.snippets ?? [],
         title: title || cache.title,
     };

@@ -18,6 +18,11 @@ types=["tiny", "small", "medium", "large", "huge"]
 name="value"
 description="Changes the percentage value _(0.0...1.0)_ that is rendered."
 types=["number", "string", "undefined"]
+
+[[slots.Progress]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Progress

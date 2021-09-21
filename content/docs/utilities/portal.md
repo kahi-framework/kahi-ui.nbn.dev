@@ -19,6 +19,11 @@ types=["boolean"]
 name="mount"
 description="Fires whenever the `Portal` mounts to the target."
 types=["CustomEvent<void>"]
+
+[[slots.Portal]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Portal

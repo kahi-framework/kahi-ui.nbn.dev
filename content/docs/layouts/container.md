@@ -4,6 +4,11 @@ name="viewport"
 description="Controls the max width of the <code>Container</code> in relation to a Viewport preset."
 default="prose"
 types=["prose", "mobile", "table", "desktop", "widescreen", "{VIEWPORT}:{SIZE}"]
+
+[[slots.Container]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Container

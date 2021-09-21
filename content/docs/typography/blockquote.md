@@ -3,6 +3,11 @@
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[slots."Blockquote.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Blockquote

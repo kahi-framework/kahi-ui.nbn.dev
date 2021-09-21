@@ -93,6 +93,56 @@ types=["MouseEvent"]
 name="click"
 description="Fires whenever the `Menu.Label` is clicked."
 types=["MouseEvent"]
+
+[[slots."Menu.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.Anchor"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.Button"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.Divider"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.Divider"]]
+name="default"
+description="Slot for rendering `Menu.SubMenu` Components."
+types=["{}"]
+
+[[slots."Menu.Heading"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.Heading"]]
+name="default"
+description="Slot for rendering `Menu.SubMenu` Components."
+types=["{}"]
+
+[[slots."Menu.Item"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.Label"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Menu.SubMenu"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Menu

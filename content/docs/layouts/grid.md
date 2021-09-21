@@ -48,6 +48,16 @@ types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT
 name="span_y"
 description="In a point scale of 1...12, sets how many grid rows the <code>Grid.Item</code> will span."
 types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
+
+[[slots."Grid.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Grid.Item"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Grid

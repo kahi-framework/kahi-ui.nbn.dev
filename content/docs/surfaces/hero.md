@@ -3,6 +3,26 @@
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[slots."Hero.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Hero.Footer"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Hero.Header"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Hero.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Hero
