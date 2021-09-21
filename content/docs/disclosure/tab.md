@@ -68,6 +68,31 @@ types=["MouseEvent"]
 name="click"
 description="Fires whenever the `Tab.Label` is clicked."
 types=["MouseEvent"]
+
+[[slots."Tab.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tab.Anchor"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tab.Label"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tab.Group"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tab.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Tab
