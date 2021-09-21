@@ -92,6 +92,19 @@
                 </Tab.Section>
             </Tab.Group>
         {/if}
+
+        {#if has_references(documentation.properties.slots)}
+            <Tab.Group logic_id="tab-api-reference-slots">
+                <Tab.Label palette="accent">Slots</Tab.Label>
+
+                <Tab.Section>
+                    <DocumentationReferences
+                        references={documentation.properties.slots}
+                        id="slots"
+                    />
+                </Tab.Section>
+            </Tab.Group>
+        {/if}
     </Tab.Container>
 {/if}
 
