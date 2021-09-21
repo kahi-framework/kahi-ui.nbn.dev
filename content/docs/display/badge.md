@@ -8,6 +8,11 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="position"
 description="Sets higher positioning on the <code>Badge</code>."
 types=["floated", "raised"]
+
+[[slots.Badge]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Badge

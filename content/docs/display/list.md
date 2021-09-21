@@ -4,6 +4,16 @@ name="is"
 description="Changes the HTML tag used for rendering the list, and the list item prefixing."
 default="ul"
 types=["ol", "ul"]
+
+[[slots."List.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."List.Item"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # List

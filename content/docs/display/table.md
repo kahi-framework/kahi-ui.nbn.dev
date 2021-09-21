@@ -8,6 +8,41 @@ types=["tiny", "small", "medium", "large", "huge"]
 name="variation"
 description="Alters how the `Table.Container` renders with various additions."
 types=["borders", "stripes"]
+
+[[slots."Table.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Table.Column"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Table.Footer"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Table.Header"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Table.Heading"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Table.Row"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Table.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Table
