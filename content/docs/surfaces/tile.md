@@ -34,6 +34,31 @@ types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 name="alignment_y"
 description="Adjusts where the child items will be placed within the `Tile.Footer` along the vertical axis."
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[slots."Tile.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tile.Figure"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tile.Footer"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tile.Header"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Tile.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Tile

@@ -14,6 +14,11 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="shape"
 description="Changes the shape of the `Box`."
 types=["pill", "rounded"]
+
+[[slots.Box]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Box

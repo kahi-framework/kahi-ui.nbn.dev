@@ -39,6 +39,31 @@ types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 name="alignment_y"
 description="Adjusts where the child items will be placed within the `Card.Footer` along the vertical axis."
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
+
+[[slots."Card.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Card.Figure"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Card.Footer"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Card.Header"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Card.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Card
