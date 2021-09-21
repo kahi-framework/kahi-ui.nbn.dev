@@ -6,8 +6,13 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Divider]]
 name="orientation"
-description="Renders the <code>Divider</code> vertically."
+description="Renders the `Divider` vertically."
 types=["vertical", "{VIEWPORT}:vertical"]
+
+[[slots.Divider]]
+name="default"
+description="Default unnamed slot. Renders the `Divider` as a text divider when provided."
+types=["{}"]
 +++
 
 # Divider

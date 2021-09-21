@@ -33,6 +33,11 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child items in the <code>Stack</code>."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+
+[[slots.Stack]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Stack

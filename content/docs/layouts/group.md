@@ -8,6 +8,11 @@ types=["vertical"]
 name="variation"
 description="Sets how the <code>Group</code> should display the its children relative to the previous item."
 types=["stacked"]
+
+[[slots.Group]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Group
