@@ -33,6 +33,21 @@ types=["string"]
 name="click"
 description="Fires whenever the `Breadcrumb.Anchor` is clicked."
 types=["MouseEvent"]
+
+[[slots."Breadcrumb.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Breadcrumb.Anchor"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Breadcrumb.Item"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Breadcrumb

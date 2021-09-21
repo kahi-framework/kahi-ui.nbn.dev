@@ -33,6 +33,11 @@ types=["string"]
 name="click"
 description="Fires whenever the `Anchor` is clicked."
 types=["MouseEvent"]
+
+[[slots.Anchor]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Anchor

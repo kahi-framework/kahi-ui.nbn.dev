@@ -44,6 +44,36 @@ types=["CustomEvent<void>"]
 name="dismiss"
 description="Fires whenever the `Aside` is dismissed."
 types=["CustomEvent<void>"]
+
+[[slots."Aside.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Aside.Container"]]
+name="close"
+description="Slot for rendering a `ContextButton` that closes an opened `Aside.Container`."
+types=["{}"]
+
+[[slots."Aside.Container"]]
+name="default"
+description="Slot for rendering a `ContextButton` that opens a collapsed `Aside.Container`."
+types=["{}"]
+
+[[slots."Aside.Footer"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Aside.Header"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Aside.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # Aside
@@ -103,6 +133,16 @@ types=["CustomEvent<void>"]
         </Anchor>
     </Aside.Footer>
 </Aside.Container>
+```
+
+## Imports
+
+```html default Aside Imports
+<script>
+    import {Aside} from "@kahi-ui/framework";
+
+    const {Container, Footer, Header, Section} = Aside;
+</script>
 ```
 
 ## Palette
