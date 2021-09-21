@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Code, Divider, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
+    import {Code, Heading, Scrollable, Stack, Table, Text} from "@kahi-ui/framework";
 
     import type {IReferenceMap} from "@kahi-docs/markdown";
 
@@ -10,56 +10,54 @@
 </script>
 
 {#each _components as [component, properties] (component)}
-    <Heading is="h3" id="{id}-{component.toLowerCase()}">{component}</Heading>
+    <Heading is="h3" id="{id}-{component.toLowerCase()}">
+        <Code>
+            {component}
+        </Code>
+    </Heading>
 
-    <Stack spacing="medium">
-        {#each properties as property (property.name)}
-            <div>
-                <Heading is="h4" id="{id}-{component.toLowerCase()}-{property.name.toLowerCase()}">
-                    <Code>{property.name}</Code>
-                </Heading>
+    <Scrollable>
+        <Table.Container width={["mobile:content-max", "tablet:content-max"]}>
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading>Name</Table.Heading>
+                    <Table.Heading>Description</Table.Heading>
+                    <Table.Heading>Types</Table.Heading>
+                </Table.Row>
+            </Table.Header>
 
-                <Divider />
-                <Stack spacing="medium">
-                    <Stack orientation="horizontal">
-                        <Text is="strong">Description</Text>
+            <Table.Section>
+                {#each properties as property (property.name)}
+                    <Table.Row>
+                        <Table.Column>
+                            <Code>{property.name}</Code>
+                        </Table.Column>
 
-                        <Spacer orientation="horizontal" spacing="huge" />
-                        <Text is="span" align="right" max_width="prose">
+                        <Table.Column>
                             {@html property.description}
-                        </Text>
-                    </Stack>
+                        </Table.Column>
 
-                    <Stack orientation="horizontal">
-                        <Text is="strong">Types</Text>
-
-                        <Spacer orientation="horizontal" spacing="huge" />
-                        <Stack
-                            orientation="horizontal"
-                            alignment_x="right"
-                            spacing="small"
-                            variation="wrap"
-                            max_width="prose"
-                        >
-                            {#each property.types as type (type)}
-                                <Code>
-                                    {type}
-                                    {#if type === property.default}
-                                        <Text is="strong">(DEFAULT)</Text>
-                                    {/if}
-                                </Code>
-                            {/each}
-                        </Stack>
-                    </Stack>
-                </Stack>
-            </div>
-        {/each}
-    </Stack>
+                        <Table.Column>
+                            <Stack
+                                orientation="horizontal"
+                                alignment_x="right"
+                                spacing="small"
+                                variation="wrap"
+                                max_width="prose"
+                            >
+                                {#each property.types as type (type)}
+                                    <Code>
+                                        {type}
+                                        {#if type === property.default}
+                                            <Text is="strong">(DEFAULT)</Text>
+                                        {/if}
+                                    </Code>
+                                {/each}
+                            </Stack>
+                        </Table.Column>
+                    </Table.Row>
+                {/each}
+            </Table.Section>
+        </Table.Container>
+    </Scrollable>
 {/each}
-
-<style>
-    :global(h2#properties ~ .stack h4) {
-        margin-top: var(--spacing-local-medium);
-        margin-bottom: var(--spacing-local-tiny);
-    }
-</style>
