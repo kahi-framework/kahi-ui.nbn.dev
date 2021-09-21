@@ -43,6 +43,7 @@
     function get_initial_tab(render: IDocumentationRender): string {
         if (has_references(render.properties.properties)) return "tab-api-reference-properties";
         else if (has_references(render.properties.events)) return "tab-api-reference-events";
+        else if (has_references(render.properties.slots)) return "tab-api-reference-slots";
 
         return "";
     }
