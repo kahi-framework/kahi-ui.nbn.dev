@@ -21,6 +21,8 @@ export interface IDocumentationProperties extends IFrontmatterProperties {
 
     properties: IReferenceMap;
 
+    slots: IReferenceMap;
+
     title: string;
 }
 
@@ -94,6 +96,7 @@ function DocumentationProperties(value: unknown): IDocumentationProperties {
         identifier,
         modified_at = "",
         properties = {},
+        slots = {},
         title = "",
     } = value as IDocumentationProperties;
 
@@ -103,6 +106,7 @@ function DocumentationProperties(value: unknown): IDocumentationProperties {
         identifier,
         modified_at,
         properties: render_references(properties),
+        slots: render_references(slots),
         title,
     };
 }
