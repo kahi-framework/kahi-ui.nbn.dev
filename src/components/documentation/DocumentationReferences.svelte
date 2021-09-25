@@ -9,7 +9,7 @@
     $: _components = Object.entries(references);
 </script>
 
-{#each _components as [component, properties] (component)}
+{#each _components as [component, properties]}
     <Heading is="h3" id="{id}-{component.toLowerCase()}">
         <Code>
             {component}
@@ -27,7 +27,7 @@
             </Table.Header>
 
             <Table.Section>
-                {#each properties as property (property.name)}
+                {#each properties as property}
                     <Table.Row>
                         <Table.Column>
                             <Code>{property.name}</Code>
