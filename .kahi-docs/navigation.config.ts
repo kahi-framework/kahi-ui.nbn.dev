@@ -26,7 +26,7 @@ export default define_navigation({
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsivity"},
-                {href: "/docs/framework/events", badge: "NEW"},
+                {href: "/docs/framework/events"},
             ],
         },
 
@@ -48,8 +48,8 @@ export default define_navigation({
         {
             separator: "Display",
             items: [
-                {href: "/docs/display/badge"},
-                {href: "/docs/display/list"},
+                {href: "/docs/display/badge", badge: "UPDATED"},
+                {href: "/docs/display/list", badge: "UPDATED"},
                 {href: "/docs/display/table", badge: "UPDATED"},
             ],
         },
@@ -62,11 +62,11 @@ export default define_navigation({
         {
             separator: "Feedback",
             items: [
-                {href: "/docs/feedback/dot"},
-                {href: "/docs/feedback/ellipsis"},
-                {href: "/docs/feedback/progress"},
-                {href: "/docs/feedback/spinner"},
-                {href: "/docs/feedback/wave"},
+                {href: "/docs/feedback/dot", badge: "UPDATED"},
+                {href: "/docs/feedback/ellipsis", badge: "UPDATED"},
+                {href: "/docs/feedback/progress", badge: "UPDATED"},
+                {href: "/docs/feedback/spinner", badge: "UPDATED"},
+                {href: "/docs/feedback/wave", badge: "UPDATED"},
             ],
         },
 
@@ -85,10 +85,10 @@ export default define_navigation({
         {
             separator: "Layouts",
             items: [
-                {href: "/docs/layouts/container"},
-                {href: "/docs/layouts/divider"},
+                {href: "/docs/layouts/container", badge: "UPDATED"},
+                {href: "/docs/layouts/divider", badge: "UPDATED"},
                 {href: "/docs/layouts/grid"},
-                {href: "/docs/layouts/group"},
+                {href: "/docs/layouts/group", badge: "UPDATED"},
                 {href: "/docs/layouts/mosaic"},
                 {href: "/docs/layouts/scrollable"},
                 {href: "/docs/layouts/spacer"},
@@ -101,7 +101,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/surfaces/box", badge: "UPDATED"},
                 {href: "/docs/surfaces/card", badge: "UPDATED"},
-                {href: "/docs/surfaces/hero"},
+                {href: "/docs/surfaces/hero", badge: "UPDATED"},
                 {href: "/docs/surfaces/tile", badge: "UPDATED"},
             ],
         },
@@ -109,9 +109,9 @@ export default define_navigation({
         {
             separator: "Navigation",
             items: [
-                {href: "/docs/navigation/anchor"},
+                {href: "/docs/navigation/anchor", badge: "UPDATED"},
                 {href: "/docs/navigation/aside"},
-                {href: "/docs/navigation/breadcrumb"},
+                {href: "/docs/navigation/breadcrumb", badge: "UPDATED"},
                 {href: "/docs/navigation/menu"},
                 {href: "/docs/navigation/omni"},
             ],
@@ -122,7 +122,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/overlays/popover"},
                 {href: "/docs/overlays/offscreen"},
-                {href: "/docs/overlays/overlay", badge: "UPDATED"},
+                {href: "/docs/overlays/overlay"},
             ],
         },
 
@@ -131,7 +131,8 @@ export default define_navigation({
             items: [
                 {href: "/docs/utilities/contextbackdrop"},
                 {href: "/docs/utilities/contextbutton"},
-                {href: "/docs/utilities/portal", badge: "UPDATED"},
+                {href: "/docs/utilities/portal"},
+                {href: "/docs/utilities/transition", badge: "NEW"},
             ],
         },
 
