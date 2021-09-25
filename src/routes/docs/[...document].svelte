@@ -44,6 +44,8 @@
         if (has_references(render.properties.properties)) return "tab-api-reference-properties";
         else if (has_references(render.properties.events)) return "tab-api-reference-events";
         else if (has_references(render.properties.slots)) return "tab-api-reference-slots";
+        else if (has_references(render.properties.custom_properties))
+            return "tab-api-reference-custom-properties";
 
         return "";
     }
@@ -102,6 +104,19 @@
                     <DocumentationReferences
                         references={documentation.properties.slots}
                         id="slots"
+                    />
+                </Tab.Section>
+            </Tab.Group>
+        {/if}
+
+        {#if has_references(documentation.properties.custom_properties)}
+            <Tab.Group logic_id="tab-api-reference-custom-properties">
+                <Tab.Label palette="accent">Custom Properties</Tab.Label>
+
+                <Tab.Section>
+                    <DocumentationReferences
+                        references={documentation.properties.custom_properties}
+                        id="custom-properties"
                     />
                 </Tab.Section>
             </Tab.Group>
