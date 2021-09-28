@@ -11,13 +11,23 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Dot]]
 name="position"
-description="Sets higher positioning on the <code>Dot</code>."
+description="Sets higher positioning on the `Dot`."
 types=["floated", "raised"]
 
 [[slots.Dot]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Dot]]
+name="--dot-border-radius"
+description="Controls the `border-radius` used."
+types=["<length/percentage>"]
+
+[[custom_properties.Dot]]
+name="--dot-font-size"
+description="Controls the `font-size` used, which the `Dot` respects for `width` / `height`."
+types=["<length/percentage>"]
 +++
 
 # Dot

@@ -23,6 +23,26 @@ types=["number", "string", "undefined"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Progress]]
+name="--progress-palette-background-bold"
+description="Controls the default RGB color value used for `background-image` / `stroke`."
+types=["<r,g,b>"]
+
+[[custom_properties.Progress]]
+name="--progress-size-icon"
+description="Controls the default `height` for progress bars and `width` / `height` for progress circles."
+types=["<length/percentage>"]
+
+[[custom_properties.Progress]]
+name="--progress-background-opacity"
+description="Controls opacity of the `Progress` background track color."
+types=["<alpha-value>"]
+
+[[custom_properties.Progress]]
+name="--progress-border-radius"
+description="Controls the `border-radius` of progress bars."
+types=["<length/percentage>"]
 +++
 
 # Progress

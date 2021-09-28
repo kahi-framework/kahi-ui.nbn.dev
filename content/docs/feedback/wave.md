@@ -13,6 +13,46 @@ types=["tiny", "small", "medium", "large", "huge"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Wave]]
+name="--wave-border-radius"
+description="Controls the `border-radius` used for `Wave` dots."
+types=["<length/percentage>"]
+
+[[custom_properties.Wave]]
+name="--wave-font-size"
+description="Controls the `font-size` used, which the `Wave` dots respect for `width` / `height`."
+types=["<length/percentage>"]
+
+[[custom_properties.Wave]]
+name="--wave-content-second-animation-delay"
+description="Controls how long of a delay until the second `Wave` dot is bounced in sequence."
+types=["<time>"]
+
+[[custom_properties.Wave]]
+name="--wave-content-third-animation-delay"
+description="Controls how long of a delay until the third `Wave` dot is bounced in sequence."
+types=["<time>"]
+
+[[custom_properties.Wave]]
+name="--wave-content-fourth-animation-delay"
+description="Controls how long of a delay until the fourth `Wave` dot is bounced in sequence."
+types=["<time>"]
+
+[[custom_properties.Wave]]
+name="--wave-content-fifth-animation-delay"
+description="Controls how long of a delay until the fifth `Wave` dot is bounced in sequence."
+types=["<time>"]
+
+[[custom_properties.Wave]]
+name="--wave-bounce-top-animation-function"
+description="Controls the animation timing function switched to when a `Wave` dot reaches the peak of the bounce."
+types=["<easing-function>"]
+
+[[custom_properties.Wave]]
+name="--wave-bounce-bottom-animation-function"
+description="Controls the animation timing function switched to when a `Wave` dot reaches the base of the bounce."
+types=["<easing-function>"]
 +++
 
 # Wave
