@@ -35,6 +35,96 @@ types=["AnimationEvent"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-bottom-end-clip-path"
+description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-bottom-start-clip-path"
+description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-left-end-clip-path"
+description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-left-start-clip-path"
+description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-right-end-clip-path"
+description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-right-start-clip-path"
+description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-top-end-clip-path"
+description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-clip-top-start-clip-path"
+description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-scale-end-scale"
+description="Controls the `transform: scale` used for end of a enter `scale` animation. (reverse in exit variation)"
+types=["<number>"]
+
+[[custom_properties.Transition]]
+name="--transition-scale-start-scale"
+description="Controls the `transform: scale` used for start of a enter `scale` animation. (reverse in exit variation)"
+types=["<number>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-bottom-end-translate"
+description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-bottom-start-translate"
+description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-left-end-translate"
+description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-left-start-translate"
+description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-right-end-translate"
+description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-right-start-translate"
+description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-top-end-translate"
+description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
+
+[[custom_properties.Transition]]
+name="--transition-slide-top-start-translate"
+description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
+types=["<length-percentage>, <length-percentage>"]
 +++
 
 # Transition
