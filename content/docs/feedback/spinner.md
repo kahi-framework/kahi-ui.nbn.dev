@@ -6,18 +6,33 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Spinner]]
 name="size"
-description="Renders the <code>Spinner</code> at a different sizes."
+description="Renders the `Spinner` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.Spinner]]
-name="variation"
-description="Changes the how the <code>Spinner</code> is rendered."
-types=["dual"]
 
 [[slots.Spinner]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Spinner]]
+name="--spinner-animation-duration"
+description="Controls the duration used for the \"rotate\" animation."
+types=["<time>"]
+
+[[custom_properties.Spinner]]
+name="--spinner-animation-function"
+description="Controls the timing function used for the \"rotate\" animation."
+types=["<easing-function>"]
+
+[[custom_properties.Spinner]]
+name="--spinner-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Spinner]]
+name="--spinner-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
 +++
 
 # Spinner
@@ -168,73 +183,6 @@ You can change the size of the `Spinner` via the `size` property.
 
 <style>
     :global(.spinner-size .spinner) {
-        display: block;
-    }
-</style>
-```
-
-## Dual
-
-> **WARNING**: This feature has been deprecated for removal in the future.
-
-`Spinner` components also have a special variation to render with two rotating borders on either side.
-
-```svelte repl Spinner Dual
-<script>
-    import {
-        Spinner,
-        Stack,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack
-    class="spinner-dual"
-    spacing="medium"
-    orientation="horizontal"
-    variation="wrap"
->
-    <div>
-        <Text is="strong">DEFAULT</Text>
-        <Spinner variation="dual" />
-    </div>
-
-    <div>
-        <Text is="strong">ACCENT</Text>
-        <Spinner variation="dual" palette="accent" />
-    </div>
-
-    <div>
-        <Text is="strong">DARK</Text>
-        <Spinner variation="dual" palette="dark" />
-    </div>
-
-    <div>
-        <Text is="strong">LIGHT</Text>
-        <Spinner variation="dual" palette="light" />
-    </div>
-
-    <div>
-        <Text is="strong">ALERT</Text>
-        <Spinner variation="dual" palette="alert" />
-    </div>
-
-    <div>
-        <Text is="strong">AFFIRMATIVE</Text>
-        <Spinner
-            variation="dual"
-            palette="affirmative"
-        />
-    </div>
-
-    <div>
-        <Text is="strong">NEGATIVE</Text>
-        <Spinner variation="dual" palette="negative" />
-    </div>
-</Stack>
-
-<style>
-    :global(.spinner-dual .spinner) {
         display: block;
     }
 </style>

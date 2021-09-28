@@ -33,6 +33,8 @@ export type IDocumentationRender = IRender<IDocumentationRenderProperties>;
 export interface IDocumentationRenderProperties extends IFrontmatterProperties {
     created_at: number;
 
+    custom_properties: IReferenceMap;
+
     events: IReferenceMap;
 
     identifier: string;
@@ -68,6 +70,7 @@ function DocumentationRenderProperties(
 
     const {
         created_at,
+        custom_properties,
         events,
         identifier,
         modified_at,
@@ -78,6 +81,7 @@ function DocumentationRenderProperties(
 
     return {
         created_at: created_at ? Date.parse(created_at) : options.created_at ?? -1,
+        custom_properties,
         events,
         identifier: identifier || (options.identifier ?? "n-a/n-a"),
         modified_at: modified_at ? Date.parse(modified_at) : options.modified_at ?? -1,

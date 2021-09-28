@@ -19,11 +19,6 @@ export default define_application({
         url: "https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/%s",
     },
 
-    paths: {
-        // TODO: When blog posts are added, change to work with
-        changelog: "./node_modules/@kahi-ui/framework/CHANGELOG.md",
-    },
-
     urls: {
         // NOTE: This needs to be kept inline with any changes to `svelte.config.js`
         base: "/",

@@ -12,7 +12,7 @@
     import {normalize_pathname, noop, is_internal_url} from "@kahi-docs/shared";
 
     export let items: INavigationMenu[] = [];
-    export let hidden: DESIGN_HIDDEN_ARGUMENT = false;
+    export let hidden: DESIGN_HIDDEN_ARGUMENT | undefined = undefined;
     export let orientation: DESIGN_ORIENTATION_VERTICAL_ARGUMENT | undefined = undefined;
     export let sizing: DESIGN_SIZING_ARGUMENT | undefined = undefined;
 

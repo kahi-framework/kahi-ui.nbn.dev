@@ -38,6 +38,21 @@ types=["MouseEvent"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Anchor]]
+name="--anchor-palette-background-boldest"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties.Anchor]]
+name="--anchor-text-decoration"
+description="Controls the `text-decoration` value for when the link is not hovered."
+types=["<text-decoration>"]
+
+[[custom_properties.Anchor]]
+name="--anchor-hover-text-decoration"
+description="Controls the `text-decoration` value for when the link is hovered."
+types=["<text-decoration>"]
 +++
 
 # Anchor

@@ -48,6 +48,21 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."Breadcrumb.Container"]]
+name="--breadcrumb-button-inactive-opacity"
+description="Controls the opacity for when a `Breadcrumb` button is inactive."
+types=["<alpha-value>"]
+
+[[custom_properties."Breadcrumb.Container"]]
+name="--breadcrumb-separator-margin-x"
+description="Controls the X-Axis margin for `Breadcrumb` separators."
+types=["<length>"]
+
+[[custom_properties."Breadcrumb.Container"]]
+name="--breadcrumb-separator-opacity"
+description="Controls the opacity for `Breadcrumb` separators."
+types=["<alpha-value>"]
 +++
 
 # Breadcrumb

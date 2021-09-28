@@ -8,6 +8,31 @@ types=["string"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Ellipsis]]
+name="--ellipsis-character"
+description="Controls the default character used, when no developer-supplied character is present."
+types=["<string>"]
+
+[[custom_properties.Ellipsis]]
+name="--ellipsis-content-first-animation-delay"
+description="Controls how long of a delay until the first `Ellipsis` character is faded out in sequence."
+types=["<time>"]
+
+[[custom_properties.Ellipsis]]
+name="--ellipsis-content-second-animation-delay"
+description="Controls how long of a delay until the second `Ellipsis` character is faded out in sequence."
+types=["<time>"]
+
+[[custom_properties.Ellipsis]]
+name="--ellipsis-pulse-end-opacity"
+description="Controls how invisible a `Ellipsis` character should turn at the end of the \"pulse\" animation."
+types=["<alpha-value>"]
+
+[[custom_properties.Ellipsis]]
+name="--ellipsis-pulse-start-opacity"
+description="Controls how visible a `Ellipsis` character should turn at the start of the \"pulse\" animation."
+types=["<alpha-value>"]
 +++
 
 # Ellipsis

@@ -13,6 +13,8 @@ import type {IFrontmatterProperties} from "./types";
 export interface IDocumentationProperties extends IFrontmatterProperties {
     created_at: string;
 
+    custom_properties: IReferenceMap;
+
     events: IReferenceMap;
 
     identifier: string;
@@ -92,6 +94,7 @@ function DocumentationProperties(value: unknown): IDocumentationProperties {
 
     const {
         created_at = "",
+        custom_properties = {},
         events = {},
         identifier,
         modified_at = "",
@@ -102,6 +105,7 @@ function DocumentationProperties(value: unknown): IDocumentationProperties {
 
     return {
         created_at,
+        custom_properties: render_references(custom_properties),
         events: render_references(events),
         identifier,
         modified_at,
