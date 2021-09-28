@@ -14,6 +14,11 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."List.Container"]]
+name="--list-margin-left"
+description="Controls the `margin-left` spacing used."
+types=["<length>"]
 +++
 
 # List

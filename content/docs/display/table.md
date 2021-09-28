@@ -43,6 +43,51 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."Table.Container"]]
+name="--table-palette-background-lightest"
+description="Controls the default RGB color value used for borders / stripes variations."
+types=["<r,g,b>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-sizing-text-size"
+description="Controls the default font size used for text, and the relative base for padding."
+types=["<length/percentage>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-sizing-line-height"
+description="Controls the default line height used."
+types=["<normal/number/length/percentage>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-borders-border-radius"
+description="Controls the `border-radius` used for borders variation."
+types=["<length/percentage>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-borders-opacity"
+description="Controls the `opacity` used for borders variation."
+types=["<alpha-value>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-borders-width"
+description="Controls the `width` / `height` (depending on border orientation) used for borders variation."
+types=["<length>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-stripes-opacity"
+description="Controls the `opacity` used for stripes variation."
+types=["<alpha-value>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-column-padding-x"
+description="Controls the X-Axis padding used for table columns."
+types=["<length>"]
+
+[[custom_properties."Table.Container"]]
+name="--table-column-padding-y"
+description="Controls the Y-Axis padding used for table columns."
+types=["<length>"]
 +++
 
 # Table

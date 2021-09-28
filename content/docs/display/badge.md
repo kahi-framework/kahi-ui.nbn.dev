@@ -13,6 +13,51 @@ types=["floated", "raised"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Badge]]
+name="--badge-palette-background-normal"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties.Badge]]
+name="--badge-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties.Badge]]
+name="--badge-font-size"
+description="Controls the default font size used."
+types=["<length/percentage>"]
+
+[[custom_properties.Badge]]
+name="--badge-font-weight"
+description="Controls the font weight of the text."
+types=["<normal/bold/bolder/lighter/number>"]
+
+[[custom_properties.Badge]]
+name="--badge-gap"
+description="Controls the spacing gap between child elements, e.g. icons."
+types=["<length>"]
+
+[[custom_properties.Badge]]
+name="--badge-line-height"
+description="Controls the default line height used."
+types=["<normal/number/length/percentage>"]
+
+[[custom_properties.Badge]]
+name="--badge-padding-x"
+description="Controls the X-Axis padding."
+types=["<length>"]
+
+[[custom_properties.Badge]]
+name="--badge-padding-y"
+description="Controls the Y-Axis padding."
+types=["<length>"]
+
+[[custom_properties.Badge]]
+name="--badge-text-shadow"
+description="Controls the shadowing on the text. Typically used for increasing legibility."
+types=["<offset-x> <offset-y> <blur-radius>"]
 +++
 
 # Badge
