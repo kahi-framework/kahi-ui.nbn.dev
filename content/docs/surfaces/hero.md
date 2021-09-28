@@ -23,6 +23,96 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."Hero.Container"]]
+name="--hero-palette-background-normal"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties."Hero.Container"]]
+name="--hero-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties."Hero.Container"]]
+name="--hero-padding-x"
+description="Controls the X Axis padding used."
+types=["<length>"]
+
+[[custom_properties."Hero.Container"]]
+name="--hero-padding-y"
+description="Controls the Y Axis padding used."
+types=["<length>"]
+
+[[custom_properties."Hero.Footer"]]
+name="--hero-footer-gap"
+description="Controls the spacing between each child element."
+types=["<length>"]
+
+[[custom_properties."Hero.Footer"]]
+name="--hero-footer-max-width"
+description="Controls how large the `Hero.Footer` can expand."
+types=["<length>"]
+
+[[custom_properties."Hero.Footer"]]
+name="--hero-footer-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties."Hero.Footer"]]
+name="--hero-footer-line-height"
+description="Controls the `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties."Hero.Footer"]]
+name="--hero-footer-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
+
+[[custom_properties."Hero.Header"]]
+name="--hero-header-max-width"
+description="Controls how large the `Hero.Header` can expand."
+types=["<length>"]
+
+[[custom_properties."Hero.Header"]]
+name="--hero-header-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties."Hero.Header"]]
+name="--hero-header-font-weight"
+description="Controls the `font-weight` used."
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
+
+[[custom_properties."Hero.Header"]]
+name="--hero-header-line-height"
+description="Controls the `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties."Hero.Header"]]
+name="--hero-header-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
+
+[[custom_properties."Hero.Section"]]
+name="--hero-section-max-width"
+description="Controls how large the `Hero.Section` can expand."
+types=["<length>"]
+
+[[custom_properties."Hero.Section"]]
+name="--hero-section-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties."Hero.Section"]]
+name="--hero-section-line-height"
+description="Controls the `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties."Hero.Section"]]
+name="--hero-section-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
 +++
 
 # Hero
