@@ -17,7 +17,7 @@ types=["{}"]
 [[custom_properties.Divider]]
 name="--divider-border-radius"
 description="Controls the `border-radius` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties.Divider]]
 name="--divider-margin"
@@ -37,12 +37,12 @@ types=["<length>"]
 [[custom_properties.Divider]]
 name="--divider-text-font-size"
 description="Controls the default font size used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties.Divider]]
 name="--divider-text-font-weight"
 description="Controls the font weight of the text."
-types=["<normal/bold/bolder/lighter/number>"]
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
 
 [[custom_properties.Divider]]
 name="--divider-text-gap"

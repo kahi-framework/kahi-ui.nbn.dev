@@ -78,12 +78,12 @@ types=["<r,g,b>"]
 [[custom_properties."Tile.Container"]]
 name="--tile-sizing-text-size"
 description="Controls the default font size used for text, and the relative base for padding."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Tile.Container"]]
 name="--tile-sizing-text-line-height"
 description="Controls the default line height used."
-types=["<normal/number/length/percentage>"]
+types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 [[custom_properties."Tile.Container"]]
 name="--tile-border-color"
@@ -93,7 +93,7 @@ types=["<r,g,b>"]
 [[custom_properties."Tile.Container"]]
 name="--tile-border-radius"
 description="Controls the `border-radius` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Tile.Container"]]
 name="--tile-border-opacity"
@@ -123,7 +123,7 @@ types=["<length>"]
 [[custom_properties."Tile.Figure"]]
 name="--tile-figure-font-size"
 description="Controls the `font-size` used, which the `Tile.Figure` respects for `width` / `height`."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Tile.Footer"]]
 name="--tile-footer-flex-alignment-x"
@@ -146,24 +146,24 @@ description="Controls the default flex direction used."
 types=["<direction>"]
 
 [[custom_properties."Tile.Footer"]]
-name="--tile-footer-orientation-flex-alignment-x"
+name="--tile-footer-orientation-align"
 description="Controls which flex alignment value to pull from for default `align-items`."
 types=["var(--flex-alignment-x)", "var(--flex-alignment-y)"]
 
 [[custom_properties."Tile.Footer"]]
-name="--tile-footer-orientation-flex-alignment-y"
+name="--tile-footer-orientation-justify"
 description="Controls which flex alignment value to pull from for default `justify-content`."
 types=["var(--flex-alignment-x)", "var(--flex-alignment-y)"]
 
 [[custom_properties."Tile.Header"]]
 name="--tile-header-font-size"
 description="Controls the `font-size` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Tile.Header"]]
 name="--tile-header-font-weight"
 description="Controls the `font-weight` used."
-types=["<normal/bold/bolder/lighter/number>"]
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
 
 [[custom_properties."Tile.Header"]]
 name="--tile-header-gap"
@@ -173,7 +173,7 @@ types=["<length>"]
 [[custom_properties."Tile.Header"]]
 name="--tile-header-line-height"
 description="Controls the `line-height` used."
-types=["<normal/number/length/percentage>"]
+types=["<normal>", "<number>", "<length>", "<percentage>"]
 +++
 
 # Tile

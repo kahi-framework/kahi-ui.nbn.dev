@@ -38,7 +38,7 @@ types=["<r,g,b>"]
 [[custom_properties.Box]]
 name="--box-shape-radius"
 description="Controls the default `border-radius` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 +++
 
 # Box

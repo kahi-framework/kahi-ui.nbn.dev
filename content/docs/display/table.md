@@ -52,17 +52,17 @@ types=["<r,g,b>"]
 [[custom_properties."Table.Container"]]
 name="--table-sizing-text-size"
 description="Controls the default font size used for text, and the relative base for padding."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Table.Container"]]
 name="--table-sizing-line-height"
 description="Controls the default line height used."
-types=["<normal/number/length/percentage>"]
+types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 [[custom_properties."Table.Container"]]
 name="--table-borders-border-radius"
 description="Controls the `border-radius` used for borders variation."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Table.Container"]]
 name="--table-borders-opacity"

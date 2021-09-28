@@ -17,12 +17,12 @@ types=["{}"]
 [[custom_properties.Wave]]
 name="--wave-border-radius"
 description="Controls the `border-radius` used for `Wave` dots."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties.Wave]]
 name="--wave-font-size"
 description="Controls the `font-size` used, which the `Wave` dots respect for `width` / `height`."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties.Wave]]
 name="--wave-content-second-animation-delay"

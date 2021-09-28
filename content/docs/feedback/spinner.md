@@ -27,7 +27,7 @@ types=["<easing-function>"]
 [[custom_properties.Spinner]]
 name="--spinner-border-radius"
 description="Controls the `border-radius` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties.Spinner]]
 name="--spinner-border-width"

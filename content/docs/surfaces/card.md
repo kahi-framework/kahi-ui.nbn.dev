@@ -83,12 +83,12 @@ types=["<r,g,b>"]
 [[custom_properties."Card.Container"]]
 name="--card-sizing-text-size"
 description="Controls the default font size used for text, and the relative base for padding."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Card.Container"]]
 name="--card-sizing-text-line-height"
 description="Controls the default line height used."
-types=["<normal/number/length/percentage>"]
+types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 [[custom_properties."Card.Container"]]
 name="--card-border-color"
@@ -98,7 +98,7 @@ types=["<r,g,b>"]
 [[custom_properties."Card.Container"]]
 name="--card-border-radius"
 description="Controls the `border-radius` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Card.Container"]]
 name="--card-border-opacity"
@@ -146,12 +146,12 @@ description="Controls the default flex direction used."
 types=["<direction>"]
 
 [[custom_properties."Card.Footer"]]
-name="--card-footer-orientation-flex-alignment-x"
+name="--card-footer-orientation-align"
 description="Controls which flex alignment value to pull from for default `align-items`."
 types=["var(--flex-alignment-x)", "var(--flex-alignment-y)"]
 
 [[custom_properties."Card.Footer"]]
-name="--card-footer-orientation-flex-alignment-y"
+name="--card-footer-orientation-justify"
 description="Controls which flex alignment value to pull from for default `justify-content`."
 types=["var(--flex-alignment-x)", "var(--flex-alignment-y)"]
 
@@ -163,12 +163,12 @@ types=["<length>"]
 [[custom_properties."Card.Header"]]
 name="--card-header-font-size"
 description="Controls the `font-size` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties."Card.Header"]]
 name="--card-header-font-weight"
 description="Controls the `font-weight` used."
-types=["<normal/bold/bolder/lighter/number>"]
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
 
 [[custom_properties."Card.Header"]]
 name="--card-header-gap"
@@ -178,7 +178,7 @@ types=["<length>"]
 [[custom_properties."Card.Header"]]
 name="--card-header-line-height"
 description="Controls the `line-height` used."
-types=["<normal/number/length/percentage>"]
+types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 [[custom_properties."Card.Header"]]
 name="--card-header-margin-top"

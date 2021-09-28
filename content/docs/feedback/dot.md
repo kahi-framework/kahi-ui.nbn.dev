@@ -22,12 +22,12 @@ types=["{}"]
 [[custom_properties.Dot]]
 name="--dot-border-radius"
 description="Controls the `border-radius` used."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 
 [[custom_properties.Dot]]
 name="--dot-font-size"
 description="Controls the `font-size` used, which the `Dot` respects for `width` / `height`."
-types=["<length/percentage>"]
+types=["<length>", "<percentage>"]
 +++
 
 # Dot
