@@ -105,7 +105,7 @@ function DocumentationProperties(value: unknown): IDocumentationProperties {
 
     return {
         created_at,
-        custom_properties,
+        custom_properties: render_references(custom_properties),
         events: render_references(events),
         identifier,
         modified_at,
