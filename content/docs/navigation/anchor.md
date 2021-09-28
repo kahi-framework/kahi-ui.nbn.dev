@@ -41,7 +41,7 @@ types=["{}"]
 
 [[custom_properties.Anchor]]
 name="--anchor-palette-background-boldest"
-description="Controls the default RGB color value used for color."
+description="Controls the default RGB color value used for `color`."
 types=["<r,g,b>"]
 
 [[custom_properties.Anchor]]

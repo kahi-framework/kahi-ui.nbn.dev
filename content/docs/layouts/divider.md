@@ -13,6 +13,46 @@ types=["vertical", "{VIEWPORT}:vertical"]
 name="default"
 description="Default unnamed slot. Renders the `Divider` as a text divider when provided."
 types=["{}"]
+
+[[custom_properties.Divider]]
+name="--divider-border-radius"
+description="Controls the `border-radius` used."
+types=["<length/percentage>"]
+
+[[custom_properties.Divider]]
+name="--divider-margin"
+description="Controls the margin spacing (depending on border orientation) used."
+types=["<length>"]
+
+[[custom_properties.Divider]]
+name="--divider-opacity"
+description="Controls the `opacity` used."
+types=["<alpha-value>"]
+
+[[custom_properties.Divider]]
+name="--divider-width"
+description="Controls the width of the `Divider` border."
+types=["<length>"]
+
+[[custom_properties.Divider]]
+name="--divider-text-font-size"
+description="Controls the default font size used."
+types=["<length/percentage>"]
+
+[[custom_properties.Divider]]
+name="--divider-text-font-weight"
+description="Controls the font weight of the text."
+types=["<normal/bold/bolder/lighter/number>"]
+
+[[custom_properties.Divider]]
+name="--divider-text-gap"
+description="Controls the spacing gap between child elements, e.g. icons."
+types=["<length>"]
+
+[[custom_properties.Divider]]
+name="--divider-text-letter-spacing"
+description="Controls the `letter-spacing` used."
+types=["<length>"]
 +++
 
 # Divider

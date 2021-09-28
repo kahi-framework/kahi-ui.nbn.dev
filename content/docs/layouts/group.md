@@ -1,18 +1,23 @@
 +++
 [[properties.Group]]
 name="orientation"
-description="Sets the <code>Group</code> to render its children vertically."
+description="Sets the `Group` to render its children vertically."
 types=["vertical"]
 
 [[properties.Group]]
 name="variation"
-description="Sets how the <code>Group</code> should display the its children relative to the previous item."
+description="Sets how the `Group` should display the its children relative to the previous item."
 types=["stacked"]
 
 [[slots.Group]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Group]]
+name="--group-stacked-item-margin"
+description="Controls the margin used when using `stacked` variation. Typically should use negative values."
+types=["<length>"]
 +++
 
 # Group

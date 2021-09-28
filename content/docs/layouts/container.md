@@ -9,6 +9,16 @@ types=["prose", "mobile", "table", "desktop", "widescreen", "{VIEWPORT}:{SIZE}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Container]]
+name="--container-viewport"
+description="Controls the default viewport max size."
+types=["<length>"]
+
+[[custom_properties.Container]]
+name="--container-padding-x"
+description="Controls the X-Axis padding."
+types=["<length>"]
 +++
 
 # Container
