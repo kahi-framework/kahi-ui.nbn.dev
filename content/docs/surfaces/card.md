@@ -64,6 +64,131 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."Card.Container"]]
+name="--card-elevation"
+description="Controls the default `box-shadow` used."
+types=["<offset-x> <offset-y> <blur-radius> <spread-radius> <color>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-palette-background-normal"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-sizing-text-size"
+description="Controls the default font size used for text, and the relative base for padding."
+types=["<length/percentage>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-sizing-text-line-height"
+description="Controls the default line height used."
+types=["<normal/number/length/percentage>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-border-color"
+description="Controls the `border-color` used."
+types=["<r,g,b>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-border-radius"
+description="Controls the `border-radius` used."
+types=["<length/percentage>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-border-opacity"
+description="Controls the opacity of the border used."
+types=["<alpha-value>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-padding-x"
+description="Controls the X Axis padding used."
+types=["<length>"]
+
+[[custom_properties."Card.Container"]]
+name="--card-padding-y"
+description="Controls the Y Axis padding used."
+types=["<length>"]
+
+[[custom_properties."Card.Figure"]]
+name="--card-figure-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-flex-alignment-x"
+description="Controls the default flex alignment for the orientation-adjusted X Axis."
+types=["<positional>"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-flex-alignment-y"
+description="Controls the default flex alignment for the orientation-adjusted Y Axis."
+types=["<positional>"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-gap"
+description="Controls the spacing between each child element."
+types=["<length>"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-orientation-direction"
+description="Controls the default flex direction used."
+types=["<direction>"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-orientation-flex-alignment-x"
+description="Controls which flex alignment value to pull from for default `align-items`."
+types=["var(--flex-alignment-x)", "var(--flex-alignment-y)"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-orientation-flex-alignment-y"
+description="Controls which flex alignment value to pull from for default `justify-content`."
+types=["var(--flex-alignment-x)", "var(--flex-alignment-y)"]
+
+[[custom_properties."Card.Footer"]]
+name="--card-footer-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
+
+[[custom_properties."Card.Header"]]
+name="--card-header-font-size"
+description="Controls the `font-size` used."
+types=["<length/percentage>"]
+
+[[custom_properties."Card.Header"]]
+name="--card-header-font-weight"
+description="Controls the `font-weight` used."
+types=["<normal/bold/bolder/lighter/number>"]
+
+[[custom_properties."Card.Header"]]
+name="--card-header-gap"
+description="Controls the spacing between each child element."
+types=["<length>"]
+
+[[custom_properties."Card.Header"]]
+name="--card-header-line-height"
+description="Controls the `line-height` used."
+types=["<normal/number/length/percentage>"]
+
+[[custom_properties."Card.Header"]]
+name="--card-header-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
+
+[[custom_properties."Card.Section"]]
+name="--card-section-margin-top"
+description="Controls the spacing used when not the first child."
+types=["<length>"]
 +++
 
 # Card

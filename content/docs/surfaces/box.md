@@ -19,6 +19,26 @@ types=["pill", "rounded"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Box]]
+name="--box-elevation"
+description="Controls the default `box-shadow` used."
+types=["<offset-x> <offset-y> <blur-radius> <spread-radius> <color>"]
+
+[[custom_properties.Box]]
+name="--box-palette-background-normal"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties.Box]]
+name="--box-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties.Box]]
+name="--box-shape-radius"
+description="Controls the default `border-radius` used."
+types=["<length/percentage>"]
 +++
 
 # Box
