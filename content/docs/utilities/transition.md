@@ -151,7 +151,7 @@ types=["<length-percentage>, <length-percentage>"]
 </Button>
 
 <Transition animation="clip" {variation}>
-    <Box palette="inverse" padding="huge">
+    <Box palette="inverse" padding="medium">
         hello world!
     </Box>
 </Transition>
@@ -188,8 +188,8 @@ Based on the animaton duration properties in the currently loaded theme. You can
     Toggle Variation
 </Button>
 
-<Transition animation="clip" delay={0.75} {variation}>
-    <Box palette="inverse" padding="huge">
+<Transition animation="clip" delay={1.25} {variation}>
+    <Box palette="inverse" padding="medium">
         hello world!
     </Box>
 </Transition>
@@ -223,7 +223,7 @@ You can control which direction the `Transition` animation will "expand", "move"
     direction="right"
     {variation}
 >
-    <Box palette="inverse" padding="huge">
+    <Box palette="inverse" padding="medium">
         hello world!
     </Box>
 </Transition>
@@ -253,7 +253,7 @@ The simplest of all the animations, you can fade content in and out via the `ani
 </Button>
 
 <Transition animation="fade" {variation}>
-    <Box palette="inverse" padding="huge">Fade</Box>
+    <Box palette="inverse" padding="medium">Fade</Box>
 </Transition>
 ```
 
@@ -278,13 +278,13 @@ By supplying a variation off the bat, you can also have the animation played as 
 <Grid.Container points="2" spacing="medium">
     {#if dom}
         <Transition animation="fade" variation="enter">
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
 
         <Transition animation="fade" variation="enter">
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -294,7 +294,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             delay={0.5}
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -304,7 +304,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             delay={0.5}
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -314,7 +314,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             delay={1.0}
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -324,7 +324,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             delay={1.0}
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -334,7 +334,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             delay={1.5}
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -344,7 +344,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             delay={1.5}
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -385,7 +385,7 @@ You can have content "clip" in and out via the `animation` property.
         direction="bottom"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Clip BOTTOM / DEFAULT
         </Box>
     </Transition>
@@ -395,7 +395,7 @@ You can have content "clip" in and out via the `animation` property.
         direction="left"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Clip LEFT
         </Box>
     </Transition>
@@ -405,7 +405,7 @@ You can have content "clip" in and out via the `animation` property.
         direction="right"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Clip RIGHT
         </Box>
     </Transition>
@@ -415,7 +415,7 @@ You can have content "clip" in and out via the `animation` property.
         direction="top"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Clip TOP
         </Box>
     </Transition>
@@ -447,7 +447,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -457,18 +457,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
-                hello world!
-            </Box>
-        </Transition>
-
-        <Transition
-            animation="clip"
-            delay={0.5}
-            direction="bottom"
-            variation="enter"
-        >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -479,7 +468,18 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+
+        <Transition
+            animation="clip"
+            delay={0.5}
+            direction="bottom"
+            variation="enter"
+        >
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -490,7 +490,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -501,7 +501,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -512,7 +512,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -523,7 +523,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -559,43 +559,9 @@ You can have content "scale" in and out via the `animation` property.
     points={["2", "mobile:1"]}
     spacing="medium"
 >
-    <Transition
-        animation="scale"
-        direction="bottom"
-        {variation}
-    >
-        <Box palette="inverse" padding="huge">
-            Scale BOTTOM / DEFAULT
-        </Box>
-    </Transition>
-
-    <Transition
-        animation="scale"
-        direction="left"
-        {variation}
-    >
-        <Box palette="inverse" padding="huge">
-            Scale LEFT
-        </Box>
-    </Transition>
-
-    <Transition
-        animation="scale"
-        direction="right"
-        {variation}
-    >
-        <Box palette="inverse" padding="huge">
-            Scale RIGHT
-        </Box>
-    </Transition>
-
-    <Transition
-        animation="scale"
-        direction="top"
-        {variation}
-    >
-        <Box palette="inverse" padding="huge">
-            Scale TOP
+    <Transition animation="scale" {variation}>
+        <Box palette="inverse" padding="medium">
+            Scale
         </Box>
     </Transition>
 </Grid.Container>
@@ -623,31 +589,18 @@ By supplying a variation off the bat, you can also have the animation played as 
     {#if dom}
         <Transition
             animation="scale"
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
 
         <Transition
             animation="scale"
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
-                hello world!
-            </Box>
-        </Transition>
-
-        <Transition
-            animation="scale"
-            delay={0.5}
-            direction="bottom"
-            variation="enter"
-        >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -655,10 +608,19 @@ By supplying a variation off the bat, you can also have the animation played as 
         <Transition
             animation="scale"
             delay={0.5}
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+
+        <Transition
+            animation="scale"
+            delay={0.5}
+            variation="enter"
+        >
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -666,10 +628,9 @@ By supplying a variation off the bat, you can also have the animation played as 
         <Transition
             animation="scale"
             delay={1.0}
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -677,10 +638,9 @@ By supplying a variation off the bat, you can also have the animation played as 
         <Transition
             animation="scale"
             delay={1.0}
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -688,10 +648,9 @@ By supplying a variation off the bat, you can also have the animation played as 
         <Transition
             animation="scale"
             delay={1.5}
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -699,10 +658,9 @@ By supplying a variation off the bat, you can also have the animation played as 
         <Transition
             animation="scale"
             delay={1.5}
-            direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -743,7 +701,7 @@ You can have content "slide" in and out via the `animation` property.
         direction="bottom"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Slide BOTTOM / DEFAULT
         </Box>
     </Transition>
@@ -753,7 +711,7 @@ You can have content "slide" in and out via the `animation` property.
         direction="left"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Slide LEFT
         </Box>
     </Transition>
@@ -763,7 +721,7 @@ You can have content "slide" in and out via the `animation` property.
         direction="right"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Slide RIGHT
         </Box>
     </Transition>
@@ -773,7 +731,7 @@ You can have content "slide" in and out via the `animation` property.
         direction="top"
         {variation}
     >
-        <Box palette="inverse" padding="huge">
+        <Box palette="inverse" padding="medium">
             Slide TOP
         </Box>
     </Transition>
@@ -805,7 +763,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -815,18 +773,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
-                hello world!
-            </Box>
-        </Transition>
-
-        <Transition
-            animation="slide"
-            delay={0.5}
-            direction="bottom"
-            variation="enter"
-        >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -837,7 +784,18 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+
+        <Transition
+            animation="slide"
+            delay={0.5}
+            direction="bottom"
+            variation="enter"
+        >
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -848,7 +806,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -859,7 +817,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -870,7 +828,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
@@ -881,7 +839,7 @@ By supplying a variation off the bat, you can also have the animation played as 
             direction="bottom"
             variation="enter"
         >
-            <Box palette="inverse" padding="huge">
+            <Box palette="inverse" padding="medium">
                 hello world!
             </Box>
         </Transition>
