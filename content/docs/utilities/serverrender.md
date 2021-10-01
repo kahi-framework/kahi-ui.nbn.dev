@@ -1,8 +1,8 @@
 # ServerRender
 
-...
+`ServerRender` disables rendering of child content that doesn't work on the Browser, or doesn't make sense there. e.g. reading a file from local disk
 
-> **IMPORTANT**: The REPL runs on your Browser, so this will always show blank.
+> **IMPORTANT**: The REPL runs on your Browser, so this will always be blank.
 
 ```svelte repl ServerRender Preview
 <script>
@@ -10,7 +10,8 @@
 </script>
 
 <ServerRender>
-    This only renders on a server environment, e.g. SSR
+    This only renders in a SSR environment, e.g.
+    SvelteKit
 </ServerRender>
 ```
 
