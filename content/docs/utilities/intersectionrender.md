@@ -239,7 +239,7 @@ You can change the behavior of `IntersectionObserver` by passing in the `loading
 
 > **NOTE**: The REPL runs on your Browser, so this will always render anyway.
 
-By default, `IntersectionRender` will never whenever in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
+By default, `IntersectionRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 
 ```svelte repl IntersectionRender Fallthrough
 <script>
