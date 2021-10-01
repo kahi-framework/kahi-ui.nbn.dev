@@ -45,6 +45,12 @@
 />
 ```
 
+## Imports
+
+```javascript keybind Imports
+import {keybind} from "@kahi-ui/framework";
+```
+
 ## Compatibility
 
 Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.

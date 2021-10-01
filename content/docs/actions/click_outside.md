@@ -24,6 +24,12 @@
 </div>
 ```
 
+## Imports
+
+```javascript click_outside Imports
+import {click_outside} from "@kahi-ui/framework";
+```
+
 ## Compatibility
 
 Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.

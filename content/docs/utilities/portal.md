@@ -7,7 +7,7 @@ types=["document.body", "HTMLElement", "string"]
 
 [[properties.Portal]]
 name="loading"
-description="When the property is set and the `Portal` Component is not mouned, the child content is not rendered to DOM."
+description="When the property is set and the `Portal` Component is not mounted, the child content is not rendered to DOM."
 types=["lazy"]
 
 [[properties.Portal]]
@@ -60,7 +60,7 @@ types=["{}"]
 
 ## Compatibility
 
-`Portal` wraps your slotted content in a `display: contents` containing element, so keep that in mind in your CSS selectors. It also only remounts its self to the target on clientside Browsers with Javascript-enabled. So you need to plan a SSR-compatible fallback if using in a SSR scenario.
+`Portal` wraps your slotted content in a `display: contents` containing element, so keep that in mind in your CSS selectors. It also only remounts its self to the target on clientside Browsers with Javascript enabled. So you need to plan a SSR-compatible fallback if using in a SSR scenario.
 
 ## Loading
 
