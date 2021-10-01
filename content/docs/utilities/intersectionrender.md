@@ -44,6 +44,11 @@ types=["CustomEvent<IntersectionObserverEntry[]>"]
 name="intersectionstart"
 description="Fires whenever an intersection with the root viewport starts."
 types=["CustomEvent<IntersectionObserverEntry[]>"]
+
+[[slots.IntersectionRender]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 +++
 
 # IntersectionRender

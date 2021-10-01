@@ -1,3 +1,10 @@
++++
+[[slots.BrowserRender]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
++++
+
 # BrowserRender
 
 `BrowserRender` disables rendering of child content that either doesn't work in a SSR environment or doesn't make sense there. e.g. `<canvas>` rendering

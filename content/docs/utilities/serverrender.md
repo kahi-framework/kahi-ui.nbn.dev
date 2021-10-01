@@ -1,3 +1,10 @@
++++
+[[slots.ServerRender]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
++++
+
 # ServerRender
 
 `ServerRender` disables rendering of child content that doesn't work on the Browser, or doesn't make sense there. e.g. reading a file from local disk
