@@ -1,7 +1,7 @@
 /*!
  * Kahi UI - Framework
  *
- * v0.4.0
+ * v0.4.1
  */
 
 *, ::before, ::after {
@@ -188,6 +188,18 @@ textarea {
 textarea::placeholder {
   opacity: 1;
   color: #a1a1aa;
+}
+
+.\.\.\/transition\/Transition\.svelte {
+  -webkit-transition-property: background-color, border-color, color, fill, stroke, opacity, -webkit-box-shadow, -webkit-transform;
+  -o-transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, -webkit-box-shadow, transform, -webkit-transform;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+  -o-transition-duration: 150ms;
+  transition-duration: 150ms;
 }
 
 .transition {

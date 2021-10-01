@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/_app/start-b6a22e0e.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-53de5434.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-22b51bc0.js">
+		<link rel="modulepreload" href="/_app/chunks/navigation.config-c2c5c524.js">
+		<link rel="modulepreload" href="/_app/chunks/snippet-66ff6b5a.js">
+		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
+		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-40c37392.js">
+		<link rel="modulepreload" href="/_app/pages/repl/[...identifier].svelte-d9a18f7a.js">
+		<link rel="modulepreload" href="/_app/chunks/[...identifier]-5e7261a5.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
+		<link rel="stylesheet" href="/_app/assets/pages/repl/__layout.svelte-6876fa8d.css">
+
+		<script type="module">
+			import { start } from "/_app/start-b6a22e0e.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-22b51bc0.js"),
+						import("/_app/pages/repl/__layout.svelte-40c37392.js"),
+						import("/_app/pages/repl/[...identifier].svelte-d9a18f7a.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/repl/docs/utilities/intersectionrender/intersectionrender-preview",
+						query: new URLSearchParams(""),
+						params: {"identifier":"docs/utilities/intersectionrender/intersectionrender-preview"}
+					}
+				}
+			});
+		</script>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("kahi-docs.preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
+        failed to load <strong>REPL</strong>.
+    </section></div>
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002Fv0.4.1\",\"sub_title\":\"v0.4.1\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"discord\":\"https:\u002F\u002Fdiscord.com\u002Finvite\u002FJvUbmJvUBG\",\"version\":\"0.4.1\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/snippets/docs/utilities/intersectionrender/intersectionrender-preview.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"identifier\":\"intersectionrender-preview\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Code,\\n        IntersectionRender,\\n        Spacer,\\n        Transition,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let is_intersecting = false;\\n\u003C\u002Fscript\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CBox\\n    palette={is_intersecting\\n        ? \\\"affirmative\\\"\\n        : \\\"negative\\\"}\\n    padding=\\\"small\\\"\\n\u003E\\n    Scroll down to watch this \u003CCode\u003EBox\u003C\u002FCode\u003E change when\\n    the \u003CCode\u003EBox\u003C\u002FCode\u003E comes into view.\\n\u003C\u002FBox\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CIntersectionRender\\n    threshold={0.5}\\n    bind:is_intersecting\\n\u003E\\n    \u003CTransition animation=\\\"scale\\\" variation=\\\"enter\\\"\u003E\\n        \u003CBox palette=\\\"inverse\\\" padding=\\\"small\\\"\u003E\\n            I am in view!\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FTransition\u003E\\n\u003C\u002FIntersectionRender\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CBox\\n    palette={is_intersecting\\n        ? \\\"affirmative\\\"\\n        : \\\"negative\\\"}\\n    padding=\\\"small\\\"\\n\u003E\\n    Scroll up to watch this \u003CCode\u003EBox\u003C\u002FCode\u003E change when\\n    the \u003CCode\u003EBox\u003C\u002FCode\u003E comes into view.\\n\u003C\u002FBox\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\\n\u003CSpacer spacing=\\\"huge\\\" \u002F\u003E\",\"syntax\":\"svelte\",\"title\":\"IntersectionRender Preview\"}}"}</script>
+
+    </body>
+</html>
