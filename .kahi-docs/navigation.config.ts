@@ -129,9 +129,12 @@ export default define_navigation({
         {
             separator: "Utilities",
             items: [
+                {href: "/docs/utilities/browserrender", badge: "NEW"},
                 {href: "/docs/utilities/contextbackdrop"},
                 {href: "/docs/utilities/contextbutton"},
+                {href: "/docs/utilities/intersectionrender", badge: "NEW"},
                 {href: "/docs/utilities/portal"},
+                {href: "/docs/utilities/serverrender", badge: "NEW"},
                 {href: "/docs/utilities/transition", badge: "NEW"},
             ],
         },
@@ -148,7 +151,12 @@ export default define_navigation({
 
         {
             separator: "Actions",
-            items: [{href: "/docs/actions/click_outside"}, {href: "/docs/actions/keybind"}],
+            items: [
+                {href: "/docs/actions/click_outside"},
+                {href: "/docs/actions/keybind"},
+                {href: "/docs/actions/intersection_observer", badge: "NEW"},
+                {href: "/docs/actions/mutation_observer", badge: "NEW"},
+            ],
         },
 
         {
