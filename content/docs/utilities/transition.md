@@ -16,6 +16,11 @@ default="bottom"
 types=["bottom", "left", "right", "top"]
 
 [[properties.Transition]]
+name="duration"
+description="Sets a percentage range (e.g. `0.2`, `2.5`) multiplier on the current theme's duration on how long should the animation play."
+types=["number", "string"]
+
+[[properties.Transition]]
 name="variation"
 description="Controls the variation of the selected animation, if applicable."
 default="undefined"
@@ -167,7 +172,7 @@ types=["<length-percentage>, <length-percentage>"]
 
 ## Delay
 
-Based on the animaton duration properties in the currently loaded theme. You can use an additive percentage to delay it via the `delay` property.
+Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to delay it via the `delay` property.
 
 ```svelte repl Transition Delay
 <script>
@@ -191,6 +196,76 @@ Based on the animaton duration properties in the currently loaded theme. You can
 <Transition animation="clip" delay={1.25} {variation}>
     <Box palette="inverse" padding="medium">
         hello world!
+    </Box>
+</Transition>
+```
+
+## Duration
+
+Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to increase / shorten the animation duration via the `duration` property.
+
+```svelte repl Transition Duration
+<script>
+    import {
+        Box,
+        Button,
+        Transition,
+    } from "@kahi-ui/framework";
+
+    let variation = undefined;
+</script>
+
+<Button
+    on:click={() =>
+        (variation =
+            variation === "exit" ? "enter" : "exit")}
+>
+    Toggle Variation
+</Button>
+
+<Transition
+    animation="clip"
+    duration={0.25}
+    {variation}
+>
+    <Box palette="inverse" padding="medium">
+        hello world! (x0.25)
+    </Box>
+</Transition>
+
+<Transition animation="clip" {variation}>
+    <Box palette="inverse" padding="medium">
+        hello world! (x1)
+    </Box>
+</Transition>
+
+<Transition
+    animation="clip"
+    duration={1.75}
+    {variation}
+>
+    <Box palette="inverse" padding="medium">
+        hello world! (x1.75)
+    </Box>
+</Transition>
+
+<Transition
+    animation="clip"
+    duration={2.5}
+    {variation}
+>
+    <Box palette="inverse" padding="medium">
+        hello world! (x2.5)
+    </Box>
+</Transition>
+
+<Transition
+    animation="clip"
+    duration={3.25}
+    {variation}
+>
+    <Box palette="inverse" padding="medium">
+        hello world! (x3.25)
     </Box>
 </Transition>
 ```

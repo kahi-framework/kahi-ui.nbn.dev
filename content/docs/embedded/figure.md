@@ -7,7 +7,8 @@ types=["contain", "cover", "fill", "none", "scale-down"]
 [[properties.Figure]]
 name="shape"
 description="Changes the shape of the `Figure`."
-types=["pill", "rounded"]
+default="none"
+types=["none", "pill", "rounded"]
 
 [[properties.Figure]]
 name="size"

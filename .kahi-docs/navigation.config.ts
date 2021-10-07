@@ -49,8 +49,8 @@ export default define_navigation({
             separator: "Display",
             items: [
                 {href: "/docs/display/badge", badge: "UPDATED"},
-                {href: "/docs/display/list", badge: "UPDATED"},
-                {href: "/docs/display/table", badge: "UPDATED"},
+                {href: "/docs/display/list"},
+                {href: "/docs/display/table"},
             ],
         },
 
@@ -63,10 +63,10 @@ export default define_navigation({
             separator: "Feedback",
             items: [
                 {href: "/docs/feedback/dot", badge: "UPDATED"},
-                {href: "/docs/feedback/ellipsis", badge: "UPDATED"},
-                {href: "/docs/feedback/progress", badge: "UPDATED"},
-                {href: "/docs/feedback/spinner", badge: "UPDATED"},
-                {href: "/docs/feedback/wave", badge: "UPDATED"},
+                {href: "/docs/feedback/ellipsis"},
+                {href: "/docs/feedback/progress"},
+                {href: "/docs/feedback/spinner"},
+                {href: "/docs/feedback/wave"},
             ],
         },
 
@@ -85,11 +85,13 @@ export default define_navigation({
         {
             separator: "Layouts",
             items: [
-                {href: "/docs/layouts/container", badge: "UPDATED"},
-                {href: "/docs/layouts/divider", badge: "UPDATED"},
+                {href: "/docs/layouts/center", badge: "NEW"},
+                {href: "/docs/layouts/container"},
+                {href: "/docs/layouts/divider"},
                 {href: "/docs/layouts/grid"},
-                {href: "/docs/layouts/group", badge: "UPDATED"},
+                {href: "/docs/layouts/group"},
                 {href: "/docs/layouts/mosaic"},
+                {href: "/docs/layouts/position", badge: "NEW"},
                 {href: "/docs/layouts/scrollable"},
                 {href: "/docs/layouts/spacer"},
                 {href: "/docs/layouts/stack"},
@@ -99,19 +101,19 @@ export default define_navigation({
         {
             separator: "Surfaces",
             items: [
-                {href: "/docs/surfaces/box", badge: "UPDATED"},
-                {href: "/docs/surfaces/card", badge: "UPDATED"},
-                {href: "/docs/surfaces/hero", badge: "UPDATED"},
-                {href: "/docs/surfaces/tile", badge: "UPDATED"},
+                {href: "/docs/surfaces/box"},
+                {href: "/docs/surfaces/card"},
+                {href: "/docs/surfaces/hero"},
+                {href: "/docs/surfaces/tile"},
             ],
         },
 
         {
             separator: "Navigation",
             items: [
-                {href: "/docs/navigation/anchor", badge: "UPDATED"},
+                {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
-                {href: "/docs/navigation/breadcrumb", badge: "UPDATED"},
+                {href: "/docs/navigation/breadcrumb"},
                 {href: "/docs/navigation/menu"},
                 {href: "/docs/navigation/omni"},
             ],
@@ -129,13 +131,13 @@ export default define_navigation({
         {
             separator: "Utilities",
             items: [
-                {href: "/docs/utilities/browserrender", badge: "NEW"},
+                {href: "/docs/utilities/browserrender"},
                 {href: "/docs/utilities/contextbackdrop"},
                 {href: "/docs/utilities/contextbutton"},
-                {href: "/docs/utilities/intersectionrender", badge: "NEW"},
+                {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/portal"},
-                {href: "/docs/utilities/serverrender", badge: "NEW"},
-                {href: "/docs/utilities/transition", badge: "NEW"},
+                {href: "/docs/utilities/serverrender"},
+                {href: "/docs/utilities/transition", badge: "UPDATED"},
             ],
         },
 
@@ -154,8 +156,8 @@ export default define_navigation({
             items: [
                 {href: "/docs/actions/click_outside"},
                 {href: "/docs/actions/keybind"},
-                {href: "/docs/actions/intersection_observer", badge: "NEW"},
-                {href: "/docs/actions/mutation_observer", badge: "NEW"},
+                {href: "/docs/actions/intersection_observer"},
+                {href: "/docs/actions/mutation_observer"},
             ],
         },
 

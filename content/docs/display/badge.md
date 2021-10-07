@@ -6,8 +6,14 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Badge]]
 name="position"
-description="Sets higher positioning on the `Badge`."
+description="**(DEPRECATED)** Sets higher positioning on the `Badge`."
 types=["floated", "raised"]
+
+[[properties.Badge]]
+name="shape"
+description="Changes the shape of the `Badge`."
+default="none"
+types=["none", "pill", "rounded"]
 
 [[slots.Badge]]
 name="default"
@@ -122,6 +128,8 @@ You can change the color palette of the `Badge` via the `palette` property.
 
 ## Position
 
+> **WARNING**: This feature has been deprecated for removal in the future. Please use [`Position`](../layouts/position.md) instead.
+
 You can change the position of the `Badge` to raise it above in its parent to more explictly call out the information.
 
 ```svelte repl Badge Position
@@ -153,5 +161,33 @@ You can change the position of the `Badge` to raise it above in its parent to mo
             </Badge>
         </Button>
     </div>
+</Stack>
+```
+
+## Shape
+
+You can modify the shape of the `Shape` via the `shape` property.
+
+```svelte repl Badge Shape
+<script>
+    import {Badge, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Badge palette="inverse">
+        NONE / DEFAULT Badge
+    </Badge>
+
+    <Badge palette="inverse" shape="pill">
+        NONE / DEFAULT Badge
+    </Badge>
+
+    <Badge palette="inverse" shape="rounded">
+        NONE / DEFAULT Badge
+    </Badge>
 </Stack>
 ```

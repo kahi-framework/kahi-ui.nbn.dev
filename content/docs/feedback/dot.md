@@ -11,7 +11,7 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Dot]]
 name="position"
-description="Sets higher positioning on the `Dot`."
+description="**(DEPRECATED)** Sets higher positioning on the `Dot`."
 types=["floated", "raised"]
 
 [[slots.Dot]]
@@ -150,6 +150,8 @@ You can have the `Dot` perform animations to grab the end-user's attention via t
 ```
 
 ## Position
+
+> **WARNING**: This feature has been deprecated for removal in the future. Please use [`Position`](../layouts/position.md) instead.
 
 You can change the position of the `Dot` to raise it above in its parent to more explictly call out a Component.
 
