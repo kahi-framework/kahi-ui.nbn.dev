@@ -1,3 +1,10 @@
++++
+[[slots.Center]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
++++
+
 # Center
 
 `Center` is a layout primitive used to quickly center the child content within its self.
