@@ -1,7 +1,7 @@
 /*!
  * Kahi UI - Framework
  *
- * v0.4.1
+ * v0.4.2
  */
 
 *, ::before, ::after {
@@ -209,6 +209,12 @@ textarea::placeholder {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition-duration: 150ms;
+  -o-transition-duration: 150ms;
+  transition-duration: 150ms;
+}
+
+.duration {
   -webkit-transition-duration: 150ms;
   -o-transition-duration: 150ms;
   transition-duration: 150ms;
@@ -1322,6 +1328,8 @@ small {
 }
 
 .badge {
+    --shape-radius: none;
+
     --palette-background-normal: var(--badge-palette-background-normal);
     --palette-foreground-normal: var(--badge-palette-foreground-normal);
 
@@ -1338,6 +1346,8 @@ small {
 
     background: rgb(var(--palette-background-normal));
     color: rgb(var(--palette-foreground-normal));
+
+    border-radius: var(--shape-radius);
 
     font-size: var(--badge-font-size);
     font-weight: var(--badge-font-weight);
@@ -3033,9 +3043,10 @@ input[type="checkbox"][role="presentation"]:checked + .context-backdrop {
 .transition {
     --animation: unset;
     --delay: 0;
+    --duration: 1;
 
-    animation: var(--animation) var(--animation-reveal-duration) var(--animation-reveal-function)
-        calc(var(--animation-reveal-duration) * var(--delay)) both;
+    animation: var(--animation) calc(var(--animation-reveal-duration) * var(--duration))
+        var(--animation-reveal-function) calc(var(--animation-reveal-duration) * var(--delay)) both;
 }
 
 .transition[data-animation="clip"]:is(:not([data-direction]), [data-direction="bottom"])[data-variation~="enter"] {
@@ -3443,6 +3454,12 @@ figure[data-variation~="icon"][data-size] > * {
             height: var(--size-icon);
         }
 
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .grid {
   --grid-alignment-x: initial;
   --grid-alignment-y: initial;
@@ -3547,6 +3564,59 @@ figure[data-variation~="icon"][data-size] > * {
 .mosaic > * {
   margin: 0px;
 }
+
+.position {
+    display: inline-block;
+    position: relative
+}
+
+.position[data-variation="floated"] {
+        position: absolute
+    }
+
+.position[data-variation="floated"][data-placement="top"] {
+            top: 0
+        }
+
+.position[data-variation="floated"][data-placement="top"][data-alignment-x="left"] {
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+
+.position[data-variation="floated"][data-placement="top"][data-alignment-x="right"] {
+                right: 0;
+                transform: translate(50%, -50%);
+            }
+
+.position[data-variation="floated"][data-placement="bottom"] {
+            bottom: 0
+        }
+
+.position[data-variation="floated"][data-placement="bottom"][data-alignment-x="left"] {
+                left: 0;
+                transform: translate(-50%, 50%);
+            }
+
+.position[data-variation="floated"][data-placement="bottom"][data-alignment-x="right"] {
+                right: 0;
+                transform: translate(50%, 50%);
+            }
+
+.position[data-variation="raised"][data-placement="top"] {
+            transform: translateY(-50%);
+        }
+
+.position[data-variation="raised"][data-placement="bottom"] {
+            transform: translateY(50%);
+        }
+
+.position[data-variation="raised"][data-placement="left"] {
+            transform: translateX(-50%);
+        }
+
+.position[data-variation="raised"][data-placement="right"] {
+            transform: translateX(50%);
+        }
 
 .scrollable {
     overflow: auto;
