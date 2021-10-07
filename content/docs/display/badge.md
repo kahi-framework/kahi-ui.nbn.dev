@@ -6,7 +6,7 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Badge]]
 name="position"
-description="Sets higher positioning on the `Badge`."
+description="**(DEPRECATED)** Sets higher positioning on the `Badge`."
 types=["floated", "raised"]
 
 [[slots.Badge]]
@@ -121,6 +121,8 @@ You can change the color palette of the `Badge` via the `palette` property.
 ```
 
 ## Position
+
+> **WARNING**: This feature has been deprecated for removal in the future. Please use [`Position`](../layouts/position.md) instead.
 
 You can change the position of the `Badge` to raise it above in its parent to more explictly call out the information.
 
