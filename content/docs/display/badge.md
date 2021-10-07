@@ -9,6 +9,12 @@ name="position"
 description="**(DEPRECATED)** Sets higher positioning on the `Badge`."
 types=["floated", "raised"]
 
+[[properties.Badge]]
+name="shape"
+description="Changes the shape of the `Badge`."
+default="none"
+types=["none", "pill", "rounded"]
+
 [[slots.Badge]]
 name="default"
 description="Default unnamed slot."
@@ -155,5 +161,33 @@ You can change the position of the `Badge` to raise it above in its parent to mo
             </Badge>
         </Button>
     </div>
+</Stack>
+```
+
+## Shape
+
+You can modify the shape of the `Shape` via the `shape` property.
+
+```svelte repl Badge Shape
+<script>
+    import {Badge, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Badge palette="inverse">
+        NONE / DEFAULT Badge
+    </Badge>
+
+    <Badge palette="inverse" shape="pill">
+        NONE / DEFAULT Badge
+    </Badge>
+
+    <Badge palette="inverse" shape="rounded">
+        NONE / DEFAULT Badge
+    </Badge>
 </Stack>
 ```
