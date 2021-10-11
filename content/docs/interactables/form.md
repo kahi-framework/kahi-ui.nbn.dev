@@ -26,7 +26,7 @@ types=["string"]
 
 [[properties."Form.Label"]]
 name="for"
-description="Sets the [`for`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attr-for) attribute that is targetted."
+description="Sets the [`for`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attr-for) attribute of the element that is targetted."
 types=["string"]
 
 [[events."Form.Group"]]
@@ -38,6 +38,26 @@ types=["CustomEvent<void>"]
 name="click"
 description="Fires whenever clicked."
 types=["MouseEvent"]
+
+[[slots."Form.Control"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Form.Group"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Form.HelpText"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Form.Label"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
 
 [[custom_properties."Form.Control"]]
 name="--form-control-gap"
