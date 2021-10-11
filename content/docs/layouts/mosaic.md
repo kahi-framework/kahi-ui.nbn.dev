@@ -92,7 +92,7 @@ types=["{}"]
 
 ## Sizing
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can alter how large each `Mosaic` item should be via the `sizing` property.
 
@@ -181,7 +181,7 @@ You can alter how large each `Mosaic` item should be via the `sizing` property.
 
 ## Spacing
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 

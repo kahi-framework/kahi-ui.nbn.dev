@@ -132,7 +132,7 @@ types=["{}"]
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within the `Overlay` layout, it will automatically inherit the set `logic_id` via [`id`](../stores/id.md) Svelte Store.
+> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Overlay`, it will automatically inherit the set `logic_id`.
 
 You can make the `Overlay` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
 
@@ -304,7 +304,7 @@ You can manually open / close the `Overlay` via the `state` property.
 
 ## Orientation
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
 
 You can set the `Overlay` to render horizontally via the `orientation` property.
 

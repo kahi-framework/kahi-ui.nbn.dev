@@ -1,6 +1,6 @@
 # viewport
 
-`viewport` / `viewports` are [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a [Viewport](../framework/responsivity.md) selected in initialization is currently active.
+`viewport` / `viewports` are [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a [Viewport](../framework/responsitivity.md) selected in initialization is currently active.
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 

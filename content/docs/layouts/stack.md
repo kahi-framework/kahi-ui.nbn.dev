@@ -73,7 +73,7 @@ types=["{}"]
 
 ## Orientation
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
 
 You can set the `Stack` to render horizontally via the `orientation` property.
 
@@ -130,7 +130,7 @@ You can set the `Stack` to render horizontally via the `orientation` property.
 
 ## Spacing
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
@@ -250,7 +250,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
 ## Alignment
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `alignment_x={["center", "tablet:left", "mobile:right"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `alignment_x={["center", "tablet:left", "mobile:right"]}`
 
 You can adjust the spacing between items via the `alignment`, `alignment_x`, and `alignment_y` properties.
 

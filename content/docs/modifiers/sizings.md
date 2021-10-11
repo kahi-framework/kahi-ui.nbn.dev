@@ -32,11 +32,11 @@ types=["auto", "content-fit", "content-max", "content-min", "prose", "stretch", 
 
 # Sizings
 
-All Components have access to the global width and height HTML data attributes. All of which, supports [Responitivity](../framework/responsivity.md).
+All Components have access to the global width and height HTML data attributes. All of which, supports [Responitivity](../framework/responsitivity.md).
 
 ## Width
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `width={["25", "tablet:viewport-50"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `width={["25", "tablet:viewport-50"]}`
 
 You can set a defined width for your Components via the `width` property.
 
@@ -237,7 +237,7 @@ You can set a defined width for your Components via the `width` property.
 
 ## Height
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `height={["25", "tablet:viewport-50"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `height={["25", "tablet:viewport-50"]}`
 
 You can set a defined height for your Components via the `height` property.
 

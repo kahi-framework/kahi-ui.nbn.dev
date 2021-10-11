@@ -72,11 +72,11 @@ types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}
 
 # Spacings
 
-All Components have access to the global margin and padding HTML data attributes. All of which, supports [Responitivity](../framework/responsivity.md).
+All Components have access to the global margin and padding HTML data attributes. All of which, supports [Responitivity](../framework/responsitivity.md).
 
 ## Margin
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `margin={["small", "tablet:large"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `margin={["small", "tablet:large"]}`
 
 You can set margins for your Components via the `margin` property.
 
@@ -125,7 +125,7 @@ You can set margins for your Components via the `margin` property.
 
 ## Padding
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `padding={["small", "tablet:large"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `padding={["small", "tablet:large"]}`
 
 You can set paddings for your Components via the `padding` property.
 
