@@ -73,6 +73,96 @@ types=["MouseEvent"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Button]]
+name="--button-palette-background-light"
+description="Controls the default RGB color value used for `background` (block)."
+types=["<r,g,b>"]
+
+[[custom_properties.Button]]
+name="--button-palette-background-normal"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties.Button]]
+name="--button-palette-background-bold"
+description="Controls the default RGB color value used for `background` / `border-color` (outline) / `color` (clear)."
+types=["<r,g,b>"]
+
+[[custom_properties.Button]]
+name="--button-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties.Button]]
+name="--button-size-text-size"
+description="Controls the default `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Button]]
+name="--button-size-text-line-height"
+description="Controls the default `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Button]]
+name="--button-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Button]]
+name="--button-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
+
+[[custom_properties.Button]]
+name="--button-font-weight"
+description="Controls the `font-weight` used."
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
+
+[[custom_properties.Button]]
+name="--button-gap"
+description="Controls the spacing gap between child elements, e.g. icons."
+types=["<length>"]
+
+[[custom_properties.Button]]
+name="--button-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties.Button]]
+name="--button-padding-y"
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
+
+[[custom_properties.Button]]
+name="--button-active-scale"
+description="Controls the `transform: scale` used when clicked."
+types=["<number>"]
+
+[[custom_properties.Button]]
+name="--button-disabled-opacity"
+description="Controls the `opacity` used when disabled."
+types=["<alpha-value>"]
+
+[[custom_properties.Button]]
+name="--button-clear-active-background-opacity"
+description="Controls the `background` opacity used when clicked."
+types=["<alpha-value>"]
+
+[[custom_properties.Button]]
+name="--button-clear-focus-background-opacity"
+description="Controls the `background` opacity used when focused."
+types=["<alpha-value>"]
+
+[[custom_properties.Button]]
+name="--button-outline-focus-background-opacity"
+description="Controls the `background` opacity used when focused."
+types=["<alpha-value>"]
+
+[[custom_properties.Button]]
+name="--button-outline-focus-border-opacity"
+description="Controls the `border-color` opacity used when focused."
+types=["<alpha-value>"]
 +++
 
 # Button
