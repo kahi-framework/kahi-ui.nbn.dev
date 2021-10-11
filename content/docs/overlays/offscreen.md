@@ -119,7 +119,7 @@ types=["{}"]
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within the `Offscreen` layout, it will automatically inherit the set `logic_id` via [`id`](../stores/id.md) Svelte Store.
+> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Offscreen`, it will automatically inherit the set `logic_id`.
 
 You can make the `Offscreen` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
 

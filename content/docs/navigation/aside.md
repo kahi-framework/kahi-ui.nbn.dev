@@ -412,7 +412,7 @@ You can change the color palette of the `Aside` via the `palette` property.
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within the `Aside.Container` layout, it will automatically inherit the set `logic_id` via [`id`](../stores/id.md) Svelte Store.
+> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Aside.Container`, it will automatically inherit the set `logic_id`.
 
 > **NOTE**: Interally when the `logic_id` property is set, the `Aside.Container` wrapped in an [`Offscreen`](../overlays/offscreen.md) Component to provide the collapsing functionality.
 

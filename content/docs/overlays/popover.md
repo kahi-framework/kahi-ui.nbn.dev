@@ -134,7 +134,7 @@ types=["{}"]
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within the `Popover` layout, it will automatically inherit the set `logic_id` via [`id`](../stores/id.md) Svelte Store.
+> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Popover`, it will automatically inherit the set `logic_id`.
 
 You can make the `Popover` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
 
@@ -227,6 +227,86 @@ You can optionally have the `Popover` dismissible by clicking outside the `Popov
     >
         This is a DISMISSIBLE Popover.
     </Box>
+</Popover>
+```
+
+## State
+
+> **WARNING**: If you use this to toggle the `Popover`, instead of something like the [`ContextButton`](../utilities/contextbutton.md). It will not work on Browsers without Javascript enabled.
+
+You can manually open / close the `Popover` via the `state` property.
+
+```svelte repl Popover State
+<script>
+    import {
+        Card,
+        ContextButton,
+        Menu,
+        Popover,
+        Spacer,
+        Text,
+    } from "@kahi-ui/framework";
+
+    let state = false;
+
+    function on_click(event) {
+        state = false;
+    }
+</script>
+
+<Popover
+    logic_id="popover-preview"
+    alignment_x="right"
+    spacing="medium"
+    bind:state
+    dismissible
+    hidden
+>
+    <ContextButton palette="accent">
+        Open Popover
+    </ContextButton>
+
+    <Card.Container
+        palette="auto"
+        elevation="medium"
+        max_width="content-max"
+    >
+        <Card.Section>
+            <Menu.Container>
+                <Menu.Button on:click={on_click}>
+                    Copy
+                    <Spacer
+                        variation="inline"
+                        spacing="medium"
+                    />
+
+                    <Text is="kbd">CTRL+C</Text>
+                </Menu.Button>
+
+                <Menu.Button on:click={on_click}>
+                    Cut
+                    <Spacer
+                        variation="inline"
+                        spacing="medium"
+                    />
+
+                    <Text is="kbd">CTRL+X</Text>
+                </Menu.Button>
+
+                <Menu.Divider />
+
+                <Menu.Button on:click={on_click}>
+                    Delete
+                    <Spacer
+                        variation="inline"
+                        spacing="medium"
+                    />
+
+                    <Text is="kbd">DEL</Text>
+                </Menu.Button>
+            </Menu.Container>
+        </Card.Section>
+    </Card.Container>
 </Popover>
 ```
 
