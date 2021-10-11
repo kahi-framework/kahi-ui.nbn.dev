@@ -26,6 +26,7 @@ export default define_navigation({
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsivity"},
+                {href: "/docs/framework/elements"},
                 {href: "/docs/framework/events"},
             ],
         },
