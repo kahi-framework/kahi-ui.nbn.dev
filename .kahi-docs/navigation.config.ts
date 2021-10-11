@@ -112,7 +112,7 @@ export default define_navigation({
         {
             separator: "Navigation",
             items: [
-                {href: "/docs/navigation/anchor"},
+                {href: "/docs/navigation/anchor", badge: "UPDATED"},
                 {href: "/docs/navigation/aside"},
                 {href: "/docs/navigation/breadcrumb"},
                 {href: "/docs/navigation/menu"},
