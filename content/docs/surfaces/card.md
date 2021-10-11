@@ -596,7 +596,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
 
 ## Orientation
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
 
 You can set the `Card.Footer` to render vertically via the `orientation` property.
 

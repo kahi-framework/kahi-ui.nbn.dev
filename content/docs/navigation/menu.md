@@ -202,7 +202,7 @@ types=["{}"]
 
 ## Orientation
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["tablet:horizontal", "mobile:horizontal"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["tablet:horizontal", "mobile:horizontal"]}`
 
 > **IMPORTANT**: You should never use sub menus whenever using horizontal `Menu.Container` Components.
 

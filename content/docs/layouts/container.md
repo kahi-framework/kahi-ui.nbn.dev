@@ -53,7 +53,7 @@ types=["<length>"]
 
 ## Viewports
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `viewport={["mobile", "widescreen:prose"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `viewport={["mobile", "widescreen:prose"]}`
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 

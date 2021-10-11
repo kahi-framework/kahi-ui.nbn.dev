@@ -116,7 +116,7 @@ types=["{}"]
 
 ## Points
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `points={["7", "tablet:6", "mobile:5"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `points={["7", "tablet:6", "mobile:5"]}`
 
 You can adjust how many points the `Grid.Container` items are divided by via the `points` property.
 
@@ -462,7 +462,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
 ## Spacing
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
@@ -589,7 +589,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
 ## Item Span
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `span={["3", "tablet:2", "mobile:1"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `span={["3", "tablet:2", "mobile:1"]}`
 
 You can adjust grid span of individual items via the `span`, `span_x`, `span_y` properties, by wrapping the items in `Grid.Item`.
 

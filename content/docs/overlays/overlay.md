@@ -304,7 +304,7 @@ You can manually open / close the `Overlay` via the `state` property.
 
 ## Orientation
 
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:horizontal", "widescreen:horizontal"]}`
 
 You can set the `Overlay` to render horizontally via the `orientation` property.
 

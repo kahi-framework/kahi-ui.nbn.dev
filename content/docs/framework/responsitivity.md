@@ -1,4 +1,4 @@
-# Responsivity
+# Responsitivity
 
 Kahi UI supports responsive design out of the box for the majority of its Components. Such as [Grid](../layouts/grid.md), where you can define how many items are displayed at each Viewport.
 
@@ -19,13 +19,13 @@ To be able to use Viewport-specific values, you just need to prefix your values 
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 
-```svelte repl Responsivity Syntax
+```svelte repl Responsitivity Syntax
 <script>
     import {Box, Grid} from "@kahi-ui/framework";
 </script>
 
 <Grid.Container
-    class="responsivity-syntax"
+    class="responsitivity-syntax"
     points={["5", "mobile:2", "tablet:3", "desktop:4"]}
     spacing="medium"
 >
@@ -59,7 +59,7 @@ To be able to use Viewport-specific values, you just need to prefix your values 
 </Grid.Container>
 
 <style>
-    :global(.responsivity-syntax .box) {
+    :global(.responsitivity-syntax .box) {
         height: 3rem;
     }
 </style>
