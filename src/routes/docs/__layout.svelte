@@ -53,6 +53,10 @@
 </AsideLayout>
 
 <style>
+    :global(.docs-container) :global(a) {
+        color: rgb(var(--palette-accent-boldest));
+    }
+
     :global(.docs-container) > :global(h1),
     :global(.docs-container) > :global(h2),
     :global(.docs-container) > :global(h3),
