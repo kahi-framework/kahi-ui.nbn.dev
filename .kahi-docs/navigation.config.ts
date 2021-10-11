@@ -48,7 +48,7 @@ export default define_navigation({
         {
             separator: "Display",
             items: [
-                {href: "/docs/display/badge", badge: "UPDATED"},
+                {href: "/docs/display/badge"},
                 {href: "/docs/display/list"},
                 {href: "/docs/display/table"},
             ],
@@ -62,7 +62,7 @@ export default define_navigation({
         {
             separator: "Feedback",
             items: [
-                {href: "/docs/feedback/dot", badge: "UPDATED"},
+                {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
                 {href: "/docs/feedback/progress"},
                 {href: "/docs/feedback/spinner"},
@@ -73,25 +73,25 @@ export default define_navigation({
         {
             separator: "Interactables",
             items: [
-                {href: "/docs/interactables/button"},
-                {href: "/docs/interactables/check"},
-                {href: "/docs/interactables/form"},
-                {href: "/docs/interactables/radio"},
-                {href: "/docs/interactables/switch"},
-                {href: "/docs/interactables/textinput"},
+                {href: "/docs/interactables/button", badge: "UPDATED"},
+                {href: "/docs/interactables/check", badge: "UPDATED"},
+                {href: "/docs/interactables/form", badge: "UPDATED"},
+                {href: "/docs/interactables/radio", badge: "UPDATED"},
+                {href: "/docs/interactables/switch", badge: "UPDATED"},
+                {href: "/docs/interactables/textinput", badge: "UPDATED"},
             ],
         },
 
         {
             separator: "Layouts",
             items: [
-                {href: "/docs/layouts/center", badge: "NEW"},
+                {href: "/docs/layouts/center"},
                 {href: "/docs/layouts/container"},
                 {href: "/docs/layouts/divider"},
                 {href: "/docs/layouts/grid"},
                 {href: "/docs/layouts/group"},
                 {href: "/docs/layouts/mosaic"},
-                {href: "/docs/layouts/position", badge: "NEW"},
+                {href: "/docs/layouts/position"},
                 {href: "/docs/layouts/scrollable"},
                 {href: "/docs/layouts/spacer"},
                 {href: "/docs/layouts/stack"},
@@ -122,6 +122,7 @@ export default define_navigation({
         {
             separator: "Overlays",
             items: [
+                {href: "/docs/overlays/clickable"},
                 {href: "/docs/overlays/popover"},
                 {href: "/docs/overlays/offscreen"},
                 {href: "/docs/overlays/overlay"},
@@ -137,7 +138,7 @@ export default define_navigation({
                 {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
-                {href: "/docs/utilities/transition", badge: "UPDATED"},
+                {href: "/docs/utilities/transition"},
             ],
         },
 
