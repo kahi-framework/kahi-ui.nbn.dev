@@ -68,6 +68,86 @@ types=["InputEvent"]
 name="default"
 description="Default unnamed slot. Renders the `Radio` inside a `<label>`, alongside the sibling slot content."
 types=["{}"]
+
+[[custom_properties.Radio]]
+name="--radio-palette-background-bold"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties.Radio]]
+name="--radio-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties.Radio]]
+name="--radio-size-text-size"
+description="Controls the default font size used for as relative base for `padding` and dot `font-size`."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Radio]]
+name="--radio-size-text-line-height"
+description="Controls the default `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Radio]]
+name="--radio-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Radio]]
+name="--radio-padding"
+description="Controls the `padding` used."
+types=["<length>"]
+
+[[custom_properties.Radio]]
+name="--radio-active-scale"
+description="Controls the `transform: scale` used when clicked."
+types=["<number>"]
+
+[[custom_properties.Radio]]
+name="--radio-disabled-opacity"
+description="Controls the `opacity` used when disabled."
+types=["<alpha-value>"]
+
+[[custom_properties.Radio]]
+name="--radio-dot-checked-clip-path"
+description="Controls the `clip-path: inset` used when checked."
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage> round <length/percentage>"]
+
+[[custom_properties.Radio]]
+name="--radio-dot-unchecked-clip-path"
+description="Controls the `clip-path: inset` used when unchecked."
+types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage> round <length/percentage>"]
+
+[[custom_properties.Radio]]
+name="--radio-dot-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Radio]]
+name="--radio-block-background-opacity"
+description="Controls the default `background` opacity used."
+types=["<alpha-value>"]
+
+[[custom_properties.Radio]]
+name="--radio-block-checked-active-background-opacity"
+description="Controls the `background` opacity used when checked and clicked."
+types=["<alpha-value>"]
+
+[[custom_properties.Radio]]
+name="--radio-block-unchecked-active-background-opacity"
+description="Controls the `background` opacity used when unchecked and clicked."
+types=["<alpha-value>"]
+
+[[custom_properties.Radio]]
+name="--radio-flush-checked-active-color-opacity"
+description="Controls the `color` opacity used when checked and clicked."
+types=["<alpha-value>"]
+
+[[custom_properties.Radio]]
+name="--radio-flush-unchecked-active-color-opacity"
+description="Controls the `color` opacity used when unchecked and clicked."
+types=["<alpha-value>"]
 +++
 
 # Radio
