@@ -115,6 +115,76 @@ types=["FocusEvent"]
 name="input"
 description="Fires whenever the `TextInput` has its value changed."
 types=["InputEvent"]
+
+[[custom_properties.TextInput]]
+name="--textinput-palette-background-bold"
+description="Controls the default RGB color value used for `background` (block) / `border-color` (outline) / `color` (flush)."
+types=["<r,g,b>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-palette-foreground-normal"
+description="Controls the default RGB color value used for `color`."
+types=["<r,g,b>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-size-text-size"
+description="Controls the default `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-size-text-line-height"
+description="Controls the default `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-padding-y"
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-disabled-opacity"
+description="Controls the `opacity` used when disabled."
+types=["<alpha-value>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-placeholder-opacity"
+description="Controls the `opacity` used for placeholder text."
+types=["<alpha-value>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-block-background-opacity"
+description="Controls the default `background` opacity used."
+types=["<alpha-value>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-block-hover-background-opacity"
+description="Controls the `background` opacity used when focused."
+types=["<alpha-value>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-outline-border-opacity"
+description="Controls the default `border-color` opacity used."
+types=["<alpha-value>"]
+
+[[custom_properties.TextInput]]
+name="--textinput-outline-hover-border-opacity"
+description="Controls the `border-color` opacity used when hovered."
+types=["<alpha-value>"]
 +++
 
 # TextInput
