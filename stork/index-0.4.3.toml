@@ -1,0 +1,1577 @@
+[input]
+url_prefix = "/docs/"
+
+  [[input.files]]
+  contents = """
+click_outside
+click_outside is a Svelte Action, which runs a on_click_outside(event: MouseEvent): void callback whenever your assigned element is clicked outside of.
+
+Imports
+Compatibility
+Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
+"""
+  filetype = "PlainText"
+  url = "actions/click_outside"
+  title = "click_outside"
+
+  [[input.files]]
+  contents = """
+intersection_observer
+intersection_observer is a Svelte Action, which runs a on_intersect(intersections: IntersectionObserverEntry[]): void callback whenever the targetted element intersects the root viewport.
+
+NOTE: The below REPL basically reimplements IntersectionRender.
+
+
+Imports
+Compatibility
+Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement. The Action is dependent on IntersectionObserver.
+"""
+  filetype = "PlainText"
+  url = "actions/intersection_observer"
+  title = "intersection_observer"
+
+  [[input.files]]
+  contents = """
+keybind
+keybind is a Svelte Action, which runs a on_bind(event: IKeybindEvent): void callback whenever your assigned element has focus.
+
+Imports
+Compatibility
+Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
+"""
+  filetype = "PlainText"
+  url = "actions/keybind"
+  title = "keybind"
+
+  [[input.files]]
+  contents = """
+mutation_observer
+mutation_observer is a Svelte Action, which runs a on_mutate(mutations: MutationRecord[]): void callback whenever the targetted element intersects the root viewport.
+
+Imports
+Compatibility
+Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement. The Action is dependent on MutationObserver.
+"""
+  filetype = "PlainText"
+  url = "actions/mutation_observer"
+  title = "mutation_observer"
+
+  [[input.files]]
+  contents = """
+Tab
+Tab Components are typically used for turning what would be multi-page content, into a single page with a set of radio buttons to toggle between views.
+
+Imports
+
+Palette
+You can change the color palette of the Tab radio buttons via the palette property.
+
+Sizing
+You can alter how large each Tab radio button should be via the sizing property.
+
+Alignment
+You can change the alignment of each Tab radio button via the alignment_x property.
+
+Loading
+
+NOTE: Use the in-Browser developer tools to see this functionality in action.
+
+You can customize the slot loading behavior of individual Tab.Section Components to not render their children, via the loading property.
+
+Anchor
+You can substitute Tab.Label for Tab.Anchor to support per-page tabbed views.
+
+"""
+  filetype = "PlainText"
+  url = "disclosure/tab"
+  title = "Tab"
+
+  [[input.files]]
+  contents = """
+Badge
+Badge is typically used to subtlely display to the user some type of ancillary information, relating to its siblings / parent UI elements.
+
+Imports
+Palette
+You can change the color palette of the Badge via the palette property.
+
+Position
+
+WARNING: This feature has been deprecated for removal in the future. Please use Position instead.
+
+You can change the position of the Badge to raise it above in its parent to more explictly call out the information.
+
+Shape
+You can modify the shape of the Shape via the shape property.
+
+"""
+  filetype = "PlainText"
+  url = "display/badge"
+  title = "Badge"
+
+  [[input.files]]
+  contents = """
+List
+List is used for rendering simple text lists.
+
+Imports
+Types
+You can change what type of list is being rendered via the is property.
+
+"""
+  filetype = "PlainText"
+  url = "display/list"
+  title = "List"
+
+  [[input.files]]
+  contents = """
+Table
+Table is typically used to render tabular data in a structured row -> columns format, for end-users to easily read the contents.
+
+Table Imports
+Borders
+You can make a Table have borders via the variation property.
+
+Stripes
+You can make a Table have stripes via the variation property.
+
+Borders + Stripes
+You can make a Table have both borders AND stripes via the variation property.
+
+Sizing
+You can change the sizes / spacings of the child elements via the sizing property.
+
+Scrollable Tables
+You can make a Table scrollable by wrapping it with a Scrollable.
+
+"""
+  filetype = "PlainText"
+  url = "display/table"
+  title = "Table"
+
+  [[input.files]]
+  contents = """
+Figure
+Figure is a multimedia container Component, providing modifications for things such as images and videos.
+
+Imports
+Shape
+You can modify the shape of the child content via the shape property.
+
+Size
+You can modify the size of the child content between five presets via the size property. Along with separate set of sizes meant for icon-sized content by including variation="icon".
+
+Fit
+You can change how the child content is stretched across the Figure container via the fit property.
+
+"""
+  filetype = "PlainText"
+  url = "embedded/figure"
+  title = "Figure"
+
+  [[input.files]]
+  contents = """
+Dot
+Dot is typically used for calling out other UI elements to the end-user, that they need attention.
+
+Imports
+Palette
+You can change the color palette of the Dot via the palette property.
+
+Animation
+You can have the Dot perform animations to grab the end-user's attention via the animation property.
+
+Position
+
+WARNING: This feature has been deprecated for removal in the future. Please use Position instead.
+
+You can change the position of the Dot to raise it above in its parent to more explictly call out a Component.
+
+"""
+  filetype = "PlainText"
+  url = "feedback/dot"
+  title = "Dot"
+
+  [[input.files]]
+  contents = """
+Ellipsis
+Ellipsis is a text-based indicator used to tell the end-user that the Web Application is loading something in the background.
+
+Imports
+Character
+You can customize the text character used for the animation via the character property.
+
+"""
+  filetype = "PlainText"
+  url = "feedback/ellipsis"
+  title = "Ellipsis"
+
+  [[input.files]]
+  contents = """
+Progress
+Progress is typically used to render feedback to the end-user about how complete a current task is.
+
+Imports
+Shape
+You can modify the shape of the Progress via the shape property.
+
+Palette
+You can change the color palette of the Progress via the palette property.
+
+Size
+You can change the size of the Progress via the size property.
+
+Indeterminate
+By not passing the value property, the Progress will render with an animation for tasks that don't have trackable progression.
+
+"""
+  filetype = "PlainText"
+  url = "feedback/progress"
+  title = "Progress"
+
+  [[input.files]]
+  contents = """
+Spinner
+Spinner is an indicator used to tell the end-user that the Web Application is loading something in the background.
+
+Imports
+Palette
+You can change the color palette of the Spinner via the palette property.
+
+Size
+You can change the size of the Spinner via the size property.
+
+"""
+  filetype = "PlainText"
+  url = "feedback/spinner"
+  title = "Spinner"
+
+  [[input.files]]
+  contents = """
+Wave
+Wave is an indicator used to tell the end-user that the Web Application is loading something in the background.
+
+Imports
+Palette
+You can change the color palette of the Wave via the palette property.
+
+"""
+  filetype = "PlainText"
+  url = "feedback/wave"
+  title = "Wave"
+
+  [[input.files]]
+  contents = """
+Browser Support
+Modern Browsers listed below and generally their derivatives. Primary testing happens on Chrome / Firefox, both mobile and desktop. With occasional testing on Gnome Web which is based on WebKit.
+
+
+
+
+Chrome
+Edge
+Firefox
+Safari
+Edge (Pre Chromium)
+Internet Explorer
+
+
+
+
+Estimated Minimum
+88+ January 2021
+88+ January 2021
+84+ December 2020
+14.1+ April 2021
+NOT SUPPORTED
+NOT SUPPORTED
+
+
+Tested Minimum
+89+
+?
+87+
+?
+NOT SUPPORTED
+NOT SUPPORTED
+
+
+
+Features Used
+The features listed below are used within Kahi UI, and are newer features. So they raise the minimum Browser versions needed.
+CSS
+
+clip-path w/ Shapes
+CSS Custom Properties
+Flexbox w/ Gap
+Grid
+inset
+:is
+:not w/ Selector List
+prefers-color-scheme
+
+Javascript
+
+TODO: Run through the codebase and look for newer JS features used
+
+"""
+  filetype = "PlainText"
+  url = "framework/browser-support"
+  title = "Browser Support"
+
+  [[input.files]]
+  contents = """
+Elements
+Like binding DOM nodes, most Components support binding their top-level layout HTMLElement via the element property instead of this.
+
+"""
+  filetype = "PlainText"
+  url = "framework/elements"
+  title = "Elements"
+
+  [[input.files]]
+  contents = """
+Events
+Like binding normal DOM events with Svelte. Various Components in the framework support forwarding their element's native events, or supply their own events for their own specific logic.
+
+"""
+  filetype = "PlainText"
+  url = "framework/events"
+  title = "Events"
+
+  [[input.files]]
+  contents = """
+F.A.Q.
+Where can I get help?
+If you need help with something not properly documented or needs clarification, you can visit the Issue Tracker. File a new issue and it'll be addressed on a spare time effort. Alternatively, visit the Discord Server to talk to other Kahi UI developers.
+What Browsers are supported?
+Visit the Browser Support documentation for more information.
+Can I use the library without Svelte?
+Yes, however there is no official support to do so. Visit Releases and grab the .css distributable files, and read the library source code on how to do markup, progressive enhancements, etc.
+Can I use the library on Browsers that don't support or have Javascript disabled?
+Yes! The library is explictly made in mind that Svelte should be used to sprinkle extra functionality ontop of logic baked in HTML / CSS. If you find something not working properly, file an issue.
+Is Themeing Supported?
+Not at the moment, but that'll be tackled via global CSS Custom Properties at a later time.
+Is Accessibility / ARIA Supported?
+While I want to implement full proper support, including keyboard navigation. It is currently not being pursued and will be tackled at a later date. However if you encounter something that'll be detrimental file an issue.
+"""
+  filetype = "PlainText"
+  url = "framework/faq"
+  title = "F.A.Q."
+
+  [[input.files]]
+  contents = """
+Getting Started
+Installation
+Using a terminal inside of your project's directory, use npm to install the package.
+Importing Stylesheet
+First if your toolchain supports it, import the required CSS files from @kahi-ui/framework/dist:
+Otherwise download the required CSS files from Releases and use <link rel="stylesheet">:
+Usage
+Import Components by their variable name from @kahi-ui/framework:
+
+Some Components are multi-part patterns, so you'll need to import their namespaces:
+
+"""
+  filetype = "PlainText"
+  url = "framework/getting-started"
+  title = "Getting Started"
+
+  [[input.files]]
+  contents = """
+Responsitivity
+Kahi UI supports responsive design out of the box for the majority of its Components. Such as Grid, where you can define how many items are displayed at each Viewport.
+Viewports
+As mentioned above, Kahi UI has the concept of four pre-defined breakpoints that are known as Viewports. Which are only active whenever the Browser window's width is within two sizes.
+
+
+
+Viewport
+Minimum
+Maximum
+
+
+
+
+mobile
+0px
+640px
+
+
+tablet
+641px
+768px
+
+
+desktop
+769px
+1024px
+
+
+widescreen
+1025px
+∞
+
+
+
+Syntax
+To be able to use Viewport-specific values, you just need to prefix your values with {VIEWPORT}:, e.g. <Grid points="mobile:3">. But then you can't specify default values or other Viewport-specifics. For that you need to pass an array in like below.
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+
+"""
+  filetype = "PlainText"
+  url = "framework/responsitivity"
+  title = "Responsitivity"
+
+  [[input.files]]
+  contents = """
+Button
+Button is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.
+
+Imports
+Palette
+You can change the color palette of the Button via the palette property.
+
+Size
+You can change the size of the Button via the size property.
+
+Clear
+Button components have a special variation that renders as text with no background, that lightly fills in when clicked.
+
+Outline
+Button components have a special variation that renders them as text with an outline, the fills in when clicked.
+
+Types
+You can change make the Button an anchor by passing via the href property. And also, change the input type between button (DEFAULT), reset, submit via the type property.
+
+"""
+  filetype = "PlainText"
+  url = "interactables/button"
+  title = "Button"
+
+  [[input.files]]
+  contents = """
+Check
+Check is typically used to present a set of options to the end-user, which they can then choose from.
+
+Imports
+States
+You can control the state of the Check via the active, disabled, and state properties.
+
+Palette
+You can change the color palette of the Check via the palette property.
+
+Size
+You can change the size of the Check via the size property.
+
+Flush
+You can change the appearance of the Check to be flush with the rest of the Application content via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "interactables/check"
+  title = "Check"
+
+  [[input.files]]
+  contents = """
+Form
+...
+"""
+  filetype = "PlainText"
+  url = "interactables/form"
+  title = "Form"
+
+  [[input.files]]
+  contents = """
+HiddenInput
+...
+"""
+  filetype = "PlainText"
+  url = "interactables/hiddeninput"
+  title = "HiddenInput"
+
+  [[input.files]]
+  contents = """
+Radio
+Radio is typically used to present a set of mutually-exclusive options to the end-user, which they can then choose from.
+
+Imports
+States
+You can control the state of the Radio via the active, disabled, and state properties.
+
+Palette
+You can change the color palette of the Radio via the palette property.
+
+Size
+You can change the size of the Radio via the size property.
+
+Flush
+You can change the appearance of the Radio to be flush with the rest of the Application content via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "interactables/radio"
+  title = "Radio"
+
+  [[input.files]]
+  contents = """
+Switch
+Switch is typically used to present to the end-user features, settings, and other toggles that they can turn on / off.
+
+Imports
+States
+You can control the state of the Switch via the active, disabled, and state properties.
+
+Palette
+You can change the color palette of the Switch via the palette property.
+
+Size
+You can change the size of the Switch via the size property.
+
+"""
+  filetype = "PlainText"
+  url = "interactables/switch"
+  title = "Switch"
+
+  [[input.files]]
+  contents = """
+TextInput
+TextInput is typically used for capturing string input from an end-user for input into forms, XHR requests, etc.
+
+Imports
+Palette
+You can change the color palette of the TextInput via the palette property.
+
+Size
+You can change the size of the TextInput via the size property.
+
+Block
+You can alter the TextInput render as an opaque block via the variation property.
+
+Flush
+You can change the appearance of the TextInput to be flush with the rest of the Application content via the variation property.
+
+Input Type
+You can change your input type between email, password, search, text (DEFAULT), url via the type property.
+
+Placeholder
+You can set the TextInput to show placeholder text whenever there is no current value.
+
+Field Character Size
+You can set how wide your TextInput to an approximation of character width via the characters property.
+
+TextArea
+You can have the TextInput render as a <textarea> via the is property.
+
+Field Line Size
+You can set how tall your <textarea> based TextInput to an approximation of character lines via the lines property.
+
+Resizable TextArea
+You alter the a <textarea> based TextInput to resizable both axis true, horizontally x, and vertically y via the resizable property.
+
+"""
+  filetype = "PlainText"
+  url = "interactables/textinput"
+  title = "TextInput"
+
+  [[input.files]]
+  contents = """
+Center
+Center is a layout primitive used to quickly center the child content within its self.
+
+Imports
+"""
+  filetype = "PlainText"
+  url = "layouts/center"
+  title = "Center"
+
+  [[input.files]]
+  contents = """
+Container
+Container is a layout primitive used to typically constrain chunks of content to a max width or parent width, and centered horizontally with padding. By default it sets the max width to 65 characters.
+
+Imports
+Viewports
+
+NOTE: By passing an array, you can set responsive values. e.g. viewport={["mobile", "widescreen:prose"]}
+
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+You can customize the Container to be constrained to specific Viewport sizes.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/container"
+  title = "Container"
+
+  [[input.files]]
+  contents = """
+Divider
+Divider is typically used to visually separate content for easier reading comprehension.
+
+Imports
+Palette
+You can change the color palette of the Divider via the palette property.
+
+Orientation
+You can set the Divider to render vertically via the orientation property.
+
+Text
+Divider components can also render text within their separators via passing content into the default slot.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/divider"
+  title = "Divider"
+
+  [[input.files]]
+  contents = """
+Grid
+Grid is a multi-part layout pattern for setting up a grid of items organized to a 12-point system.
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+
+Imports
+Points
+
+NOTE: By passing an array, you can set responsive values. e.g. points={["7", "tablet:6", "mobile:5"]}
+
+You can adjust how many points the Grid.Container items are divided by via the points property.
+
+Spacing
+
+NOTE: By passing an array, you can set responsive values. e.g. spacing={["medium", "tablet:small", "mobile:tiny"]}
+
+You can adjust the spacing between items via the spacing, spacing_x, and spacing_y properties.
+
+Item Span
+
+NOTE: By passing an array, you can set responsive values. e.g. span={["3", "tablet:2", "mobile:1"]}
+
+You can adjust grid span of individual items via the span, span_x, span_y properties, by wrapping the items in Grid.Item.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/grid"
+  title = "Grid"
+
+  [[input.files]]
+  contents = """
+Group
+Group is a layout primitive used for grouping together like Components with their inner border radii removed.
+
+Imports
+Orientation
+You can set the Group to render its children Components vertically, via the orientation property.
+
+Stacked
+You can set the variation property to stacked to visually stack children Components, like avatar stacks.
+
+
+"""
+  filetype = "PlainText"
+  url = "layouts/group"
+  title = "Group"
+
+  [[input.files]]
+  contents = """
+Mosaic
+Mosaic is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.
+
+Imports
+Sizing
+
+NOTE: By passing an array, you can set responsive values. e.g. sizing={["tiny", "tablet:medium", "mobile:medium"]}
+
+You can alter how large each Mosaic item should be via the sizing property.
+
+Spacing
+
+NOTE: By passing an array, you can set responsive values. e.g. spacing={["medium", "tablet:small", "mobile:tiny"]}
+
+You can adjust the spacing between items via the spacing, spacing_x, and spacing_y properties.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/mosaic"
+  title = "Mosaic"
+
+  [[input.files]]
+  contents = """
+Position
+Position is a layout primitive that can float itself and child content in specific regions of the containing Components.
+
+Imports
+Floated
+You can set the Position to float its self (and its children) into a corner relative to its containing layout via the variation property.
+
+Raised
+You can set the Position to raise its self (and its children) in-place via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/position"
+  title = "Position"
+
+  [[input.files]]
+  contents = """
+Scrollable
+Scrollable is a layout primitive for encapsulating a given available space into its own scrollable context.
+
+Imports
+"""
+  filetype = "PlainText"
+  url = "layouts/scrollable"
+  title = "Scrollable"
+
+  [[input.files]]
+  contents = """
+Spacer
+Spacer is a layout primitive that takes up all available vertical space between its two immediate siblings.
+
+Imports
+Spacing
+
+NOTE: By passing an array, you can set responsive values. e.g. spacing={["medium", "tablet:small", "mobile:tiny"]}
+
+You can adjust the spacing between the immediate siblings via the spacing property.
+
+Inline
+You can have the Spacer rendering as an inline <span> that defaults to horizontal orientation via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/spacer"
+  title = "Spacer"
+
+  [[input.files]]
+  contents = """
+Stack
+Stack is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children. With optional wrapping.
+
+Imports
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:horizontal", "widescreen:horizontal"]}
+
+You can set the Stack to render horizontally via the orientation property.
+
+Spacing
+
+NOTE: By passing an array, you can set responsive values. e.g. spacing={["medium", "tablet:small", "mobile:tiny"]}
+
+You can adjust the spacing between items via the spacing, spacing_x, and spacing_y properties.
+
+Alignment
+
+NOTE: By passing an array, you can set responsive values. e.g. alignment_x={["center", "tablet:left", "mobile:right"]}
+
+You can adjust the spacing between items via the alignment, alignment_x, and alignment_y properties.
+
+Wrap
+You can alter the Stack to wraps its children into the next line via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "layouts/stack"
+  title = "Stack"
+
+  [[input.files]]
+  contents = """
+Hidden
+All Components have access to the data-hidden global HTML attribute via the hidden property. Unlike the standard hidden HTML attribute, data-hidden supports Responsitivity.
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+
+"""
+  filetype = "PlainText"
+  url = "modifiers/hidden"
+  title = "Hidden"
+
+  [[input.files]]
+  contents = """
+HTML5
+All Components have access to several common HTML5 global attributes.
+class
+class allows you to apply CSS classes that you've defined to Components. However, you will have to use :global on your class names to bypass Svelte's local scoping.
+
+style
+style allows you to apply inline CSS properties to Components.
+
+id
+id allows you to set an identifier that other elements can target or targettable for scrolling by a URL fragment.
+
+name
+name allows you to set an identifier for the Component to set its value to in a form, or, can targettable by an Anchor.
+
+title
+title allows you to set a timed effect to show a text tooltip whenever an end-user hovers for long enough. Typically you don't want to rely on this attribute for the UI. Rather use it for semantic and assistive purposes.
+
+tabindex
+tabindex allows you to configure how the Browser cycles through elements in the current stacking context when they press their tab keyboard button, or similar.
+
+"""
+  filetype = "PlainText"
+  url = "modifiers/html5"
+  title = "HTML5"
+
+  [[input.files]]
+  contents = """
+Sizings
+All Components have access to the global width and height HTML data attributes. All of which, supports Responitivity.
+Width
+
+NOTE: By passing an array, you can set responsive values. e.g. width={["25", "tablet:viewport-50"]}
+
+You can set a defined width for your Components via the width property.
+
+Height
+
+NOTE: By passing an array, you can set responsive values. e.g. height={["25", "tablet:viewport-50"]}
+
+You can set a defined height for your Components via the height property.
+
+Minimums / Maximums
+You can also set minimums or maximum sizes via prefixing your properties with max_ or min_.
+
+"""
+  filetype = "PlainText"
+  url = "modifiers/sizings"
+  title = "Sizings"
+
+  [[input.files]]
+  contents = """
+Spacings
+All Components have access to the global margin and padding HTML data attributes. All of which, supports Responitivity.
+Margin
+
+NOTE: By passing an array, you can set responsive values. e.g. margin={["small", "tablet:large"]}
+
+You can set margins for your Components via the margin property.
+
+Padding
+
+NOTE: By passing an array, you can set responsive values. e.g. padding={["small", "tablet:large"]}
+
+You can set paddings for your Components via the padding property.
+
+Directional
+All Spacings properties have directional support via the *_x, *_y, *_left, *_top, *_right, and *_bottom suffixes.
+
+"""
+  filetype = "PlainText"
+  url = "modifiers/spacings"
+  title = "Spacings"
+
+  [[input.files]]
+  contents = """
+Anchor
+Anchor are used for navigating from page to page, or to external websites.
+
+Imports
+Internal Navigation
+When navigating only to an internal Web Application route, you can just set href property with no other properties.
+
+External Navigation
+When navigating to external links, for security purposes it's recommended to set rel="noopener" to prevent Window.opener from being set on the newly opened page. And also to set rel="noreferrer" for privacy purposes, to prevent the Browser from sending the Referer header to the new page.
+
+Palette
+You can change the color palette of the Anchor via the palette property.
+
+"""
+  filetype = "PlainText"
+  url = "navigation/anchor"
+  title = "Anchor"
+
+  [[input.files]]
+  contents = """
+Aside
+Aside is used to vertically present the end-user with actions and links that can be accessed anytime on the Web Application.
+
+Imports
+Palette
+You can change the color palette of the Aside via the palette property.
+
+Logic ID
+
+NOTE: When you use a ContextButton within a Aside.Container, it will automatically inherit the set logic_id.
+
+
+NOTE: Interally when the logic_id property is set, the Aside.Container wrapped in an Offscreen Component to provide the collapsing functionality.
+
+You can make the Overlay collapsible on Mobile and Tablet Viewports via the logic_id property. And then place two ContextButton Components as the last children of a Aside.Container. Where they'll be floated over the Web Application content, with the first one being the open button. And the second one being the close button.
+
+Placement
+
+IMPORTANT: The placement property does NOT affect how it will appear in your layout. You need to manually handle that.
+
+You can adjust which side the content divider border will appear, and which side a collapsible Aside.Container will slide out from via the placement property.
+
+"""
+  filetype = "PlainText"
+  url = "navigation/aside"
+  title = "Aside"
+
+  [[input.files]]
+  contents = """
+Breadcrumb
+Breadcrumb is typically used to render a series of links with separators. With the each link left of the right-most a state in the end-user's navigation history. Or, a route hierarchy of the Web Application. e.g. directory paths
+
+Imports
+Separator
+You can alter the separator between items rendered via the separator property.
+
+"""
+  filetype = "PlainText"
+  url = "navigation/breadcrumb"
+  title = "Breadcrumb"
+
+  [[input.files]]
+  contents = """
+Menu
+Menu renders a nestable list of actionable buttons and links. Typically used in context menus or used as the main content body of Aside.
+
+Imports
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["tablet:horizontal", "mobile:horizontal"]}
+
+
+IMPORTANT: You should never use sub menus whenever using horizontal Menu.Container Components.
+
+You can alter the orientation of how the Menu.Container lays out the children.
+
+Sub Menus
+You can nest more menus via <Menu.SubMenu> Component and using <svelte:fragment slot="sub-menu"> in <Menu.Divider> or <Menu.Heading> Components.
+
+Text Divider
+In place of <Menu.Heading> you can also use <Menu.Divider> with text content.
+
+Palette
+You can change the color palette of the Menu.Anchor / Menu.Button / Menu.Label via the palette property.
+
+"""
+  filetype = "PlainText"
+  url = "navigation/menu"
+  title = "Menu"
+
+  [[input.files]]
+  contents = """
+Omni
+...
+"""
+  filetype = "PlainText"
+  url = "navigation/omni"
+  title = "Omni"
+
+  [[input.files]]
+  contents = """
+Clickable
+Clickable stretches a <Clickable.Anchor> / <Clickable.Label> across its parent element, while surfacing other interactive elements above the overlay.
+Imports
+Anchor
+Use a <Clickable.Anchor> to stretch a clickable <a> across the parent container.
+
+Label
+Use a <Clickable.Label> to stretch a clickable <label> across the parent container.
+
+"""
+  filetype = "PlainText"
+  url = "overlays/clickable"
+  title = "Clickable"
+
+  [[input.files]]
+  contents = """
+Offscreen
+Offscreen is typically used for hiding content that'll slide into when actived via a button or something else.
+
+Imports
+Logic ID
+
+NOTE: When you use a ContextButton within a Offscreen, it will automatically inherit the set logic_id.
+
+You can make the Offscreen toggleable via the logic_id property, and then referencing that with a Button.
+Hidden
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+Offscreen adds special handling for the hidden property, allowing you to instead customize when the child content is hidden offscreen or rendered normally.
+
+Captive
+You can optionally include a backdrop by passing via the captive property.
+
+Dismissible
+You can optionally have the Offscreen dismissible by clicking the backdrop via the dismissible property.
+
+Placement
+You can adjust which side your content is hidden on via the placement property.
+
+Alignment
+You can align Offscreen content via the alignment, alignment_x, and alignment_y properties respectively.
+
+"""
+  filetype = "PlainText"
+  url = "overlays/offscreen"
+  title = "Offscreen"
+
+  [[input.files]]
+  contents = """
+Overlay
+Overlay is typically used for rendering full-screen content over the rest of the page, optionally including a backdrop or being toggleable.
+
+Imports
+Logic ID
+
+NOTE: When you use a ContextButton within a Overlay, it will automatically inherit the set logic_id.
+
+You can make the Overlay toggleable via the logic_id property, and then referencing that with a Button.
+
+Captive
+You can optionally include a backdrop by passing via the captive property.
+
+Dismissible
+You can optionally have the Overlay dismissible by clicking the backdrop via the dismissible property.
+
+State
+
+WARNING: If you use this to toggle the Overlay, instead of something like the ContextButton. It will not work on Browsers without Javascript enabled.
+
+You can manually open / close the Overlay via the state property.
+
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:horizontal", "widescreen:horizontal"]}
+
+You can set the Overlay to render horizontally via the orientation property.
+
+Alignment
+You can align Overlay content via the alignment, alignment_x, and alignment_y properties respectively.
+
+Spacing
+You can adjust the spacing between Overlay content via the spacing, spacing_x, and spacing_y properties respectively.
+
+"""
+  filetype = "PlainText"
+  url = "overlays/overlay"
+  title = "Overlay"
+
+  [[input.files]]
+  contents = """
+Popover
+Popover is typically used for hiding content that'll slide onto the page when activated via a button or something else.
+
+Imports
+Logic ID
+
+NOTE: When you use a ContextButton within a Popover, it will automatically inherit the set logic_id.
+
+You can make the Popover toggleable via the logic_id property, and then referencing that with a Button.
+Hidden
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+Popover adds special handling for the hidden property, allowing you to instead customize when the child content is hidden or rendered normally.
+
+Dismissible
+You can optionally have the Popover dismissible by clicking outside the Popover child content via the dismissible property.
+
+State
+
+WARNING: If you use this to toggle the Popover, instead of something like the ContextButton. It will not work on Browsers without Javascript enabled.
+
+You can manually open / close the Popover via the state property.
+
+Placement
+You can adjust which side your content is placed on via the placement property.
+
+Alignment
+You can align Popover content via the alignment_x and alignment_y properties respectively.
+
+"""
+  filetype = "PlainText"
+  url = "overlays/popover"
+  title = "Popover"
+
+  [[input.files]]
+  contents = """
+Community
+Below you can find resources by other developers made with Kahi UI or related.
+Discussion / Support
+
+Other community channels besides the main repository for talking about or getting help with Kahi UI.
+
+
+Discord — Official support Discord, where you can talk to other Kahi UI developers.
+
+Icons
+
+Iconography projects that have been shown to work well with Kahi UI.
+
+
+Feather Icons — Lightweight SVG Icons, used by this documentation site.
+
+"""
+  filetype = "PlainText"
+  url = "resources/community"
+  title = "Community"
+
+  [[input.files]]
+  contents = """
+Official
+Below you can find resources made maintained by Kahi UI contributors.
+Showcase
+
+Projects that show off the Kahi UI framework.
+
+
+kahi-framework/kahi-ui.nbn.dev — Official documentation site.
+
+Templates
+
+Projects that can be used as a basis for your own project, showing how to integrate with various software.
+
+
+kahi-framework/kahi-ui-template-svelte — Official template for Svelte based on npx degit sveltejs/template my-svelte-project starter.
+kahi-framework/kahi-ui-template-sveltekit — Official template for SvelteKit based on the npm init svelte@next starter.
+
+"""
+  filetype = "PlainText"
+  url = "resources/official"
+  title = "Official"
+
+  [[input.files]]
+  contents = """
+Landing Page
+Landing Preview
+
+TODO: Something more impressive can and should be made...?
+
+Displayed in the main landing page of kahi-ui.nbn.dev.
+
+"""
+  filetype = "PlainText"
+  url = "samples/landing-page"
+  title = "Landing Page"
+
+  [[input.files]]
+  contents = """
+darkmode
+darkmode is a Svelte Store, which returns true whenever either <html data-palette="dark"> or prefersscheme("dark") is validated.
+
+NOTE: Click the color scheme button in the Navigation topbar to see changes.
+
+
+Imports
+Compatibility
+The Store is dependent on MutationObserver / Window.matchMedia. So if you're rendering on the server, it'll always return false.
+"""
+  filetype = "PlainText"
+  url = "stores/darkmode"
+  title = "darkmode"
+
+  [[input.files]]
+  contents = """
+htmlpalette
+htmlpalette is a Svelte Store, which is bound to <html data-palette="XXX"> and returns the changes to that attribute. Defaulting to light if not set.
+
+NOTE: Click the color scheme button in the Navigation topbar to see changes.
+
+
+Imports
+Compatibility
+The Store is dependent on MutationObserver. So if you're rendering on the server, it'll always return false.
+"""
+  filetype = "PlainText"
+  url = "stores/htmlpalette"
+  title = "htmlpalette"
+
+  [[input.files]]
+  contents = """
+ID
+...
+"""
+  filetype = "PlainText"
+  url = "stores/id"
+  title = "ID"
+
+  [[input.files]]
+  contents = """
+mediaquery
+mediaquery / mediaqueries are Svelte Stores, which returns true whenever a provided Media Query is currently active.
+
+Imports
+Compatibility
+The Stores are dependent on Window.matchMedia. So if you're rendering on the server, it'll always return false.
+"""
+  filetype = "PlainText"
+  url = "stores/mediaquery"
+  title = "mediaquery"
+
+  [[input.files]]
+  contents = """
+prefersscheme
+prefersscheme is a Svelte Store, which returns true whenever matchMedia(SCHEME) is validated.
+
+NOTE: Change your Operating System's color settings to see changes.
+
+
+Imports
+Built-in Shortcuts
+The prefersscheme Store also comes with two preconfigured default shortcuts, prefersdark and preferslight.
+
+Compatibility
+The Store is dependent on Window.matchMedia. So if you're rendering on the server, it'll always return false.
+"""
+  filetype = "PlainText"
+  url = "stores/prefersscheme"
+  title = "prefersscheme"
+
+  [[input.files]]
+  contents = """
+scrolllock
+scrolllock is a Svelte Store which sets overflow: hidden; on an HTMLElement whenever the Store is set to true. Restoring the previous value of overflow whenever set back to false. Allowing for connecting Component open states like for modals, to the prevent overscrolling the main document body.
+
+NOTE: If no HTMLElement is passed into the Store function, it'll default to the root <html>.
+
+
+Imports
+Compatibility
+The Store is dependent on setting an element's inline styles via Javascript. So on server, will return a readable Store which will error on having a new value set.
+"""
+  filetype = "PlainText"
+  url = "stores/scrolllock"
+  title = "scrolllock"
+
+  [[input.files]]
+  contents = """
+viewport
+viewport / viewports are Svelte Stores, which returns true whenever a Viewport selected in initialization is currently active.
+
+NOTE: The REPL currently does not support viewport values. Resize your Browser instead.
+
+
+Imports
+Compatibility
+The Stores are dependent on Window.matchMedia. So if you're rendering on the server, it'll always return false.
+"""
+  filetype = "PlainText"
+  url = "stores/viewport"
+  title = "viewport"
+
+  [[input.files]]
+  contents = """
+Box
+Box is a surface primitive for encapsulating section content in a block of color.
+
+Imports
+Palette
+You can change the color palette of the Box via the palette property.
+
+Elevation
+You can set how "high" your Box will appear to be over top the page via the elevation property.
+
+Shape
+You can modify the shape of the Box via the shape property.
+
+"""
+  filetype = "PlainText"
+  url = "surfaces/box"
+  title = "Box"
+
+  [[input.files]]
+  contents = """
+Card
+Card is a multi-part surface pattern for displaying a section of content in a long-form vertical format.
+
+Imports
+Palette
+You can change the color palette of the Card via the palette property.
+
+Elevation
+You can set how "high" your Card will appear to be over top the page via the elevation property.
+
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:vertical", "widescreen:vertical"]}
+
+You can set the Card.Footer to render vertically via the orientation property.
+
+Sizing
+You can change the sizes / spacings of the child elements via the sizing property.
+
+Flush
+You can change the appearance of the Card to be flush with the rest of the Application content via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "surfaces/card"
+  title = "Card"
+
+  [[input.files]]
+  contents = """
+Hero
+Hero is a multi-part surface pattern for displaying banner text with subtitling and actions, typically used for landing pages, error messages, and loading placeholders.
+
+Imports
+Palette
+You can change the color palette of the Hero via the palette property.
+
+"""
+  filetype = "PlainText"
+  url = "surfaces/hero"
+  title = "Hero"
+
+  [[input.files]]
+  contents = """
+Tile
+Tile is a multi-part surface pattern for displaying a section of content in a short-form horizontal format.
+
+Imports
+Palette
+You can change the color palette of the Tile via the palette property.
+
+Elevation
+You can set how "high" your Tile will appear to be over top the page via the elevation property.
+
+Orientation
+
+NOTE: By passing an array, you can set responsive values. e.g. orientation={["desktop:vertical", "widescreen:vertical"]}
+
+You can set the Tile.Footer to render vertically via the orientation property.
+
+Sizing
+You can change the sizes / spacings of the child elements via the sizing property.
+
+Flush
+You can change the appearance of the Tile to be flush with the rest of the Application content via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "surfaces/tile"
+  title = "Tile"
+
+  [[input.files]]
+  contents = """
+Blockquote
+Blockquote is typically used to render a block of text, that's attributed to a certain source of information.
+
+Imports
+Palette
+You can change the color palette of the Blockquote.Container via the palette property.
+
+"""
+  filetype = "PlainText"
+  url = "typography/blockquote"
+  title = "Blockquote"
+
+  [[input.files]]
+  contents = """
+Code
+Code is used to render inline monospaced text, typically for showing programming code / application configuration to an end-user.
+
+Imports
+Palette
+You can change the color palette of the Component via data-palette.
+
+Code Block
+You can display blocks of code via a <pre> HTML tag by passing is="pre".
+
+
+"""
+  filetype = "PlainText"
+  url = "typography/code"
+  title = "Code"
+
+  [[input.files]]
+  contents = """
+Heading
+Heading is typically used for delineating sections of content within your Web Application.
+
+Imports
+Size
+You can adjust the size of Heading by passing the is property.
+
+Palette
+You can change the color palette of the Heading via the palette property.
+
+Align
+You can adjust the text alignment of the Heading via the align property.
+
+Transform
+You can alter the rendered text capitalization via the transform property.
+
+Variation
+You can apply variations to the rendered text, like truncating, via the variation property.
+
+"""
+  filetype = "PlainText"
+  url = "typography/heading"
+  title = "Heading"
+
+  [[input.files]]
+  contents = """
+Text
+Text is used to render paragraphs of text in your interface, among other types of text.
+
+Imports
+Size
+You can adjust the size of Text by passing the size property.
+
+Palette
+You can change the color palette of the Text via the palette property.
+
+Align
+You can adjust the text alignment of the Text via the align property.
+
+Transform
+You can alter the rendered text capitalization via the transform property.
+
+Variation
+You can apply variations to the rendered text, like truncating, via the variation property.
+
+Pre Formatted
+You can render text with whitespace and linebreaks preserved via the is property.
+
+
+Other Tags
+You can also access most of the other HTML text tags via the is property.
+
+"""
+  filetype = "PlainText"
+  url = "typography/text"
+  title = "Text"
+
+  [[input.files]]
+  contents = """
+BrowserRender
+BrowserRender disables rendering of child content that either doesn't work in a SSR environment or doesn't make sense there. e.g. <canvas> rendering
+
+NOTE: The REPL runs on your Browser, so this will always show the content.
+
+
+Imports
+"""
+  filetype = "PlainText"
+  url = "utilities/browserrender"
+  title = "BrowserRender"
+
+  [[input.files]]
+  contents = """
+ContextBackdrop
+...
+"""
+  filetype = "PlainText"
+  url = "utilities/contextbackdrop"
+  title = "ContextBackdrop"
+
+  [[input.files]]
+  contents = """
+ContextButton
+...
+"""
+  filetype = "PlainText"
+  url = "utilities/contextbutton"
+  title = "ContextButton"
+
+  [[input.files]]
+  contents = """
+IntersectionRender
+IntersectionRender disables rendering of child content before it has come into the root element's viewport at least once. Useful for lazy loading content besides media.
+
+Imports
+Compatibility
+The Component only runs on clientside Browsers with Javascript enabled. So you need to plan a SSR-compatible fallback if using in a SSR scenario. It is also dependent on IntersectionObserver.
+Eager
+
+NOTE: It is good practice to give the IntersectionRender a fixed size that generally matches the child content when using this mode. Otherwise you can end up with janky scrolling.
+
+You can change the behavior of IntersectionObserver by passing in the loading attribute. Which will make the Component ALWAYS disable rendering when outside of the root viewport, not just on initial load.
+
+Fallthrough
+
+NOTE: The REPL runs on your Browser, so this will always render anyway.
+
+By default, IntersectionRender will never render when running in SSR environments. You can change it to always render in those environments via the fallthrough property.
+
+"""
+  filetype = "PlainText"
+  url = "utilities/intersectionrender"
+  title = "IntersectionRender"
+
+  [[input.files]]
+  contents = """
+Portal
+Portal is used to render a layout outside of its original containing DOM tree, moving it somewhere else.
+
+Imports
+Compatibility
+Portal wraps your slotted content in a display: contents containing element, so keep that in mind in your CSS selectors. It also only remounts its self to the target on clientside Browsers with Javascript enabled. So you need to plan a SSR-compatible fallback if using in a SSR scenario.
+Loading
+
+NOTE: Use the in-Browser developer tools to see this functionality in action.
+
+You can customize the slot loading behavior of Portal Components to not render their children, via the loading property.
+
+"""
+  filetype = "PlainText"
+  url = "utilities/portal"
+  title = "Portal"
+
+  [[input.files]]
+  contents = """
+ServerRender
+ServerRender disables rendering of child content that doesn't work on the Browser, or doesn't make sense there. e.g. reading a file from local disk
+
+NOTE: The REPL runs on your Browser, so this will always be blank.
+
+
+Imports
+"""
+  filetype = "PlainText"
+  url = "utilities/serverrender"
+  title = "ServerRender"
+
+  [[input.files]]
+  contents = """
+Transition
+Transition is used to apply transitional animations on a containing element that will also include its children. Typically used for situations like changing between pages.
+
+Imports
+Delay
+Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to delay it via the delay property.
+
+Duration
+Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to increase / shorten the animation duration via the duration property.
+
+Direction
+You can control which direction the Transition animation will "expand", "move", or whatever your selected animations performs. Via the direction property.
+
+Fade
+The simplest of all the animations, you can fade content in and out via the animation property.
+
+By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
+
+Clip
+You can have content "clip" in and out via the animation property.
+
+By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
+
+Scale
+You can have content "scale" in and out via the animation property.
+
+By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
+
+Slide
+You can have content "slide" in and out via the animation property.
+
+By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
+
+"""
+  filetype = "PlainText"
+  url = "utilities/transition"
+  title = "Transition"
