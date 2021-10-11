@@ -1,5 +1,10 @@
 +++
 [[properties.Anchor]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.Anchor]]
 name="current"
 description="Changes the [`aria-current`](https://www.digitala11y.com/aria-current-state) attribute, telling screen readers how to handle the link."
 types=["date", "location", "page", "step", "time", "true"]
@@ -104,4 +109,73 @@ When navigating to external links, for **security purposes** it's recommended to
 >
     Goto google.com
 </Anchor>
+```
+
+## Palette
+
+You can change the color palette of the `Anchor` via the `palette` property.
+
+```svelte repl Anchor Palette
+<script>
+    import {Anchor, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+    >
+        Goto google.com DEFAULT
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="light"
+    >
+        Goto google.com LIGHT
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="dark"
+    >
+        Goto google.com DARK
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="alert"
+    >
+        Goto google.com ALERT
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="affirmative"
+    >
+        Goto google.com AFFIRMATIVE
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="negative"
+    >
+        Goto google.com NEGATIVE
+    </Anchor>
+</Stack>
 ```
