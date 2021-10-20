@@ -52,7 +52,7 @@
         </Button>
 
         <a
-            role="button"
+            class="button"
             href="/docs/framework/getting-started"
             data-palette="accent"
             data-size="large"
