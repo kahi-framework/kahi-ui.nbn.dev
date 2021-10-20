@@ -352,12 +352,18 @@ You can change the size of the `Button` via the `size` property.
 
 ## Types
 
-You can change make the `Button` an anchor by passing via the `href` property. And also, change the input type between `button` **(DEFAULT)**, `reset`, `submit` via the `type` property.
+You can change make the `Button` a `<a>` by passing the `href` property, or a `<label>` by passing the `for` property. And also, change the input type between `<input type="button" />` **(DEFAULT)**, `<input type="reset" />`, `<input type="submit" />` via the `type` / `value` properties.
 
 ```svelte repl Button Types
 <script>
-    import {Button, Stack} from "@kahi-ui/framework";
+    import {
+        Button,
+        Check,
+        Stack,
+    } from "@kahi-ui/framework";
 </script>
+
+<Check id="button-types-label" />
 
 <Stack
     alignment_y="top"
@@ -373,6 +379,10 @@ You can change make the `Button` an anchor by passing via the `href` property. A
         rel="noopener noreferrer"
     >
         This is an ANCHOR Button!
+    </Button>
+
+    <Button for="button-types-label">
+        This is a LABEL Button!
     </Button>
 
     <Button value="This is an INPUT Button!" />
