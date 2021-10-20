@@ -93,6 +93,61 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-palette-background-bold"
+description="Controls the default RGB color value used for `border-color` / `color`."
+types=["<r,g,b>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-sizing-text-size"
+description="Controls the default `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-sizing-text-line-height"
+description="Controls the default `line-height` used."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-border-width"
+description="Controls the `border-width` used for button underline."
+types=["<length>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-gap"
+description="Controls the spacing gap between child elements, e.g. icons."
+types=["<length>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-padding-y"
+description="Controls the X-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-disabled-opacity"
+description="Controls the `opacity` used when disabled."
+types=["<alpha-value>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-item-focus-color-opacity"
+description="Controls the `background` opacity used when focused."
+types=["<alpha-value>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-section-border-opacity"
+description="Controls the `border-color` opacity used for tab track."
+types=["<alpha-value>"]
+
+[[custom_properties."Tab.Container"]]
+name="--tab-section-border-width"
+description="Controls the `border-width` used for tab track."
+types=["<length>"]
 +++
 
 # Tab
