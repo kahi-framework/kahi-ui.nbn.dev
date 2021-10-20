@@ -5,7 +5,6 @@
         Card,
         Container,
         Divider,
-        Figure,
         Grid,
         Heading,
         Hero,
@@ -106,11 +105,9 @@
                 Composable
                 <Spacer />
 
-                <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="small" width="content-max">
-                        <GridIcon size="1.25rem" />
-                    </Box>
-                </Figure>
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <GridIcon size="1.25rem" />
+                </Box>
             </Card.Header>
 
             <Card.Section padding_bottom="medium">
@@ -126,11 +123,9 @@
                 Staticly Typed
                 <Spacer />
 
-                <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="small" width="content-max">
-                        <Code size="1.25rem" />
-                    </Box>
-                </Figure>
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <Code size="1.25rem" />
+                </Box>
             </Card.Header>
 
             <Card.Section padding_bottom="medium">
@@ -146,11 +141,9 @@
                 Dark Mode
                 <Spacer />
 
-                <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="small" width="content-max">
-                        <Moon size="1.25rem" />
-                    </Box>
-                </Figure>
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <Moon size="1.25rem" />
+                </Box>
             </Card.Header>
 
             <Card.Section padding_bottom="medium">
@@ -166,11 +159,9 @@
                 Progressively Enhanced
                 <Spacer />
 
-                <Figure variation="icon" shape="pill">
-                    <Box palette="accent" padding="small" width="content-max">
-                        <Zap size="1.25rem" />
-                    </Box>
-                </Figure>
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <Zap size="1.25rem" />
+                </Box>
             </Card.Header>
 
             <Card.Section padding_bottom="medium">
