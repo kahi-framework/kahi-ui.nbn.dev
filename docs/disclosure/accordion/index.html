@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        <title>Accordion — Kahi UI</title>
+
+		
+
+		<link rel="modulepreload" href="/_app/start-feee026d.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-73046c50.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-a891e326.js">
+		<link rel="modulepreload" href="/_app/chunks/navigation.config-49cf1673.js">
+		<link rel="modulepreload" href="/_app/chunks/snippet-f212b4e0.js">
+		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
+		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-b76bd7de.js">
+		<link rel="modulepreload" href="/_app/chunks/SiteFooter-c4858024.js">
+		<link rel="modulepreload" href="/_app/pages/docs/[...document].svelte-bffd361e.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
+		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.svelte-74b43f87.css">
+		<link rel="stylesheet" href="/_app/assets/SiteFooter-4396fccc.css">
+
+		<script type="module">
+			import { start } from "/_app/start-feee026d.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-a891e326.js"),
+						import("/_app/pages/docs/__layout.svelte-b76bd7de.js"),
+						import("/_app/pages/docs/[...document].svelte-bffd361e.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "/docs/disclosure/accordion",
+						query: new URLSearchParams(""),
+						params: {"document":"disclosure/accordion"}
+					}
+				}
+			});
+		</script>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("kahi-docs.preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+<div class="aside-layout">
+
+
+
+<nav class="omni app-navigation" data-palette="dark" data-variation="sticky"><header><a href="/">Kahi UI</a>
+
+        <hr data-orientation="vertical">
+
+            
+                <a href="https://github.com/novacbn/kahi-ui/releases/v0.4.5" rel="noopener noreferrer" target="_blank"><small data-palette="light">v0.4.5</small></a></header>
+
+    <footer>
+
+        <section><input role="presentation" id="app-navigation" type="checkbox">
+
+<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="button context-button " data-hidden="widescreen" role="button" for="app-navigation" data-palette="light" data-size="huge" data-variation="clear">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-more-vertical feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
+
+                <div data-hidden="widescreen" class="card "><section data-margin="medium"><nav class="menu "><ul><li><a href="/docs/framework/getting-started">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+                    Documentation</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+
+                    Source</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+                    Releases</a>
+            </li><li><a href="/chat">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+
+                    Chat</a>
+            </li></ul></nav></section></div></div>
+
+            <nav class="menu " data-hidden="mobile tablet desktop" data-orientation="horizontal" data-sizing="small"><ul><li><a href="/docs/framework/getting-started">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+
+                    Documentation</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+
+                    Source</a>
+            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+
+                    Releases</a>
+            </li><li><a href="/chat">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+
+                    Chat</a>
+            </li></ul></nav></section></footer></nav>
+
+
+
+    <input role="presentation" id="aside-navigation" type="checkbox">
+
+    <label class="context-backdrop " for="aside-navigation"></label>
+
+<div data-hidden="mobile tablet" class="offscreen "><nav class="aside aside-navigation">
+    <section data-margin-bottom="none" data-padding-y="large"><nav class="menu " data-sizing="small"><ul>
+
+                <li><span role="separator">Resources
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/resources/official" sveltekit:prefetch>
+
+                                                Official
+
+                                                </a>
+                                        </li><li><a href="/docs/resources/community" sveltekit:prefetch>
+
+                                                Community
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Framework
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/framework/getting-started" sveltekit:prefetch>
+
+                                                Getting Started
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/faq" sveltekit:prefetch>
+
+                                                F.A.Q.
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/browser-support" sveltekit:prefetch>
+
+                                                Browser Support
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/responsitivity" sveltekit:prefetch>
+
+                                                Responsitivity
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/elements" sveltekit:prefetch>
+
+                                                Elements
+
+                                                </a>
+                                        </li><li><a href="/docs/framework/events" sveltekit:prefetch>
+
+                                                Events
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Typography
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/typography/blockquote" sveltekit:prefetch>
+
+                                                Blockquote
+
+                                                </a>
+                                        </li><li><a href="/docs/typography/code" sveltekit:prefetch>
+
+                                                Code
+
+                                                </a>
+                                        </li><li><a href="/docs/typography/heading" sveltekit:prefetch>
+
+                                                Heading
+
+                                                </a>
+                                        </li><li><a href="/docs/typography/text" sveltekit:prefetch>
+
+                                                Text
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Embedded
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/embedded/figure" sveltekit:prefetch>
+
+                                                Figure
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Display
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/display/badge" sveltekit:prefetch>
+
+                                                Badge
+
+                                                </a>
+                                        </li><li><a href="/docs/display/list" sveltekit:prefetch>
+
+                                                List
+
+                                                </a>
+                                        </li><li><a href="/docs/display/table" sveltekit:prefetch>
+
+                                                Table
+
+                                                <span class="spacer "></span>
+
+                                                    <span class="badge " data-palette="accent">UPDATED
+                                                    </span></a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Disclosure
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a aria-current="page" href="/docs/disclosure/accordion" sveltekit:prefetch>
+
+                                                Accordion
+
+                                                <span class="spacer "></span>
+
+                                                    <span class="badge " data-palette="accent">NEW
+                                                    </span></a>
+                                        </li><li><a href="/docs/disclosure/tab" sveltekit:prefetch>
+
+                                                Tab
+
+                                                <span class="spacer "></span>
+
+                                                    <span class="badge " data-palette="accent">UPDATED
+                                                    </span></a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Feedback
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/feedback/dot" sveltekit:prefetch>
+
+                                                Dot
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/ellipsis" sveltekit:prefetch>
+
+                                                Ellipsis
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/progress" sveltekit:prefetch>
+
+                                                Progress
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/spinner" sveltekit:prefetch>
+
+                                                Spinner
+
+                                                </a>
+                                        </li><li><a href="/docs/feedback/wave" sveltekit:prefetch>
+
+                                                Wave
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Interactables
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/interactables/button" sveltekit:prefetch>
+
+                                                Button
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/check" sveltekit:prefetch>
+
+                                                Check
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/form" sveltekit:prefetch>
+
+                                                Form
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/radio" sveltekit:prefetch>
+
+                                                Radio
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/switch" sveltekit:prefetch>
+
+                                                Switch
+
+                                                </a>
+                                        </li><li><a href="/docs/interactables/textinput" sveltekit:prefetch>
+
+                                                TextInput
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Layouts
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/layouts/center" sveltekit:prefetch>
+
+                                                Center
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/container" sveltekit:prefetch>
+
+                                                Container
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/divider" sveltekit:prefetch>
+
+                                                Divider
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/grid" sveltekit:prefetch>
+
+                                                Grid
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/group" sveltekit:prefetch>
+
+                                                Group
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/mosaic" sveltekit:prefetch>
+
+                                                Mosaic
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/position" sveltekit:prefetch>
+
+                                                Position
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/scrollable" sveltekit:prefetch>
+
+                                                Scrollable
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/spacer" sveltekit:prefetch>
+
+                                                Spacer
+
+                                                </a>
+                                        </li><li><a href="/docs/layouts/stack" sveltekit:prefetch>
+
+                                                Stack
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Surfaces
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/surfaces/box" sveltekit:prefetch>
+
+                                                Box
+
+                                                </a>
+                                        </li><li><a href="/docs/surfaces/card" sveltekit:prefetch>
+
+                                                Card
+
+                                                </a>
+                                        </li><li><a href="/docs/surfaces/hero" sveltekit:prefetch>
+
+                                                Hero
+
+                                                </a>
+                                        </li><li><a href="/docs/surfaces/tile" sveltekit:prefetch>
+
+                                                Tile
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Navigation
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/navigation/anchor" sveltekit:prefetch>
+
+                                                Anchor
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/aside" sveltekit:prefetch>
+
+                                                Aside
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/breadcrumb" sveltekit:prefetch>
+
+                                                Breadcrumb
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/menu" sveltekit:prefetch>
+
+                                                Menu
+
+                                                </a>
+                                        </li><li><a href="/docs/navigation/omni" sveltekit:prefetch>
+
+                                                Omni
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Overlays
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/overlays/clickable" sveltekit:prefetch>
+
+                                                Clickable
+
+                                                </a>
+                                        </li><li><a href="/docs/overlays/popover" sveltekit:prefetch>
+
+                                                Popover
+
+                                                </a>
+                                        </li><li><a href="/docs/overlays/offscreen" sveltekit:prefetch>
+
+                                                Offscreen
+
+                                                </a>
+                                        </li><li><a href="/docs/overlays/overlay" sveltekit:prefetch>
+
+                                                Overlay
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Utilities
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/utilities/browserrender" sveltekit:prefetch>
+
+                                                BrowserRender
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/contextbackdrop" sveltekit:prefetch>
+
+                                                ContextBackdrop
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/contextbutton" sveltekit:prefetch>
+
+                                                ContextButton
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/intersectionrender" sveltekit:prefetch>
+
+                                                IntersectionRender
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/portal" sveltekit:prefetch>
+
+                                                Portal
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/serverrender" sveltekit:prefetch>
+
+                                                ServerRender
+
+                                                </a>
+                                        </li><li><a href="/docs/utilities/transition" sveltekit:prefetch>
+
+                                                Transition
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Modifiers
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/modifiers/html5" sveltekit:prefetch>
+
+                                                HTML5
+
+                                                </a>
+                                        </li><li><a href="/docs/modifiers/hidden" sveltekit:prefetch>
+
+                                                Hidden
+
+                                                </a>
+                                        </li><li><a href="/docs/modifiers/sizings" sveltekit:prefetch>
+
+                                                Sizings
+
+                                                </a>
+                                        </li><li><a href="/docs/modifiers/spacings" sveltekit:prefetch>
+
+                                                Spacings
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Actions
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/actions/click_outside" sveltekit:prefetch>
+
+                                                click_outside
+
+                                                </a>
+                                        </li><li><a href="/docs/actions/keybind" sveltekit:prefetch>
+
+                                                keybind
+
+                                                </a>
+                                        </li><li><a href="/docs/actions/intersection_observer" sveltekit:prefetch>
+
+                                                intersection_observer
+
+                                                </a>
+                                        </li><li><a href="/docs/actions/mutation_observer" sveltekit:prefetch>
+
+                                                mutation_observer
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li>
+
+                <li><span role="separator">Stores
+
+                        
+                    </span>
+
+    <ul>
+
+                                <li><a href="/docs/stores/darkmode" sveltekit:prefetch>
+
+                                                darkmode
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/htmlpalette" sveltekit:prefetch>
+
+                                                htmlpalette
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/mediaquery" sveltekit:prefetch>
+
+                                                mediaquery
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/prefersscheme" sveltekit:prefetch>
+
+                                                prefersscheme
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/scrolllock" sveltekit:prefetch>
+
+                                                scrolllock
+
+                                                </a>
+                                        </li><li><a href="/docs/stores/viewport" sveltekit:prefetch>
+
+                                                viewport
+
+                                                </a>
+                                        </li>
+                            </ul>
+                        </li></ul></nav></section>
+
+    <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-size="huge">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-menu feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label>
+
+    <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-palette="dark" data-size="huge" data-variation="clear">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-x feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></label>
+
+            
+            </nav></div>
+    
+
+    <main class="aside-container"><div class="container docs-container" data-padding-bottom="large" data-viewport="desktop">
+
+<!-- HTML_TAG_START --><h1 id="accordion">Accordion</h1>
+<p><code>Accordion</code> Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/disclosure/accordion/accordion-preview?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/disclosure/accordion/accordion-preview?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="imports">Imports</h2>
+<pre class="language-svelte snippet-highlight"><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">import</span> <span class="token punctuation">{</span>Accordion<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@kahi-ui/framework"</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>Container<span class="token punctuation">,</span> Label<span class="token punctuation">,</span> Group<span class="token punctuation">,</span> Section<span class="token punctuation">}</span> <span class="token operator">=</span>
+        Accordion<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre><h2 id="inclusive">Inclusive</h2>
+<p>You can change the behavior of the <code>Accordion</code> to allow multiple items to be revealed at once via the <code>behavior</code> property.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/disclosure/accordion/accordion-inclusive?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/disclosure/accordion/accordion-inclusive?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="palette">Palette</h2>
+<p>You can change the color palette of the <code>Accordion</code> buttons via the <code>palette</code> property.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/disclosure/accordion/accordion-palette?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/disclosure/accordion/accordion-palette?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="loading">Loading</h2>
+<blockquote data-palette="accent">
+<p><strong>NOTE</strong>: Use the in-Browser developer tools to see this functionality in action.</p>
+</blockquote>
+<p>You can customize the slot loading behavior of individual <code>Accordion.Section</code> Components to not render their children, via the <code>loading</code> property.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/disclosure/accordion/accordion-loading?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/disclosure/accordion/accordion-loading?rotation=horizontal" hidden sveltekit:prefetch></a><h2 id="transitions">Transitions</h2>
+<p>You can use <a href="../utilities/transition"><code>Transition</code></a> Components to provide fancy switching animations.</p>
+<iframe
+    class="snippet-repl"
+    src="/repl/docs/disclosure/accordion/accordion-transitions?rotation=horizontal"
+    sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin" loading="lazy"
+></iframe>
+<a href="/repl/docs/disclosure/accordion/accordion-transitions?rotation=horizontal" hidden sveltekit:prefetch></a><!-- HTML_TAG_END -->
+
+<h2 id="api-reference">API Reference</h2>
+
+    <div class="tab "><input role="presentation" type="radio" id="tab-api-reference-properties" name="tab-api-reference" checked value="tab-api-reference-properties">
+
+<label data-palette="accent" for="tab-api-reference-properties">Properties</label>
+
+                <section><h3 id="properties-accordion.container"><code>Accordion.Container
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>logic_name</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Sets the form <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-name" target="_blank" rel="noopener noreferrer"><code>name</code></a> attribute in a <a href="https://svelte.dev/docs#setContext" target="_blank" rel="noopener noreferrer">Svelte Context</a> for child <code>Accordion.Label</code> buttons to group as.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>logic_state</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the currently active <code>Accordion.Label</code> button via a <a href="https://svelte.dev/docs#setContext" target="_blank" rel="noopener noreferrer">Svelte Context</a>.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                        
+                                    </code><code>string[]
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="properties-accordion.group"><code>Accordion.Group
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>logic_id</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Sets the element <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id" target="_blank" rel="noopener noreferrer"><code>id</code></a> attribute in a <a href="https://svelte.dev/docs#setContext" target="_blank" rel="noopener noreferrer">Svelte Context</a> for child <code>Accordion.Group</code> / <code>Accordion.Label</code> Components to group as.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>string
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="properties-accordion.label"><code>Accordion.Label
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>palette</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Alters the displayed color scheme.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>auto
+                                        
+                                    </code><code>inverse
+                                        
+                                    </code><code>inherit
+                                        
+                                    </code><code>accent
+                                        
+                                    </code><code>dark
+                                        
+                                    </code><code>light
+                                        
+                                    </code><code>alert
+                                        
+                                    </code><code>affirmative
+                                        
+                                    </code><code>negative
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="properties-accordion.section"><code>Accordion.Section
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>loading</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>When the property is set and the <code>Accordion.Section</code> view is not active, the child content is not rendered to DOM.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>lazy
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div></section>
+
+        <input role="presentation" type="radio" id="tab-api-reference-events" name="tab-api-reference"  value="tab-api-reference-events">
+
+<label data-palette="accent" for="tab-api-reference-events">Events</label>
+
+                <section><h3 id="events-accordion.container"><code>Accordion.Container
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>change</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>logic_state</code> changes.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>CustomEvent&lt;void&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="events-accordion.label"><code>Accordion.Label
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>click</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Fires whenever the <code>Accordion.Label</code> is clicked.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>MouseEvent
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div></section>
+
+        <input role="presentation" type="radio" id="tab-api-reference-slots" name="tab-api-reference"  value="tab-api-reference-slots">
+
+<label data-palette="accent" for="tab-api-reference-slots">Slots</label>
+
+                <section><h3 id="slots-accordion.container"><code>Accordion.Container
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>default</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Default unnamed slot.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="slots-accordion.label"><code>Accordion.Label
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>default</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Default unnamed slot.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>close</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Slot for rendering the content (usually an icon) shown when the <code>Accordion.Section</code> can be closed.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>open</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Slot for rendering the content (usually an icon) shown when the <code>Accordion.Section</code> can be opened.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="slots-accordion.group"><code>Accordion.Group
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>default</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Default unnamed slot.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div><h3 id="slots-accordion.section"><code>Accordion.Section
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>default</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Default unnamed slot.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>{}
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div></section>
+
+        <input role="presentation" type="radio" id="tab-api-reference-custom-properties" name="tab-api-reference"  value="tab-api-reference-custom-properties">
+
+<label data-palette="accent" for="tab-api-reference-custom-properties">Custom Properties</label>
+
+                <section><h3 id="custom-properties-accordion.container"><code>Accordion.Container
+        </code>
+    </h3>
+
+    <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max"><thead><tr><th>Name</th>
+                    <th>Description</th>
+                    <th>Types</th>
+                </tr>
+            </thead>
+
+            <tbody><tr><td><code>--accordion-item-palette-background-bold</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the default RGB color value used for <code>border-color</code> / <code>color</code>.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;r,g,b&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-border-opacity</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the <code>border-color</code> used for button overline.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;length&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-border-width</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the <code>border-width</code> used for button overline.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;length&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-gap</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the spacing gap between child elements, e.g. icons.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;length&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-padding-x</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the X-Axis <code>padding-left</code> / <code>padding-right</code> used.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;length&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-padding-y</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the X-Axis <code>padding-bottom</code> / <code>padding-top</code> used.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;length&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-disabled-opacity</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the <code>opacity</code> used when disabled.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;alpha-value&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr><tr><td><code>--accordion-item-focus-color-opacity</code>
+                        </td>
+
+                        <td><!-- HTML_TAG_START --><p>Controls the <code>background</code> opacity used when focused.</p>
+<!-- HTML_TAG_END -->
+                        </td>
+
+                        <td><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code>&lt;alpha-value&gt;
+                                        
+                                    </code>
+                            </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+    </div></section></div>
+
+<hr data-margin-y="large">
+
+<div class="stack documentation-footer" data-width="100" data-alignment="center" data-orientation="widescreen:horizontal desktop:horizontal tablet:horizontal" data-spacing="medium"><figure data-size="medium" data-variation="icon">
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-clock feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></figure>
+
+    <div><h5 data-max-width="widescreen:content-max desktop:content-max tablet:content-max" data-align="center">Last Modified
+        </h5>
+
+        <small>10/20/2021, 8:05:19 PM</small></div>
+
+    <div data-hidden="mobile" class="spacer "></div>
+
+        <div><a role="button" class="button " data-palette="accent" data-size="medium" data-variation="clear" href="https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/disclosure/accordion.md" rel="noopener noreferrer" target="_blank">View page in repository
+                
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-external-link feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div></div></div></main>
+
+    <footer class="site-footer"><div data-padding-y="huge" class="box "><div class="stack " data-alignment-x="center"><a href="https://github.com/novacbn/kahi-ui" rel="noopener noreferrer" target="_blank"><h2>Kahi UI</h2></a>
+
+        <p data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/v0.4.5" rel="noopener noreferrer" target="_blank"><span data-margin-y="tiny" role="separator">v0.4.5</span></a>
+
+            Made and developed by
+            <br>
+
+            <a href="https://github.com/novacbn" rel="noopener noreferrer" target="_blank">NovacBN
+                
+
+<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-github feather-size-0.9em " width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></p></div></div>
+</footer>
+</div>
+
+
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002Fv0.4.5\",\"sub_title\":\"v0.4.5\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"discord\":\"https:\u002F\u002Fdiscord.com\u002Finvite\u002FJvUbmJvUBG\",\"version\":\"0.4.5\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/navigation/documentation.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"\u002Fdocs\u002Fresources\u002Fofficial\":\"Official\",\"\u002Fdocs\u002Fresources\u002Fcommunity\":\"Community\",\"\u002Fdocs\u002Fframework\u002Fgetting-started\":\"Getting Started\",\"\u002Fdocs\u002Fframework\u002Ffaq\":\"F.A.Q.\",\"\u002Fdocs\u002Fframework\u002Fbrowser-support\":\"Browser Support\",\"\u002Fdocs\u002Fframework\u002Fresponsitivity\":\"Responsitivity\",\"\u002Fdocs\u002Fframework\u002Felements\":\"Elements\",\"\u002Fdocs\u002Fframework\u002Fevents\":\"Events\",\"\u002Fdocs\u002Ftypography\u002Fblockquote\":\"Blockquote\",\"\u002Fdocs\u002Ftypography\u002Fcode\":\"Code\",\"\u002Fdocs\u002Ftypography\u002Fheading\":\"Heading\",\"\u002Fdocs\u002Ftypography\u002Ftext\":\"Text\",\"\u002Fdocs\u002Fembedded\u002Ffigure\":\"Figure\",\"\u002Fdocs\u002Fdisplay\u002Fbadge\":\"Badge\",\"\u002Fdocs\u002Fdisplay\u002Flist\":\"List\",\"\u002Fdocs\u002Fdisplay\u002Ftable\":\"Table\",\"\u002Fdocs\u002Fdisclosure\u002Faccordion\":\"Accordion\",\"\u002Fdocs\u002Fdisclosure\u002Ftab\":\"Tab\",\"\u002Fdocs\u002Ffeedback\u002Fdot\":\"Dot\",\"\u002Fdocs\u002Ffeedback\u002Fellipsis\":\"Ellipsis\",\"\u002Fdocs\u002Ffeedback\u002Fprogress\":\"Progress\",\"\u002Fdocs\u002Ffeedback\u002Fspinner\":\"Spinner\",\"\u002Fdocs\u002Ffeedback\u002Fwave\":\"Wave\",\"\u002Fdocs\u002Finteractables\u002Fbutton\":\"Button\",\"\u002Fdocs\u002Finteractables\u002Fcheck\":\"Check\",\"\u002Fdocs\u002Finteractables\u002Fform\":\"Form\",\"\u002Fdocs\u002Finteractables\u002Fradio\":\"Radio\",\"\u002Fdocs\u002Finteractables\u002Fswitch\":\"Switch\",\"\u002Fdocs\u002Finteractables\u002Ftextinput\":\"TextInput\",\"\u002Fdocs\u002Flayouts\u002Fcenter\":\"Center\",\"\u002Fdocs\u002Flayouts\u002Fcontainer\":\"Container\",\"\u002Fdocs\u002Flayouts\u002Fdivider\":\"Divider\",\"\u002Fdocs\u002Flayouts\u002Fgrid\":\"Grid\",\"\u002Fdocs\u002Flayouts\u002Fgroup\":\"Group\",\"\u002Fdocs\u002Flayouts\u002Fmosaic\":\"Mosaic\",\"\u002Fdocs\u002Flayouts\u002Fposition\":\"Position\",\"\u002Fdocs\u002Flayouts\u002Fscrollable\":\"Scrollable\",\"\u002Fdocs\u002Flayouts\u002Fspacer\":\"Spacer\",\"\u002Fdocs\u002Flayouts\u002Fstack\":\"Stack\",\"\u002Fdocs\u002Fsurfaces\u002Fbox\":\"Box\",\"\u002Fdocs\u002Fsurfaces\u002Fcard\":\"Card\",\"\u002Fdocs\u002Fsurfaces\u002Fhero\":\"Hero\",\"\u002Fdocs\u002Fsurfaces\u002Ftile\":\"Tile\",\"\u002Fdocs\u002Fnavigation\u002Fanchor\":\"Anchor\",\"\u002Fdocs\u002Fnavigation\u002Faside\":\"Aside\",\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\":\"Breadcrumb\",\"\u002Fdocs\u002Fnavigation\u002Fmenu\":\"Menu\",\"\u002Fdocs\u002Fnavigation\u002Fomni\":\"Omni\",\"\u002Fdocs\u002Foverlays\u002Fclickable\":\"Clickable\",\"\u002Fdocs\u002Foverlays\u002Fpopover\":\"Popover\",\"\u002Fdocs\u002Foverlays\u002Foffscreen\":\"Offscreen\",\"\u002Fdocs\u002Foverlays\u002Foverlay\":\"Overlay\",\"\u002Fdocs\u002Futilities\u002Fbrowserrender\":\"BrowserRender\",\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\":\"ContextBackdrop\",\"\u002Fdocs\u002Futilities\u002Fcontextbutton\":\"ContextButton\",\"\u002Fdocs\u002Futilities\u002Fintersectionrender\":\"IntersectionRender\",\"\u002Fdocs\u002Futilities\u002Fportal\":\"Portal\",\"\u002Fdocs\u002Futilities\u002Fserverrender\":\"ServerRender\",\"\u002Fdocs\u002Futilities\u002Ftransition\":\"Transition\",\"\u002Fdocs\u002Fmodifiers\u002Fhtml5\":\"HTML5\",\"\u002Fdocs\u002Fmodifiers\u002Fhidden\":\"Hidden\",\"\u002Fdocs\u002Fmodifiers\u002Fsizings\":\"Sizings\",\"\u002Fdocs\u002Fmodifiers\u002Fspacings\":\"Spacings\",\"\u002Fdocs\u002Factions\u002Fclick_outside\":\"click_outside\",\"\u002Fdocs\u002Factions\u002Fkeybind\":\"keybind\",\"\u002Fdocs\u002Factions\u002Fintersection_observer\":\"intersection_observer\",\"\u002Fdocs\u002Factions\u002Fmutation_observer\":\"mutation_observer\",\"\u002Fdocs\u002Fstores\u002Fdarkmode\":\"darkmode\",\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\":\"htmlpalette\",\"\u002Fdocs\u002Fstores\u002Fmediaquery\":\"mediaquery\",\"\u002Fdocs\u002Fstores\u002Fprefersscheme\":\"prefersscheme\",\"\u002Fdocs\u002Fstores\u002Fscrolllock\":\"scrolllock\",\"\u002Fdocs\u002Fstores\u002Fviewport\":\"viewport\"}}"}</script>
+
+	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/disclosure/accordion.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1634760319000,\"custom_properties\":{\"Accordion.Container\":[{\"name\":\"--accordion-item-palette-background-bold\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Eborder-color\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Ecolor\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--accordion-item-border-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-color\u003C\u002Fcode\u003E used for button overline.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--accordion-item-border-width\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-width\u003C\u002Fcode\u003E used for button overline.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--accordion-item-gap\",\"description\":\"\u003Cp\u003EControls the spacing gap between child elements, e.g. icons.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--accordion-item-padding-x\",\"description\":\"\u003Cp\u003EControls the X-Axis \u003Ccode\u003Epadding-left\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Epadding-right\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--accordion-item-padding-y\",\"description\":\"\u003Cp\u003EControls the X-Axis \u003Ccode\u003Epadding-bottom\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Epadding-top\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--accordion-item-disabled-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eopacity\u003C\u002Fcode\u003E used when disabled.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--accordion-item-focus-color-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]}]},\"events\":{\"Accordion.Container\":[{\"name\":\"change\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003Elogic_state\u003C\u002Fcode\u003E changes.\u003C\u002Fp\u003E\\n\",\"types\":[\"CustomEvent\u003Cvoid\u003E\"]}],\"Accordion.Label\":[{\"name\":\"click\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003EAccordion.Label\u003C\u002Fcode\u003E is clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"MouseEvent\"]}]},\"identifier\":\"disclosure\u002Faccordion\",\"modified_at\":1634760319000,\"properties\":{\"Accordion.Container\":[{\"name\":\"logic_name\",\"description\":\"\u003Cp\u003ESets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-name\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ename\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child \u003Ccode\u003EAccordion.Label\u003C\u002Fcode\u003E buttons to group as.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"logic_state\",\"description\":\"\u003Cp\u003EControls the currently active \u003Ccode\u003EAccordion.Label\u003C\u002Fcode\u003E button via a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\",\"string[]\"]}],\"Accordion.Group\":[{\"name\":\"logic_id\",\"description\":\"\u003Cp\u003ESets the element \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FGlobal_attributes\u002Fid\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child \u003Ccode\u003EAccordion.Group\u003C\u002Fcode\u003E \u002F \u003Ccode\u003EAccordion.Label\u003C\u002Fcode\u003E Components to group as.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}],\"Accordion.Label\":[{\"name\":\"palette\",\"description\":\"\u003Cp\u003EAlters the displayed color scheme.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"inverse\",\"inherit\",\"accent\",\"dark\",\"light\",\"alert\",\"affirmative\",\"negative\"]}],\"Accordion.Section\":[{\"name\":\"loading\",\"description\":\"\u003Cp\u003EWhen the property is set and the \u003Ccode\u003EAccordion.Section\u003C\u002Fcode\u003E view is not active, the child content is not rendered to DOM.\u003C\u002Fp\u003E\\n\",\"types\":[\"lazy\"]}]},\"sections\":[{\"identifier\":\"accordion\",\"level\":1,\"text\":\"Accordion\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"inclusive\",\"level\":2,\"text\":\"Inclusive\"},{\"identifier\":\"palette\",\"level\":2,\"text\":\"Palette\"},{\"identifier\":\"loading\",\"level\":2,\"text\":\"Loading\"},{\"identifier\":\"transitions\",\"level\":2,\"text\":\"Transitions\"}],\"slots\":{\"Accordion.Container\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}],\"Accordion.Label\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]},{\"name\":\"close\",\"description\":\"\u003Cp\u003ESlot for rendering the content (usually an icon) shown when the \u003Ccode\u003EAccordion.Section\u003C\u002Fcode\u003E can be closed.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]},{\"name\":\"open\",\"description\":\"\u003Cp\u003ESlot for rendering the content (usually an icon) shown when the \u003Ccode\u003EAccordion.Section\u003C\u002Fcode\u003E can be opened.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}],\"Accordion.Group\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}],\"Accordion.Section\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}]},\"snippets\":[{\"identifier\":\"accordion-preview\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Accordion,\\n        Heading,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAccordion.Container logic_name=\\\"accordion-preview\\\"\u003E\\n    \u003CAccordion.Group logic_id=\\\"accordion-preview-1\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section One\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EItem One Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-preview-2\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Two\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EItem Two Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-preview-3\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Three\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EItem Three Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\u003C\u002FAccordion.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Accordion Preview\"},{\"identifier\":\"accordion-imports\",\"script\":\"\u003Cscript\u003E\\n    import {Accordion} from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    const {Container, Label, Group, Section} =\\n        Accordion;\\n\u003C\u002Fscript\u003E\",\"syntax\":\"svelte\",\"title\":\"Accordion Imports\"},{\"identifier\":\"accordion-inclusive\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Accordion,\\n        Heading,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAccordion.Container\\n    behavior=\\\"inclusive\\\"\\n    logic_name=\\\"accordion-inclusive\\\"\\n\u003E\\n    \u003CAccordion.Group logic_id=\\\"accordion-inclusive-1\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section One\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EItem One Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-inclusive-2\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Two\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EItem Two Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-inclusive-3\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Three\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EItem Three Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\u003C\u002FAccordion.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Accordion Inclusive\"},{\"identifier\":\"accordion-palette\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Accordion,\\n        Heading,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAccordion.Container logic_name=\\\"accordion-palette\\\"\u003E\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-palette-default\\\"\\n    \u003E\\n        \u003CAccordion.Label\u003E\\n            DEFAULT Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EDEFAULT Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-palette-accent\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            ACCENT Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EACCENT Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-palette-dark\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"dark\\\"\u003E\\n            DARK Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EDARK Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-palette-light\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"light\\\"\u003E\\n            LIGHT Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003ELIGHT Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-palette-alert\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"alert\\\"\u003E\\n            ALERT Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EALERT Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-palette-affirmative\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"affirmative\\\"\u003E\\n            AFFIRMATIVE Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003EAFFIRMATIVE Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-palette-negative\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"negative\\\"\u003E\\n            NEGATIVE Section\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CHeading\u003ENEGATIVE Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\u003C\u002FAccordion.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Accordion Palette\"},{\"identifier\":\"accordion-loading\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Accordion,\\n        Heading,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAccordion.Container logic_name=\\\"accordion-loading\\\"\u003E\\n    \u003CAccordion.Group logic_id=\\\"accordion-loading-1\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section One\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section loading=\\\"lazy\\\"\u003E\\n            \u003CHeading\u003EItem One Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-loading-2\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Two\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section loading=\\\"lazy\\\"\u003E\\n            \u003CHeading\u003EItem Two Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group logic_id=\\\"accordion-loading-3\\\"\u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Three\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section loading=\\\"lazy\\\"\u003E\\n            \u003CHeading\u003EItem Three Content\u003C\u002FHeading\u003E\\n\\n            \u003CText\u003E\\n                Lorem ipsum dolor sit amet, consectetur\\n                adipiscing elit. Proin et consectetur\\n                orci. Curabitur a egestas turpis, vitae\\n                convallis sapien. Sed pellentesque\\n                rutrum tellus, in iaculis dolor\\n                tincidunt non. Orci varius natoque\\n                penatibus et magnis dis parturient\\n                montes, nascetur ridiculus mus.\\n            \u003C\u002FText\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\u003C\u002FAccordion.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Accordion Loading\"},{\"identifier\":\"accordion-transitions\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Accordion,\\n        Heading,\\n        Text,\\n        Transition,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CAccordion.Container\\n    logic_name=\\\"accordion-transitions\\\"\\n\u003E\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-transitions-1\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section One\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CTransition\\n                animation=\\\"fade\\\"\\n                variation=\\\"enter\\\"\\n            \u003E\\n                \u003CHeading\u003EItem One Content\u003C\u002FHeading\u003E\\n\\n                \u003CText\u003E\\n                    Lorem ipsum dolor sit amet,\\n                    consectetur adipiscing elit. Proin\\n                    et consectetur orci. Curabitur a\\n                    egestas turpis, vitae convallis\\n                    sapien. Sed pellentesque rutrum\\n                    tellus, in iaculis dolor tincidunt\\n                    non. Orci varius natoque penatibus\\n                    et magnis dis parturient montes,\\n                    nascetur ridiculus mus.\\n                \u003C\u002FText\u003E\\n            \u003C\u002FTransition\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-transitions-2\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Two\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CTransition\\n                animation=\\\"fade\\\"\\n                variation=\\\"enter\\\"\\n            \u003E\\n                \u003CHeading\u003EItem Two Content\u003C\u002FHeading\u003E\\n\\n                \u003CText\u003E\\n                    Lorem ipsum dolor sit amet,\\n                    consectetur adipiscing elit. Proin\\n                    et consectetur orci. Curabitur a\\n                    egestas turpis, vitae convallis\\n                    sapien. Sed pellentesque rutrum\\n                    tellus, in iaculis dolor tincidunt\\n                    non. Orci varius natoque penatibus\\n                    et magnis dis parturient montes,\\n                    nascetur ridiculus mus.\\n                \u003C\u002FText\u003E\\n            \u003C\u002FTransition\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\\n    \u003CAccordion.Group\\n        logic_id=\\\"accordion-transitions-3\\\"\\n    \u003E\\n        \u003CAccordion.Label palette=\\\"accent\\\"\u003E\\n            Section Three\\n\\n            \u003Csvelte:fragment slot=\\\"close\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangledown;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n\\n            \u003Csvelte:fragment slot=\\\"open\\\"\u003E\\n                \u003CText is=\\\"span\\\"\u003E\\n                    &blacktriangleright;\\n                \u003C\u002FText\u003E\\n            \u003C\u002Fsvelte:fragment\u003E\\n        \u003C\u002FAccordion.Label\u003E\\n\\n        \u003CAccordion.Section\u003E\\n            \u003CTransition\\n                animation=\\\"fade\\\"\\n                variation=\\\"enter\\\"\\n            \u003E\\n                \u003CHeading\u003EItem Three Content\u003C\u002FHeading\u003E\\n\\n                \u003CText\u003E\\n                    Lorem ipsum dolor sit amet,\\n                    consectetur adipiscing elit. Proin\\n                    et consectetur orci. Curabitur a\\n                    egestas turpis, vitae convallis\\n                    sapien. Sed pellentesque rutrum\\n                    tellus, in iaculis dolor tincidunt\\n                    non. Orci varius natoque penatibus\\n                    et magnis dis parturient montes,\\n                    nascetur ridiculus mus.\\n                \u003C\u002FText\u003E\\n            \u003C\u002FTransition\u003E\\n        \u003C\u002FAccordion.Section\u003E\\n    \u003C\u002FAccordion.Group\u003E\\n\u003C\u002FAccordion.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Accordion Transitions\"}],\"title\":\"Accordion\"},\"render\":\"\u003Ch1 id=\\\"accordion\\\"\u003EAccordion\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003EAccordion\u003C\u002Fcode\u003E Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-preview?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-svelte snippet-highlight\\\"\u003E\u003Ccode class=\\\"language-svelte\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EAccordion\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token keyword\\\"\u003Econst\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EContainer\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E Label\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E Group\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E Section\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token operator\\\"\u003E=\u003C\u002Fspan\u003E\\n        Accordion\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"inclusive\\\"\u003EInclusive\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the behavior of the \u003Ccode\u003EAccordion\u003C\u002Fcode\u003E to allow multiple items to be revealed at once via the \u003Ccode\u003Ebehavior\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-inclusive?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-inclusive?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"palette\\\"\u003EPalette\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the color palette of the \u003Ccode\u003EAccordion\u003C\u002Fcode\u003E buttons via the \u003Ccode\u003Epalette\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-palette?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-palette?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"loading\\\"\u003ELoading\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: Use the in-Browser developer tools to see this functionality in action.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can customize the slot loading behavior of individual \u003Ccode\u003EAccordion.Section\u003C\u002Fcode\u003E Components to not render their children, via the \u003Ccode\u003Eloading\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-loading?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-loading?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"transitions\\\"\u003ETransitions\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can use \u003Ca href=\\\"..\u002Futilities\u002Ftransition\\\"\u003E\u003Ccode\u003ETransition\u003C\u002Fcode\u003E\u003C\u002Fa\u003E Components to provide fancy switching animations.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-transitions?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fdisclosure\u002Faccordion\u002Faccordion-transitions?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+
+    </body>
+</html>

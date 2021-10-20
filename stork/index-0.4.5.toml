@@ -58,6 +58,32 @@ Svelte Actions are always ran on the Browser only with Javascript is enabled. So
 
   [[input.files]]
   contents = """
+Accordion
+Accordion Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
+
+Imports
+Inclusive
+You can change the behavior of the Accordion to allow multiple items to be revealed at once via the behavior property.
+
+Palette
+You can change the color palette of the Accordion buttons via the palette property.
+
+Loading
+
+NOTE: Use the in-Browser developer tools to see this functionality in action.
+
+You can customize the slot loading behavior of individual Accordion.Section Components to not render their children, via the loading property.
+
+Transitions
+You can use Transition Components to provide fancy switching animations.
+
+"""
+  filetype = "PlainText"
+  url = "disclosure/accordion"
+  title = "Accordion"
+
+  [[input.files]]
+  contents = """
 Tab
 Tab Components are typically used for turning what would be multi-page content, into a single page with a set of radio buttons to toggle between views.
 
@@ -80,6 +106,9 @@ You can customize the slot loading behavior of individual Tab.Section Components
 
 Anchor
 You can substitute Tab.Label for Tab.Anchor to support per-page tabbed views.
+
+Transitions
+You can use Transition Components to provide fancy switching animations.
 
 """
   filetype = "PlainText"
@@ -129,6 +158,9 @@ Table
 Table is typically used to render tabular data in a structured row -> columns format, for end-users to easily read the contents.
 
 Table Imports
+Spans
+You can use the colspan / rowspan properties on <Table.Column> / <Table.Heading> to adjust the size of table items they take up.
+
 Borders
 You can make a Table have borders via the variation property.
 
@@ -444,7 +476,7 @@ Outline
 Button components have a special variation that renders them as text with an outline, the fills in when clicked.
 
 Types
-You can change make the Button an anchor by passing via the href property. And also, change the input type between button (DEFAULT), reset, submit via the type property.
+You can change make the Button a <a> by passing the href property, or a <label> by passing the for property. And also, change the input type between <input type="button" /> (DEFAULT), <input type="reset" />, <input type="submit" /> via the type / value properties.
 
 """
   filetype = "PlainText"
@@ -963,6 +995,9 @@ You can change the color palette of the Menu.Anchor / Menu.Button / Menu.Label v
   [[input.files]]
   contents = """
 Omni
+
+NOTE: Currently undocumented, will be heavily changed in the future.
+
 ...
 """
   filetype = "PlainText"
