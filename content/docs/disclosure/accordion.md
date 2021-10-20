@@ -1,4 +1,29 @@
 +++
+[[properties."Accordion.Container"]]
+name="logic_name"
+description="Sets the form [`name`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-name) attribute in a [Svelte Context](https://svelte.dev/docs#setContext) for child `Accordion.Label` buttons to group as."
+types=["string"]
+
+[[properties."Accordion.Container"]]
+name="logic_state"
+description="Controls the currently active `Accordion.Label` button via a [Svelte Context](https://svelte.dev/docs#setContext)."
+types=["string", "string[]"]
+
+[[properties."Accordion.Group"]]
+name="logic_id"
+description="Sets the element [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) attribute in a [Svelte Context](https://svelte.dev/docs#setContext) for child `Accordion.Group` / `Accordion.Label` Components to group as."
+types=["string"]
+
+[[properties."Accordion.Label"]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties."Accordion.Section"]]
+name="loading"
+description="When the property is set and the `Accordion.Section` view is not active, the child content is not rendered to DOM."
+types=["lazy"]
+
 [[events."Accordion.Container"]]
 name="change"
 description="Fires whenever the `logic_state` changes."
