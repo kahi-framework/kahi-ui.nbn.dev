@@ -82,7 +82,7 @@ types=["<alpha-value>"]
 
 # Accordion
 
-...
+`Accordion` Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
 
 ```svelte repl Accordion Preview
 <script>
@@ -329,7 +329,258 @@ You can change the behavior of the `Accordion` to allow multiple items to be rev
 You can change the color palette of the `Accordion` buttons via the `palette` property.
 
 ```svelte repl Accordion Palette
+<script>
+    import {
+        Accordion,
+        Heading,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
 
+<Accordion.Container logic_name="accordion-palette">
+    <Accordion.Group
+        logic_id="accordion-palette-default"
+    >
+        <Accordion.Label>
+            DEFAULT Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>DEFAULT Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-palette-accent"
+    >
+        <Accordion.Label palette="accent">
+            ACCENT Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>ACCENT Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group logic_id="accordion-palette-dark">
+        <Accordion.Label palette="dark">
+            DARK Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>DARK Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-palette-light"
+    >
+        <Accordion.Label palette="light">
+            LIGHT Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>LIGHT Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-palette-alert"
+    >
+        <Accordion.Label palette="alert">
+            ALERT Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>ALERT Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-palette-affirmative"
+    >
+        <Accordion.Label palette="affirmative">
+            AFFIRMATIVE Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>AFFIRMATIVE Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-palette-negative"
+    >
+        <Accordion.Label palette="negative">
+            NEGATIVE Section
+
+            <svelte:fragment slot="close">
+                <Text is="span">
+                    &blacktriangledown;
+                </Text>
+            </svelte:fragment>
+
+            <svelte:fragment slot="open">
+                <Text is="span">
+                    &blacktriangleright;
+                </Text>
+            </svelte:fragment>
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>NEGATIVE Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+</Accordion.Container>
 ```
 
 ## Loading
