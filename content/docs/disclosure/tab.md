@@ -908,7 +908,7 @@ You can substitute `Tab.Label` for `Tab.Anchor` to support per-page tabbed views
 
 ## Transitions
 
-You can use [`Transition`](../utilities/Transition.md) Components to provide fancy switching animations.
+You can use [`Transition`](../utilities/transition.md) Components to provide fancy switching animations.
 
 ```svelte repl Tab Transitions
 <script>

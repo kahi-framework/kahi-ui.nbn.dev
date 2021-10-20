@@ -727,7 +727,7 @@ You can customize the slot loading behavior of individual `Accordion.Section` Co
 
 ## Transitions
 
-You can use [`Transition`](../utilities/Transition.md) Components to provide fancy switching animations.
+You can use [`Transition`](../utilities/transition.md) Components to provide fancy switching animations.
 
 ```svelte repl Accordion Transitions
 <script>
