@@ -171,6 +171,16 @@ You can change the color palette of the `Heading` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">ACCENT</Text>
+        <Heading palette="accent">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
         <Heading palette="dark">
             Lorem ipsum dolor sit amet, consectetur

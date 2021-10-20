@@ -346,6 +346,30 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
 
     <Menu.Container>
         <Menu.Heading>
+            ACCENT
+            <svelte:fragment slot="sub-menu">
+                <Menu.SubMenu>
+                    <Menu.Button
+                        palette="accent"
+                        active
+                    >
+                        Dot
+                        <Spacer />
+                        <span>ICON</span>
+                    </Menu.Button>
+
+                    <Menu.Button palette="accent">
+                        Spinner
+                        <Spacer />
+                        <span>ICON</span>
+                    </Menu.Button>
+                </Menu.SubMenu>
+            </svelte:fragment>
+        </Menu.Heading>
+    </Menu.Container>
+
+    <Menu.Container>
+        <Menu.Heading>
             DARK
             <svelte:fragment slot="sub-menu">
                 <Menu.SubMenu>
