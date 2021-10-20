@@ -110,10 +110,10 @@ types=["{}"]
 
 <Tab.Container
     logic_name="tab-preview"
-    logic_state="tab-1"
+    logic_state="tab-preview-1"
     alignment_x="stretch"
 >
-    <Tab.Group logic_id="tab-1">
+    <Tab.Group logic_id="tab-preview-1">
         <Tab.Label palette="accent">Tab One</Tab.Label>
 
         <Tab.Section>
@@ -128,7 +128,7 @@ types=["{}"]
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-2">
+    <Tab.Group logic_id="tab-preview-2">
         <Tab.Label palette="accent">Tab Two</Tab.Label>
 
         <Tab.Section>
@@ -143,7 +143,7 @@ types=["{}"]
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-3">
+    <Tab.Group logic_id="tab-preview-3">
         <Tab.Label palette="accent">
             Tab Three
         </Tab.Label>
@@ -190,9 +190,9 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
 
 <Tab.Container
     logic_name="tab-palette"
-    logic_state="tab-default"
+    logic_state="tab-palette-default"
 >
-    <Tab.Group logic_id="tab-default">
+    <Tab.Group logic_id="tab-palette-default">
         <Tab.Label>Tab DEFAULT</Tab.Label>
 
         <Tab.Section>
@@ -200,7 +200,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-accent">
+    <Tab.Group logic_id="tab-palette-accent">
         <Tab.Label palette="accent">
             Tab ACCENT
         </Tab.Label>
@@ -210,7 +210,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-dark">
+    <Tab.Group logic_id="tab-palette-dark">
         <Tab.Label palette="dark">Tab DARK</Tab.Label>
 
         <Tab.Section>
@@ -218,7 +218,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-light">
+    <Tab.Group logic_id="tab-palette-light">
         <Tab.Label palette="light">
             Tab LIGHT
         </Tab.Label>
@@ -228,7 +228,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-alert">
+    <Tab.Group logic_id="tab-palette-alert">
         <Tab.Label palette="alert">
             Tab ALERT
         </Tab.Label>
@@ -238,7 +238,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-affirmative">
+    <Tab.Group logic_id="tab-palette-affirmative">
         <Tab.Label palette="affirmative">
             Tab AFFIRMATIVE
         </Tab.Label>
@@ -248,7 +248,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-negative">
+    <Tab.Group logic_id="tab-palette-negative">
         <Tab.Label palette="negative">
             Tab NEGATIVE
         </Tab.Label>
@@ -279,10 +279,10 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
         <Text is="strong">DEFAULT</Text>
 
         <Tab.Container
-            logic_name="tab-default"
-            logic_state="tab-default-one"
+            logic_name="tab-sizing-default"
+            logic_state="tab-sizing-default-1"
         >
-            <Tab.Group logic_id="tab-default-one">
+            <Tab.Group logic_id="tab-sizing-default-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -292,7 +292,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-default-two">
+            <Tab.Group logic_id="tab-sizing-default-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -302,7 +302,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-default-three">
+            <Tab.Group logic_id="tab-sizing-default-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -320,11 +320,11 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
         <Text is="strong">TINY</Text>
 
         <Tab.Container
-            logic_name="tab-tiny"
-            logic_state="tab-tiny-one"
+            logic_name="tab-sizing-tiny"
+            logic_state="tab-sizing-tiny-1"
             sizing="tiny"
         >
-            <Tab.Group logic_id="tab-tiny-one">
+            <Tab.Group logic_id="tab-sizing-tiny-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -334,7 +334,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-tiny-two">
+            <Tab.Group logic_id="tab-sizing-tiny-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -344,7 +344,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-tiny-three">
+            <Tab.Group logic_id="tab-sizing-tiny-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -362,11 +362,11 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
         <Text is="strong">SMALL</Text>
 
         <Tab.Container
-            logic_name="tab-small"
-            logic_state="tab-small-one"
+            logic_name="tab-sizing-small"
+            logic_state="tab-sizing-small-1"
             sizing="small"
         >
-            <Tab.Group logic_id="tab-small-one">
+            <Tab.Group logic_id="tab-sizing-small-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -376,7 +376,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-small-two">
+            <Tab.Group logic_id="tab-sizing-small-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -386,7 +386,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-small-three">
+            <Tab.Group logic_id="tab-sizing-small-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -404,11 +404,11 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
         <Text is="strong">MEDIUM</Text>
 
         <Tab.Container
-            logic_name="tab-medium"
-            logic_state="tab-medium-one"
+            logic_name="tab-sizing-medium"
+            logic_state="tab-sizing-medium-1"
             sizing="medium"
         >
-            <Tab.Group logic_id="tab-medium-one">
+            <Tab.Group logic_id="tab-sizing-medium-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -418,7 +418,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-medium-two">
+            <Tab.Group logic_id="tab-sizing-medium-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -428,7 +428,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-medium-three">
+            <Tab.Group logic_id="tab-sizing-medium-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -446,11 +446,11 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
         <Text is="strong">LARGE</Text>
 
         <Tab.Container
-            logic_name="tab-large"
-            logic_state="tab-large-one"
+            logic_name="tab-sizing-large"
+            logic_state="tab-sizing-large-1"
             sizing="large"
         >
-            <Tab.Group logic_id="tab-large-one">
+            <Tab.Group logic_id="tab-sizing-large-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -460,7 +460,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-large-two">
+            <Tab.Group logic_id="tab-sizing-large-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -470,7 +470,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-large-three">
+            <Tab.Group logic_id="tab-sizing-large-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -488,11 +488,11 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
         <Text is="strong">HUGE</Text>
 
         <Tab.Container
-            logic_name="tab-huge"
-            logic_state="tab-huge-one"
+            logic_name="tab-sizing-huge"
+            logic_state="tab-sizing-huge-1"
             sizing="huge"
         >
-            <Tab.Group logic_id="tab-huge-one">
+            <Tab.Group logic_id="tab-sizing-huge-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -502,7 +502,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-huge-two">
+            <Tab.Group logic_id="tab-sizing-huge-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -512,7 +512,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-huge-three">
+            <Tab.Group logic_id="tab-sizing-huge-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -547,10 +547,10 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
         <Text is="strong">LEFT</Text>
 
         <Tab.Container
-            logic_name="tab-left"
-            logic_state="tab-left-one"
+            logic_name="tab-alignment-left"
+            logic_state="tab-alignment-left-1"
         >
-            <Tab.Group logic_id="tab-left-one">
+            <Tab.Group logic_id="tab-alignment-left-1">
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -560,7 +560,7 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-left-two">
+            <Tab.Group logic_id="tab-alignment-left-2">
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -570,7 +570,7 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-left-three">
+            <Tab.Group logic_id="tab-alignment-left-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -588,11 +588,13 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
         <Text is="strong">CENTER</Text>
 
         <Tab.Container
-            logic_name="tab-center"
-            logic_state="tab-center-one"
+            logic_name="tab-alignment-center"
+            logic_state="tab-alignment-center-1"
             alignment_x="center"
         >
-            <Tab.Group logic_id="tab-center-one">
+            <Tab.Group
+                logic_id="tab-alignment-center-1"
+            >
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -602,7 +604,9 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-center-two">
+            <Tab.Group
+                logic_id="tab-alignment-center-2"
+            >
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -612,7 +616,9 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-center-three">
+            <Tab.Group
+                logic_id="tab-alignment-center-3"
+            >
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -630,11 +636,13 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
         <Text is="strong">RIGHT</Text>
 
         <Tab.Container
-            logic_name="tab-right"
-            logic_state="tab-right-one"
+            logic_name="tab-alignment-right"
+            logic_state="tab-alignment-right-1"
             alignment_x="right"
         >
-            <Tab.Group logic_id="tab-right-one">
+            <Tab.Group
+                logic_id="tab-alignment-right-1"
+            >
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -644,7 +652,9 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-right-two">
+            <Tab.Group
+                logic_id="tab-alignment-right-2"
+            >
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -654,7 +664,9 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-right-three">
+            <Tab.Group
+                logic_id="tab-alignment-right-3"
+            >
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -672,11 +684,13 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
         <Text is="strong">STRETCH</Text>
 
         <Tab.Container
-            logic_name="tab-stretch"
-            logic_state="tab-stretch-one"
+            logic_name="tab-alignment-stretch"
+            logic_state="tab-alignment-stretch-1"
             alignment_x="stretch"
         >
-            <Tab.Group logic_id="tab-stretch-one">
+            <Tab.Group
+                logic_id="tab-alignment-stretch-1"
+            >
                 <Tab.Label palette="accent">
                     Tab One
                 </Tab.Label>
@@ -686,7 +700,9 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-stretch-two">
+            <Tab.Group
+                logic_id="tab-alignment-stretch-2"
+            >
                 <Tab.Label palette="accent">
                     Tab Two
                 </Tab.Label>
@@ -696,7 +712,9 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
                 </Tab.Section>
             </Tab.Group>
 
-            <Tab.Group logic_id="tab-stretch-three">
+            <Tab.Group
+                logic_id="tab-alignment-stretch-3"
+            >
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -729,10 +747,10 @@ You can customize the slot loading behavior of individual `Tab.Section` Componen
 
 <Tab.Container
     logic_name="tab-loading"
-    logic_state="tab-1"
+    logic_state="tab-lazy-1"
     alignment_x="stretch"
 >
-    <Tab.Group logic_id="tab-1">
+    <Tab.Group logic_id="tab-lazy-1">
         <Tab.Label palette="accent">Tab One</Tab.Label>
 
         <Tab.Section loading="lazy">
@@ -747,7 +765,7 @@ You can customize the slot loading behavior of individual `Tab.Section` Componen
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-2">
+    <Tab.Group logic_id="tab-lazy-2">
         <Tab.Label palette="accent">Tab Two</Tab.Label>
 
         <Tab.Section loading="lazy">
@@ -762,7 +780,7 @@ You can customize the slot loading behavior of individual `Tab.Section` Componen
         </Tab.Section>
     </Tab.Group>
 
-    <Tab.Group logic_id="tab-3">
+    <Tab.Group logic_id="tab-lazy-3">
         <Tab.Label palette="accent">
             Tab Three
         </Tab.Label>
@@ -794,11 +812,7 @@ You can substitute `Tab.Label` for `Tab.Anchor` to support per-page tabbed views
     } from "@kahi-ui/framework";
 </script>
 
-<Tab.Container
-    logic_name="tab-anchor"
-    logic_state="tab-1"
-    alignment_x="stretch"
->
+<Tab.Container alignment_x="stretch">
     <Tab.Anchor
         current="page"
         href="#"
@@ -829,5 +843,91 @@ You can substitute `Tab.Label` for `Tab.Anchor` to support per-page tabbed views
     </Tab.Anchor>
 
     <Tab.Section>...</Tab.Section>
+</Tab.Container>
+```
+
+## Transitions
+
+You can use [`Transition`](../utilities/Transition.md) Components to provide fancy switching animations.
+
+```svelte repl Tab Transitions
+<script>
+    import {
+        Heading,
+        Tab,
+        Text,
+        Transition,
+    } from "@kahi-ui/framework";
+</script>
+
+<Tab.Container
+    logic_name="tab-transition"
+    logic_state="tab-transition-1"
+    alignment_x="stretch"
+>
+    <Tab.Group logic_id="tab-transition-1">
+        <Tab.Label palette="accent">Tab One</Tab.Label>
+
+        <Tab.Section>
+            <Transition
+                animation="fade"
+                variation="enter"
+            >
+                <Heading>Tab One Content</Heading>
+
+                <Text>
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin
+                    et consectetur orci. Curabitur a
+                    egestas turpis, vitae convallis
+                    sapien.
+                </Text>
+            </Transition>
+        </Tab.Section>
+    </Tab.Group>
+
+    <Tab.Group logic_id="tab-transition-2">
+        <Tab.Label palette="accent">Tab Two</Tab.Label>
+
+        <Tab.Section>
+            <Transition
+                animation="fade"
+                variation="enter"
+            >
+                <Heading>Tab Two Content</Heading>
+
+                <Text>
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin
+                    et consectetur orci. Curabitur a
+                    egestas turpis, vitae convallis
+                    sapien.
+                </Text>
+            </Transition>
+        </Tab.Section>
+    </Tab.Group>
+
+    <Tab.Group logic_id="tab-transition-3">
+        <Tab.Label palette="accent">
+            Tab Three
+        </Tab.Label>
+
+        <Tab.Section>
+            <Transition
+                animation="fade"
+                variation="enter"
+            >
+                <Heading>Tab Three Content</Heading>
+
+                <Text>
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit. Proin
+                    et consectetur orci. Curabitur a
+                    egestas turpis, vitae convallis
+                    sapien.
+                </Text>
+            </Transition>
+        </Tab.Section>
+    </Tab.Group>
 </Tab.Container>
 ```
