@@ -59,6 +59,11 @@ name="loading"
 description="When the property is set and the `Tab.Section` view is not active, the child content is not rendered to DOM."
 types=["lazy"]
 
+[[events."Tab.Container"]]
+name="change"
+description="Fires whenever the `logic_state` changes."
+types=["CustomEvent<void>"]
+
 [[events."Tab.Anchor"]]
 name="click"
 description="Fires whenever the `Tab.Anchor` is clicked."
