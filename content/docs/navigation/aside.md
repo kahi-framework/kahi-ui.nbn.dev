@@ -56,7 +56,7 @@ description="Slot for rendering a `ContextButton` that closes an opened `Aside.C
 types=["{}"]
 
 [[slots."Aside.Container"]]
-name="default"
+name="open"
 description="Slot for rendering a `ContextButton` that opens a collapsed `Aside.Container`."
 types=["{}"]
 
