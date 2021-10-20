@@ -137,9 +137,9 @@ You can change the color palette of the `Anchor` via the `palette` property.
         href="https://google.com"
         target="_blank"
         rel="noopener noreferrer"
-        palette="light"
+        palette="accent"
     >
-        Goto google.com LIGHT
+        Goto google.com ACCENT
     </Anchor>
 
     <Anchor
@@ -149,6 +149,15 @@ You can change the color palette of the `Anchor` via the `palette` property.
         palette="dark"
     >
         Goto google.com DARK
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="light"
+    >
+        Goto google.com LIGHT
     </Anchor>
 
     <Anchor

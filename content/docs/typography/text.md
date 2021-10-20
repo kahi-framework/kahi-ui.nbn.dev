@@ -194,6 +194,19 @@ You can change the color palette of the `Text` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">ACCENT</Text>
+        <Text palette="accent">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
         <Text palette="dark">
             Lorem ipsum dolor sit amet, consectetur

@@ -9,6 +9,26 @@ name="variation"
 description="Alters how the `Table.Container` renders with various additions."
 types=["borders", "stripes"]
 
+[[properties."Table.Column"]]
+name="colspan"
+description="Adjusts the column table span of the `Table.Column` via [`colspan`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)."
+types=["number", "string"]
+
+[[properties."Table.Column"]]
+name="rowspan"
+description="Adjusts the column table span of the `Table.Column` via [`rowspan`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)."
+types=["number", "string"]
+
+[[properties."Table.Heading"]]
+name="colspan"
+description="Adjusts the column table span of the `Table.Heading` via [`colspan`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-colspan)."
+types=["number", "string"]
+
+[[properties."Table.Heading"]]
+name="rowspan"
+description="Adjusts the column table span of the `Table.Heading` via [`rowspan`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/td#attr-rowspan)."
+types=["number", "string"]
+
 [[slots."Table.Container"]]
 name="default"
 description="Default unnamed slot."
@@ -196,6 +216,56 @@ types=["<length>"]
         Section,
     } = Table;
 </script>
+```
+
+## Spans
+
+You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
+
+```svelte repl Table Spans
+<script>
+    import {Table} from "@kahi-ui/framework";
+</script>
+
+<Table.Container>
+    <Table.Header>
+        <Table.Row>
+            <Table.Heading colspan={2}>
+                colspan 2 x rowspan 1
+            </Table.Heading>
+
+            <Table.Heading>
+                colspan 1 x rowspan 1
+            </Table.Heading>
+        </Table.Row>
+    </Table.Header>
+
+    <Table.Section>
+        <Table.Row>
+            <Table.Column>
+                colspan 1 x rowspan 1
+            </Table.Column>
+
+            <Table.Column rowspan={2}>
+                colspan 1 x rowspan 2
+            </Table.Column>
+        </Table.Row>
+
+        <Table.Row>
+            <Table.Column>
+                colspan 1 x rowspan 1
+            </Table.Column>
+        </Table.Row>
+    </Table.Section>
+
+    <Table.Footer>
+        <Table.Row>
+            <Table.Heading colspan={3}>
+                colspan 3 x rowspan 1
+            </Table.Heading>
+        </Table.Row>
+    </Table.Footer>
+</Table.Container>
 ```
 
 ## Borders
