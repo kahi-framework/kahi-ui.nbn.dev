@@ -1,3 +1,37 @@
+```
+[[properties."Carousel.Container"]]
+name="orientation"
+description="Renders the `Carousel` vertically."
+default="horizontal"
+types=["horizontal", "vertical"]
+
+
+[[properties."Carousel.Container"]]
+name="spacing"
+description="Adjusts the visual spacing between child items in the `Carousel`."
+types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+
+[[properties."Carousel.Container"]]
+name="spacing_x"
+description="Adjusts the horizontal visual spacing between child items in the `Carousel`."
+types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+
+[[properties."Carousel.Container"]]
+name="spacing_y"
+description="Adjusts the vertical visual spacing between child items in the `Carousel`."
+types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+
+[[slots."Carousel.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Carousel.Section"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+```
+
 # Carousel
 
 `Carousel` allows the user to scroll through "slides" of content without having to extend the page dimensions.
