@@ -78,7 +78,7 @@ types=["{}"]
 </script>
 
 <FileDropInput
-    class="file-drop-input-preview"
+    class="filedropinput-preview"
     multiple
     on:change={on_change}
 >
@@ -133,7 +133,7 @@ types=["{}"]
 {/if}
 
 <style>
-    :global(.file-drop-input-preview) :global(strong) {
+    :global(.filedropinput-preview) :global(strong) {
         font-size: 3em;
     }
 </style>
@@ -145,4 +145,80 @@ types=["{}"]
 <script>
     import {FileDropInput} from "@kahi-ui/framework";
 </script>
+```
+
+# Palette
+
+You can change the color palette of the `FileDropInput` via the `palette` property.
+
+```svelte repl FileDropInput Palette
+<script>
+    import {
+        FileDropInput,
+        Mosaic,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic
+    class="filedropinput-palette"
+    sizing="medium"
+    spacing="medium"
+>
+    <FileDropInput>
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>NEUTRAL</Text>
+        </Stack>
+    </FileDropInput>
+
+    <FileDropInput palette="accent">
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>ACCENT</Text>
+        </Stack>
+    </FileDropInput>
+
+    <FileDropInput palette="dark">
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>DARK</Text>
+        </Stack>
+    </FileDropInput>
+
+    <FileDropInput palette="light">
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>LIGHT</Text>
+        </Stack>
+    </FileDropInput>
+
+    <FileDropInput palette="alert">
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>ALERT</Text>
+        </Stack>
+    </FileDropInput>
+
+    <FileDropInput palette="affirmative">
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>AFFIRMATIVE</Text>
+        </Stack>
+    </FileDropInput>
+
+    <FileDropInput palette="negative">
+        <Stack spacing="medium">
+            <Text is="strong">&uparrow;</Text>
+            <Text>NEGATIVE</Text>
+        </Stack>
+    </FileDropInput>
+</Mosaic>
+
+<style>
+    :global(.filedropinput-palette) :global(strong) {
+        font-size: 3em;
+    }
+</style>
 ```

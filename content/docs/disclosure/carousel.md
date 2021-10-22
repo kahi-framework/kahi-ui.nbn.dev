@@ -5,7 +5,6 @@ description="Renders the `Carousel` vertically."
 default="horizontal"
 types=["horizontal", "vertical"]
 
-
 [[properties."Carousel.Container"]]
 name="spacing"
 description="Adjusts the visual spacing between child items in the `Carousel`."
