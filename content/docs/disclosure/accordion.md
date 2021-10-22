@@ -91,7 +91,7 @@ types=["<length>"]
 
 [[custom_properties."Accordion.Container"]]
 name="--accordion-item-padding-y"
-description="Controls the X-Axis `padding-bottom` / `padding-top` used."
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
 types=["<length>"]
 
 [[custom_properties."Accordion.Container"]]
