@@ -138,3 +138,11 @@ types=["{}"]
     }
 </style>
 ```
+
+## Imports
+
+```svelte default FileDropInput
+<script>
+    import {FileDropInput} from "@kahi-ui/framework";
+</script>
+```
