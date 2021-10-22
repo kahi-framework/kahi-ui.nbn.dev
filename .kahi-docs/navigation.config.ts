@@ -59,6 +59,7 @@ export default define_navigation({
             separator: "Disclosure",
             items: [
                 {href: "/docs/disclosure/accordion", badge: "NEW"},
+                {href: "/docs/disclosure/carousel", badge: "NEW"},
                 {href: "/docs/disclosure/tab", badge: "UPDATED"},
             ],
         },
@@ -79,6 +80,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
+                {href: "/docs/interactables/filedropinput", badge: "NEW"},
                 {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
