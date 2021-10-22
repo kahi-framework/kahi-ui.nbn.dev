@@ -1,4 +1,4 @@
-```
++++
 [[properties."Carousel.Container"]]
 name="orientation"
 description="Renders the `Carousel` vertically."
@@ -29,7 +29,7 @@ types=["{}"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
-```
++++
 
 # Carousel
 
@@ -132,7 +132,7 @@ You can set the `Carousel` to render vertically via the `orientation` property.
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
-```svelte repl Stack Spacing
+```svelte repl Carousel Spacing
 <script>
     import {
         Box,
