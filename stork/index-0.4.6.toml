@@ -84,6 +84,26 @@ You can use Transition Components to provide fancy switching animations.
 
   [[input.files]]
   contents = """
+Carousel
+Carousel allows the user to scroll through "slides" of content without having to extend the page dimensions.
+
+Imports
+Orientation
+You can set the Carousel to render vertically via the orientation property.
+
+Spacing
+
+NOTE: By passing an array, you can set responsive values. e.g. spacing={["medium", "tablet:small", "mobile:tiny"]}
+
+You can adjust the spacing between items via the spacing, spacing_x, and spacing_y properties.
+
+"""
+  filetype = "PlainText"
+  url = "disclosure/carousel"
+  title = "Carousel"
+
+  [[input.files]]
+  contents = """
 Tab
 Tab Components are typically used for turning what would be multi-page content, into a single page with a set of radio buttons to toggle between views.
 
@@ -505,6 +525,23 @@ You can change the appearance of the Check to be flush with the rest of the Appl
   filetype = "PlainText"
   url = "interactables/check"
   title = "Check"
+
+  [[input.files]]
+  contents = """
+FileDropInput
+
+NOTE: Keep in mind, while the Component does work without Javascript, it cannot display its value like FileInput can without.
+
+FileDropInput acts as a click-to-prompt and drag'n'drop file input stylized as an alternative to FileInput.
+
+Imports
+Palette
+You can change the color palette of the FileDropInput via the palette property.
+
+"""
+  filetype = "PlainText"
+  url = "interactables/filedropinput"
+  title = "FileDropInput"
 
   [[input.files]]
   contents = """
