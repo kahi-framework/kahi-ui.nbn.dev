@@ -12,7 +12,10 @@
         "url": "https://github.com/novacbn/kahi-ui.nbn.dev/tree/main/packages/%40kahi-docs-shared"
     },
     "scripts": {
-        "format:package": "prettier --config .prettierrc --write ./src",
+        "format": "npm run format:package",
+        "format:package": "prettier --config ../../.prettierrc --write ./src",
+        "lint": "npm run lint:format",
+        "lint:format": "prettier --config ../../.prettierrc --check ./src",
         "test": "npm run test:types",
         "test:types": "tsc --noEmit"
     },
@@ -21,8 +24,8 @@
         "typescript": "^4.3.5"
     },
     "dependencies": {
-        "@kahi-docs/config": "file:../@kahi-docs-config",
-        "@kahi-docs/markdown": "file:../@kahi-docs-markdown",
+        "@kahi-docs/config": "workspace:^",
+        "@kahi-docs/markdown": "workspace:^",
         "svelte-local-storage-store": "^0.2.3"
     },
     "peerDependencies": {
