@@ -4,7 +4,7 @@ import type {RequestHandler} from "@sveltejs/kit";
 
 import {IDocumentationRender, read_documentation} from "@kahi-docs/markdown";
 
-import APPLICATION_CONFIG from "../../../../../../../.kahi-docs/application.config";
+import APPLICATION_CONFIG from "../../../../../../../../../.kahi-docs/application.config";
 
 import type {IDocumentationGet, IRouteError} from "../../../../../../shared/api";
 

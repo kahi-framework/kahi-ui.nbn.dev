@@ -1,7 +1,7 @@
 {
     "name": "@kahi-docs/shared",
     "author": "novacbn",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "type": "module",
     "main": "./src/index.ts",
     "exports": {
@@ -26,9 +26,7 @@
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/markdown": "workspace:^",
+        "svelte": "^3.44.0",
         "svelte-local-storage-store": "^0.2.3"
-    },
-    "peerDependencies": {
-        "svelte": "^3.38.3"
     }
 }

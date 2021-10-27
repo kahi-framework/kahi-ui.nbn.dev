@@ -1,0 +1,51 @@
+{
+    "name": "@kahi-docs/web",
+    "version": "0.4.0",
+    "type": "module",
+    "scripts": {
+        "build:application": "svelte-kit build",
+        "build:generate-index": "esbuild --bundle --platform=node --outfile=./scripts/generate-index.build.cjs ./scripts/generate-index.js",
+        "dev:application": "svelte-kit dev --host 0.0.0.0",
+        "index": "npm run index:generate;npm run index:build",
+        "index:build": "node ./scripts/build-index.js",
+        "index:dev": "node ./scripts/dev-index.js",
+        "index:generate": "node ./scripts/generate-index.build.cjs",
+        "format": "npm run format:application",
+        "format:application": "prettier --config ./.prettierrc --write ./src",
+        "lint": "npm run lint:format",
+        "lint:format": "prettier --config ./.prettierrc --check ./src",
+        "preview:application": "svelte-kit preview --host 0.0.0.0",
+        "test": "echo noop, currently codebase not fixed up for this yet",
+        "test:svelte": "svelte-check --tsconfig ./tsconfig.json",
+        "test:types": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@sveltejs/adapter-static": "^1.0.0-next.21",
+        "@sveltejs/kit": "^1.0.0-next.190",
+        "@tsconfig/svelte": "^2.0.1",
+        "cheerio": "^1.0.0-rc.10",
+        "esbuild": "^0.12.15",
+        "fast-glob": "^3.2.5",
+        "prettier": "^2.3.1",
+        "prettier-plugin-svelte": "^2.3.1",
+        "svelte-check": "^2.2.7",
+        "svelte-preprocess": "^4.9.8",
+        "svelte2tsx": "^0.4.7",
+        "typescript": "^4.4.4"
+    },
+    "engines": {
+        "node": ">= 16.0.0"
+    },
+    "dependencies": {
+        "@kahi-docs/config": "workspace:^",
+        "@kahi-docs/markdown": "workspace:^",
+        "@kahi-docs/node": "workspace:^",
+        "@kahi-docs/shared": "workspace:^",
+        "@kahi-ui/framework": "^0.4.8",
+        "@novacbn/svelte-pipeline": "^0.2.0",
+        "@novacbn/svelte-stork": "github:novacbn/svelte-stork#0.0.4",
+        "prismjs": "^1.23.0",
+        "svelte": "^3.44.0",
+        "svelte-feather": "github:novacbn/svelte-feather#0.1.0"
+    }
+}

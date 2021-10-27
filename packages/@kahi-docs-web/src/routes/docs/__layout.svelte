@@ -6,7 +6,7 @@
 
     // TODO: / NOTE: I would really like to have this live in an API
     // route, however icons as SvelteComponents can't exist then
-    import NAVIGATION_CONFIG from "../../../.kahi-docs/navigation.config";
+    import NAVIGATION_CONFIG from "../../../../../.kahi-docs/navigation.config";
 
     import type {INavigationTitlesGet} from "../../shared/api";
 

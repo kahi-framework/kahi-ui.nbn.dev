@@ -7,7 +7,7 @@
 
     // TODO: / NOTE: I would really like to have this live in an API
     // route, however icons as Svelte Components can't exist then
-    import NAVIGATION_CONFIG from "../../.kahi-docs/navigation.config";
+    import NAVIGATION_CONFIG from "../../../../.kahi-docs/navigation.config";
 
     import type {IApplicationConfigGet} from "../shared/api";
 
@@ -43,7 +43,7 @@
         set_partials_config,
     } from "@kahi-docs/shared";
 
-    import PARTIALS_CONFIG from "../../.kahi-docs/partials.config";
+    import PARTIALS_CONFIG from "../../../../.kahi-docs/partials.config";
 
     export let application_config: IApplicationConfig;
     export let items: INavigationBar[];

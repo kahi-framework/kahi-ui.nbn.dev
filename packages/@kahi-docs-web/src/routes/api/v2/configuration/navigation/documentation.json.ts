@@ -6,8 +6,8 @@ import {parse_navigation_titles} from "@kahi-docs/markdown";
 
 import type {INavigationTitlesGet} from "../../../../../shared/api";
 
-import APPLICATION_CONFIG from "../../../../../../.kahi-docs/application.config";
-import NAVIGATION_CONFIG from "../../../../../../.kahi-docs/navigation.config";
+import APPLICATION_CONFIG from "../../../../../../../../.kahi-docs/application.config";
+import NAVIGATION_CONFIG from "../../../../../../../../.kahi-docs/navigation.config";
 
 const PATH_DOCUMENTATION = join(
     APPLICATION_CONFIG.paths.content,
