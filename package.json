@@ -3,6 +3,9 @@
     "version": "0.4.0",
     "type": "module",
     "scripts": {
+        "build:application": "pnpm run --filter \"*web\" build:application",
+        "dev:application": "pnpm run --filter \"*web\" dev:application",
+        "preview:application": "pnpm run --filter \"*web\" preview:application",
         "format:packages": "pnpm -r format",
         "lint:packages": "pnpm -r lint",
         "test:packages": "pnpm -r test --workspace-concurrency=1"
@@ -10,6 +13,6 @@
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/shared": "workspace:^",
-        "svelte-feather": "^2.0.0-next.2"
+        "svelte-feather": "github:novacbn/svelte-feather#0.1.0"
     }
 }

@@ -6,11 +6,11 @@ importers:
     specifiers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/shared': workspace:^
-      svelte-feather: ^2.0.0-next.2
+      svelte-feather: github:novacbn/svelte-feather#0.1.0
     dependencies:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
-      svelte-feather: 2.0.0-next.2
+      svelte-feather: github.com/novacbn/svelte-feather/d72a6f6f1cb0cfe8594dd09105e04c2719269e41
 
   packages/@kahi-docs-config:
     specifiers:
@@ -68,6 +68,7 @@ importers:
     specifiers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/markdown': workspace:^
+      '@sveltejs/kit': ^1.0.0-next.190
       prettier: ^2.3.1
       svelte: ^3.44.0
       svelte-local-storage-store: ^0.2.3
@@ -78,6 +79,7 @@ importers:
       svelte: 3.44.0
       svelte-local-storage-store: 0.2.4_svelte@3.44.0
     devDependencies:
+      '@sveltejs/kit': 1.0.0-next.190_svelte@3.44.0
       prettier: 2.4.1
       typescript: 4.4.4
 
@@ -1158,12 +1160,6 @@ packages:
       - stylus
       - sugarss
     dev: true
-
-  /svelte-feather/2.0.0-next.2:
-    resolution: {integrity: sha512-lzOtIAS9V+Ocr+fLbXyl+zJRDiPV6urJ7gEGXsD08pyXbFHSkNCxYMEjo7om75YFQMiftCXSFdoJ7SfKI5LvvQ==}
-    peerDependencies:
-      svelte: ^3.29.5
-    dev: false
 
   /svelte-hmr/0.14.7_svelte@3.44.0:
     resolution: {integrity: sha512-pDrzgcWSoMaK6AJkBWkmgIsecW0GChxYZSZieIYfCP0v2oPyx2CYU/zm7TBIcjLVUPP714WxmViE9Thht4etog==}
