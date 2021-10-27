@@ -10,12 +10,12 @@
 
     import type {INavigationTitlesGet} from "../../shared/api";
 
-    export const load: Load = async ({context, fetch}) => {
+    export const load: Load = async ({stuff, fetch}) => {
         const response = await fetch("/api/v2/configuration/navigation/documentation.json");
         const data = (await response.json()) as INavigationTitlesGet;
 
         const items = map_navigation_items<INavigationMenu>(NAVIGATION_CONFIG.documentation, {
-            base: (context.application_config as IApplicationConfig).urls.base,
+            base: (stuff.application_config as IApplicationConfig).urls.base,
             default_prefetch: true,
             default_title: "N/A",
             title_map: data.data,
@@ -89,7 +89,7 @@
     }
 
     :global(.docs-container) > :global(.snippet-repl) {
-        height: min(60ex, 65vh);
+        height: 60ex;
     }
 
     :global(.docs-container) > :global(.snippet-highlight),

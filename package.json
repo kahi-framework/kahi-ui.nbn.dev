@@ -26,8 +26,8 @@
         "test:shared": "cd ./packages/@kahi-docs-shared;npm run test;cd ../../"
     },
     "devDependencies": {
-        "@sveltejs/adapter-static": "^1.0.0-next.17",
-        "@sveltejs/kit": "^1.0.0-next.156",
+        "@sveltejs/adapter-static": "^1.0.0-next.21",
+        "@sveltejs/kit": "^1.0.0-next.190",
         "@tsconfig/svelte": "^2.0.1",
         "cheerio": "^1.0.0-rc.10",
         "esbuild": "^0.12.15",
@@ -38,11 +38,10 @@
         "svelte-check": "^2.2.7",
         "svelte-preprocess": "^4.9.8",
         "svelte2tsx": "^0.4.7",
-        "typescript": "^4.3.2",
-        "vite": "^2.3.3"
+        "typescript": "^4.4.4"
     },
     "engines": {
-        "node": ">= 12.17.0"
+        "node": ">= 16.0.0"
     },
     "dependencies": {
         "@kahi-docs/config": "file:packages/@kahi-docs-config",

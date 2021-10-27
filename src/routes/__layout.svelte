@@ -23,13 +23,13 @@
         });
 
         return {
-            context: {
-                application_config,
-            },
-
             props: {
                 application_config,
                 items,
+            },
+
+            stuff: {
+                application_config,
             },
         };
     };
