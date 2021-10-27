@@ -10,7 +10,7 @@
         "index:build": "node ./scripts/build-index.js",
         "index:dev": "node ./scripts/dev-index.js",
         "index:generate": "node ./scripts/generate-index.build.cjs",
-        "format": "npm run format:packages",
+        "format": "npm run format:application",
         "format:application": "prettier --config ./.prettierrc --write ./src",
         "format:packages": "pnpm -r format",
         "lint": "npm run lint:format",
