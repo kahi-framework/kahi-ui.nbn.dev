@@ -6,7 +6,7 @@
 
     import {applicationconfig} from "@kahi-docs/shared";
 
-    import {initialize_search} from "../../client/search";
+    import {initialize_search} from "../client/search";
 
     export let state: boolean = false;
 
@@ -37,8 +37,8 @@
 -->
 
 <Overlay
-    class="search-modal"
-    logic_id="search-modal"
+    class="search-prompt"
+    logic_id="search-prompt"
     alignment_y="top"
     spacing="medium"
     bind:state

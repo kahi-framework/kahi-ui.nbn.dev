@@ -37,19 +37,12 @@
 
 <script lang="ts">
     import type {IApplicationConfig, INavigationBar} from "@kahi-docs/config";
-    import {
-        set_application_config,
-        set_app_navigation,
-        set_partials_config,
-    } from "@kahi-docs/shared";
-
-    import PARTIALS_CONFIG from "../../../../.kahi-docs/partials.config";
+    import {set_application_config, set_app_navigation} from "@kahi-docs/shared";
 
     export let application_config: IApplicationConfig;
     export let items: INavigationBar[];
 
     set_application_config(application_config);
-    set_partials_config(PARTIALS_CONFIG);
 
     set_app_navigation(items);
 </script>

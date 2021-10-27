@@ -1,6 +1,6 @@
 <script lang="ts">
-    import AppNavigation from "../navigation/AppNavigation.svelte";
-    import SiteFooter from "../site/SiteFooter.svelte";
+    import AppNavigation from "../AppNavigation.svelte";
+    import AppFooter from "../AppFooter.svelte";
 </script>
 
 <div class="aside-layout">
@@ -12,7 +12,7 @@
         <slot />
     </main>
 
-    <SiteFooter />
+    <AppFooter />
 </div>
 
 <style>
