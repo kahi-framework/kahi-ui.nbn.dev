@@ -28,11 +28,25 @@ jobs:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
 
-            - name: Install
-              run: npm ci
+            - name: Cache ~/.pnpm-store
+              uses: actions/cache@main
+              with:
+                  path: ~/.pnpm-store
+                  key: ${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-${{ matrix.node-version }}
+
+            - name: Install PNPM
+              run: npm install -g pnpm@6.15.1
+
+            - name: Install Packages
+              run: pnpm install --frozen-lockfile
+
+            - name: Lint
+              run: npm run lint:packages
 
             - name: Test
-              run: npm run test
+              run: npm run test:packages
 
             - name: Download Stork
               run: |
