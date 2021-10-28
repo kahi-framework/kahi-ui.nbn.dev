@@ -62,6 +62,7 @@
                 href="/docs/framework/getting-started"
                 palette="accent"
                 size="large"
+                no_handle
                 prefetch
             >
                 Getting Started

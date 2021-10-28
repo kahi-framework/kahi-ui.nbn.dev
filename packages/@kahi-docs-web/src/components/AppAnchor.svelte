@@ -12,6 +12,7 @@
 
     export let href: string;
 
+    export let no_handle: boolean = false;
     export let no_scroll: boolean = false;
     export let prefetch: boolean = false;
 
@@ -19,13 +20,14 @@
     export let variation: PROPERTY_VARIATION_BUTTON | undefined = undefined;
     export let size: PROPERTY_SIZING | undefined = undefined;
 
+    $: _is_current = no_handle ? false : is_current_page($page, href);
     $: _is_external = is_external_url(href);
 </script>
 
 {#if is === "button"}
     <a
         class="button"
-        aria-current={is_current_page($page, href) ? "page" : undefined}
+        aria-current={_is_current ? "page" : undefined}
         {href}
         target={_is_external ? "_blank" : undefined}
         rel={_is_external ? "noopener noreferrer" : undefined}

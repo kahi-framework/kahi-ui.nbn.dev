@@ -24,7 +24,6 @@
     import {base} from "$app/paths";
     import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
-        Anchor,
         Box,
         ContextButton,
         Divider,
@@ -70,18 +69,14 @@
 
 <Omni.Container class="app-navigation" palette="dark" variation="sticky">
     <Omni.Header>
-        <AppAnchor href={base} prefetch>Kahi UI</AppAnchor>
+        <AppAnchor href={base || "/"} no_handle prefetch>Kahi UI</AppAnchor>
         <Divider orientation="vertical" />
 
-        <Anchor
-            href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}"
-            rel="noopener noreferrer"
-            target="_blank"
-        >
+        <AppAnchor href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}">
             <Text is="small">
                 v{PACKAGE_VERSION}
             </Text>
-        </Anchor>
+        </AppAnchor>
     </Omni.Header>
 
     <Omni.Footer>
@@ -118,7 +113,7 @@
                     <Menu.Container hidden="widescreen">
                         {#each LINKS_APPLICATION as item (item.href)}
                             <Menu.Item>
-                                <AppAnchor href={item.href} prefetch>
+                                <AppAnchor href={item.href} no_handle prefetch>
                                     <svelte:component this={item.icon} />
                                     {item.text}
                                 </AppAnchor>
@@ -146,7 +141,7 @@
             >
                 {#each LINKS_APPLICATION as item (item.href)}
                     <Menu.Item>
-                        <AppAnchor href={item.href} prefetch>
+                        <AppAnchor href={item.href} no_handle prefetch>
                             <svelte:component this={item.icon} />
                             {item.text}
                         </AppAnchor>
