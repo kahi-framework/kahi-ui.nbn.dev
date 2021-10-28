@@ -1,8 +1,7 @@
-import type {Writable} from "svelte/store";
-import {writable} from "svelte/store";
-
 import type {IDocumentationRender} from "@kahi-docs/markdown";
 
-export type IContentStore = Writable<IDocumentationRender>;
+import {make_context_store} from "../util/stores";
 
-export const content: IContentStore = writable();
+export const CONTEXT_CONTENT = Symbol.for("kahi-docs-content");
+
+export const content = make_context_store<IDocumentationRender>(CONTEXT_CONTENT);

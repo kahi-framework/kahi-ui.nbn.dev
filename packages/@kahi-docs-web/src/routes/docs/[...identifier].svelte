@@ -36,7 +36,7 @@
 
     export let content: IDocumentationRender;
 
-    $: $content_store = content;
+    content_store.init(content);
 </script>
 
 <svelte:head>

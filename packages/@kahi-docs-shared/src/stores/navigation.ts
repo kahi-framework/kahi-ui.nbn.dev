@@ -1,8 +1,7 @@
-import type {Writable} from "svelte/store";
-import {writable} from "svelte/store";
-
 import type {INavigationMenu} from "@kahi-docs/config";
 
-export type INavigationStore = Writable<INavigationMenu[]>;
+import {make_context_store} from "../util/stores";
 
-export const navigation: INavigationStore = writable();
+export const CONTEXT_NAVIGATION = Symbol.for("kahi-docs-navigation");
+
+export const navigation = make_context_store<INavigationMenu[]>(CONTEXT_NAVIGATION);

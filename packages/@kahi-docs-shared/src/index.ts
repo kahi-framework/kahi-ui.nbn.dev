@@ -1,6 +1,7 @@
 export * from "./stores/content";
 export * from "./stores/navigation";
 export * from "./stores/preferences";
+export * from "./stores/snippet";
 
 export * from "./util/functional";
 export * from "./util/string";
