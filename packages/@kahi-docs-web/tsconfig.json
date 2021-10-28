@@ -10,7 +10,8 @@
         "downlevelIteration": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "declarationDir": "types"
+        "declarationDir": "types",
+        "resolveJsonModule": true
     },
     "include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
     "exclude": ["node_modules/*", "packages/*"]

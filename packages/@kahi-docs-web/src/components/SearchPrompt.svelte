@@ -4,9 +4,8 @@
     import {Card, Ellipsis, Overlay, Text, TextInput} from "@kahi-ui/framework";
     import type {ISearchStore, search} from "@novacbn/svelte-stork";
 
-    import {applicationconfig} from "@kahi-docs/shared";
-
     import {initialize_search} from "../client/search";
+    import {PACKAGE_VERSION} from "../shared/constants";
 
     export let state: boolean = false;
 
@@ -24,7 +23,7 @@
     let _query: any, _store: ISearchStore;
     $: if (_search)
         _store = _search({
-            index_name: `kahi-ui_docs_v${$applicationconfig.metadata.version}`,
+            index_name: `kahi-ui_docs_v${PACKAGE_VERSION}`,
         });
 
     $: if (_store) $_store = value;

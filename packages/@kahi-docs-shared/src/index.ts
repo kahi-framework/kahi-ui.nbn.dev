@@ -1,4 +1,3 @@
-export * from "./stores/applicationconfig";
 export * from "./stores/docsrender";
 export * from "./stores/navigation";
 export * from "./stores/preferences";

@@ -1,8 +1,9 @@
 import {base} from "$app/paths";
 import type {initialize, register, search} from "@novacbn/svelte-stork";
-import {get} from "svelte/store";
 
-import {applicationconfig, memoize} from "@kahi-docs/shared";
+import {memoize} from "@kahi-docs/shared";
+
+import {PACKAGE_VERSION} from "../shared/constants";
 
 export interface IImportedSearch {
     // TODO: Need to investigate better subpackage typing
@@ -35,14 +36,7 @@ export const import_search = memoize(async () => {
 export const initialize_search = memoize(async () => {
     const imports = await import_search();
 
-    // HACK: Using the `applicationconfig` Svelte Store is kind of a meh
-    // way of getting the version information we need. Since it then relies on
-    // `initialize_search` being called inside a Component's script.
-    //
-    // Ideally `memoize` should be modified to accept functions with arguments,
-    // so a version tag can be passed in
     const {initialize, register} = imports;
-    const {version} = get(applicationconfig).metadata;
 
     await initialize({
         script_url: `${base}/assets/stork/stork-v1.2.1.js`,
@@ -50,8 +44,8 @@ export const initialize_search = memoize(async () => {
     });
 
     await register({
-        index_name: `kahi-ui_docs_v${version}`,
-        index_url: `${base}/assets/stork/kahi-ui_docs_v${version}.st`,
+        index_name: `kahi-ui_docs_v${PACKAGE_VERSION}`,
+        index_url: `${base}/assets/stork/kahi-ui_docs_v${PACKAGE_VERSION}.st`,
     });
 
     return imports;

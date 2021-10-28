@@ -29,9 +29,9 @@
 <script lang="ts">
     import {Heading, Tab} from "@kahi-ui/framework";
     import type {IDocumentationRender, IReferenceMap} from "@kahi-docs/markdown";
-    import {applicationconfig, set_docs_render} from "@kahi-docs/shared";
+    import {set_docs_render} from "@kahi-docs/shared";
 
-    import DocumentationFooter from "../../components/documentation/DocumentationFooter.svelte";
+    import ContentMetadata from "../../components/ContentMetadata.svelte";
     import DocumentationReferences from "../../components/documentation/DocumentationReferences.svelte";
 
     export let documentation: IDocumentationRender;
@@ -61,7 +61,7 @@
 </script>
 
 <svelte:head>
-    <title>{documentation.properties.title} — {$applicationconfig.application.title}</title>
+    <title>{documentation.properties.title} — Kahi UI</title>
 </svelte:head>
 
 {@html documentation.render}
@@ -124,4 +124,4 @@
     </Tab.Container>
 {/if}
 
-<DocumentationFooter />
+<ContentMetadata />

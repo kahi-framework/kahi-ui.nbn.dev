@@ -17,15 +17,12 @@
     import {Moon} from "svelte-feather/components/Moon";
     import {Zap} from "svelte-feather/components/Zap";
 
-    import {applicationconfig} from "@kahi-docs/shared";
-
+    import AppAnchor from "../components/AppAnchor.svelte";
     import LandingLayout from "../components/layouts/LandingLayout.svelte";
 </script>
 
 <svelte:head>
-    <title>
-        {$applicationconfig.application.description} :: {$applicationconfig.application.title}
-    </title>
+    <title>Straight-forward Svelte UI for the Web :: Kahi UI</title>
 </svelte:head>
 
 <!--
@@ -50,28 +47,27 @@
         </Hero.Section>
 
         <Hero.Footer>
-            <Button
+            <AppAnchor
+                is="button"
                 href="https://github.com/novacbn/kahi-ui"
-                rel="noopener noreferrer"
-                target="_blank"
                 palette="light"
                 size="large"
                 variation="clear"
             >
                 <Code />
                 Source
-            </Button>
+            </AppAnchor>
 
-            <a
-                class="button"
+            <AppAnchor
+                is="button"
                 href="/docs/framework/getting-started"
-                data-palette="accent"
-                data-size="large"
-                sveltekit:prefetch
+                palette="accent"
+                size="large"
+                prefetch
             >
                 Getting Started
                 <ArrowRight />
-            </a>
+            </AppAnchor>
         </Hero.Footer>
     </Hero.Container>
 

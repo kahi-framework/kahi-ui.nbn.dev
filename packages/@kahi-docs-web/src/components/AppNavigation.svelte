@@ -38,9 +38,8 @@
     import {MoreVertical} from "svelte-feather/components/MoreVertical";
     import {Search} from "svelte-feather/components/Search";
 
-    import {applicationconfig} from "@kahi-docs/shared";
-
     import {search_keybind} from "../client/keybind";
+    import {PACKAGE_VERSION} from "../shared/constants";
 
     import AppAnchor from "./AppAnchor.svelte";
     import SearchPrompt from "./SearchPrompt.svelte";
@@ -65,8 +64,6 @@
     }
 
     $: if (!$_collapse_viewports) state = false;
-
-    $: _version = $applicationconfig.metadata.version;
 </script>
 
 <svelte:window use:search_keybind={on_search_bind} />
@@ -77,12 +74,12 @@
         <Divider orientation="vertical" />
 
         <Anchor
-            href="https://github.com/novacbn/kahi-ui/releases/v{_version}"
+            href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}"
             rel="noopener noreferrer"
             target="_blank"
         >
             <Text is="small">
-                v{_version}
+                v{PACKAGE_VERSION}
             </Text>
         </Anchor>
     </Omni.Header>

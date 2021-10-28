@@ -1,11 +1,9 @@
 <script lang="ts">
     import {Divider, Heading, Stack, Text} from "@kahi-ui/framework";
 
-    import {applicationconfig} from "@kahi-docs/shared";
+    import {PACKAGE_VERSION} from "../shared/constants";
 
     import AppAnchor from "./AppAnchor.svelte";
-
-    $: _version = $applicationconfig.metadata.version;
 </script>
 
 <footer class="box app-footer" data-padding-y="huge">
@@ -15,9 +13,9 @@
         </AppAnchor>
 
         <Text align="center">
-            <AppAnchor href="https://github.com/novacbn/kahi-ui/releases/v{_version}">
+            <AppAnchor href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}">
                 <Divider margin_y="tiny" palette="accent">
-                    v{_version}
+                    v{PACKAGE_VERSION}
                 </Divider>
             </AppAnchor>
 
