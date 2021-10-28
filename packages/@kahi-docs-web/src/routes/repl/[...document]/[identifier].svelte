@@ -30,7 +30,7 @@
             };
         }
 
-        if (SUPPORTED_SYNTAXES.has(snippet.syntax)) {
+        if (!SUPPORTED_SYNTAXES.has(snippet.syntax)) {
             return {
                 status: 400,
                 error: "UnsupportedSyntax",
@@ -39,7 +39,7 @@
 
         return {
             props: {
-                snippet: data.data,
+                snippet,
             },
         };
     };
