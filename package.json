@@ -12,7 +12,6 @@
     },
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
-        "@kahi-docs/shared": "workspace:^",
-        "svelte-feather": "github:novacbn/svelte-feather#0.1.0"
+        "@kahi-docs/shared": "workspace:^"
     }
 }
