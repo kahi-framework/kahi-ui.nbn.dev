@@ -41,7 +41,7 @@
     </a>
 {:else}
     <a
-        aria-current={is_current_page($page, href) ? "page" : undefined}
+        aria-current={_is_current ? "page" : undefined}
         {href}
         target={_is_external ? "_blank" : undefined}
         rel={_is_external ? "noopener noreferrer" : undefined}
