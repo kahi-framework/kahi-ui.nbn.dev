@@ -30,6 +30,8 @@
     import type {IDocumentationRender} from "@kahi-docs/markdown";
     import {content as content_store} from "@kahi-docs/shared";
 
+    import APITabs from "../../components/APITabs.svelte";
+
     export let content: IDocumentationRender;
 
     $: $content_store = content;
@@ -38,3 +40,7 @@
 <svelte:head>
     <title>{content.properties.title} — Kahi UI</title>
 </svelte:head>
+
+{#key content}
+    <APITabs />
+{/key}
