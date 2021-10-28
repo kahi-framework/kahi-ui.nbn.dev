@@ -10,25 +10,25 @@
         return Object.keys(references).length > 0;
     }
 
-    function get_initial_tab(render: IDocumentationRender): string {
-        if (has_references(render.properties.properties)) return "tab-api-reference-properties";
-        else if (has_references(render.properties.events)) return "tab-api-reference-events";
-        else if (has_references(render.properties.slots)) return "tab-api-reference-slots";
+    function get_initial_tab(render: IDocumentationRender): string | null {
+        if (has_references(render.properties.properties)) return "api-tabs-properties";
+        else if (has_references(render.properties.events)) return "api-tabs-events";
+        else if (has_references(render.properties.slots)) return "api-tabs-slots";
         else if (has_references(render.properties.custom_properties))
-            return "tab-api-reference-custom-properties";
+            return "api-tabs-custom-properties";
 
-        return "";
+        return null;
     }
 
-    let state: string = get_initial_tab($content);
+    let state = get_initial_tab($content);
 </script>
 
 {#if state}
     <Heading is="h2" id="api-reference">API Reference</Heading>
 
-    <Tab.Container logic_name="tab-api-reference" bind:logic_state={state}>
+    <Tab.Container logic_name="api-tabs" logic_state={state}>
         {#if has_references($content.properties.properties)}
-            <Tab.Group logic_id="tab-api-reference-properties">
+            <Tab.Group logic_id="api-tabs-properties">
                 <Tab.Label palette="accent">Properties</Tab.Label>
 
                 <Tab.Section>
@@ -38,7 +38,7 @@
         {/if}
 
         {#if has_references($content.properties.events)}
-            <Tab.Group logic_id="tab-api-reference-events">
+            <Tab.Group logic_id="api-tabs-events">
                 <Tab.Label palette="accent">Events</Tab.Label>
 
                 <Tab.Section>
@@ -48,7 +48,7 @@
         {/if}
 
         {#if has_references($content.properties.slots)}
-            <Tab.Group logic_id="tab-api-reference-slots">
+            <Tab.Group logic_id="api-tabs-slots">
                 <Tab.Label palette="accent">Slots</Tab.Label>
 
                 <Tab.Section>
@@ -58,7 +58,7 @@
         {/if}
 
         {#if has_references($content.properties.custom_properties)}
-            <Tab.Group logic_id="tab-api-reference-custom-properties">
+            <Tab.Group logic_id="api-tabs-custom-properties">
                 <Tab.Label palette="accent">Custom Properties</Tab.Label>
 
                 <Tab.Section>
