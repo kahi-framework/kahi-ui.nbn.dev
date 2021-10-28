@@ -1,21 +1,46 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
+    import type {INavigationGet, IRouteError} from "../../shared/api";
+
     export const load: Load = async ({fetch}) => {
-        return {};
+        const response = await fetch(`/api/v3/navigation/docs.json`);
+        if (!response.ok) {
+            const data = (await response.json()) as IRouteError;
+
+            return {
+                status: response.status,
+                error: data.code,
+            };
+        }
+
+        const data = (await response.json()) as INavigationGet;
+
+        return {
+            props: {
+                navigation: data.data,
+            },
+        };
     };
 </script>
 
 <script lang="ts">
     import {Container} from "@kahi-ui/framework";
 
+    import type {INavigationMenu} from "@kahi-docs/config";
+    import {navigation as navigation_store} from "@kahi-docs/shared";
+
     import AsideLayout from "../../components/layouts/AsideLayout.svelte";
-    import DocsNavigation from "../../components/navigation/DocsNavigation.svelte";
+    import AsideNavigation from "../../components/AsideNavigation.svelte";
+
+    export let navigation: INavigationMenu[];
+
+    $: $navigation_store = navigation;
 </script>
 
 <AsideLayout>
     <svelte:fragment slot="aside">
-        <DocsNavigation />
+        <AsideNavigation />
     </svelte:fragment>
 
     <Container class="docs-container" viewport="desktop" padding_bottom="large">

@@ -5,18 +5,17 @@
      * TODO: Scroll to current active item when collapsed on Mobile / Tablet
      */
 
-    import {Aside, ContextButton} from "@kahi-ui/framework";
-    import {Menu} from "svelte-feather/components/Menu";
+    import {Aside, ContextButton, Menu} from "@kahi-ui/framework";
+    import {onMount} from "svelte";
+    import {Menu as MenuIcon} from "svelte-feather/components/Menu";
     import {X} from "svelte-feather/components/X";
 
-    import type {INavigationMenu} from "@kahi-docs/config";
+    import {navigation} from "@kahi-docs/shared";
 
-    import MenuNavigation from "./MenuNavigation.svelte";
-    import {onMount} from "svelte";
+    import AppAnchor from "./AppAnchor.svelte";
 
     export let element: HTMLElement | undefined = undefined;
 
-    export let items: INavigationMenu[];
     export let state: boolean = false;
 
     onMount(() => {
@@ -42,16 +41,43 @@
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
     <Aside.Section margin_bottom="none" padding_y="large">
-        <MenuNavigation sizing="small" {items} />
+        <Menu.Container sizing="small">
+            {#each $navigation as menu (menu.text)}
+                <Menu.Divider>
+                    {menu.text}
+
+                    <svelte:fragment slot="sub-menu">
+                        <Menu.SubMenu>
+                            {#each menu.items as anchor (anchor.href)}
+                                <Menu.Item>
+                                    <AppAnchor href={anchor.href}>
+                                        {anchor.text}
+                                    </AppAnchor>
+                                </Menu.Item>
+                            {/each}
+                        </Menu.SubMenu>
+                    </svelte:fragment>
+                </Menu.Divider>
+            {/each}
+        </Menu.Container>
     </Aside.Section>
 
-    <ContextButton size="huge" hidden={["desktop", "widescreen"]}>
-        <Menu />
-    </ContextButton>
+    <svelte:fragment slot="close">
+        <ContextButton
+            size="huge"
+            palette="dark"
+            variation="clear"
+            hidden={["desktop", "widescreen"]}
+        >
+            <X />
+        </ContextButton>
+    </svelte:fragment>
 
-    <ContextButton size="huge" palette="dark" variation="clear" hidden={["desktop", "widescreen"]}>
-        <X />
-    </ContextButton>
+    <svelte:fragment slot="open">
+        <ContextButton size="huge" hidden={["desktop", "widescreen"]}>
+            <MenuIcon />
+        </ContextButton>
+    </svelte:fragment>
 </Aside.Container>
 
 <style>

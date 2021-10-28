@@ -1,7 +1,7 @@
 import {define_navigation} from "@kahi-docs/config";
 
 export default define_navigation({
-    documentation: [
+    docs: [
         {
             text: "Resources",
             items: [{href: "/docs/resources/official"}, {href: "/docs/resources/community"}],

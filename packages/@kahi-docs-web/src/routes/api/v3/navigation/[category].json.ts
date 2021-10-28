@@ -1,5 +1,4 @@
 import {join} from "path";
-import {cwd} from "process";
 
 import type {RequestHandler} from "@sveltejs/kit";
 
@@ -9,7 +8,7 @@ import {is_internal_url} from "@kahi-docs/shared";
 
 import NAVIGATION_CONFIG from "../../../../../../../.kahi-docs/navigation.config";
 
-import type {INavigationTitlesGet, IRouteError} from "../../../../shared/api";
+import type {INavigationGet, IRouteError} from "../../../../shared/api";
 import {PATH_CONTENT} from "../../../../server/constants";
 
 function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMenu[]> {
@@ -66,6 +65,6 @@ export const get: RequestHandler = async (request) => {
         // HACK: Apparently `JSONValue` doesn't like my purely JSON data?
         body: {
             data: await read_navigation_menus(menus),
-        } as any,
+        } as INavigationGet as any,
     };
 };

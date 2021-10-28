@@ -4,12 +4,12 @@ import type {RequestHandler} from "@sveltejs/kit";
 
 import {IDocumentationRender, read_documentation} from "@kahi-docs/markdown";
 
-import type {IDocumentationGet, IRouteError} from "../../../../../shared/api";
+import type {IContentGet, IRouteError} from "../../../../../shared/api";
 import {PATH_CONTENT} from "../../../../../server/constants";
 
 export const get: RequestHandler = async (request) => {
-    const {category = "", document = ""} = request.params;
-    const path = join(PATH_CONTENT, category, `${document}.md`);
+    const {category = "", identifier = ""} = request.params;
+    const path = join(PATH_CONTENT, category, `${identifier}.md`);
 
     let render: IDocumentationRender;
     try {
@@ -38,7 +38,7 @@ export const get: RequestHandler = async (request) => {
 
             body: {
                 code: "InvalidPath",
-                message: `invalid path '${category}/${document}'`,
+                message: `invalid path '${category}/${identifier}'`,
             } as IRouteError,
         };
     }
@@ -52,6 +52,6 @@ export const get: RequestHandler = async (request) => {
         // HACK: Apparently `JSONValue` doesn't like my purely JSON data?
         body: {
             data: render,
-        } as any,
+        } as IContentGet as any,
     };
 };

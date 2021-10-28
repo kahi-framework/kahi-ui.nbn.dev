@@ -1,4 +1,4 @@
-import type {IApplicationConfig} from "@kahi-docs/config";
+import type {INavigationMenu} from "@kahi-docs/config";
 import type {IDocumentationRender, ISnippet} from "@kahi-docs/markdown";
 
 export interface IRouteError {
@@ -12,18 +12,10 @@ export interface IRouteSuccess {
     data: any;
 }
 
-export interface IApplicationConfigGet extends IRouteSuccess {
-    data: IApplicationConfig;
-}
-
-export interface IDocumentationGet extends IRouteSuccess {
+export interface IContentGet extends IRouteSuccess {
     data: IDocumentationRender;
 }
 
-export interface INavigationTitlesGet extends IRouteSuccess {
-    data: Record<string, string | undefined>;
-}
-
-export interface ISnippetGet extends IRouteSuccess {
-    data: ISnippet;
+export interface INavigationGet extends IRouteSuccess {
+    data: INavigationMenu[];
 }
