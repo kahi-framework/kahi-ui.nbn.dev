@@ -31,6 +31,7 @@
     import {content as content_store} from "@kahi-docs/shared";
 
     import APITabs from "../../components/APITabs.svelte";
+    import ContentMetadata from "../../components/ContentMetadata.svelte";
 
     export let content: IDocumentationRender;
 
@@ -44,3 +45,5 @@
 {#key content}
     <APITabs />
 {/key}
+
+<ContentMetadata />

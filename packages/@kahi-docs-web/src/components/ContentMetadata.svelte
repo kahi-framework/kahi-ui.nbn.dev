@@ -9,12 +9,12 @@
     import {Clock} from "svelte-feather/components/Clock";
     import {ExternalLink} from "svelte-feather/components/ExternalLink";
 
-    import {docsrender} from "@kahi-docs/shared";
+    import {content} from "@kahi-docs/shared";
 
     import AppAnchor from "./AppAnchor.svelte";
 
-    $: _edit_url = TEMPLATE_EDIT_URL({identifier: $docsrender.properties.identifier});
-    $: _timestamp = new Date($docsrender.properties.modified_at).toLocaleString(
+    $: _edit_url = TEMPLATE_EDIT_URL({identifier: $content.properties.identifier});
+    $: _timestamp = new Date($content.properties.modified_at).toLocaleString(
         browser ? navigator.language : "en-US"
     );
 </script>
