@@ -103,4 +103,11 @@
             padding-top: 4.4rem;
         }
     }
+
+    @media (max-width: 767.9px) {
+        :global(label[for="aside-navigation"]),
+        :global(.aside-navigation) {
+            z-index: 1;
+        }
+    }
 </style>
