@@ -1,7 +1,6 @@
 <script>
     import {
         Box,
-        Button,
         Card,
         Container,
         Divider,
