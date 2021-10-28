@@ -91,8 +91,6 @@
 
         width: 18rem;
         height: 100vh;
-
-        padding-top: 4.4rem;
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
@@ -100,9 +98,9 @@
         text-transform: uppercase;
     }
 
-    @media (max-width: 767.9px) {
+    @media (min-width: 768px) {
         :global(.aside-navigation) {
-            height: 100%;
+            padding-top: 4.4rem;
         }
     }
 </style>

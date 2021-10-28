@@ -182,4 +182,10 @@
     :global(.app-navigation) :global(.app-navigation-search) {
         flex-grow: 1;
     }
+
+    @media (max-width: 767.9px) {
+        :global(.app-navigation) {
+            z-index: 0;
+        }
+    }
 </style>
