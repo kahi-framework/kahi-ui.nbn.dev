@@ -77,12 +77,12 @@
         --svst-results-border: 1px solid rgba(var(--palette-inverse-off-lightest), 0.4);
     }
 
-    :global(.search-modal) :global(.svst-entry) {
+    :global(.search-prompt) :global(.svst-entry) {
         color: currentColor !important;
         text-decoration: none !important;
     }
 
-    :global(.search-modal) :global(.svst-highlight) {
+    :global(.search-prompt) :global(.svst-highlight) {
         color: var(--svst-highlight-color);
     }
 </style>
