@@ -30,7 +30,8 @@
     import type {IDocumentationRender} from "@kahi-docs/markdown";
     import {content as content_store} from "@kahi-docs/shared";
 
-    import APITabs from "../../components/APITabs.svelte";
+    import Content from "../../components/Content.svelte";
+    import ContentAPI from "../../components/ContentAPI.svelte";
     import ContentMetadata from "../../components/ContentMetadata.svelte";
 
     export let content: IDocumentationRender;
@@ -42,8 +43,10 @@
     <title>{content.properties.title} — Kahi UI</title>
 </svelte:head>
 
+<Content />
+
 {#key content}
-    <APITabs />
+    <ContentAPI />
 {/key}
 
 <ContentMetadata />

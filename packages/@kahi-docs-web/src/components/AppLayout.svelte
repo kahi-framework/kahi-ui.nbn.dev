@@ -1,12 +1,12 @@
 <script lang="ts">
-    import AppNavigation from "../AppNavigation.svelte";
-    import AppFooter from "../AppFooter.svelte";
+    import AppNavigation from "./AppNavigation.svelte";
+    import AppFooter from "./AppFooter.svelte";
 </script>
 
-<div class="landing-layout">
+<div class="app-layout">
     <AppNavigation />
 
-    <main class="landing-container">
+    <main class="app-container">
         <slot />
     </main>
 
@@ -14,7 +14,7 @@
 </div>
 
 <style>
-    :global(.landing-layout) {
+    :global(.app-layout) {
         display: grid;
 
         grid-template-areas:
@@ -28,8 +28,10 @@
         min-height: 100%;
     }
 
-    :global(.landing-layout) > :global(.landing-container) {
+    :global(.app-layout) > :global(.app-container) {
         grid-area: content;
+
+        padding-top: 4.4rem;
 
         overflow-x: hidden;
     }

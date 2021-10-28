@@ -17,7 +17,7 @@
     import {Zap} from "svelte-feather/components/Zap";
 
     import AppAnchor from "../components/AppAnchor.svelte";
-    import LandingLayout from "../components/layouts/LandingLayout.svelte";
+    import AppLayout from "../components/AppLayout.svelte";
 </script>
 
 <svelte:head>
@@ -29,7 +29,7 @@
     routes don't inherit it automatically.
 -->
 
-<LandingLayout>
+<AppLayout>
     <Hero.Container palette="dark" padding_y="huge">
         <Hero.Header>
             Easy to use Svelte UI for
@@ -198,19 +198,19 @@
             </Card.Container>
         </Grid.Container>
     </Container>
-</LandingLayout>
+</AppLayout>
 
 <style>
-    :global(.landing-container) :global(.hero) > :global(header),
-    :global(.landing-container) :global(.hero) > :global(section) {
+    :global(.app-container) :global(.hero) > :global(header),
+    :global(.app-container) :global(.hero) > :global(section) {
         max-width: 50ch !important;
     }
 
-    :global(.landing-container) :global(.snippet-repl) {
+    :global(.app-container) :global(.snippet-repl) {
         height: 80ex;
     }
 
-    :global(.landing-container) :global(.card) :global(figure) > :global(.box) {
+    :global(.app-container) :global(.card) :global(figure) > :global(.box) {
         display: flex;
 
         align-items: center;

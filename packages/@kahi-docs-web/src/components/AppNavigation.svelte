@@ -67,7 +67,7 @@
 
 <svelte:window use:search_keybind={on_search_bind} />
 
-<Omni.Container class="app-navigation" palette="dark" variation="sticky">
+<Omni.Container class="app-navigation" palette="dark">
     <Omni.Header>
         <AppAnchor href={base || "/"} no_handle prefetch>Kahi UI</AppAnchor>
         <Divider orientation="vertical" />
@@ -168,6 +168,10 @@
     :global(.app-navigation) {
         grid-area: header;
 
+        position: fixed;
+        top: 0;
+
+        width: 100%;
         height: 4.4rem;
     }
 

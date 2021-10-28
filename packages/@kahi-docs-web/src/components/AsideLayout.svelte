@@ -1,12 +1,12 @@
 <script lang="ts">
-    import AppNavigation from "../AppNavigation.svelte";
-    import AppFooter from "../AppFooter.svelte";
+    import AppNavigation from "./AppNavigation.svelte";
+    import AppFooter from "./AppFooter.svelte";
+    import AsideNavigation from "./AsideNavigation.svelte";
 </script>
 
 <div class="aside-layout">
+    <AsideNavigation />
     <AppNavigation />
-
-    <slot name="aside" />
 
     <main class="aside-container">
         <slot />
@@ -31,8 +31,10 @@
         min-height: 100%;
     }
 
-    :global(.aside-layout) > :global(.aside-container) {
+    :global(.aside-layout) :global(.aside-container) {
         grid-area: content;
+
+        padding-top: 4.4rem;
 
         overflow-x: hidden;
     }

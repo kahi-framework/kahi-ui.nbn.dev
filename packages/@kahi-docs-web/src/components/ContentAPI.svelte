@@ -11,11 +11,11 @@
     }
 
     function get_initial_tab(render: IDocumentationRender): string | null {
-        if (has_references(render.properties.properties)) return "api-tabs-properties";
-        else if (has_references(render.properties.events)) return "api-tabs-events";
-        else if (has_references(render.properties.slots)) return "api-tabs-slots";
+        if (has_references(render.properties.properties)) return "content-api-properties";
+        else if (has_references(render.properties.events)) return "content-api-events";
+        else if (has_references(render.properties.slots)) return "content-api-slots";
         else if (has_references(render.properties.custom_properties))
-            return "api-tabs-custom-properties";
+            return "content-api-custom-properties";
 
         return null;
     }
@@ -26,9 +26,9 @@
 {#if state}
     <Heading is="h2" id="api-reference">API Reference</Heading>
 
-    <Tab.Container logic_name="api-tabs" logic_state={state}>
+    <Tab.Container class="content-api" logic_name="content-api" logic_state={state}>
         {#if has_references($content.properties.properties)}
-            <Tab.Group logic_id="api-tabs-properties">
+            <Tab.Group logic_id="content-api-properties">
                 <Tab.Label palette="accent">Properties</Tab.Label>
 
                 <Tab.Section>
@@ -38,7 +38,7 @@
         {/if}
 
         {#if has_references($content.properties.events)}
-            <Tab.Group logic_id="api-tabs-events">
+            <Tab.Group logic_id="content-api-events">
                 <Tab.Label palette="accent">Events</Tab.Label>
 
                 <Tab.Section>
@@ -48,7 +48,7 @@
         {/if}
 
         {#if has_references($content.properties.slots)}
-            <Tab.Group logic_id="api-tabs-slots">
+            <Tab.Group logic_id="content-api-slots">
                 <Tab.Label palette="accent">Slots</Tab.Label>
 
                 <Tab.Section>
@@ -58,7 +58,7 @@
         {/if}
 
         {#if has_references($content.properties.custom_properties)}
-            <Tab.Group logic_id="api-tabs-custom-properties">
+            <Tab.Group logic_id="content-api-custom-properties">
                 <Tab.Label palette="accent">Custom Properties</Tab.Label>
 
                 <Tab.Section>

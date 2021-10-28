@@ -35,12 +35,13 @@
     bind:element
     class="aside-navigation"
     logic_id="aside-navigation"
+    variation="sticky"
     bind:state
     captive
     dismissible
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-    <Aside.Section margin_bottom="none" padding_y="large">
+    <Aside.Section margin_bottom="none">
         <Menu.Container sizing="small">
             {#each $navigation as menu (menu.text)}
                 <Menu.Divider>
@@ -86,13 +87,12 @@
      */
 
     :global(.aside-navigation) {
-        position: sticky !important;
-        top: 4.4rem;
-
         grid-area: aside;
 
         width: 18rem;
-        height: calc(100vh - 5rem);
+        height: 100vh;
+
+        padding-top: 4.4rem;
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
