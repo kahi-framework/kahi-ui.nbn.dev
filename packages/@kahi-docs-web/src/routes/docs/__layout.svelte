@@ -1,45 +1,16 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
-    import type {IApplicationConfig, INavigationMenu} from "@kahi-docs/config";
-    import {map_navigation_items} from "@kahi-docs/config";
-
-    // TODO: / NOTE: I would really like to have this live in an API
-    // route, however icons as SvelteComponents can't exist then
-    import NAVIGATION_CONFIG from "../../../../../.kahi-docs/navigation.config";
-
-    import type {INavigationTitlesGet} from "../../shared/api";
-
-    export const load: Load = async ({stuff, fetch}) => {
-        const response = await fetch("/api/v2/configuration/navigation/documentation.json");
-        const data = (await response.json()) as INavigationTitlesGet;
-
-        const items = map_navigation_items<INavigationMenu>(NAVIGATION_CONFIG.documentation, {
-            base: (stuff.application_config as IApplicationConfig).urls.base,
-            default_prefetch: true,
-            default_title: "N/A",
-            title_map: data.data,
-        });
-
-        return {
-            props: {
-                items,
-            },
-        };
+    export const load: Load = async ({fetch}) => {
+        return {};
     };
 </script>
 
 <script lang="ts">
     import {Container} from "@kahi-ui/framework";
 
-    import {set_docs_navigation} from "@kahi-docs/shared";
-
     import AsideLayout from "../../components/layouts/AsideLayout.svelte";
     import DocsNavigation from "../../components/navigation/DocsNavigation.svelte";
-
-    export let items: INavigationMenu[];
-
-    set_docs_navigation(items);
 </script>
 
 <AsideLayout>

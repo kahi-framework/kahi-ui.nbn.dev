@@ -1,50 +1,13 @@
 <script context="module" lang="ts">
-    import {getContext, setContext} from "svelte";
     import type {Load} from "@sveltejs/kit";
 
-    import {map_navigation_items} from "@kahi-docs/config";
-    import {set_context_hack} from "@kahi-docs/shared";
-
-    // TODO: / NOTE: I would really like to have this live in an API
-    // route, however icons as Svelte Components can't exist then
-    import NAVIGATION_CONFIG from "../../../../.kahi-docs/navigation.config";
-
-    import type {IApplicationConfigGet} from "../shared/api";
-
-    set_context_hack(getContext, setContext);
-
     export const load: Load = async ({fetch}) => {
-        const response = await fetch("/api/v2/configuration/application.json");
-        const data = (await response.json()) as IApplicationConfigGet;
-        const application_config = data.data;
-
-        const items = map_navigation_items<INavigationBar>(NAVIGATION_CONFIG.application, {
-            base: application_config.urls.base,
-        });
-
-        return {
-            props: {
-                application_config,
-                items,
-            },
-
-            stuff: {
-                application_config,
-            },
-        };
+        return {};
     };
 </script>
 
 <script lang="ts">
-    import type {IApplicationConfig, INavigationBar} from "@kahi-docs/config";
-    import {set_application_config, set_app_navigation} from "@kahi-docs/shared";
-
-    export let application_config: IApplicationConfig;
-    export let items: INavigationBar[];
-
-    set_application_config(application_config);
-
-    set_app_navigation(items);
+    // ...
 </script>
 
 <slot />
