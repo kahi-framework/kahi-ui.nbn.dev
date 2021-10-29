@@ -1,10 +1,11 @@
 <script lang="ts">
     import {Card, Menu, Overlay} from "@kahi-ui/framework";
     import {createEventDispatcher} from "svelte";
-    import {Code} from "svelte-feather/components/Code";
-    import {Copy} from "svelte-feather/components/Copy";
-    import {ExternalLink} from "svelte-feather/components/ExternalLink";
-    import {Image} from "svelte-feather/components/Image";
+
+    import Code from "../icons/Code.svelte";
+    import Copy from "../icons/Copy.svelte";
+    import ExternalLink from "../icons/ExternalLink.svelte";
+    import Image from "../icons/Image.svelte";
     import {Sidebar} from "svelte-feather/components/Sidebar";
 
     interface $$Events {

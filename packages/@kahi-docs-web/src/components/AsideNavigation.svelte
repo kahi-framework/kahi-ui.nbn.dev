@@ -7,10 +7,11 @@
 
     import {Aside, ContextButton, Menu} from "@kahi-ui/framework";
     import {onMount} from "svelte";
-    import {Menu as MenuIcon} from "svelte-feather/components/Menu";
-    import {X} from "svelte-feather/components/X";
 
     import {navigation} from "@kahi-docs/shared";
+
+    import MenuIcon from "./icons/Menu.svelte";
+    import X from "./icons/X.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
 

@@ -10,11 +10,12 @@
         Spacer,
         Text,
     } from "@kahi-ui/framework";
-    import {ArrowRight} from "svelte-feather/components/ArrowRight";
-    import {Code} from "svelte-feather/components/Code";
+
+    import ArrowRight from "../components/icons/ArrowRight.svelte";
+    import Code from "../components/icons/Code.svelte";
     import {Grid as GridIcon} from "svelte-feather/components/Grid";
-    import {Moon} from "svelte-feather/components/Moon";
-    import {Zap} from "svelte-feather/components/Zap";
+    import Moon from "../components/icons/Moon.svelte";
+    import Zap from "../components/icons/Zap.svelte";
 
     import AppAnchor from "../components/AppAnchor.svelte";
     import AppLayout from "../components/AppLayout.svelte";

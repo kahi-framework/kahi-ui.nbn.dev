@@ -1,10 +1,11 @@
 <script lang="ts">
     import {htmlpalette, prefersdark} from "@kahi-ui/framework";
-    import {Moon} from "svelte-feather/components/Moon";
-    import {Sun} from "svelte-feather/components/Sun";
 
     import type {IPreferenceThemeValues} from "@kahi-docs/shared";
     import {preferencetheme} from "@kahi-docs/shared";
+
+    import Moon from "./icons/Moon.svelte";
+    import Sun from "./icons/Sun.svelte";
 
     export let has_text: boolean = false;
 

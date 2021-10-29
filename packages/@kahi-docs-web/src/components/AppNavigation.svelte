@@ -1,9 +1,10 @@
 <script context="module" lang="ts">
     import {viewports} from "@kahi-ui/framework";
-    import {Book} from "svelte-feather/components/Book";
-    import {Code} from "svelte-feather/components/Code";
-    import {MessageCircle} from "svelte-feather/components/MessageCircle";
-    import {Package} from "svelte-feather/components/Package";
+
+    import Book from "./icons/Book.svelte";
+    import Code from "./icons/Code.svelte";
+    import MessageCircle from "./icons/MessageCircle.svelte";
+    import Package from "./icons/Package.svelte";
 
     const LINKS_APPLICATION = [
         {href: "/docs/framework/getting-started", text: "Documentation", icon: Book},
@@ -34,11 +35,12 @@
         Text,
         TextInput,
     } from "@kahi-ui/framework";
-    import {MoreVertical} from "svelte-feather/components/MoreVertical";
-    import {Search} from "svelte-feather/components/Search";
 
     import {search_keybind} from "../client/keybind";
     import {PACKAGE_VERSION} from "../shared/constants";
+
+    import MoreVertical from "../components/icons/MoreVertical.svelte";
+    import Search from "../components/icons/Search.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
     import SearchPrompt from "./SearchPrompt.svelte";

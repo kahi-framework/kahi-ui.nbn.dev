@@ -6,10 +6,11 @@
 <script lang="ts">
     import {browser} from "$app/env";
     import {Divider, Figure, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
-    import {Clock} from "svelte-feather/components/Clock";
-    import {ExternalLink} from "svelte-feather/components/ExternalLink";
 
     import {content} from "@kahi-docs/shared";
+
+    import Clock from "./icons/Clock.svelte";
+    import ExternalLink from "./icons/ExternalLink.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
 
