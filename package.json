@@ -6,12 +6,17 @@
         "build:application": "pnpm run --filter \"*web\" build:application",
         "dev:application": "pnpm run --filter \"*web\" dev:application",
         "preview:application": "pnpm run --filter \"*web\" preview:application",
+        "format:content": "prettier --config ./content/.prettierrc --write ./content",
         "format:packages": "pnpm -r format",
+        "lint:content": "prettier --config ./content/.prettierrc --check ./content",
         "lint:packages": "pnpm -r lint",
         "test:packages": "pnpm -r test --workspace-concurrency=1"
     },
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/shared": "workspace:^"
+    },
+    "devDependencies": {
+        "prettier": "^2.3.1"
     }
 }

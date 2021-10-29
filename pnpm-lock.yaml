@@ -6,9 +6,12 @@ importers:
     specifiers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/shared': workspace:^
+      prettier: ^2.3.1
     dependencies:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
+    devDependencies:
+      prettier: 2.4.1
 
   packages/@kahi-docs-config:
     specifiers:
