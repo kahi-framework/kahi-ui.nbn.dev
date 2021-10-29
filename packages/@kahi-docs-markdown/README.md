@@ -1,3 +1,3 @@
 # @kahi-docs/markdown
 
-> Subpackage for handling Markdown parsing for the Kahi UI Documentation site.
+> Subpackage for handling Markdown parsing / rendering for the Kahi UI Documentation Application.
