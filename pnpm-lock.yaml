@@ -108,7 +108,6 @@ importers:
       prismjs: ^1.23.0
       svelte: ^3.44.0
       svelte-check: ^2.2.7
-      svelte-feather: github:novacbn/svelte-feather#0.1.0
       svelte-local-storage-store: ^0.2.3
       svelte-preprocess: ^4.9.8
       svelte2tsx: ^0.4.7
@@ -123,7 +122,6 @@ importers:
       '@novacbn/svelte-stork': github.com/novacbn/svelte-stork/38127a20dfe584548a638d56b83cabaef16ea53c
       prismjs: 1.25.0
       svelte: 3.44.0
-      svelte-feather: github.com/novacbn/svelte-feather/d72a6f6f1cb0cfe8594dd09105e04c2719269e41
       svelte-local-storage-store: 0.2.4_svelte@3.44.0
     devDependencies:
       '@iarna/toml': 2.2.5
@@ -1294,13 +1292,6 @@ packages:
     version: 0.0.4
     dependencies:
       codejar: 3.5.0
-    dev: false
-
-  github.com/novacbn/svelte-feather/d72a6f6f1cb0cfe8594dd09105e04c2719269e41:
-    resolution: {tarball: https://codeload.github.com/novacbn/svelte-feather/tar.gz/d72a6f6f1cb0cfe8594dd09105e04c2719269e41}
-    name: svelte-feather
-    version: 0.1.0
-    engines: {node: '>=12.0.0'}
     dev: false
 
   github.com/novacbn/svelte-stork/38127a20dfe584548a638d56b83cabaef16ea53c:

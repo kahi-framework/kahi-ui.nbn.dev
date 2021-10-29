@@ -13,7 +13,7 @@
 
     import ArrowRight from "../components/icons/ArrowRight.svelte";
     import Code from "../components/icons/Code.svelte";
-    import {Grid as GridIcon} from "svelte-feather/components/Grid";
+    import LayoutTemplate from "../components/icons/LayoutTemplate.svelte";
     import Moon from "../components/icons/Moon.svelte";
     import Zap from "../components/icons/Zap.svelte";
 
@@ -126,7 +126,7 @@
                     <Spacer />
 
                     <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <GridIcon size="1.25rem" />
+                        <LayoutTemplate />
                     </Box>
                 </Card.Header>
 
@@ -144,7 +144,7 @@
                     <Spacer />
 
                     <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <Code size="1.25rem" />
+                        <Code />
                     </Box>
                 </Card.Header>
 
@@ -163,7 +163,7 @@
                     <Spacer />
 
                     <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <Moon size="1.25rem" />
+                        <Moon />
                     </Box>
                 </Card.Header>
 
@@ -182,7 +182,7 @@
                     <Spacer />
 
                     <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <Zap size="1.25rem" />
+                        <Zap />
                     </Box>
                 </Card.Header>
 

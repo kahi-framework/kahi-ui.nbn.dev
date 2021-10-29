@@ -50,7 +50,6 @@
         "@novacbn/svelte-stork": "github:novacbn/svelte-stork#0.0.4",
         "prismjs": "^1.23.0",
         "svelte": "^3.44.0",
-        "svelte-feather": "github:novacbn/svelte-feather#0.1.0",
         "svelte-local-storage-store": "^0.2.3"
     }
 }

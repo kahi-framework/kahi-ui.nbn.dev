@@ -6,7 +6,7 @@
     import Copy from "../icons/Copy.svelte";
     import ExternalLink from "../icons/ExternalLink.svelte";
     import Image from "../icons/Image.svelte";
-    import {Sidebar} from "svelte-feather/components/Sidebar";
+    import Sidebar from "../icons/Sidebar.svelte";
 
     interface $$Events {
         copy_click: MouseEvent;
