@@ -56,12 +56,13 @@
 
     export let snippet: ISnippet;
 
-    snippet_store.init(snippet);
-
     let Component: typeof SvelteComponent;
     onMount(async () => {
         Component = (await import("../../../lib/components/repl/REPLEditor.svelte")).default;
     });
+
+    const store = snippet_store.init(snippet);
+    $: $store = snippet;
 </script>
 
 {#if Component}

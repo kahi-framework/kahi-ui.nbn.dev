@@ -33,7 +33,8 @@
 
     export let navigation: INavigationMenu[];
 
-    navigation_store.init(navigation);
+    const store = navigation_store.init(navigation);
+    $: $store = navigation;
 </script>
 
 <AsideLayout>

@@ -1,22 +1,23 @@
 import {getContext, setContext} from "svelte";
-import type {Readable} from "svelte/store";
-import {readable} from "svelte/store";
+import type {Readable, Writable} from "svelte/store";
+import {writable} from "svelte/store";
 
 export interface IContextStore<T> extends Readable<T> {
-    init(value: T): void;
+    init(value: T): Writable<T>;
 }
 
 export function make_context_store<T>(symbol: Symbol): IContextStore<T> {
-    const set_store = (value: T) => setContext(symbol, readable(value));
-    const get_store = () => getContext<IContextStore<T>>(symbol);
-
     return {
         init(value) {
-            set_store(value);
+            const store = writable<T>(value);
+
+            setContext(symbol, {subscribe: store.subscribe});
+            return store;
         },
 
         subscribe(run, invalidate) {
-            const store = get_store();
+            const store = getContext<IContextStore<T>>(symbol);
+
             if (!store) {
                 throw ReferenceError(
                     `bad dispatch to 'subscribe' (failed to lookup context '${symbol.toString()}')`
