@@ -1,10 +1,22 @@
 <script lang="ts">
-    import {Card, Ellipsis, Overlay, Text, TextInput} from "@kahi-ui/framework";
+    import {
+        Card,
+        Clickable,
+        Ellipsis,
+        Overlay,
+        Scrollable,
+        Stack,
+        Text,
+        TextInput,
+        Tile,
+    } from "@kahi-ui/framework";
 
     import type {ISearcher, ISearchResult} from "../../lib/client/search";
     import {make_searcher} from "../../lib/client/search";
 
     import AppAnchor from "./AppAnchor.svelte";
+    import ArrowRight from "./icons/ArrowRight.svelte";
+    import File from "./icons/File.svelte";
 
     export let state: boolean = false;
 
@@ -33,7 +45,36 @@
             </Card.Section>
 
             {#if results}
-                <Card.Section>meep</Card.Section>
+                <Card.Section>
+                    <Scrollable max_height="viewport-50">
+                        <Stack spacing="small">
+                            {#each results as result (result.identifier)}
+                                <Clickable.Container>
+                                    <Tile.Container sizing="small">
+                                        <Tile.Figure style="font-size:24px;">
+                                            <File />
+                                        </Tile.Figure>
+
+                                        <Tile.Section>
+                                            <Tile.Header>
+                                                <Clickable.Anchor
+                                                    href="/{result.identifier}"
+                                                    target="_blank"
+                                                >
+                                                    {result.title}
+                                                </Clickable.Anchor>
+                                            </Tile.Header>
+                                        </Tile.Section>
+
+                                        <Tile.Footer>
+                                            <ArrowRight />
+                                        </Tile.Footer>
+                                    </Tile.Container>
+                                </Clickable.Container>
+                            {/each}
+                        </Stack>
+                    </Scrollable>
+                </Card.Section>
             {/if}
 
             <Card.Section>
