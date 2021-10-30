@@ -16,4 +16,6 @@
 <meta property="og:site_name" content={SITE_NAME} />
 <meta property="og:title" content={separator ? `${title} ${separator} ${SITE_NAME}` : title} />
 
+<meta name="twitter:card" content="summary_large_image" />
+
 <title>{separator ? `${title} ${separator} ${SITE_NAME}` : title}</title>
