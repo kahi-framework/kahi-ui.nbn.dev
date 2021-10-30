@@ -52,7 +52,7 @@ jobs:
 
             - name: Stash Pull Request
               if: github.event_name == 'pull_request'
-              run: echo ${{github.event.number}} > ./build/PULL_REQUEST
+              run: echo ${{github.event.number}} > ./packages/@kahi-docs-web/build/PULL_REQUEST
 
             - name: Upload Documentation Build
               uses: actions/upload-artifact@v2
@@ -61,7 +61,7 @@ jobs:
                   github.ref == 'refs/heads/main'
               with:
                   name: sveltekit-build
-                  path: build
+                  path: packages/@kahi-docs-web/build
 
     publish:
         runs-on: ubuntu-latest
