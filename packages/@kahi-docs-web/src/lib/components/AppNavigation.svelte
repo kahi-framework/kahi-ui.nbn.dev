@@ -39,8 +39,8 @@
     import {search_keybind} from "../client/keybind";
     import {PACKAGE_VERSION} from "../shared/constants";
 
-    import MoreVertical from "../components/icons/MoreVertical.svelte";
-    import Search from "../components/icons/Search.svelte";
+    import MoreVertical from "./icons/MoreVertical.svelte";
+    import Search from "./icons/Search.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
     import SearchPrompt from "./SearchPrompt.svelte";

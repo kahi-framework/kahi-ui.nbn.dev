@@ -8,9 +8,9 @@ import {is_internal_url, memoize} from "@kahi-docs/shared";
 
 import NAVIGATION_CONFIG from "../../../../../../../.kahi-docs/navigation.config";
 
-import type {INavigationGet, IRouteError} from "../../../../shared/api";
-import {PATH_CONTENT} from "../../../../server/constants";
-import {read_content} from "../../../../server/content";
+import type {INavigationGet, IRouteError} from "../../../../lib/shared/api";
+import {PATH_CONTENT} from "../../../../lib/server/constants";
+import {read_content} from "../../../../lib/server/content";
 
 function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMenu[]> {
     const promises = menus.map(async ({items = [], text = ""}) => {

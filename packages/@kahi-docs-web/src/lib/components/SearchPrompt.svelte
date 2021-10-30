@@ -1,8 +1,8 @@
 <script lang="ts">
     import {Card, Ellipsis, Overlay, Text, TextInput} from "@kahi-ui/framework";
 
-    import type {ISearcher, ISearchResult} from "../client/search";
-    import {make_searcher} from "../client/search";
+    import type {ISearcher, ISearchResult} from "../../lib/client/search";
+    import {make_searcher} from "../../lib/client/search";
 
     import AppAnchor from "./AppAnchor.svelte";
 

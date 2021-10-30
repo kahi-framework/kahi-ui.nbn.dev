@@ -1,7 +1,7 @@
 <script lang="ts">
     import {Divider, Heading, Stack, Text} from "@kahi-ui/framework";
 
-    import {PACKAGE_VERSION} from "../shared/constants";
+    import {PACKAGE_VERSION} from "../../lib/shared/constants";
 
     import AppAnchor from "./AppAnchor.svelte";
 </script>

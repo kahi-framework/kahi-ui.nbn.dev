@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
-    import type {IContentGet, IRouteError} from "../../../shared/api";
+    import type {IContentGet, IRouteError} from "../../../lib/shared/api";
 
     const SUPPORTED_SYNTAXES = new Set(["html", "svelte"]);
 
@@ -52,7 +52,7 @@
     import type {ISnippet} from "@kahi-docs/markdown";
     import {snippet as snippet_store} from "@kahi-docs/shared";
 
-    import REPLLoadingHero from "../../../components/repl/REPLLoadingHero.svelte";
+    import REPLLoadingHero from "../../../lib/components/repl/REPLLoadingHero.svelte";
 
     export let snippet: ISnippet;
 
@@ -60,7 +60,7 @@
 
     let Component: typeof SvelteComponent;
     onMount(async () => {
-        Component = (await import("../../../components/repl/REPLEditor.svelte")).default;
+        Component = (await import("../../../lib/components/repl/REPLEditor.svelte")).default;
     });
 </script>
 

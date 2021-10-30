@@ -8,9 +8,9 @@ import type {RequestHandler} from "@sveltejs/kit";
 import type {ISearchIndex} from "@kahi-docs/shared";
 import {memoize} from "@kahi-docs/shared";
 
-import {GLOB_CONTENT, PATH_CONTENT} from "../../../../server/constants";
-import type {ISearchGet} from "../../../../shared/api";
-import {read_content} from "../../../../server/content";
+import {GLOB_CONTENT, PATH_CONTENT} from "../../../../lib/server/constants";
+import type {ISearchGet} from "../../../../lib/shared/api";
+import {read_content} from "../../../../lib/server/content";
 
 async function get_search_index(): Promise<ISearchIndex> {
     const file_paths = await fg(GLOB_CONTENT);

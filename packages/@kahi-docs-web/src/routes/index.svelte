@@ -11,14 +11,14 @@
         Text,
     } from "@kahi-ui/framework";
 
-    import ArrowRight from "../components/icons/ArrowRight.svelte";
-    import Code from "../components/icons/Code.svelte";
-    import LayoutTemplate from "../components/icons/LayoutTemplate.svelte";
-    import Moon from "../components/icons/Moon.svelte";
-    import Zap from "../components/icons/Zap.svelte";
+    import ArrowRight from "../lib/components/icons/ArrowRight.svelte";
+    import Code from "../lib/components/icons/Code.svelte";
+    import LayoutTemplate from "../lib/components/icons/LayoutTemplate.svelte";
+    import Moon from "../lib/components/icons/Moon.svelte";
+    import Zap from "../lib/components/icons/Zap.svelte";
 
-    import AppAnchor from "../components/AppAnchor.svelte";
-    import AppLayout from "../components/AppLayout.svelte";
+    import AppAnchor from "../lib/components/AppAnchor.svelte";
+    import AppLayout from "../lib/components/AppLayout.svelte";
 </script>
 
 <svelte:head>

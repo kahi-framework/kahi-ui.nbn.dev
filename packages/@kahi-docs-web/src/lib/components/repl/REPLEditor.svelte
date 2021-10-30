@@ -11,7 +11,7 @@
 
     import {snippet} from "@kahi-docs/shared";
 
-    import REPL_CONFIG from "../../../../../.kahi-docs/repl.config";
+    import REPL_CONFIG from "../../../../../../.kahi-docs/repl.config";
 
     import REPLLoadingHero from "./REPLLoadingHero.svelte";
     import REPLOverlay from "./REPLOverlay.svelte";

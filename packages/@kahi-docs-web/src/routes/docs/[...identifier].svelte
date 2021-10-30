@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
-    import type {IContentGet, IRouteError} from "../../shared/api";
+    import type {IContentGet, IRouteError} from "../../lib/shared/api";
 
     export const load: Load = async ({fetch, page}) => {
         const {identifier = ""} = page.params;
@@ -30,9 +30,9 @@
     import type {IDocumentationRender} from "@kahi-docs/markdown";
     import {content as content_store} from "@kahi-docs/shared";
 
-    import Content from "../../components/Content.svelte";
-    import ContentAPI from "../../components/ContentAPI.svelte";
-    import ContentMetadata from "../../components/ContentMetadata.svelte";
+    import Content from "../../lib/components/Content.svelte";
+    import ContentAPI from "../../lib/components/ContentAPI.svelte";
+    import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
 
     export let content: IDocumentationRender;
 

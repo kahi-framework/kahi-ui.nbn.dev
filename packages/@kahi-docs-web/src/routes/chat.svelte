@@ -5,7 +5,7 @@
 <script lang="ts">
     import {Ellipsis, Hero} from "@kahi-ui/framework";
 
-    import AppAnchor from "../components/AppAnchor.svelte";
+    import AppAnchor from "../lib/components/AppAnchor.svelte";
 </script>
 
 <svelte:head>

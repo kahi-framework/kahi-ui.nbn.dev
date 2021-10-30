@@ -4,9 +4,9 @@ import type {RequestHandler} from "@sveltejs/kit";
 
 import type {IDocumentationRender} from "@kahi-docs/markdown";
 
-import type {IContentGet, IRouteError} from "../../../../../shared/api";
-import {PATH_CONTENT} from "../../../../../server/constants";
-import {read_content} from "../../../../../server/content";
+import type {IContentGet, IRouteError} from "../../../../../lib/shared/api";
+import {PATH_CONTENT} from "../../../../../lib/server/constants";
+import {read_content} from "../../../../../lib/server/content";
 
 export const get: RequestHandler = async (request) => {
     const {category = "", identifier = ""} = request.params;

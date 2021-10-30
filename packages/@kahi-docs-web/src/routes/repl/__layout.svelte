@@ -4,7 +4,7 @@
 
     import {preferencetheme} from "@kahi-docs/shared";
 
-    import REPLUnsupportedHero from "../../components/repl/REPLUnsupportedHero.svelte";
+    import REPLUnsupportedHero from "../../lib/components/repl/REPLUnsupportedHero.svelte";
 
     const _htmlpalette = htmlpalette();
 
