@@ -48,21 +48,8 @@ jobs:
             - name: Test
               run: npm run test:packages
 
-            - name: Download Stork
-              run: |
-                  mkdir ./bin
-                  curl -L -o ./bin/stork.linux.x64 https://github.com/jameslittle230/stork/releases/download/v1.2.1/stork-ubuntu-latest
-                  chmod +x ./bin/stork.linux.x64
-                  npm ci
-
             - name: Build Application
               run: npm run build:application
-
-            - name: Build Search Index
-              run: |
-                  npm run build:generate-index
-                  npm run index:generate
-                  npm run index:build
 
             - name: Stash Pull Request
               if: github.event_name == 'pull_request'

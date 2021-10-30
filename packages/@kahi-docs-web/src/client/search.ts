@@ -1,52 +1,68 @@
-import {base} from "$app/paths";
-import type {initialize, register, search} from "@novacbn/svelte-stork";
+import {dev} from "$app/env";
+import FlexSearch from "flexsearch";
 
+import type {ISearchIndex, ISearchRecord} from "@kahi-docs/shared";
 import {memoize} from "@kahi-docs/shared";
 
-import {PACKAGE_VERSION} from "../shared/constants";
+import type {ISearchGet} from "../shared/api";
 
-export interface IImportedSearch {
-    // TODO: Need to investigate better subpackage typing
-    // support for `@novacbn/svelte-stork/components`
+export type ISearcher = (query: string) => ISearchResult[];
 
-    initialize: typeof initialize;
+export interface ISearchResult {
+    identifier: string;
 
-    register: typeof register;
-
-    search: typeof search;
-
-    Stork: any;
+    title: string;
 }
 
-export const import_search = memoize(async () => {
-    const [search_lib, search_components] = await Promise.all([
-        import("@novacbn/svelte-stork"),
-        // @ts-expect-error - HACK: Need to investigate better subpackage typing support
-        import("@novacbn/svelte-stork/components"),
-    ]);
+async function fetch_search_index(): Promise<ISearchIndex> {
+    const response = await fetch("/api/v3/search.json");
+    const data = (await response.json()) as ISearchGet;
 
-    return {
-        initialize: search_lib.initialize,
-        register: search_lib.register,
-        search: search_lib.search,
-        Stork: search_components,
-    } as IImportedSearch;
-});
+    return data.data;
+}
 
-export const initialize_search = memoize(async () => {
-    const imports = await import_search();
+async function _make_searcher(): Promise<ISearcher> {
+    const documents = new FlexSearch.Document<ISearchRecord>({
+        tokenize: "full",
+        preset: "match",
 
-    const {initialize, register} = imports;
-
-    await initialize({
-        script_url: `${base}/assets/stork/stork-v1.2.1.js`,
-        wasm_url: `${base}/assets/stork/stork-v1.2.1.wasm`,
+        document: {
+            id: "identifier",
+            index: ["title", "text"],
+        },
     });
 
-    await register({
-        index_name: `kahi-ui_docs_v${PACKAGE_VERSION}`,
-        index_url: `${base}/assets/stork/kahi-ui_docs_v${PACKAGE_VERSION}.st`,
-    });
+    const title_lookup = new Map();
+    const index = await fetch_search_index();
 
-    return imports;
-});
+    await Promise.all(
+        index.map((entry) => {
+            title_lookup.set(entry.identifier, entry.title);
+            return documents.addAsync(entry.identifier, entry);
+        })
+    );
+
+    return (query) => {
+        const combined_results = new Set<string>();
+        const search_results = documents.search(query, 10);
+
+        for (const unit of search_results) {
+            for (const identifier of unit.result) combined_results.add(identifier as string);
+        }
+
+        return (
+            Array.from(combined_results)
+                // NOTE: When combining title + text search results, there
+                // might be more than ten (10) results. So we need to limit here
+                .slice(0, 9)
+                .map((identifier) => {
+                    return {
+                        identifier,
+                        title: title_lookup.get(identifier),
+                    };
+                })
+        );
+    };
+}
+
+export const make_searcher = dev ? _make_searcher : memoize(_make_searcher);

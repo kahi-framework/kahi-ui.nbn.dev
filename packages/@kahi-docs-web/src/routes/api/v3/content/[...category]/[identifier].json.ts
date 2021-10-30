@@ -1,11 +1,17 @@
 import {join} from "path";
 
+import {dev} from "$app/env";
 import type {RequestHandler} from "@sveltejs/kit";
 
 import {IDocumentationRender, read_documentation} from "@kahi-docs/markdown";
+import {memoize} from "@kahi-docs/shared";
 
 import type {IContentGet, IRouteError} from "../../../../../shared/api";
 import {PATH_CONTENT} from "../../../../../server/constants";
+
+// TODO: cache results, empty cache on file watch change
+
+const _read_documentation = dev ? read_documentation : memoize(read_documentation);
 
 export const get: RequestHandler = async (request) => {
     const {category = "", identifier = ""} = request.params;
@@ -13,7 +19,7 @@ export const get: RequestHandler = async (request) => {
 
     let render: IDocumentationRender;
     try {
-        render = await read_documentation(path);
+        render = await _read_documentation(path);
     } catch (err) {
         // TODO: Switch to custom exception types
         if (err instanceof TypeError) {
