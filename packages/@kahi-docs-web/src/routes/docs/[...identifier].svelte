@@ -33,6 +33,7 @@
     import Content from "../../lib/components/Content.svelte";
     import ContentAPI from "../../lib/components/ContentAPI.svelte";
     import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
+    import PageMetadata from "../../lib/components/PageMetadata.svelte";
 
     export let content: IDocumentationRender;
 
@@ -41,7 +42,7 @@
 </script>
 
 <svelte:head>
-    <title>{content.properties.title} — Kahi UI</title>
+    <PageMetadata title={content.properties.title} separator="—" />
 </svelte:head>
 
 <Content />

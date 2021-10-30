@@ -19,10 +19,11 @@
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
     import AppLayout from "../lib/components/AppLayout.svelte";
+    import PageMetadata from "../lib/components/PageMetadata.svelte";
 </script>
 
 <svelte:head>
-    <title>Straight-forward Svelte UI for the Web :: Kahi UI</title>
+    <PageMetadata separator="::" />
 </svelte:head>
 
 <!--
