@@ -24,6 +24,7 @@
         "test:types": "tsc --noEmit"
     },
     "devDependencies": {
+        "@cfworker/json-schema": "^1.8.1",
         "@iarna/toml": "^2.2.5",
         "@sveltejs/adapter-static": "^1.0.0-next.21",
         "@sveltejs/kit": "^1.0.0-next.190",

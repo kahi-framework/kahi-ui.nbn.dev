@@ -88,6 +88,7 @@ importers:
 
   packages/@kahi-docs-web:
     specifiers:
+      '@cfworker/json-schema': ^1.8.1
       '@iarna/toml': ^2.2.5
       '@kahi-docs/config': workspace:^
       '@kahi-docs/markdown': workspace:^
@@ -127,6 +128,7 @@ importers:
       svelte: 3.44.0
       svelte-local-storage-store: 0.2.4_svelte@3.44.0
     devDependencies:
+      '@cfworker/json-schema': 1.9.0
       '@iarna/toml': 2.2.5
       '@sveltejs/adapter-static': 1.0.0-next.21
       '@sveltejs/kit': 1.0.0-next.190_svelte@3.44.0
@@ -149,7 +151,6 @@ packages:
 
   /@cfworker/json-schema/1.9.0:
     resolution: {integrity: sha512-N13LOpIXZkgOE2Ujo7OYtWalazqUQu00uG6SfLlmUN/L7EF+UjT1ZDtK5eyxbTkUGr7nGXmWVtHb7KPBnayVcA==}
-    dev: false
 
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
