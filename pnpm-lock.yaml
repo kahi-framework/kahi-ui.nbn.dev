@@ -6,12 +6,12 @@ importers:
     specifiers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/shared': workspace:^
-      '@kahi-ui/framework': ^0.4.8
+      '@kahi-ui/framework': 0.4.9
       prettier: ^2.3.1
     dependencies:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
-      '@kahi-ui/framework': 0.4.8
+      '@kahi-ui/framework': 0.4.9
     devDependencies:
       prettier: 2.4.1
 
@@ -94,7 +94,7 @@ importers:
       '@kahi-docs/markdown': workspace:^
       '@kahi-docs/node': workspace:^
       '@kahi-docs/shared': workspace:^
-      '@kahi-ui/framework': ^0.4.8
+      '@kahi-ui/framework': 0.4.9
       '@novacbn/svelte-pipeline': ^0.2.0
       '@sveltejs/adapter-static': ^1.0.0-next.21
       '@sveltejs/kit': ^1.0.0-next.190
@@ -121,7 +121,7 @@ importers:
       '@kahi-docs/markdown': link:../@kahi-docs-markdown
       '@kahi-docs/node': link:../@kahi-docs-node
       '@kahi-docs/shared': link:../@kahi-docs-shared
-      '@kahi-ui/framework': 0.4.8
+      '@kahi-ui/framework': 0.4.9
       '@novacbn/svelte-pipeline': 0.2.0
       flexsearch: 0.7.21
       prismjs: 1.25.0
@@ -155,8 +155,8 @@ packages:
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  /@kahi-ui/framework/0.4.8:
-    resolution: {integrity: sha512-Gh+dCNM5TSvZX4WqxQupBsBiv6eVdCWDo3WgJPR0N8p1XRyShf6pmY8MrtA2S0DBC7QK+2jDh7CnEG+xBRQNeQ==}
+  /@kahi-ui/framework/0.4.9:
+    resolution: {integrity: sha512-4MJ4LCjbLmWDSwipZF0j9f3vabnO9mSsUMKNOSaJRCWtdXmi1jZMqdZFfgH+LPplnMnh3WIbYCQTjS6JKoYMfQ==}
     dependencies:
       svelte: 3.44.0
     dev: false

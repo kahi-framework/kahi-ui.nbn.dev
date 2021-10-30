@@ -48,7 +48,7 @@
         "@kahi-docs/markdown": "workspace:^",
         "@kahi-docs/node": "workspace:^",
         "@kahi-docs/shared": "workspace:^",
-        "@kahi-ui/framework": "^0.4.8",
+        "@kahi-ui/framework": "0.4.9",
         "@novacbn/svelte-pipeline": "^0.2.0",
         "flexsearch": "^0.7.21",
         "prismjs": "^1.23.0",
