@@ -15,8 +15,6 @@
 
     $: if (state && !promise) promise = make_searcher().then((_searcher) => (searcher = _searcher));
     $: if (searcher) results = value ? searcher(value) : null;
-
-    $: console.log({results});
 </script>
 
 <Overlay

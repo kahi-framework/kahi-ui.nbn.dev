@@ -4,15 +4,13 @@ import {dev} from "$app/env";
 import type {RequestHandler} from "@sveltejs/kit";
 
 import type {INavigationMenu} from "@kahi-docs/config";
-import {read_documentation} from "@kahi-docs/markdown";
 import {is_internal_url, memoize} from "@kahi-docs/shared";
 
 import NAVIGATION_CONFIG from "../../../../../../../.kahi-docs/navigation.config";
 
 import type {INavigationGet, IRouteError} from "../../../../shared/api";
 import {PATH_CONTENT} from "../../../../server/constants";
-
-// TODO: cache results, empty cache on file watch change
+import {read_content} from "../../../../server/content";
 
 function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMenu[]> {
     const promises = menus.map(async ({items = [], text = ""}) => {
@@ -20,7 +18,7 @@ function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMen
             if (!text && is_internal_url(href)) {
                 // TODO: error handling
                 const file_path = join(PATH_CONTENT, `${href}.md`);
-                const render = await read_documentation(file_path);
+                const render = await read_content(file_path);
 
                 text = render.properties.title || "N/A";
             } else text = "N/A";
@@ -41,7 +39,7 @@ function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMen
     return Promise.all(promises);
 }
 
-const _read_navigation_menus = dev ? read_navigation_menus : memoize(read_navigation_menus);
+const _read_navigation_menus = dev ? read_navigation_menus : memoize(read_navigation_menus)[0];
 
 export const get: RequestHandler = async (request) => {
     const {category = ""} = request.params;

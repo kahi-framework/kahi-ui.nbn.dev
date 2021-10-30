@@ -65,4 +65,4 @@ async function _make_searcher(): Promise<ISearcher> {
     };
 }
 
-export const make_searcher = dev ? _make_searcher : memoize(_make_searcher);
+export const make_searcher = dev ? _make_searcher : memoize(_make_searcher)[0];

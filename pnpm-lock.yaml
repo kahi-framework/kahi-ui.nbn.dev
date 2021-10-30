@@ -97,6 +97,7 @@ importers:
       '@sveltejs/kit': ^1.0.0-next.190
       '@tsconfig/svelte': ^2.0.1
       '@types/flexsearch': ^0.7.2
+      cheap-watch: ^1.0.4
       cheerio: ^1.0.0-rc.10
       fast-glob: ^3.2.5
       flexsearch: ^0.7.21
@@ -129,6 +130,7 @@ importers:
       '@sveltejs/kit': 1.0.0-next.190_svelte@3.44.0
       '@tsconfig/svelte': 2.0.1
       '@types/flexsearch': 0.7.2
+      cheap-watch: 1.0.4
       cheerio: 1.0.0-rc.10
       fast-glob: 3.2.7
       github-slugger: 1.4.0

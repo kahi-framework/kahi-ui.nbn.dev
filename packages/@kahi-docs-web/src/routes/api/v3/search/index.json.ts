@@ -5,23 +5,21 @@ import {load} from "cheerio";
 import fg from "fast-glob";
 import type {RequestHandler} from "@sveltejs/kit";
 
-import {read_documentation} from "@kahi-docs/markdown";
 import type {ISearchIndex} from "@kahi-docs/shared";
 import {memoize} from "@kahi-docs/shared";
 
 import {GLOB_CONTENT, PATH_CONTENT} from "../../../../server/constants";
 import type {ISearchGet} from "../../../../shared/api";
-
-// TODO: cache results, empty cache on file watch change
+import {read_content} from "../../../../server/content";
 
 async function get_search_index(): Promise<ISearchIndex> {
     const file_paths = await fg(GLOB_CONTENT);
-
-    return Promise.all(
+    const index = await Promise.all(
         file_paths.map(async (file_path) => {
             const identifier = relative(PATH_CONTENT, file_path).replace(".md", "");
 
-            const content = await read_documentation(file_path);
+            // TODO: error handling
+            const content = await read_content(file_path);
             const $ = load(content.render);
 
             $("iframe, hr, pre").remove();
@@ -33,9 +31,15 @@ async function get_search_index(): Promise<ISearchIndex> {
             };
         })
     );
+
+    index.sort((entry_a, entry_b) => {
+        return entry_a.identifier > entry_b.identifier ? 1 : -1;
+    });
+
+    return index;
 }
 
-const _get_search_index = dev ? get_search_index : memoize(get_search_index);
+const _get_search_index = dev ? get_search_index : memoize(get_search_index)[0];
 
 export const get: RequestHandler = async (request) => {
     return {
