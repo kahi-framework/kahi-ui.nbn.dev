@@ -1,3 +1,9 @@
+<script>
+    import GlobalPrerender from "../lib/components/GlobalPrerender.svelte";
+</script>
+
+<GlobalPrerender />
+
 <slot />
 
 <style>
