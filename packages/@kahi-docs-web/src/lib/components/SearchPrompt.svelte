@@ -25,6 +25,7 @@
     let searcher: ISearcher | null = null;
     let promise: Promise<any> | null = null;
 
+    $: if (!state) value = "";
     $: if (state && !promise) promise = make_searcher().then((_searcher) => (searcher = _searcher));
     $: if (searcher) results = value ? searcher(value) : null;
 </script>
