@@ -5,7 +5,7 @@
      * TODO: Scroll to current active item when collapsed on Mobile / Tablet
      */
 
-    import {Aside, ContextButton, Menu} from "@kahi-ui/framework";
+    import {Aside, Badge, ContextButton, Menu, Spacer} from "@kahi-ui/framework";
     import {onMount} from "svelte";
 
     import {navigation} from "@kahi-docs/shared";
@@ -54,6 +54,13 @@
                                 <Menu.Item>
                                     <AppAnchor href={anchor.href}>
                                         {anchor.text}
+
+                                        {#if anchor.badge}
+                                            <Spacer variation="inline" />
+                                            <Badge palette="accent" shape="rounded">
+                                                {anchor.badge}
+                                            </Badge>
+                                        {/if}
                                     </AppAnchor>
                                 </Menu.Item>
                             {/each}
@@ -93,6 +100,10 @@
         width: 18rem;
         height: 100vh;
         max-height: 100%;
+    }
+
+    :global(.aside-navigation) :global(.badge) {
+        font-size: 80%;
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
