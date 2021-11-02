@@ -91,7 +91,8 @@
         grid-area: aside;
 
         width: 18rem;
-        height: min(100%, 100vh);
+        height: 100vh;
+        max-height: 100%;
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
@@ -108,7 +109,7 @@
     @media (max-width: 767.9px) {
         :global(label[for="aside-navigation"]),
         :global(.aside-navigation) {
-            z-index: 1;
+            z-index: 2;
         }
     }
 </style>
