@@ -41,7 +41,7 @@ To start working with the Application, start the `dev:application` script:
 npm run dev:application
 ```
 
-Which should open a webserver at [`localhost:3000`](http://localhost:3000), which will allow you to see your changes hot-reloaded. Keep in mind that Markdown (`.md`) file processing is _not_ cached during development. So there can be slow load times that will not happen for the built Application.
+Which should open a webserver at [`localhost:3000`](http://localhost:3000), which will allow you to see your changes hot-reloaded.
 
 ## Building
 
@@ -63,7 +63,7 @@ After you finish making / testing out your changes, [file a new Pull Request](ht
 
 -   Include a properly formatted changelog in the body of your PR.
 
-Once your PR is passing tests, the CI will run a post that will comment with a preview link.
+Once your PR is passing tests, the CI will post a comment with a preview link of your build.
 
 ## Code Formatting
 
