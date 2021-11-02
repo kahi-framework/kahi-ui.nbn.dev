@@ -13,7 +13,6 @@
     "scripts": {
         "build:application": "svelte-kit build",
         "dev:application": "svelte-kit dev --host 0.0.0.0",
-        "index:generate": "node ./scripts/generate-index.build.cjs",
         "format": "npm run format:application",
         "format:application": "prettier --config ../../.prettierrc --plugin-search-dir=. ./**/*.svelte --write ./src",
         "lint": "npm run lint:format",
