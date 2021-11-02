@@ -18,7 +18,7 @@
         "lint": "npm run lint:format",
         "lint:format": "prettier --config ../../.prettierrc --plugin-search-dir=. ./**/*.svelte --check ./src",
         "preview:application": "svelte-kit preview --host 0.0.0.0",
-        "test": "echo noop, currently codebase not fixed up for this yet",
+        "test": "npm run test:types && echo noop, currently codebase not fixed up for 'test:svelte' yet",
         "test:svelte": "svelte-check --tsconfig ./tsconfig.json",
         "test:types": "tsc --noEmit"
     },

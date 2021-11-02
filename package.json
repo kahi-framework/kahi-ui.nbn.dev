@@ -10,7 +10,7 @@
         "format:packages": "pnpm -r format",
         "lint:content": "prettier --config ./content/.prettierrc --check ./content",
         "lint:packages": "pnpm -r lint",
-        "test:packages": "pnpm -r test --workspace-concurrency=1"
+        "test:packages": "pnpm -r test"
     },
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
