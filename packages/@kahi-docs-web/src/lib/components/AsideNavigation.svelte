@@ -91,7 +91,7 @@
         grid-area: aside;
 
         width: 18rem;
-        height: 100vh;
+        height: min(100%, 100vh);
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
