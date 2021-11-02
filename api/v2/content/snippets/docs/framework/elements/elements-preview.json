@@ -1,1 +1,0 @@
-{"data":{"identifier":"elements-preview","script":"<script>\n    import {Button} from \"@kahi-ui/framework\";\n\n    let element = null;\n\n    $: console.log({element});\n</script>\n\n<Button bind:element>I reference a button!</Button>","syntax":"svelte","title":"Elements Preview"}}

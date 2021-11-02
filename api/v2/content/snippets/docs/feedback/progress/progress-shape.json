@@ -1,1 +1,0 @@
-{"data":{"identifier":"progress-shape","script":"<script>\n    import {Progress} from \"@kahi-ui/framework\";\n</script>\n\n<Progress shape=\"circle\" value={0.5} />\n<Progress value={0.5} />","syntax":"svelte","title":"Progress Shape"}}

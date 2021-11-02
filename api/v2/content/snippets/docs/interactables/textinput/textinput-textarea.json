@@ -1,1 +1,0 @@
-{"data":{"identifier":"textinput-textarea","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput\n    is=\"textarea\"\n    value=\"This is a TextArea TextInput\"\n/>","syntax":"svelte","title":"TextInput TextArea"}}

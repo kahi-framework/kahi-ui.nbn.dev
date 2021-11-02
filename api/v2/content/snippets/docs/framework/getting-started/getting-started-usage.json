@@ -1,1 +1,0 @@
-{"data":{"identifier":"getting-started-usage","script":"<script>\n    import {Button, Heading} from \"@kahi-ui/framework\";\n\n    let clicks = 0;\n\n    function on_click(event) {\n        clicks++;\n    }\n</script>\n\n<Heading>\n    Clicks: {clicks}\n</Heading>\n\n<Button on:click={on_click}>Add +1</Button>","syntax":"svelte","title":"Getting Started Usage"}}

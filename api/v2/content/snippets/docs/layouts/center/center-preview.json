@@ -1,1 +1,0 @@
-{"data":{"identifier":"center-preview","script":"<script>\n    import {Box, Center} from \"@kahi-ui/framework\";\n</script>\n\n<Box palette=\"inverse\">\n    <Center class=\"center-preview\">\n        This text is centered!\n    </Center>\n</Box>\n\n<style>\n    :global(.center-preview) {\n        height: 100px;\n    }\n</style>","syntax":"svelte","title":"Center Preview"}}

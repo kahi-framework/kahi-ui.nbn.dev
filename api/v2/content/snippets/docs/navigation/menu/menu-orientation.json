@@ -1,1 +1,0 @@
-{"data":{"identifier":"menu-orientation","script":"<script>\n    import {Menu} from \"@kahi-ui/framework\";\n</script>\n\n<Menu.Container orientation=\"horizontal\">\n    <Menu.Button>Documentation</Menu.Button>\n    <Menu.Button>Github</Menu.Button>\n    <Menu.Button>Releases</Menu.Button>\n</Menu.Container>","syntax":"svelte","title":"Menu Orientation"}}

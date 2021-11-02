@@ -14,23 +14,22 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-86c335ef.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-ec7aa2c0.js">
+		<link rel="modulepreload" href="/_app/start-8ea2302c.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-0cbb6e11.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-7a0057a6.js">
-		<link rel="modulepreload" href="/_app/chunks/navigation.config-ca8c1f63.js">
-		<link rel="modulepreload" href="/_app/chunks/snippet-e4557597.js">
-		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
-		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-1b578520.js">
-		<link rel="modulepreload" href="/_app/pages/repl/[...identifier].svelte-1e7ea9fe.js">
-		<link rel="modulepreload" href="/_app/chunks/[...identifier]-4d272670.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-dd4b77e4.js">
+		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-78250569.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-16cf381e.js">
+		<link rel="modulepreload" href="/_app/pages/repl/[...document]/[identifier].svelte-984e2b76.js">
+		<link rel="modulepreload" href="/_app/chunks/[identifier]-281d1e8b.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-c5da8073.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-eaa62602.css">
 		<link rel="stylesheet" href="/_app/assets/pages/repl/__layout.svelte-6876fa8d.css">
 
 		<script type="module">
-			import { start } from "/_app/start-86c335ef.js";
+			import { start } from "/_app/start-8ea2302c.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
@@ -43,15 +42,15 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-7a0057a6.js"),
-						import("/_app/pages/repl/__layout.svelte-1b578520.js"),
-						import("/_app/pages/repl/[...identifier].svelte-1e7ea9fe.js")
+						import("/_app/pages/__layout.svelte-dd4b77e4.js"),
+						import("/_app/pages/repl/__layout.svelte-78250569.js"),
+						import("/_app/pages/repl/[...document]/[identifier].svelte-984e2b76.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
 						path: "\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-preview",
 						query: new URLSearchParams(""),
-						params: {identifier:"docs\u002Ftypography\u002Fcode\u002Fcode-preview"}
+						params: {document:"docs\u002Ftypography\u002Fcode",identifier:"code-preview"}
 					}
 				}
 			});
@@ -72,6 +71,10 @@
 
 
 
+
+<a href="/api/v3/search.json" hidden></a>
+
+
     <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
     <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
         failed to load <strong>REPL</strong>.
@@ -79,9 +82,7 @@
 
 
 
-			<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002Fv0.4.8\",\"sub_title\":\"v0.4.8\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"discord\":\"https:\u002F\u002Fdiscord.com\u002Finvite\u002FJvUbmJvUBG\",\"version\":\"0.4.8\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
-
-	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/snippets/docs/typography/code/code-preview.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"identifier\":\"code-preview\",\"script\":\"\u003Cscript\u003E\\n    import {Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CCode\u003E\\n    import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002FCode\u003E\",\"syntax\":\"svelte\",\"title\":\"Code Preview\"}}"}</script>
+			<script type="application/json" data-type="svelte-data" data-url="/api/v3/content/docs/typography/code.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1626291196000,\"custom_properties\":{},\"events\":{},\"identifier\":\"typography\u002Fcode\",\"modified_at\":1632199912000,\"properties\":{\"Code\":[{\"name\":\"is\",\"description\":\"\u003Cp\u003EChanges the HTML tag used for rendering the text, and the text formatting.\u003C\u002Fp\u003E\\n\",\"default\":\"code\",\"types\":[\"code\",\"pre\"]},{\"name\":\"palette\",\"description\":\"\u003Cp\u003EAlters the displayed color scheme.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"inverse\",\"inherit\",\"accent\",\"dark\",\"light\",\"alert\",\"affirmative\",\"negative\"]}]},\"sections\":[{\"identifier\":\"code\",\"level\":1,\"text\":\"Code\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"palette\",\"level\":2,\"text\":\"Palette\"},{\"identifier\":\"code-block\",\"level\":2,\"text\":\"Code Block\"}],\"slots\":{\"Code\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}]},\"snippets\":[{\"identifier\":\"code-preview\",\"script\":\"\u003Cscript\u003E\\n    import {Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CCode\u003E\\n    import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002FCode\u003E\",\"syntax\":\"svelte\",\"title\":\"Code Preview\"},{\"identifier\":\"code-imports\",\"script\":\"\u003Cscript\u003E\\n    import {Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\",\"syntax\":\"html\",\"title\":\"Code Imports\"},{\"identifier\":\"code-palette\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Code,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    class=\\\"code-palette\\\"\\n    alignment_x=\\\"left\\\"\\n    spacing=\\\"medium\\\"\\n\u003E\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDEFAULT\u003C\u002FText\u003E\\n        \u003CCode\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EACCENT\u003C\u002FText\u003E\\n        \u003CCode palette=\\\"accent\\\"\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EDARK\u003C\u002FText\u003E\\n        \u003CCode palette=\\\"dark\\\"\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003ELIGHT\u003C\u002FText\u003E\\n        \u003CCode palette=\\\"light\\\"\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EALERT\u003C\u002FText\u003E\\n        \u003CCode palette=\\\"alert\\\"\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003EAFFIRMATIVE\u003C\u002FText\u003E\\n        \u003CCode palette=\\\"affirmative\\\"\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\\n    \u003Cdiv\u003E\\n        \u003CText is=\\\"strong\\\"\u003ENEGATIVE\u003C\u002FText\u003E\\n        \u003CCode palette=\\\"negative\\\"\u003E\\n            import * as Kahi from \\\"@kahi-ui\u002Fframework\\\";\\n        \u003C\u002FCode\u003E\\n    \u003C\u002Fdiv\u003E\\n\u003C\u002FStack\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.code-palette code) {\\n        display: block;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Code Palette\"},{\"identifier\":\"code-block\",\"script\":\"\u003Cscript\u003E\\n    import {Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CCode is=\\\"pre\\\"\u003E\\nimport math from \\\"a-math-library\\\";\\nconst result = math.add(1, 1);\\nconsole.log(\\\"Our value is:\\\", result);\\n\u003C\u002FCode\u003E\",\"syntax\":\"svelte\",\"title\":\"Code Block\"}],\"title\":\"Code\"},\"render\":\"\u003Ch1 id=\\\"code\\\"\u003ECode\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003ECode\u003C\u002Fcode\u003E is used to render inline monospaced text, typically for showing programming code \u002F application configuration to an end-user.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-preview?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003ECode\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"palette\\\"\u003EPalette\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the color palette of the Component via \u003Ccode\u003Edata-palette\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-palette?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-palette?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"code-block\\\"\u003ECode Block\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can display blocks of code via a \u003Ccode\u003E&lt;pre&gt;\u003C\u002Fcode\u003E HTML tag by passing \u003Ccode\u003Eis=&quot;pre&quot;\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C!-- prettier-ignore --\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-block?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Ftypography\u002Fcode\u002Fcode-block?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
 		
     </body>
 </html>

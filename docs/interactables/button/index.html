@@ -10,28 +10,38 @@
         <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
         <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
 
-        <title>Button — Kahi UI</title>
+        <meta property="og:description" content="Straight-forward Svelte UI for the Web">
+<meta property="og:image" content="https://kahi-ui.nbn.dev/assets/images/logo-social.png">
+<meta property="og:site_name" content="Kahi UI">
+<meta property="og:title" content="Button — Kahi UI">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<title>Button — Kahi UI</title>
 
 		
 
-		<link rel="modulepreload" href="/_app/start-86c335ef.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-ec7aa2c0.js">
+		<link rel="modulepreload" href="/_app/start-8ea2302c.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-0cbb6e11.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-7a0057a6.js">
-		<link rel="modulepreload" href="/_app/chunks/navigation.config-ca8c1f63.js">
-		<link rel="modulepreload" href="/_app/chunks/snippet-e4557597.js">
-		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
-		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-c8c5a352.js">
-		<link rel="modulepreload" href="/_app/chunks/SiteFooter-5e0c0270.js">
-		<link rel="modulepreload" href="/_app/pages/docs/[...document].svelte-3c0c6fd3.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-dd4b77e4.js">
+		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-34e9c25d.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-c5da8073.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-16cf381e.js">
+		<link rel="modulepreload" href="/_app/chunks/AppFooter-21a872d6.js">
+		<link rel="modulepreload" href="/_app/chunks/Code-a8805ca3.js">
+		<link rel="modulepreload" href="/_app/chunks/AppAnchor-54d68434.js">
+		<link rel="modulepreload" href="/_app/pages/docs/[...identifier].svelte-bbe9e774.js">
+		<link rel="modulepreload" href="/_app/chunks/ExternalLink-dc1836a5.js">
+		<link rel="modulepreload" href="/_app/chunks/PageMetadata-a07bc48f.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
-		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.svelte-5175176f.css">
-		<link rel="stylesheet" href="/_app/assets/SiteFooter-4396fccc.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-eaa62602.css">
+		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.svelte-dd5ab05b.css">
+		<link rel="stylesheet" href="/_app/assets/AppFooter-d5580eba.css">
 
 		<script type="module">
-			import { start } from "/_app/start-86c335ef.js";
+			import { start } from "/_app/start-8ea2302c.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
@@ -44,15 +54,15 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-7a0057a6.js"),
-						import("/_app/pages/docs/__layout.svelte-c8c5a352.js"),
-						import("/_app/pages/docs/[...document].svelte-3c0c6fd3.js")
+						import("/_app/pages/__layout.svelte-dd4b77e4.js"),
+						import("/_app/pages/docs/__layout.svelte-34e9c25d.js"),
+						import("/_app/pages/docs/[...identifier].svelte-bbe9e774.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
 						path: "\u002Fdocs\u002Finteractables\u002Fbutton",
 						query: new URLSearchParams(""),
-						params: {document:"interactables\u002Fbutton"}
+						params: {identifier:"interactables\u002Fbutton"}
 					}
 				}
 			});
@@ -72,657 +82,493 @@
         
 
 
-<div class="aside-layout">
 
 
+<a href="/api/v3/search.json" hidden></a>
 
-<nav class="omni app-navigation" data-palette="dark" data-variation="sticky"><header><a href="/">Kahi UI</a>
-
-        <hr data-orientation="vertical">
-
-            
-                <a href="https://github.com/novacbn/kahi-ui/releases/v0.4.8" rel="noopener noreferrer" target="_blank"><small data-palette="light">v0.4.8</small></a></header>
-
-    <footer>
-
-        <section><input role="presentation" id="app-navigation" type="checkbox">
-
-<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="button context-button " data-hidden="widescreen" role="button" for="app-navigation" data-palette="light" data-size="huge" data-variation="clear">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-more-vertical feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
-
-                <div data-hidden="widescreen" class="card "><section data-margin="medium"><nav class="menu "><ul><li><a href="/docs/framework/getting-started">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-
-                    Documentation</a>
-            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-
-                    Source</a>
-            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-
-                    Releases</a>
-            </li><li><a href="/chat">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-
-                    Chat</a>
-            </li></ul></nav></section></div></div>
-
-            <nav class="menu " data-hidden="mobile tablet desktop" data-orientation="horizontal" data-sizing="small"><ul><li><a href="/docs/framework/getting-started">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-book feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-
-                    Documentation</a>
-            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-code feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-
-                    Source</a>
-            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-package feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-
-                    Releases</a>
-            </li><li><a href="/chat">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-message-circle feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-
-                    Chat</a>
-            </li></ul></nav></section></footer></nav>
-
-
-
-    <input role="presentation" id="aside-navigation" type="checkbox">
+<div class="aside-layout"><input role="presentation" id="aside-navigation" type="checkbox">
 
     <label class="context-backdrop " for="aside-navigation"></label>
 
-<div data-hidden="mobile tablet" class="offscreen "><nav class="aside aside-navigation">
-    <section data-margin-bottom="none" data-padding-y="large"><nav class="menu " data-sizing="small"><ul>
+<div data-hidden="mobile tablet" class="offscreen "><nav class="aside aside-navigation" data-variation="sticky">
+    <section data-margin-bottom="none"><nav class="menu " data-sizing="small"><ul><li><span role="separator">Resources
 
-                <li><span role="separator">Resources
+                    
+                </span>
 
-                        
-                    </span>
+    <ul><li><a href="/docs/resources/official">Official
 
-    <ul>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/resources/community">Community
 
-                                <li><a href="/docs/resources/official" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Framework
 
-                                                Official
+                    
+                </span>
 
-                                                </a>
-                                        </li><li><a href="/docs/resources/community" sveltekit:prefetch>
+    <ul><li><a href="/docs/framework/getting-started">Getting Started
 
-                                                Community
+                                        
+                                    </a>
+                                </li><li><a href="/docs/framework/faq">F.A.Q.
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/framework/browser-support">Browser Support
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/framework/responsitivity">Responsitivity
 
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/framework/elements">Elements
 
-                <li><span role="separator">Framework
+                                        
+                                    </a>
+                                </li><li><a href="/docs/framework/events">Events
 
-                        
-                    </span>
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Typography
 
-    <ul>
+                    
+                </span>
 
-                                <li><a href="/docs/framework/getting-started" sveltekit:prefetch>
+    <ul><li><a href="/docs/typography/blockquote">Blockquote
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/typography/code">Code
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/typography/heading">Heading
 
-                                                Getting Started
+                                        
+                                    </a>
+                                </li><li><a href="/docs/typography/text">Text
 
-                                                </a>
-                                        </li><li><a href="/docs/framework/faq" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Embedded
 
-                                                F.A.Q.
+                    
+                </span>
+
+    <ul><li><a href="/docs/embedded/figure">Figure
 
-                                                </a>
-                                        </li><li><a href="/docs/framework/browser-support" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Display
+
+                    
+                </span>
+
+    <ul><li><a href="/docs/display/badge">Badge
 
-                                                Browser Support
+                                        
+                                    </a>
+                                </li><li><a href="/docs/display/list">List
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/display/table">Table
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
+                                            </span>
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Disclosure
+
+                    
+                </span>
+
+    <ul><li><a href="/docs/disclosure/accordion">Accordion
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
+                                    </a>
+                                </li><li><a href="/docs/disclosure/carousel">Carousel
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
+                                    </a>
+                                </li><li><a href="/docs/disclosure/tab">Tab
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
+                                            </span>
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Feedback
+
+                    
+                </span>
+
+    <ul><li><a href="/docs/feedback/dot">Dot
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/feedback/ellipsis">Ellipsis
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/feedback/progress">Progress
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/feedback/spinner">Spinner
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/feedback/wave">Wave
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Interactables
+
+                    
+                </span>
+
+    <ul><li><a aria-current="page" href="/docs/interactables/button">Button
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/interactables/check">Check
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/interactables/filedropinput">FileDropInput
 
-                                                </a>
-                                        </li><li><a href="/docs/framework/responsitivity" sveltekit:prefetch>
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
+                                    </a>
+                                </li><li><a href="/docs/interactables/form">Form
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/interactables/radio">Radio
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/interactables/switch">Switch
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/interactables/textinput">TextInput
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Layouts
+
+                    
+                </span>
 
-                                                Responsitivity
+    <ul><li><a href="/docs/layouts/center">Center
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/container">Container
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/divider">Divider
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/grid">Grid
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/group">Group
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/mosaic">Mosaic
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/position">Position
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/scrollable">Scrollable
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/spacer">Spacer
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/layouts/stack">Stack
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Surfaces
 
-                                                </a>
-                                        </li><li><a href="/docs/framework/elements" sveltekit:prefetch>
+                    
+                </span>
 
-                                                Elements
+    <ul><li><a href="/docs/surfaces/box">Box
 
-                                                </a>
-                                        </li><li><a href="/docs/framework/events" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/surfaces/card">Card
 
-                                                Events
+                                        
+                                    </a>
+                                </li><li><a href="/docs/surfaces/hero">Hero
 
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/surfaces/tile">Tile
 
-                <li><span role="separator">Typography
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Navigation
 
-                        
-                    </span>
+                    
+                </span>
 
-    <ul>
+    <ul><li><a href="/docs/navigation/anchor">Anchor
 
-                                <li><a href="/docs/typography/blockquote" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/navigation/aside">Aside
 
-                                                Blockquote
+                                        
+                                    </a>
+                                </li><li><a href="/docs/navigation/breadcrumb">Breadcrumb
 
-                                                </a>
-                                        </li><li><a href="/docs/typography/code" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/navigation/menu">Menu
 
-                                                Code
+                                        
+                                    </a>
+                                </li><li><a href="/docs/navigation/omni">Omni
 
-                                                </a>
-                                        </li><li><a href="/docs/typography/heading" sveltekit:prefetch>
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Overlays
 
-                                                Heading
+                    
+                </span>
 
-                                                </a>
-                                        </li><li><a href="/docs/typography/text" sveltekit:prefetch>
+    <ul><li><a href="/docs/overlays/clickable">Clickable
 
-                                                Text
+                                        
+                                    </a>
+                                </li><li><a href="/docs/overlays/popover">Popover
 
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/overlays/offscreen">Offscreen
 
-                <li><span role="separator">Embedded
+                                        
+                                    </a>
+                                </li><li><a href="/docs/overlays/overlay">Overlay
 
-                        
-                    </span>
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Utilities
 
-    <ul>
+                    
+                </span>
 
-                                <li><a href="/docs/embedded/figure" sveltekit:prefetch>
+    <ul><li><a href="/docs/utilities/browserrender">BrowserRender
 
-                                                Figure
+                                        
+                                    </a>
+                                </li><li><a href="/docs/utilities/contextbackdrop">ContextBackdrop
 
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/utilities/contextbutton">ContextButton
 
-                <li><span role="separator">Display
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/display/badge" sveltekit:prefetch>
-
-                                                Badge
-
-                                                </a>
-                                        </li><li><a href="/docs/display/list" sveltekit:prefetch>
-
-                                                List
-
-                                                </a>
-                                        </li><li><a href="/docs/display/table" sveltekit:prefetch>
-
-                                                Table
-
-                                                <span class="spacer "></span>
-
-                                                    <span class="badge " data-palette="accent">UPDATED
-                                                    </span></a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Disclosure
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/disclosure/accordion" sveltekit:prefetch>
-
-                                                Accordion
-
-                                                <span class="spacer "></span>
-
-                                                    <span class="badge " data-palette="accent">NEW
-                                                    </span></a>
-                                        </li><li><a href="/docs/disclosure/carousel" sveltekit:prefetch>
-
-                                                Carousel
-
-                                                <span class="spacer "></span>
-
-                                                    <span class="badge " data-palette="accent">NEW
-                                                    </span></a>
-                                        </li><li><a href="/docs/disclosure/tab" sveltekit:prefetch>
-
-                                                Tab
-
-                                                <span class="spacer "></span>
-
-                                                    <span class="badge " data-palette="accent">UPDATED
-                                                    </span></a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Feedback
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/feedback/dot" sveltekit:prefetch>
-
-                                                Dot
-
-                                                </a>
-                                        </li><li><a href="/docs/feedback/ellipsis" sveltekit:prefetch>
-
-                                                Ellipsis
-
-                                                </a>
-                                        </li><li><a href="/docs/feedback/progress" sveltekit:prefetch>
-
-                                                Progress
-
-                                                </a>
-                                        </li><li><a href="/docs/feedback/spinner" sveltekit:prefetch>
-
-                                                Spinner
-
-                                                </a>
-                                        </li><li><a href="/docs/feedback/wave" sveltekit:prefetch>
-
-                                                Wave
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Interactables
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a aria-current="page" href="/docs/interactables/button" sveltekit:prefetch>
-
-                                                Button
-
-                                                </a>
-                                        </li><li><a href="/docs/interactables/check" sveltekit:prefetch>
-
-                                                Check
-
-                                                </a>
-                                        </li><li><a href="/docs/interactables/filedropinput" sveltekit:prefetch>
-
-                                                FileDropInput
-
-                                                <span class="spacer "></span>
-
-                                                    <span class="badge " data-palette="accent">NEW
-                                                    </span></a>
-                                        </li><li><a href="/docs/interactables/form" sveltekit:prefetch>
-
-                                                Form
-
-                                                </a>
-                                        </li><li><a href="/docs/interactables/radio" sveltekit:prefetch>
-
-                                                Radio
-
-                                                </a>
-                                        </li><li><a href="/docs/interactables/switch" sveltekit:prefetch>
-
-                                                Switch
-
-                                                </a>
-                                        </li><li><a href="/docs/interactables/textinput" sveltekit:prefetch>
-
-                                                TextInput
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Layouts
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/layouts/center" sveltekit:prefetch>
-
-                                                Center
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/container" sveltekit:prefetch>
-
-                                                Container
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/divider" sveltekit:prefetch>
-
-                                                Divider
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/grid" sveltekit:prefetch>
-
-                                                Grid
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/group" sveltekit:prefetch>
-
-                                                Group
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/mosaic" sveltekit:prefetch>
-
-                                                Mosaic
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/position" sveltekit:prefetch>
-
-                                                Position
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/scrollable" sveltekit:prefetch>
-
-                                                Scrollable
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/spacer" sveltekit:prefetch>
-
-                                                Spacer
-
-                                                </a>
-                                        </li><li><a href="/docs/layouts/stack" sveltekit:prefetch>
-
-                                                Stack
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Surfaces
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/surfaces/box" sveltekit:prefetch>
-
-                                                Box
-
-                                                </a>
-                                        </li><li><a href="/docs/surfaces/card" sveltekit:prefetch>
-
-                                                Card
-
-                                                </a>
-                                        </li><li><a href="/docs/surfaces/hero" sveltekit:prefetch>
-
-                                                Hero
-
-                                                </a>
-                                        </li><li><a href="/docs/surfaces/tile" sveltekit:prefetch>
-
-                                                Tile
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Navigation
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/navigation/anchor" sveltekit:prefetch>
-
-                                                Anchor
-
-                                                </a>
-                                        </li><li><a href="/docs/navigation/aside" sveltekit:prefetch>
-
-                                                Aside
-
-                                                </a>
-                                        </li><li><a href="/docs/navigation/breadcrumb" sveltekit:prefetch>
-
-                                                Breadcrumb
-
-                                                </a>
-                                        </li><li><a href="/docs/navigation/menu" sveltekit:prefetch>
-
-                                                Menu
-
-                                                </a>
-                                        </li><li><a href="/docs/navigation/omni" sveltekit:prefetch>
-
-                                                Omni
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Overlays
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/overlays/clickable" sveltekit:prefetch>
-
-                                                Clickable
-
-                                                </a>
-                                        </li><li><a href="/docs/overlays/popover" sveltekit:prefetch>
-
-                                                Popover
-
-                                                </a>
-                                        </li><li><a href="/docs/overlays/offscreen" sveltekit:prefetch>
-
-                                                Offscreen
-
-                                                </a>
-                                        </li><li><a href="/docs/overlays/overlay" sveltekit:prefetch>
-
-                                                Overlay
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Utilities
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/utilities/browserrender" sveltekit:prefetch>
-
-                                                BrowserRender
-
-                                                </a>
-                                        </li><li><a href="/docs/utilities/contextbackdrop" sveltekit:prefetch>
-
-                                                ContextBackdrop
-
-                                                </a>
-                                        </li><li><a href="/docs/utilities/contextbutton" sveltekit:prefetch>
-
-                                                ContextButton
-
-                                                </a>
-                                        </li><li><a href="/docs/utilities/intersectionrender" sveltekit:prefetch>
-
-                                                IntersectionRender
-
-                                                </a>
-                                        </li><li><a href="/docs/utilities/portal" sveltekit:prefetch>
-
-                                                Portal
-
-                                                </a>
-                                        </li><li><a href="/docs/utilities/serverrender" sveltekit:prefetch>
-
-                                                ServerRender
-
-                                                </a>
-                                        </li><li><a href="/docs/utilities/transition" sveltekit:prefetch>
-
-                                                Transition
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Modifiers
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/modifiers/html5" sveltekit:prefetch>
-
-                                                HTML5
-
-                                                </a>
-                                        </li><li><a href="/docs/modifiers/hidden" sveltekit:prefetch>
-
-                                                Hidden
-
-                                                </a>
-                                        </li><li><a href="/docs/modifiers/sizings" sveltekit:prefetch>
-
-                                                Sizings
-
-                                                </a>
-                                        </li><li><a href="/docs/modifiers/spacings" sveltekit:prefetch>
-
-                                                Spacings
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Actions
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/actions/click_outside" sveltekit:prefetch>
-
-                                                click_outside
-
-                                                </a>
-                                        </li><li><a href="/docs/actions/keybind" sveltekit:prefetch>
-
-                                                keybind
-
-                                                </a>
-                                        </li><li><a href="/docs/actions/intersection_observer" sveltekit:prefetch>
-
-                                                intersection_observer
-
-                                                </a>
-                                        </li><li><a href="/docs/actions/mutation_observer" sveltekit:prefetch>
-
-                                                mutation_observer
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li>
-
-                <li><span role="separator">Stores
-
-                        
-                    </span>
-
-    <ul>
-
-                                <li><a href="/docs/stores/darkmode" sveltekit:prefetch>
-
-                                                darkmode
-
-                                                </a>
-                                        </li><li><a href="/docs/stores/htmlpalette" sveltekit:prefetch>
-
-                                                htmlpalette
-
-                                                </a>
-                                        </li><li><a href="/docs/stores/mediaquery" sveltekit:prefetch>
-
-                                                mediaquery
-
-                                                </a>
-                                        </li><li><a href="/docs/stores/prefersscheme" sveltekit:prefetch>
-
-                                                prefersscheme
-
-                                                </a>
-                                        </li><li><a href="/docs/stores/scrolllock" sveltekit:prefetch>
-
-                                                scrolllock
-
-                                                </a>
-                                        </li><li><a href="/docs/stores/viewport" sveltekit:prefetch>
-
-                                                viewport
-
-                                                </a>
-                                        </li>
-                            </ul>
-                        </li></ul></nav></section>
-
-    <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-size="huge">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-menu feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></label>
-
-    <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-palette="dark" data-size="huge" data-variation="clear">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-x feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></label>
-
-            
-            </nav></div>
+                                        
+                                    </a>
+                                </li><li><a href="/docs/utilities/intersectionrender">IntersectionRender
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/utilities/portal">Portal
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/utilities/serverrender">ServerRender
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/utilities/transition">Transition
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Modifiers
+
+                    
+                </span>
+
+    <ul><li><a href="/docs/modifiers/html5">HTML5
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/modifiers/hidden">Hidden
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/modifiers/sizings">Sizings
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/modifiers/spacings">Spacings
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Actions
+
+                    
+                </span>
+
+    <ul><li><a href="/docs/actions/click_outside">click_outside
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/actions/keybind">keybind
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/actions/intersection_observer">intersection_observer
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/actions/mutation_observer">mutation_observer
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li><li><span role="separator">Stores
+
+                    
+                </span>
+
+    <ul><li><a href="/docs/stores/darkmode">darkmode
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/stores/htmlpalette">htmlpalette
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/stores/mediaquery">mediaquery
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/stores/prefersscheme">prefersscheme
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/stores/scrolllock">scrolllock
+
+                                        
+                                    </a>
+                                </li><li><a href="/docs/stores/viewport">viewport
+
+                                        
+                                    </a>
+                                </li>
+                        </ul>
+                    </li></ul></nav></section>
+
+            <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-size="huge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg></label>
+    
+            <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-palette="dark" data-size="huge" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></label>
+    </nav></div>
     
 
-    <main class="aside-container"><div class="container docs-container" data-padding-bottom="large" data-viewport="desktop">
+
+
+<nav class="omni app-navigation" data-palette="dark"><header><a href="/" sveltekit:prefetch>Kahi UI</a>
+        <hr data-orientation="vertical">
+
+        <a href="https://github.com/novacbn/kahi-ui/releases/v0.4.9" target="_blank" rel="noopener noreferrer"><small>v0.4.9</small></a></header>
+
+    <footer><section class="app-navigation-search" data-hidden data-padding-x="large" data-max-width="prose"><input type="search" data-align="center" data-size="small" data-variation="block" placeholder="[CTRL+/] Search" value=""></section>
+
+        <section><input role="presentation" id="app-navigation" type="checkbox">
+
+<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="button context-button " data-hidden="widescreen" role="button" for="app-navigation" data-palette="light" data-size="huge" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
+
+                <div data-hidden="widescreen" data-padding="medium" class="box " data-shape="rounded"><nav class="menu " data-hidden="widescreen"><ul><li><a href="/docs/framework/getting-started" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
+                                    Documentation
+                                </a>
+                            </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                    Source
+                                </a>
+                            </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                                    Releases
+                                </a>
+                            </li><li><a href="/chat" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+                                    Chat
+                                </a>
+                            </li>
+
+                        </ul></nav></div></div>
+
+            <nav class="menu " data-hidden="mobile tablet desktop" data-orientation="horizontal" data-sizing="small"><ul><li><a href="/docs/framework/getting-started" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
+                            Documentation
+                        </a>
+                    </li><li><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            Source
+                        </a>
+                    </li><li><a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            Releases
+                        </a>
+                    </li><li><a href="/chat" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path></svg>
+                            Chat
+                        </a>
+                    </li>
+
+                </ul></nav></section></footer></nav>
+
+
+
+    <main class="aside-container"><article class="container content-article" data-viewport="desktop" data-padding-bottom="large">
 
 <!-- HTML_TAG_START --><h1 id="button">Button</h1>
 <p><code>Button</code> is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.</p>
@@ -773,11 +619,11 @@
 
 <h2 id="api-reference">API Reference</h2>
 
-    <div class="tab "><input role="presentation" type="radio" id="tab-api-reference-properties" name="tab-api-reference" checked value="tab-api-reference-properties">
+    <div class="tab content-api"><input role="presentation" type="radio" id="content-api-properties" name="content-api" checked value="content-api-properties">
 
-<label data-palette="accent" for="tab-api-reference-properties">Properties</label>
+<label data-palette="accent" for="content-api-properties">Properties</label>
 
-                <section><h3 id="properties-button"><code>Button
+                <section><h3 id="api-reference-properties-button"><code>Button
         </code>
     </h3>
 
@@ -978,11 +824,11 @@
         </table>
     </div></section>
 
-        <input role="presentation" type="radio" id="tab-api-reference-events" name="tab-api-reference"  value="tab-api-reference-events">
+        <input role="presentation" type="radio" id="content-api-events" name="content-api"  value="content-api-events">
 
-<label data-palette="accent" for="tab-api-reference-events">Events</label>
+<label data-palette="accent" for="content-api-events">Events</label>
 
-                <section><h3 id="events-button"><code>Button
+                <section><h3 id="api-reference-events-button"><code>Button
         </code>
     </h3>
 
@@ -1009,11 +855,11 @@
         </table>
     </div></section>
 
-        <input role="presentation" type="radio" id="tab-api-reference-slots" name="tab-api-reference"  value="tab-api-reference-slots">
+        <input role="presentation" type="radio" id="content-api-slots" name="content-api"  value="content-api-slots">
 
-<label data-palette="accent" for="tab-api-reference-slots">Slots</label>
+<label data-palette="accent" for="content-api-slots">Slots</label>
 
-                <section><h3 id="slots-button"><code>Button
+                <section><h3 id="api-reference-slots-button"><code>Button
         </code>
     </h3>
 
@@ -1040,11 +886,11 @@
         </table>
     </div></section>
 
-        <input role="presentation" type="radio" id="tab-api-reference-custom-properties" name="tab-api-reference"  value="tab-api-reference-custom-properties">
+        <input role="presentation" type="radio" id="content-api-custom-properties" name="content-api"  value="content-api-custom-properties">
 
-<label data-palette="accent" for="tab-api-reference-custom-properties">Custom Properties</label>
+<label data-palette="accent" for="content-api-custom-properties">Custom Properties</label>
 
-                <section><h3 id="custom-properties-button"><code>Button
+                <section><h3 id="api-reference-custom-properties-button"><code>Button
         </code>
     </h3>
 
@@ -1295,43 +1141,34 @@
 
 <hr data-margin-y="large">
 
-<div class="stack documentation-footer" data-width="100" data-alignment="center" data-orientation="widescreen:horizontal desktop:horizontal tablet:horizontal" data-spacing="medium"><figure data-size="medium" data-variation="icon">
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-clock feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></figure>
+<div class="stack content-metadata" data-width="100" data-alignment="center" data-orientation="widescreen:horizontal desktop:horizontal tablet:horizontal" data-spacing="medium"><figure data-size="medium" data-variation="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></figure>
 
     <div><h5 data-max-width="widescreen:content-max desktop:content-max tablet:content-max" data-align="center">Last Modified
         </h5>
 
-        <small>10/27/2021, 6:30:02 PM</small></div>
+        <small>10/20/2021, 8:05:19 PM</small></div>
 
     <div data-hidden="mobile" class="spacer "></div>
 
-        <div><a role="button" class="button " data-palette="accent" data-size="medium" data-variation="clear" href="https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/interactables/button.md" rel="noopener noreferrer" target="_blank">View page in repository
-                
+    <div><a class="button" href="https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/interactables/button.md" target="_blank" rel="noopener noreferrer" data-palette="accent" data-size="medium" data-variation="clear">View page in repository
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div></div>
+</article></main>
 
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-external-link feather-size-default " width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></a></div></div></div></main>
+    <footer class="box app-footer" data-padding-y="huge"><div class="stack " data-alignment-x="center"><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><h2>Kahi UI</h2></a>
 
-    <footer class="site-footer"><div data-padding-y="huge" class="box "><div class="stack " data-alignment-x="center"><a href="https://github.com/novacbn/kahi-ui" rel="noopener noreferrer" target="_blank"><h2>Kahi UI</h2></a>
-
-        <p data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/v0.4.8" rel="noopener noreferrer" target="_blank"><span data-margin-y="tiny" role="separator">v0.4.8</span></a>
+        <p data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/v0.4.9" target="_blank" rel="noopener noreferrer"><span data-margin-y="tiny" role="separator" data-palette="accent">v0.4.9</span></a>
 
             Made and developed by
             <br>
-
-            <a href="https://github.com/novacbn" rel="noopener noreferrer" target="_blank">NovacBN
-                
-
-<svg xmlns="http://www.w3.org/2000/svg" class="feather feather-github feather-size-0.9em " width="0.9em" height="0.9em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style=""><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></p></div></div>
+            <a href="https://github.com/novacbn" target="_blank" rel="noopener noreferrer" data-palette="accent">NovacBN</a></p></div>
 </footer>
 </div>
 
 
 
-			<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002Fv0.4.8\",\"sub_title\":\"v0.4.8\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"discord\":\"https:\u002F\u002Fdiscord.com\u002Finvite\u002FJvUbmJvUBG\",\"version\":\"0.4.8\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
+			<script type="application/json" data-type="svelte-data" data-url="/api/v3/navigation/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":[{\"text\":\"Resources\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fofficial\",\"text\":\"Official\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fcommunity\",\"text\":\"Community\"}]},{\"text\":\"Framework\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fgetting-started\",\"text\":\"Getting Started\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Ffaq\",\"text\":\"F.A.Q.\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fbrowser-support\",\"text\":\"Browser Support\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fresponsitivity\",\"text\":\"Responsitivity\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Felements\",\"text\":\"Elements\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fevents\",\"text\":\"Events\"}]},{\"text\":\"Typography\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fblockquote\",\"text\":\"Blockquote\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fcode\",\"text\":\"Code\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fheading\",\"text\":\"Heading\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Ftext\",\"text\":\"Text\"}]},{\"text\":\"Embedded\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fembedded\u002Ffigure\",\"text\":\"Figure\"}]},{\"text\":\"Display\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fbadge\",\"text\":\"Badge\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Flist\",\"text\":\"List\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftable\",\"text\":\"Table\"}]},{\"text\":\"Disclosure\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Faccordion\",\"text\":\"Accordion\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Fcarousel\",\"text\":\"Carousel\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Ftab\",\"text\":\"Tab\"}]},{\"text\":\"Feedback\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fdot\",\"text\":\"Dot\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fellipsis\",\"text\":\"Ellipsis\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fprogress\",\"text\":\"Progress\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fspinner\",\"text\":\"Spinner\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fwave\",\"text\":\"Wave\"}]},{\"text\":\"Interactables\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fbutton\",\"text\":\"Button\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fcheck\",\"text\":\"Check\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ffiledropinput\",\"text\":\"FileDropInput\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fform\",\"text\":\"Form\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fradio\",\"text\":\"Radio\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fswitch\",\"text\":\"Switch\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ftextinput\",\"text\":\"TextInput\"}]},{\"text\":\"Layouts\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcenter\",\"text\":\"Center\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcontainer\",\"text\":\"Container\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fdivider\",\"text\":\"Divider\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgrid\",\"text\":\"Grid\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgroup\",\"text\":\"Group\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fmosaic\",\"text\":\"Mosaic\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fposition\",\"text\":\"Position\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fscrollable\",\"text\":\"Scrollable\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fspacer\",\"text\":\"Spacer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fstack\",\"text\":\"Stack\"}]},{\"text\":\"Surfaces\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fbox\",\"text\":\"Box\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fcard\",\"text\":\"Card\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fhero\",\"text\":\"Hero\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Ftile\",\"text\":\"Tile\"}]},{\"text\":\"Navigation\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fanchor\",\"text\":\"Anchor\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Faside\",\"text\":\"Aside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\",\"text\":\"Breadcrumb\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fmenu\",\"text\":\"Menu\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fomni\",\"text\":\"Omni\"}]},{\"text\":\"Overlays\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fclickable\",\"text\":\"Clickable\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fpopover\",\"text\":\"Popover\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foffscreen\",\"text\":\"Offscreen\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foverlay\",\"text\":\"Overlay\"}]},{\"text\":\"Utilities\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fbrowserrender\",\"text\":\"BrowserRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\",\"text\":\"ContextBackdrop\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fcontextbutton\",\"text\":\"ContextButton\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fintersectionrender\",\"text\":\"IntersectionRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fportal\",\"text\":\"Portal\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fserverrender\",\"text\":\"ServerRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Ftransition\",\"text\":\"Transition\"}]},{\"text\":\"Modifiers\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fmodifiers\u002Fhtml5\",\"text\":\"HTML5\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fmodifiers\u002Fhidden\",\"text\":\"Hidden\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fmodifiers\u002Fsizings\",\"text\":\"Sizings\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fmodifiers\u002Fspacings\",\"text\":\"Spacings\"}]},{\"text\":\"Actions\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_outside\",\"text\":\"click_outside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fkeybind\",\"text\":\"keybind\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fintersection_observer\",\"text\":\"intersection_observer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fmutation_observer\",\"text\":\"mutation_observer\"}]},{\"text\":\"Stores\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fdarkmode\",\"text\":\"darkmode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\",\"text\":\"htmlpalette\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fmediaquery\",\"text\":\"mediaquery\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fprefersscheme\",\"text\":\"prefersscheme\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fscrolllock\",\"text\":\"scrolllock\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fviewport\",\"text\":\"viewport\"}]}]}"}</script>
 
-	<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/navigation/documentation.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"\u002Fdocs\u002Fresources\u002Fofficial\":\"Official\",\"\u002Fdocs\u002Fresources\u002Fcommunity\":\"Community\",\"\u002Fdocs\u002Fframework\u002Fgetting-started\":\"Getting Started\",\"\u002Fdocs\u002Fframework\u002Ffaq\":\"F.A.Q.\",\"\u002Fdocs\u002Fframework\u002Fbrowser-support\":\"Browser Support\",\"\u002Fdocs\u002Fframework\u002Fresponsitivity\":\"Responsitivity\",\"\u002Fdocs\u002Fframework\u002Felements\":\"Elements\",\"\u002Fdocs\u002Fframework\u002Fevents\":\"Events\",\"\u002Fdocs\u002Ftypography\u002Fblockquote\":\"Blockquote\",\"\u002Fdocs\u002Ftypography\u002Fcode\":\"Code\",\"\u002Fdocs\u002Ftypography\u002Fheading\":\"Heading\",\"\u002Fdocs\u002Ftypography\u002Ftext\":\"Text\",\"\u002Fdocs\u002Fembedded\u002Ffigure\":\"Figure\",\"\u002Fdocs\u002Fdisplay\u002Fbadge\":\"Badge\",\"\u002Fdocs\u002Fdisplay\u002Flist\":\"List\",\"\u002Fdocs\u002Fdisplay\u002Ftable\":\"Table\",\"\u002Fdocs\u002Fdisclosure\u002Faccordion\":\"Accordion\",\"\u002Fdocs\u002Fdisclosure\u002Fcarousel\":\"Carousel\",\"\u002Fdocs\u002Fdisclosure\u002Ftab\":\"Tab\",\"\u002Fdocs\u002Ffeedback\u002Fdot\":\"Dot\",\"\u002Fdocs\u002Ffeedback\u002Fellipsis\":\"Ellipsis\",\"\u002Fdocs\u002Ffeedback\u002Fprogress\":\"Progress\",\"\u002Fdocs\u002Ffeedback\u002Fspinner\":\"Spinner\",\"\u002Fdocs\u002Ffeedback\u002Fwave\":\"Wave\",\"\u002Fdocs\u002Finteractables\u002Fbutton\":\"Button\",\"\u002Fdocs\u002Finteractables\u002Fcheck\":\"Check\",\"\u002Fdocs\u002Finteractables\u002Ffiledropinput\":\"FileDropInput\",\"\u002Fdocs\u002Finteractables\u002Fform\":\"Form\",\"\u002Fdocs\u002Finteractables\u002Fradio\":\"Radio\",\"\u002Fdocs\u002Finteractables\u002Fswitch\":\"Switch\",\"\u002Fdocs\u002Finteractables\u002Ftextinput\":\"TextInput\",\"\u002Fdocs\u002Flayouts\u002Fcenter\":\"Center\",\"\u002Fdocs\u002Flayouts\u002Fcontainer\":\"Container\",\"\u002Fdocs\u002Flayouts\u002Fdivider\":\"Divider\",\"\u002Fdocs\u002Flayouts\u002Fgrid\":\"Grid\",\"\u002Fdocs\u002Flayouts\u002Fgroup\":\"Group\",\"\u002Fdocs\u002Flayouts\u002Fmosaic\":\"Mosaic\",\"\u002Fdocs\u002Flayouts\u002Fposition\":\"Position\",\"\u002Fdocs\u002Flayouts\u002Fscrollable\":\"Scrollable\",\"\u002Fdocs\u002Flayouts\u002Fspacer\":\"Spacer\",\"\u002Fdocs\u002Flayouts\u002Fstack\":\"Stack\",\"\u002Fdocs\u002Fsurfaces\u002Fbox\":\"Box\",\"\u002Fdocs\u002Fsurfaces\u002Fcard\":\"Card\",\"\u002Fdocs\u002Fsurfaces\u002Fhero\":\"Hero\",\"\u002Fdocs\u002Fsurfaces\u002Ftile\":\"Tile\",\"\u002Fdocs\u002Fnavigation\u002Fanchor\":\"Anchor\",\"\u002Fdocs\u002Fnavigation\u002Faside\":\"Aside\",\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\":\"Breadcrumb\",\"\u002Fdocs\u002Fnavigation\u002Fmenu\":\"Menu\",\"\u002Fdocs\u002Fnavigation\u002Fomni\":\"Omni\",\"\u002Fdocs\u002Foverlays\u002Fclickable\":\"Clickable\",\"\u002Fdocs\u002Foverlays\u002Fpopover\":\"Popover\",\"\u002Fdocs\u002Foverlays\u002Foffscreen\":\"Offscreen\",\"\u002Fdocs\u002Foverlays\u002Foverlay\":\"Overlay\",\"\u002Fdocs\u002Futilities\u002Fbrowserrender\":\"BrowserRender\",\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\":\"ContextBackdrop\",\"\u002Fdocs\u002Futilities\u002Fcontextbutton\":\"ContextButton\",\"\u002Fdocs\u002Futilities\u002Fintersectionrender\":\"IntersectionRender\",\"\u002Fdocs\u002Futilities\u002Fportal\":\"Portal\",\"\u002Fdocs\u002Futilities\u002Fserverrender\":\"ServerRender\",\"\u002Fdocs\u002Futilities\u002Ftransition\":\"Transition\",\"\u002Fdocs\u002Fmodifiers\u002Fhtml5\":\"HTML5\",\"\u002Fdocs\u002Fmodifiers\u002Fhidden\":\"Hidden\",\"\u002Fdocs\u002Fmodifiers\u002Fsizings\":\"Sizings\",\"\u002Fdocs\u002Fmodifiers\u002Fspacings\":\"Spacings\",\"\u002Fdocs\u002Factions\u002Fclick_outside\":\"click_outside\",\"\u002Fdocs\u002Factions\u002Fkeybind\":\"keybind\",\"\u002Fdocs\u002Factions\u002Fintersection_observer\":\"intersection_observer\",\"\u002Fdocs\u002Factions\u002Fmutation_observer\":\"mutation_observer\",\"\u002Fdocs\u002Fstores\u002Fdarkmode\":\"darkmode\",\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\":\"htmlpalette\",\"\u002Fdocs\u002Fstores\u002Fmediaquery\":\"mediaquery\",\"\u002Fdocs\u002Fstores\u002Fprefersscheme\":\"prefersscheme\",\"\u002Fdocs\u002Fstores\u002Fscrolllock\":\"scrolllock\",\"\u002Fdocs\u002Fstores\u002Fviewport\":\"viewport\"}}"}</script>
-
-	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/docs/interactables/button.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1635359402000,\"custom_properties\":{\"Button\":[{\"name\":\"--button-palette-background-light\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E (block).\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-palette-background-normal\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-palette-background-bold\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Eborder-color\u003C\u002Fcode\u003E (outline) \u002F \u003Ccode\u003Ecolor\u003C\u002Fcode\u003E (clear).\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-palette-foreground-normal\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ecolor\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-size-text-size\",\"description\":\"\u003Cp\u003EControls the default \u003Ccode\u003Efont-size\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\",\"\u003Cpercentage\u003E\"]},{\"name\":\"--button-size-text-line-height\",\"description\":\"\u003Cp\u003EControls the default \u003Ccode\u003Eline-height\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cnormal\u003E\",\"\u003Cnumber\u003E\",\"\u003Clength\u003E\",\"\u003Cpercentage\u003E\"]},{\"name\":\"--button-border-radius\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-radius\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\",\"\u003Cpercentage\u003E\"]},{\"name\":\"--button-border-width\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-width\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-font-weight\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Efont-weight\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cnormal\u003E\",\"\u003Cbold\u003E\",\"\u003Cbolder\u003E\",\"\u003Clighter\u003E\",\"\u003Cnumber\u003E\"]},{\"name\":\"--button-gap\",\"description\":\"\u003Cp\u003EControls the spacing gap between child elements, e.g. icons.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-padding-x\",\"description\":\"\u003Cp\u003EControls the X-Axis \u003Ccode\u003Epadding-left\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Epadding-right\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-padding-y\",\"description\":\"\u003Cp\u003EControls the Y-Axis \u003Ccode\u003Epadding-bottom\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Epadding-top\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-active-scale\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Etransform: scale\u003C\u002Fcode\u003E used when clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cnumber\u003E\"]},{\"name\":\"--button-disabled-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eopacity\u003C\u002Fcode\u003E used when disabled.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-clear-active-background-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-clear-focus-background-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-outline-focus-background-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-outline-focus-border-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-color\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]}]},\"events\":{\"Button\":[{\"name\":\"click\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003EButton\u003C\u002Fcode\u003E is clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"MouseEvent\"]}]},\"identifier\":\"interactables\u002Fbutton\",\"modified_at\":1635359402000,\"properties\":{\"Button\":[{\"name\":\"palette\",\"description\":\"\u003Cp\u003EAlters the displayed color scheme.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"inverse\",\"inherit\",\"accent\",\"dark\",\"light\",\"alert\",\"affirmative\",\"negative\"]},{\"name\":\"size\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E at a different sizes.\u003C\u002Fp\u003E\\n\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\"]},{\"name\":\"variation\",\"description\":\"\u003Cp\u003EChanges the how the \u003Ccode\u003EButton\u003C\u002Fcode\u003E is rendered.\u003C\u002Fp\u003E\\n\",\"types\":[\"clear\",\"outline\"]},{\"name\":\"active\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-pressed\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as if it where being clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"disabled\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E with \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Earia-disabled\u003C\u002Fcode\u003E attributes, and styles the \u003Ccode\u003EButton\u003C\u002Fcode\u003E partially transparent.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"type\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;input \u002F&gt;\u003C\u002Fcode\u003E as a specific form type.\u003C\u002Fp\u003E\\n\",\"types\":[\"button\",\"reset\",\"submit\"]},{\"name\":\"name\",\"description\":\"\u003Cp\u003ESets the form name of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E whenever \u003Ccode\u003EButton.type\u003C\u002Fcode\u003E is set.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"value\",\"description\":\"\u003Cp\u003ESets the form value of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E whenever \u003Ccode\u003EButton.type\u003C\u002Fcode\u003E is set.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"href\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;a role=&quot;button&quot;&gt;\u003C\u002Fcode\u003E and links to the specified \u003Ccode\u003Ehref\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"download\",\"description\":\"\u003Cp\u003EIf linking to a downloadable file, this property will be used as the suggested file name.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"rel\",\"description\":\"\u003Cp\u003ESets how the Anchor relates to the current page, see \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-rel\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EMDN\u003C\u002Fa\u003E for more information.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"target\",\"description\":\"\u003Cp\u003ESets the target of the Anchor being navigated, see \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-target\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EMDN\u003C\u002Fa\u003E for more information.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"for\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;label role=&quot;button&quot;&gt;\u003C\u002Fcode\u003E which targets the element ID set to the \u003Ccode\u003Efor\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}]},\"sections\":[{\"identifier\":\"button\",\"level\":1,\"text\":\"Button\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"palette\",\"level\":2,\"text\":\"Palette\"},{\"identifier\":\"size\",\"level\":2,\"text\":\"Size\"},{\"identifier\":\"clear\",\"level\":2,\"text\":\"Clear\"},{\"identifier\":\"outline\",\"level\":2,\"text\":\"Outline\"},{\"identifier\":\"types\",\"level\":2,\"text\":\"Types\"}],\"slots\":{\"Button\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}]},\"snippets\":[{\"identifier\":\"button-preview\",\"script\":\"\u003Cscript\u003E\\n    import {Button} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CButton palette=\\\"accent\\\"\u003EClick Me!\u003C\u002FButton\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Preview\"},{\"identifier\":\"button-imports\",\"script\":\"\u003Cscript\u003E\\n    import {Button} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\",\"syntax\":\"html\",\"title\":\"Button Imports\"},{\"identifier\":\"button-palette\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton\u003EThis is a DEFAULT Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"accent\\\"\u003E\\n        This is a ACCENT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"light\\\"\u003E\\n        This is a LIGHT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"dark\\\"\u003E\\n        This is a DARK Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"alert\\\"\u003E\\n        This is a ALERT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"affirmative\\\"\u003E\\n        This is a AFFIRMATIVE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"negative\\\"\u003E\\n        This is a NEGATIVE Button!\\n    \u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Palette\"},{\"identifier\":\"button-size\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton\u003EThis is a DEFAULT Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"tiny\\\"\u003EThis is a TINY Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"small\\\"\u003E\\n        This is a SMALL Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"medium\\\"\u003E\\n        This is a MEDIUM Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"large\\\"\u003E\\n        This is a LARGE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"huge\\\"\u003EThis is a HUGE Button!\u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Size\"},{\"identifier\":\"button-clear\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton variation=\\\"clear\\\"\u003E\\n        This is a DEFAULT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"accent\\\"\u003E\\n        This is a ACCENT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"light\\\"\u003E\\n        This is a LIGHT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"dark\\\"\u003E\\n        This is a DARK Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"alert\\\"\u003E\\n        This is a ALERT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"affirmative\\\"\u003E\\n        This is a AFFIRMATIVE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"negative\\\"\u003E\\n        This is a NEGATIVE Button!\\n    \u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Clear\"},{\"identifier\":\"button-outline\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton variation=\\\"outline\\\"\u003E\\n        This is a DEFAULT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"accent\\\"\u003E\\n        This is a ACCENT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"light\\\"\u003E\\n        This is a LIGHT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"dark\\\"\u003E\\n        This is a DARK Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"alert\\\"\u003E\\n        This is a ALERT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"affirmative\\\"\u003E\\n        This is a AFFIRMATIVE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"negative\\\"\u003E\\n        This is a NEGATIVE Button!\\n    \u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Outline\"},{\"identifier\":\"button-types\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Button,\\n        Check,\\n        Stack,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CCheck id=\\\"button-types-label\\\" \u002F\u003E\\n\\n\u003CStack\\n    alignment_y=\\\"top\\\"\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton\u003EThis is a DEFAULT Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton\\n        href=\\\"https:\u002F\u002Fgoogle.com\\\"\\n        target=\\\"_blank\\\"\\n        rel=\\\"noopener noreferrer\\\"\\n    \u003E\\n        This is an ANCHOR Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton for=\\\"button-types-label\\\"\u003E\\n        This is a LABEL Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton value=\\\"This is an INPUT Button!\\\" \u002F\u003E\\n\\n    \u003CButton\\n        type=\\\"submit\\\"\\n        value=\\\"This is a SUBMIT Button!\\\"\\n    \u002F\u003E\\n\\n    \u003CButton\\n        type=\\\"reset\\\"\\n        value=\\\"This is a RESET Button!\\\"\\n    \u002F\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Types\"}],\"title\":\"Button\"},\"render\":\"\u003Ch1 id=\\\"button\\\"\u003EButton\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-preview?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EButton\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"palette\\\"\u003EPalette\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the color palette of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E via the \u003Ccode\u003Epalette\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-palette?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-palette?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"size\\\"\u003ESize\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the size of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E via the \u003Ccode\u003Esize\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-size?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-size?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"clear\\\"\u003EClear\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E components have a special variation that renders as text with no background, that lightly fills in when clicked.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-clear?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-clear?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"outline\\\"\u003EOutline\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E components have a special variation that renders them as text with an outline, the fills in when clicked.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-outline?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-outline?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"types\\\"\u003ETypes\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change make the \u003Ccode\u003EButton\u003C\u002Fcode\u003E a \u003Ccode\u003E&lt;a&gt;\u003C\u002Fcode\u003E by passing the \u003Ccode\u003Ehref\u003C\u002Fcode\u003E property, or a \u003Ccode\u003E&lt;label&gt;\u003C\u002Fcode\u003E by passing the \u003Ccode\u003Efor\u003C\u002Fcode\u003E property. And also, change the input type between \u003Ccode\u003E&lt;input type=&quot;button&quot; \u002F&gt;\u003C\u002Fcode\u003E \u003Cstrong\u003E(DEFAULT)\u003C\u002Fstrong\u003E, \u003Ccode\u003E&lt;input type=&quot;reset&quot; \u002F&gt;\u003C\u002Fcode\u003E, \u003Ccode\u003E&lt;input type=&quot;submit&quot; \u002F&gt;\u003C\u002Fcode\u003E via the \u003Ccode\u003Etype\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Evalue\u003C\u002Fcode\u003E properties.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-types?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-types?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+	<script type="application/json" data-type="svelte-data" data-url="/api/v3/content/docs/interactables/button.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1626291196000,\"custom_properties\":{\"Button\":[{\"name\":\"--button-palette-background-light\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E (block).\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-palette-background-normal\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-palette-background-bold\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Eborder-color\u003C\u002Fcode\u003E (outline) \u002F \u003Ccode\u003Ecolor\u003C\u002Fcode\u003E (clear).\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-palette-foreground-normal\",\"description\":\"\u003Cp\u003EControls the default RGB color value used for \u003Ccode\u003Ecolor\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cr,g,b\u003E\"]},{\"name\":\"--button-size-text-size\",\"description\":\"\u003Cp\u003EControls the default \u003Ccode\u003Efont-size\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\",\"\u003Cpercentage\u003E\"]},{\"name\":\"--button-size-text-line-height\",\"description\":\"\u003Cp\u003EControls the default \u003Ccode\u003Eline-height\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cnormal\u003E\",\"\u003Cnumber\u003E\",\"\u003Clength\u003E\",\"\u003Cpercentage\u003E\"]},{\"name\":\"--button-border-radius\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-radius\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\",\"\u003Cpercentage\u003E\"]},{\"name\":\"--button-border-width\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-width\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-font-weight\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Efont-weight\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cnormal\u003E\",\"\u003Cbold\u003E\",\"\u003Cbolder\u003E\",\"\u003Clighter\u003E\",\"\u003Cnumber\u003E\"]},{\"name\":\"--button-gap\",\"description\":\"\u003Cp\u003EControls the spacing gap between child elements, e.g. icons.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-padding-x\",\"description\":\"\u003Cp\u003EControls the X-Axis \u003Ccode\u003Epadding-left\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Epadding-right\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-padding-y\",\"description\":\"\u003Cp\u003EControls the Y-Axis \u003Ccode\u003Epadding-bottom\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Epadding-top\u003C\u002Fcode\u003E used.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]},{\"name\":\"--button-active-scale\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Etransform: scale\u003C\u002Fcode\u003E used when clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Cnumber\u003E\"]},{\"name\":\"--button-disabled-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eopacity\u003C\u002Fcode\u003E used when disabled.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-clear-active-background-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-clear-focus-background-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-outline-focus-background-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Ebackground\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]},{\"name\":\"--button-outline-focus-border-opacity\",\"description\":\"\u003Cp\u003EControls the \u003Ccode\u003Eborder-color\u003C\u002Fcode\u003E opacity used when focused.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Calpha-value\u003E\"]}]},\"events\":{\"Button\":[{\"name\":\"click\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003EButton\u003C\u002Fcode\u003E is clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"MouseEvent\"]}]},\"identifier\":\"interactables\u002Fbutton\",\"modified_at\":1634760319000,\"properties\":{\"Button\":[{\"name\":\"palette\",\"description\":\"\u003Cp\u003EAlters the displayed color scheme.\u003C\u002Fp\u003E\\n\",\"types\":[\"auto\",\"inverse\",\"inherit\",\"accent\",\"dark\",\"light\",\"alert\",\"affirmative\",\"negative\"]},{\"name\":\"size\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E at a different sizes.\u003C\u002Fp\u003E\\n\",\"types\":[\"tiny\",\"small\",\"medium\",\"large\",\"huge\"]},{\"name\":\"variation\",\"description\":\"\u003Cp\u003EChanges the how the \u003Ccode\u003EButton\u003C\u002Fcode\u003E is rendered.\u003C\u002Fp\u003E\\n\",\"types\":[\"clear\",\"outline\"]},{\"name\":\"active\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E with \u003Ccode\u003Earia-pressed\u003C\u002Fcode\u003E attribute, and styles the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as if it where being clicked.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"disabled\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E with \u003Ccode\u003Edisabled\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Earia-disabled\u003C\u002Fcode\u003E attributes, and styles the \u003Ccode\u003EButton\u003C\u002Fcode\u003E partially transparent.\u003C\u002Fp\u003E\\n\",\"types\":[\"boolean\"]},{\"name\":\"type\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;input \u002F&gt;\u003C\u002Fcode\u003E as a specific form type.\u003C\u002Fp\u003E\\n\",\"types\":[\"button\",\"reset\",\"submit\"]},{\"name\":\"name\",\"description\":\"\u003Cp\u003ESets the form name of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E whenever \u003Ccode\u003EButton.type\u003C\u002Fcode\u003E is set.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"value\",\"description\":\"\u003Cp\u003ESets the form value of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E whenever \u003Ccode\u003EButton.type\u003C\u002Fcode\u003E is set.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"href\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;a role=&quot;button&quot;&gt;\u003C\u002Fcode\u003E and links to the specified \u003Ccode\u003Ehref\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"download\",\"description\":\"\u003Cp\u003EIf linking to a downloadable file, this property will be used as the suggested file name.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"rel\",\"description\":\"\u003Cp\u003ESets how the Anchor relates to the current page, see \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-rel\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EMDN\u003C\u002Fa\u003E for more information.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"target\",\"description\":\"\u003Cp\u003ESets the target of the Anchor being navigated, see \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Fa#attr-target\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EMDN\u003C\u002Fa\u003E for more information.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"for\",\"description\":\"\u003Cp\u003ERenders the \u003Ccode\u003EButton\u003C\u002Fcode\u003E as a \u003Ccode\u003E&lt;label role=&quot;button&quot;&gt;\u003C\u002Fcode\u003E which targets the element ID set to the \u003Ccode\u003Efor\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}]},\"sections\":[{\"identifier\":\"button\",\"level\":1,\"text\":\"Button\"},{\"identifier\":\"imports\",\"level\":2,\"text\":\"Imports\"},{\"identifier\":\"palette\",\"level\":2,\"text\":\"Palette\"},{\"identifier\":\"size\",\"level\":2,\"text\":\"Size\"},{\"identifier\":\"clear\",\"level\":2,\"text\":\"Clear\"},{\"identifier\":\"outline\",\"level\":2,\"text\":\"Outline\"},{\"identifier\":\"types\",\"level\":2,\"text\":\"Types\"}],\"slots\":{\"Button\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}]},\"snippets\":[{\"identifier\":\"button-preview\",\"script\":\"\u003Cscript\u003E\\n    import {Button} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CButton palette=\\\"accent\\\"\u003EClick Me!\u003C\u002FButton\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Preview\"},{\"identifier\":\"button-imports\",\"script\":\"\u003Cscript\u003E\\n    import {Button} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\",\"syntax\":\"html\",\"title\":\"Button Imports\"},{\"identifier\":\"button-palette\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton\u003EThis is a DEFAULT Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"accent\\\"\u003E\\n        This is a ACCENT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"light\\\"\u003E\\n        This is a LIGHT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"dark\\\"\u003E\\n        This is a DARK Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"alert\\\"\u003E\\n        This is a ALERT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"affirmative\\\"\u003E\\n        This is a AFFIRMATIVE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton palette=\\\"negative\\\"\u003E\\n        This is a NEGATIVE Button!\\n    \u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Palette\"},{\"identifier\":\"button-size\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton\u003EThis is a DEFAULT Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"tiny\\\"\u003EThis is a TINY Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"small\\\"\u003E\\n        This is a SMALL Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"medium\\\"\u003E\\n        This is a MEDIUM Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"large\\\"\u003E\\n        This is a LARGE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton size=\\\"huge\\\"\u003EThis is a HUGE Button!\u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Size\"},{\"identifier\":\"button-clear\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton variation=\\\"clear\\\"\u003E\\n        This is a DEFAULT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"accent\\\"\u003E\\n        This is a ACCENT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"light\\\"\u003E\\n        This is a LIGHT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"dark\\\"\u003E\\n        This is a DARK Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"alert\\\"\u003E\\n        This is a ALERT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"affirmative\\\"\u003E\\n        This is a AFFIRMATIVE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"clear\\\" palette=\\\"negative\\\"\u003E\\n        This is a NEGATIVE Button!\\n    \u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Clear\"},{\"identifier\":\"button-outline\",\"script\":\"\u003Cscript\u003E\\n    import {Button, Stack} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton variation=\\\"outline\\\"\u003E\\n        This is a DEFAULT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"accent\\\"\u003E\\n        This is a ACCENT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"light\\\"\u003E\\n        This is a LIGHT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"dark\\\"\u003E\\n        This is a DARK Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"alert\\\"\u003E\\n        This is a ALERT Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"affirmative\\\"\u003E\\n        This is a AFFIRMATIVE Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton variation=\\\"outline\\\" palette=\\\"negative\\\"\u003E\\n        This is a NEGATIVE Button!\\n    \u003C\u002FButton\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Outline\"},{\"identifier\":\"button-types\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Button,\\n        Check,\\n        Stack,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CCheck id=\\\"button-types-label\\\" \u002F\u003E\\n\\n\u003CStack\\n    alignment_y=\\\"top\\\"\\n    orientation=\\\"horizontal\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CButton\u003EThis is a DEFAULT Button!\u003C\u002FButton\u003E\\n\\n    \u003CButton\\n        href=\\\"https:\u002F\u002Fgoogle.com\\\"\\n        target=\\\"_blank\\\"\\n        rel=\\\"noopener noreferrer\\\"\\n    \u003E\\n        This is an ANCHOR Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton for=\\\"button-types-label\\\"\u003E\\n        This is a LABEL Button!\\n    \u003C\u002FButton\u003E\\n\\n    \u003CButton value=\\\"This is an INPUT Button!\\\" \u002F\u003E\\n\\n    \u003CButton\\n        type=\\\"submit\\\"\\n        value=\\\"This is a SUBMIT Button!\\\"\\n    \u002F\u003E\\n\\n    \u003CButton\\n        type=\\\"reset\\\"\\n        value=\\\"This is a RESET Button!\\\"\\n    \u002F\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Button Types\"}],\"title\":\"Button\"},\"render\":\"\u003Ch1 id=\\\"button\\\"\u003EButton\u003C\u002Fh1\u003E\\n\u003Cp\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-preview?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-preview?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"imports\\\"\u003EImports\u003C\u002Fh2\u003E\\n\u003Cpre class=\\\"language-html snippet-highlight\\\"\u003E\u003Ccode class=\\\"language-html\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EButton\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"palette\\\"\u003EPalette\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the color palette of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E via the \u003Ccode\u003Epalette\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-palette?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-palette?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"size\\\"\u003ESize\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change the size of the \u003Ccode\u003EButton\u003C\u002Fcode\u003E via the \u003Ccode\u003Esize\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-size?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-size?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"clear\\\"\u003EClear\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E components have a special variation that renders as text with no background, that lightly fills in when clicked.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-clear?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-clear?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"outline\\\"\u003EOutline\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E components have a special variation that renders them as text with an outline, the fills in when clicked.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-outline?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-outline?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"types\\\"\u003ETypes\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can change make the \u003Ccode\u003EButton\u003C\u002Fcode\u003E a \u003Ccode\u003E&lt;a&gt;\u003C\u002Fcode\u003E by passing the \u003Ccode\u003Ehref\u003C\u002Fcode\u003E property, or a \u003Ccode\u003E&lt;label&gt;\u003C\u002Fcode\u003E by passing the \u003Ccode\u003Efor\u003C\u002Fcode\u003E property. And also, change the input type between \u003Ccode\u003E&lt;input type=&quot;button&quot; \u002F&gt;\u003C\u002Fcode\u003E \u003Cstrong\u003E(DEFAULT)\u003C\u002Fstrong\u003E, \u003Ccode\u003E&lt;input type=&quot;reset&quot; \u002F&gt;\u003C\u002Fcode\u003E, \u003Ccode\u003E&lt;input type=&quot;submit&quot; \u002F&gt;\u003C\u002Fcode\u003E via the \u003Ccode\u003Etype\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Evalue\u003C\u002Fcode\u003E properties.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-types?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fbutton\u002Fbutton-types?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
 		
     </body>
 </html>

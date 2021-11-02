@@ -14,23 +14,22 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-86c335ef.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-ec7aa2c0.js">
+		<link rel="modulepreload" href="/_app/start-8ea2302c.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-0cbb6e11.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-7a0057a6.js">
-		<link rel="modulepreload" href="/_app/chunks/navigation.config-ca8c1f63.js">
-		<link rel="modulepreload" href="/_app/chunks/snippet-e4557597.js">
-		<link rel="modulepreload" href="/_app/chunks/url-b5fabed9.js">
-		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-1b578520.js">
-		<link rel="modulepreload" href="/_app/pages/repl/[...identifier].svelte-1e7ea9fe.js">
-		<link rel="modulepreload" href="/_app/chunks/[...identifier]-4d272670.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-dd4b77e4.js">
+		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-78250569.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-16cf381e.js">
+		<link rel="modulepreload" href="/_app/pages/repl/[...document]/[identifier].svelte-984e2b76.js">
+		<link rel="modulepreload" href="/_app/chunks/[identifier]-281d1e8b.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-c5da8073.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-d6d5e0b9.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-eaa62602.css">
 		<link rel="stylesheet" href="/_app/assets/pages/repl/__layout.svelte-6876fa8d.css">
 
 		<script type="module">
-			import { start } from "/_app/start-86c335ef.js";
+			import { start } from "/_app/start-8ea2302c.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
@@ -43,15 +42,15 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-7a0057a6.js"),
-						import("/_app/pages/repl/__layout.svelte-1b578520.js"),
-						import("/_app/pages/repl/[...identifier].svelte-1e7ea9fe.js")
+						import("/_app/pages/__layout.svelte-dd4b77e4.js"),
+						import("/_app/pages/repl/__layout.svelte-78250569.js"),
+						import("/_app/pages/repl/[...document]/[identifier].svelte-984e2b76.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
 						path: "\u002Frepl\u002Fdocs\u002Fframework\u002Fresponsitivity\u002Fresponsitivity-syntax",
 						query: new URLSearchParams(""),
-						params: {identifier:"docs\u002Fframework\u002Fresponsitivity\u002Fresponsitivity-syntax"}
+						params: {document:"docs\u002Fframework\u002Fresponsitivity",identifier:"responsitivity-syntax"}
 					}
 				}
 			});
@@ -72,6 +71,10 @@
 
 
 
+
+<a href="/api/v3/search.json" hidden></a>
+
+
     <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
     <section>Your client <strong>does not</strong> support <strong>Javascript</strong>,
         failed to load <strong>REPL</strong>.
@@ -79,9 +82,7 @@
 
 
 
-			<script type="application/json" data-type="svelte-data" data-url="/api/v2/configuration/application.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"application\":{\"description\":\"Straight-forward Svelte UI for the Web\",\"href\":\"\u002F\",\"sub_href\":\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\u002Fv0.4.8\",\"sub_title\":\"v0.4.8\",\"title\":\"Kahi UI\"},\"edit\":{\"enabled\":true,\"url\":\"https:\u002F\u002Fgithub.com\u002Fkahi-framework\u002Fkahi-ui.nbn.dev\u002Ftree\u002Fmain\u002Fcontent\u002Fdocs\u002F%s\"},\"locale\":{\"language\":\"en-US\"},\"metadata\":{\"discord\":\"https:\u002F\u002Fdiscord.com\u002Finvite\u002FJvUbmJvUBG\",\"version\":\"0.4.8\"},\"paths\":{\"blog\":\"blog\",\"changelog\":\".\u002FCHANGELOG.md\",\"content\":\".\u002Fcontent\",\"documentation\":\"docs\"},\"search\":{\"enabled\":true},\"timestamp\":{\"enabled\":true},\"urls\":{\"base\":\"\u002F\"}}}"}</script>
-
-	<script type="application/json" data-type="svelte-data" data-url="/api/v2/content/snippets/docs/framework/responsitivity/responsitivity-syntax.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"identifier\":\"responsitivity-syntax\",\"script\":\"\u003Cscript\u003E\\n    import {Box, Grid} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CGrid.Container\\n    class=\\\"responsitivity-syntax\\\"\\n    points={[\\\"5\\\", \\\"mobile:2\\\", \\\"tablet:3\\\", \\\"desktop:4\\\"]}\\n    spacing=\\\"medium\\\"\\n\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n\u003C\u002FGrid.Container\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.responsitivity-syntax .box) {\\n        height: 3rem;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Responsitivity Syntax\"}}"}</script>
+			<script type="application/json" data-type="svelte-data" data-url="/api/v3/content/docs/framework/responsitivity.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1633975115000,\"custom_properties\":{},\"events\":{},\"identifier\":\"framework\u002Fresponsitivity\",\"modified_at\":1633975115000,\"properties\":{},\"sections\":[{\"identifier\":\"responsitivity\",\"level\":1,\"text\":\"Responsitivity\"},{\"identifier\":\"viewports\",\"level\":2,\"text\":\"Viewports\"},{\"identifier\":\"syntax\",\"level\":2,\"text\":\"Syntax\"}],\"slots\":{},\"snippets\":[{\"identifier\":\"responsitivity-syntax\",\"script\":\"\u003Cscript\u003E\\n    import {Box, Grid} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CGrid.Container\\n    class=\\\"responsitivity-syntax\\\"\\n    points={[\\\"5\\\", \\\"mobile:2\\\", \\\"tablet:3\\\", \\\"desktop:4\\\"]}\\n    spacing=\\\"medium\\\"\\n\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n\\n    \u003CBox palette=\\\"alert\\\" \u002F\u003E\\n    \u003CBox palette=\\\"affirmative\\\" \u002F\u003E\\n    \u003CBox palette=\\\"negative\\\" \u002F\u003E\\n\u003C\u002FGrid.Container\u003E\\n\\n\u003Cstyle\u003E\\n    :global(.responsitivity-syntax .box) {\\n        height: 3rem;\\n    }\\n\u003C\u002Fstyle\u003E\",\"syntax\":\"svelte\",\"title\":\"Responsitivity Syntax\"}],\"title\":\"Responsitivity\"},\"render\":\"\u003Ch1 id=\\\"responsitivity\\\"\u003EResponsitivity\u003C\u002Fh1\u003E\\n\u003Cp\u003EKahi UI supports responsive design out of the box for the majority of its Components. Such as \u003Ca href=\\\"..\u002Flayouts\u002Fgrid\\\"\u003EGrid\u003C\u002Fa\u003E, where you can define how many items are displayed at each Viewport.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"viewports\\\"\u003EViewports\u003C\u002Fh2\u003E\\n\u003Cp\u003EAs mentioned above, Kahi UI has the concept of four pre-defined breakpoints that are known as Viewports. Which are only active whenever the Browser window's width is within two sizes.\u003C\u002Fp\u003E\\n\u003Cdiv class=\\\"scrollable\\\"\u003E\u003Ctable\u003E\\n\u003Cthead\u003E\\n\u003Ctr\u003E\\n\u003Cth\u003EViewport\u003C\u002Fth\u003E\\n\u003Cth\u003EMinimum\u003C\u002Fth\u003E\\n\u003Cth\u003EMaximum\u003C\u002Fth\u003E\\n\u003C\u002Ftr\u003E\\n\u003C\u002Fthead\u003E\\n\u003Ctbody\u003E\\n\u003Ctr\u003E\\n\u003Ctd\u003Emobile\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E0px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E640px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003C\u002Ftr\u003E\\n\u003Ctr\u003E\\n\u003Ctd\u003Etablet\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E641px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E768px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003C\u002Ftr\u003E\\n\u003Ctr\u003E\\n\u003Ctd\u003Edesktop\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E769px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E1024px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003C\u002Ftr\u003E\\n\u003Ctr\u003E\\n\u003Ctd\u003Ewidescreen\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E1025px\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003Ctd\u003E\u003Ccode\u003E∞\u003C\u002Fcode\u003E\u003C\u002Ftd\u003E\\n\u003C\u002Ftr\u003E\\n\u003C\u002Ftbody\u003E\\n\u003C\u002Ftable\u003E\\n\u003C\u002Fdiv\u003E\u003Ch2 id=\\\"syntax\\\"\u003ESyntax\u003C\u002Fh2\u003E\\n\u003Cp\u003ETo be able to use Viewport-specific values, you just need to prefix your values with \u003Ccode\u003E{VIEWPORT}:\u003C\u002Fcode\u003E, e.g. \u003Ccode\u003E&lt;Grid points=&quot;mobile:3&quot;&gt;\u003C\u002Fcode\u003E. But then you can't specify default values or other Viewport-specifics. For that you need to pass an array in like below.\u003C\u002Fp\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: The REPL currently does not support viewport values. Resize your Browser instead.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Fframework\u002Fresponsitivity\u002Fresponsitivity-syntax?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Fframework\u002Fresponsitivity\u002Fresponsitivity-syntax?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
 		
     </body>
 </html>
