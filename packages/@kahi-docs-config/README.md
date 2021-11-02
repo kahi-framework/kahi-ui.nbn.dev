@@ -1,3 +1,3 @@
 # @kahi-docs/config
 
-> Subpackage for handling all configuration data for Application deployments.
+> Subpackage for handling providing intelligent IDE experience for Application configurations.

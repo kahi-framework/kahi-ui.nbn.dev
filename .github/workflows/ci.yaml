@@ -21,38 +21,41 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v2.3.1
+              with:
+                  # Required to get entire repository history for generating correct Markdown timestamps
+                  fetch-depth: 0
 
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-                  cache: "npm"
 
-            - name: Install
-              run: npm ci
+            - name: Cache ~/.pnpm-store
+              uses: actions/cache@main
+              with:
+                  path: ~/.pnpm-store
+                  key: ${{ runner.os }}-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-${{ matrix.node-version }}
+
+            - name: Install PNPM
+              run: npm install -g pnpm@6.15.1
+
+            - name: Install Packages
+              run: pnpm install --frozen-lockfile
+
+            - name: Lint
+              run: npm run lint:packages
 
             - name: Test
-              run: npm run test
-
-            - name: Download Stork
-              run: |
-                  mkdir ./bin
-                  curl -L -o ./bin/stork.linux.x64 https://github.com/jameslittle230/stork/releases/download/v1.2.1/stork-ubuntu-latest
-                  chmod +x ./bin/stork.linux.x64
-                  npm ci
+              run: npm run test:packages
 
             - name: Build Application
               run: npm run build:application
 
-            - name: Build Search Index
-              run: |
-                  npm run build:generate-index
-                  npm run index:generate
-                  npm run index:build
-
             - name: Stash Pull Request
               if: github.event_name == 'pull_request'
-              run: echo ${{github.event.number}} > ./build/PULL_REQUEST
+              run: echo ${{github.event.number}} > ./packages/@kahi-docs-web/build/PULL_REQUEST
 
             - name: Upload Documentation Build
               uses: actions/upload-artifact@v2
@@ -61,7 +64,7 @@ jobs:
                   github.ref == 'refs/heads/main'
               with:
                   name: sveltekit-build
-                  path: build
+                  path: packages/@kahi-docs-web/build
 
     publish:
         runs-on: ubuntu-latest

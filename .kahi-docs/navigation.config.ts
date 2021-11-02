@@ -1,26 +1,14 @@
-import {Book} from "svelte-feather/components/Book";
-import {Code} from "svelte-feather/components/Code";
-import {MessageCircle} from "svelte-feather/components/MessageCircle";
-import {Package} from "svelte-feather/components/Package";
-
 import {define_navigation} from "@kahi-docs/config";
 
 export default define_navigation({
-    application: [
-        {href: "/docs/framework/getting-started", text: "Documentation", icon: Book},
-        {href: "https://github.com/novacbn/kahi-ui", text: "Source", icon: Code},
-        {href: "https://github.com/novacbn/kahi-ui/releases", text: "Releases", icon: Package},
-        {href: "/chat", text: "Chat", icon: MessageCircle},
-    ],
-
-    documentation: [
+    docs: [
         {
-            separator: "Resources",
+            text: "Resources",
             items: [{href: "/docs/resources/official"}, {href: "/docs/resources/community"}],
         },
 
         {
-            separator: "Framework",
+            text: "Framework",
             items: [
                 {href: "/docs/framework/getting-started"},
                 {href: "/docs/framework/faq"},
@@ -32,7 +20,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Typography",
+            text: "Typography",
             items: [
                 {href: "/docs/typography/blockquote"},
                 {href: "/docs/typography/code"},
@@ -42,12 +30,12 @@ export default define_navigation({
         },
 
         {
-            separator: "Embedded",
+            text: "Embedded",
             items: [{href: "/docs/embedded/figure"}],
         },
 
         {
-            separator: "Display",
+            text: "Display",
             items: [
                 {href: "/docs/display/badge"},
                 {href: "/docs/display/list"},
@@ -56,7 +44,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Disclosure",
+            text: "Disclosure",
             items: [
                 {href: "/docs/disclosure/accordion", badge: "NEW"},
                 {href: "/docs/disclosure/carousel", badge: "NEW"},
@@ -65,7 +53,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Feedback",
+            text: "Feedback",
             items: [
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
@@ -76,7 +64,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Interactables",
+            text: "Interactables",
             items: [
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
@@ -89,7 +77,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Layouts",
+            text: "Layouts",
             items: [
                 {href: "/docs/layouts/center"},
                 {href: "/docs/layouts/container"},
@@ -105,7 +93,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Surfaces",
+            text: "Surfaces",
             items: [
                 {href: "/docs/surfaces/box"},
                 {href: "/docs/surfaces/card"},
@@ -115,7 +103,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Navigation",
+            text: "Navigation",
             items: [
                 {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
@@ -126,7 +114,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Overlays",
+            text: "Overlays",
             items: [
                 {href: "/docs/overlays/clickable"},
                 {href: "/docs/overlays/popover"},
@@ -136,7 +124,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Utilities",
+            text: "Utilities",
             items: [
                 {href: "/docs/utilities/browserrender"},
                 {href: "/docs/utilities/contextbackdrop"},
@@ -149,7 +137,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Modifiers",
+            text: "Modifiers",
             items: [
                 {href: "/docs/modifiers/html5"},
                 {href: "/docs/modifiers/hidden"},
@@ -159,7 +147,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Actions",
+            text: "Actions",
             items: [
                 {href: "/docs/actions/click_outside"},
                 {href: "/docs/actions/keybind"},
@@ -169,7 +157,7 @@ export default define_navigation({
         },
 
         {
-            separator: "Stores",
+            text: "Stores",
             items: [
                 {href: "/docs/stores/darkmode"},
                 {href: "/docs/stores/htmlpalette"},

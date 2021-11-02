@@ -1,7 +1,7 @@
 {
     "name": "@kahi-docs/markdown",
     "author": "novacbn",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "type": "module",
     "main": "./src/index.ts",
     "exports": {
@@ -12,7 +12,10 @@
         "url": "https://github.com/novacbn/kahi-ui.nbn.dev/tree/main/packages/%40kahi-docs-markdown"
     },
     "scripts": {
-        "format:package": "prettier --config .prettierrc --write ./src",
+        "format": "npm run format:package",
+        "format:package": "prettier --config ../../.prettierrc --write ./src",
+        "lint": "npm run lint:format",
+        "lint:format": "prettier --config ../../.prettierrc --check ./src",
         "test": "npm run test:types",
         "test:types": "tsc --noEmit"
     },
@@ -26,8 +29,8 @@
     "dependencies": {
         "@cfworker/json-schema": "^1.8.1",
         "@iarna/toml": "^2.2.5",
-        "@kahi-docs/node": "file:../@kahi-docs-node",
-        "@kahi-docs/shared": "file:../@kahi-docs-shared",
+        "@kahi-docs/node": "workspace:^",
+        "@kahi-docs/shared": "workspace:^",
         "github-slugger": "^1.3.0",
         "gray-matter": "^4.0.3",
         "markdown-it": "^12.0.6",

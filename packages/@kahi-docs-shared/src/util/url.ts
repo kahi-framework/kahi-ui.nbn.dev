@@ -1,4 +1,4 @@
-const DEFAULT_ORIGIN: string = "http://fake.invalid";
+export const DEFAULT_ORIGIN: string = "http://kahi-docs.invalid";
 
 function split_pathname(pathname: string): string[] {
     return pathname.split("/").filter((segment) => segment.length > 0);
