@@ -14,6 +14,7 @@ export default define_navigation({
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
+                {href: "/docs/framework/custom-properties", badge: "NEW"},
                 {href: "/docs/framework/elements"},
                 {href: "/docs/framework/events"},
             ],

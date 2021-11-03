@@ -6,9 +6,9 @@
         "build:application": "pnpm run --filter \"*web\" build:application",
         "dev:application": "pnpm run --filter \"*web\" dev:application",
         "preview:application": "pnpm run --filter \"*web\" preview:application",
-        "format:content": "prettier --config ./content/.prettierrc --write ./content",
+        "format:content": "prettier --config ./content/.prettierrc --plugin-search-dir=. --write ./content",
         "format:packages": "pnpm -r format",
-        "lint:content": "prettier --config ./content/.prettierrc --check ./content",
+        "lint:content": "prettier --config ./content/.prettierrc --plugin-search-dir=. --check ./content",
         "lint:packages": "pnpm -r lint",
         "test:packages": "pnpm -r test"
     },
@@ -18,6 +18,8 @@
         "@kahi-ui/framework": "0.4.9"
     },
     "devDependencies": {
-        "prettier": "^2.3.1"
+        "prettier": "^2.3.1",
+        "prettier-plugin-svelte": "^2.3.1",
+        "svelte": "^3.44.0"
     }
 }

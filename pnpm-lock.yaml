@@ -8,12 +8,16 @@ importers:
       '@kahi-docs/shared': workspace:^
       '@kahi-ui/framework': 0.4.9
       prettier: ^2.3.1
+      prettier-plugin-svelte: ^2.3.1
+      svelte: ^3.44.0
     dependencies:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
       '@kahi-ui/framework': 0.4.9
     devDependencies:
       prettier: 2.4.1
+      prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.0
+      svelte: 3.44.0
 
   packages/@kahi-docs-config:
     specifiers:
@@ -1231,7 +1235,6 @@ packages:
   /svelte/3.44.0:
     resolution: {integrity: sha512-zWACSJBSncGiDvFfYOMFGNV5zDLOlyhftmO5yOZ0lEtQMptpElaRtl39MWz1+lYCpwUq4F3Q2lTzI9TrTL+eMA==}
     engines: {node: '>= 8'}
-    dev: false
 
   /svelte2tsx/0.4.7_svelte@3.44.0+typescript@4.4.4:
     resolution: {integrity: sha512-1HqRb8+I8H0Gli0+w8nTmyZgbtO/jJE3g27cNKYFyN0GMdpOh0CRmiWuMH1k9N2JugkviI7wqETanqJTR0SI+A==}
