@@ -56,10 +56,13 @@ export default define_navigation({
         {
             text: "Feedback",
             items: [
+                {href: "/docs/feedback/datetime", badge: "NEW"},
+                {href: "/docs/feedback/datetimestamp", badge: "NEW"},
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
                 {href: "/docs/feedback/progress"},
                 {href: "/docs/feedback/spinner"},
+                {href: "/docs/feedback/timestamp", badge: "NEW"},
                 {href: "/docs/feedback/wave"},
             ],
         },
