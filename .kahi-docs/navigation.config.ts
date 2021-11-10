@@ -56,7 +56,7 @@ export default define_navigation({
         {
             text: "Feedback",
             items: [
-                {href: "/docs/feedback/datetime", badge: "NEW"},
+                {href: "/docs/feedback/datestamp", badge: "NEW"},
                 {href: "/docs/feedback/datetimestamp", badge: "NEW"},
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},

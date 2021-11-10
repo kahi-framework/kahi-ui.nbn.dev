@@ -133,6 +133,31 @@
 />
 ```
 
+## Highlight
+
+...
+
+```svelte repl DayPicker Highlight
+<script>
+    import {DayPicker} from "@kahi-ui/framework";
+
+    const timestamp = "2021-11-10[u-ca=gregory]";
+
+    const highlight = [
+        "2021-11-11[u-ca=gregory]",
+        "2021-11-12[u-ca=gregory]",
+        "2021-11-13[u-ca=gregory]",
+    ];
+</script>
+
+<DayPicker
+    palette="accent"
+    width="content-max"
+    {highlight}
+    {timestamp}
+/>
+```
+
 ## Maximum + Minimum
 
 ...
