@@ -78,7 +78,7 @@ types=["{}"]
 <script>
     import {Carousel} from "@kahi-ui/framework";
 
-    import {Container, Section} = Carousel;
+    const {Container, Section} = Carousel;
 </script>
 ```
 
