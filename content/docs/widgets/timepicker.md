@@ -146,31 +146,51 @@
     <div>
         <Text is="strong">TINY</Text>
 
-        <TimePicker palette="accent" sizing="tiny" {value} />
+        <TimePicker
+            palette="accent"
+            sizing="tiny"
+            {value}
+        />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
 
-        <TimePicker palette="accent" sizing="small" {value} />
+        <TimePicker
+            palette="accent"
+            sizing="small"
+            {value}
+        />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
 
-        <TimePicker palette="accent" sizing="medium" {value} />
+        <TimePicker
+            palette="accent"
+            sizing="medium"
+            {value}
+        />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
 
-        <TimePicker palette="accent" sizing="large" {value} />
+        <TimePicker
+            palette="accent"
+            sizing="large"
+            {value}
+        />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
 
-        <TimePicker palette="accent" sizing="huge" {value} />
+        <TimePicker
+            palette="accent"
+            sizing="huge"
+            {value}
+        />
     </div>
 </Stack>
 ```
