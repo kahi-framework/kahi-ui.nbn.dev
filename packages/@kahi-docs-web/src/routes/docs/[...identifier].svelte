@@ -42,7 +42,9 @@
 </script>
 
 <svelte:head>
-    <PageMetadata title={content.properties.title} separator="—" />
+    {#key content}
+        <PageMetadata title={content.properties.title} separator="—" />
+    {/key}
 </svelte:head>
 
 <Content />

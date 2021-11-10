@@ -15,18 +15,30 @@
 
     import AppAnchor from "./AppAnchor.svelte";
 
+    let section_element: HTMLElement | undefined = undefined;
+
     export let element: HTMLElement | undefined = undefined;
 
     export let state: boolean = false;
 
     onMount(() => {
-        if (!element) return;
+        if (!section_element) return;
 
-        const current_link = element.querySelector("a[aria-current]");
-        if (current_link) {
-            current_link.scrollIntoView({
+        const link_element = section_element.querySelector("a[aria-current]");
+        if (link_element) {
+            const omni_element = document.querySelector(".app-navigation") as HTMLElement;
+
+            const link_rect = link_element.getBoundingClientRect();
+            const section_rect = section_element.getBoundingClientRect();
+            const omni_rect = omni_element.getBoundingClientRect();
+
+            section_element.scrollTo({
                 behavior: "smooth",
-                block: "center",
+                top:
+                    link_rect.top +
+                    link_rect.height / 2 -
+                    omni_rect.height -
+                    section_rect.height / 2,
             });
         }
     });
@@ -42,7 +54,7 @@
     dismissible
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-    <Aside.Section margin_bottom="none">
+    <Aside.Section bind:element={section_element} margin_bottom="none">
         <Menu.Container sizing="small">
             {#each $navigation as menu (menu.text)}
                 <Menu.Divider>
