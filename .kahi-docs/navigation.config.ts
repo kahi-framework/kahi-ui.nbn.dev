@@ -14,7 +14,7 @@ export default define_navigation({
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
-                {href: "/docs/framework/custom-properties", badge: "NEW"},
+                {href: "/docs/framework/custom-properties"},
                 {href: "/docs/framework/elements"},
                 {href: "/docs/framework/events"},
             ],
@@ -23,10 +23,10 @@ export default define_navigation({
         {
             text: "Typography",
             items: [
-                {href: "/docs/typography/blockquote"},
-                {href: "/docs/typography/code"},
-                {href: "/docs/typography/heading"},
-                {href: "/docs/typography/text"},
+                {href: "/docs/typography/blockquote", badge: "UPDATED"},
+                {href: "/docs/typography/code", badge: "UPDATED"},
+                {href: "/docs/typography/heading", badge: "UPDATED"},
+                {href: "/docs/typography/text", badge: "UPDATED"},
             ],
         },
 
@@ -40,16 +40,16 @@ export default define_navigation({
             items: [
                 {href: "/docs/display/badge"},
                 {href: "/docs/display/list"},
-                {href: "/docs/display/table", badge: "UPDATED"},
+                {href: "/docs/display/table"},
             ],
         },
 
         {
             text: "Disclosure",
             items: [
-                {href: "/docs/disclosure/accordion", badge: "NEW"},
-                {href: "/docs/disclosure/carousel", badge: "NEW"},
-                {href: "/docs/disclosure/tab", badge: "UPDATED"},
+                {href: "/docs/disclosure/accordion"},
+                {href: "/docs/disclosure/carousel"},
+                {href: "/docs/disclosure/tab"},
             ],
         },
 
@@ -69,11 +69,24 @@ export default define_navigation({
             items: [
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
-                {href: "/docs/interactables/filedropinput", badge: "NEW"},
+                {href: "/docs/interactables/filedropinput", badge: "UPDATED"},
                 {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput"},
+            ],
+        },
+
+        {
+            text: "Widgets",
+            items: [
+                {href: "/docs/widgets/daypicker", badge: "NEW"},
+                {href: "/docs/widgets/daystepper", badge: "NEW"},
+                {href: "/docs/widgets/monthpicker", badge: "NEW"},
+                {href: "/docs/widgets/monthstepper", badge: "NEW"},
+                {href: "/docs/widgets/timepicker", badge: "NEW"},
+                {href: "/docs/widgets/yearpicker", badge: "NEW"},
+                {href: "/docs/widgets/yearstepper", badge: "NEW"},
             ],
         },
 

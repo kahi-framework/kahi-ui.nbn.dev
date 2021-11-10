@@ -35,10 +35,7 @@
             section_element.scrollTo({
                 behavior: "smooth",
                 top:
-                    link_rect.top +
-                    link_rect.height / 2 -
-                    omni_rect.height -
-                    section_rect.height / 2,
+                    link_rect.y + link_rect.height / 2 - omni_rect.height - section_rect.height / 2,
             });
         }
     });
