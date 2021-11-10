@@ -168,8 +168,8 @@
 
     const timestamp = "2021-01-01[u-ca=gregory]";
 
-    const max = "2021-05-01[u-ca=gregory]";
-    const min = "2021-07-01[u-ca=gregory]";
+    const max = "2021-07-01[u-ca=gregory]";
+    const min = "2021-05-01[u-ca=gregory]";
 </script>
 
 <MonthPicker
