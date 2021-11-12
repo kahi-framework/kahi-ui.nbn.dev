@@ -39,8 +39,11 @@ export default define_navigation({
             text: "Display",
             items: [
                 {href: "/docs/display/badge"},
+                {href: "/docs/feedback/datestamp", badge: "NEW"},
+                {href: "/docs/feedback/datetimestamp", badge: "NEW"},
                 {href: "/docs/display/list"},
                 {href: "/docs/display/table"},
+                {href: "/docs/feedback/timestamp", badge: "NEW"},
             ],
         },
 
@@ -56,13 +59,10 @@ export default define_navigation({
         {
             text: "Feedback",
             items: [
-                {href: "/docs/feedback/datestamp", badge: "NEW"},
-                {href: "/docs/feedback/datetimestamp", badge: "NEW"},
                 {href: "/docs/feedback/dot"},
                 {href: "/docs/feedback/ellipsis"},
                 {href: "/docs/feedback/progress"},
                 {href: "/docs/feedback/spinner"},
-                {href: "/docs/feedback/timestamp", badge: "NEW"},
                 {href: "/docs/feedback/wave"},
             ],
         },
