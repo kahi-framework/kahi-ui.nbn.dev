@@ -10,6 +10,8 @@
 
     import {navigation} from "@kahi-docs/shared";
 
+    import {scroll_into_container} from "../client/element";
+
     import MenuIcon from "./icons/Menu.svelte";
     import X from "./icons/X.svelte";
 
@@ -24,20 +26,8 @@
     onMount(() => {
         if (!section_element) return;
 
-        const link_element = section_element.querySelector("a[aria-current]");
-        if (link_element) {
-            const omni_element = document.querySelector(".app-navigation") as HTMLElement;
-
-            const link_rect = link_element.getBoundingClientRect();
-            const section_rect = section_element.getBoundingClientRect();
-            const omni_rect = omni_element.getBoundingClientRect();
-
-            section_element.scrollTo({
-                behavior: "smooth",
-                top:
-                    link_rect.y + link_rect.height / 2 - omni_rect.height - section_rect.height / 2,
-            });
-        }
+        const link_element = section_element.querySelector<HTMLElement>("a[aria-current]");
+        if (link_element) scroll_into_container(link_element, section_element, "center", "smooth");
     });
 </script>
 
