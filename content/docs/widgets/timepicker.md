@@ -110,7 +110,7 @@ You can customize how the hour, minute, second components of the available times
 
 <TimePicker
     palette="accent"
-    hour="numeric"
+    hour="2-digit"
     minute="2-digit"
     second="2-digit"
     {value}
