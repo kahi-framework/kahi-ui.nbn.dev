@@ -1,3 +1,35 @@
++++
+[[properties.TimeStamp]]
+name="timestamp"
+description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp being formatted for display."
+types=["string"]
+
+[[properties.TimeStamp]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.TimeStamp]]
+name="hour"
+description="Alters how a displayed hour is formatted."
+types=["2-digit", "numeric"]
+
+[[properties.TimeStamp]]
+name="hour_12"
+description="Alters to showing hours in 12-hour format."
+types=["boolean"]
+
+[[properties.TimeStamp]]
+name="minute"
+description="Alters how a displayed minute is formatted."
+types=["2-digit", "numeric"]
+
+[[properties.TimeStamp]]
+name="second"
+description="Alters how a displayed second is formatted."
+types=["2-digit", "numeric"]
++++
+
 # TimeStamp
 
 `TimeStamp` formats an [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp into a human readable string, using the user preferences provided by the Browser.
