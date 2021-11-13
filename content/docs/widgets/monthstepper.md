@@ -61,7 +61,7 @@ description="Alters how a displayed year is formatted."
 types=["2-digit", "numeric"]
 
 [[events.MonthStepper]]
-name="click"
+name="change"
 description="Fires whenever the `value` property changes."
 types=["CustomEvent<void>"]
 +++

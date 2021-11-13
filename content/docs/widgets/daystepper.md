@@ -66,7 +66,7 @@ description="Alters how a displayed weekday is formatted."
 types=["long", "narrow", "short"]
 
 [[events.DayStepper]]
-name="click"
+name="change"
 description="Fires whenever the `value` property changes."
 types=["CustomEvent<void>"]
 +++
