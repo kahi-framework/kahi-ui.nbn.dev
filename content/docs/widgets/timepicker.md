@@ -1,6 +1,6 @@
 # TimePicker
 
-...
+`TimePicker` is a Widget that displays a set of hour, minute, second clock scrollable areas that a user can select from.
 
 ```svelte repl TimePicker Preview
 <script>
@@ -22,7 +22,7 @@
 
 ## Now
 
-...
+You can enable the displaying of a "NOW" button to allow the user to set the picker to the current time, via the `now` property.
 
 ```svelte repl TimePicker Now
 <script>
@@ -36,7 +36,7 @@
 
 ## 12 Hour
 
-...
+You can have the hours render as 12-hour time (1...12 AM/PM) instead of 24-hour time (0...23) via the `hour_12` property.
 
 ```svelte repl TimePicker 12 Hour
 <script>
@@ -50,7 +50,7 @@
 
 ## Disabled
 
-...
+You can disable all interactivity via the `disabled` property.
 
 ```svelte repl TimePicker Disabled
 <script>
@@ -64,7 +64,9 @@
 
 ## Highlight
 
-...
+> **NOTE**: By default, the current time is used.
+
+You can select a specific timestamp to be highlighted as outlines via the `highlight` property.
 
 ```svelte repl TimePicker Highlight
 <script>
@@ -80,7 +82,7 @@
 
 ## Maximum + Minimum
 
-...
+You can set maximum and minimum range of selectable times via the `maximum` / `minimum` properties.
 
 ```svelte repl TimePicker Maximum + Minimum
 <script>
@@ -97,9 +99,9 @@
 
 ## Custom Format
 
-...
+You can customize how the hour, minute, second components of the available timestamps is displayed via the `hour`, `minute`, and `second` properties respectively.
 
-```svelte repl TimePicker Format
+```svelte repl TimePicker Custom Format
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -109,8 +111,8 @@
 <TimePicker
     palette="accent"
     hour="numeric"
-    minute="numeric"
-    second="numeric"
+    minute="2-digit"
+    second="2-digit"
     {value}
     hour_12
 />
@@ -118,7 +120,7 @@
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte repl TimePicker Sizing
 <script>
