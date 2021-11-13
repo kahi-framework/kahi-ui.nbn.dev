@@ -1,3 +1,80 @@
++++
+[[properties.MonthPicker]]
+name="value"
+description="Sets the selected month [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps."
+types=["string[]"]
+
+[[properties.MonthPicker]]
+name="disabled"
+description="Disables all months from being selected, or given [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps from being selected."
+types=["boolean", "string[]"]
+
+[[properties.MonthPicker]]
+name="readonly"
+description="Disables toggling on of unselected months."
+types=["boolean"]
+
+[[properties.MonthPicker]]
+name="multiple"
+description="Enables selection of multiple months."
+types=["boolean"]
+
+[[properties.MonthPicker]]
+name="once"
+description="Disables toggling off of already selected months."
+types=["boolean"]
+
+[[properties.MonthPicker]]
+name="highlight"
+description="Highlights the given [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps as outlined."
+types=["string[]"]
+
+[[properties.MonthPicker]]
+name="timestamp"
+description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the calendar being listed."
+types=["string"]
+
+[[properties.MonthPicker]]
+name="max"
+description="Sets the maximum month timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the future that can be selected."
+types=["string"]
+
+[[properties.MonthPicker]]
+name="min"
+description="Sets the minimum month timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the past that can be selected."
+types=["string"]
+
+[[properties.MonthPicker]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.MonthPicker]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `MonthPicker`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.MonthPicker]]
+name="calendar"
+description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
+types=["string"]
+
+[[properties.MonthPicker]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.MonthPicker]]
+name="month"
+description="Alters how a displayed month is formatted."
+types=["2-digit", "long", "narrow", "numeric", "short"]
+
+[[events.MonthPicker]]
+name="change"
+description="Fires whenever the `value` property changes."
+types=["CustomEvent<void>"]
++++
+
 # MonthPicker
 
 `MonthPicker` is a Widget that displays a fiscal quaterly grid of months that a user can select from.

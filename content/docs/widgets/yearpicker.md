@@ -1,3 +1,80 @@
++++
+[[properties.YearPicker]]
+name="value"
+description="Sets the selected year [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps."
+types=["string[]"]
+
+[[properties.YearPicker]]
+name="disabled"
+description="Disables all years from being selected, or given [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps from being selected."
+types=["boolean", "string[]"]
+
+[[properties.YearPicker]]
+name="readonly"
+description="Disables toggling on of unselected years."
+types=["boolean"]
+
+[[properties.YearPicker]]
+name="multiple"
+description="Enables selection of multiple years."
+types=["boolean"]
+
+[[properties.YearPicker]]
+name="once"
+description="Disables toggling off of already selected years."
+types=["boolean"]
+
+[[properties.YearPicker]]
+name="highlight"
+description="Highlights the given [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps as outlined."
+types=["string[]"]
+
+[[properties.YearPicker]]
+name="timestamp"
+description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the calendar being listed."
+types=["string"]
+
+[[properties.YearPicker]]
+name="max"
+description="Sets the maximum year timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the future that can be selected."
+types=["string"]
+
+[[properties.YearPicker]]
+name="min"
+description="Sets the minimum year timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the past that can be selected."
+types=["string"]
+
+[[properties.YearPicker]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.YearPicker]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `YearPicker`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.YearPicker]]
+name="calendar"
+description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
+types=["string"]
+
+[[properties.YearPicker]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.YearPicker]]
+name="year"
+description="Alters how a displayed year is formatted."
+types=["2-digit", "long", "narrow", "numeric", "short"]
+
+[[events.YearPicker]]
+name="change"
+description="Fires whenever the `value` property changes."
+types=["CustomEvent<void>"]
++++
+
 # YearPicker
 
 `YearPicker` is a Widget that displays a decade-based grid of years that a user can select from.

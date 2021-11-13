@@ -1,3 +1,85 @@
++++
+[[properties.DayPicker]]
+name="value"
+description="Sets the selected day [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps."
+types=["string[]"]
+
+[[properties.DayPicker]]
+name="disabled"
+description="Disables all days from being selected, or given [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps from being selected."
+types=["boolean", "string[]"]
+
+[[properties.DayPicker]]
+name="readonly"
+description="Disables toggling on of unselected days."
+types=["boolean"]
+
+[[properties.DayPicker]]
+name="multiple"
+description="Enables selection of multiple days."
+types=["boolean"]
+
+[[properties.DayPicker]]
+name="once"
+description="Disables toggling off of already selected days."
+types=["boolean"]
+
+[[properties.DayPicker]]
+name="highlight"
+description="Highlights the given [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamps as outlined."
+types=["string[]"]
+
+[[properties.DayPicker]]
+name="timestamp"
+description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the calendar being listed."
+types=["string"]
+
+[[properties.DayPicker]]
+name="max"
+description="Sets the maximum day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the future that can be selected."
+types=["string"]
+
+[[properties.DayPicker]]
+name="min"
+description="Sets the minimum day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the past that can be selected."
+types=["string"]
+
+[[properties.DayPicker]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.DayPicker]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `DayPicker`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.DayPicker]]
+name="calendar"
+description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
+types=["string"]
+
+[[properties.DayPicker]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.DayPicker]]
+name="day"
+description="Alters how a displayed day is formatted."
+types=["2-digit", "numeric"]
+
+[[properties.DayPicker]]
+name="weekday"
+description="Alters how a displayed weekday is formatted."
+types=["long", "narrow", "short"]
+
+[[events.DayPicker]]
+name="change"
+description="Fires whenever the `value` property changes."
+types=["CustomEvent<void>"]
++++
+
 # DayPicker
 
 `DayPicker` is a Widget that displays a calendar-style grid of days that a user can select from.
