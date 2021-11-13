@@ -1,3 +1,90 @@
++++
+[[properties.TimePicker]]
+name="value"
+description="Sets the selected timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime)."
+types=["string"]
+
+[[properties.TimePicker]]
+name="disabled"
+description="Disables any component of time from being selected."
+types=["boolean"]
+
+[[properties.TimePicker]]
+name="readonly"
+description="Disables any component of time from being selected without visual changes."
+types=["boolean"]
+
+[[properties.TimePicker]]
+name="now"
+description="Enables displaying of the \"NOW\" button, allowing users to set the Widget to current clock time."
+types=["boolean"]
+
+[[properties.TimePicker]]
+name="highlight"
+description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the current time to be highlighted as outlines."
+types=["string"]
+
+[[properties.TimePicker]]
+name="max"
+description="Sets the maximum timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the future that can be selected."
+types=["string"]
+
+[[properties.TimePicker]]
+name="min"
+description="Sets the minimum timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the past that can be selected."
+types=["string"]
+
+[[properties.TimePicker]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.TimePicker]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `TimePicker`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.TimePicker]]
+name="calendar"
+description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
+types=["string"]
+
+[[properties.TimePicker]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.TimePicker]]
+name="hour"
+description="Alters how a displayed hour is formatted."
+types=["2-digit", "numeric"]
+
+[[properties.TimePicker]]
+name="hour_12"
+description="Alters to showing hours in 12-hour format."
+types=["boolean"]
+
+[[properties.TimePicker]]
+name="minute"
+description="Alters how a displayed minute is formatted."
+types=["2-digit", "numeric"]
+
+[[properties.TimePicker]]
+name="second"
+description="Alters how a displayed second is formatted."
+types=["2-digit", "numeric"]
+
+[[events.TimePicker]]
+name="change"
+description="Fires whenever the `value` property changes."
+types=["CustomEvent<void>"]
+
+[[events.TimePicker]]
+name="now"
+description="Fires whenever the \"NOW\" button is clicked when enabled."
+types=["CustomEvent<void>"]
++++
+
 # TimePicker
 
 `TimePicker` is a Widget that displays a set of hour, minute, second clock scrollable areas that a user can select from.
