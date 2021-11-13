@@ -1,6 +1,6 @@
 # YearPicker
 
-...
+`YearPicker` is a Widget that displays a decade-based grid of days that a user can select from.
 
 ```svelte repl YearPicker Preview
 <script>
@@ -28,7 +28,7 @@
 
 ## Disabled
 
-...
+You can disable all interactivity via the `disabled` property.
 
 ```svelte repl YearPicker Disabled
 <script>
@@ -47,7 +47,7 @@
 
 ## Disabled Years
 
-...
+You can disable specific years from being selected via the `disabled` property.
 
 ```svelte repl YearPicker Disabled Years
 <script>
@@ -71,7 +71,7 @@
 
 ## Multiple
 
-...
+You can allow for multiple years to be selected via the `multiple` property.
 
 ```svelte repl YearPicker Multiple
 <script>
@@ -95,7 +95,7 @@
 
 ## Once
 
-...
+You can disable selected years from being unselected after already being selected via the `once` property.
 
 ```svelte repl YearPicker Once
 <script>
@@ -116,7 +116,7 @@
 
 ## Readonly
 
-...
+You can disable interactivity without changing the visuals via the `readonly` property.
 
 ```svelte repl YearPicker Readonly
 <script>
@@ -135,7 +135,9 @@
 
 ## Highlight
 
-...
+> **NOTE**: By default, the current date is used.
+
+You can select a specific set of years to be highlighted as outlines via the `highlight` property.
 
 ```svelte repl YearPicker Highlight
 <script>
@@ -160,7 +162,7 @@
 
 ## Maximum + Minimum
 
-...
+You can set maximum and minimum range of selectable years via the `maximum` / `minimum` properties.
 
 ```svelte repl YearPicker Maximum + Minimum
 <script>
@@ -183,7 +185,7 @@
 
 ## Custom Format
 
-...
+You can customize how the year component of the available timestamps is displayed via the `year` property.
 
 ```svelte repl YearPicker Custom Format
 <script>
@@ -202,7 +204,7 @@
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte repl YearPicker Sizing
 <script>

@@ -1,6 +1,6 @@
 # MonthPicker
 
-...
+`MonthPicker` is a Widget that displays a fiscal quaterly grid of months that a user can select from.
 
 ```svelte repl MonthPicker Preview
 <script>
@@ -28,7 +28,7 @@
 
 ## Disabled
 
-...
+You can disable all interactivity via the `disabled` property.
 
 ```svelte repl MonthPicker Disabled
 <script>
@@ -47,7 +47,7 @@
 
 ## Disabled Months
 
-...
+You can disable specific months from being selected via the `disabled` property.
 
 ```svelte repl MonthPicker Disabled Months
 <script>
@@ -71,7 +71,7 @@
 
 ## Multiple
 
-...
+You can allow for multiple months to be selected via the `multiple` property.
 
 ```svelte repl MonthPicker Multiple
 <script>
@@ -95,7 +95,7 @@
 
 ## Once
 
-...
+You can disable selected months from being unselected after already being selected via the `once` property.
 
 ```svelte repl MonthPicker Once
 <script>
@@ -116,7 +116,7 @@
 
 ## Readonly
 
-...
+You can disable interactivity without changing the visuals via the `readonly` property.
 
 ```svelte repl MonthPicker Readonly
 <script>
@@ -135,7 +135,9 @@
 
 ## Highlight
 
-...
+> **NOTE**: By default, the current date is used.
+
+You can select a specific set of months to be highlighted as outlines via the `highlight` property.
 
 ```svelte repl MonthPicker Highlight
 <script>
@@ -160,7 +162,7 @@
 
 ## Maximum + Minimum
 
-...
+You can set maximum and minimum range of selectable months via the `maximum` / `minimum` properties.
 
 ```svelte repl MonthPicker Maximum + Minimum
 <script>
@@ -183,7 +185,7 @@
 
 ## Custom Format
 
-...
+You can customize how the month component of the available timestamps is displayed via the `month` property.
 
 ```svelte repl MonthPicker Custom Format
 <script>
@@ -202,7 +204,7 @@
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte repl MonthPicker Sizing
 <script>
