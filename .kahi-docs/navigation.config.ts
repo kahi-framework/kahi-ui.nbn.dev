@@ -39,11 +39,11 @@ export default define_navigation({
             text: "Display",
             items: [
                 {href: "/docs/display/badge"},
-                {href: "/docs/feedback/datestamp", badge: "NEW"},
-                {href: "/docs/feedback/datetimestamp", badge: "NEW"},
+                {href: "/docs/display/datestamp", badge: "NEW"},
+                {href: "/docs/display/datetimestamp", badge: "NEW"},
                 {href: "/docs/display/list"},
                 {href: "/docs/display/table"},
-                {href: "/docs/feedback/timestamp", badge: "NEW"},
+                {href: "/docs/display/timestamp", badge: "NEW"},
             ],
         },
 
