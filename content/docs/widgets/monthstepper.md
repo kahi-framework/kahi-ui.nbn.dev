@@ -1,6 +1,6 @@
 # MonthStepper
 
-...
+`MonthStepper` is a Widget that lets users increment / decrement the currently provided month by a set number.
 
 ```svelte repl MonthStepper Preview
 <script>
@@ -22,7 +22,7 @@
 
 ## Disabled
 
-...
+You can disable all interactivity via the `disabled` property.
 
 ```svelte repl MonthStepper Disabled
 <script>
@@ -36,7 +36,7 @@
 
 ## Readonly
 
-...
+You can disable interactivity without changing the visuals via the `readonly` property.
 
 ```svelte repl MonthStepper Readonly
 <script>
@@ -50,7 +50,7 @@
 
 ## Maximum + Minimum
 
-...
+You can set maximum and minimum range of steppable months via the `maximum` / `minimum` properties.
 
 ```svelte repl MonthStepper Maximum + Minimum
 <script>
@@ -67,7 +67,7 @@
 
 ## Step
 
-...
+You can control how many months the buttons increment / decrement via the `step` property.
 
 ```svelte repl MonthStepper Step
 <script>
@@ -81,7 +81,7 @@
 
 ## Custom Format
 
-...
+You can customize how the month and year components of the current timestamp is displayed via the `month` and `year` properties respectively.
 
 ```svelte repl MonthStepper Custom Format
 <script>
@@ -100,7 +100,7 @@
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte repl MonthStepper Sizing
 <script>

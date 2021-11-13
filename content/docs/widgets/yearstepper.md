@@ -1,6 +1,6 @@
 # YearStepper
 
-...
+`YearStepper` is a Widget that lets users increment / decrement the currently provided year by a set number.
 
 ```svelte repl YearStepper Preview
 <script>
@@ -22,7 +22,7 @@
 
 ## Disabled
 
-...
+You can disable all interactivity via the `disabled` property.
 
 ```svelte repl YearStepper Disabled
 <script>
@@ -36,7 +36,7 @@
 
 ## Readonly
 
-...
+You can disable interactivity without changing the visuals via the `readonly` property.
 
 ```svelte repl YearStepper Readonly
 <script>
@@ -50,7 +50,7 @@
 
 ## Maximum + Minimum
 
-...
+You can set maximum and minimum range of steppable years via the `maximum` / `minimum` properties.
 
 ```svelte repl YearStepper Maximum + Minimum
 <script>
@@ -67,7 +67,7 @@
 
 ## Step
 
-...
+You can control how many years the buttons increment / decrement via the `step` property.
 
 ```svelte repl YearStepper Step
 <script>
@@ -81,7 +81,7 @@
 
 ## Custom Format
 
-...
+You can customize how the year component of the current timestamp is displayed via the `year` property.
 
 ```svelte repl YearStepper Custom Format
 <script>
@@ -95,7 +95,7 @@
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte repl YearStepper Sizing
 <script>

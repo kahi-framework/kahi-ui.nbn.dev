@@ -1,6 +1,6 @@
 # DayStepper
 
-...
+`DayStepper` is a Widget that lets users increment / decrement the currently provided day by a set number.
 
 ```svelte repl DayStepper Preview
 <script>
@@ -22,7 +22,7 @@
 
 ## Disabled
 
-...
+You can disable all interactivity via the `disabled` property.
 
 ```svelte repl DayStepper Disabled
 <script>
@@ -36,7 +36,7 @@
 
 ## Readonly
 
-...
+You can disable interactivity without changing the visuals via the `readonly` property.
 
 ```svelte repl DayStepper Readonly
 <script>
@@ -50,7 +50,7 @@
 
 ## Maximum + Minimum
 
-...
+You can set maximum and minimum range of steppable days via the `maximum` / `minimum` properties.
 
 ```svelte repl DayStepper Maximum + Minimum
 <script>
@@ -67,7 +67,7 @@
 
 ## Step
 
-...
+You can control how many days the buttons increment / decrement via the `step` property.
 
 ```svelte repl DayStepper Step
 <script>
@@ -81,7 +81,7 @@
 
 ## Custom Format
 
-...
+You can customize how the day and month components of the current timestamp is displayed via the `day`, `weekday`, and `month` properties respectively.
 
 ```svelte repl DayStepper Custom Format
 <script>
@@ -101,7 +101,7 @@
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte repl DayStepper Sizing
 <script>
