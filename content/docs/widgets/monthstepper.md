@@ -1,3 +1,71 @@
++++
+[[properties.MonthStepper]]
+name="value"
+description="Sets the selected day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime)."
+types=["string"]
+
+[[properties.MonthStepper]]
+name="disabled"
+description="Disables months from being stepped through."
+types=["boolean"]
+
+[[properties.MonthStepper]]
+name="readonly"
+description="Disables months from being stepped through without visual changes."
+types=["boolean"]
+
+[[properties.MonthStepper]]
+name="step"
+description="Sets how many months are stepped through at each button click."
+default="1"
+types=["1", "number"]
+
+[[properties.MonthStepper]]
+name="max"
+description="Sets the maximum day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the future that can be selected."
+types=["string"]
+
+[[properties.MonthStepper]]
+name="min"
+description="Sets the minimum day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the past that can be selected."
+types=["string"]
+
+[[properties.MonthStepper]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.MonthStepper]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `MonthStepper`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.MonthStepper]]
+name="calendar"
+description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
+types=["string"]
+
+[[properties.MonthStepper]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.MonthStepper]]
+name="month"
+description="Alters how a displayed month is formatted."
+types=["2-digit", "long", "narrow", "numeric", "short"]
+
+[[properties.MonthStepper]]
+name="year"
+description="Alters how a displayed year is formatted."
+types=["2-digit", "numeric"]
+
+[[events.MonthStepper]]
+name="click"
+description="Fires whenever the `value` property changes."
+types=["CustomEvent<void>"]
++++
+
 # MonthStepper
 
 `MonthStepper` is a Widget that lets users increment / decrement the currently provided month by a set number.

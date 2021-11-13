@@ -1,3 +1,66 @@
++++
+[[properties.YearStepper]]
+name="value"
+description="Sets the selected day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime)."
+types=["string"]
+
+[[properties.YearStepper]]
+name="disabled"
+description="Disables months from being stepped through."
+types=["boolean"]
+
+[[properties.YearStepper]]
+name="readonly"
+description="Disables months from being stepped through without visual changes."
+types=["boolean"]
+
+[[properties.YearStepper]]
+name="step"
+description="Sets how many months are stepped through at each button click."
+default="1"
+types=["1", "number"]
+
+[[properties.YearStepper]]
+name="max"
+description="Sets the maximum day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the future that can be selected."
+types=["string"]
+
+[[properties.YearStepper]]
+name="min"
+description="Sets the minimum day timestamp [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) in the past that can be selected."
+types=["string"]
+
+[[properties.YearStepper]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.YearStepper]]
+name="sizing"
+description="Sets the size of children / spacing relative to the font size of the `YearStepper`."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.YearStepper]]
+name="calendar"
+description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
+types=["string"]
+
+[[properties.YearStepper]]
+name="locale"
+description="Alters the locale used for displaying internationalized text via [RFC 5646 / BCP 47](https://www.w3.org/International/articles/language-tags) language tags."
+types=["string"]
+
+[[properties.YearStepper]]
+name="year"
+description="Alters how a displayed year is formatted."
+types=["2-digit", "numeric"]
+
+[[events.YearStepper]]
+name="click"
+description="Fires whenever the `value` property changes."
+types=["CustomEvent<void>"]
++++
+
 # YearStepper
 
 `YearStepper` is a Widget that lets users increment / decrement the currently provided year by a set number.
