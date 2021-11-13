@@ -1,6 +1,6 @@
 # YearPicker
 
-`YearPicker` is a Widget that displays a decade-based grid of days that a user can select from.
+`YearPicker` is a Widget that displays a decade-based grid of years that a user can select from.
 
 ```svelte repl YearPicker Preview
 <script>
