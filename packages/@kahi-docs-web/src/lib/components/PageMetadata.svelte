@@ -11,11 +11,13 @@
     export let title: string = DESCRIPTION;
 </script>
 
-<meta property="og:description" content={DESCRIPTION} />
-<meta property="og:image" content={IMAGE} />
-<meta property="og:site_name" content={SITE_NAME} />
-<meta property="og:title" content={separator ? `${title} ${separator} ${SITE_NAME}` : title} />
+<svelte:head>
+    <meta property="og:description" content={DESCRIPTION} />
+    <meta property="og:image" content={IMAGE} />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={separator ? `${title} ${separator} ${SITE_NAME}` : title} />
 
-<meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:card" content="summary_large_image" />
 
-<title>{separator ? `${title} ${separator} ${SITE_NAME}` : title}</title>
+    <title>{separator ? `${title} ${separator} ${SITE_NAME}` : title}</title>
+</svelte:head>

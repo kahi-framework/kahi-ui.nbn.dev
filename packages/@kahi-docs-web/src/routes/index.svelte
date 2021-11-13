@@ -22,9 +22,7 @@
     import PageMetadata from "../lib/components/PageMetadata.svelte";
 </script>
 
-<svelte:head>
-    <PageMetadata separator="::" />
-</svelte:head>
+<PageMetadata separator="::" />
 
 <!--
     NOTE: Layout stuff is here in index so nested Application

@@ -41,11 +41,7 @@
     $: $store = content;
 </script>
 
-<svelte:head>
-    {#key content}
-        <PageMetadata title={content.properties.title} separator="—" />
-    {/key}
-</svelte:head>
+<PageMetadata title={content.properties.title} separator="—" />
 
 <Content />
 
