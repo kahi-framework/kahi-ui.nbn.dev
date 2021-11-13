@@ -95,7 +95,7 @@ You can allow for multiple days to be selected via the `multiple` property.
 
 ## Once
 
-You can disable selected days from being unselected after already being selected via the `once` property.
+You can disable selected days from being unselected via the `once` property.
 
 ```svelte repl DayPicker Once
 <script>

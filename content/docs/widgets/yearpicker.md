@@ -95,7 +95,7 @@ You can allow for multiple years to be selected via the `multiple` property.
 
 ## Once
 
-You can disable selected years from being unselected after already being selected via the `once` property.
+You can disable selected years from being unselected via the `once` property.
 
 ```svelte repl YearPicker Once
 <script>
