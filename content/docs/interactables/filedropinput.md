@@ -15,13 +15,13 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[events.FileDropInput]]
-name="click"
-description="Fires whenever the `FileDropInput` is clicked."
+name="change"
+description="Fires whenever the `FileDropInput` value has changed."
 types=["MouseEvent"]
 
 [[events.FileDropInput]]
-name="change"
-description="Fires whenever the `FileDropInput` value has changed."
+name="click"
+description="Fires whenever the `FileDropInput` is clicked."
 types=["MouseEvent"]
 
 [[events.FileDropInput]]
@@ -33,6 +33,36 @@ types=["MouseEvent"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.FileDropInput]]
+name="--filedropinput-palette-background-lightest"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties.FileDropInput]]
+name="--filedropinput-palette-background-bold"
+description="Controls the default RGB color value used for `border-color`."
+types=["<r,g,b>"]
+
+[[custom_properties.FileDropInput]]
+name="--filedropinput-background-opacity"
+description="Controls the `background` opacity."
+types=["<alpha-value>"]
+
+[[custom_properties.FileDropInput]]
+name="--filedropinput-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
+
+[[custom_properties.FileDropInput]]
+name="--filedropinput-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties.FileDropInput]]
+name="--filedropinput-padding-y"
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
 +++
 
 # FileDropInput
