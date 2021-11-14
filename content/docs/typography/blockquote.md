@@ -8,6 +8,46 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-background-color"
+description="Controls the default `background` color."
+types=["<alpha-value>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-background-opacity"
+description="Controls the `background` opacity."
+types=["<alpha-value>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-border-color"
+description="Controls the default `border-color` used."
+types=["<r,g,b>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-border-style"
+description="Controls the `border-style` used."
+types=["<line-style>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties."Blockquote.Container"]]
+name="--blockquote-padding-y"
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
 +++
 
 # Blockquote
