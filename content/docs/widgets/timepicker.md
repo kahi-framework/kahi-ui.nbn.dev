@@ -20,6 +20,11 @@ description="Enables displaying of the \"NOW\" button, allowing users to set the
 types=["boolean"]
 
 [[properties.TimePicker]]
+name="scroll"
+description="Enables auto scrolling to current time on mounting."
+types=["boolean"]
+
+[[properties.TimePicker]]
 name="highlight"
 description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the current time to be highlighted as outlines."
 types=["string"]
@@ -119,6 +124,22 @@ You can enable the displaying of a "NOW" button to allow the user to set the pic
 </script>
 
 <TimePicker palette="accent" {value} now />
+```
+
+## Auto Scroll
+
+> **WARNING**: This property will cause layout reflowing. And can result poor performance when mounted during points of high activity. e.g. when your web page first loads
+
+You can enable auto scrolling to the currently set `value` when `TimePicker` is mounted, via the `scroll` property.
+
+```svelte repl TimePicker Now
+<script>
+    import {TimePicker} from "@kahi-ui/framework";
+
+    const value = "13:30:15";
+</script>
+
+<TimePicker palette="accent" {value} scroll />
 ```
 
 ## 12 Hour
