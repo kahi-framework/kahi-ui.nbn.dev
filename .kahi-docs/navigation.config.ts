@@ -104,7 +104,7 @@ export default define_navigation({
                 {href: "/docs/layouts/mosaic"},
                 {href: "/docs/layouts/position"},
                 {href: "/docs/layouts/scrollable"},
-                {href: "/docs/layouts/spacer"},
+                {href: "/docs/layouts/spacer", badge: "UPDATED"},
                 {href: "/docs/layouts/stack"},
             ],
         },
