@@ -29,6 +29,131 @@ types=["headline", "truncate"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Heading]]
+name="--heading-font-weight"
+description="Controls the `font-weight` used."
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
+
+[[custom_properties.Heading]]
+name="--heading-h1-font-size"
+description="Controls the `font-size` used for `h1` elements."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h1-line-height"
+description="Controls the `line-height` used for `h1` elements."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h1-headline-font-size"
+description="Controls the `font-size` used for `h1` elements w/ `headline` variation."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h1-headline-line-height"
+description="Controls the `line-height` used for `h1` elements w/ `headline` variation."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h2-font-size"
+description="Controls the `font-size` used for `h2` elements."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h2-line-height"
+description="Controls the `line-height` used for `h2` elements."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h2-headline-font-size"
+description="Controls the `font-size` used for `h2` elements w/ `headline` variation."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h2-headline-line-height"
+description="Controls the `line-height` used for `h2` elements w/ `headline` variation."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h3-font-size"
+description="Controls the `font-size` used for `h3` elements."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h3-line-height"
+description="Controls the `line-height` used for `h3` elements."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h3-headline-font-size"
+description="Controls the `font-size` used for `h3` elements w/ `headline` variation."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h3-headline-line-height"
+description="Controls the `line-height` used for `h3` elements w/ `headline` variation."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h4-font-size"
+description="Controls the `font-size` used for `h4` elements."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h4-line-height"
+description="Controls the `line-height` used for `h4` elements."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h4-headline-font-size"
+description="Controls the `font-size` used for `h4` elements w/ `headline` variation."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h4-headline-line-height"
+description="Controls the `line-height` used for `h4` elements w/ `headline` variation."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h5-font-size"
+description="Controls the `font-size` used for `h5` elements."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h5-line-height"
+description="Controls the `line-height` used for `h5` elements."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h5-headline-font-size"
+description="Controls the `font-size` used for `h5` elements w/ `headline` variation."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h5-headline-line-height"
+description="Controls the `line-height` used for `h5` elements w/ `headline` variation."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h6-font-size"
+description="Controls the `font-size` used for `h6` elements."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h6-line-height"
+description="Controls the `line-height` used for `h6` elements."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h6-headline-font-size"
+description="Controls the `font-size` used for `h6` elements w/ `headline` variation."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Heading]]
+name="--heading-h6-headline-line-height"
+description="Controls the `line-height` used for `h6` elements w/ `headline` variation."
+types=["<normal>", "<number>", "<length>", "<percentage>"]
 +++
 
 # Heading

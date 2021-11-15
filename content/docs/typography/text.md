@@ -34,6 +34,71 @@ types=["headline", "truncate"]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Text]]
+name="--text-kbd-background-color"
+description="Controls the default `background` color."
+types=["<alpha-value>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-background-opacity"
+description="Controls the `background` opacity."
+types=["<alpha-value>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-border-color"
+description="Controls the `border-color` used."
+types=["<r,g,b>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-border-style"
+description="Controls the `border-style` used."
+types=["<line-style>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-border-width"
+description="Controls the `border-width` used."
+types=["<length>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-font-family"
+description="Controls the `font-family` used."
+types=["<font-family>", "<generic-name>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-font-weight"
+description="Controls the `font-weight` used."
+types=["<normal>", "<bold>", "<bolder>", "<lighter>", "<number>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties.Text]]
+name="--text-kbd-padding-y"
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
+
+[[custom_properties.Text]]
+name="--text-small-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Text]]
+name="--text-small-opacity"
+description="Controls the `opacity` used."
+types=["<alpha-value>"]
 +++
 
 # Text

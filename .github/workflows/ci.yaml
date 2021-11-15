@@ -45,7 +45,9 @@ jobs:
               run: pnpm install --frozen-lockfile
 
             - name: Lint
-              run: npm run lint:packages
+              run: |
+                  npm run lint:content
+                  npm run lint:packages
 
             - name: Test
               run: npm run test:packages
