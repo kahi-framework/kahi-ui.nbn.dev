@@ -14,6 +14,41 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 name="default"
 description="Default unnamed slot."
 types=["{}"]
+
+[[custom_properties.Code]]
+name="--code-palette-background-lightest"
+description="Controls the default RGB color value used for `background`."
+types=["<r,g,b>"]
+
+[[custom_properties.Code]]
+name="--code-background-opacity"
+description="Controls the `background` opacity."
+types=["<alpha-value>"]
+
+[[custom_properties.Code]]
+name="--code-border-radius"
+description="Controls the `border-radius` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Code]]
+name="--code-font-family"
+description="Controls the `font-family` used."
+types=["<font-family>", "<generic-name>"]
+
+[[custom_properties.Code]]
+name="--code-font-size"
+description="Controls the `font-size` used."
+types=["<length>", "<percentage>"]
+
+[[custom_properties.Code]]
+name="--code-padding-x"
+description="Controls the X-Axis `padding-left` / `padding-right` used."
+types=["<length>"]
+
+[[custom_properties.Code]]
+name="--code-padding-y"
+description="Controls the Y-Axis `padding-bottom` / `padding-top` used."
+types=["<length>"]
 +++
 
 # Code

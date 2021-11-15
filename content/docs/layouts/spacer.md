@@ -1,34 +1,29 @@
 +++
 [[properties.Spacer]]
-name="orientation"
-description="Renders the <code>Spacer</code> horizontally."
-default="vertical"
-types=["horizontal", "vertical", "{VIEWPORT}:{ORIENTATION}"]
-
-[[properties.Spacer]]
-name="variation"
-description="Renders the <code>Spacer</code> as a <code>&lt;span&gt;</code>, defaulting the orientation to <code>horizontal</code>."
-types=["inline"]
+name="is"
+description="Renders the `Spacer` as a block (`div`) or inline (`span`)."
+default="div"
+types=["div", "span"]
 
 [[properties.Spacer]]
 name="spacing"
-description="Adjusts the visual spacing between the two immediate siblings of the <code>Spacer</code>."
+description="Adjusts the visual spacing between the two immediate siblings of the `Spacer`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Spacer]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between the two immediate siblings of the <code>Spacer</code>."
+description="Adjusts the horizontal visual spacing between the two immediate siblings of the `Spacer`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Spacer]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between the two immediate siblings of the <code>Spacer</code>."
+description="Adjusts the vertical visual spacing between the two immediate siblings of the `Spacer`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 +++
 
 # Spacer
 
-`Spacer` is a layout primitive that takes up all available vertical space between its two immediate siblings.
+`Spacer` is a layout primitive that takes up all available space between its two immediate siblings.
 
 ```svelte repl Spacer Preview
 <script>
@@ -64,7 +59,7 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `spacing={["medium", "tablet:small", "mobile:tiny"]}`
 
-You can adjust the spacing between the immediate siblings via the `spacing` property.
+You can adjust the spacing between the immediate siblings via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
 ```svelte repl Spacer Spacing
 <script>
@@ -150,7 +145,7 @@ You can adjust the spacing between the immediate siblings via the `spacing` prop
 
 ## Inline
 
-You can have the `Spacer` rendering as an inline `<span>` that defaults to `horizontal` orientation via the `variation` property.
+You can have the `Spacer` rendering as an inline `<span>` via the `is` property.
 
 ```svelte repl Spacer Inline
 <script>
@@ -168,7 +163,7 @@ You can have the `Spacer` rendering as an inline `<span>` that defaults to `hori
     variation="wrap"
 >
     <div>
-        <Text is="strong">BLOCK / DEFAULT</Text>
+        <Text is="strong">BLOCK / DIV / DEFAULT</Text>
         <Box
             palette="inverse"
             margin_top="small"
@@ -182,7 +177,7 @@ You can have the `Spacer` rendering as an inline `<span>` that defaults to `hori
     </div>
 
     <div>
-        <Text is="strong">INLINE / DEFAULT</Text>
+        <Text is="strong">INLINE / SPAN</Text>
         <Box
             palette="inverse"
             margin_top="small"
@@ -191,7 +186,7 @@ You can have the `Spacer` rendering as an inline `<span>` that defaults to `hori
         >
             LEFT
             <Spacer
-                variation="inline"
+                is="span"
                 orientation="horizontal"
                 spacing="huge"
             />

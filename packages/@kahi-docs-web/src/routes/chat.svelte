@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-    const URL_CHAT = "https://discord.com/invite/JvUbmJvUBG";
+    const URL_CHAT = "https://discord.com/invite/8skV3G6bEa";
 </script>
 
 <script lang="ts">

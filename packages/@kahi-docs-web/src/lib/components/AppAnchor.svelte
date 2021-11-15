@@ -22,6 +22,9 @@
 
     $: _is_current = no_handle ? false : is_current_page($page, href);
     $: _is_external = is_external_url(href);
+
+    $: _no_scroll = _is_external ? undefined : no_scroll || undefined;
+    $: _prefetch = _is_external ? undefined : prefetch || undefined;
 </script>
 
 {#if is === "button"}
@@ -31,8 +34,8 @@
         {href}
         target={_is_external ? "_blank" : undefined}
         rel={_is_external ? "noopener noreferrer" : undefined}
-        sveltekit:noscroll={no_scroll ? true : undefined}
-        sveltekit:prefetch={prefetch ? true : undefined}
+        sveltekit:noscroll={_no_scroll}
+        sveltekit:prefetch={_prefetch}
         data-palette={palette}
         data-size={size}
         data-variation={variation}
@@ -45,8 +48,8 @@
         {href}
         target={_is_external ? "_blank" : undefined}
         rel={_is_external ? "noopener noreferrer" : undefined}
-        sveltekit:noscroll={no_scroll ? true : undefined}
-        sveltekit:prefetch={prefetch ? true : undefined}
+        sveltekit:noscroll={_no_scroll}
+        sveltekit:prefetch={_prefetch}
         data-palette={palette}
     >
         <slot />

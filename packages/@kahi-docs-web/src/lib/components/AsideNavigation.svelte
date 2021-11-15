@@ -10,25 +10,24 @@
 
     import {navigation} from "@kahi-docs/shared";
 
+    import {scroll_into_container} from "../client/element";
+
     import MenuIcon from "./icons/Menu.svelte";
     import X from "./icons/X.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
+
+    let section_element: HTMLElement | undefined = undefined;
 
     export let element: HTMLElement | undefined = undefined;
 
     export let state: boolean = false;
 
     onMount(() => {
-        if (!element) return;
+        if (!section_element) return;
 
-        const current_link = element.querySelector("a[aria-current]");
-        if (current_link) {
-            current_link.scrollIntoView({
-                behavior: "smooth",
-                block: "center",
-            });
-        }
+        const link_element = section_element.querySelector<HTMLElement>("a[aria-current]");
+        if (link_element) scroll_into_container(link_element, section_element, "center", "smooth");
     });
 </script>
 
@@ -42,7 +41,7 @@
     dismissible
 >
     <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-    <Aside.Section margin_bottom="none">
+    <Aside.Section bind:element={section_element} margin_bottom="none">
         <Menu.Container sizing="small">
             {#each $navigation as menu (menu.text)}
                 <Menu.Divider>
