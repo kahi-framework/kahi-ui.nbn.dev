@@ -9,6 +9,11 @@ name="default"
 description="Default unnamed slot."
 types=["{}"]
 
+[[slots."Blockquote.Cite"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
 [[custom_properties."Blockquote.Container"]]
 name="--blockquote-background-color"
 description="Controls the default `background` color."
