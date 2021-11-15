@@ -212,7 +212,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 ## Highlight
 
-> **NOTE**: By default, the current date is used.
+> **NOTE**: By default, the current month is used.
 
 You can select a specific set of months to be highlighted as outlines via the `highlight` property.
 

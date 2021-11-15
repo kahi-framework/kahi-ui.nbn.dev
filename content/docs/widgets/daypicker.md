@@ -217,7 +217,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 ## Highlight
 
-> **NOTE**: By default, the current date is used.
+> **NOTE**: By default, the current day is used.
 
 You can select a specific set of days to be highlighted as outlines via the `highlight` property.
 
