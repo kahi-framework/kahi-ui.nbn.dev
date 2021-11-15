@@ -23,7 +23,7 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 # Spacer
 
-`Spacer` is a layout primitive that takes up all available vertical space between its two immediate siblings.
+`Spacer` is a layout primitive that takes up all available space between its two immediate siblings.
 
 ```svelte repl Spacer Preview
 <script>
