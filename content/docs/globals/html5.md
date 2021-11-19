@@ -28,6 +28,11 @@ types=["string"]
 name="tabindex"
 description="Alters how the Browser will cycle through the elements within the Component's current stacking context."
 types=["number", "string"]
+
+[[events."*"]]
+name="click"
+description="Forwards the [`click`](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) event whenever the Component is clicked."
+types=["MouseEvent"]
 +++
 
 # HTML5

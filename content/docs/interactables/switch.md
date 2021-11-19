@@ -45,11 +45,6 @@ description="Fires whenever the `Switch` has its value changed."
 types=["InputEvent"]
 
 [[events.Switch]]
-name="click"
-description="Fires whenever the `Switch` is clicked."
-types=["MouseEvent"]
-
-[[events.Switch]]
 name="focus"
 description="Fires whenever the `Switch` gains focus."
 types=["FocusEvent"]

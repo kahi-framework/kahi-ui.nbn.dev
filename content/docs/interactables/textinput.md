@@ -102,11 +102,6 @@ description="Fires whenever the `TextInput` loses focus and its value was change
 types=["InputEvent"]
 
 [[events.TextInput]]
-name="click"
-description="Fires whenever the `TextInput` is clicked."
-types=["MouseEvent"]
-
-[[events.TextInput]]
 name="focus"
 description="Fires whenever the `TextInput` gains focus."
 types=["FocusEvent"]

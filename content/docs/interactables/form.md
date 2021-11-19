@@ -34,11 +34,6 @@ name="change"
 description="Fires whenever the `logic_state` has its value changed via the [Svelte Context](https://svelte.dev/docs#setContext)."
 types=["CustomEvent<void>"]
 
-[[events."Form.Label"]]
-name="click"
-description="Fires whenever clicked."
-types=["MouseEvent"]
-
 [[slots."Form.Control"]]
 name="default"
 description="Default unnamed slot."

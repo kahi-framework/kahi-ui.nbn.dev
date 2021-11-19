@@ -21,6 +21,16 @@ export default define_navigation({
         },
 
         {
+            text: "Globals",
+            items: [
+                {href: "/docs/globals/html5", badge: "UPDATED"},
+                {href: "/docs/globals/hidden"},
+                {href: "/docs/globals/sizings"},
+                {href: "/docs/globals/spacings"},
+            ],
+        },
+
+        {
             text: "Typography",
             items: [
                 {href: "/docs/typography/blockquote", badge: "UPDATED"},
@@ -150,16 +160,6 @@ export default define_navigation({
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
                 {href: "/docs/utilities/transition"},
-            ],
-        },
-
-        {
-            text: "Modifiers",
-            items: [
-                {href: "/docs/modifiers/html5"},
-                {href: "/docs/modifiers/hidden"},
-                {href: "/docs/modifiers/sizings"},
-                {href: "/docs/modifiers/spacings"},
             ],
         },
 

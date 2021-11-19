@@ -29,11 +29,6 @@ name="target"
 description="Sets the target of the `Breadcrumb.Anchor` being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
 
-[[events."Breadcrumb.Anchor"]]
-name="click"
-description="Fires whenever the `Breadcrumb.Anchor` is clicked."
-types=["MouseEvent"]
-
 [[slots."Breadcrumb.Container"]]
 name="default"
 description="Default unnamed slot."
