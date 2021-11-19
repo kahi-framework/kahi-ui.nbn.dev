@@ -10,6 +10,7 @@ export default define_navigation({
         {
             text: "Framework",
             items: [
+                {href: "/docs/framework/actions", badge: "NEW"},
                 {href: "/docs/framework/getting-started"},
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
