@@ -179,6 +179,8 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
 
 ## Dismissible
 
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
 You can optionally have the `Popover` dismissible by clicking outside the `Popover` child content via the `dismissible` property.
 
 ```svelte repl Popover Dismissible
