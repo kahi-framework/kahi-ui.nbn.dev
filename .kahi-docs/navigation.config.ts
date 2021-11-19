@@ -145,9 +145,9 @@ export default define_navigation({
             text: "Overlays",
             items: [
                 {href: "/docs/overlays/clickable"},
-                {href: "/docs/overlays/popover"},
-                {href: "/docs/overlays/offscreen"},
-                {href: "/docs/overlays/overlay"},
+                {href: "/docs/overlays/popover", badge: "UPDATED"},
+                {href: "/docs/overlays/offscreen", badge: "UPDATED"},
+                {href: "/docs/overlays/overlay", badge: "UPDATED"},
             ],
         },
 
