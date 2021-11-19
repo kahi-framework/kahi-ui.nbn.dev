@@ -20,6 +20,11 @@ description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, t
 types=["boolean"]
 
 [[properties.Popover]]
+name="once"
+description="Enables dismissing of the `Popover` whenever inner content is clicked."
+types=["boolean"]
+
+[[properties.Popover]]
 name="alignment_x"
 description="<strong>(<code>top/bottom</code> PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the <code>Popover</code> along the horizontal axis."
 default="center"
@@ -55,7 +60,7 @@ types=["{}"]
 
 # Popover
 
-`Popover` is typically used for hiding content that'll slide onto the page when activated via a button or something else.
+`Popover` is typically used for hiding content that'll clip onto the page when activated via a button or something else.
 
 ```svelte repl Popover Preview
 <script>
@@ -232,13 +237,13 @@ You can optionally have the `Popover` dismissible by clicking outside the `Popov
 </Popover>
 ```
 
-## State
+## Once
 
-> **WARNING**: If you use this to toggle the `Popover`, instead of something like the [`ContextButton`](../utilities/contextbutton.md). It will not work on Browsers without Javascript enabled.
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can manually open / close the `Popover` via the `state` property.
+You can enable having the `Popover` dismissed whenever inner content is clicked via the `once` property.
 
-```svelte repl Popover State
+```svelte repl Popover Once
 <script>
     import {
         Card,
@@ -248,24 +253,18 @@ You can manually open / close the `Popover` via the `state` property.
         Spacer,
         Text,
     } from "@kahi-ui/framework";
-
-    let state = false;
-
-    function on_click(event) {
-        state = false;
-    }
 </script>
 
 <Popover
-    logic_id="popover-preview"
+    logic_id="popover-once"
     alignment_x="right"
     spacing="medium"
-    bind:state
     dismissible
     hidden
+    once
 >
     <ContextButton palette="accent">
-        Open Popover
+        Open ONCE Popover
     </ContextButton>
 
     <Card.Container
@@ -275,7 +274,7 @@ You can manually open / close the `Popover` via the `state` property.
     >
         <Card.Section>
             <Menu.Container>
-                <Menu.Button on:click={on_click}>
+                <Menu.Button>
                     Copy
                     <Spacer
                         variation="inline"
@@ -285,7 +284,7 @@ You can manually open / close the `Popover` via the `state` property.
                     <Text is="kbd">CTRL+C</Text>
                 </Menu.Button>
 
-                <Menu.Button on:click={on_click}>
+                <Menu.Button>
                     Cut
                     <Spacer
                         variation="inline"
@@ -297,7 +296,7 @@ You can manually open / close the `Popover` via the `state` property.
 
                 <Menu.Divider />
 
-                <Menu.Button on:click={on_click}>
+                <Menu.Button>
                     Delete
                     <Spacer
                         variation="inline"
@@ -308,6 +307,49 @@ You can manually open / close the `Popover` via the `state` property.
                 </Menu.Button>
             </Menu.Container>
         </Card.Section>
+    </Card.Container>
+</Popover>
+```
+
+## State
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the `Popover` via the `state` property.
+
+```svelte repl Popover State
+<script>
+    import {
+        Button,
+        Card,
+        ContextButton,
+        Popover,
+    } from "@kahi-ui/framework";
+
+    let state = false;
+</script>
+
+<Button on:click={() => (state = !state)}>
+    Toggle Popover
+</Button>
+
+<Popover
+    logic_id="popover-state"
+    alignment_x="right"
+    spacing="medium"
+    bind:state
+    hidden
+>
+    <ContextButton palette="accent">
+        Open Popover
+    </ContextButton>
+
+    <Card.Container
+        palette="auto"
+        elevation="medium"
+        max_width="content-max"
+    >
+        <Card.Section>Toggleable Popover</Card.Section>
     </Card.Container>
 </Popover>
 ```

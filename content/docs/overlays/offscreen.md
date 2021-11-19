@@ -25,6 +25,11 @@ description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, t
 types=["boolean"]
 
 [[properties.Offscreen]]
+name="once"
+description="Enables dismissing of the `Offscreen` whenever inner content is clicked."
+types=["boolean"]
+
+[[properties.Offscreen]]
 name="alignment"
 description="Adjusts where the child content will be placed within the <code>Offscreen</code> along both axis."
 default="stretch"
@@ -324,6 +329,101 @@ You can optionally have the `Offscreen` dismissible by clicking the backdrop via
             </ContextButton>
 
             I am a DISMISSIBLE Offscreen.
+        </Stack>
+    </Box>
+</Offscreen>
+```
+
+## Once
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can enable having the `Offscreen` dismissed whenever inner content is clicked via the `once` property.
+
+```svelte repl Offscreen Once
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Button for="offscreen-once" palette="accent">
+    Open ONCE Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-once"
+    placement="top"
+    hidden
+    captive
+    dismissible
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+            >
+                X
+            </ContextButton>
+
+            Well, hello there!
+        </Stack>
+    </Box>
+</Offscreen>
+```
+
+## State
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the `Offscreen` via the `state` property.
+
+```svelte repl Offscreen State
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
+
+    let state = false;
+</script>
+
+<Button on:click={() => (state = !state)}>
+    Toggle Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-state"
+    placement="bottom"
+    bind:state
+    hidden
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+            >
+                X
+            </ContextButton>
+
+            Toggleable Offscreen
         </Stack>
     </Box>
 </Offscreen>

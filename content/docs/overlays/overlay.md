@@ -20,6 +20,11 @@ description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, t
 types=["boolean"]
 
 [[properties.Overlay]]
+name="once"
+description="Enables dismissing of the `Overlay` whenever inner content is clicked."
+types=["boolean"]
+
+[[properties.Overlay]]
 name="orientation"
 description="Renders the `Overlay` children horizontally."
 types=["horizontal", "{VIEWPORT}:horizontal"]
@@ -266,9 +271,61 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop via t
 </Overlay>
 ```
 
+## Once
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can enable having the `Overlay` dismissed whenever inner content is clicked via the `once` property.
+
+```svelte repl Overlay Once
+<script>
+    import {
+        Button,
+        Card,
+        Code,
+        ContextButton,
+        Overlay,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Button for="overlay-once" palette="accent">
+    Open ONCE Modal
+</Button>
+
+<Overlay
+    logic_id="overlay-once"
+    captive
+    dismissible
+    once
+>
+    <Card.Container
+        palette="auto"
+        max_width="viewport-75"
+    >
+        <Card.Header>Are you sure?</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Are you sure you want to delete:
+                <Code>important-file.docx</Code>?
+            </Text>
+        </Card.Section>
+
+        <Card.Footer>
+            <ContextButton variation="clear">
+                Cancel
+            </ContextButton>
+
+            <Button palette="negative">Delete</Button>
+        </Card.Footer>
+    </Card.Container>
+</Overlay>
+```
+
 ## State
 
-> **WARNING**: If you use this to toggle the `Overlay`, instead of something like the [`ContextButton`](../utilities/contextbutton.md). It will not work on Browsers without Javascript enabled.
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
 You can manually open / close the `Overlay` via the `state` property.
 
@@ -281,14 +338,14 @@ You can manually open / close the `Overlay` via the `state` property.
         Overlay,
     } from "@kahi-ui/framework";
 
-    let toggle = false;
-
-    const on_click = () => (toggle = !toggle);
+    let state = false;
 </script>
 
-<Button on:click={on_click}>Toggle Modal</Button>
+<Button on:click={() => (state = !state)}>
+    Toggle Modal
+</Button>
 
-<Overlay logic_id="overlay-state" bind:state={toggle}>
+<Overlay logic_id="overlay-state" bind:state>
     <Card.Container
         palette="auto"
         max_width="viewport-75"
