@@ -144,6 +144,8 @@ You can enable auto scrolling to the currently set `value` when `TimePicker` is 
 
 ## 12 Hour
 
+> **NOTE**: By default, this value respects the user default if available.
+
 You can have the hours render as 12-hour time (1...12 AM/PM) instead of 24-hour time (0...23) via the `hour_12` property.
 
 ```svelte repl TimePicker 12 Hour
