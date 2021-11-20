@@ -84,7 +84,7 @@ export default define_navigation({
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/filedropinput", badge: "UPDATED"},
-                {href: "/docs/interactables/form"},
+                {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput"},
