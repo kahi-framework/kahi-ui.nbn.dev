@@ -411,7 +411,7 @@ You can adjust which side your content is placed on via the `placement` property
 
 ## Alignment
 
-You can align `Popover` content via the `alignment_x` and `alignment_y` properties respectively.
+You can align `Popover` which direction the child content breaks, via the `alignment_x` and `alignment_y` properties respectively.
 
 ```svelte repl Popover Alignment
 <script>
