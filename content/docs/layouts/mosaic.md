@@ -6,32 +6,32 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Mosaic]]
 name="alignment"
-description="Adjusts where the child items will be placed within the <code>Mosaic</code> along both axis."
+description="Adjusts where the child items will be placed within the `Mosaic` along both axis."
 types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Mosaic]]
 name="alignment_x"
-description="Adjusts where the child items will be placed within the <code>Mosaic</code> along the horizontal axis."
+description="Adjusts where the child items will be placed within the `Mosaic` along the horizontal axis."
 types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Mosaic]]
 name="alignment_y"
-description="Adjusts where the child items will be placed within the <code>Mosaic</code> along the vertical axis."
+description="Adjusts where the child items will be placed within the `Mosaic` along the vertical axis."
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Mosaic]]
 name="spacing"
-description="Adjusts the visual spacing between child items in the <code>Mosaic</code>."
+description="Adjusts the visual spacing between child items in the `Mosaic`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Mosaic]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between child items in the <code>Mosaic</code>."
+description="Adjusts the horizontal visual spacing between child items in the `Mosaic`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Mosaic]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between child items in the <code>Mosaic</code>."
+description="Adjusts the vertical visual spacing between child items in the `Mosaic`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[slots.Mosaic]]

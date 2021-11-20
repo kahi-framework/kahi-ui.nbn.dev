@@ -1,22 +1,22 @@
 +++
 [[properties.Overlay]]
 name="logic_id"
-description="Renders a <code>&lt;input role=\"presentation\" type=\"checkbox\" /&gt;</code> as sibling before the <code>Overlay</code>, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `Overlay`, which controls the visible state via CSS."
 types=["string"]
 
 [[properties.Overlay]]
 name="state"
-description="Controls the visible state of the <code>Overlay</code> whenever <code>logic_id</code> is set."
+description="Controls the visible state of the `Overlay` whenever `logic_id` is set."
 types=["boolean"]
 
 [[properties.Overlay]]
 name="captive"
-description="Renders a <code>ContextBackdrop</code> as a sibling before the <code>Overlay</code>, which becomes active whenever the visible state is active."
+description="Renders a `ContextBackdrop` as a sibling before the `Overlay`, which becomes active whenever the visible state is active."
 types=["boolean"]
 
 [[properties.Overlay]]
 name="dismissible"
-description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, turning off the visible state when clicked."
+description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
 types=["boolean"]
 
 [[properties.Overlay]]
@@ -31,35 +31,35 @@ types=["horizontal", "{VIEWPORT}:horizontal"]
 
 [[properties.Overlay]]
 name="alignment"
-description="Adjusts where the child content will be placed within the <code>Overlay</code> along both axis."
+description="Adjusts where the child content will be placed within the `Overlay` along both axis."
 default="center"
 types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Overlay]]
 name="alignment_x"
-description="Adjusts where the child content will be placed within the <code>Overlay</code> along the horizontal axis."
+description="Adjusts where the child content will be placed within the `Overlay` along the horizontal axis."
 default="center"
 types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Overlay]]
 name="alignment_y"
-description="Adjusts where the child content will be placed within the <code>Overlay</code> along the vertical axis."
+description="Adjusts where the child content will be placed within the `Overlay` along the vertical axis."
 default="center"
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Overlay]]
 name="spacing"
-description="Adjusts the visual spacing between child content in the <code>Overlay</code>."
+description="Adjusts the visual spacing between child content in the `Overlay`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Overlay]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between child content in the <code>Overlay</code>."
+description="Adjusts the horizontal visual spacing between child content in the `Overlay`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Overlay]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between child content in the <code>Overlay</code>."
+description="Adjusts the vertical visual spacing between child content in the `Overlay`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[events.Overlay]]

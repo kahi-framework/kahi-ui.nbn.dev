@@ -1,22 +1,22 @@
 +++
 [[properties."Aside.Container"]]
 name="logic_id"
-description="Alters the <code>Aside.Container</code> to be collapsible on Mobile / Tablet Viewports by wrapping the layout in a <code><a href='../overlays/offscreen'>Offscreen</a></code> Component."
+description="Alters the `Aside.Container` to be collapsible on Mobile / Tablet Viewports by wrapping the layout in a [`Offscreen`](../overlays/offscreen.md) Component."
 types=["string"]
 
 [[properties."Aside.Container"]]
 name="state"
-description="Controls the visible state of the <code>Aside.Container</code> whenever <code>logic_id</code> is set."
+description="Controls the visible state of the `Aside.Container` whenever `logic_id` is set."
 types=["boolean"]
 
 [[properties."Aside.Container"]]
 name="captive"
-description="Renders a <code>ContextBackdrop</code> as a sibling before the <code>Aside.Container</code>, which becomes active whenever the visible state is active."
+description="Renders a `ContextBackdrop` as a sibling before the `Aside.Container`, which becomes active whenever the visible state is active."
 types=["boolean"]
 
 [[properties."Aside.Container"]]
 name="dismissible"
-description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, turning off the visible state when clicked."
+description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
 types=["boolean"]
 
 [[properties."Aside.Container"]]
@@ -26,13 +26,13 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties."Aside.Container"]]
 name="placement"
-description="Adjusts which side the content divider border is placed, and which side the <code>Aside.Container</code> slides in from when the <code>logic_id</code> property is set."
+description="Adjusts which side the content divider border is placed, and which side the `Aside.Container` slides in from when the `logic_id` property is set."
 default="left"
 types=["left", "right"]
 
 [[properties."Aside.Container"]]
 name="variation"
-description="Adjusts the <code>Aside.Container</code> to remain at the top of the Viewport, even when the parent body / element is scrolled."
+description="Adjusts the `Aside.Container` to remain at the top of the Viewport, even when the parent body / element is scrolled."
 types=["sticky"]
 
 [[events."Aside.Container"]]

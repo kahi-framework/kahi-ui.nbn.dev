@@ -1,37 +1,37 @@
 +++
 [[properties.Stack]]
 name="orientation"
-description="Renders the <code>Stack</code> horizontally."
+description="Renders the `Stack` horizontally."
 types=["horizontal", "{VIEWPORT}:horizontal"]
 
 [[properties.Stack]]
 name="alignment"
-description="Adjusts where the child items will be placed within the <code>Stack</code> along both axis."
+description="Adjusts where the child items will be placed within the `Stack` along both axis."
 types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Stack]]
 name="alignment_x"
-description="Adjusts where the child items will be placed within the <code>Stack</code> along the horizontal axis."
+description="Adjusts where the child items will be placed within the `Stack` along the horizontal axis."
 types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Stack]]
 name="alignment_y"
-description="Adjusts where the child items will be placed within the <code>Stack</code> along the vertical axis."
+description="Adjusts where the child items will be placed within the `Stack` along the vertical axis."
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties.Stack]]
 name="spacing"
-description="Adjusts the visual spacing between child items in the <code>Stack</code>."
+description="Adjusts the visual spacing between child items in the `Stack`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Stack]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between child items in the <code>Stack</code>."
+description="Adjusts the horizontal visual spacing between child items in the `Stack`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Stack]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between child items in the <code>Stack</code>."
+description="Adjusts the vertical visual spacing between child items in the `Stack`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[slots.Stack]]

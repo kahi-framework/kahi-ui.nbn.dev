@@ -1,22 +1,22 @@
 +++
 [[properties.Popover]]
 name="logic_id"
-description="Renders a <code>&lt;input role=\"presentation\" type=\"checkbox\" /&gt;</code> as sibling before the <code>Popover</code>, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `Popover`, which controls the visible state via CSS."
 types=["string"]
 
 [[properties.Popover]]
 name="hidden"
-description="Controls when the <code>Popover</code> hides its child content."
+description="Controls when the `Popover` hides its child content."
 types=["boolean", "{VIEWPORT}"]
 
 [[properties.Popover]]
 name="state"
-description="Controls the visible state of the <code>Popover</code> whenever <code>logic_id</code> is set."
+description="Controls the visible state of the `Popover` whenever `logic_id` is set."
 types=["boolean"]
 
 [[properties.Popover]]
 name="dismissible"
-description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, turning off the visible state when clicked."
+description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
 types=["boolean"]
 
 [[properties.Popover]]
@@ -26,19 +26,19 @@ types=["boolean"]
 
 [[properties.Popover]]
 name="alignment_x"
-description="<strong>(<code>top/bottom</code> PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the <code>Popover</code> along the horizontal axis."
+description="<strong>(`top/bottom` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Popover` along the horizontal axis."
 default="center"
 types=["center", "left", "right"]
 
 [[properties.Popover]]
 name="alignment_y"
-description="<strong>(<code>left/right</code> PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the <code>Popover</code> along the vertical axis."
+description="<strong>(`left/right` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Popover` along the vertical axis."
 default="center"
 types=["center", "bottom", "top"]
 
 [[properties.Popover]]
 name="placement"
-description="Adjusts where the child content will be placed within the <code>Popover</code> along the vertical axis."
+description="Adjusts where the child content will be placed within the `Popover` along the vertical axis."
 default="left"
 types=["top", "left", "bottom", "right"]
 

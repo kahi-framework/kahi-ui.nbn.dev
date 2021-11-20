@@ -16,7 +16,7 @@ types=["string"]
 
 [[properties."*"]]
 name="name"
-description="Sets an identifier that will be used in form submissions or targettable by specific Components like <code>Anchor</code>."
+description="Sets an identifier that will be used in form submissions or targettable by specific Components like `Anchor`."
 types=["string"]
 
 [[properties."*"]]

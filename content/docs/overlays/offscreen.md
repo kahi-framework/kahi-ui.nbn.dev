@@ -1,27 +1,27 @@
 +++
 [[properties.Offscreen]]
 name="logic_id"
-description="Renders a <code>&lt;input role=\"presentation\" type=\"checkbox\" /&gt;</code> as sibling before the <code>Offscreen</code>, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `Offscreen`, which controls the visible state via CSS."
 types=["string"]
 
 [[properties.Offscreen]]
 name="hidden"
-description="Controls when the <code>Offscreen</code> hides its child content."
+description="Controls when the `Offscreen` hides its child content."
 types=["boolean", "{VIEWPORT}"]
 
 [[properties.Offscreen]]
 name="state"
-description="Controls the visible state of the <code>Offscreen</code> whenever <code>logic_id</code> is set."
+description="Controls the visible state of the `Offscreen` whenever `logic_id` is set."
 types=["boolean"]
 
 [[properties.Offscreen]]
 name="captive"
-description="Renders a <code>ContextBackdrop</code> as a sibling before the <code>Offscreen</code>, which becomes active whenever the visible state is active."
+description="Renders a `ContextBackdrop` as a sibling before the `Offscreen`, which becomes active whenever the visible state is active."
 types=["boolean"]
 
 [[properties.Offscreen]]
 name="dismissible"
-description="Adjusts the sibling <code>ContextBackdrop</code> to be clickable, turning off the visible state when clicked."
+description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
 types=["boolean"]
 
 [[properties.Offscreen]]
@@ -31,25 +31,25 @@ types=["boolean"]
 
 [[properties.Offscreen]]
 name="alignment"
-description="Adjusts where the child content will be placed within the <code>Offscreen</code> along both axis."
+description="Adjusts where the child content will be placed within the `Offscreen` along both axis."
 default="stretch"
 types=["center", "stretch"]
 
 [[properties.Offscreen]]
 name="alignment_x"
-description="<strong>(<code>top/bottom</code> PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the <code>Offscreen</code> along the horizontal axis."
+description="<strong>(`top/bottom` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Offscreen` along the horizontal axis."
 default="stretch"
 types=["center", "stretch", "left", "right"]
 
 [[properties.Offscreen]]
 name="alignment_y"
-description="<strong>(<code>left/right</code> PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the <code>Offscreen</code> along the vertical axis."
+description="<strong>(`left/right` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Offscreen` along the vertical axis."
 default="stretch"
 types=["center", "stretch", "bottom", "top"]
 
 [[properties.Offscreen]]
 name="placement"
-description="Adjusts where the child content will be placed within the <code>Offscreen</code> along the vertical axis."
+description="Adjusts where the child content will be placed within the `Offscreen` along the vertical axis."
 default="left"
 types=["top", "left", "bottom", "right"]
 
