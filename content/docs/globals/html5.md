@@ -16,7 +16,7 @@ types=["string"]
 
 [[properties."*"]]
 name="name"
-description="Sets an identifier that will be used in form submissions or targettable by specific Components like <code>Anchor</code>."
+description="Sets an identifier that will be used in form submissions or targettable by specific Components like `Anchor`."
 types=["string"]
 
 [[properties."*"]]
@@ -28,11 +28,81 @@ types=["string"]
 name="tabindex"
 description="Alters how the Browser will cycle through the elements within the Component's current stacking context."
 types=["number", "string"]
+
+[[events."*"]]
+name="click"
+description="Forwards the [`click`](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event) event whenever the Component or inner content left clicked."
+types=["MouseEvent"]
+
+[[events."*"]]
+name="contextmenu"
+description="Forwards the [`contextmenu`](https://developer.mozilla.org/en-US/docs/Web/API/Element/contextmenu_event) event whenever the Component or inner content is right clicked."
+types=["MouseEvent"]
+
+[[events."*"]]
+name="dblclick"
+description="Forwards the [`dblclick`](https://developer.mozilla.org/en-US/docs/Web/API/Element/dblclick_event) event whenever the Component or inner content is double clicked."
+types=["MouseEvent"]
+
+[[events."*"]]
+name="focusin"
+description="Forwards the [`focusin`](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusin_event) event whenever focus is obtained by the Component or inner content."
+types=["FocusEvent"]
+
+[[events."*"]]
+name="focusout"
+description="Forwards the [`focusout`](https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event) event whenever focus is lost by the Component or inner content."
+types=["FocusEvent"]
+
+[[events."*"]]
+name="keydown"
+description="Forwards the [`keydown`](https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event) event whenever a keyboard button is pressed down while the Component or inner content has focus."
+types=["KeyboardEvent"]
+
+[[events."*"]]
+name="keyup"
+description="Forwards the [`keyup`](https://developer.mozilla.org/en-US/docs/Web/API/Element/keyup_event) event whenever a keyboard button is released while the Component or inner content has focus."
+types=["KeyboardEvent"]
+
+[[events."*"]]
+name="pointercancel"
+description="Forwards the [`pointercancel`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointercancel_event) event whenever the Component or inner content has interuptions like palm rejection or screen orientation rotated."
+types=["PointerEvent"]
+
+[[events."*"]]
+name="pointerdown"
+description="Forwards the [`pointerdown`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointerdown_event) event whenever the Component or inner content has buttons (mouse) pressed or physical contact (pen, touch) made."
+types=["PointerEvent"]
+
+[[events."*"]]
+name="pointerenter"
+description="Forwards the [`pointerenter`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointerenter_event) event whenever the pointer (mouse, pen, touch) enters the bounding box of the Component or inner content."
+types=["PointerEvent"]
+
+[[events."*"]]
+name="pointerleave"
+description="Forwards the [`pointerleave`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointerleave_event) event whenever the pointer (mouse, pen, touch) leaves the bounding box of the Component or inner content."
+types=["PointerEvent"]
+
+[[events."*"]]
+name="pointermove"
+description="Forwards the [`pointermove`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointermove_event) event whenever the pointer (mouse, pen, touch) is moving within the bounding box of the Component or inner content."
+types=["PointerEvent"]
+
+[[events."*"]]
+name="pointerout"
+description="Forwards the [`pointerout`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointerout_event) event, which is similar to `pointerleave` but also includes interuptions like pointing device leaving digitizer."
+types=["PointerEvent"]
+
+[[events."*"]]
+name="pointerup"
+description="Forwards the [`pointerup`](https://developer.mozilla.org/en-US/docs/Web/API/Element/pointerup_event) event whenever the Component or inner content has buttons (mouse) released or physical contact (pen, touch) lifted."
+types=["PointerEvent"]
 +++
 
 # HTML5
 
-All Components have access to several common HTML5 global attributes.
+All Components have access to common HTML5 global attributes and events.
 
 ## class
 

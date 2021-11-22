@@ -6,7 +6,7 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties.Wave]]
 name="size"
-description="Renders the <code>Wave</code> at a different sizes."
+description="Renders the `Wave` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
 [[slots.Wave]]

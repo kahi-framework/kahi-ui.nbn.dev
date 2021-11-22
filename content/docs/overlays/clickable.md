@@ -34,16 +34,6 @@ name="for"
 description="Sets the [`for`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attr-for) attribute of the element that is targetted."
 types=["string"]
 
-[[events."Clickable.Anchor"]]
-name="click"
-description="Fires whenever clicked."
-types=["MouseEvent"]
-
-[[events."Clickable.Label"]]
-name="click"
-description="Fires whenever clicked."
-types=["MouseEvent"]
-
 [[slots."Clickable.Anchor"]]
 name="default"
 description="Default unnamed slot."

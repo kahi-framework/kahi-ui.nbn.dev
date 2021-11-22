@@ -15,8 +15,19 @@ export default define_navigation({
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
                 {href: "/docs/framework/custom-properties"},
+                {href: "/docs/framework/actions", badge: "NEW"},
                 {href: "/docs/framework/elements"},
                 {href: "/docs/framework/events"},
+            ],
+        },
+
+        {
+            text: "Globals",
+            items: [
+                {href: "/docs/globals/html5", badge: "UPDATED"},
+                {href: "/docs/globals/hidden"},
+                {href: "/docs/globals/sizings"},
+                {href: "/docs/globals/spacings"},
             ],
         },
 
@@ -73,7 +84,7 @@ export default define_navigation({
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/filedropinput", badge: "UPDATED"},
-                {href: "/docs/interactables/form"},
+                {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput"},
@@ -87,7 +98,7 @@ export default define_navigation({
                 {href: "/docs/widgets/daystepper", badge: "NEW"},
                 {href: "/docs/widgets/monthpicker", badge: "NEW"},
                 {href: "/docs/widgets/monthstepper", badge: "NEW"},
-                {href: "/docs/widgets/timepicker", badge: "NEW"},
+                {href: "/docs/widgets/timepicker", badge: "UPDATED"},
                 {href: "/docs/widgets/yearpicker", badge: "NEW"},
                 {href: "/docs/widgets/yearstepper", badge: "NEW"},
             ],
@@ -134,9 +145,9 @@ export default define_navigation({
             text: "Overlays",
             items: [
                 {href: "/docs/overlays/clickable"},
-                {href: "/docs/overlays/popover"},
-                {href: "/docs/overlays/offscreen"},
-                {href: "/docs/overlays/overlay"},
+                {href: "/docs/overlays/offscreen", badge: "UPDATED"},
+                {href: "/docs/overlays/overlay", badge: "UPDATED"},
+                {href: "/docs/overlays/popover", badge: "UPDATED"},
             ],
         },
 
@@ -150,16 +161,6 @@ export default define_navigation({
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
                 {href: "/docs/utilities/transition"},
-            ],
-        },
-
-        {
-            text: "Modifiers",
-            items: [
-                {href: "/docs/modifiers/html5"},
-                {href: "/docs/modifiers/hidden"},
-                {href: "/docs/modifiers/sizings"},
-                {href: "/docs/modifiers/spacings"},
             ],
         },
 

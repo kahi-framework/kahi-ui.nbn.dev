@@ -64,11 +64,6 @@ name="for"
 description="Renders the `Button` as a `<label role=\"button\">` which targets the element ID set to the `for` property."
 types=["string"]
 
-[[events.Button]]
-name="click"
-description="Fires whenever the `Button` is clicked."
-types=["MouseEvent"]
-
 [[slots.Button]]
 name="default"
 description="Default unnamed slot."

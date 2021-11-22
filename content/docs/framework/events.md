@@ -4,12 +4,14 @@ Like [binding normal DOM events](https://svelte.dev/tutorial/dom-events) with Sv
 
 ```svelte repl Events Preview
 <script>
-    import {Button} from "@kahi-ui/framework";
+    import {Check} from "@kahi-ui/framework";
 
-    function on_click(event) {
-        console.log("I was clicked!");
+    function on_change(event) {
+        console.log("I was changed to:", state);
     }
+
+    let state = false;
 </script>
 
-<Button on:click={on_click}>Click me!</Button>
+<Check bind:state on:change={on_change} />
 ```

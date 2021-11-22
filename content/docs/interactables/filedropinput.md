@@ -20,11 +20,6 @@ description="Fires whenever the `FileDropInput` value has changed."
 types=["MouseEvent"]
 
 [[events.FileDropInput]]
-name="click"
-description="Fires whenever the `FileDropInput` is clicked."
-types=["MouseEvent"]
-
-[[events.FileDropInput]]
 name="input"
 description="Fires whenever the `FileDropInput` value has changed."
 types=["MouseEvent"]

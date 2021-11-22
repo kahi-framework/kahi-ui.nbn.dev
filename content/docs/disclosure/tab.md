@@ -64,16 +64,6 @@ name="change"
 description="Fires whenever the `logic_state` changes."
 types=["CustomEvent<void>"]
 
-[[events."Tab.Anchor"]]
-name="click"
-description="Fires whenever the `Tab.Anchor` is clicked."
-types=["MouseEvent"]
-
-[[events."Tab.Label"]]
-name="click"
-description="Fires whenever the `Tab.Label` is clicked."
-types=["MouseEvent"]
-
 [[slots."Tab.Container"]]
 name="default"
 description="Default unnamed slot."
