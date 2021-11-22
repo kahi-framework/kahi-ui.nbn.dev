@@ -158,6 +158,22 @@ You can have the hours render as 12-hour time (1...12 AM/PM) instead of 24-hour 
 <TimePicker palette="accent" {value} hour_12 />
 ```
 
+## 24 Hour
+
+> **NOTE**: By default, this value respects the user default if available.
+
+You can have the hours render as 24-hour time (0...23) instead of 12-hour time (1...12 AM/PM) via the `hour_12` property.
+
+```svelte repl TimePicker 24 Hour
+<script>
+    import {TimePicker} from "@kahi-ui/framework";
+
+    const value = "13:30:15";
+</script>
+
+<TimePicker palette="accent" hour_12={false} {value} />
+```
+
 ## Disabled
 
 You can disable all interactivity via the `disabled` property.
