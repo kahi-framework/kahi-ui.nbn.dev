@@ -35,19 +35,9 @@ description="Sets the value sent whenever the parent `<form>` is submitted."
 types=["string"]
 
 [[events.Switch]]
-name="blur"
-description="Fires whenever the `Switch` loses focus."
-types=["FocusEvent"]
-
-[[events.Switch]]
 name="change"
 description="Fires whenever the `Switch` has its value changed."
 types=["InputEvent"]
-
-[[events.Switch]]
-name="focus"
-description="Fires whenever the `Switch` gains focus."
-types=["FocusEvent"]
 
 [[events.Switch]]
 name="input"

@@ -92,19 +92,9 @@ description="<strong>(TEXTAREA ONLY)</strong> Sets if Browser spellcheck should 
 types=["boolean"]
 
 [[events.TextInput]]
-name="blur"
-description="Fires whenever the `TextInput` loses focus."
-types=["FocusEvent"]
-
-[[events.TextInput]]
 name="change"
 description="Fires whenever the `TextInput` loses focus and its value was changed."
 types=["InputEvent"]
-
-[[events.TextInput]]
-name="focus"
-description="Fires whenever the `TextInput` gains focus."
-types=["FocusEvent"]
 
 [[events.TextInput]]
 name="input"

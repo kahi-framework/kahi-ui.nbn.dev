@@ -40,19 +40,9 @@ description="Sets the value sent whenever the parent `<form>` is submitted."
 types=["string"]
 
 [[events.Check]]
-name="blur"
-description="Fires whenever the `Check` loses focus."
-types=["FocusEvent"]
-
-[[events.Check]]
 name="change"
 description="Fires whenever the `Check` has its value changed."
 types=["InputEvent"]
-
-[[events.Check]]
-name="focus"
-description="Fires whenever the `Check` gains focus."
-types=["FocusEvent"]
 
 [[events.Check]]
 name="input"
