@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
+        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
+
+        
+
+		
+
+		<link rel="modulepreload" href="/_app/start-4f1d2ccd.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-7663b874.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-9df6970e.js">
+		<link rel="modulepreload" href="/_app/pages/repl/__layout.svelte-7df862b5.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-9b6e80b3.js">
+		<link rel="modulepreload" href="/_app/pages/repl/[...document]/[identifier].svelte-86daa005.js">
+		<link rel="modulepreload" href="/_app/chunks/[identifier]-7dd7287d.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-72c206c4.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-eaa62602.css">
+		<link rel="stylesheet" href="/_app/assets/pages/repl/__layout.svelte-6876fa8d.css">
+
+		<script type="module">
+			import { start } from "/_app/start-4f1d2ccd.js";
+			start({
+				target: document.querySelector("body"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-9df6970e.js"),
+						import("/_app/pages/repl/__layout.svelte-7df862b5.js"),
+						import("/_app/pages/repl/[...document]/[identifier].svelte-86daa005.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-group",
+						query: new URLSearchParams(""),
+						params: {document:"docs\u002Finteractables\u002Fform",identifier:"form-group"}
+					}
+				}
+			});
+		</script>
+
+        <!--
+            HACK: This is just here due to time to execute Javascript causing
+            a flash of color on page load
+        -->
+        <script type="application/javascript">
+            const theme = localStorage.getItem("kahi-docs.preferences.theme");
+            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+<a href="/api/v3/search.json" hidden></a>
+
+
+    <div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+    <section>Your client <strong class="text ">does not</strong> support <strong class="text ">Javascript</strong>,
+        failed to load <strong class="text ">REPL</strong>.
+    </section></div>
+
+
+
+			<script type="application/json" data-type="svelte-data" data-url="/api/v3/content/docs/interactables/form.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"properties\":{\"created_at\":1626291196000,\"custom_properties\":{\"Form.Control\":[{\"name\":\"--form-control-gap\",\"description\":\"\u003Cp\u003EControls the spacing gap between child elements, e.g. icons.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]}],\"Form.Label\":[{\"name\":\"--form-label-gap\",\"description\":\"\u003Cp\u003EControls the spacing gap between child elements, e.g. icons.\u003C\u002Fp\u003E\\n\",\"types\":[\"\u003Clength\u003E\"]}]},\"events\":{\"Form.Group\":[{\"name\":\"change\",\"description\":\"\u003Cp\u003EFires whenever the \u003Ccode\u003Elogic_state\u003C\u002Fcode\u003E has its value changed via the \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"CustomEvent\u003Cvoid\u003E\"]}]},\"identifier\":\"interactables\u002Fform\",\"modified_at\":1637605563000,\"properties\":{\"Form.Control\":[{\"name\":\"logic_id\",\"description\":\"\u003Cp\u003ESets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-id\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to target \u002F assign as.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"logic_name\",\"description\":\"\u003Cp\u003ESets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-name\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ename\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to group as.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}],\"Form.Group\":[{\"name\":\"logic_name\",\"description\":\"\u003Cp\u003ESets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-name\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ename\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to group as.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"logic_id\",\"description\":\"\u003Cp\u003ESets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-id\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to target \u002F assign as.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]},{\"name\":\"logic_state\",\"description\":\"\u003Cp\u003EControls the currently active Form Component via a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}],\"Form.Label\":[{\"name\":\"for\",\"description\":\"\u003Cp\u003ESets the \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Flabel#attr-for\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Efor\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute of the element that is targetted.\u003C\u002Fp\u003E\\n\",\"types\":[\"string\"]}]},\"sections\":[{\"identifier\":\"form\",\"level\":1,\"text\":\"Form\"},{\"identifier\":\"helptext\",\"level\":2,\"text\":\"HelpText\"},{\"identifier\":\"label\",\"level\":2,\"text\":\"Label\"},{\"identifier\":\"control\",\"level\":2,\"text\":\"Control\"},{\"identifier\":\"group\",\"level\":2,\"text\":\"Group\"}],\"slots\":{\"Form.Control\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}],\"Form.Group\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}],\"Form.HelpText\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}],\"Form.Label\":[{\"name\":\"default\",\"description\":\"\u003Cp\u003EDefault unnamed slot.\u003C\u002Fp\u003E\\n\",\"types\":[\"{}\"]}]},\"snippets\":[{\"identifier\":\"form-helptext\",\"script\":\"\u003Cscript\u003E\\n    import {Form, TextInput} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CTextInput type=\\\"password\\\" \u002F\u003E\\n\u003CForm.HelpText\u003E\\n    passwords must be 8+ characters at minimum\\n\u003C\u002FForm.HelpText\u003E\",\"syntax\":\"svelte\",\"title\":\"Form HelpText\"},{\"identifier\":\"form-label\",\"script\":\"\u003Cscript\u003E\\n    import {Check, Form} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Label for=\\\"form-label-group\\\"\u003E\\n    \u003CCheck \u002F\u003E\\n    Click me!\\n\u003C\u002FForm.Label\u003E\",\"syntax\":\"svelte\",\"title\":\"Form Label\"},{\"identifier\":\"form-control\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Code,\\n        Form,\\n        TextInput,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let value = \\\"sample@sample.org\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Control logic_id=\\\"form-control\\\"\u003E\\n    \u003CForm.Label\u003E\\n        Register E-Mail for Newsletter\\n    \u003C\u002FForm.Label\u003E\\n\\n    \u003CTextInput bind:value \u002F\u003E\\n    \u003CForm.HelpText\u003E\\n        Make sure to enter a valid E-Mail Address, e.g.\\n        \u003CCode\u003Esample@sample.org\u003C\u002FCode\u003E\\n    \u003C\u002FForm.HelpText\u003E\\n\u003C\u002FForm.Control\u003E\",\"syntax\":\"svelte\",\"title\":\"Form Control\"},{\"identifier\":\"form-group\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let logic_state = \\\"vanilla\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText is=\\\"strong\\\"\u003E\\n    Select an Ice Cream Flavor\\n    \u003CText is=\\\"sup\\\"\u003E{logic_state}\u003C\u002FText\u003E\\n\u003C\u002FText\u003E\\n\\n\u003CStack spacing=\\\"small\\\" margin_top=\\\"small\\\"\u003E\\n    \u003CForm.Group\\n        logic_name=\\\"form-group\\\"\\n        bind:logic_state\\n    \u003E\\n        \u003CRadio\\n            id=\\\"form-group-bubblegum\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"bubblegum\\\"\\n        \u003E\\n            Bubblegum\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"form-group-chocolate\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"chocolate\\\"\\n        \u003E\\n            Chocolate\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"form-group-vanilla\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"vanilla\\\"\\n        \u003E\\n            Vanilla\\n        \u003C\u002FRadio\u003E\\n    \u003C\u002FForm.Group\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Form Group\"}],\"title\":\"Form\"},\"render\":\"\u003Ch1 id=\\\"form\\\"\u003EForm\u003C\u002Fh1\u003E\\n\u003Cp\u003EForm Components are helpers to supplement input Components that are meant for webforms like \u003Ca href=\\\".\u002Ftextinput\\\"\u003ETextInput\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"helptext\\\"\u003EHelpText\u003C\u002Fh2\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.HelpText\u003C\u002Fcode\u003E is typically used for displaying information about how to input information into a form properly.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-helptext?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-helptext?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"label\\\"\u003ELabel\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: This Component sets a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for Form IDs \u002F Names that child input Components consume.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.Label\u003C\u002Fcode\u003E focuses the target input Component whenever its child content is clicked.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-label?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-label?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"control\\\"\u003EControl\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: This Component sets a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for Form IDs \u002F Names that child input Components consume.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.Control\u003C\u002Fcode\u003E is typically used to display form and input Components in a preformatted stack.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-control?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-control?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\u003Ch2 id=\\\"group\\\"\u003EGroup\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: This Component is renderless, it does not render its own DOM nodes.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.Group\u003C\u002Fcode\u003E let's you directly set the relevant form-related \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Contexts\u003C\u002Fa\u003E via its properties without using any preformatted shown above.\u003C\u002Fp\u003E\\n\u003Ciframe\\n    class=\\\"snippet-repl\\\"\\n    src=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-group?rotation=horizontal\\\"\\n    sandbox=\\\"allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-same-origin\\\" loading=\\\"lazy\\\"\\n\u003E\u003C\u002Fiframe\u003E\\n\u003Ca href=\\\"\u002Frepl\u002Fdocs\u002Finteractables\u002Fform\u002Fform-group?rotation=horizontal\\\" hidden sveltekit:prefetch\u003E\u003C\u002Fa\u003E\"}}"}</script>
+		
+    </body>
+</html>
