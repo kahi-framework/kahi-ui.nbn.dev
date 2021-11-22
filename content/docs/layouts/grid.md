@@ -1,52 +1,52 @@
 +++
 [[properties."Grid.Container"]]
 name="points"
-description="In a point scale of 1...12, sets how the <code>Grid.Container</code> divides up the space available to the child items."
+description="In a point scale of 1...12, sets how the `Grid.Container` divides up the space available to the child items."
 types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
 
 [[properties."Grid.Container"]]
 name="alignment"
-description="Adjusts where the child items will be placed within the <code>Grid.Container</code> along both axis."
+description="Adjusts where the child items will be placed within the `Grid.Container` along both axis."
 types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties."Grid.Container"]]
 name="alignment_x"
-description="Adjusts where the child items will be placed within the <code>Grid.Container</code> along the horizontal axis."
+description="Adjusts where the child items will be placed within the `Grid.Container` along the horizontal axis."
 types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties."Grid.Container"]]
 name="alignment_y"
-description="Adjusts where the child items will be placed within the <code>Grid.Container</code> along the vertical axis."
+description="Adjusts where the child items will be placed within the `Grid.Container` along the vertical axis."
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 
 [[properties."Grid.Container"]]
 name="spacing"
-description="Adjusts the visual spacing between child items in the <code>Grid.Container</code>."
+description="Adjusts the visual spacing between child items in the `Grid.Container`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Container"]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between child items in the <code>Grid.Container</code>."
+description="Adjusts the horizontal visual spacing between child items in the `Grid.Container`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Container"]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between child items in the <code>Grid.Container</code>."
+description="Adjusts the vertical visual spacing between child items in the `Grid.Container`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Item"]]
 name="span"
-description="In a point scale of 1...12, sets how many grid columns and rows the <code>Grid.Item</code> will span."
+description="In a point scale of 1...12, sets how many grid columns and rows the `Grid.Item` will span."
 types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
 
 [[properties."Grid.Item"]]
 name="span_x"
-description="In a point scale of 1...12, sets how many grid columns the <code>Grid.Item</code> will span."
+description="In a point scale of 1...12, sets how many grid columns the `Grid.Item` will span."
 types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
 
 [[properties."Grid.Item"]]
 name="span_y"
-description="In a point scale of 1...12, sets how many grid rows the <code>Grid.Item</code> will span."
+description="In a point scale of 1...12, sets how many grid rows the `Grid.Item` will span."
 types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
 
 [[slots."Grid.Container"]]

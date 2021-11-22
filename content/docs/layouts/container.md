@@ -1,7 +1,7 @@
 +++
 [[properties.Container]]
 name="viewport"
-description="Controls the max width of the <code>Container</code> in relation to a Viewport preset."
+description="Controls the max width of the `Container` in relation to a Viewport preset."
 default="prose"
 types=["prose", "mobile", "table", "desktop", "widescreen", "{VIEWPORT}:{SIZE}"]
 

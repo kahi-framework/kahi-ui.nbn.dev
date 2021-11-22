@@ -29,11 +29,6 @@ name="change"
 description="Fires whenever the `logic_state` changes."
 types=["CustomEvent<void>"]
 
-[[events."Accordion.Label"]]
-name="click"
-description="Fires whenever the `Accordion.Label` is clicked."
-types=["MouseEvent"]
-
 [[slots."Accordion.Container"]]
 name="default"
 description="Default unnamed slot."

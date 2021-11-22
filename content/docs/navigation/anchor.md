@@ -34,11 +34,6 @@ name="target"
 description="Sets the target of the `Anchor` being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
 
-[[events.Anchor]]
-name="click"
-description="Fires whenever the `Anchor` is clicked."
-types=["MouseEvent"]
-
 [[slots.Anchor]]
 name="default"
 description="Default unnamed slot."

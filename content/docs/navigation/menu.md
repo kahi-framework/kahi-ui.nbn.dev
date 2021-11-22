@@ -1,7 +1,7 @@
 +++
 [[properties."Menu.Container"]]
 name="orientation"
-description="Renders the <code>Menu.Container</code> horizontally."
+description="Renders the `Menu.Container` horizontally."
 types=["horizontal", "{VIEWPORT}:horizontal"]
 
 [[properties."Menu.Container"]]
@@ -11,17 +11,17 @@ types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties."Menu.Anchor"]]
 name="active"
-description="Renders the <code>Menu.Anchor</code> with <code>aria-pressed</code> attribute, and styles the <code>Menu.Anchor</code> as if it where being clicked."
+description="Renders the `Menu.Anchor` with `aria-pressed` attribute, and styles the `Menu.Anchor` as if it where being clicked."
 types=["boolean"]
 
 [[properties."Menu.Anchor"]]
 name="disabled"
-description="Renders the <code>Menu.Anchor</code> with <code>aria-disabled</code> attributes, and styles the <code>Menu.Anchor</code> partially transparent."
+description="Renders the `Menu.Anchor` with `aria-disabled` attributes, and styles the `Menu.Anchor` partially transparent."
 types=["boolean"]
 
 [[properties."Menu.Anchor"]]
 name="href"
-description="Renders the <code>Menu.Anchor</code> as a <code>&lt;a role=\"button\"&gt;</code> and links to the specified <code>href</code> property."
+description="Renders the `Menu.Anchor` as a `<a role=\"button\">` and links to the specified `href` property."
 types=["string"]
 
 [[properties."Menu.Anchor"]]
@@ -31,12 +31,12 @@ types=["string"]
 
 [[properties."Menu.Anchor"]]
 name="rel"
-description="Sets how the <code>Menu.Anchor</code> relates to the current page, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets how the `Menu.Anchor` relates to the current page, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel) for more information."
 types=["string"]
 
 [[properties."Menu.Anchor"]]
 name="target"
-description="Sets the target of the <code>Menu.Anchor</code> being navigated, see <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target' rel='noopener noreferrer' target='_blank'>MDN</a> for more information."
+description="Sets the target of the `Menu.Anchor` being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
 
 [[properties."Menu.Anchor"]]
@@ -46,12 +46,12 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties."Menu.Button"]]
 name="active"
-description="Renders the <code>Menu.Button</code> with <code>aria-pressed</code> attribute, and styles the <code>Menu.Button</code> as if it where being clicked."
+description="Renders the `Menu.Button` with `aria-pressed` attribute, and styles the `Menu.Button` as if it where being clicked."
 types=["boolean"]
 
 [[properties."Menu.Button"]]
 name="disabled"
-description="Renders the <code>Menu.Button</code> with <code>disabled</code> attributes, and styles the <code>Menu.Button</code> partially transparent."
+description="Renders the `Menu.Button` with `disabled` attributes, and styles the `Menu.Button` partially transparent."
 types=["boolean"]
 
 [[properties."Menu.Button"]]
@@ -61,38 +61,23 @@ types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirm
 
 [[properties."Menu.Label"]]
 name="active"
-description="Renders the `Menu.Label` with <code>aria-pressed</code> attribute, and styles the `Menu.Label` as if it where being clicked."
+description="Renders the `Menu.Label` with `aria-pressed` attribute, and styles the `Menu.Label` as if it where being clicked."
 types=["boolean"]
 
 [[properties."Menu.Label"]]
 name="disabled"
-description="Renders the `Menu.Label` with <code>disabled</code> attributes, and styles the `Menu.Label` partially transparent."
+description="Renders the `Menu.Label` with `disabled` attributes, and styles the `Menu.Label` partially transparent."
 types=["boolean"]
 
 [[properties."Menu.Label"]]
 name="for"
-description="Sets the ID used by the <code>&lt;label&gt;</code> to target it's child form Component."
+description="Sets the ID used by the `<label>` to target it's child form Component."
 types=["string"]
 
 [[properties."Menu.Label"]]
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
-
-[[events."Menu.Anchor"]]
-name="click"
-description="Fires whenever the `Menu.Anchor` is clicked."
-types=["MouseEvent"]
-
-[[events."Menu.Button"]]
-name="click"
-description="Fires whenever the `Menu.Button` is clicked."
-types=["MouseEvent"]
-
-[[events."Menu.Label"]]
-name="click"
-description="Fires whenever the `Menu.Label` is clicked."
-types=["MouseEvent"]
 
 [[slots."Menu.Container"]]
 name="default"
