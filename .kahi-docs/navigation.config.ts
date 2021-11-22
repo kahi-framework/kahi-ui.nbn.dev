@@ -98,7 +98,7 @@ export default define_navigation({
                 {href: "/docs/widgets/daystepper", badge: "NEW"},
                 {href: "/docs/widgets/monthpicker", badge: "NEW"},
                 {href: "/docs/widgets/monthstepper", badge: "NEW"},
-                {href: "/docs/widgets/timepicker", badge: "NEW"},
+                {href: "/docs/widgets/timepicker", badge: "UPDATED"},
                 {href: "/docs/widgets/yearpicker", badge: "NEW"},
                 {href: "/docs/widgets/yearstepper", badge: "NEW"},
             ],
