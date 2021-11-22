@@ -361,6 +361,7 @@ You can enable having the `Offscreen` dismissed whenever inner content is clicke
     hidden
     captive
     dismissible
+    once
 >
     <Box palette="accent" padding="medium">
         <Stack
