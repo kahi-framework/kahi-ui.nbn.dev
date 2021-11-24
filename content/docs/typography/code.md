@@ -55,7 +55,7 @@ types=["<length>"]
 
 `Code` is used to render inline monospaced text, typically for showing programming code / application configuration to an end-user.
 
-```svelte repl Code Preview
+```svelte {title="Code Preview" mode="repl"}
 <script>
     import {Code} from "@kahi-ui/framework";
 </script>
@@ -67,7 +67,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default Code Imports
+```svelte {title="Code Imports"}
 <script>
     import {Code} from "@kahi-ui/framework";
 </script>
@@ -77,7 +77,7 @@ types=["<length>"]
 
 You can change the color palette of the Component via `data-palette`.
 
-```svelte repl Code Palette
+```svelte {title="Code Palette" mode="repl"}
 <script>
     import {
         Code,
@@ -153,7 +153,7 @@ You can change the color palette of the Component via `data-palette`.
 You can display blocks of code via a `<pre>` HTML tag by passing `is="pre"`.
 
 <!-- prettier-ignore -->
-```svelte repl Code Block
+```svelte {title="Code Block" mode="repl"}
 <script>
     import {Code} from "@kahi-ui/framework";
 </script>

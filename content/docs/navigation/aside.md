@@ -80,7 +80,7 @@ types=["{}"]
 
 `Aside` is used to vertically present the end-user with actions and links that can be accessed anytime on the Web Application.
 
-```svelte repl Aside Preview
+```svelte {title="Aside Preview" mode="repl"}
 <script>
     import {
         Anchor,
@@ -137,7 +137,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Aside Imports
+```svelte {title="Aside Imports"}
 <script>
     import {Aside} from "@kahi-ui/framework";
 
@@ -149,7 +149,7 @@ types=["{}"]
 
 You can change the color palette of the `Aside` via the `palette` property.
 
-```svelte repl Aside Palette
+```svelte {title="Aside Palette" mode="repl"}
 <script>
     import {
         Anchor,
@@ -418,7 +418,7 @@ You can change the color palette of the `Aside` via the `palette` property.
 
 You can make the `Overlay` collapsible on Mobile and Tablet Viewports via the `logic_id` property. And then place two [`ContextButton`](../utilities/contextbutton.md) Components as the last children of a `Aside.Container`. Where they'll be floated over the Web Application content, with the first one being the open button. And the second one being the close button.
 
-```svelte repl Aside Logic ID
+```svelte {title="Aside Logic ID" mode="repl"}
 <script>
     import {
         Anchor,
@@ -488,7 +488,7 @@ You can make the `Overlay` collapsible on Mobile and Tablet Viewports via the `l
 
 You can adjust which side the content divider border will appear, and which side a collapsible `Aside.Container` will slide out from via the `placement` property.
 
-```svelte repl Aside Placement
+```svelte {title="Aside Placement" mode="repl"}
 <script>
     import {
         Anchor,

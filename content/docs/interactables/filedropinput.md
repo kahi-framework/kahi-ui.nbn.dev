@@ -66,7 +66,7 @@ types=["<length>"]
 
 `FileDropInput` acts as a click-to-prompt and drag'n'drop file input stylized as an alternative to `FileInput`.
 
-```svelte repl FileDropInput Preview
+```svelte {title="FileDropInput Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -166,7 +166,7 @@ types=["<length>"]
 
 ## Imports
 
-```svelte default FileDropInput Imports
+```svelte {title="FileDropInput Imports"}
 <script>
     import {FileDropInput} from "@kahi-ui/framework";
 </script>
@@ -176,7 +176,7 @@ types=["<length>"]
 
 You can change the color palette of the `FileDropInput` via the `palette` property.
 
-```svelte repl FileDropInput Palette
+```svelte {title="FileDropInput Palette" mode="repl"}
 <script>
     import {
         FileDropInput,

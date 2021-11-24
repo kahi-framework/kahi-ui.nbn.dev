@@ -8,7 +8,7 @@ In [supporting Components](../interactables/button#api-reference) and for the gl
 
 You can customize the Custom Properties via inline styles as shown below.
 
-```svelte repl Custom Properties Style
+```svelte {title="Custom Properties Style" mode="repl"}
 <script>
     import {Button} from "@kahi-ui/framework";
 </script>
@@ -22,7 +22,7 @@ You can customize the Custom Properties via inline styles as shown below.
 
 You can also use CSS classes to customize them as well.
 
-```svelte repl Custom Properties CSS
+```svelte {title="Custom Properties CSS" mode="repl"}
 <script>
     import {Button} from "@kahi-ui/framework";
 </script>
@@ -44,7 +44,7 @@ You can also use CSS classes to customize them as well.
 
 You can finally use global stylesheets to keep all your customizations in one spot.
 
-```html default Custom Properties Global Stylesheet
+```svelte {title="Custom Properties Global Stylesheet"}
 <html>
     <head>
         <link

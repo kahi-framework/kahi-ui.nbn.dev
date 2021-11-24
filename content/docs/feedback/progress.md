@@ -49,7 +49,7 @@ types=["<length>", "<percentage>"]
 
 `Progress` is typically used to render feedback to the end-user about how complete a current task is.
 
-```svelte repl Progress Preview
+```svelte {title="Progress Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -81,7 +81,7 @@ types=["<length>", "<percentage>"]
 
 ## Imports
 
-```html default Progress Imports
+```svelte {title="Progress Imports"}
 <script>
     import {Progress} from "@kahi-ui/framework";
 </script>
@@ -91,7 +91,7 @@ types=["<length>", "<percentage>"]
 
 You can modify the shape of the `Progress` via the `shape` property.
 
-```svelte repl Progress Shape
+```svelte {title="Progress Shape" mode="repl"}
 <script>
     import {Progress} from "@kahi-ui/framework";
 </script>
@@ -104,7 +104,7 @@ You can modify the shape of the `Progress` via the `shape` property.
 
 You can change the color palette of the `Progress` via the `palette` property.
 
-```svelte repl Progress Palette
+```svelte {title="Progress Palette" mode="repl"}
 <script>
     import {
         Mosaic,
@@ -240,7 +240,7 @@ You can change the color palette of the `Progress` via the `palette` property.
 
 You can change the size of the `Progress` via the `size` property.
 
-```svelte repl Progress Palette
+```svelte {title="Progress Palette" mode="repl"}
 <script>
     import {
         Mosaic,
@@ -357,7 +357,7 @@ You can change the size of the `Progress` via the `size` property.
 
 By not passing the `value` property, the `Progress` will render with an animation for tasks that don't have trackable progression.
 
-```svelte repl Progress Indeterminate
+```svelte {title="Progress Indeterminate" mode="repl"}
 <script>
     import {
         Mosaic,

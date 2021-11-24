@@ -80,7 +80,7 @@ All Components have access to the global margin and padding HTML data attributes
 
 You can set margins for your Components via the `margin` property.
 
-```svelte repl Spacings Margin
+```svelte {title="Spacings Margin" mode="repl"}
 <script>
     import {
         Box,
@@ -129,7 +129,7 @@ You can set margins for your Components via the `margin` property.
 
 You can set paddings for your Components via the `padding` property.
 
-```svelte repl Spacings Padding
+```svelte {title="Spacings Padding" mode="repl"}
 <script>
     import {
         Box,
@@ -174,7 +174,7 @@ You can set paddings for your Components via the `padding` property.
 
 All `Spacings` properties have directional support via the `*_x`, `*_y`, `*_left`, `*_top`, `*_right`, and `*_bottom` suffixes.
 
-```svelte repl Spacings Direction
+```svelte {title="Spacings Direction" mode="repl"}
 <script>
     import {Box, Code} from "@kahi-ui/framework";
 </script>

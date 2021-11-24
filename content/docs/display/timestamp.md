@@ -34,7 +34,7 @@ types=["2-digit", "numeric"]
 
 `TimeStamp` formats an [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp into a human readable string, using the user preferences provided by the Browser.
 
-```svelte repl TimeStamp Preview
+```svelte {title="TimeStamp Preview" mode="repl"}
 <script>
     import {TimeStamp} from "@kahi-ui/framework";
 
@@ -46,7 +46,7 @@ types=["2-digit", "numeric"]
 
 ## Imports
 
-```svelte default TimeStamp Imports
+```svelte {title="TimeStamp Imports"}
 <script>
     import {TimeStamp} from "@kahi-ui/framework";
 </script>
@@ -56,7 +56,7 @@ types=["2-digit", "numeric"]
 
 You can have the timestamp render as 12-hour time (1...12 AM/PM) instead of 24-hour time (0...23) via the `hour_12` property.
 
-```svelte repl TimeStamp 12 Hour
+```svelte {title="TimeStamp 12 Hour" mode="repl"}
 <script>
     import {TimeStamp} from "@kahi-ui/framework";
 
@@ -72,7 +72,7 @@ You can have the timestamp render as 12-hour time (1...12 AM/PM) instead of 24-h
 
 You can customize how each individual component of the timestamp is displayed via the `hour`, `minute`, and `second` properties respectively.
 
-```svelte repl TimeStamp Custom Format
+```svelte {title="TimeStamp Custom Format" mode="repl"}
 <script>
     import {TimeStamp} from "@kahi-ui/framework";
 

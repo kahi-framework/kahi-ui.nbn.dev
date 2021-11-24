@@ -30,7 +30,7 @@ types=["{}"]
 
 `Portal` is used to render a layout outside of its original containing DOM tree, moving it somewhere else.
 
-```svelte repl Portal Preview
+```svelte {title="Portal Preview" mode="repl"}
 <script>
     import {Box, Portal} from "@kahi-ui/framework";
 
@@ -52,7 +52,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default Portal Imports
+```svelte {title="Portal Imports"}
 <script>
     import {Portal} from "@kahi-ui/framework";
 </script>
@@ -68,7 +68,7 @@ types=["{}"]
 
 You can customize the slot loading behavior of `Portal` Components to not render their children, via the `loading` property.
 
-```svelte repl Portal Loading
+```svelte {title="Portal Loading" mode="repl"}
 <script>
     import {Box, Portal} from "@kahi-ui/framework";
 

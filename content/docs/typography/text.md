@@ -105,7 +105,7 @@ types=["<alpha-value>"]
 
 `Text` is used to render paragraphs of text in your interface, among other types of text.
 
-```svelte repl Text Preview
+```svelte {title="Text Preview" mode="repl"}
 <script>
     import {Text} from "@kahi-ui/framework";
 </script>
@@ -123,7 +123,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Text Imports
+```svelte {title="Text Imports"}
 <script>
     import {Text} from "@kahi-ui/framework";
 </script>
@@ -133,7 +133,7 @@ types=["<alpha-value>"]
 
 You can adjust the size of `Text` by passing the `size` property.
 
-```svelte repl Text Size
+```svelte {title="Text Size" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -234,7 +234,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
 You can change the color palette of the `Text` via the `palette` property.
 
-```svelte repl Text Palette
+```svelte {title="Text Palette" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -348,7 +348,7 @@ You can change the color palette of the `Text` via the `palette` property.
 
 You can adjust the text alignment of the `Text` via the `align` property.
 
-```svelte repl Text Align
+```svelte {title="Text Align" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -425,7 +425,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
 You can alter the rendered text capitalization via the `transform` property.
 
-```svelte repl Text Transform
+```svelte {title="Text Transform" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -500,7 +500,7 @@ You can alter the rendered text capitalization via the `transform` property.
 
 You can apply variations to the rendered text, like truncating, via the `variation` property.
 
-```svelte repl Text Variation
+```svelte {title="Text Variation" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -545,7 +545,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
 You can render text with whitespace and linebreaks preserved via the `is` property.
 
 <!-- prettier-ignore -->
-```svelte repl Text Pre Formatted
+```svelte {title="Text Pre Formatted" mode="repl"}
 <script>
     import {Text} from "@kahi-ui/framework";
 </script>
@@ -561,7 +561,7 @@ P R E F O R M A T T E D T E X T
 
 You can also access most of the other HTML text tags via the `is` property.
 
-```svelte repl Text Other Tags
+```svelte {title="Text Other Tags" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>

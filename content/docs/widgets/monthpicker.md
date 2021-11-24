@@ -79,7 +79,7 @@ types=["CustomEvent<void>"]
 
 `MonthPicker` is a Widget that displays a fiscal quaterly grid of months that a user can select from.
 
-```svelte repl MonthPicker Preview
+```svelte {title="MonthPicker Preview" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -97,7 +97,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default MonthPicker Imports
+```svelte {title="MonthPicker Imports"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 </script>
@@ -107,7 +107,7 @@ types=["CustomEvent<void>"]
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl MonthPicker Disabled
+```svelte {title="MonthPicker Disabled" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -126,7 +126,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can disable specific months from being selected via the `disabled` property.
 
-```svelte repl MonthPicker Disabled Months
+```svelte {title="MonthPicker Disabled Months" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -150,7 +150,7 @@ You can disable specific months from being selected via the `disabled` property.
 
 You can allow for multiple months to be selected via the `multiple` property.
 
-```svelte repl MonthPicker Multiple
+```svelte {title="MonthPicker Multiple" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -174,7 +174,7 @@ You can allow for multiple months to be selected via the `multiple` property.
 
 You can disable selected months from being unselected via the `once` property.
 
-```svelte repl MonthPicker Once
+```svelte {title="MonthPicker Once" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -195,7 +195,7 @@ You can disable selected months from being unselected via the `once` property.
 
 You can disable interactivity without changing the visuals via the `readonly` property.
 
-```svelte repl MonthPicker Readonly
+```svelte {title="MonthPicker Readonly" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -216,7 +216,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 You can select a specific set of months to be highlighted as outlines via the `highlight` property.
 
-```svelte repl MonthPicker Highlight
+```svelte {title="MonthPicker Highlight" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -241,7 +241,7 @@ You can select a specific set of months to be highlighted as outlines via the `h
 
 You can set maximum and minimum range of selectable months via the `maximum` / `minimum` properties.
 
-```svelte repl MonthPicker Maximum + Minimum
+```svelte {title="MonthPicker Maximum + Minimum" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -264,7 +264,7 @@ You can set maximum and minimum range of selectable months via the `maximum` / `
 
 You can customize how the month component of the available timestamps is displayed via the `month` property.
 
-```svelte repl MonthPicker Custom Format
+```svelte {title="MonthPicker Custom Format" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
@@ -283,7 +283,7 @@ You can customize how the month component of the available timestamps is display
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl MonthPicker Sizing
+```svelte {title="MonthPicker Sizing" mode="repl"}
 <script>
     import {
         MonthPicker,

@@ -75,7 +75,7 @@ types=["CustomEvent<void>"]
 
 `DayStepper` is a Widget that lets users increment / decrement the currently provided day by a set number.
 
-```svelte repl DayStepper Preview
+```svelte {title="DayStepper Preview" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
@@ -87,7 +87,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default DayStepper Imports
+```svelte {title="DayStepper Imports"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 </script>
@@ -97,7 +97,7 @@ types=["CustomEvent<void>"]
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl DayStepper Disabled
+```svelte {title="DayStepper Disabled" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
@@ -111,7 +111,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can disable interactivity without changing the visuals via the `readonly` property.
 
-```svelte repl DayStepper Readonly
+```svelte {title="DayStepper Readonly" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
@@ -125,7 +125,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 You can set maximum and minimum range of steppable days via the `maximum` / `minimum` properties.
 
-```svelte repl DayStepper Maximum + Minimum
+```svelte {title="DayStepper Maximum + Minimum" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
@@ -142,7 +142,7 @@ You can set maximum and minimum range of steppable days via the `maximum` / `min
 
 You can control how many days the buttons increment / decrement via the `step` property.
 
-```svelte repl DayStepper Step
+```svelte {title="DayStepper Step" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
@@ -156,7 +156,7 @@ You can control how many days the buttons increment / decrement via the `step` p
 
 You can customize how the day and month components of the current timestamp is displayed via the `day`, `weekday`, and `month` properties respectively.
 
-```svelte repl DayStepper Custom Format
+```svelte {title="DayStepper Custom Format" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
@@ -176,7 +176,7 @@ You can customize how the day and month components of the current timestamp is d
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl DayStepper Sizing
+```svelte {title="DayStepper Sizing" mode="repl"}
 <script>
     import {
         DayStepper,

@@ -139,7 +139,7 @@ types=["<alpha-value>"]
 
 `Radio` is typically used to present a set of mutually-exclusive options to the end-user, which they can then choose from.
 
-```svelte repl Radio Preview
+```svelte {title="Radio Preview" mode="repl"}
 <script>
     import {
         Form,
@@ -193,7 +193,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Radio Imports
+```svelte {title="Radio Imports"}
 <script>
     import {Radio} from "@kahi-ui/framework";
 </script>
@@ -203,7 +203,7 @@ types=["<alpha-value>"]
 
 You can control the state of the `Radio` via the `active`, `disabled`, and `state` properties.
 
-```svelte repl Radio States
+```svelte {title="Radio States" mode="repl"}
 <script>
     import {
         Radio,
@@ -260,7 +260,7 @@ You can control the state of the `Radio` via the `active`, `disabled`, and `stat
 
 You can change the color palette of the `Radio` via the `palette` property.
 
-```svelte repl Radio Palette
+```svelte {title="Radio Palette" mode="repl"}
 <script>
     import {
         Form,
@@ -325,7 +325,7 @@ You can change the color palette of the `Radio` via the `palette` property.
 
 You can change the size of the `Radio` via the `size` property.
 
-```svelte repl Radio Size
+```svelte {title="Radio Size" mode="repl"}
 <script>
     import {
         Form,
@@ -385,7 +385,7 @@ You can change the size of the `Radio` via the `size` property.
 
 You can change the appearance of the `Radio` to be flush with the rest of the Application content via the `variation` property.
 
-```svelte repl Radio Flush
+```svelte {title="Radio Flush" mode="repl"}
 <script>
     import {
         Form,

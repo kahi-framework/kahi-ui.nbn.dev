@@ -2,7 +2,7 @@
 
 `keybind` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_bind(event: IKeybindEvent): void` callback whenever your assigned element has focus.
 
-```svelte repl keybind Preview
+```svelte {title="keybind Preview" mode="repl"}
 <script>
     import {keybind} from "@kahi-ui/framework";
 
@@ -47,7 +47,7 @@
 
 ## Imports
 
-```javascript keybind Imports
+```javascript {title="keybind Imports"}
 import {keybind} from "@kahi-ui/framework";
 ```
 

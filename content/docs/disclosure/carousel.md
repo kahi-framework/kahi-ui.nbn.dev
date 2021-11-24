@@ -35,7 +35,7 @@ types=["{}"]
 
 `Carousel` allows the user to scroll through "slides" of content without having to extend the page dimensions.
 
-```svelte repl Carousel Preview
+```svelte {title="Carousel Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -74,7 +74,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default Carousel Imports
+```svelte {title="Carousel Imports"}
 <script>
     import {Carousel} from "@kahi-ui/framework";
 
@@ -86,7 +86,7 @@ types=["{}"]
 
 You can set the `Carousel` to render vertically via the `orientation` property.
 
-```svelte repl Carousel Orientation
+```svelte {title="Carousel Orientation" mode="repl"}
 <script>
     import {
         Box,
@@ -132,7 +132,7 @@ You can set the `Carousel` to render vertically via the `orientation` property.
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
-```svelte repl Carousel Spacing
+```svelte {title="Carousel Spacing" mode="repl"}
 <script>
     import {
         Box,

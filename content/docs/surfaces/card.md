@@ -195,7 +195,7 @@ types=["<length>"]
 
 `Card` is a multi-part surface pattern for displaying a section of content in a long-form vertical format.
 
-```svelte repl Card Preview
+```svelte {title="Card Preview" mode="repl"}
 <script>
     import {
         Badge,
@@ -243,7 +243,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default Card Imports
+```svelte {title="Card Imports"}
 <script>
     import {Card} from "@kahi-ui/framework";
 
@@ -261,7 +261,7 @@ types=["<length>"]
 
 You can change the color palette of the `Card` via the `palette` property.
 
-```svelte repl Card Palette
+```svelte {title="Card Palette" mode="repl"}
 <script>
     import {
         Badge,
@@ -441,7 +441,7 @@ You can change the color palette of the `Card` via the `palette` property.
 
 You can set how "high" your `Card` will appear to be over top the page via the `elevation` property.
 
-```svelte repl Card Elevation
+```svelte {title="Card Elevation" mode="repl"}
 <script>
     import {
         Badge,
@@ -600,7 +600,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
 
 You can set the `Card.Footer` to render vertically via the `orientation` property.
 
-```svelte repl Card Orientation
+```svelte {title="Card Orientation" mode="repl"}
 <script>
     import {
         Badge,
@@ -683,7 +683,7 @@ You can set the `Card.Footer` to render vertically via the `orientation` propert
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
-```svelte repl Card Sizing
+```svelte {title="Card Sizing" mode="repl"}
 <script>
     import {
         Card,
@@ -801,7 +801,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 
 You can change the appearance of the `Card` to be flush with the rest of the Application content via the `variation` property.
 
-```svelte repl Card Flush
+```svelte {title="Card Flush" mode="repl"}
 <script>
     import {
         Badge,

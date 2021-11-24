@@ -65,7 +65,7 @@ types=["CustomEvent<void>"]
 
 `YearStepper` is a Widget that lets users increment / decrement the currently provided year by a set number.
 
-```svelte repl YearStepper Preview
+```svelte {title="YearStepper Preview" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
@@ -77,7 +77,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default YearStepper Imports
+```svelte {title="YearStepper Imports"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 </script>
@@ -87,7 +87,7 @@ types=["CustomEvent<void>"]
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl YearStepper Disabled
+```svelte {title="YearStepper Disabled" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
@@ -101,7 +101,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can disable interactivity without changing the visuals via the `readonly` property.
 
-```svelte repl YearStepper Readonly
+```svelte {title="YearStepper Readonly" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
@@ -115,7 +115,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 You can set maximum and minimum range of steppable years via the `maximum` / `minimum` properties.
 
-```svelte repl YearStepper Maximum + Minimum
+```svelte {title="YearStepper Maximum + Minimum" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
@@ -132,7 +132,7 @@ You can set maximum and minimum range of steppable years via the `maximum` / `mi
 
 You can control how many years the buttons increment / decrement via the `step` property.
 
-```svelte repl YearStepper Step
+```svelte {title="YearStepper Step" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
@@ -146,7 +146,7 @@ You can control how many years the buttons increment / decrement via the `step` 
 
 You can customize how the year component of the current timestamp is displayed via the `year` property.
 
-```svelte repl YearStepper Custom Format
+```svelte {title="YearStepper Custom Format" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
@@ -160,7 +160,7 @@ You can customize how the year component of the current timestamp is displayed v
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl YearStepper Sizing
+```svelte {title="YearStepper Sizing" mode="repl"}
 <script>
     import {
         YearStepper,

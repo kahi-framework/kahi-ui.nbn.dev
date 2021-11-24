@@ -6,7 +6,7 @@
 
 Displayed in the main landing page of [kahi-ui.nbn.dev](https://kahi-ui.nbn.dev).
 
-```svelte repl Landing Preview
+```svelte {title="Landing Preview" mode="repl"}
 <script>
     import {
         Badge,

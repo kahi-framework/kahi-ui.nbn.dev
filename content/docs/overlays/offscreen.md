@@ -73,7 +73,7 @@ types=["{}"]
 
 `Offscreen` is typically used for hiding content that'll slide into when actived via a button or something else.
 
-```svelte repl Offscreen Preview
+```svelte {title="Offscreen Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -116,7 +116,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default Offscreen Imports
+```svelte {title="Offscreen Imports"}
 <script>
     import {Offscreen} from "@kahi-ui/framework";
 </script>
@@ -134,7 +134,7 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 
 `Offscreen` adds special handling for the `hidden` property, allowing you to instead customize when the child content is hidden offscreen or rendered normally.
 
-```svelte repl Offscreen Hidden
+```svelte {title="Offscreen Hidden" mode="repl"}
 <script>
     import {
         Box,
@@ -188,7 +188,7 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 
 You can optionally include a backdrop by passing via the `captive` property.
 
-```svelte repl Offscreen Captive
+```svelte {title="Offscreen Captive" mode="repl"}
 <script>
     import {
         Box,
@@ -259,7 +259,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 
 You can optionally have the `Offscreen` dismissible by clicking the backdrop via the `dismissible` property.
 
-```svelte repl Offscreen Dismissible
+```svelte {title="Offscreen Dismissible" mode="repl"}
 <script>
     import {
         Box,
@@ -340,7 +340,7 @@ You can optionally have the `Offscreen` dismissible by clicking the backdrop via
 
 You can enable having the `Offscreen` dismissed whenever inner content is clicked via the `once` property.
 
-```svelte repl Offscreen Once
+```svelte {title="Offscreen Once" mode="repl"}
 <script>
     import {
         Box,
@@ -388,7 +388,7 @@ You can enable having the `Offscreen` dismissed whenever inner content is clicke
 
 You can manually open / close the `Offscreen` via the `state` property.
 
-```svelte repl Offscreen State
+```svelte {title="Offscreen State" mode="repl"}
 <script>
     import {
         Box,
@@ -434,7 +434,7 @@ You can manually open / close the `Offscreen` via the `state` property.
 
 You can adjust which side your content is hidden on via the `placement` property.
 
-```svelte repl Offscreen Placement
+```svelte {title="Offscreen Placement" mode="repl"}
 <script>
     import {
         Box,
@@ -475,7 +475,7 @@ You can adjust which side your content is hidden on via the `placement` property
 
 You can align `Offscreen` content via the `alignment`, `alignment_x`, and `alignment_y` properties respectively.
 
-```svelte repl Offscreen Alignment
+```svelte {title="Offscreen Alignment" mode="repl"}
 <script>
     import {
         Box,

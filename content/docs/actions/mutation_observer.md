@@ -2,7 +2,7 @@
 
 `mutation_observer` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_mutate(mutations: MutationRecord[]): void` callback whenever the targetted element intersects the root viewport.
 
-```svelte repl mutation_observer Preview
+```svelte {title="mutation_observer Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -38,7 +38,7 @@
 
 ## Imports
 
-```javascript mutation_observer Imports
+```javascript {title="mutation_observer Imports"}
 import {mutation_observer} from "@kahi-ui/framework";
 ```
 

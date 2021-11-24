@@ -44,7 +44,7 @@ types=["{}"]
 
 `Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children. With optional wrapping.
 
-```svelte repl Stack Preview
+```svelte {title="Stack Preview" mode="repl"}
 <script>
     import {Box, Stack} from "@kahi-ui/framework";
 </script>
@@ -65,7 +65,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Stack Imports
+```svelte {title="Stack Imports"}
 <script>
     import {Stack} from "@kahi-ui/framework";
 </script>
@@ -77,7 +77,7 @@ types=["{}"]
 
 You can set the `Stack` to render horizontally via the `orientation` property.
 
-```svelte repl Stack Orientation
+```svelte {title="Stack Orientation" mode="repl"}
 <script>
     import {
         Box,
@@ -134,7 +134,7 @@ You can set the `Stack` to render horizontally via the `orientation` property.
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
-```svelte repl Stack Spacing
+```svelte {title="Stack Spacing" mode="repl"}
 <script>
     import {
         Box,
@@ -254,7 +254,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
 You can adjust the spacing between items via the `alignment`, `alignment_x`, and `alignment_y` properties.
 
-```svelte repl Stack Alignment
+```svelte {title="Stack Alignment" mode="repl"}
 <script>
     import {
         Box,
@@ -397,7 +397,7 @@ You can adjust the spacing between items via the `alignment`, `alignment_x`, and
 
 You can alter the `Stack` to wraps its children into the next line via the `variation` property.
 
-```svelte repl Stack Wrap
+```svelte {title="Stack Wrap" mode="repl"}
 <script>
     import {Box, Stack} from "@kahi-ui/framework";
 </script>

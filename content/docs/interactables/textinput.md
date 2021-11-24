@@ -176,7 +176,7 @@ types=["<alpha-value>"]
 
 `TextInput` is typically used for capturing string input from an end-user for input into forms, XHR requests, etc.
 
-```svelte repl TextInput Preview
+```svelte {title="TextInput Preview" mode="repl"}
 <script>
     import {
         Code,
@@ -202,7 +202,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default TextInput Imports
+```svelte {title="TextInput Imports"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
@@ -212,7 +212,7 @@ types=["<alpha-value>"]
 
 You can change the color palette of the `TextInput` via the `palette` property.
 
-```svelte repl TextInput Palette
+```svelte {title="TextInput Palette" mode="repl"}
 <script>
     import {
         Stack,
@@ -273,7 +273,7 @@ You can change the color palette of the `TextInput` via the `palette` property.
 
 You can change the size of the `TextInput` via the `size` property.
 
-```svelte repl TextInput Size
+```svelte {title="TextInput Size" mode="repl"}
 <script>
     import {
         Stack,
@@ -328,7 +328,7 @@ You can change the size of the `TextInput` via the `size` property.
 
 You can alter the `TextInput` render as an opaque block via the `variation` property.
 
-```svelte repl TextInput Block
+```svelte {title="TextInput Block" mode="repl"}
 <script>
     import {
         Stack,
@@ -396,7 +396,7 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
 
 You can change the appearance of the `TextInput` to be flush with the rest of the Application content via the `variation` property.
 
-```svelte repl TextInput Flush
+```svelte {title="TextInput Flush" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
@@ -413,7 +413,7 @@ Input some text:
 
 You can change your input type between `email`, `password`, `search`, `text` **(DEFAULT)**, `url` via the `type` property.
 
-```svelte repl TextInput Input Type
+```svelte {title="TextInput Input Type" mode="repl"}
 <script>
     import {
         Stack,
@@ -451,7 +451,7 @@ You can change your input type between `email`, `password`, `search`, `text` **(
 
 You can set the `TextInput` to show placeholder text whenever there is no current value.
 
-```svelte repl TextInput Placeholder
+```svelte {title="TextInput Placeholder" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
@@ -463,7 +463,7 @@ You can set the `TextInput` to show placeholder text whenever there is no curren
 
 You can set how wide your `TextInput` to an approximation of character width via the `characters` property.
 
-```svelte repl TextInput Field Character Size
+```svelte {title="TextInput Field Character Size" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
@@ -478,7 +478,7 @@ You can set how wide your `TextInput` to an approximation of character width via
 
 You can have the `TextInput` render as a `<textarea>` via the `is` property.
 
-```svelte repl TextInput TextArea
+```svelte {title="TextInput TextArea" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
@@ -493,7 +493,7 @@ You can have the `TextInput` render as a `<textarea>` via the `is` property.
 
 You can set how tall your `<textarea>` based `TextInput` to an approximation of character lines via the `lines` property.
 
-```svelte repl TextInput Field Line Size
+```svelte {title="TextInput Field Line Size" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
@@ -509,7 +509,7 @@ You can set how tall your `<textarea>` based `TextInput` to an approximation of 
 
 You alter the a `<textarea>` based `TextInput` to resizable both axis `true`, horizontally `x`, and vertically `y` via the `resizable` property.
 
-```svelte repl TextInput Resizable TextArea
+```svelte {title="TextInput Resizable TextArea" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>

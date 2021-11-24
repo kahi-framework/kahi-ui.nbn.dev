@@ -94,7 +94,7 @@ types=["CustomEvent<void>"]
 
 `TimePicker` is a Widget that displays a set of hour, minute, second clock scrollable areas that a user can select from.
 
-```svelte repl TimePicker Preview
+```svelte {title="TimePicker Preview" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -106,7 +106,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default TimePicker Imports
+```svelte {title="TimePicker Imports"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 </script>
@@ -116,7 +116,7 @@ types=["CustomEvent<void>"]
 
 You can enable the displaying of a "NOW" button to allow the user to set the picker to the current time, via the `now` property.
 
-```svelte repl TimePicker Now
+```svelte {title="TimePicker Now" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -132,7 +132,7 @@ You can enable the displaying of a "NOW" button to allow the user to set the pic
 
 You can enable auto scrolling to the currently set `value` when `TimePicker` is mounted, via the `scroll` property.
 
-```svelte repl TimePicker Now
+```svelte {title="TimePicker Now" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -148,7 +148,7 @@ You can enable auto scrolling to the currently set `value` when `TimePicker` is 
 
 You can have the hours render as 12-hour time (1...12 AM/PM) instead of 24-hour time (0...23) via the `hour_12` property.
 
-```svelte repl TimePicker 12 Hour
+```svelte {title="TimePicker 12 Hour" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -164,7 +164,7 @@ You can have the hours render as 12-hour time (1...12 AM/PM) instead of 24-hour 
 
 You can have the hours render as 24-hour time (0...23) instead of 12-hour time (1...12 AM/PM) via the `hour_12` property.
 
-```svelte repl TimePicker 24 Hour
+```svelte {title="TimePicker 24 Hour" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -178,7 +178,7 @@ You can have the hours render as 24-hour time (0...23) instead of 12-hour time (
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl TimePicker Disabled
+```svelte {title="TimePicker Disabled" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -194,7 +194,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can select a specific timestamp to be highlighted as outlines via the `highlight` property.
 
-```svelte repl TimePicker Highlight
+```svelte {title="TimePicker Highlight" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -210,7 +210,7 @@ You can select a specific timestamp to be highlighted as outlines via the `highl
 
 You can set maximum and minimum range of selectable times via the `maximum` / `minimum` properties.
 
-```svelte repl TimePicker Maximum + Minimum
+```svelte {title="TimePicker Maximum + Minimum" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -227,7 +227,7 @@ You can set maximum and minimum range of selectable times via the `maximum` / `m
 
 You can customize how the hour, minute, second components of the available timestamps is displayed via the `hour`, `minute`, and `second` properties respectively.
 
-```svelte repl TimePicker Custom Format
+```svelte {title="TimePicker Custom Format" mode="repl"}
 <script>
     import {TimePicker} from "@kahi-ui/framework";
 
@@ -248,7 +248,7 @@ You can customize how the hour, minute, second components of the available times
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl TimePicker Sizing
+```svelte {title="TimePicker Sizing" mode="repl"}
 <script>
     import {
         Stack,

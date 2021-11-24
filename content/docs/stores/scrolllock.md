@@ -4,7 +4,7 @@
 
 > **NOTE**: If no [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) is passed into the Store function, it'll default to the root `<html>`.
 
-```svelte repl scrolllock Preview
+```svelte {title="scrolllock Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -54,7 +54,7 @@
 
 ## Imports
 
-```js default scrolllock Imports
+```javascript {title="scrolllock Imports"}
 import {scrolllock} from "@kahi-ui/framework";
 ```
 

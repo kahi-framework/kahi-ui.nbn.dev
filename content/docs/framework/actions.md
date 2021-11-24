@@ -3,7 +3,7 @@
 As a limitation of Svelte, you cannot use [Actions](https://svelte.dev/docs#use_action) on Components. So the Framework provides a special syntax to support forwarding actions to a Component's main elements.
 
 <!-- prettier-ignore -->
-```svelte repl Actions Preview
+```svelte {title="Actions Preview" mode="repl"}
 <script>
     import {
         Box,

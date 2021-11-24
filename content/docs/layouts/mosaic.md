@@ -44,7 +44,7 @@ types=["{}"]
 
 `Mosaic` is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.
 
-```svelte repl Mosaic Preview
+```svelte {title="Mosaic Preview" mode="repl"}
 <script>
     import {Box, Mosaic} from "@kahi-ui/framework";
 </script>
@@ -84,7 +84,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Mosaic Imports
+```svelte {title="Mosaic Imports"}
 <script>
     import {Mosaic} from "@kahi-ui/framework";
 </script>
@@ -96,7 +96,7 @@ types=["{}"]
 
 You can alter how large each `Mosaic` item should be via the `sizing` property.
 
-```svelte repl Mosaic Sizing
+```svelte {title="Mosaic Sizing" mode="repl"}
 <script>
     import {
         Box,
@@ -185,7 +185,7 @@ You can alter how large each `Mosaic` item should be via the `sizing` property.
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
-```svelte repl Mosaic Spacing
+```svelte {title="Mosaic Spacing" mode="repl"}
 <script>
     import {
         Box,
