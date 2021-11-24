@@ -15,6 +15,7 @@ import {PAGE_FRONTMATTER_SCHEMA} from "../frontmatter/page";
 import {ExternalLinkPlugin} from "../plugins/external_link";
 import {LocalLinkPlugin} from "../plugins/local_link";
 import {HighlightPlugin} from "../plugins/highlight";
+import {ScrollablesPlugin} from "../plugins/scrollables";
 import type {ISectionsPluginEnvironment} from "../plugins/sections";
 import {SectionsPlugin} from "../plugins/sections";
 import type {ISnippetsPluginEnvironment} from "../plugins/snippets";
@@ -161,6 +162,7 @@ export function render_page(text: string, options: Partial<IPageOptions> = {}): 
             TitlePlugin,
             LocalLinkPlugin,
             ExternalLinkPlugin,
+            ScrollablesPlugin,
             SectionsPlugin,
             HighlightPlugin,
             SnippetsPlugin,
