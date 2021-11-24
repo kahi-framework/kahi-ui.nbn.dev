@@ -1,10 +1,10 @@
 import {dev} from "$app/env";
 import FlexSearch from "flexsearch";
 
-import type {ISearchIndex, ISearchRecord} from "@kahi-docs/shared";
 import {memoize} from "@kahi-docs/shared";
 
 import type {ISearchGet} from "../shared/api";
+import type {ISearchIndex, ISearchRecord} from "../shared/search";
 
 export type ISearcher = (query: string) => ISearchResult[];
 

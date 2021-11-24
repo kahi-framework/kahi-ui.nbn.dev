@@ -1,6 +1,7 @@
 import type {INavigationMenu} from "@kahi-docs/config";
 import type {IPageRender} from "@kahi-docs/markdown";
-import type {ISearchIndex} from "@kahi-docs/shared";
+
+import type {ISearchIndex} from "../shared/search";
 
 export interface IRouteError {
     code: string;

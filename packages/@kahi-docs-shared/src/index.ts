@@ -7,5 +7,3 @@ export * from "./util/functional";
 export * from "./util/string";
 export * from "./util/sveltekit";
 export * from "./util/url";
-
-export * from "./types/search";
