@@ -55,7 +55,7 @@
                                         {anchor.text}
 
                                         {#if anchor.badge}
-                                            <Spacer variation="inline" />
+                                            <Spacer is="span" />
                                             <Badge palette="accent" shape="rounded">
                                                 {anchor.badge}
                                             </Badge>
