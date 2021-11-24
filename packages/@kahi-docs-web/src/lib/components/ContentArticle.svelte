@@ -34,16 +34,8 @@
         margin-left: var(--spacing-root-large);
     }
 
-    :global(.content-article) > :global(.snippet-highlight) {
-        max-height: 35ex;
-    }
-
-    :global(.content-article) > :global(.snippet-repl) {
-        height: 60ex;
-    }
-
-    :global(.content-article) > :global(.snippet-highlight),
-    :global(.content-article) > :global(.snippet-repl) {
+    :global(.content-article) > :global(pre[class*="language-"]),
+    :global(.content-article) > :global(.repl-snippet) {
         margin: var(--spacing-root-medium) 0 0 0;
     }
 </style>

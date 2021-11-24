@@ -12,6 +12,7 @@ import type {IAuthorMap, IReference, IReferenceMap, ISection, ISnippet} from "..
 import type {IPageFrontmatter} from "../frontmatter/page";
 import {PAGE_FRONTMATTER_SCHEMA} from "../frontmatter/page";
 
+import {BlockquotePlugin} from "../plugins/blockquote";
 import {ExternalLinkPlugin} from "../plugins/external_link";
 import {LocalLinkPlugin} from "../plugins/local_link";
 import {HighlightPlugin} from "../plugins/highlight";
@@ -162,6 +163,7 @@ export function render_page(text: string, options: Partial<IPageOptions> = {}): 
             TitlePlugin,
             LocalLinkPlugin,
             ExternalLinkPlugin,
+            BlockquotePlugin,
             ScrollablesPlugin,
             SectionsPlugin,
             HighlightPlugin,
