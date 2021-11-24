@@ -1,5 +1,3 @@
-import {join} from "path";
-
 import {dev} from "$app/env";
 import type {RequestHandler} from "@sveltejs/kit";
 
@@ -9,7 +7,6 @@ import {is_internal_url, memoize} from "@kahi-docs/shared";
 import NAVIGATION_CONFIG from "../../../../../../../.kahi-docs/navigation.config";
 
 import type {INavigationGet, IRouteError} from "../../../../lib/shared/api";
-import {PATH_CONTENT} from "../../../../lib/server/constants";
 import {read_content} from "../../../../lib/server/content";
 
 function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMenu[]> {
@@ -17,10 +14,9 @@ function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMen
         const promises = items.map(async ({badge = "", href = "", text = ""}) => {
             if (!text && is_internal_url(href)) {
                 // TODO: error handling
-                const file_path = join(PATH_CONTENT, `${href}.md`);
-                const render = await read_content(file_path);
+                const render = await read_content(`${href}.md`.replace(/^([\/]*)/, ""));
 
-                text = render.properties.title || "N/A";
+                text = render.metadata.title;
             } else text = "N/A";
 
             return {

@@ -1,5 +1,3 @@
-import {relative} from "path";
-
 import {dev} from "$app/env";
 import {load} from "cheerio";
 import fg from "fast-glob";
@@ -8,7 +6,7 @@ import type {RequestHandler} from "@sveltejs/kit";
 import type {ISearchIndex} from "@kahi-docs/shared";
 import {memoize} from "@kahi-docs/shared";
 
-import {GLOB_CONTENT, PATH_CONTENT} from "../../../../lib/server/constants";
+import {GLOB_CONTENT} from "../../../../lib/server/constants";
 import type {ISearchGet} from "../../../../lib/shared/api";
 import {read_content} from "../../../../lib/server/content";
 
@@ -16,8 +14,6 @@ async function get_search_index(): Promise<ISearchIndex> {
     const file_paths = await fg(GLOB_CONTENT);
     const index = await Promise.all(
         file_paths.map(async (file_path) => {
-            const identifier = relative(PATH_CONTENT, file_path).replace(".md", "");
-
             // TODO: error handling
             const content = await read_content(file_path);
             const $ = load(content.render);
@@ -25,8 +21,8 @@ async function get_search_index(): Promise<ISearchIndex> {
             $("iframe, hr, pre").remove();
 
             return {
-                identifier,
-                title: content.properties.title,
+                identifier: content.metadata.identifier,
+                title: content.metadata.title,
                 text: $.text(),
             };
         })

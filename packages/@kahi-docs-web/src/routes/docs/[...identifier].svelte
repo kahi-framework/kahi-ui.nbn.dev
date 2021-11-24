@@ -27,7 +27,7 @@
 </script>
 
 <script lang="ts">
-    import type {IDocumentationRender} from "@kahi-docs/markdown";
+    import type {IPageRender} from "@kahi-docs/markdown";
     import {content as content_store} from "@kahi-docs/shared";
 
     import Content from "../../lib/components/Content.svelte";
@@ -35,13 +35,13 @@
     import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
     import PageMetadata from "../../lib/components/PageMetadata.svelte";
 
-    export let content: IDocumentationRender;
+    export let content: IPageRender;
 
     const store = content_store.init(content);
     $: $store = content;
 </script>
 
-<PageMetadata title={content.properties.title} separator="—" />
+<PageMetadata title={content.metadata.title} separator="—" />
 
 <Content />
 

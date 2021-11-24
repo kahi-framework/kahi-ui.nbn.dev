@@ -1,5 +1,4 @@
-export * from "./types/reference";
-export * from "./types/section";
-export * from "./types/snippet";
+export * from "./types/page";
 
-export * from "./renderers/documentation";
+export * from "./frontmatter";
+export * from "./render";

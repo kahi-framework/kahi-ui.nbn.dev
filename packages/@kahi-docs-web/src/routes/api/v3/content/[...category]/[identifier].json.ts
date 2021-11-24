@@ -1,20 +1,17 @@
-import {join} from "path";
-
 import type {RequestHandler} from "@sveltejs/kit";
 
-import type {IDocumentationRender} from "@kahi-docs/markdown";
+import type {IPageRender} from "@kahi-docs/markdown";
 
 import type {IContentGet, IRouteError} from "../../../../../lib/shared/api";
-import {PATH_CONTENT} from "../../../../../lib/server/constants";
+
 import {read_content} from "../../../../../lib/server/content";
 
 export const get: RequestHandler = async (request) => {
     const {category = "", identifier = ""} = request.params;
-    const path = join(PATH_CONTENT, category, `${identifier}.md`);
 
-    let render: IDocumentationRender;
+    let render: IPageRender;
     try {
-        render = await read_content(path);
+        render = await read_content(`${category}/${identifier}.md`);
     } catch (err) {
         // TODO: Switch to custom exception types
         if (err instanceof TypeError) {

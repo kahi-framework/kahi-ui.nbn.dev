@@ -1,56 +1,29 @@
 import matter from "gray-matter";
+import toml from "@iarna/toml";
 
-import * as toml from "./toml";
-import type {IFrontmatterFence, IFrontmatterProperties} from "./types";
+export type IFrontmatterFence = [string, string];
 
-export interface IFrontmatterExtracted<T extends IFrontmatterProperties> {
-    content: string;
+export type IFrontmatterPrimitives = boolean | null | number | string;
 
-    properties: T;
+export interface IFrontmatterProperties {
+    [key: string]:
+        | IFrontmatterPrimitives
+        | IFrontmatterPrimitives[]
+        | IFrontmatterProperties
+        | IFrontmatterProperties[];
 }
 
-export interface IFrontmatterOptions {
-    syntax: typeof toml.FRONTMATTER_SYNTAX;
-}
+const GRAYMATTER_OPTIONS: Parameters<typeof matter>[1] = {
+    delimiters: "+++",
+    language: "toml",
 
-const FRONTMATTER_FENCES: Record<string, IFrontmatterFence | undefined> = {
-    [toml.FRONTMATTER_SYNTAX]: toml.FRONTMATTER_FENCE,
-};
-
-const GRAYMATTER_OPTIONS = {
     engines: {
-        [toml.FRONTMATTER_SYNTAX]: toml.FRONTMATTER_PARSER,
+        toml: (text: string) => toml.parse(text),
     },
 };
 
-function FrontmatterOptions(options: Partial<IFrontmatterOptions> = {}): IFrontmatterOptions {
-    const {syntax = "toml"} = options;
+export function extract_frontmatter<T>(text: string): [T, string] {
+    const {content, data} = matter(text, GRAYMATTER_OPTIONS);
 
-    return {syntax};
-}
-
-export function extract_frontmatter<T extends IFrontmatterProperties>(
-    text: string,
-    options: Partial<IFrontmatterOptions> = {}
-): IFrontmatterExtracted<T> {
-    const {syntax} = FrontmatterOptions(options);
-    const fences = FRONTMATTER_FENCES[syntax];
-
-    if (!fences) {
-        throw new ReferenceError(
-            `bad option 'IFrontmatterOptions.syntax' (invalid syntax '${syntax}'`
-        );
-    }
-
-    const graymatter_options = {
-        ...GRAYMATTER_OPTIONS,
-        delims: fences,
-        language: syntax,
-    };
-
-    const {content, data} = matter(text, graymatter_options);
-    return {
-        content,
-        properties: data as T,
-    };
+    return [data as T, content];
 }

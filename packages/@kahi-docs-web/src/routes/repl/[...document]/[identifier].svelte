@@ -19,7 +19,7 @@
         }
 
         const data = (await response.json()) as IContentGet;
-        const snippet = data.data.properties.snippets.find(
+        const snippet = data.data.metadata.snippets.find(
             (snippet) => snippet.identifier === identifier
         );
 

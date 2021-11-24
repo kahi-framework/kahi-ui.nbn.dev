@@ -1,6 +1,6 @@
 <script context="module" lang="ts">
     const TEMPLATE_EDIT_URL = ({identifier}: {identifier: string}) =>
-        `https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/${identifier}.md`;
+        `https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content${identifier}.md`;
 </script>
 
 <script lang="ts">
@@ -14,8 +14,8 @@
 
     import AppAnchor from "./AppAnchor.svelte";
 
-    $: _edit_url = TEMPLATE_EDIT_URL({identifier: $content.properties.identifier});
-    $: _timestamp = new Date($content.properties.modified_at).toLocaleString(
+    $: _edit_url = TEMPLATE_EDIT_URL({identifier: $content.metadata.identifier});
+    $: _timestamp = new Date($content.metadata.modified_at).toLocaleString(
         browser ? navigator.language : "en-US"
     );
 </script>
