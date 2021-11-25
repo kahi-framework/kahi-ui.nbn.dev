@@ -1,9 +1,9 @@
 import type MarkdownIt from "markdown-it";
 
 import {
-    DEFAULT_ORIGIN,
     append_pathname,
     is_internal_url,
+    is_relative_pathname,
     normalize_pathname,
 } from "@kahi-docs/shared";
 
@@ -24,12 +24,12 @@ export function LocalLinkPlugin(md: MarkdownIt, options: Partial<ILocalLinkPlugi
         let href = token.attrGet("href") ?? "";
 
         if (is_internal_url(href)) {
-            const {pathname} = new URL(href, DEFAULT_ORIGIN);
-            if (pathname.toLowerCase().endsWith(EXTENSION_MARKDOWN)) {
-                href = href.replace(pathname, pathname.slice(0, -EXTENSION_MARKDOWN.length));
+            if (href.toLowerCase().endsWith(EXTENSION_MARKDOWN)) {
+                href = href.replace(href, href.slice(0, -EXTENSION_MARKDOWN.length));
             }
 
-            token.attrSet("href", append_pathname(base, href));
+            token.attrSet("href", is_relative_pathname(href) ? href : append_pathname(base, href));
+            token.attrSet("svelte:prefetch", "true");
         }
 
         return link_open
