@@ -38,4 +38,8 @@
 
         height: 30rem;
     }
+
+    :global(.repl-snippet) {
+        z-index: 0;
+    }
 </style>
