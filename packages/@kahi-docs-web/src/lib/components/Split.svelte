@@ -86,19 +86,19 @@
         flex-grow: 1;
     }
 
-    .split[data-orientation="horizontal"] > section:first-child {
-        max-width: calc(100% * clamp(var(--split), 0.15, 0.85));
-    }
-
     .split[data-orientation="horizontal"] > section {
         height: 100%;
+    }
+
+    .split[data-orientation="horizontal"] > section:first-child {
+        max-width: calc(100% * clamp(var(--split), 0.15, 0.85));
     }
 
     .split[data-orientation="vertical"] > section {
         width: 100%;
     }
 
-    .split[data-orientation="vertical"] > section:last-child {
+    .split[data-orientation="vertical"] > section:first-child {
         max-height: calc(100% * clamp(var(--split), 0.15, 0.85));
     }
 
