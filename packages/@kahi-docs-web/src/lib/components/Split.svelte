@@ -39,6 +39,7 @@
 
 <div
     class="split {_class}"
+    data-mode={mode}
     data-grabbing={grabbing}
     data-orientation={orientation}
     style="--split:{split};{style ?? ''}"
@@ -90,7 +91,7 @@
         height: 100%;
     }
 
-    .split[data-orientation="horizontal"] > section:first-child {
+    .split:not([data-mode="first"])[data-orientation="horizontal"] > section:first-child {
         max-width: calc(100% * clamp(var(--split), 0.15, 0.85));
     }
 
@@ -98,7 +99,7 @@
         width: 100%;
     }
 
-    .split[data-orientation="vertical"] > section:first-child {
+    .split:not([data-mode="first"])[data-orientation="vertical"] > section:first-child {
         max-height: calc(100% * clamp(var(--split), 0.15, 0.85));
     }
 

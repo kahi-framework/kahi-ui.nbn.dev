@@ -3,7 +3,7 @@
 
     import {content} from "@kahi-docs/shared";
 
-    import REPLSplit from "./repl/REPLSplit.svelte";
+    import REPLEmbed from "./repl/REPLEmbed.svelte";
 
     const contexts = getAllContexts();
 
@@ -41,11 +41,12 @@
             element.innerHTML = "";
             element.style.display = "none";
 
-            new REPLSplit({
+            new REPLEmbed({
                 target: container,
 
                 context: contexts,
                 props: {
+                    identifier,
                     value,
                 },
             });
