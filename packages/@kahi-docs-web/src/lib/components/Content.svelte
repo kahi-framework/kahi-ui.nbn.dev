@@ -3,7 +3,7 @@
 
     import {content} from "@kahi-docs/shared";
 
-    import REPLSnippetEmbed from "./repl/REPLSnippetEmbed.svelte";
+    import REPLSplit from "./repl/REPLSplit.svelte";
 
     const contexts = getAllContexts();
 
@@ -16,10 +16,7 @@
 
         await tick();
 
-        const repl_elements = document.querySelectorAll(
-            `pre[class*="language-"][data-mode="repl"]`
-        );
-
+        const repl_elements = document.querySelectorAll(`[data-mode="repl"]`);
         for (const element of repl_elements) observer.observe(element);
     }
 
@@ -44,12 +41,11 @@
             element.innerHTML = "";
             element.style.display = "none";
 
-            new REPLSnippetEmbed({
+            new REPLSplit({
                 target: container,
 
                 context: contexts,
                 props: {
-                    identifier,
                     value,
                 },
             });

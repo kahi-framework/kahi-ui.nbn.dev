@@ -12,7 +12,7 @@ function RenderCode(
 ): string {
     const rendered = highlight(script, syntax);
 
-    return `<pre class="language-${syntax}" data-identifier="${identifier}" data-mode="${mode}" data-syntax="${syntax}"><code>${rendered}</code></pre>`;
+    return `<pre class="highlight language-${syntax}" data-identifier="${identifier}" data-mode="${mode}" data-syntax="${syntax}"><code>${rendered}</code></pre>`;
 }
 
 export function HighlightPlugin(md: MarkdownIt) {

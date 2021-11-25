@@ -18,8 +18,10 @@
      * here instead of a Component.
      */
 
-    :global(pre[class*="language-"]),
+    :global(.highlight),
     :global(.repl-snippet) {
+        position: relative;
+
         width: 100%;
         max-height: 30rem;
 
@@ -30,7 +32,7 @@
         line-height: normal;
     }
 
-    :global(pre[class*="language-"][data-mode="repl"]),
+    :global(.highlight[data-mode="repl"]),
     :global(.repl-snippet) {
         /** NOTE: REPLs are fixed heights, so we need to set documentation snippets to be likewise */
 

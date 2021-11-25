@@ -45,6 +45,7 @@
     "dependencies": {
         "@js-temporal/polyfill": "^0.2.0",
         "@kahi-docs/config": "workspace:^",
+        "@kahi-docs/highlight": "workspace:^",
         "@kahi-docs/markdown": "workspace:^",
         "@kahi-docs/node": "workspace:^",
         "@kahi-docs/shared": "workspace:^",

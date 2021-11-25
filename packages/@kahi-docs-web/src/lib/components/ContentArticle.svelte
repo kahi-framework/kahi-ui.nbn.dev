@@ -34,7 +34,7 @@
         margin-left: var(--spacing-root-large);
     }
 
-    :global(.content-article) > :global(pre[class*="language-"]),
+    :global(.content-article) > :global(.highlight),
     :global(.content-article) > :global(.repl-snippet) {
         margin: var(--spacing-root-medium) 0 0 0;
     }
