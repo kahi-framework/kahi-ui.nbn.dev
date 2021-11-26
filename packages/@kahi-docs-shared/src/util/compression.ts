@@ -17,6 +17,20 @@ export function compress_safe(text: string): string {
 }
 
 /**
+ * Uses a modified LZ77 compression to compress the input text and then
+ * return encoded as Base64 for use in Web Storage
+ *
+ * @param text
+ * @returns
+ */
+export function compress_storage(text: string): string {
+    return compress(text, {
+        inputEncoding: "String",
+        outputEncoding: "StorageBinaryString",
+    });
+}
+
+/**
  * Uses a modified LZ77 compression to decompress the Base64-encoded
  * input payload
  *
@@ -26,6 +40,20 @@ export function compress_safe(text: string): string {
 export function decompress_safe(payload: string): string {
     return decompress(payload, {
         inputEncoding: "Base64",
+        outputEncoding: "String",
+    });
+}
+
+/**
+ * Uses a modified LZ77 compression to decompress the Web Storage
+ * encoded input payload
+ *
+ * @param payload
+ * @returns
+ */
+export function decompress_storage(payload: string): string {
+    return decompress(payload, {
+        inputEncoding: "StorageBinaryString",
         outputEncoding: "String",
     });
 }
