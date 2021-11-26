@@ -18,6 +18,15 @@
      * here instead of a Component.
      */
 
+    :global([class*="language-"]) {
+        font-size: var(--font-content-size-root-small) !important;
+        line-height: var(--font-content-line-height-small) !important;
+    }
+
+    :global([class*="language-"] > code) {
+        font-size: 1em;
+    }
+
     :global(.highlight),
     :global(.repl-snippet) {
         position: relative;
@@ -27,9 +36,6 @@
 
         border: 1px solid rgba(var(--palette-inverse-lightest), 0.5);
         border-radius: var(--radius-small);
-
-        font-size: calc(var(--document-font-size) * var(--code-font-size));
-        line-height: normal;
     }
 
     :global(.highlight[data-mode="repl"]),

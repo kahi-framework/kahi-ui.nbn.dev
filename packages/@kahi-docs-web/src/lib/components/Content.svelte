@@ -69,3 +69,7 @@
 </script>
 
 {@html $content.render}
+
+{#each $content.metadata.snippets as snippet}
+    <a href="/api/v3/snippet/{snippet.identifier}" hidden />
+{/each}
