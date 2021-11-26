@@ -1,6 +1,8 @@
 <script lang="ts">
     import {Box, Menu} from "@kahi-ui/framework";
 
+    import {compress_safe} from "@kahi-docs/shared";
+
     import {SPLIT_MODE} from "../Split.svelte";
 
     import Code from "../icons/Code.svelte";
@@ -24,7 +26,9 @@
     }
 
     $: _href =
-        initial_value === value ? `/playground/?snippet=${identifier}` : `/playground/?script=TODO`;
+        initial_value === value
+            ? `/playground/?snippet=${identifier}`
+            : `/playground/?script=${compress_safe(value)}`;
 </script>
 
 <REPLSplit {mode} bind:value />

@@ -1,0 +1,31 @@
+import {compress, decompress} from "lzutf8";
+
+// NOTE: Abstracting here incase of algorithm changes
+
+/**
+ * Uses a modified LZ77 compression to compress the input text and then
+ * return encoded as Base64 for use in URLs
+ *
+ * @param text
+ * @returns
+ */
+export function compress_safe(text: string): string {
+    return compress(text, {
+        inputEncoding: "String",
+        outputEncoding: "Base64",
+    });
+}
+
+/**
+ * Uses a modified LZ77 compression to decompress the Base64-encoded
+ * input payload
+ *
+ * @param payload
+ * @returns
+ */
+export function decompress_safe(payload: string): string {
+    return decompress(payload, {
+        inputEncoding: "Base64",
+        outputEncoding: "String",
+    });
+}

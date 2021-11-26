@@ -21,6 +21,8 @@
     $: _initial_load = initial_mount && initial_ready;
 </script>
 
+<!-- TODO: surface errors -->
+
 <Split class="repl-split" orientation={$vertical_viewports ? "vertical" : "horizontal"} {mode}>
     <svelte:fragment slot="first">
         <REPLEditor bind:value on:ready={() => (initial_ready = true)} />
