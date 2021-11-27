@@ -4,4 +4,4 @@
     them here so SvelteKit knows to prerender them
 -->
 
-<a href="/api/v3/search.json" hidden />
+<a href="/api/v4/search.json" hidden />

@@ -4,7 +4,7 @@
     import type {INavigationGet, IRouteError} from "../../lib/shared/api";
 
     export const load: Load = async ({fetch}) => {
-        const response = await fetch(`/api/v3/navigation/docs.json`);
+        const response = await fetch(`/api/v4/navigation/docs.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 

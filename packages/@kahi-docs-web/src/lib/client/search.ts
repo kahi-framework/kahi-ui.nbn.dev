@@ -15,7 +15,7 @@ export interface ISearchResult {
 }
 
 async function fetch_search_index(): Promise<ISearchIndex> {
-    const response = await fetch("/api/v3/search.json");
+    const response = await fetch("/api/v4/search.json");
     const data = (await response.json()) as ISearchGet;
 
     return data.data;

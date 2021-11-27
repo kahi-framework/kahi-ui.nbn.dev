@@ -6,7 +6,7 @@
     export const load: Load = async ({fetch, page}) => {
         const {identifier = ""} = page.params;
 
-        const response = await fetch(`/api/v3/content/docs/${identifier}.json`);
+        const response = await fetch(`/api/v4/content/docs/${identifier}.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 

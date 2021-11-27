@@ -11,7 +11,7 @@
         const {script = "", snippet = ""} = Object.fromEntries(page.query.entries());
 
         if (snippet) {
-            const response = await fetch(`/api/v3/snippets/${snippet}.json`);
+            const response = await fetch(`/api/v4/snippets/${snippet}.json`);
             if (!response.ok) {
                 const data = (await response.json()) as IRouteError;
 
