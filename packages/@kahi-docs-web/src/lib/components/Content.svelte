@@ -71,5 +71,5 @@
 {@html $content.render}
 
 {#each $content.metadata.snippets as snippet}
-    <a href="/api/v3/snippets/{snippet.identifier}" hidden />
+    <a href="/api/v3/snippets/{snippet.identifier}.json" hidden />
 {/each}
