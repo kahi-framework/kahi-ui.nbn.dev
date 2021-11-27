@@ -12,6 +12,7 @@
 
     export let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
     export let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
+    export let split: number = 0.5;
     export let value: string;
 
     $: _initial_load = initial_mount && initial_ready;
@@ -19,7 +20,7 @@
 
 <!-- TODO: surface errors -->
 
-<Split class="repl-split" {orientation} {mode}>
+<Split class="repl-split" {orientation} {mode} bind:split>
     <svelte:fragment slot="first">
         <REPLEditor bind:value on:ready={() => (initial_ready = true)} />
     </svelte:fragment>

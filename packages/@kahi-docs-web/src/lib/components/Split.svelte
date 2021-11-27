@@ -26,7 +26,7 @@
 
     export let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
     export let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
-    export let split: number = 0.15;
+    export let split: number = 0.5;
 
     function on_slider_move(percentage: number): void {
         split = percentage;

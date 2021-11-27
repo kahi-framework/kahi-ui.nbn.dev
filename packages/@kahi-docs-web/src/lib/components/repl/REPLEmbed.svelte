@@ -38,6 +38,7 @@
 
 <REPLSplit
     orientation={$vertical_viewports ? SPLIT_ORIENTATION.vertical : SPLIT_ORIENTATION.horizontal}
+    split={0.15}
     {mode}
     bind:value
 />
