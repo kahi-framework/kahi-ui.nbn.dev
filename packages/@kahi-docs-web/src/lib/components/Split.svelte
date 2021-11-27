@@ -59,6 +59,8 @@
     <section style={mode === SPLIT_MODE.first ? "display:none;" : ""}>
         <slot name="last" />
     </section>
+
+    <slot />
 </div>
 
 <style>
