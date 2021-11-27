@@ -59,8 +59,6 @@ You can finally use global stylesheets to keep all your customizations in one sp
         </style>
     </head>
 
-    <body>
-        ...
-    </body>
+    <body> ... </body>
 </html>
 ```
