@@ -73,7 +73,8 @@
     }
 
     onMount(() => {
-        location.search = "";
+        // NOTE: Better UX (User Experience) to clear any previously selected snippets / shared playgrounds
+        history.replaceState(null, "", `${location.origin}${location.pathname}`);
     });
 
     $: if (browser) $session = value;
