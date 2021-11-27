@@ -46,7 +46,7 @@ Otherwise download the required CSS files from [Releases](https://github.com/nov
 
 Import Components by their variable name from `@kahi-ui/framework`:
 
-```svelte repl Getting Started Usage
+```svelte {title="Getting Started Usage" mode="repl"}
 <script>
     import {Button, Heading} from "@kahi-ui/framework";
 
@@ -66,7 +66,7 @@ Import Components by their variable name from `@kahi-ui/framework`:
 
 Some Components are multi-part patterns, so you'll need to import their namespaces:
 
-```svelte repl Getting Started Patterns
+```svelte {title="Getting Started Patterns" mode="repl"}
 <script>
     import {
         Button,

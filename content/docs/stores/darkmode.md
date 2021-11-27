@@ -4,7 +4,7 @@
 
 > **NOTE**: Click the color scheme button in the Navigation topbar to see changes.
 
-```svelte repl darkmode Preview
+```svelte {title="darkmode Preview" mode="repl"}
 <script>
     import {Text, darkmode} from "@kahi-ui/framework";
 
@@ -20,7 +20,7 @@
 
 ## Imports
 
-```javascript default darkmode Imports
+```javascript {title="darkmode Imports"}
 import {darkmode} from "@kahi-ui/framework";
 ```
 

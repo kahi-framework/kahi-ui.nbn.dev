@@ -24,7 +24,7 @@ types=["{}"]
 
 `Position` is a layout primitive that can float itself and child content in specific regions of the containing Components.
 
-```svelte repl Position Preview
+```svelte {title="Position Preview" mode="repl"}
 <script>
     import {
         Badge,
@@ -53,7 +53,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default Position Imports
+```svelte {title="Position Imports"}
 <script>
     import {Position} from "@kahi-ui/framework";
 </script>
@@ -63,7 +63,7 @@ types=["{}"]
 
 You can set the `Position` to float its self (and its children) into a corner relative to its containing layout via the `variation` property.
 
-```svelte repl Position Floated
+```svelte {title="Position Floated" mode="repl"}
 <script>
     import {
         Badge,
@@ -148,7 +148,7 @@ You can set the `Position` to float its self (and its children) into a corner re
 
 You can set the `Position` to raise its self (and its children) in-place via the `variation` property.
 
-```svelte repl Position Raised
+```svelte {title="Position Raised" mode="repl"}
 <script>
     import {
         Badge,

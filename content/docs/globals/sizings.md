@@ -40,7 +40,7 @@ All Components have access to the global width and height HTML data attributes. 
 
 You can set a defined width for your Components via the `width` property.
 
-```svelte repl Sizings Width
+```svelte {title="Sizings Width" mode="repl"}
 <script>
     import {
         Box,
@@ -241,7 +241,7 @@ You can set a defined width for your Components via the `width` property.
 
 You can set a defined height for your Components via the `height` property.
 
-```svelte repl Sizings Height
+```svelte {title="Sizings Height" mode="repl"}
 <script>
     import {
         Box,
@@ -446,7 +446,7 @@ You can set a defined height for your Components via the `height` property.
 
 You can also set minimums or maximum sizes via prefixing your properties with `max_` or `min_`.
 
-```svelte repl Sizings Height
+```svelte {title="Sizings Height" mode="repl"}
 <script>
     import {Box, Text} from "@kahi-ui/framework";
 </script>

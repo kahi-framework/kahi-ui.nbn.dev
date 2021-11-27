@@ -136,7 +136,7 @@ types=["<length-percentage>, <length-percentage>"]
 
 `Transition` is used to apply transitional animations on a containing element that will also include its children. Typically used for situations like changing between pages.
 
-```svelte repl Transition Preview
+```svelte {title="Transition Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -164,7 +164,7 @@ types=["<length-percentage>, <length-percentage>"]
 
 ## Imports
 
-```svelte default Transition Imports
+```svelte {title="Transition Imports"}
 <script>
     import {Transition} from "@kahi-ui/framework";
 </script>
@@ -174,7 +174,7 @@ types=["<length-percentage>, <length-percentage>"]
 
 Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to delay it via the `delay` property.
 
-```svelte repl Transition Delay
+```svelte {title="Transition Delay" mode="repl"}
 <script>
     import {
         Box,
@@ -204,7 +204,7 @@ Based on the animaton duration properties in the currently loaded theme. You can
 
 Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to increase / shorten the animation duration via the `duration` property.
 
-```svelte repl Transition Duration
+```svelte {title="Transition Duration" mode="repl"}
 <script>
     import {
         Box,
@@ -274,7 +274,7 @@ Based on the animaton duration properties in the currently loaded theme. You can
 
 You can control which direction the `Transition` animation will "expand", "move", or whatever your selected animations performs. Via the `direction` property.
 
-```svelte repl Transition Direction
+```svelte {title="Transition Direction" mode="repl"}
 <script>
     import {
         Box,
@@ -308,7 +308,7 @@ You can control which direction the `Transition` animation will "expand", "move"
 
 The simplest of all the animations, you can fade content in and out via the `animation` property.
 
-```svelte repl Transition Fade
+```svelte {title="Transition Fade" mode="repl"}
 <script>
     import {
         Box,
@@ -334,7 +334,7 @@ The simplest of all the animations, you can fade content in and out via the `ani
 
 By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
 
-```svelte repl Transition Fade DOM
+```svelte {title="Transition Fade DOM" mode="repl"}
 <script>
     import {
         Box,
@@ -431,7 +431,7 @@ By supplying a variation off the bat, you can also have the animation played as 
 
 You can have content "clip" in and out via the `animation` property.
 
-```svelte repl Transition Clip
+```svelte {title="Transition Clip" mode="repl"}
 <script>
     import {
         Box,
@@ -499,7 +499,7 @@ You can have content "clip" in and out via the `animation` property.
 
 By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
 
-```svelte repl Transition Clip DOM
+```svelte {title="Transition Clip DOM" mode="repl"}
 <script>
     import {
         Box,
@@ -610,7 +610,7 @@ By supplying a variation off the bat, you can also have the animation played as 
 
 You can have content "scale" in and out via the `animation` property.
 
-```svelte repl Transition Scale
+```svelte {title="Transition Scale" mode="repl"}
 <script>
     import {
         Box,
@@ -644,7 +644,7 @@ You can have content "scale" in and out via the `animation` property.
 
 By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
 
-```svelte repl Transition Scale DOM
+```svelte {title="Transition Scale DOM" mode="repl"}
 <script>
     import {
         Box,
@@ -747,7 +747,7 @@ By supplying a variation off the bat, you can also have the animation played as 
 
 You can have content "slide" in and out via the `animation` property.
 
-```svelte repl Transition Slide
+```svelte {title="Transition Slide" mode="repl"}
 <script>
     import {
         Box,
@@ -815,7 +815,7 @@ You can have content "slide" in and out via the `animation` property.
 
 By supplying a variation off the bat, you can also have the animation played as soon as the DOM is loaded.
 
-```svelte repl Transition Slide DOM
+```svelte {title="Transition Slide DOM" mode="repl"}
 <script>
     import {
         Box,

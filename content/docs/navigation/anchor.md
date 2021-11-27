@@ -54,7 +54,7 @@ types=["<text-decoration>"]
 
 `Anchor` are used for navigating from page to page, or to external websites.
 
-```svelte repl Anchor Preview
+```svelte {title="Anchor Preview" mode="repl"}
 <script>
     import {Anchor} from "@kahi-ui/framework";
 </script>
@@ -70,7 +70,7 @@ types=["<text-decoration>"]
 
 ## Imports
 
-```html default Anchor Imports
+```svelte {title="Anchor Imports"}
 <script>
     import {Anchor} from "@kahi-ui/framework";
 </script>
@@ -80,7 +80,7 @@ types=["<text-decoration>"]
 
 When navigating only to an internal Web Application route, you can just set `href` property with no other properties.
 
-```svelte repl Anchor Internal Navigation
+```svelte {title="Anchor Internal Navigation" mode="repl"}
 <script>
     import {Anchor} from "@kahi-ui/framework";
 </script>
@@ -92,7 +92,7 @@ When navigating only to an internal Web Application route, you can just set `hre
 
 When navigating to external links, for **security purposes** it's recommended to set [`rel="noopener"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener) to prevent [`Window.opener`](https://developer.mozilla.org/en-US/docs/Web/API/Window/opener) from being set on the newly opened page. And also to set [`rel="noreferrer"`](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noreferrer) for **privacy purposes**, to prevent the Browser from sending the [`Referer`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer) header to the new page.
 
-```svelte repl Anchor External Navigation
+```svelte {title="Anchor External Navigation" mode="repl"}
 <script>
     import {Anchor} from "@kahi-ui/framework";
 </script>
@@ -110,7 +110,7 @@ When navigating to external links, for **security purposes** it's recommended to
 
 You can change the color palette of the `Anchor` via the `palette` property.
 
-```svelte repl Anchor Palette
+```svelte {title="Anchor Palette" mode="repl"}
 <script>
     import {Anchor, Stack} from "@kahi-ui/framework";
 </script>

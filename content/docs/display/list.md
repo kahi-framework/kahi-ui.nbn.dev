@@ -25,7 +25,7 @@ types=["<length>"]
 
 `List` is used for rendering simple text lists.
 
-```svelte repl List Preview
+```svelte {title="List Preview" mode="repl"}
 <script>
     import {List} from "@kahi-ui/framework";
 </script>
@@ -39,7 +39,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default List Preview
+```svelte {title="List Imports"}
 <script>
     import {List} from "@kahi-ui/framework";
 
@@ -51,7 +51,7 @@ types=["<length>"]
 
 You can change what type of list is being rendered via the `is` property.
 
-```svelte repl List Types
+```svelte {title="List Types" mode="repl"}
 <script>
     import {
         List,

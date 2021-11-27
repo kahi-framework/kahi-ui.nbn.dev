@@ -64,7 +64,7 @@ types=["<alpha-value>"]
 
 `Breadcrumb` is typically used to render a series of links with separators. With the each link left of the right-most a state in the end-user's navigation history. Or, a route hierarchy of the Web Application. e.g. directory paths
 
-```svelte repl Breadcrumb Preview
+```svelte {title="Breadcrumb Preview" mode="repl"}
 <script>
     import {Breadcrumb} from "@kahi-ui/framework";
 </script>
@@ -86,7 +86,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Breadcrumb Imports
+```svelte {title="Breadcrumb Imports"}
 <script>
     import {Breadcrumb} from "@kahi-ui/framework";
 
@@ -98,7 +98,7 @@ types=["<alpha-value>"]
 
 You can alter the separator between items rendered via the `separator` property.
 
-```svelte repl Breadcrumb Separator
+```svelte {title="Breadcrumb Separator" mode="repl"}
 <script>
     import {Breadcrumb} from "@kahi-ui/framework";
 </script>

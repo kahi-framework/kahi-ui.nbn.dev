@@ -18,11 +18,34 @@
      * here instead of a Component.
      */
 
-    :global(.snippet-highlight),
-    :global(.snippet-repl) {
+    :global([class*="language-"]) {
+        font-size: var(--font-content-size-root-small) !important;
+        line-height: var(--font-content-line-height-small) !important;
+    }
+
+    :global([class*="language-"] > code) {
+        font-size: 1em;
+    }
+
+    :global(.highlight),
+    :global(.repl-snippet) {
+        position: relative;
+
         width: 100%;
+        max-height: 30rem;
 
         border: 1px solid rgba(var(--palette-inverse-lightest), 0.5);
         border-radius: var(--radius-small);
+    }
+
+    :global(.highlight[data-mode="repl"]),
+    :global(.repl-snippet) {
+        /** NOTE: REPLs are fixed heights, so we need to set documentation snippets to be likewise */
+
+        height: 30rem;
+    }
+
+    :global(.repl-snippet) {
+        z-index: 0;
     }
 </style>

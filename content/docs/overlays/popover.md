@@ -62,7 +62,7 @@ types=["{}"]
 
 `Popover` is typically used for hiding content that'll clip onto the page when activated via a button or something else.
 
-```svelte repl Popover Preview
+```svelte {title="Popover Preview" mode="repl"}
 <script>
     import {
         Card,
@@ -131,7 +131,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default Popover Imports
+```svelte {title="Popover Imports"}
 <script>
     import {Popover} from "@kahi-ui/framework";
 </script>
@@ -149,7 +149,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
 
 `Popover` adds special handling for the `hidden` property, allowing you to instead customize when the child content is hidden or rendered normally.
 
-```svelte repl Popover Hidden
+```svelte {title="Popover Hidden" mode="repl"}
 <script>
     import {
         Box,
@@ -188,7 +188,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
 
 You can optionally have the `Popover` dismissible by clicking outside the `Popover` child content via the `dismissible` property.
 
-```svelte repl Popover Dismissible
+```svelte {title="Popover Dismissible" mode="repl"}
 <script>
     import {
         Box,
@@ -243,7 +243,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `Popov
 
 You can enable having the `Popover` dismissed whenever inner content is clicked via the `once` property.
 
-```svelte repl Popover Once
+```svelte {title="Popover Once" mode="repl"}
 <script>
     import {
         Card,
@@ -317,7 +317,7 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
 
 You can manually open / close the `Popover` via the `state` property.
 
-```svelte repl Popover State
+```svelte {title="Popover State" mode="repl"}
 <script>
     import {
         Button,
@@ -358,7 +358,7 @@ You can manually open / close the `Popover` via the `state` property.
 
 You can adjust which side your content is placed on via the `placement` property.
 
-```svelte repl Popover Placement
+```svelte {title="Popover Placement" mode="repl"}
 <script>
     import {
         Box,
@@ -413,7 +413,7 @@ You can adjust which side your content is placed on via the `placement` property
 
 You can align `Popover` which direction the child content breaks, via the `alignment_x` and `alignment_y` properties respectively.
 
-```svelte repl Popover Alignment
+```svelte {title="Popover Alignment" mode="repl"}
 <script>
     import {
         Box,

@@ -73,7 +73,7 @@ Form Components are helpers to supplement input Components that are meant for we
 
 `Form.HelpText` is typically used for displaying information about how to input information into a form properly.
 
-```svelte repl Form HelpText
+```svelte {title="Form HelpText" mode="repl"}
 <script>
     import {Form, TextInput} from "@kahi-ui/framework";
 </script>
@@ -90,7 +90,7 @@ Form Components are helpers to supplement input Components that are meant for we
 
 `Form.Label` focuses the target input Component whenever its child content is clicked.
 
-```svelte repl Form Label
+```svelte {title="Form Label" mode="repl"}
 <script>
     import {Check, Form} from "@kahi-ui/framework";
 </script>
@@ -107,7 +107,7 @@ Form Components are helpers to supplement input Components that are meant for we
 
 `Form.Control` is typically used to display form and input Components in a preformatted stack.
 
-```svelte repl Form Control
+```svelte {title="Form Control" mode="repl"}
 <script>
     import {
         Code,
@@ -137,7 +137,7 @@ Form Components are helpers to supplement input Components that are meant for we
 
 `Form.Group` let's you directly set the relevant form-related [Svelte Contexts](https://svelte.dev/docs#setContext) via its properties without using any preformatted shown above.
 
-```svelte repl Form Group
+```svelte {title="Form Group" mode="repl"}
 <script>
     import {
         Form,

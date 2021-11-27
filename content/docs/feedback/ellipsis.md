@@ -39,7 +39,7 @@ types=["<alpha-value>"]
 
 `Ellipsis` is a text-based indicator used to tell the end-user that the Web Application is loading something in the background.
 
-```svelte repl Ellipsis Preview
+```svelte {title="Ellipsis Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -71,7 +71,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Ellipsis Imports
+```svelte {title="Ellipsis Imports"}
 <script>
     import {Ellipsis} from "@kahi-ui/framework";
 </script>
@@ -81,7 +81,7 @@ types=["<alpha-value>"]
 
 You can customize the text character used for the animation via the `character` property.
 
-```svelte repl Ellipsis Character
+```svelte {title="Ellipsis Character" mode="repl"}
 <script>
     import {
         Ellipsis,

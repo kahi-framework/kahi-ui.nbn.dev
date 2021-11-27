@@ -124,7 +124,7 @@ types=["<alpha-value>"]
 
 `Switch` is typically used to present to the end-user features, settings, and other toggles that they can turn on / off.
 
-```svelte repl Switch Preview
+```svelte {title="Switch Preview" mode="repl"}
 <script>
     import {Form, Switch} from "@kahi-ui/framework";
 </script>
@@ -137,7 +137,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Switch Imports
+```svelte {title="Switch Imports"}
 <script>
     import {Switch} from "@kahi-ui/framework";
 </script>
@@ -147,7 +147,7 @@ types=["<alpha-value>"]
 
 You can control the state of the `Switch` via the `active`, `disabled`, and `state` properties.
 
-```svelte repl Switch States
+```svelte {title="Switch States" mode="repl"}
 <script>
     import {
         Switch,
@@ -204,7 +204,7 @@ You can control the state of the `Switch` via the `active`, `disabled`, and `sta
 
 You can change the color palette of the `Switch` via the `palette` property.
 
-```svelte repl Switch Palette
+```svelte {title="Switch Palette" mode="repl"}
 <script>
     import {
         Switch,
@@ -266,7 +266,7 @@ You can change the color palette of the `Switch` via the `palette` property.
 
 You can change the size of the `Switch` via the `size` property.
 
-```svelte repl Switch Size
+```svelte {title="Switch Size" mode="repl"}
 <script>
     import {
         Switch,

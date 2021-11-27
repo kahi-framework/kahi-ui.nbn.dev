@@ -34,7 +34,7 @@ types=["<length>", "<percentage>"]
 
 `Dot` is typically used for calling out other UI elements to the end-user, that they need attention.
 
-```svelte repl Dot Preview
+```svelte {title="Dot Preview" mode="repl"}
 <script>
     import {Dot} from "@kahi-ui/framework";
 </script>
@@ -44,7 +44,7 @@ types=["<length>", "<percentage>"]
 
 ## Imports
 
-```html default Dot Imports
+```svelte {title="Dot Imports"}
 <script>
     import {Dot} from "@kahi-ui/framework";
 </script>
@@ -54,7 +54,7 @@ types=["<length>", "<percentage>"]
 
 You can change the color palette of the `Dot` via the `palette` property.
 
-```svelte repl Dot Palette
+```svelte {title="Dot Palette" mode="repl"}
 <script>
     import {
         Dot,
@@ -116,7 +116,7 @@ You can change the color palette of the `Dot` via the `palette` property.
 
 You can have the `Dot` perform animations to grab the end-user's attention via the `animation` property.
 
-```svelte repl Dot Animation
+```svelte {title="Dot Animation" mode="repl"}
 <script>
     import {
         Dot,
@@ -155,7 +155,7 @@ You can have the `Dot` perform animations to grab the end-user's attention via t
 
 You can change the position of the `Dot` to raise it above in its parent to more explictly call out a Component.
 
-```svelte repl Dot Position
+```svelte {title="Dot Position" mode="repl"}
 <script>
     import {
         Button,

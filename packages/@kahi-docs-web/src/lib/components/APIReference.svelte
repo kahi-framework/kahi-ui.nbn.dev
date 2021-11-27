@@ -1,12 +1,12 @@
 <script lang="ts">
     import {Code, Heading, Scrollable, Stack, Table, Text} from "@kahi-ui/framework";
 
-    import type {IReferenceMap} from "@kahi-docs/markdown";
+    import type {IReference, IReferenceMap} from "@kahi-docs/markdown";
 
     export let id: string;
     export let references: IReferenceMap;
 
-    $: _components = Object.entries(references);
+    $: _components = Object.entries(references) as [string, IReference[]][];
 </script>
 
 {#each _components as [component, properties]}

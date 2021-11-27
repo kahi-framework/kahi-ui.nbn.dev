@@ -1,16 +1,5 @@
-import type {Writable} from "svelte/store";
-import {readable} from "svelte/store";
-import {writable} from "svelte-local-storage-store";
+import {storage} from "./storage";
 
 export type IPreferenceThemeValues = "dark" | "light" | "";
 
-export type IPreferenceThemeStore = Writable<IPreferenceThemeValues>;
-
-function _preferencetheme(): IPreferenceThemeStore {
-    // @ts-expect-error - HACK: Readable allows for optional callback
-    if (typeof window === "undefined") return readable<IPreferenceThemeValues>("");
-
-    return writable<IPreferenceThemeValues>("kahi-docs.preferences.theme", "");
-}
-
-export const preferencetheme = _preferencetheme();
+export const preferencetheme = storage<"dark" | "light" | "">("preferences.theme", "");

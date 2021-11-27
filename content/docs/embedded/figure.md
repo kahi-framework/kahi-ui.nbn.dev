@@ -30,7 +30,7 @@ types=["{}"]
 
 `Figure` is a multimedia container Component, providing modifications for things such as images and videos.
 
-```svelte repl Figure Preview
+```svelte {title="Figure Preview" mode="repl"}
 <script>
     import {Figure} from "@kahi-ui/framework";
 </script>
@@ -42,7 +42,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Figure Imports
+```svelte {title="Figure Imports"}
 <script>
     import {Figure} from "@kahi-ui/framework";
 </script>
@@ -52,7 +52,7 @@ types=["{}"]
 
 You can modify the shape of the child content via the `shape` property.
 
-```svelte repl Figure Shape
+```svelte {title="Figure Shape" mode="repl"}
 <script>
     import {
         Figure,
@@ -89,7 +89,7 @@ You can modify the shape of the child content via the `shape` property.
 
 You can modify the size of the child content between five presets via the `size` property. Along with separate set of sizes meant for icon-sized content by including `variation="icon"`.
 
-```svelte repl Figure Size
+```svelte {title="Figure Size" mode="repl"}
 <script>
     import {
         Figure,
@@ -192,7 +192,7 @@ You can modify the size of the child content between five presets via the `size`
 
 You can change how the child content is stretched across the `Figure` container via the `fit` property.
 
-```svelte repl Figure Fit
+```svelte {title="Figure Fit" mode="repl"}
 <script>
     import {
         Figure,

@@ -4,7 +4,7 @@
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 
-```svelte repl viewport Preview
+```svelte {title="viewport Preview" mode="repl"}
 <script>
     import {
         Code,
@@ -43,7 +43,7 @@
 
 ## Imports
 
-```javascript default viewport Imports
+```javascript {title="viewport Imports"}
 import {viewport, viewports} from "@kahi-ui/framework";
 ```
 

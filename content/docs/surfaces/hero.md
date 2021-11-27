@@ -119,7 +119,7 @@ types=["<length>"]
 
 `Hero` is a multi-part surface pattern for displaying banner text with subtitling and actions, typically used for landing pages, error messages, and loading placeholders.
 
-```svelte repl Hero Preview
+```svelte {title="Hero Preview" mode="repl"}
 <script>
     import {Button, Hero} from "@kahi-ui/framework";
 </script>
@@ -145,7 +145,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default Hero Imports
+```svelte {title="Hero Imports"}
 <script>
     import {Hero} from "@kahi-ui/framework";
 
@@ -157,7 +157,7 @@ types=["<length>"]
 
 You can change the color palette of the `Hero` via the `palette` property.
 
-```svelte repl Hero Palette
+```svelte {title="Hero Palette" mode="repl"}
 <script>
     import {
         Button,

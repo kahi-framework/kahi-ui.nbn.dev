@@ -84,7 +84,7 @@ types=["CustomEvent<void>"]
 
 `DayPicker` is a Widget that displays a calendar-style grid of days that a user can select from.
 
-```svelte repl DayPicker Preview
+```svelte {title="DayPicker Preview" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -102,7 +102,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default DayPicker Imports
+```svelte {title="DayPicker Imports"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 </script>
@@ -112,7 +112,7 @@ types=["CustomEvent<void>"]
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl DayPicker Disabled
+```svelte {title="DayPicker Disabled" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -131,7 +131,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can disable specific days from being selected via the `disabled` property.
 
-```svelte repl DayPicker Disabled Days
+```svelte {title="DayPicker Disabled Days" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -155,7 +155,7 @@ You can disable specific days from being selected via the `disabled` property.
 
 You can allow for multiple days to be selected via the `multiple` property.
 
-```svelte repl DayPicker Multiple
+```svelte {title="DayPicker Multiple" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -179,7 +179,7 @@ You can allow for multiple days to be selected via the `multiple` property.
 
 You can disable selected days from being unselected via the `once` property.
 
-```svelte repl DayPicker Once
+```svelte {title="DayPicker Once" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -200,7 +200,7 @@ You can disable selected days from being unselected via the `once` property.
 
 You can disable interactivity without changing the visuals via the `readonly` property.
 
-```svelte repl DayPicker Readonly
+```svelte {title="DayPicker Readonly" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -221,7 +221,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 You can select a specific set of days to be highlighted as outlines via the `highlight` property.
 
-```svelte repl DayPicker Highlight
+```svelte {title="DayPicker Highlight" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -246,7 +246,7 @@ You can select a specific set of days to be highlighted as outlines via the `hig
 
 You can set maximum and minimum range of selectable days via the `maximum` / `minimum` properties.
 
-```svelte repl DayPicker Maximum + Minimum
+```svelte {title="DayPicker Maximum + Minimum" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -269,7 +269,7 @@ You can set maximum and minimum range of selectable days via the `maximum` / `mi
 
 You can customize how the day component of the available timestamps is displayed via the `day` and `weekday` properties respectively.
 
-```svelte repl DayPicker Custom Format
+```svelte {title="DayPicker Custom Format" mode="repl"}
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
@@ -289,7 +289,7 @@ You can customize how the day component of the available timestamps is displayed
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl DayPicker Sizing
+```svelte {title="DayPicker Sizing" mode="repl"}
 <script>
     import {
         DayPicker,

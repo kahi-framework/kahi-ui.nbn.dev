@@ -1,6 +1,7 @@
 import type {INavigationMenu} from "@kahi-docs/config";
-import type {IDocumentationRender} from "@kahi-docs/markdown";
-import type {ISearchIndex} from "@kahi-docs/shared";
+import type {IPageRender, ISnippet} from "@kahi-docs/markdown";
+
+import type {ISearchIndex} from "../shared/search";
 
 export interface IRouteError {
     code: string;
@@ -14,7 +15,7 @@ export interface IRouteSuccess {
 }
 
 export interface IContentGet extends IRouteSuccess {
-    data: IDocumentationRender;
+    data: IPageRender;
 }
 
 export interface INavigationGet extends IRouteSuccess {
@@ -23,4 +24,8 @@ export interface INavigationGet extends IRouteSuccess {
 
 export interface ISearchGet extends IRouteSuccess {
     data: ISearchIndex;
+}
+
+export interface ISnippetGet extends IRouteSuccess {
+    data: ISnippet;
 }

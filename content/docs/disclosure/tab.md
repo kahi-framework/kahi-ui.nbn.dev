@@ -149,7 +149,7 @@ types=["<length>"]
 
 `Tab` Components are typically used for turning what would be multi-page content, into a single page with a set of radio buttons to toggle between views.
 
-```svelte repl Tab Preview
+```svelte {title="Tab Preview" mode="repl"}
 <script>
     import {
         Heading,
@@ -215,7 +215,7 @@ types=["<length>"]
 ## Imports
 
 <!-- prettier-ignore -->
-```html default Tab Imports
+```svelte {title="Tab Imports"}
 <script>
     import {Tab} from "@kahi-ui/framework";
 
@@ -233,7 +233,7 @@ types=["<length>"]
 
 You can change the color palette of the `Tab` radio buttons via the `palette` property.
 
-```svelte repl Tab Palette
+```svelte {title="Tab Palette" mode="repl"}
 <script>
     import {Heading, Tab} from "@kahi-ui/framework";
 </script>
@@ -314,7 +314,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
 
 You can alter how large each `Tab` radio button should be via the `sizing` property.
 
-```svelte repl Tab Sizing
+```svelte {title="Tab Sizing" mode="repl"}
 <script>
     import {
         Heading,
@@ -582,7 +582,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
 
 You can change the alignment of each `Tab` radio button via the `alignment_x` property.
 
-```svelte repl Tab Alignment
+```svelte {title="Tab Alignment" mode="repl"}
 <script>
     import {
         Heading,
@@ -786,7 +786,7 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
 
 You can customize the slot loading behavior of individual `Tab.Section` Components to not render their children, via the `loading` property.
 
-```svelte repl Tab Loading
+```svelte {title="Tab Loading" mode="repl"}
 <script>
     import {
         Heading,
@@ -853,7 +853,7 @@ You can customize the slot loading behavior of individual `Tab.Section` Componen
 
 You can substitute `Tab.Label` for `Tab.Anchor` to support per-page tabbed views.
 
-```svelte repl Tab Anchor
+```svelte {title="Tab Anchor" mode="repl"}
 <script>
     import {
         Heading,
@@ -900,7 +900,7 @@ You can substitute `Tab.Label` for `Tab.Anchor` to support per-page tabbed views
 
 You can use [`Transition`](../utilities/transition.md) Components to provide fancy switching animations.
 
-```svelte repl Tab Transitions
+```svelte {title="Tab Transitions" mode="repl"}
 <script>
     import {
         Heading,

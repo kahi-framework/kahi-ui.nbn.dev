@@ -25,7 +25,7 @@ types=["<length>"]
 
 `Container` is a layout primitive used to typically constrain chunks of content to a max width or parent width, and centered horizontally with padding. By default it sets the max width to 65 characters.
 
-```svelte repl Container Preview
+```svelte {title="Container Preview" mode="repl"}
 <script>
     import {Container, Text} from "@kahi-ui/framework";
 </script>
@@ -45,7 +45,7 @@ types=["<length>"]
 
 ## Imports
 
-```svelte default Container Imports
+```svelte {title="Container Imports"}
 <script>
     import {Container} from "@kahi-ui/framework";
 </script>
@@ -59,7 +59,7 @@ types=["<length>"]
 
 You can customize the `Container` to be constrained to specific Viewport sizes.
 
-```svelte repl Svelte Viewports
+```svelte {title="Svelte Viewports" mode="repl"}
 <script>
     import {Container, Text} from "@kahi-ui/framework";
 </script>

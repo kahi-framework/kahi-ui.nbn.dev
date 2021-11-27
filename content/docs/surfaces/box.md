@@ -46,7 +46,7 @@ types=["<length>", "<percentage>"]
 
 `Box` is a surface primitive for encapsulating section content in a block of color.
 
-```svelte repl Box Preview
+```svelte {title="Box Preview" mode="repl"}
 <script>
     import {Box} from "@kahi-ui/framework";
 </script>
@@ -56,7 +56,7 @@ types=["<length>", "<percentage>"]
 
 ## Imports
 
-```html default Box Imports
+```svelte {title="Box Imports"}
 <script>
     import {Box} from "@kahi-ui/framework";
 </script>
@@ -66,7 +66,7 @@ types=["<length>", "<percentage>"]
 
 You can change the color palette of the `Box` via the `palette` property.
 
-```svelte repl Box Palette
+```svelte {title="Box Palette" mode="repl"}
 <script>
     import {
         Box,
@@ -166,7 +166,7 @@ You can change the color palette of the `Box` via the `palette` property.
 
 You can set how "high" your `Box` will appear to be over top the page via the `elevation` property.
 
-```svelte repl Box Elevation
+```svelte {title="Box Elevation" mode="repl"}
 <script>
     import {
         Box,
@@ -254,7 +254,7 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
 
 You can modify the shape of the `Box` via the `shape` property.
 
-```svelte repl Box Shape
+```svelte {title="Box Shape" mode="repl"}
 <script>
     import {
         Box,

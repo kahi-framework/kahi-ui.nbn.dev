@@ -2,7 +2,7 @@
 
 `mediaquery` / `mediaqueries` are [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a provided [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) is currently active.
 
-```svelte repl mediaquery Prevew
+```svelte {title="mediaquery Prevew" mode="repl"}
 <script>
     import {
         Code,
@@ -44,7 +44,7 @@
 
 ## Imports
 
-```javascript default mediaquery Imports
+```javascript {title="mediaquery Imports"}
 import {
     mediaquery,
     mediaqueries,

@@ -1,17 +1,28 @@
 import GithubSlugger from "github-slugger";
 import type MarkdownIt from "markdown-it";
 
-import type {IPluginOptions} from "./types";
+import type {ISection} from "../types/page";
 
-export function SectionsPlugin(md: MarkdownIt, options: IPluginOptions) {
+export interface ISectionsPluginEnvironment {
+    sections?: ISection[];
+}
+
+export function SectionsPlugin(md: MarkdownIt) {
     const {renderer} = md;
     const {heading_open} = renderer.rules;
-    const {cache} = options;
 
-    const sections = (cache.sections = cache.sections ?? []);
     const slugger = new GithubSlugger();
 
-    renderer.rules.heading_open = (tokens, idx, _options, env, self) => {
+    renderer.rules.heading_open = (
+        tokens,
+        idx,
+        _options,
+        env: ISectionsPluginEnvironment,
+        self
+    ) => {
+        const {sections = []} = env;
+        env.sections = sections;
+
         const token = tokens[idx];
         const sibling_token = tokens[idx + 1];
 

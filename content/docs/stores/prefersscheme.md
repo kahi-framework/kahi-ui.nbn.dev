@@ -4,7 +4,7 @@
 
 > **NOTE**: Change your Operating System's color settings to see changes.
 
-```svelte repl prefersscheme Preview
+```svelte {title="prefersscheme Preview" mode="repl"}
 <script>
     import {
         Code,
@@ -30,7 +30,7 @@
 
 ## Imports
 
-```javascript default prefersscheme Imports
+```javascript {title="prefersscheme Imports"}
 import {
     prefersscheme,
     prefersdark,
@@ -42,7 +42,7 @@ import {
 
 The `prefersscheme` Store also comes with two preconfigured default shortcuts, `prefersdark` and `preferslight`.
 
-```svelte repl prefersscheme Shortcuts
+```svelte {title="prefersscheme Shortcuts" mode="repl"}
 <script>
     import {
         Code,

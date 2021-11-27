@@ -18,8 +18,8 @@
         "@kahi-ui/framework": "0.4.11"
     },
     "devDependencies": {
-        "prettier": "^2.3.1",
-        "prettier-plugin-svelte": "^2.3.1",
+        "prettier": "^2.4.1",
+        "prettier-plugin-svelte": "^2.4.0",
         "svelte": "^3.44.0"
     }
 }

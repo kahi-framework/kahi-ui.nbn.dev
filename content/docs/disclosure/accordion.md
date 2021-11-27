@@ -104,7 +104,7 @@ types=["<alpha-value>"]
 
 `Accordion` Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
 
-```svelte repl Accordion Preview
+```svelte {title="Accordion Preview" mode="repl"}
 <script>
     import {
         Accordion,
@@ -217,7 +217,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```svelte default Accordion Imports
+```svelte {title="Accordion Imports"}
 <script>
     import {Accordion} from "@kahi-ui/framework";
 
@@ -230,7 +230,7 @@ types=["<alpha-value>"]
 
 You can change the behavior of the `Accordion` to allow multiple items to be revealed at once via the `behavior` property.
 
-```svelte repl Accordion Inclusive
+```svelte {title="Accordion Inclusive" mode="repl"}
 <script>
     import {
         Accordion,
@@ -348,7 +348,7 @@ You can change the behavior of the `Accordion` to allow multiple items to be rev
 
 You can change the color palette of the `Accordion` buttons via the `palette` property.
 
-```svelte repl Accordion Palette
+```svelte {title="Accordion Palette" mode="repl"}
 <script>
     import {
         Accordion,
@@ -609,7 +609,7 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
 
 You can customize the slot loading behavior of individual `Accordion.Section` Components to not render their children, via the `loading` property.
 
-```svelte repl Accordion Loading
+```svelte {title="Accordion Loading" mode="repl"}
 <script>
     import {
         Accordion,
@@ -724,7 +724,7 @@ You can customize the slot loading behavior of individual `Accordion.Section` Co
 
 You can use [`Transition`](../utilities/transition.md) Components to provide fancy switching animations.
 
-```svelte repl Accordion Transitions
+```svelte {title="Accordion Transitions" mode="repl"}
 <script>
     import {
         Accordion,

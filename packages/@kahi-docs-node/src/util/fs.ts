@@ -35,8 +35,8 @@ export async function read_timestamps(
         const {birthtimeMs, mtimeMs} = await lstat(file_path);
 
         return {
-            birthtime: birthtimeMs,
-            mtime: mtimeMs,
+            birthtime: Math.floor(birthtimeMs),
+            mtime: Math.floor(mtimeMs),
         };
     }
 }
