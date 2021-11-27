@@ -1,0 +1,1 @@
+{"data":{"identifier":"heading-imports","script":"<script>\n    import {Heading} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Heading Imports"}}

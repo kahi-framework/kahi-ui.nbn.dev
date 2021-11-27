@@ -1,0 +1,1 @@
+{"data":{"identifier":"accordion-imports","script":"<script>\n    import {Accordion} from \"@kahi-ui/framework\";\n\n    const {Container, Label, Group, Section} =\n        Accordion;\n</script>","syntax":"svelte","title":"Accordion Imports"}}

@@ -1,0 +1,1 @@
+.repl-overlay .card:hover{transition:opacity var(--animation-visual-duration) var(--animation-visual-function)}.repl-overlay .card:not(:hover){opacity:.2}

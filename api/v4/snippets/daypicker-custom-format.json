@@ -1,0 +1,1 @@
+{"data":{"identifier":"daypicker-custom-format","script":"<script>\n    import {DayPicker} from \"@kahi-ui/framework\";\n\n    const timestamp = \"2021-11-10[u-ca=gregory]\";\n</script>\n\n<DayPicker\n    palette=\"accent\"\n    day=\"numeric\"\n    weekday=\"long\"\n    width=\"content-max\"\n    {timestamp}\n/>","syntax":"svelte","title":"DayPicker Custom Format"}}

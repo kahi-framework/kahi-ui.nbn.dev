@@ -1,0 +1,1 @@
+{"data":{"identifier":"monthpicker-custom-format","script":"<script>\n    import {MonthPicker} from \"@kahi-ui/framework\";\n\n    const timestamp = \"2021-01-01[u-ca=gregory]\";\n</script>\n\n<MonthPicker\n    palette=\"accent\"\n    month=\"long\"\n    width=\"content-max\"\n    {timestamp}\n/>","syntax":"svelte","title":"MonthPicker Custom Format"}}

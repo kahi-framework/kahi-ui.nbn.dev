@@ -1,0 +1,1 @@
+{"data":{"identifier":"yearstepper-step","script":"<script>\n    import {YearStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2024-01-01[u-ca=gregory]\";\n</script>\n\n<YearStepper palette=\"accent\" step={3} {value} />","syntax":"svelte","title":"YearStepper Step"}}

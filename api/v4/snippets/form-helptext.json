@@ -1,0 +1,1 @@
+{"data":{"identifier":"form-helptext","script":"<script>\n    import {Form, TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput type=\"password\" />\n<Form.HelpText>\n    passwords must be 8+ characters at minimum\n</Form.HelpText>","syntax":"svelte","title":"Form HelpText"}}

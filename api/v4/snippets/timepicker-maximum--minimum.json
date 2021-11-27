@@ -1,0 +1,1 @@
+{"data":{"identifier":"timepicker-maximum--minimum","script":"<script>\n    import {TimePicker} from \"@kahi-ui/framework\";\n\n    const value = \"13:30:15\";\n\n    const max = \"15:45:30\";\n    const min = \"11:15:00\";\n</script>\n\n<TimePicker palette=\"accent\" {max} {min} {value} />","syntax":"svelte","title":"TimePicker Maximum + Minimum"}}

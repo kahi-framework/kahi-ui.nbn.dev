@@ -1,0 +1,1 @@
+{"data":{"identifier":"daypicker-imports","script":"<script>\n    import {DayPicker} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"DayPicker Imports"}}

@@ -1,0 +1,1 @@
+{"data":{"identifier":"datestamp-imports","script":"<script>\n    import {DateStamp} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"DateStamp Imports"}}

@@ -1,0 +1,1 @@
+{"data":{"identifier":"intersectionrender-imports","script":"<script>\n    import {IntersectionRender} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"IntersectionRender Imports"}}

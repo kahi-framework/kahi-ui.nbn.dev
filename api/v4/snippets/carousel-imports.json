@@ -1,0 +1,1 @@
+{"data":{"identifier":"carousel-imports","script":"<script>\n    import {Carousel} from \"@kahi-ui/framework\";\n\n    const {Container, Section} = Carousel;\n</script>","syntax":"svelte","title":"Carousel Imports"}}

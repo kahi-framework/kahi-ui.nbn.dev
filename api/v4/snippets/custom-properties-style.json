@@ -1,0 +1,1 @@
+{"data":{"identifier":"custom-properties-style","script":"<script>\n    import {Button} from \"@kahi-ui/framework\";\n</script>\n\n<Button style=\"--button-padding-y:2rem;\">\n    I was customized via style!\n</Button>","syntax":"svelte","title":"Custom Properties Style"}}

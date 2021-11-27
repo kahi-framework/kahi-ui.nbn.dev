@@ -1,0 +1,1 @@
+{"data":{"identifier":"wave-imports","script":"<script>\n    import {Wave} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Wave Imports"}}

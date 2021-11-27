@@ -1,0 +1,1 @@
+{"data":{"identifier":"table-imports","script":"<script>\n    import {Table} from \"@kahi-ui/framework\";\n\n    const {\n        Container,\n        Column,\n        Footer,\n        Header,\n        Heading,\n        Row,\n        Section,\n    } = Table;\n</script>","syntax":"svelte","title":"Table Imports"}}

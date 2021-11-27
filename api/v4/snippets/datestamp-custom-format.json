@@ -1,0 +1,1 @@
+{"data":{"identifier":"datestamp-custom-format","script":"<script>\n    import {DateStamp} from \"@kahi-ui/framework\";\n\n    const timestamp = \"2021-11-10\";\n</script>\n\n<DateStamp\n    day=\"2-digit\"\n    month=\"long\"\n    weekday=\"long\"\n    year=\"2-digit\"\n    {timestamp}\n/>","syntax":"svelte","title":"DateStamp Custom Format"}}

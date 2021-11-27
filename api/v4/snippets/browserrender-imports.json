@@ -1,0 +1,1 @@
+{"data":{"identifier":"browserrender-imports","script":"<script>\n    import {BrowserRender} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"BrowserRender Imports"}}

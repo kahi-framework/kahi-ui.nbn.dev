@@ -1,0 +1,1 @@
+{"data":{"identifier":"aside-imports","script":"<script>\n    import {Aside} from \"@kahi-ui/framework\";\n\n    const {Container, Footer, Header, Section} = Aside;\n</script>","syntax":"svelte","title":"Aside Imports"}}

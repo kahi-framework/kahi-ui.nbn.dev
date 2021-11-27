@@ -1,0 +1,1 @@
+{"data":{"identifier":"timepicker-24-hour","script":"<script>\n    import {TimePicker} from \"@kahi-ui/framework\";\n\n    const value = \"13:30:15\";\n</script>\n\n<TimePicker palette=\"accent\" hour_12={false} {value} />","syntax":"svelte","title":"TimePicker 24 Hour"}}

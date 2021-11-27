@@ -1,0 +1,1 @@
+{"data":{"identifier":"button-preview","script":"<script>\n    import {Button} from \"@kahi-ui/framework\";\n</script>\n\n<Button palette=\"accent\">Click Me!</Button>","syntax":"svelte","title":"Button Preview"}}

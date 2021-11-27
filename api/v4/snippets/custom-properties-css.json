@@ -1,0 +1,1 @@
+{"data":{"identifier":"custom-properties-css","script":"<script>\n    import {Button} from \"@kahi-ui/framework\";\n</script>\n\n<Button class=\"custom-properties-class\">\n    I was customized via a class!\n</Button>\n\n<style>\n    :global(.custom-properties-class) {\n        --button-padding-y: 2rem;\n    }\n</style>","syntax":"svelte","title":"Custom Properties CSS"}}

@@ -1,0 +1,1 @@
+{"data":{"identifier":"mediaquery-imports","script":"import {\n    mediaquery,\n    mediaqueries,\n} from \"@kahi-ui/framework\";","syntax":"javascript","title":"mediaquery Imports"}}

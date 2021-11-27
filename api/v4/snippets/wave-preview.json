@@ -1,0 +1,1 @@
+{"data":{"identifier":"wave-preview","script":"<script>\n    import {Hero, Wave} from \"@kahi-ui/framework\";\n</script>\n\n<Hero.Container margin_top=\"medium\">\n    <Hero.Header>Loading</Hero.Header>\n    <Hero.Footer>\n        <Wave />\n    </Hero.Footer>\n</Hero.Container>","syntax":"svelte","title":"Wave Preview"}}

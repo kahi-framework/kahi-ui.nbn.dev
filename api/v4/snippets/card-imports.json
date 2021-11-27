@@ -1,0 +1,1 @@
+{"data":{"identifier":"card-imports","script":"<script>\n    import {Card} from \"@kahi-ui/framework\";\n\n    const {\n        Container,\n        Figure,\n        Footer,\n        Header,\n        Section,\n    } = Card;\n</script>","syntax":"svelte","title":"Card Imports"}}

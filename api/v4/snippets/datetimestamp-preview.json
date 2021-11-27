@@ -1,0 +1,1 @@
+{"data":{"identifier":"datetimestamp-preview","script":"<script>\n    import {DateTimeStamp} from \"@kahi-ui/framework\";\n\n    const timestamp = \"2021-11-10T13:00:42Z\";\n</script>\n\n<DateTimeStamp {timestamp} />","syntax":"svelte","title":"DateTimeStamp Preview"}}

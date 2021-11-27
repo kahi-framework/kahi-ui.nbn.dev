@@ -1,0 +1,1 @@
+{"data":{"identifier":"prefersscheme-imports","script":"import {\n    prefersscheme,\n    prefersdark,\n    preferslight,\n} from \"@kahi-ui/framework\";","syntax":"javascript","title":"prefersscheme Imports"}}

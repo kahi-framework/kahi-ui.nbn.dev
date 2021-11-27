@@ -1,0 +1,1 @@
+{"data":{"identifier":"hero-imports","script":"<script>\n    import {Hero} from \"@kahi-ui/framework\";\n\n    const {Container, Footer, Header, Section} = Hero;\n</script>","syntax":"svelte","title":"Hero Imports"}}

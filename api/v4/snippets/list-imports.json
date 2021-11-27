@@ -1,0 +1,1 @@
+{"data":{"identifier":"list-imports","script":"<script>\n    import {List} from \"@kahi-ui/framework\";\n\n    const {Container, Item} = List;\n</script>","syntax":"svelte","title":"List Imports"}}

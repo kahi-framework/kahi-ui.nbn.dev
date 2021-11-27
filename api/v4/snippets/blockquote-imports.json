@@ -1,0 +1,1 @@
+{"data":{"identifier":"blockquote-imports","script":"<script>\n    import {Blockquote} from \"@kahi-ui/framework\";\n\n    const {Container, Cite} = Blockquote;\n</script>","syntax":"svelte","title":"Blockquote Imports"}}

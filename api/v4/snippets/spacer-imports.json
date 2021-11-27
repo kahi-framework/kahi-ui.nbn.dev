@@ -1,0 +1,1 @@
+{"data":{"identifier":"spacer-imports","script":"<script>\n    import {Spacer} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Spacer Imports"}}

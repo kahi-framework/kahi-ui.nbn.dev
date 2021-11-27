@@ -1,0 +1,1 @@
+{"data":{"identifier":"anchor-imports","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Anchor Imports"}}

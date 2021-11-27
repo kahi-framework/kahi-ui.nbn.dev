@@ -1,0 +1,1 @@
+{"data":{"identifier":"anchor-internal-navigation","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>\n\n<Anchor href=\"#\">Kahi UI</Anchor>","syntax":"svelte","title":"Anchor Internal Navigation"}}

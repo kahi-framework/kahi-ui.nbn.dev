@@ -1,0 +1,1 @@
+{"data":{"identifier":"breadcrumb-imports","script":"<script>\n    import {Breadcrumb} from \"@kahi-ui/framework\";\n\n    const {Container, Anchor, Item} = Breadcrumb;\n</script>","syntax":"svelte","title":"Breadcrumb Imports"}}

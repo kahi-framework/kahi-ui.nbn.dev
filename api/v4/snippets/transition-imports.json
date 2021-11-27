@@ -1,0 +1,1 @@
+{"data":{"identifier":"transition-imports","script":"<script>\n    import {Transition} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Transition Imports"}}

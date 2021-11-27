@@ -1,0 +1,1 @@
+{"data":{"identifier":"code-preview","script":"<script>\n    import {Code} from \"@kahi-ui/framework\";\n</script>\n\n<Code>\n    import * as Kahi from \"@kahi-ui/framework\";\n</Code>","syntax":"svelte","title":"Code Preview"}}
