@@ -46,17 +46,22 @@
     import {session} from "@kahi-docs/shared";
 
     import HeroJavascriptEnabled from "../../lib/components/HeroJavascriptEnabled.svelte";
+    import StaticLayout from "../../lib/components/StaticLayout.svelte";
+
+    import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
 
     export let script: string | undefined;
     export let snippet: ISnippet | undefined;
 
-    let value: string = snippet?.script ?? script ?? $session;
+    let value: string = snippet?.script ?? script ?? ($session || "");
 
     $: if (browser) $session = value;
 </script>
 
 {#if browser}
-    hello world!
+    <StaticLayout>
+        <REPLSplit bind:value />
+    </StaticLayout>
 {:else}
     <HeroJavascriptEnabled />
 {/if}
