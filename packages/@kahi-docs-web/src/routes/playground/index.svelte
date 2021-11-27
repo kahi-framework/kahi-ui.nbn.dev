@@ -58,7 +58,7 @@
 
 <script lang="ts">
     import {browser} from "$app/env";
-    import {Box, Menu, Spacer, Stack, Text} from "@kahi-ui/framework";
+    import {Box, Menu, Spacer, Stack, Text, viewports} from "@kahi-ui/framework";
     import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
@@ -83,8 +83,15 @@
     export let script: string | undefined;
     export let snippet: ISnippet | undefined;
 
+    const vertical_viewports = viewports({
+        mobile: true,
+        tablet: true,
+    });
+
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
-    let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
+    let orientation: keyof typeof SPLIT_ORIENTATION = $vertical_viewports
+        ? SPLIT_ORIENTATION.vertical
+        : SPLIT_ORIENTATION.horizontal;
     let state: boolean = false;
     let value: string = (snippet?.script ?? script ?? $session) || (fallback?.script ?? "");
 
@@ -128,7 +135,7 @@
                                     : SPLIT_ORIENTATION.horizontal)}
                     >
                         <RotateCW />
-                        <Text is="span" hidden="mobile">Rotate</Text>
+                        <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
                     </Menu.Button>
 
                     <Menu.Button
@@ -138,7 +145,7 @@
                         on:click={() => (mode = SPLIT_MODE.split)}
                     >
                         <Sidebar />
-                        <Text is="span" hidden="mobile">Split</Text>
+                        <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
                     </Menu.Button>
 
                     <Menu.Button
@@ -148,7 +155,7 @@
                         on:click={() => (mode = SPLIT_MODE.first)}
                     >
                         <Code />
-                        <Text is="span" hidden="mobile">Editor</Text>
+                        <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
                     </Menu.Button>
 
                     <Menu.Button
@@ -158,7 +165,7 @@
                         on:click={() => (mode = SPLIT_MODE.last)}
                     >
                         <Image />
-                        <Text is="span" hidden="mobile">Render</Text>
+                        <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
                     </Menu.Button>
                 </Menu.Container>
             </Stack>
