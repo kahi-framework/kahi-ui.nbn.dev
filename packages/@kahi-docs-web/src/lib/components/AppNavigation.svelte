@@ -50,7 +50,7 @@
     import Search from "./icons/Search.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
-    import SearchPrompt from "./SearchPrompt.svelte";
+    import PromptSearch from "./PromptSearch.svelte";
     import ThemeButton from "./ThemeButton.svelte";
 
     export let state: boolean = false;
@@ -169,7 +169,7 @@
 
 {#if browser}
     <Portal>
-        <SearchPrompt bind:state={search_state} />
+        <PromptSearch bind:state={search_state} />
     </Portal>
 {/if}
 

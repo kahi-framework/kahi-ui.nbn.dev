@@ -40,21 +40,22 @@
 
 <script lang="ts">
     import {browser} from "$app/env";
-
     import {Box, Menu, Spacer, Stack, Text} from "@kahi-ui/framework";
+    import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
-
     import {session} from "@kahi-docs/shared";
 
     import HeroJavascriptEnabled from "../../lib/components/HeroJavascriptEnabled.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
     import StaticLayout from "../../lib/components/StaticLayout.svelte";
+    import PromptShare from "../../lib/components/PromptShare.svelte";
 
     import Copy from "../../lib/components/icons/Copy.svelte";
     import Code from "../../lib/components/icons/Code.svelte";
     import Image from "../../lib/components/icons/Image.svelte";
     import RotateCW from "../../lib/components/icons/RotateCW.svelte";
+    import Share2 from "../../lib/components/icons/Share2.svelte";
     import Sidebar from "../../lib/components/icons/Sidebar.svelte";
 
     import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
@@ -64,11 +65,16 @@
 
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
     let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
+    let state: boolean = false;
     let value: string = snippet?.script ?? script ?? ($session || "");
 
     function on_copy_click(event: MouseEvent): void {
         navigator.clipboard.writeText(value);
     }
+
+    onMount(() => {
+        location.search = "";
+    });
 
     $: if (browser) $session = value;
 </script>
@@ -79,6 +85,11 @@
             <Stack orientation="horizontal">
                 <Spacer />
                 <Menu.Container orientation="horizontal" sizing="small">
+                    <Menu.Button palette="accent" variation="clear" on:click={() => (state = true)}>
+                        <Share2 />
+                        Share
+                    </Menu.Button>
+
                     <Menu.Button palette="affirmative" variation="clear" on:click={on_copy_click}>
                         <Copy />
                         Copy
@@ -135,3 +146,5 @@
 {:else}
     <HeroJavascriptEnabled />
 {/if}
+
+<PromptShare bind:state {value} />

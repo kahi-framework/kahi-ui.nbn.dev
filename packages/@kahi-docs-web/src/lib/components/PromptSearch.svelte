@@ -95,7 +95,6 @@
     class="search-prompt"
     logic_id="search-prompt"
     alignment_y="top"
-    spacing="medium"
     bind:state
     captive
     dismissible
