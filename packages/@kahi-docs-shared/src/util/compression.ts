@@ -1,4 +1,4 @@
-import lzutf8 from "lzutf8";
+import lzutf8 from "../vendor/lzutf8";
 
 // NOTE: Abstracting here incase of algorithm changes
 
