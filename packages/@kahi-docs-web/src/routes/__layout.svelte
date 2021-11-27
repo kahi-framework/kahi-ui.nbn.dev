@@ -34,7 +34,7 @@
         width: 100%;
         max-height: 30rem;
 
-        border: 1px solid rgba(var(--palette-inverse-lightest), 0.5);
+        border: 1px solid rgba(var(--palette-inverse-off-lightest), 0.5);
         border-radius: var(--radius-small);
     }
 
