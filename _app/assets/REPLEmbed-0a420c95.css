@@ -1,0 +1,1 @@
+.repl-embed-overlay .box:hover{transition:opacity var(--animation-visual-duration) var(--animation-visual-function)}.repl-embed-overlay .box:not(:hover){opacity:.2}
