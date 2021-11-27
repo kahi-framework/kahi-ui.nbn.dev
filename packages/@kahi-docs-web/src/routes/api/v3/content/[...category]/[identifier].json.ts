@@ -35,8 +35,8 @@ export const get: RequestHandler = async (request) => {
             },
 
             body: {
-                code: "InvalidPath",
-                message: `invalid path '${category}/${identifier}'`,
+                code: "InvalidIdentifier",
+                message: `invalid content '${category}/${identifier}'`,
             } as IRouteError,
         };
     }

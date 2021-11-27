@@ -38,9 +38,9 @@ function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMen
 const _read_navigation_menus = dev ? read_navigation_menus : memoize(read_navigation_menus)[0];
 
 export const get: RequestHandler = async (request) => {
-    const {category = ""} = request.params;
+    const {identifier = ""} = request.params;
 
-    const menus = NAVIGATION_CONFIG[category];
+    const menus = NAVIGATION_CONFIG[identifier];
     if (!menus) {
         return {
             status: 404,
@@ -49,8 +49,8 @@ export const get: RequestHandler = async (request) => {
             },
 
             body: {
-                code: "InvalidPath",
-                message: `invalid navigation menu '${category}'`,
+                code: "InvalidIdentifier",
+                message: `invalid navigation menu '${identifier}'`,
             } as IRouteError,
         };
     }
