@@ -22,11 +22,12 @@
 
         width: 100vw;
         height: 100vh;
-
-        overflow: hidden;
     }
 
     :global(.static-layout) > :global(.static-container) {
+        display: flex;
+        flex-direction: column;
+
         grid-area: content;
 
         padding-top: 4.4rem;
