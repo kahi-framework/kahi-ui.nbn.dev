@@ -43,7 +43,11 @@
     bind:value
 />
 
-<REPLOverlay alignment_x={["left", "desktop:right", "widescreen:right"]} alignment_y="bottom">
+<REPLOverlay
+    class="repl-embed-overlay"
+    alignment_x={["left", "desktop:right", "widescreen:right"]}
+    alignment_y="bottom"
+>
     <Box palette="dark" shape="rounded" margin="medium" padding="small">
         <Menu.Container orientation={["desktop:horizontal", "widescreen:horizontal"]} sizing="tiny">
             <Menu.Anchor href={_href} target="_blank" palette="accent" variation="clear">
@@ -90,11 +94,11 @@
 </REPLOverlay>
 
 <style>
-    :global(.repl-overlay) :global(.card:hover) {
+    :global(.repl-embed-overlay) :global(.box:hover) {
         transition: opacity var(--animation-visual-duration) var(--animation-visual-function);
     }
 
-    :global(.repl-overlay) :global(.card:not(:hover)) {
+    :global(.repl-embed-overlay) :global(.box:not(:hover)) {
         opacity: 0.2;
     }
 </style>
