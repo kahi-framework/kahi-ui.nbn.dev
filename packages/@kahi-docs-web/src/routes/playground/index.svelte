@@ -5,6 +5,8 @@
 
     import type {IRouteError, ISnippetGet} from "../../lib/shared/api";
 
+    export const ssr = false;
+
     export const load: Load = async ({fetch, page}) => {
         const {script = "", snippet = "getting-started-usage"} = Object.fromEntries(
             page.query.entries()
