@@ -3,14 +3,21 @@
 
     import Book from "./icons/Book.svelte";
     import Code from "./icons/Code.svelte";
+    import Edit from "./icons/Edit.svelte";
     import MessageCircle from "./icons/MessageCircle.svelte";
     import Package from "./icons/Package.svelte";
 
     const LINKS_APPLICATION = [
         {href: "/docs/framework/getting-started", text: "Documentation", icon: Book},
+        {href: "/playground", text: "Playground", icon: Edit},
         {href: "https://github.com/novacbn/kahi-ui", text: "Source", icon: Code},
-        {href: "https://github.com/novacbn/kahi-ui/releases", text: "Releases", icon: Package},
-        {href: "/chat", text: "Chat", icon: MessageCircle},
+        {
+            href: "https://github.com/novacbn/kahi-ui/releases",
+            text: "Releases",
+            variation: "flush",
+            icon: Package,
+        },
+        {href: "/chat", text: "Chat", variation: "flush", icon: MessageCircle},
     ];
 
     // HACK: This is here so when the parent changes
@@ -145,7 +152,7 @@
                     <Menu.Item>
                         <AppAnchor href={item.href} no_handle prefetch>
                             <svelte:component this={item.icon} />
-                            {item.text}
+                            {item.variation === "flush" ? "" : item.text}
                         </AppAnchor>
                     </Menu.Item>
                 {/each}
