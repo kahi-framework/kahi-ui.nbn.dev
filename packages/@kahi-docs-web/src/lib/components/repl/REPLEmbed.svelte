@@ -16,7 +16,7 @@
 
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
 
-    export let identifier: string;
+    export let identifier: string | undefined;
     export let value: string;
 
     const initial_value = value;
@@ -26,7 +26,7 @@
     }
 
     $: _href =
-        initial_value === value
+        identifier && initial_value === value
             ? `/playground/?snippet=${identifier}`
             : `/playground/?script=${compress_safe(value)}`;
 </script>
