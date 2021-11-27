@@ -1,7 +1,7 @@
 <script lang="ts">
-    import {Wave, viewports} from "@kahi-ui/framework";
+    import {Wave} from "@kahi-ui/framework";
 
-    import Split, {SPLIT_MODE} from "../Split.svelte";
+    import Split, {SPLIT_MODE, SPLIT_ORIENTATION} from "../Split.svelte";
 
     import REPLEditor from "./REPLEditor.svelte";
     import REPLOverlay from "./REPLOverlay.svelte";
@@ -11,19 +11,15 @@
     let initial_ready = false;
 
     export let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
+    export let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
     export let value: string;
-
-    const vertical_viewports = viewports({
-        mobile: true,
-        tablet: true,
-    });
 
     $: _initial_load = initial_mount && initial_ready;
 </script>
 
 <!-- TODO: surface errors -->
 
-<Split class="repl-split" orientation={$vertical_viewports ? "vertical" : "horizontal"} {mode}>
+<Split class="repl-split" {orientation} {mode}>
     <svelte:fragment slot="first">
         <REPLEditor bind:value on:ready={() => (initial_ready = true)} />
     </svelte:fragment>
