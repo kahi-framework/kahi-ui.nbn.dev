@@ -82,7 +82,7 @@ types=["{}"]
 
 `Overlay` is typically used for rendering full-screen content over the rest of the page, optionally including a backdrop or being toggleable.
 
-```svelte repl Overlay Preview
+```svelte {title="Overlay Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -129,7 +129,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Overlay Imports
+```svelte {title="Overlay Imports"}
 <script>
     import {Overlay} from "@kahi-ui/framework";
 </script>
@@ -141,7 +141,7 @@ types=["{}"]
 
 You can make the `Overlay` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
 
-```svelte repl Overlay Logic ID
+```svelte {title="Overlay Logic ID" mode="repl"}
 <script>
     import {
         Button,
@@ -171,7 +171,7 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 
 You can optionally include a backdrop by passing via the `captive` property.
 
-```svelte repl Overlay Captive
+```svelte {title="Overlay Captive" mode="repl"}
 <script>
     import {
         Button,
@@ -220,7 +220,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 
 You can optionally have the `Overlay` dismissible by clicking the backdrop via the `dismissible` property.
 
-```svelte repl Overlay Dismissible
+```svelte {title="Overlay Dismissible" mode="repl"}
 <script>
     import {
         Button,
@@ -277,7 +277,7 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop via t
 
 You can enable having the `Overlay` dismissed whenever inner content is clicked via the `once` property.
 
-```svelte repl Overlay Once
+```svelte {title="Overlay Once" mode="repl"}
 <script>
     import {
         Button,
@@ -329,7 +329,7 @@ You can enable having the `Overlay` dismissed whenever inner content is clicked 
 
 You can manually open / close the `Overlay` via the `state` property.
 
-```svelte repl Overlay State
+```svelte {title="Overlay State" mode="repl"}
 <script>
     import {
         Button,
@@ -365,7 +365,7 @@ You can manually open / close the `Overlay` via the `state` property.
 
 You can set the `Overlay` to render horizontally via the `orientation` property.
 
-```svelte repl Overlay Orientation
+```svelte {title="Overlay Orientation" mode="repl"}
 <script>
     import {Box, Overlay} from "@kahi-ui/framework";
 </script>
@@ -385,7 +385,7 @@ You can set the `Overlay` to render horizontally via the `orientation` property.
 
 You can align `Overlay` content via the `alignment`, `alignment_x`, and `alignment_y` properties respectively.
 
-```svelte repl Overlay Alignment
+```svelte {title="Overlay Alignment" mode="repl"}
 <script>
     import {
         Button,
@@ -433,7 +433,7 @@ You can align `Overlay` content via the `alignment`, `alignment_x`, and `alignme
 
 You can adjust the spacing between `Overlay` content via the `spacing`, `spacing_x`, and `spacing_y` properties respectively.
 
-```svelte repl Overlay Spacing
+```svelte {title="Overlay Spacing" mode="repl"}
 <script>
     import {
         Button,

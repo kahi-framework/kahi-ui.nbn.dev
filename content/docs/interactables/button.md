@@ -164,7 +164,7 @@ types=["<alpha-value>"]
 
 `Button` is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.
 
-```svelte repl Button Preview
+```svelte {title="Button Preview" mode="repl"}
 <script>
     import {Button} from "@kahi-ui/framework";
 </script>
@@ -174,7 +174,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Button Imports
+```svelte {title="Button Imports"}
 <script>
     import {Button} from "@kahi-ui/framework";
 </script>
@@ -184,7 +184,7 @@ types=["<alpha-value>"]
 
 You can change the color palette of the `Button` via the `palette` property.
 
-```svelte repl Button Palette
+```svelte {title="Button Palette" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
@@ -226,7 +226,7 @@ You can change the color palette of the `Button` via the `palette` property.
 
 You can change the size of the `Button` via the `size` property.
 
-```svelte repl Button Size
+```svelte {title="Button Size" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
@@ -261,7 +261,7 @@ You can change the size of the `Button` via the `size` property.
 
 `Button` components have a special variation that renders as text with no background, that lightly fills in when clicked.
 
-```svelte repl Button Clear
+```svelte {title="Button Clear" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
@@ -305,7 +305,7 @@ You can change the size of the `Button` via the `size` property.
 
 `Button` components have a special variation that renders them as text with an outline, the fills in when clicked.
 
-```svelte repl Button Outline
+```svelte {title="Button Outline" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
@@ -349,7 +349,7 @@ You can change the size of the `Button` via the `size` property.
 
 You can change make the `Button` a `<a>` by passing the `href` property, or a `<label>` by passing the `for` property. And also, change the input type between `<input type="button" />` **(DEFAULT)**, `<input type="reset" />`, `<input type="submit" />` via the `type` / `value` properties.
 
-```svelte repl Button Types
+```svelte {title="Button Types" mode="repl"}
 <script>
     import {
         Button,

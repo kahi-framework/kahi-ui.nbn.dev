@@ -59,7 +59,7 @@ types=["<length>"]
 
 `Blockquote` is typically used to render a block of text, that's attributed to a certain source of information.
 
-```svelte repl Blockquote Preview
+```svelte {title="Blockquote Preview" mode="repl"}
 <script>
     import {
         Blockquote,
@@ -98,7 +98,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default Blockquote Imports
+```svelte {title="Blockquote Imports"}
 <script>
     import {Blockquote} from "@kahi-ui/framework";
 
@@ -110,7 +110,7 @@ types=["<length>"]
 
 You can change the color palette of the `Blockquote.Container` via the `palette` property.
 
-```svelte repl Blockquote Palette
+```svelte {title="Blockquote Palette" mode="repl"}
 <script>
     import {
         Blockquote,

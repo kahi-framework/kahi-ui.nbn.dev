@@ -39,7 +39,7 @@ types=["2-digit", "numeric"]
 
 `DateStamp` formats an [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp into a human readable string, using the user preferences provided by the Browser.
 
-```svelte repl DateStamp Preview
+```svelte {title="DateStamp Preview" mode="repl"}
 <script>
     import {DateStamp} from "@kahi-ui/framework";
 
@@ -51,7 +51,7 @@ types=["2-digit", "numeric"]
 
 ## Imports
 
-```svelte default DateStamp Imports
+```svelte {title="DateStamp Imports"}
 <script>
     import {DateStamp} from "@kahi-ui/framework";
 </script>
@@ -63,7 +63,7 @@ types=["2-digit", "numeric"]
 
 You can customize how each individual component of the timestamp is displayed via the `day`, `month`, `weekday`, and `year` properties respectively.
 
-```svelte repl DateStamp Custom Format
+```svelte {title="DateStamp Custom Format" mode="repl"}
 <script>
     import {DateStamp} from "@kahi-ui/framework";
 

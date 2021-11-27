@@ -114,7 +114,7 @@ types=["<length>"]
 
 `Table` is typically used to render tabular data in a structured row -> columns format, for end-users to easily read the contents.
 
-```svelte repl Table Preview
+```svelte {title="Table Preview" mode="repl"}
 <script>
     import {
         Code,
@@ -202,7 +202,7 @@ types=["<length>"]
 
 ## Table Imports
 
-```html default Table Imports
+```svelte {title="Table Imports"}
 <script>
     import {Table} from "@kahi-ui/framework";
 
@@ -222,7 +222,7 @@ types=["<length>"]
 
 You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
 
-```svelte repl Table Spans
+```svelte {title="Table Spans" mode="repl"}
 <script>
     import {Table} from "@kahi-ui/framework";
 </script>
@@ -272,7 +272,7 @@ You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.H
 
 You can make a `Table` have borders via the `variation` property.
 
-```svelte repl Table Borders
+```svelte {title="Table Borders" mode="repl"}
 <script>
     import {
         Code,
@@ -362,7 +362,7 @@ You can make a `Table` have borders via the `variation` property.
 
 You can make a `Table` have stripes via the `variation` property.
 
-```svelte repl Table Stripes
+```svelte {title="Table Stripes" mode="repl"}
 <script>
     import {
         Code,
@@ -452,7 +452,7 @@ You can make a `Table` have stripes via the `variation` property.
 
 You can make a `Table` have both borders **AND** stripes via the `variation` property.
 
-```svelte repl Table Borders + Stripes
+```svelte {title="Table Borders + Stripes" mode="repl"}
 <script>
     import {
         Code,
@@ -542,7 +542,7 @@ You can make a `Table` have both borders **AND** stripes via the `variation` pro
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
-```svelte repl Table Sizing
+```svelte {title="Table Sizing" mode="repl"}
 <script>
     import {
         Code,
@@ -1138,7 +1138,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 
 You can make a `Table` scrollable by wrapping it with a [`Scrollable`](../layouts/scrollable.md).
 
-```svelte repl Table Scrollable
+```svelte {title="Table Scrollable" mode="repl"}
 <script>
     import {
         Code,

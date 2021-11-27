@@ -13,7 +13,7 @@ types=["{}"]
 
 > **NOTE**: The REPL runs on your Browser, so this will always be blank.
 
-```svelte repl ServerRender Preview
+```svelte {title="ServerRender Preview" mode="repl"}
 <script>
     import {ServerRender} from "@kahi-ui/framework";
 </script>
@@ -26,7 +26,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default ServerRender Imports
+```svelte {title="ServerRender Imports"}
 <script>
     import {ServerRender} from "@kahi-ui/framework";
 </script>

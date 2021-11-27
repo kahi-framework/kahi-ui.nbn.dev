@@ -134,7 +134,7 @@ types=["{}"]
 
 `Menu` renders a nestable list of actionable buttons and links. Typically used in context menus or used as the main content body of [`Aside`](./aside.md).
 
-```svelte repl Menu Preview
+```svelte {title="Menu Preview" mode="repl"}
 <script>
     import {
         Menu,
@@ -168,7 +168,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Menu Imports
+```svelte {title="Menu Imports"}
 <script>
     import {Menu} from "@kahi-ui/framework";
 
@@ -193,7 +193,7 @@ types=["{}"]
 
 You can alter the orientation of how the `Menu.Container` lays out the children.
 
-```svelte repl Menu Orientation
+```svelte {title="Menu Orientation" mode="repl"}
 <script>
     import {Menu} from "@kahi-ui/framework";
 </script>
@@ -209,7 +209,7 @@ You can alter the orientation of how the `Menu.Container` lays out the children.
 
 You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragment slot="sub-menu">` in `<Menu.Divider>` or `<Menu.Heading>` Components.
 
-```svelte repl Menu Sub Menu
+```svelte {title="Menu Sub Menu" mode="repl"}
 <script>
     import {
         Box,
@@ -260,7 +260,7 @@ You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragme
 
 In place of `<Menu.Heading>` you can also use `<Menu.Divider>` with text content.
 
-```svelte repl Menu Text Divider
+```svelte {title="Menu Text Divider" mode="repl"}
 <script>
     import {
         Box,
@@ -298,7 +298,7 @@ In place of `<Menu.Heading>` you can also use `<Menu.Divider>` with text content
 
 You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.Label` via the `palette` property.
 
-```svelte repl Menu Palette
+```svelte {title="Menu Palette" mode="repl"}
 <script>
     import {
         Menu,

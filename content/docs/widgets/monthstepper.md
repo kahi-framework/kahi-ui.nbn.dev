@@ -70,7 +70,7 @@ types=["CustomEvent<void>"]
 
 `MonthStepper` is a Widget that lets users increment / decrement the currently provided month by a set number.
 
-```svelte repl MonthStepper Preview
+```svelte {title="MonthStepper Preview" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
@@ -82,7 +82,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default MonthStepper Imports
+```svelte {title="MonthStepper Imports"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 </script>
@@ -92,7 +92,7 @@ types=["CustomEvent<void>"]
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl MonthStepper Disabled
+```svelte {title="MonthStepper Disabled" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
@@ -106,7 +106,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can disable interactivity without changing the visuals via the `readonly` property.
 
-```svelte repl MonthStepper Readonly
+```svelte {title="MonthStepper Readonly" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
@@ -120,7 +120,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 You can set maximum and minimum range of steppable months via the `maximum` / `minimum` properties.
 
-```svelte repl MonthStepper Maximum + Minimum
+```svelte {title="MonthStepper Maximum + Minimum" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
@@ -137,7 +137,7 @@ You can set maximum and minimum range of steppable months via the `maximum` / `m
 
 You can control how many months the buttons increment / decrement via the `step` property.
 
-```svelte repl MonthStepper Step
+```svelte {title="MonthStepper Step" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
@@ -151,7 +151,7 @@ You can control how many months the buttons increment / decrement via the `step`
 
 You can customize how the month and year components of the current timestamp is displayed via the `month` and `year` properties respectively.
 
-```svelte repl MonthStepper Custom Format
+```svelte {title="MonthStepper Custom Format" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
@@ -170,7 +170,7 @@ You can customize how the month and year components of the current timestamp is 
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl MonthStepper Sizing
+```svelte {title="MonthStepper Sizing" mode="repl"}
 <script>
     import {
         MonthStepper,

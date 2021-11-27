@@ -1,93 +1,27 @@
 <script lang="ts">
-    import {Card, Menu, Overlay} from "@kahi-ui/framework";
-    import {createEventDispatcher} from "svelte";
+    import type {
+        PROPERTY_ALIGNMENT_X_BREAKPOINT,
+        PROPERTY_ALIGNMENT_Y_BREAKPOINT,
+    } from "@kahi-ui/framework";
+    import {Overlay} from "@kahi-ui/framework";
 
-    import Code from "../icons/Code.svelte";
-    import Copy from "../icons/Copy.svelte";
-    import ExternalLink from "../icons/ExternalLink.svelte";
-    import Image from "../icons/Image.svelte";
-    import Sidebar from "../icons/Sidebar.svelte";
+    let _class: string = "";
+    export let style: string | undefined = undefined;
+    export {_class as class};
 
-    interface $$Events {
-        copy_click: MouseEvent;
-    }
-
-    const dispatch = createEventDispatcher<$$Events>();
-
-    export let view: "editor" | "render" | "split" = "split";
+    export let alignment_x: PROPERTY_ALIGNMENT_X_BREAKPOINT | undefined = undefined;
+    export let alignment_y: PROPERTY_ALIGNMENT_Y_BREAKPOINT | undefined = undefined;
 </script>
 
-<Overlay
-    class="repl-overlay"
-    alignment_x={["right", "mobile:left"]}
-    alignment_y="bottom"
-    padding="medium"
->
-    <Card.Container palette="dark">
-        <Card.Section margin="small">
-            <Menu.Container
-                orientation={["tablet:horizontal", "desktop:horizontal", "widescreen:horizontal"]}
-                sizing="tiny"
-            >
-                <Menu.Anchor
-                    href={location.href}
-                    target="_blank"
-                    palette="accent"
-                    variation="clear"
-                >
-                    <ExternalLink />
-                    Link
-                </Menu.Anchor>
-
-                <Menu.Button
-                    palette="affirmative"
-                    variation="clear"
-                    on:click={(event) => dispatch("copy_click", event)}
-                >
-                    <Copy />
-                    Copy
-                </Menu.Button>
-
-                <Menu.Button
-                    active={view === "split"}
-                    palette="light"
-                    variation="clear"
-                    on:click={() => (view = "split")}
-                >
-                    <Sidebar />
-                    Split
-                </Menu.Button>
-
-                <Menu.Button
-                    active={view === "editor"}
-                    palette="light"
-                    variation="clear"
-                    on:click={() => (view = "editor")}
-                >
-                    <Code />
-                    Editor
-                </Menu.Button>
-
-                <Menu.Button
-                    active={view === "render"}
-                    palette="light"
-                    variation="clear"
-                    on:click={() => (view = "render")}
-                >
-                    <Image />
-                    Render
-                </Menu.Button>
-            </Menu.Container>
-        </Card.Section>
-    </Card.Container>
+<Overlay class="repl-overlay {_class}" {alignment_x} {alignment_y} {style}>
+    <slot />
 </Overlay>
 
 <style>
-    :global(.repl-overlay) :global(.card:hover) {
-        transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
+    :global(.repl-overlay) {
+        position: absolute;
 
-    :global(.repl-overlay) :global(.card:not(:hover)) {
-        opacity: 0.2;
+        width: 100%;
+        height: 100%;
     }
 </style>

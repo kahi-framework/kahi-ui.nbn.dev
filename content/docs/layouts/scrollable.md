@@ -9,7 +9,7 @@ types=["{}"]
 
 `Scrollable` is a layout primitive for encapsulating a given available space into its own scrollable context.
 
-```svelte repl Scrollable Preview
+```svelte {title="Scrollable Preview" mode="repl"}
 <script>
     import {
         Heading,
@@ -67,7 +67,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Scrollable Imports
+```svelte {title="Scrollable Imports"}
 <script>
     import {Scrollable} from "@kahi-ui/framework";
 </script>

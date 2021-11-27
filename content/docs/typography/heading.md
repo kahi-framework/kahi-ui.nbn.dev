@@ -160,7 +160,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 `Heading` is typically used for delineating sections of content within your Web Application.
 
-```svelte repl Heading Preview
+```svelte {title="Heading Preview" mode="repl"}
 <script>
     import {Heading} from "@kahi-ui/framework";
 </script>
@@ -173,7 +173,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 ## Imports
 
-```html default Heading Imports
+```svelte {title="Heading Imports"}
 <script>
     import {Heading} from "@kahi-ui/framework";
 </script>
@@ -183,7 +183,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 You can adjust the size of `Heading` by passing the `is` property.
 
-```svelte repl Heading Size
+```svelte {title="Heading Size" mode="repl"}
 <script>
     import {
         Heading,
@@ -270,7 +270,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 
 You can change the color palette of the `Heading` via the `palette` property.
 
-```svelte repl Heading Palette
+```svelte {title="Heading Palette" mode="repl"}
 <script>
     import {
         Heading,
@@ -367,7 +367,7 @@ You can change the color palette of the `Heading` via the `palette` property.
 
 You can adjust the text alignment of the `Heading` via the `align` property.
 
-```svelte repl Heading Align
+```svelte {title="Heading Align" mode="repl"}
 <script>
     import {
         Heading,
@@ -433,7 +433,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
 You can alter the rendered text capitalization via the `transform` property.
 
-```svelte repl Heading Transform
+```svelte {title="Heading Transform" mode="repl"}
 <script>
     import {
         Heading,
@@ -492,7 +492,7 @@ You can alter the rendered text capitalization via the `transform` property.
 
 You can apply variations to the rendered text, like truncating, via the `variation` property.
 
-```svelte repl Heading Variation
+```svelte {title="Heading Variation" mode="repl"}
 <script>
     import {
         Heading,

@@ -61,7 +61,7 @@ types=["<integer>"]
 
 ## Imports
 
-```svelte default Clickable Imports
+```svelte {title="Clickable Imports"}
 <script>
     import {Clickable} from "@kahi-ui/framework";
 
@@ -73,7 +73,7 @@ types=["<integer>"]
 
 Use a `<Clickable.Anchor>` to stretch a clickable `<a>` across the parent container.
 
-```svelte repl Clickable Anchor
+```svelte {title="Clickable Anchor" mode="repl"}
 <script>
     import {
         Badge,
@@ -128,7 +128,7 @@ Use a `<Clickable.Anchor>` to stretch a clickable `<a>` across the parent contai
 
 Use a `<Clickable.Label>` to stretch a clickable `<label>` across the parent container.
 
-```svelte repl Clickable Label
+```svelte {title="Clickable Label" mode="repl"}
 <script>
     import {
         Clickable,

@@ -24,7 +24,7 @@ types=["<length>"]
 
 `Group` is a layout primitive used for grouping together like Components with their inner border radii removed.
 
-```svelte repl Group Preview
+```svelte {title="Group Preview" mode="repl"}
 <script>
     import {Button, Group} from "@kahi-ui/framework";
 </script>
@@ -38,7 +38,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default Group Imports
+```svelte {title="Group Imports"}
 <script>
     import {Group} from "@kahi-ui/framework";
 </script>
@@ -48,7 +48,7 @@ types=["<length>"]
 
 You can set the `Group` to render its children Components vertically, via the `orientation` property.
 
-```svelte repl Group Orientation
+```svelte {title="Group Orientation" mode="repl"}
 <script>
     import {
         Button,
@@ -96,7 +96,7 @@ You can set the `variation` property to `stacked` to visually stack children Com
     TODO: Two more avatars, would probably look nicer without ones that would blend into each other
 -->
 
-```svelte repl Group Stacked
+```svelte {title="Group Stacked" mode="repl"}
 <script>
     import {
         Figure,

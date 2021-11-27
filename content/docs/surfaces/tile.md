@@ -180,7 +180,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 `Tile` is a multi-part surface pattern for displaying a section of content in a short-form horizontal format.
 
-```svelte repl Tile Preview
+```svelte {title="Tile Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -216,7 +216,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 ## Imports
 
-```html default Tile Imports
+```svelte {title="Tile Imports"}
 <script>
     import {Tile} from "@kahi-ui/framework";
 
@@ -234,7 +234,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 You can change the color palette of the `Tile` via the `palette` property.
 
-```svelte repl Tile Palette
+```svelte {title="Tile Palette" mode="repl"}
 <script>
     import {
         Stack,
@@ -412,7 +412,7 @@ You can change the color palette of the `Tile` via the `palette` property.
 
 You can set how "high" your `Tile` will appear to be over top the page via the `elevation` property.
 
-```svelte repl Tile Elevation
+```svelte {title="Tile Elevation" mode="repl"}
 <script>
     import {
         Stack,
@@ -574,7 +574,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
 
 You can set the `Tile.Footer` to render vertically via the `orientation` property.
 
-```svelte repl Tile Orientation
+```svelte {title="Tile Orientation" mode="repl"}
 <script>
     import {
         Button,
@@ -647,7 +647,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
-```svelte repl Tile Sizing
+```svelte {title="Tile Sizing" mode="repl"}
 <script>
     import {
         Stack,
@@ -773,7 +773,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 
 You can change the appearance of the `Tile` to be flush with the rest of the Application content via the `variation` property.
 
-```svelte repl Tile Flush
+```svelte {title="Tile Flush" mode="repl"}
 <script>
     import {
         Button,

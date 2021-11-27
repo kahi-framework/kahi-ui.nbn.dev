@@ -11,7 +11,7 @@ All Components have access to the `data-hidden` global HTML attribute via the `h
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 
-```svelte repl Hidden Preview
+```svelte {title="Hidden Preview" mode="repl"}
 <script>
     import {Box} from "@kahi-ui/framework";
 </script>

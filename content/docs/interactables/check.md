@@ -139,7 +139,7 @@ types=["<alpha-value>"]
 
 `Check` is typically used to present a set of options to the end-user, which they can then choose from.
 
-```svelte repl Check Preview
+```svelte {title="Check Preview" mode="repl"}
 <script>
     import {
         Check,
@@ -204,7 +204,7 @@ types=["<alpha-value>"]
 
 ## Imports
 
-```html default Check Imports
+```svelte {title="Check Imports"}
 <script>
     import {Check} from "@kahi-ui/framework";
 </script>
@@ -214,7 +214,7 @@ types=["<alpha-value>"]
 
 You can control the state of the `Check` via the `active`, `disabled`, and `state` properties.
 
-```svelte repl Check States
+```svelte {title="Check States" mode="repl"}
 <script>
     import {
         Check,
@@ -271,7 +271,7 @@ You can control the state of the `Check` via the `active`, `disabled`, and `stat
 
 You can change the color palette of the `Check` via the `palette` property.
 
-```svelte repl Check Palette
+```svelte {title="Check Palette" mode="repl"}
 <script>
     import {
         Check,
@@ -333,7 +333,7 @@ You can change the color palette of the `Check` via the `palette` property.
 
 You can change the size of the `Check` via the `size` property.
 
-```svelte repl Check Size
+```svelte {title="Check Size" mode="repl"}
 <script>
     import {
         Check,
@@ -390,7 +390,7 @@ You can change the size of the `Check` via the `size` property.
 
 You can change the appearance of the `Check` to be flush with the rest of the Application content via the `variation` property.
 
-```svelte repl Check Flush
+```svelte {title="Check Flush" mode="repl"}
 <script>
     import {
         Check,

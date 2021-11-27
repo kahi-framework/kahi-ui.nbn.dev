@@ -55,7 +55,7 @@ types=["{}"]
 
 `IntersectionRender` disables rendering of child content before it has come into the root element's viewport at least once. Useful for lazy loading content besides media.
 
-```svelte repl IntersectionRender Preview
+```svelte {title="IntersectionRender Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -132,7 +132,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default IntersectionRender Imports
+```svelte {title="IntersectionRender Imports"}
 <script>
     import {IntersectionRender} from "@kahi-ui/framework";
 </script>
@@ -148,7 +148,7 @@ The Component only runs on clientside Browsers with Javascript enabled. So you n
 
 You can change the behavior of `IntersectionObserver` by passing in the `loading` attribute. Which will make the Component ALWAYS disable rendering when outside of the root viewport, not just on initial load.
 
-```svelte repl IntersectionRender Eager
+```svelte {title="IntersectionRender Eager" mode="repl"}
 <script>
     import {
         Box,
@@ -241,7 +241,7 @@ You can change the behavior of `IntersectionObserver` by passing in the `loading
 
 By default, `IntersectionRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 
-```svelte repl IntersectionRender Fallthrough
+```svelte {title="IntersectionRender Fallthrough" mode="repl"}
 <script>
     import {
         Box,

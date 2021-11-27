@@ -4,7 +4,7 @@
 
 > **NOTE**: Click the color scheme button in the Navigation topbar to see changes.
 
-```svelte repl htmlpalette Preview
+```svelte {title="htmlpalette Preview" mode="repl"}
 <script>
     import {
         Code,
@@ -27,7 +27,7 @@
 
 ## Imports
 
-```javascript default htmlpalette Imports
+```javascript {title="htmlpalette Imports"}
 import {htmlpalette} from "@kahi-ui/framework";
 ```
 

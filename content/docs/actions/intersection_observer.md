@@ -4,7 +4,7 @@
 
 > **NOTE**: The below REPL basically reimplements [IntersectionRender](../utilities/intersectionrender.md).
 
-```svelte repl intersection_observer Preview
+```svelte {title="intersection_observer Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -106,7 +106,7 @@
 
 ## Imports
 
-```javascript intersection_observer Imports
+```javascript {title="intersection_observer Imports"}
 import {intersection_observer} from "@kahi-ui/framework";
 ```
 

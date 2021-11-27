@@ -25,7 +25,7 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 `Spacer` is a layout primitive that takes up all available space between its two immediate siblings.
 
-```svelte repl Spacer Preview
+```svelte {title="Spacer Preview" mode="repl"}
 <script>
     import {
         Box,
@@ -49,7 +49,7 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 ## Imports
 
-```html default Spacer Imports
+```svelte {title="Spacer Imports"}
 <script>
     import {Spacer} from "@kahi-ui/framework";
 </script>
@@ -61,7 +61,7 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 You can adjust the spacing between the immediate siblings via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
-```svelte repl Spacer Spacing
+```svelte {title="Spacer Spacing" mode="repl"}
 <script>
     import {
         Box,
@@ -147,7 +147,7 @@ You can adjust the spacing between the immediate siblings via the `spacing`, `sp
 
 You can have the `Spacer` rendering as an inline `<span>` via the `is` property.
 
-```svelte repl Spacer Inline
+```svelte {title="Spacer Inline" mode="repl"}
 <script>
     import {
         Box,

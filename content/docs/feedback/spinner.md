@@ -39,7 +39,7 @@ types=["<length>"]
 
 `Spinner` is an indicator used to tell the end-user that the Web Application is loading something in the background.
 
-```svelte repl Spinner Preview
+```svelte {title="Spinner Preview" mode="repl"}
 <script>
     import {
         Button,
@@ -63,7 +63,7 @@ types=["<length>"]
 
 ## Imports
 
-```html default Spinner Imports
+```svelte {title="Spinner Imports"}
 <script>
     import {Spinner} from "@kahi-ui/framework";
 </script>
@@ -73,7 +73,7 @@ types=["<length>"]
 
 You can change the color palette of the `Spinner` via the `palette` property.
 
-```svelte repl Spinner Palette
+```svelte {title="Spinner Palette" mode="repl"}
 <script>
     import {
         Spinner,
@@ -135,7 +135,7 @@ You can change the color palette of the `Spinner` via the `palette` property.
 
 You can change the size of the `Spinner` via the `size` property.
 
-```svelte repl Spinner Size
+```svelte {title="Spinner Size" mode="repl"}
 <script>
     import {
         Spinner,

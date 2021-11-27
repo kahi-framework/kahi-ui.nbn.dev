@@ -1,8 +1,6 @@
 import type MarkdownIt from "markdown-it";
 
-import type {IPluginOptions} from "./types";
-
-export function ScrollablesPlugin(md: MarkdownIt, options: IPluginOptions) {
+export function ScrollablesPlugin(md: MarkdownIt) {
     const {renderer} = md;
 
     renderer.rules.table_close = (tokens, idx, options, env, self) => {

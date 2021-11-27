@@ -38,15 +38,12 @@ export function ext_pathname(uri: string): string {
     return "." + segments[segments.length - 1];
 }
 
-export function is_external_url(uri: string): boolean {
-    let url: URL;
-    try {
-        url = new URL(uri, DEFAULT_ORIGIN);
-    } catch (err) {
-        return false;
-    }
+export function is_absolute_pathname(pathname: string): boolean {
+    return !is_relative_pathname(pathname);
+}
 
-    return url.origin !== DEFAULT_ORIGIN;
+export function is_external_url(uri: string): boolean {
+    return !is_internal_url(uri);
 }
 
 export function is_internal_url(uri: string): boolean {
@@ -58,6 +55,10 @@ export function is_internal_url(uri: string): boolean {
     }
 
     return url.origin === DEFAULT_ORIGIN;
+}
+
+export function is_relative_pathname(pathname: string): boolean {
+    return pathname.startsWith("./") || pathname.startsWith("../");
 }
 
 export function normalize_origin(uri: string): string {

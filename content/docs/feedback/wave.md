@@ -59,7 +59,7 @@ types=["<easing-function>"]
 
 `Wave` is an indicator used to tell the end-user that the Web Application is loading something in the background.
 
-```svelte repl Wave Preview
+```svelte {title="Wave Preview" mode="repl"}
 <script>
     import {Hero, Wave} from "@kahi-ui/framework";
 </script>
@@ -74,7 +74,7 @@ types=["<easing-function>"]
 
 ## Imports
 
-```html default Wave Imports
+```svelte {title="Wave Imports"}
 <script>
     import {Wave} from "@kahi-ui/framework";
 </script>
@@ -84,7 +84,7 @@ types=["<easing-function>"]
 
 You can change the color palette of the `Wave` via the `palette` property.
 
-```svelte repl Wave Palette
+```svelte {title="Wave Palette" mode="repl"}
 <script>
     import {
         Stack,

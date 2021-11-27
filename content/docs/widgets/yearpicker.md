@@ -79,7 +79,7 @@ types=["CustomEvent<void>"]
 
 `YearPicker` is a Widget that displays a decade-based grid of years that a user can select from.
 
-```svelte repl YearPicker Preview
+```svelte {title="YearPicker Preview" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -97,7 +97,7 @@ types=["CustomEvent<void>"]
 
 ## Imports
 
-```svelte default YearPicker Imports
+```svelte {title="YearPicker Imports"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 </script>
@@ -107,7 +107,7 @@ types=["CustomEvent<void>"]
 
 You can disable all interactivity via the `disabled` property.
 
-```svelte repl YearPicker Disabled
+```svelte {title="YearPicker Disabled" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -126,7 +126,7 @@ You can disable all interactivity via the `disabled` property.
 
 You can disable specific years from being selected via the `disabled` property.
 
-```svelte repl YearPicker Disabled Years
+```svelte {title="YearPicker Disabled Years" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -150,7 +150,7 @@ You can disable specific years from being selected via the `disabled` property.
 
 You can allow for multiple years to be selected via the `multiple` property.
 
-```svelte repl YearPicker Multiple
+```svelte {title="YearPicker Multiple" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -174,7 +174,7 @@ You can allow for multiple years to be selected via the `multiple` property.
 
 You can disable selected years from being unselected via the `once` property.
 
-```svelte repl YearPicker Once
+```svelte {title="YearPicker Once" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -195,7 +195,7 @@ You can disable selected years from being unselected via the `once` property.
 
 You can disable interactivity without changing the visuals via the `readonly` property.
 
-```svelte repl YearPicker Readonly
+```svelte {title="YearPicker Readonly" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -216,7 +216,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 You can select a specific set of years to be highlighted as outlines via the `highlight` property.
 
-```svelte repl YearPicker Highlight
+```svelte {title="YearPicker Highlight" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -241,7 +241,7 @@ You can select a specific set of years to be highlighted as outlines via the `hi
 
 You can set maximum and minimum range of selectable years via the `maximum` / `minimum` properties.
 
-```svelte repl YearPicker Maximum + Minimum
+```svelte {title="YearPicker Maximum + Minimum" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -264,7 +264,7 @@ You can set maximum and minimum range of selectable years via the `maximum` / `m
 
 You can customize how the year component of the available timestamps is displayed via the `year` property.
 
-```svelte repl YearPicker Custom Format
+```svelte {title="YearPicker Custom Format" mode="repl"}
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
@@ -283,7 +283,7 @@ You can customize how the year component of the available timestamps is displaye
 
 You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
-```svelte repl YearPicker Sizing
+```svelte {title="YearPicker Sizing" mode="repl"}
 <script>
     import {
         YearPicker,

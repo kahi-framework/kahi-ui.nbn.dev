@@ -9,7 +9,7 @@ types=["{}"]
 
 `Center` is a layout primitive used to quickly center the child content within its self.
 
-```svelte repl Center Preview
+```svelte {title="Center Preview" mode="repl"}
 <script>
     import {Box, Center} from "@kahi-ui/framework";
 </script>
@@ -29,7 +29,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte default Center Imports
+```svelte {title="Center Imports"}
 <script>
     import {Center} from "@kahi-ui/framework";
 </script>

@@ -70,7 +70,7 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 `Badge` is typically used to subtlely display to the user some type of ancillary information, relating to its siblings / parent UI elements.
 
-```svelte repl Badge Preview
+```svelte {title="Badge Preview" mode="repl"}
 <script>
     import {Badge} from "@kahi-ui/framework";
 </script>
@@ -80,7 +80,7 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 ## Imports
 
-```html default Badge Imports
+```svelte {title="Badge Imports"}
 <script>
     import {Badge} from "@kahi-ui/framework";
 </script>
@@ -90,7 +90,7 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 You can change the color palette of the `Badge` via the `palette` property.
 
-```svelte repl Badge Palette
+```svelte {title="Badge Palette" mode="repl"}
 <script>
     import {Badge, Stack} from "@kahi-ui/framework";
 </script>
@@ -132,7 +132,7 @@ You can change the color palette of the `Badge` via the `palette` property.
 
 You can change the position of the `Badge` to raise it above in its parent to more explictly call out the information.
 
-```svelte repl Badge Position
+```svelte {title="Badge Position" mode="repl"}
 <script>
     import {
         Badge,
@@ -168,7 +168,7 @@ You can change the position of the `Badge` to raise it above in its parent to mo
 
 You can modify the shape of the `Shape` via the `shape` property.
 
-```svelte repl Badge Shape
+```svelte {title="Badge Shape" mode="repl"}
 <script>
     import {Badge, Stack} from "@kahi-ui/framework";
 </script>

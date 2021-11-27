@@ -66,7 +66,7 @@ types=["{}"]
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 
-```svelte repl Grid Preview
+```svelte {title="Grid Preview" mode="repl"}
 <script>
     import {Box, Grid} from "@kahi-ui/framework";
 </script>
@@ -106,7 +106,7 @@ types=["{}"]
 
 ## Imports
 
-```html default Grid Imports
+```svelte {title="Grid Imports"}
 <script>
     import {Grid} from "@kahi-ui/framework";
 
@@ -120,7 +120,7 @@ types=["{}"]
 
 You can adjust how many points the `Grid.Container` items are divided by via the `points` property.
 
-```svelte repl Grid Points
+```svelte {title="Grid Points" mode="repl"}
 <script>
     import {
         Box,
@@ -466,7 +466,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
 You can adjust the spacing between items via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
-```svelte repl Grid Spacing
+```svelte {title="Grid Spacing" mode="repl"}
 <script>
     import {
         Box,
@@ -593,7 +593,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
 You can adjust grid span of individual items via the `span`, `span_x`, `span_y` properties, by wrapping the items in `Grid.Item`.
 
-```svelte repl Grid Item Span
+```svelte {title="Grid Item Span" mode="repl"}
 <script>
     import {Box, Grid} from "@kahi-ui/framework";
 </script>

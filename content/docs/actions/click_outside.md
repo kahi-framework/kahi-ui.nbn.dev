@@ -2,7 +2,7 @@
 
 `click_outside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_outside(event: MouseEvent): void` callback whenever your assigned element is clicked outside of.
 
-```svelte repl click_outside Preview
+```svelte {title="click_outside Preview" mode="repl"}
 <script>
     import {click_outside} from "@kahi-ui/framework";
 
@@ -26,7 +26,7 @@
 
 ## Imports
 
-```javascript click_outside Imports
+```javascript {title="click_outside Imports"}
 import {click_outside} from "@kahi-ui/framework";
 ```
 
