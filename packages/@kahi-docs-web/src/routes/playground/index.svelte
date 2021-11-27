@@ -65,9 +65,10 @@
     import {session} from "@kahi-docs/shared";
 
     import HeroJavascriptEnabled from "../../lib/components/HeroJavascriptEnabled.svelte";
+    import PageMetadata from "../../lib/components/PageMetadata.svelte";
+    import PromptShare from "../../lib/components/PromptShare.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
     import StaticLayout from "../../lib/components/StaticLayout.svelte";
-    import PromptShare from "../../lib/components/PromptShare.svelte";
 
     import Copy from "../../lib/components/icons/Copy.svelte";
     import Code from "../../lib/components/icons/Code.svelte";
@@ -98,6 +99,8 @@
 
     $: if (browser) $session = value;
 </script>
+
+<PageMetadata title="Playground" separator="—" />
 
 {#if browser}
     <StaticLayout>
