@@ -6,27 +6,11 @@
     import type {IRouteError, ISnippetGet} from "../../lib/shared/api";
 
     export const load: Load = async ({fetch, page}) => {
-        const {script = "", snippet = ""} = Object.fromEntries(page.query.entries());
+        const {script = "", snippet = "getting-started-usage"} = Object.fromEntries(
+            page.query.entries()
+        );
 
-        if (snippet) {
-            const response = await fetch(`/api/v3/snippets/${snippet}.json`);
-            if (!response.ok) {
-                const data = (await response.json()) as IRouteError;
-
-                return {
-                    status: response.status,
-                    error: data.code,
-                };
-            }
-
-            const data = (await response.json()) as ISnippetGet;
-
-            return {
-                props: {
-                    snippet: data.data,
-                },
-            };
-        } else if (script) {
+        if (script) {
             return {
                 props: {
                     script: decompress_safe(script),
@@ -34,7 +18,23 @@
             };
         }
 
-        return {};
+        const response = await fetch(`/api/v3/snippets/${snippet}.json`);
+        if (!response.ok) {
+            const data = (await response.json()) as IRouteError;
+
+            return {
+                status: response.status,
+                error: data.code,
+            };
+        }
+
+        const data = (await response.json()) as ISnippetGet;
+
+        return {
+            props: {
+                snippet: data.data,
+            },
+        };
     };
 </script>
 
@@ -66,7 +66,7 @@
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
     let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
     let state: boolean = false;
-    let value: string = snippet?.script ?? script ?? ($session || "");
+    let value: string = script ?? ($session || snippet?.script) ?? "";
 
     function on_copy_click(event: MouseEvent): void {
         navigator.clipboard.writeText(value);
