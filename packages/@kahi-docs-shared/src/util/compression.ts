@@ -10,10 +10,12 @@ import {compress, decompress} from "lzutf8";
  * @returns
  */
 export function compress_safe(text: string): string {
-    return compress(text, {
+    const compressed = compress(text, {
         inputEncoding: "String",
         outputEncoding: "Base64",
     });
+
+    return encodeURIComponent(compressed);
 }
 
 /**
@@ -38,7 +40,9 @@ export function compress_storage(text: string): string {
  * @returns
  */
 export function decompress_safe(payload: string): string {
-    return decompress(payload, {
+    const decoded = decodeURIComponent(payload);
+
+    return decompress(decoded, {
         inputEncoding: "Base64",
         outputEncoding: "String",
     });
