@@ -8,11 +8,27 @@
     export const ssr = false;
 
     export const load: Load = async ({fetch, page}) => {
-        const {script = "", snippet = "getting-started-usage"} = Object.fromEntries(
-            page.query.entries()
-        );
+        const {script = "", snippet = ""} = Object.fromEntries(page.query.entries());
 
-        if (script) {
+        if (snippet) {
+            const response = await fetch(`/api/v4/snippets/${snippet}.json`);
+            if (!response.ok) {
+                const data = (await response.json()) as IRouteError;
+
+                return {
+                    status: response.status,
+                    error: data.code,
+                };
+            }
+
+            const data = (await response.json()) as ISnippetGet;
+
+            return {
+                props: {
+                    snippet: data.data,
+                },
+            };
+        } else if (script) {
             return {
                 props: {
                     script: decompress_safe(script),
@@ -20,7 +36,7 @@
             };
         }
 
-        const response = await fetch(`/api/v4/snippets/${snippet}.json`);
+        const response = await fetch(`/api/v4/snippets/getting-started-usage.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 
@@ -34,7 +50,7 @@
 
         return {
             props: {
-                snippet: data.data,
+                fallback: data.data,
             },
         };
     };
@@ -62,13 +78,14 @@
 
     import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
 
+    export let fallback: ISnippet | undefined;
     export let script: string | undefined;
     export let snippet: ISnippet | undefined;
 
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
     let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
     let state: boolean = false;
-    let value: string = snippet?.script ?? script ?? $session;
+    let value: string = (snippet?.script ?? script ?? $session) || (fallback?.script ?? "");
 
     function on_copy_click(event: MouseEvent): void {
         navigator.clipboard.writeText(value);
