@@ -119,7 +119,7 @@ importers:
       '@kahi-docs/shared': workspace:^
       '@kahi-ui/framework': 0.4.11
       '@novacbn/svelte-codejar': ^0.1.1
-      '@novacbn/svelte-pipeline': ^0.2.0
+      '@novacbn/svelte-pipeline': 0.3.0
       '@sveltejs/adapter-static': ^1.0.0-next.21
       '@sveltejs/kit': ^1.0.0-next.201
       '@tsconfig/svelte': ^2.0.1
@@ -151,7 +151,7 @@ importers:
       '@kahi-docs/shared': link:../@kahi-docs-shared
       '@kahi-ui/framework': 0.4.11
       '@novacbn/svelte-codejar': 0.1.1
-      '@novacbn/svelte-pipeline': 0.2.0
+      '@novacbn/svelte-pipeline': 0.3.0
       flexsearch: 0.7.21
       prismjs: 1.25.0
       svelte: 3.44.0
@@ -234,6 +234,12 @@ packages:
     dependencies:
       svelte: 3.44.0
       svelte-codejar: github.com/novacbn/svelte-codejar/aa9e539bba1bc665865e4b6886cecf3d684706b8
+    dev: false
+
+  /@novacbn/svelte-pipeline/0.3.0:
+    resolution: {integrity: sha512-FLcN2ki9QaNLcxE13bKFHfjuCKaWLV5DRbIte3mKkqpRUOg/lVs1ifqQ3FO+EwfrrlOhSYvO3XNWDVAJUQEwtQ==}
+    dependencies:
+      svelte: 3.44.0
     dev: false
 
   /@rollup/pluginutils/4.1.1:
