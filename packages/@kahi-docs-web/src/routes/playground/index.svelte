@@ -68,7 +68,7 @@
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
     let orientation: keyof typeof SPLIT_ORIENTATION = SPLIT_ORIENTATION.horizontal;
     let state: boolean = false;
-    let value: string = script ?? ($session || snippet?.script) ?? "";
+    let value: string = snippet?.script ?? script ?? $session;
 
     function on_copy_click(event: MouseEvent): void {
         navigator.clipboard.writeText(value);
