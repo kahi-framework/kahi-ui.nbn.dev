@@ -25,8 +25,9 @@
     export let state: boolean = false;
 
     let container_element: HTMLDivElement;
+    let input_element: HTMLInputElement;
 
-    let current: number = 0;
+    let current: number = -1;
     let results: ISearchResult[] | null = null;
     let value: string = "";
     let searcher: ISearcher | null = null;
@@ -48,7 +49,7 @@
         if (!event.detail.active) return;
 
         current = results ? Math.min(current + 1, results.length - 1) : 0;
-        scroll_into_current();
+        handle_current();
     }
 
     function on_previous_keybind(event: IKeybindEvent): void {
@@ -56,8 +57,8 @@
 
         if (!event.detail.active) return;
 
-        current = Math.max(current - 1, 0);
-        scroll_into_current();
+        current = Math.max(current - 1, -1);
+        handle_current();
     }
 
     async function on_select_enter(index: number, event: PointerEvent): Promise<void> {
@@ -70,24 +71,31 @@
         anchor_element.focus();
     }
 
-    async function scroll_into_current(): Promise<void> {
-        await tick();
+    async function handle_current(): Promise<void> {
+        if (current > -1) {
+            await tick();
 
-        const [tile_element, anchor_element] = get_current();
-        if (!anchor_element || !tile_element) return;
+            const [tile_element, anchor_element] = get_current();
+            if (!anchor_element || !tile_element) return;
 
-        anchor_element.focus();
-        tile_element.scrollIntoView({behavior: "smooth", block: "nearest"});
+            anchor_element.focus();
+            tile_element.scrollIntoView({behavior: "smooth", block: "nearest"});
+
+            return;
+        }
+
+        input_element.focus();
     }
 
     $: if (!state) value = "";
     $: if (state && !promise) promise = make_searcher().then((_searcher) => (searcher = _searcher));
     $: if (searcher) results = value ? searcher(value) : null;
+
     $: {
         // HACK: Marking `value` here to make this block reactive
         value;
 
-        current = 0;
+        current = -1;
     }
 </script>
 
@@ -112,7 +120,12 @@
             ]}
         >
             <Card.Section>
-                <TextInput placeholder="Search docs..." variation="block" bind:value />
+                <TextInput
+                    bind:element={input_element}
+                    placeholder="Search docs..."
+                    variation="block"
+                    bind:value
+                />
             </Card.Section>
 
             {#if results}
