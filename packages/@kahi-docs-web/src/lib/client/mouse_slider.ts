@@ -16,6 +16,16 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
     let {horizontal = false, on_move, on_state, target = element} = options;
     let grabbing = false;
 
+    function get_pointer_position(event: MouseEvent | PointerEvent | TouchEvent): [number, number] {
+        if ("touches" in event) {
+            const primary_touch = event.touches[0];
+
+            return [primary_touch.clientX, primary_touch.clientY];
+        }
+
+        return [event.clientX, event.clientY];
+    }
+
     function on_pointer_down(event: PointerEvent): void {
         if (event.isPrimary && event.button === 0) {
             grabbing = true;
@@ -30,15 +40,15 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
         }
     }
 
-    function on_pointer_move(event: PointerEvent): void {
+    function on_pointer_move(event: MouseEvent | TouchEvent): void {
         if (!grabbing) return;
 
         event.preventDefault();
 
         const rect = element.getBoundingClientRect();
-        const {clientX: client_x, clientY: client_y} = event;
-        const cursor = horizontal ? client_x : client_y;
+        const [client_x, client_y] = get_pointer_position(event);
 
+        const cursor = horizontal ? client_x : client_y;
         const minimum = horizontal ? rect.left : rect.top;
         const maximum = horizontal ? rect.right : rect.bottom;
 
@@ -48,8 +58,9 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
         on_move(position / size);
     }
 
+    element.addEventListener("mousemove", on_pointer_move);
     element.addEventListener("pointerup", on_pointer_up);
-    element.addEventListener("pointermove", on_pointer_move);
+    element.addEventListener("touchmove", on_pointer_move);
     target.addEventListener("pointerdown", on_pointer_down);
 
     return {
@@ -62,8 +73,9 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
         },
 
         destroy() {
+            element.removeEventListener("mousemove", on_pointer_move);
             element.removeEventListener("pointerup", on_pointer_up);
-            element.removeEventListener("pointermove", on_pointer_move);
+            element.removeEventListener("touchmove", on_pointer_move);
             target.removeEventListener("pointerdown", on_pointer_down);
         },
     };
