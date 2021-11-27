@@ -1,4 +1,4 @@
-import {compress, decompress} from "lzutf8";
+import lzutf8 from "lzutf8";
 
 // NOTE: Abstracting here incase of algorithm changes
 
@@ -10,7 +10,7 @@ import {compress, decompress} from "lzutf8";
  * @returns
  */
 export function compress_safe(text: string): string {
-    const compressed = compress(text, {
+    const compressed = lzutf8.compress(text, {
         inputEncoding: "String",
         outputEncoding: "Base64",
     });
@@ -26,7 +26,7 @@ export function compress_safe(text: string): string {
  * @returns
  */
 export function compress_storage(text: string): string {
-    return compress(text, {
+    return lzutf8.compress(text, {
         inputEncoding: "String",
         outputEncoding: "StorageBinaryString",
     });
@@ -42,7 +42,7 @@ export function compress_storage(text: string): string {
 export function decompress_safe(payload: string): string {
     const decoded = decodeURIComponent(payload);
 
-    return decompress(decoded, {
+    return lzutf8.decompress(decoded, {
         inputEncoding: "Base64",
         outputEncoding: "String",
     });
@@ -56,7 +56,7 @@ export function decompress_safe(payload: string): string {
  * @returns
  */
 export function decompress_storage(payload: string): string {
-    return decompress(payload, {
+    return lzutf8.decompress(payload, {
         inputEncoding: "StorageBinaryString",
         outputEncoding: "String",
     });
