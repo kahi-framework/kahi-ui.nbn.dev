@@ -87,24 +87,28 @@
 
     .split > section {
         position: relative;
-
-        flex-grow: 1;
     }
 
     .split[data-orientation="horizontal"] > section {
+        min-width: 125px;
         height: 100%;
     }
 
     .split:not([data-mode="first"])[data-orientation="horizontal"] > section:first-child {
-        max-width: calc(100% * clamp(var(--split), 0.1, 0.9));
+        width: calc(100% * var(--split));
     }
 
     .split[data-orientation="vertical"] > section {
         width: 100%;
+        min-height: 125px;
     }
 
     .split:not([data-mode="first"])[data-orientation="vertical"] > section:first-child {
-        max-height: calc(100% * clamp(var(--split), 0.1, 0.9));
+        height: calc(100% * var(--split));
+    }
+
+    .split > :last-child {
+        flex-grow: 1;
     }
 
     .split > span {
