@@ -26,8 +26,15 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
         return [event.clientX, event.clientY];
     }
 
-    function on_pointer_down(event: PointerEvent): void {
-        if (event.isPrimary && event.button === 0) {
+    function is_primary(event: MouseEvent | PointerEvent | TouchEvent): boolean {
+        if ("button" in event && event.button === 0) return true;
+        else if ("touches" in event && event.touches.length > 0) return true;
+
+        return false;
+    }
+
+    function on_pointer_down(event: MouseEvent | TouchEvent): void {
+        if (is_primary(event)) {
             grabbing = true;
             if (on_state) on_state(true);
         }
@@ -61,22 +68,28 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
     element.addEventListener("mousemove", on_pointer_move);
     element.addEventListener("pointerup", on_pointer_up);
     element.addEventListener("touchmove", on_pointer_move);
-    target.addEventListener("pointerdown", on_pointer_down);
+
+    target.addEventListener("mousedown", on_pointer_down);
+    target.addEventListener("touchstart", on_pointer_down);
 
     return {
         update(options: IMouseSliderOptions) {
-            target.removeEventListener("pointerdown", on_pointer_down);
+            target.removeEventListener("mousedown", on_pointer_down);
+            target.removeEventListener("touchstart", on_pointer_down);
 
             ({horizontal = false, on_move, on_state, target = element} = options);
 
-            target.addEventListener("pointerdown", on_pointer_down);
+            target.addEventListener("mousedown", on_pointer_down);
+            target.addEventListener("touchstart", on_pointer_down);
         },
 
         destroy() {
             element.removeEventListener("mousemove", on_pointer_move);
             element.removeEventListener("pointerup", on_pointer_up);
             element.removeEventListener("touchmove", on_pointer_move);
-            target.removeEventListener("pointerdown", on_pointer_down);
+
+            target.removeEventListener("mousedown", on_pointer_down);
+            target.removeEventListener("touchstart", on_pointer_down);
         },
     };
 }
