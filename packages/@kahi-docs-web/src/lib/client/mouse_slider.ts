@@ -66,6 +66,7 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
     }
 
     element.addEventListener("mousemove", on_pointer_move);
+    element.addEventListener("pointerleave", on_pointer_up);
     element.addEventListener("pointerup", on_pointer_up);
     element.addEventListener("touchmove", on_pointer_move);
 
@@ -85,6 +86,7 @@ export function mouse_slider(element: HTMLElement, options: IMouseSliderOptions)
 
         destroy() {
             element.removeEventListener("mousemove", on_pointer_move);
+            element.removeEventListener("pointerleave", on_pointer_up);
             element.removeEventListener("pointerup", on_pointer_up);
             element.removeEventListener("touchmove", on_pointer_move);
 
