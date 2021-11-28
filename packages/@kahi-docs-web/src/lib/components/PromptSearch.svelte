@@ -146,7 +146,7 @@
                                         <Tile.Section>
                                             <Tile.Header>
                                                 <Clickable.Anchor
-                                                    href="/{result.identifier}"
+                                                    href={result.identifier}
                                                     target="_blank"
                                                 >
                                                     {result.title}
