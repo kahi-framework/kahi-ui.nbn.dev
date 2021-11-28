@@ -113,8 +113,10 @@
 
 <StaticLayout>
     <Box padding="small">
-        <Stack orientation="horizontal">
-            <Spacer />
+        <Stack
+            alignment_x={["center", "desktop:right", "widescreen:right"]}
+            orientation="horizontal"
+        >
             <Menu.Container orientation="horizontal" sizing="small">
                 <Menu.Button palette="accent" variation="clear" on:click={() => (state = true)}>
                     <Share2 />
