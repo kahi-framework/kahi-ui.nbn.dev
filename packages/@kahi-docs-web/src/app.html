@@ -12,13 +12,16 @@
 
         %svelte.head%
 
-        <!--
-            HACK: This is just here due to time to execute Javascript causing
-            a flash of color on page load
-        -->
         <script type="application/javascript">
-            const theme = localStorage.getItem("kahi-docs.preferences.theme");
-            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+            /**
+             * HACK: This is just here due to time to execute Javascript causing
+             * a flash of color on page load
+             */
+
+            if (typeof localStorage !== "undefined") {
+                const theme = localStorage.getItem("kahi-docs.preferences.theme");
+                if (theme) document.documentElement.setAttribute("data-palette", theme);
+            }
         </script>
     </head>
 

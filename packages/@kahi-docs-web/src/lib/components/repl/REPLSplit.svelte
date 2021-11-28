@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Wave} from "@kahi-ui/framework";
+    import {Box, Center, Wave} from "@kahi-ui/framework";
 
     import Split, {SPLIT_MODE, SPLIT_ORIENTATION} from "../Split.svelte";
 
@@ -26,16 +26,16 @@
     </svelte:fragment>
 
     <svelte:fragment slot="last">
-        <REPLRender
-            style={_initial_load ? "" : "display:none;"}
-            {value}
-            on:mount={() => (initial_mount = true)}
-        />
+        <REPLRender {value} on:mount={() => (initial_mount = true)} />
     </svelte:fragment>
-</Split>
 
-{#if !_initial_load}
-    <REPLOverlay>
-        <Wave />
-    </REPLOverlay>
-{/if}
+    {#if !_initial_load}
+        <REPLOverlay>
+            <Box palette="auto" width="100" height="100">
+                <Center height="100">
+                    <Wave />
+                </Center>
+            </Box>
+        </REPLOverlay>
+    {/if}
+</Split>

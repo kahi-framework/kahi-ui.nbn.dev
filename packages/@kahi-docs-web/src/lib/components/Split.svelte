@@ -59,6 +59,8 @@
     <section style={mode === SPLIT_MODE.first ? "display:none;" : ""}>
         <slot name="last" />
     </section>
+
+    <slot />
 </div>
 
 <style>
@@ -85,44 +87,61 @@
 
     .split > section {
         position: relative;
-
-        flex-grow: 1;
     }
 
     .split[data-orientation="horizontal"] > section {
+        min-width: 125px;
         height: 100%;
     }
 
+    .split:not([data-mode="split"])[data-orientation="horizontal"] > section {
+        width: 100%;
+    }
+
     .split:not([data-mode="first"])[data-orientation="horizontal"] > section:first-child {
-        max-width: calc(100% * clamp(var(--split), 0.15, 0.85));
+        width: calc(100% * var(--split));
     }
 
     .split[data-orientation="vertical"] > section {
         width: 100%;
+        min-height: 125px;
+    }
+
+    .split:not([data-mode="split"])[data-orientation="vertical"] > section {
+        height: 100%;
     }
 
     .split:not([data-mode="first"])[data-orientation="vertical"] > section:first-child {
-        max-height: calc(100% * clamp(var(--split), 0.15, 0.85));
+        height: calc(100% * var(--split));
+    }
+
+    .split > :last-child {
+        flex-grow: 1;
     }
 
     .split > span {
         display: block;
 
-        border: 4px solid rgba(var(--palette-accent-bold), 0.5);
+        border: 5px solid rgba(var(--palette-accent-bold), 0.5);
+        background: rgba(var(--palette-inverse-off-lightest), 0.75);
 
         user-select: none;
         transition: border-color var(--animation-visual-duration) var(--animation-visual-function);
     }
 
-    .split > span:is(:active, :hover) {
+    .split[data-grabbing="true"] > span {
         border-color: rgba(var(--palette-accent-bold), 0.75);
     }
 
     .split[data-orientation="horizontal"] > span {
+        padding: 0 2px;
+
         cursor: col-resize;
     }
 
     .split[data-orientation="vertical"] > span {
+        padding: 2px 0;
+
         cursor: row-resize;
     }
 

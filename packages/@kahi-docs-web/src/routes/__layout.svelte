@@ -1,5 +1,13 @@
 <script>
+    import {browser} from "$app/env";
+    import {htmlpalette} from "@kahi-ui/framework";
+
+    import {preferencetheme} from "@kahi-docs/shared";
+
     import GlobalPrerender from "../lib/components/GlobalPrerender.svelte";
+
+    const _htmlpalette = htmlpalette();
+    $: if (browser) $_htmlpalette = $preferencetheme ?? "";
 </script>
 
 <GlobalPrerender />
@@ -34,7 +42,7 @@
         width: 100%;
         max-height: 30rem;
 
-        border: 1px solid rgba(var(--palette-inverse-lightest), 0.5);
+        border: 1px solid rgba(var(--palette-inverse-off-lightest), 0.5);
         border-radius: var(--radius-small);
     }
 

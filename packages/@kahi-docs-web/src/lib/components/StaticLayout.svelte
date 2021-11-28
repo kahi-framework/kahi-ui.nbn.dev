@@ -20,8 +20,8 @@
 
         grid-template-rows: auto 1fr;
 
-        width: 100vw;
-        height: 100vh;
+        width: min(100vw, 100%);
+        height: min(100vh, 100%);
     }
 
     :global(.static-layout) > :global(.static-container) {
