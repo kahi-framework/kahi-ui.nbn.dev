@@ -106,7 +106,7 @@
         history.replaceState(null, "", `${location.origin}${location.pathname}`);
     });
 
-    $: if (browser) $session = value;
+    $: $session = value;
 </script>
 
 <PageMetadata title="Playground" separator="—" />
