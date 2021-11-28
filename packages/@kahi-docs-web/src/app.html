@@ -20,7 +20,7 @@
 
             if (typeof localStorage !== "undefined") {
                 const theme = localStorage.getItem("kahi-docs.preferences.theme");
-                if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+                if (theme) document.documentElement.setAttribute("data-palette", theme);
             }
         </script>
     </head>
