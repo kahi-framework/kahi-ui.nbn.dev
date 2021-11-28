@@ -94,6 +94,10 @@
         height: 100%;
     }
 
+    .split:not([data-mode="split"])[data-orientation="horizontal"] > section {
+        width: 100%;
+    }
+
     .split:not([data-mode="first"])[data-orientation="horizontal"] > section:first-child {
         width: calc(100% * var(--split));
     }
@@ -101,6 +105,10 @@
     .split[data-orientation="vertical"] > section {
         width: 100%;
         min-height: 125px;
+    }
+
+    .split:not([data-mode="split"])[data-orientation="vertical"] > section {
+        height: 100%;
     }
 
     .split:not([data-mode="first"])[data-orientation="vertical"] > section:first-child {
