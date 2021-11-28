@@ -13,7 +13,6 @@
     const _prefersdark = prefersdark();
 
     function on_palette_click(event: MouseEvent): void {
-        $_htmlpalette = _next_palette;
         $preferencetheme = _next_palette as IPreferenceThemeValues;
     }
 
