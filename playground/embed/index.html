@@ -14,38 +14,78 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-86e82704.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-4f07f368.js">
+		<link rel="modulepreload" href="/_app/start-49e5c630.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-456a71e0.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-fb356cff.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-b73dc8a9.js">
+		<link rel="modulepreload" href="/_app/pages/playground/__layout.svelte-546135b5.js">
+		<link rel="modulepreload" href="/_app/pages/playground/embed/index.svelte-9edc5627.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLEmbed-5ebdbda6.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLSplit-3b622865.js">
+		<link rel="modulepreload" href="/_app/chunks/Code-21929627.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b0dbfe59.css">
+		<link rel="stylesheet" href="/_app/assets/REPLEmbed-0a420c95.css">
+		<link rel="stylesheet" href="/_app/assets/REPLSplit-bdaaab8b.css">
 
 		<script type="module">
-			import { start } from "/_app/start-86e82704.js";
+			import { start } from "/_app/start-49e5c630.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
 				session: {},
 				host: location.host,
 				route: true,
-				spa: true,
+				spa: false,
 				trailing_slash: "never",
-				hydrate: null
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-fb356cff.js"),
+						import("/_app/pages/playground/__layout.svelte-546135b5.js"),
+						import("/_app/pages/playground/embed/index.svelte-9edc5627.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Fplayground\u002Fembed",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
 			});
 		</script>
 
-        <!--
-            HACK: This is just here due to time to execute Javascript causing
-            a flash of color on page load
-        -->
         <script type="application/javascript">
-            const theme = localStorage.getItem("kahi-docs.preferences.theme");
-            if (theme) document.documentElement.setAttribute("data-palette", JSON.parse(theme));
+            /**
+             * HACK: This is just here due to time to execute Javascript causing
+             * a flash of color on page load
+             */
+
+            if (typeof localStorage !== "undefined") {
+                const theme = localStorage.getItem("kahi-docs.preferences.theme");
+                if (theme) document.documentElement.setAttribute("data-palette", theme);
+            }
         </script>
     </head>
 
     <body>
         
+
+
+
+
+<a href="/api/v4/search.json" hidden></a>
+
+<div data-height="viewport-100" class="hero " data-palette="negative"><header>Unsupported</header>
+
+    <section>Your client <strong class="text ">is not Javascript-enabled</strong>, visit again with a
+        <strong class="text ">compatible Browser</strong>.
+    </section></div>
+
+
 
 			
 		
