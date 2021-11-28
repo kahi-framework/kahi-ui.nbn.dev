@@ -27,7 +27,6 @@
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/markdown": "workspace:^",
-        "svelte": "^3.44.0",
-        "svelte-local-storage-store": "^0.2.3"
+        "svelte": "^3.44.0"
     }
 }

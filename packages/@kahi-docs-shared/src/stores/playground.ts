@@ -1,3 +1,3 @@
-import {compressedstorage} from "./storage";
+import {sessioncompressedstorage} from "./storage";
 
-export const session = compressedstorage<string>("playground.session", "");
+export const session = sessioncompressedstorage<string>("playground.session", "");
