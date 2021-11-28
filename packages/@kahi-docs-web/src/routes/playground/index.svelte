@@ -1,14 +1,18 @@
 <script context="module" lang="ts">
+    import {browser} from "$app/env";
     import type {Load} from "@sveltejs/kit";
 
     import {decompress_safe} from "@kahi-docs/shared";
 
     import type {IRouteError, ISnippetGet} from "../../lib/shared/api";
 
-    export const ssr = false;
-
     export const load: Load = async ({fetch, page}) => {
-        const {script = "", snippet = ""} = Object.fromEntries(page.query.entries());
+        // HACK: SvelteKit errors out when accessing query params during build,
+        // so we need to special case SSR to just skip the backend functionality
+        if (!browser) return {};
+
+        const query = new URLSearchParams(location.search);
+        const {script = "", snippet = ""} = Object.fromEntries(query.entries());
 
         if (snippet) {
             const response = await fetch(`/api/v4/snippets/${snippet}.json`);
@@ -57,14 +61,12 @@
 </script>
 
 <script lang="ts">
-    import {browser} from "$app/env";
     import {Box, Menu, Spacer, Stack, Text, viewports} from "@kahi-ui/framework";
     import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
     import {session} from "@kahi-docs/shared";
 
-    import HeroJavascriptEnabled from "../../lib/components/HeroJavascriptEnabled.svelte";
     import PageMetadata from "../../lib/components/PageMetadata.svelte";
     import PromptShare from "../../lib/components/PromptShare.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
@@ -104,77 +106,75 @@
         history.replaceState(null, "", `${location.origin}${location.pathname}`);
     });
 
-    $: if (browser) $session = value;
+    $: $session = value;
 </script>
 
 <PageMetadata title="Playground" separator="—" />
 
-{#if browser}
-    <StaticLayout>
-        <Box padding="small">
-            <Stack orientation="horizontal">
-                <Spacer />
-                <Menu.Container orientation="horizontal" sizing="small">
-                    <Menu.Button palette="accent" variation="clear" on:click={() => (state = true)}>
-                        <Share2 />
-                        Share
-                    </Menu.Button>
+<StaticLayout>
+    <Box padding="small">
+        <Stack
+            alignment_x={["center", "desktop:right", "widescreen:right"]}
+            orientation="horizontal"
+        >
+            <Menu.Container orientation="horizontal" sizing="small">
+                <Menu.Button palette="accent" variation="clear" on:click={() => (state = true)}>
+                    <Share2 />
+                    Share
+                </Menu.Button>
 
-                    <Menu.Button palette="affirmative" variation="clear" on:click={on_copy_click}>
-                        <Copy />
-                        Copy
-                    </Menu.Button>
+                <Menu.Button palette="affirmative" variation="clear" on:click={on_copy_click}>
+                    <Copy />
+                    Copy
+                </Menu.Button>
 
-                    <Menu.Button
-                        palette="inverse"
-                        variation="clear"
-                        on:click={() =>
-                            (orientation =
-                                orientation === SPLIT_ORIENTATION.horizontal
-                                    ? SPLIT_ORIENTATION.vertical
-                                    : SPLIT_ORIENTATION.horizontal)}
-                    >
-                        <RotateCW />
-                        <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
-                    </Menu.Button>
+                <Menu.Button
+                    palette="inverse"
+                    variation="clear"
+                    on:click={() =>
+                        (orientation =
+                            orientation === SPLIT_ORIENTATION.horizontal
+                                ? SPLIT_ORIENTATION.vertical
+                                : SPLIT_ORIENTATION.horizontal)}
+                >
+                    <RotateCW />
+                    <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
+                </Menu.Button>
 
-                    <Menu.Button
-                        active={mode === SPLIT_MODE.split}
-                        palette="inverse"
-                        variation="clear"
-                        on:click={() => (mode = SPLIT_MODE.split)}
-                    >
-                        <Sidebar />
-                        <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
-                    </Menu.Button>
+                <Menu.Button
+                    active={mode === SPLIT_MODE.split}
+                    palette="inverse"
+                    variation="clear"
+                    on:click={() => (mode = SPLIT_MODE.split)}
+                >
+                    <Sidebar />
+                    <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
+                </Menu.Button>
 
-                    <Menu.Button
-                        active={mode === SPLIT_MODE.first}
-                        palette="inverse"
-                        variation="clear"
-                        on:click={() => (mode = SPLIT_MODE.first)}
-                    >
-                        <Code />
-                        <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
-                    </Menu.Button>
+                <Menu.Button
+                    active={mode === SPLIT_MODE.first}
+                    palette="inverse"
+                    variation="clear"
+                    on:click={() => (mode = SPLIT_MODE.first)}
+                >
+                    <Code />
+                    <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
+                </Menu.Button>
 
-                    <Menu.Button
-                        active={mode === SPLIT_MODE.last}
-                        palette="inverse"
-                        variation="clear"
-                        on:click={() => (mode = SPLIT_MODE.last)}
-                    >
-                        <Image />
-                        <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
-                    </Menu.Button>
-                </Menu.Container>
-            </Stack>
-        </Box>
+                <Menu.Button
+                    active={mode === SPLIT_MODE.last}
+                    palette="inverse"
+                    variation="clear"
+                    on:click={() => (mode = SPLIT_MODE.last)}
+                >
+                    <Image />
+                    <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
+                </Menu.Button>
+            </Menu.Container>
+        </Stack>
+    </Box>
 
-        <REPLSplit {mode} {orientation} bind:value />
-    </StaticLayout>
-{:else}
-    <HeroJavascriptEnabled />
-{/if}
+    <REPLSplit {mode} {orientation} bind:value />
+</StaticLayout>
 
 <PromptShare bind:state {value} />

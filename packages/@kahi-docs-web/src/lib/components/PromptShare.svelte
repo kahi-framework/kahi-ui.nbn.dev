@@ -31,7 +31,7 @@
 </script>
 
 <Overlay class="share-prompt" logic_id="share-prompt" bind:state captive dismissible>
-    <Card.Container palette="auto" margin_top="huge" width="prose" max_width="viewport-75">
+    <Card.Container palette="auto" width="prose" max_width="viewport-75">
         <Card.Header>Share Playground</Card.Header>
 
         <Card.Section>

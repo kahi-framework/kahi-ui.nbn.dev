@@ -95,13 +95,11 @@ importers:
       '@sveltejs/kit': ^1.0.0-next.201
       prettier: ^2.3.1
       svelte: ^3.44.0
-      svelte-local-storage-store: ^0.2.3
       typescript: ^4.3.5
     dependencies:
       '@kahi-docs/config': link:../@kahi-docs-config
       '@kahi-docs/markdown': link:../@kahi-docs-markdown
       svelte: 3.44.0
-      svelte-local-storage-store: 0.2.4_svelte@3.44.0
     devDependencies:
       '@sveltejs/kit': 1.0.0-next.201_svelte@3.44.0
       prettier: 2.4.1
@@ -138,7 +136,6 @@ importers:
       prismjs: ^1.23.0
       svelte: ^3.44.0
       svelte-check: ^2.2.7
-      svelte-local-storage-store: ^0.2.3
       svelte-preprocess: ^4.9.8
       svelte2tsx: ^0.4.7
       typescript: ^4.4.4
@@ -155,7 +152,6 @@ importers:
       flexsearch: 0.7.21
       prismjs: 1.25.0
       svelte: 3.44.0
-      svelte-local-storage-store: 0.2.4_svelte@3.44.0
     devDependencies:
       '@cfworker/json-schema': 1.9.0
       '@iarna/toml': 2.2.5
@@ -1441,15 +1437,6 @@ packages:
     dependencies:
       svelte: 3.44.0
     dev: true
-
-  /svelte-local-storage-store/0.2.4_svelte@3.44.0:
-    resolution: {integrity: sha512-a1YKh715xvGp2N/dDY3TN4+To9uP0gr4E5aLKck0WjDMc3dLGgSr+cZ/GQTt5YBRMl4ip+o0yMfkjzZaKYPbxQ==}
-    engines: {node: '>=0.14'}
-    peerDependencies:
-      svelte: ^3.38.2
-    dependencies:
-      svelte: 3.44.0
-    dev: false
 
   /svelte-preprocess/4.9.8_svelte@3.44.0+typescript@4.4.4:
     resolution: {integrity: sha512-EQS/oRZzMtYdAprppZxY3HcysKh11w54MgA63ybtL+TAZ4hVqYOnhw41JVJjWN9dhPnNjjLzvbZ2tMhTsla1Og==}

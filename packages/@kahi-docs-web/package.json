@@ -56,7 +56,6 @@
         "@novacbn/svelte-pipeline": "0.3.0",
         "flexsearch": "^0.7.21",
         "prismjs": "^1.23.0",
-        "svelte": "^3.44.0",
-        "svelte-local-storage-store": "^0.2.3"
+        "svelte": "^3.44.0"
     }
 }

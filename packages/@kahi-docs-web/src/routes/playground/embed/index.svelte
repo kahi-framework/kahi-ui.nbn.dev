@@ -1,14 +1,18 @@
 <script context="module" lang="ts">
+    import {browser} from "$app/env";
     import type {Load} from "@sveltejs/kit";
 
     import {decompress_safe} from "@kahi-docs/shared";
 
     import type {IRouteError, ISnippetGet} from "../../../lib/shared/api";
 
-    export const ssr = false;
-
     export const load: Load = async ({fetch, page}) => {
-        const {script = "", snippet = ""} = Object.fromEntries(page.query.entries());
+        // HACK: SvelteKit errors out when accessing query params during build,
+        // so we need to special case SSR to just skip the backend functionality
+        if (!browser) return {};
+
+        const query = new URLSearchParams(location.search);
+        const {script = "", snippet = ""} = Object.fromEntries(query.entries());
 
         if (snippet) {
             const response = await fetch(`/api/v4/snippets/${snippet}.json`);
@@ -44,11 +48,7 @@
 </script>
 
 <script lang="ts">
-    import {browser} from "$app/env";
-
     import type {ISnippet} from "@kahi-docs/markdown";
-
-    import HeroJavascriptEnabled from "../../../lib/components/HeroJavascriptEnabled.svelte";
 
     import REPLEmbed from "../../../lib/components/repl/REPLEmbed.svelte";
 
@@ -59,8 +59,4 @@
     let value: string = snippet?.script ?? script ?? "";
 </script>
 
-{#if browser}
-    <REPLEmbed {identifier} {value} />
-{:else}
-    <HeroJavascriptEnabled />
-{/if}
+<REPLEmbed {identifier} {value} />
