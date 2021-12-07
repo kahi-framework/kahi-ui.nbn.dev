@@ -28,6 +28,8 @@ types=["{}"]
 
 # Figure
 
+> **NOTE**: New since `v0.2.1`.
+
 `Figure` is a multimedia container Component, providing modifications for things such as images and videos.
 
 ```svelte {title="Figure Preview" mode="repl"}
