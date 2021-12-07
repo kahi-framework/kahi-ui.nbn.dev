@@ -57,6 +57,8 @@ types=["<integer>"]
 
 # Clickable
 
+> **NOTE**: New since `v0.4.3`.
+
 `Clickable` stretches a `<Clickable.Anchor>` / `<Clickable.Label>` across its parent element, while surfacing other interactive elements above the overlay.
 
 ## Imports

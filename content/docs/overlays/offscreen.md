@@ -71,6 +71,10 @@ types=["{}"]
 
 # Offscreen
 
+> **NOTE**: New since `v0.2.11`.
+
+> **WARNING**: This Component will be merged with `Overlay` in `v0.5.0`.
+
 `Offscreen` is typically used for hiding content that'll slide into when actived via a button or something else.
 
 ```svelte {title="Offscreen Preview" mode="repl"}
@@ -335,6 +339,8 @@ You can optionally have the `Offscreen` dismissible by clicking the backdrop via
 ```
 
 ## Once
+
+> **NOTE**: New since `v0.4.11`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
