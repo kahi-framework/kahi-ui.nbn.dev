@@ -68,6 +68,8 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 # Badge
 
+> **NOTE**: New since `v0.2.0`.
+
 `Badge` is typically used to subtlely display to the user some type of ancillary information, relating to its siblings / parent UI elements.
 
 ```svelte {title="Badge Preview" mode="repl"}

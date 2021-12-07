@@ -112,6 +112,8 @@ types=["<length>"]
 
 # Table
 
+> **NOTE**: New since `v0.2.7`.
+
 `Table` is typically used to render tabular data in a structured row -> columns format, for end-users to easily read the contents.
 
 ```svelte {title="Table Preview" mode="repl"}
