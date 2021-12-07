@@ -37,6 +37,8 @@ types=["<alpha-value>"]
 
 # Ellipsis
 
+> **NOTE**: New since `v0.2.5`.
+
 `Ellipsis` is a text-based indicator used to tell the end-user that the Web Application is loading something in the background.
 
 ```svelte {title="Ellipsis Preview" mode="repl"}
@@ -78,6 +80,8 @@ types=["<alpha-value>"]
 ```
 
 ## Character
+
+> **WARNING**: This feature will be refactored in `v0.5.0`.
 
 You can customize the text character used for the animation via the `character` property.
 

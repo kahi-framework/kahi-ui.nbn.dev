@@ -32,6 +32,8 @@ types=["<length>", "<percentage>"]
 
 # Dot
 
+> **NOTE**: New since `v0.2.0`.
+
 `Dot` is typically used for calling out other UI elements to the end-user, that they need attention.
 
 ```svelte {title="Dot Preview" mode="repl"}

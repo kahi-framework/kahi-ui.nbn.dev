@@ -47,6 +47,8 @@ types=["<length>", "<percentage>"]
 
 # Progress
 
+> **NOTE**: New since `v0.3.1`.
+
 `Progress` is typically used to render feedback to the end-user about how complete a current task is.
 
 ```svelte {title="Progress Preview" mode="repl"}

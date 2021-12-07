@@ -57,6 +57,8 @@ types=["<easing-function>"]
 
 # Wave
 
+> **NOTE**: New since `v0.2.5`.
+
 `Wave` is an indicator used to tell the end-user that the Web Application is loading something in the background.
 
 ```svelte {title="Wave Preview" mode="repl"}
