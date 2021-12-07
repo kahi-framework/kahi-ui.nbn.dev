@@ -53,6 +53,8 @@ types=["<length>"]
 
 # Code
 
+> **NOTE**: New since `v0.2.0`.
+
 `Code` is used to render inline monospaced text, typically for showing programming code / application configuration to an end-user.
 
 ```svelte {title="Code Preview" mode="repl"}
@@ -75,7 +77,7 @@ types=["<length>"]
 
 ## Palette
 
-You can change the color palette of the Component via `data-palette`.
+You can change the color palette of `Code` via the `palette` property.
 
 ```svelte {title="Code Palette" mode="repl"}
 <script>

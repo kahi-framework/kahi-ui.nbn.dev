@@ -158,6 +158,8 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 # Heading
 
+> **NOTE**: New since `v0.2.0`.
+
 `Heading` is typically used for delineating sections of content within your Web Application.
 
 ```svelte {title="Heading Preview" mode="repl"}
@@ -268,7 +270,9 @@ You can adjust the size of `Heading` by passing the `is` property.
 
 ## Palette
 
-You can change the color palette of the `Heading` via the `palette` property.
+> **NOTE**: New since `v0.2.16`.
+
+You can change the color palette of `Heading` via the `palette` property.
 
 ```svelte {title="Heading Palette" mode="repl"}
 <script>
