@@ -7,6 +7,8 @@ types=["boolean", "{VIEWPORT}"]
 
 # Hidden
 
+> **NOTE**: New since `v0.2.2`.
+
 All Components have access to the `data-hidden` global HTML attribute via the `hidden` property. Unlike the standard [`hidden`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) HTML attribute, `data-hidden` supports [Responsitivity](../framework/responsitivity.md).
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.

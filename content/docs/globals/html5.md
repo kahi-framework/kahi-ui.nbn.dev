@@ -106,6 +106,8 @@ All Components have access to common HTML5 global attributes and events.
 
 ## class
 
+> **NOTE**: New since `v0.2.0`.
+
 [`class`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/class) allows you to apply CSS classes that you've defined to Components. However, you will have to use `:global` on your class names to bypass Svelte's local scoping.
 
 ```svelte {title="HTML5 class" mode="repl"}
@@ -127,6 +129,8 @@ All Components have access to common HTML5 global attributes and events.
 
 ## style
 
+> **NOTE**: New since `v0.2.0`.
+
 [`style`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/style) allows you to apply inline CSS properties to Components.
 
 ```svelte {title="HTML5 style" mode="repl"}
@@ -141,6 +145,8 @@ All Components have access to common HTML5 global attributes and events.
 ```
 
 ## id
+
+> **NOTE**: New since `v0.2.0`.
 
 [`id`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id) allows you to set an identifier that other elements can target or targettable for scrolling by a [URL fragment](https://developer.mozilla.org/en-US/docs/Web/API/URL/hash).
 
@@ -172,6 +178,8 @@ All Components have access to common HTML5 global attributes and events.
 
 ## name
 
+> **NOTE**: New since `v0.2.0`.
+
 [`name`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/name) allows you to set an identifier for the Component to set its value to in a form, or, can targettable by an [`Anchor`](../navigation/anchor.md).
 
 ```svelte {title="HTML5 name" mode="repl"}
@@ -192,6 +200,8 @@ All Components have access to common HTML5 global attributes and events.
 
 ## title
 
+> **NOTE**: New since `v0.2.0`.
+
 [`title`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/title) allows you to set a timed effect to show a text tooltip whenever an end-user hovers for long enough. Typically you don't want to rely on this attribute for the UI. Rather use it for semantic and assistive purposes.
 
 ```svelte {title="HTML5 title" mode="repl"}
@@ -206,6 +216,8 @@ All Components have access to common HTML5 global attributes and events.
 
 ## tabindex
 
+> **NOTE**: New since `v0.2.0`.
+
 [`tabindex`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) allows you to configure how the Browser cycles through elements in the current stacking context when they press their tab keyboard button, or similar.
 
 ```svelte {title="HTML5 tabindex" mode="repl"}
@@ -219,3 +231,5 @@ All Components have access to common HTML5 global attributes and events.
 <Button tabindex="4">Index #4</Button>
 <Button tabindex="2">Index #2</Button>
 ```
+
+> **TODO**: Event samples
