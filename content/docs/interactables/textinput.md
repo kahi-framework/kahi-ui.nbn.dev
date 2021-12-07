@@ -174,6 +174,8 @@ types=["<alpha-value>"]
 
 # TextInput
 
+> **NOTE**: New since `v0.2.7`.
+
 `TextInput` is typically used for capturing string input from an end-user for input into forms, XHR requests, etc.
 
 ```svelte {title="TextInput Preview" mode="repl"}

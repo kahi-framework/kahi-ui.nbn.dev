@@ -137,6 +137,8 @@ types=["<alpha-value>"]
 
 # Check
 
+> **NOTE**: New since `v0.2.7`.
+
 `Check` is typically used to present a set of options to the end-user, which they can then choose from.
 
 ```svelte {title="Check Preview" mode="repl"}
