@@ -385,6 +385,8 @@ You can change the size of the `Radio` via the `size` property.
 
 ## Flush
 
+> **NOTE**: New since `v0.2.13`.
+
 You can change the appearance of the `Radio` to be flush with the rest of the Application content via the `variation` property.
 
 ```svelte {title="Radio Flush" mode="repl"}

@@ -117,6 +117,8 @@ types=["<length>"]
 
 # Hero
 
+> **NOTE**: New since `v0.2.0`.
+
 `Hero` is a multi-part surface pattern for displaying banner text with subtitling and actions, typically used for landing pages, error messages, and loading placeholders.
 
 ```svelte {title="Hero Preview" mode="repl"}

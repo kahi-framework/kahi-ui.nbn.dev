@@ -193,6 +193,8 @@ types=["<length>"]
 
 # Card
 
+> **NOTE**: New since `v0.2.0`.
+
 `Card` is a multi-part surface pattern for displaying a section of content in a long-form vertical format.
 
 ```svelte {title="Card Preview" mode="repl"}
@@ -439,6 +441,8 @@ You can change the color palette of the `Card` via the `palette` property.
 
 ## Elevation
 
+> **NOTE**: New since `v0.3.5`.
+
 You can set how "high" your `Card` will appear to be over top the page via the `elevation` property.
 
 ```svelte {title="Card Elevation" mode="repl"}
@@ -596,6 +600,8 @@ You can set how "high" your `Card` will appear to be over top the page via the `
 
 ## Orientation
 
+> **NOTE**: New since `v0.3.5`.
+
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
 
 You can set the `Card.Footer` to render vertically via the `orientation` property.
@@ -680,6 +686,8 @@ You can set the `Card.Footer` to render vertically via the `orientation` propert
 ```
 
 ## Sizing
+
+> **NOTE**: New since `v0.3.3`.
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
@@ -798,6 +806,8 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 ```
 
 ## Flush
+
+> **NOTE**: New since `v0.2.13`.
 
 You can change the appearance of the `Card` to be flush with the rest of the Application content via the `variation` property.
 

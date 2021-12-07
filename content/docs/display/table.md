@@ -222,6 +222,8 @@ types=["<length>"]
 
 ## Spans
 
+> **NOTE**: New since `v0.4.4`.
+
 You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
 
 ```svelte {title="Table Spans" mode="repl"}
@@ -541,6 +543,8 @@ You can make a `Table` have both borders **AND** stripes via the `variation` pro
 ```
 
 ## Sizing
+
+> **NOTE**: New since `v0.3.5`.
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
