@@ -52,6 +52,8 @@ types=["<text-decoration>"]
 
 # Anchor
 
+> **NOTE**: New since `v0.2.0`.
+
 `Anchor` are used for navigating from page to page, or to external websites.
 
 ```svelte {title="Anchor Preview" mode="repl"}

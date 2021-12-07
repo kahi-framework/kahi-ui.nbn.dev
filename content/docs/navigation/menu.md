@@ -132,6 +132,8 @@ types=["{}"]
 
 # Menu
 
+> **NOTE**: New since `v0.2.2`.
+
 `Menu` renders a nestable list of actionable buttons and links. Typically used in context menus or used as the main content body of [`Aside`](./aside.md).
 
 ```svelte {title="Menu Preview" mode="repl"}
