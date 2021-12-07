@@ -33,6 +33,8 @@ types=["{}"]
 
 # Carousel
 
+> **NOTE**: New since `v0.4.6`.
+
 `Carousel` allows the user to scroll through "slides" of content without having to extend the page dimensions.
 
 ```svelte {title="Carousel Preview" mode="repl"}

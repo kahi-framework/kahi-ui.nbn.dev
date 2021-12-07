@@ -147,6 +147,8 @@ types=["<length>"]
 
 # Tab
 
+> **NOTE**: New since `v0.3.1`.
+
 `Tab` Components are typically used for turning what would be multi-page content, into a single page with a set of radio buttons to toggle between views.
 
 ```svelte {title="Tab Preview" mode="repl"}
