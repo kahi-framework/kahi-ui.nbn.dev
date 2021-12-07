@@ -23,6 +23,8 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 # Spacer
 
+> **NOTE**: New since `v0.2.0`.
+
 `Spacer` is a layout primitive that takes up all available space between its two immediate siblings.
 
 ```svelte {title="Spacer Preview" mode="repl"}
@@ -144,6 +146,8 @@ You can adjust the spacing between the immediate siblings via the `spacing`, `sp
 ```
 
 ## Inline
+
+> **NOTE**: Changed from `variation="block/inline"` -> `is="div/span"` in `v0.4.10`.
 
 You can have the `Spacer` rendering as an inline `<span>` via the `is` property.
 

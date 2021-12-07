@@ -22,6 +22,8 @@ types=["{}"]
 
 # Position
 
+> **NOTE**: New since `v0.4.2`.
+
 `Position` is a layout primitive that can float itself and child content in specific regions of the containing Components.
 
 ```svelte {title="Position Preview" mode="repl"}

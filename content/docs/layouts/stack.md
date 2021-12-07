@@ -42,6 +42,8 @@ types=["{}"]
 
 # Stack
 
+> **NOTE**: New since `v0.2.0`.
+
 `Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children. With optional wrapping.
 
 ```svelte {title="Stack Preview" mode="repl"}

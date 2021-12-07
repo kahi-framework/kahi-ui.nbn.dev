@@ -22,6 +22,8 @@ types=["<length>"]
 
 # Group
 
+> **NOTE**: New since `v0.2.0`.
+
 `Group` is a layout primitive used for grouping together like Components with their inner border radii removed.
 
 ```svelte {title="Group Preview" mode="repl"}
