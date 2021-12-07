@@ -1,5 +1,7 @@
 # click_outside
 
+> **NOTE**: New since `v0.2.11`.
+
 `click_outside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_outside(event: MouseEvent): void` callback whenever your assigned element is clicked outside of.
 
 ```svelte {title="click_outside Preview" mode="repl"}
