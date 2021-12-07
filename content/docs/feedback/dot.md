@@ -153,7 +153,7 @@ You can have the `Dot` perform animations to grab the end-user's attention via t
 
 ## Position
 
-> **WARNING**: This feature has been deprecated for removal in the future. Please use [`Position`](../layouts/position.md) instead.
+> **WARNING**: This feature has been deprecated for removal in `v0.5.0`. Please use [`Position`](../layouts/position.md) instead.
 
 You can change the position of the `Dot` to raise it above in its parent to more explictly call out a Component.
 
