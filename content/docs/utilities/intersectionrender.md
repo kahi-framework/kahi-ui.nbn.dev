@@ -53,6 +53,8 @@ types=["{}"]
 
 # IntersectionRender
 
+> **NOTE**: New since `v0.4.1`.
+
 `IntersectionRender` disables rendering of child content before it has come into the root element's viewport at least once. Useful for lazy loading content besides media.
 
 ```svelte {title="IntersectionRender Preview" mode="repl"}
