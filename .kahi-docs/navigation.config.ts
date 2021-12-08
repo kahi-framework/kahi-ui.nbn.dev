@@ -85,6 +85,7 @@ export default define_navigation({
                 {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/filedropinput", badge: "UPDATED"},
                 {href: "/docs/interactables/form", badge: "UPDATED"},
+                {href: "/docs/interactables/hiddeninput"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput"},
@@ -168,8 +169,8 @@ export default define_navigation({
             text: "Actions",
             items: [
                 {href: "/docs/actions/click_outside"},
-                {href: "/docs/actions/keybind"},
                 {href: "/docs/actions/intersection_observer"},
+                {href: "/docs/actions/keybind"},
                 {href: "/docs/actions/mutation_observer"},
             ],
         },
