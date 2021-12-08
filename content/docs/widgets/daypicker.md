@@ -82,6 +82,8 @@ types=["CustomEvent<void>"]
 
 # DayPicker
 
+> **NOTE**: New since `v0.4.10`.
+
 `DayPicker` is a Widget that displays a calendar-style grid of days that a user can select from.
 
 ```svelte {title="DayPicker Preview" mode="repl"}

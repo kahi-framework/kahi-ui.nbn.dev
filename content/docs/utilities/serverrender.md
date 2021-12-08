@@ -7,6 +7,8 @@ types=["{}"]
 
 # ServerRender
 
+> **NOTE**: New since `v0.4.1`.
+
 > **NOTE**: This Component is renderless, it does not render its own DOM nodes.
 
 `ServerRender` disables rendering of child content that doesn't work on the Browser, or doesn't make sense there. e.g. reading a file from local disk

@@ -73,6 +73,8 @@ types=["CustomEvent<void>"]
 
 # DayStepper
 
+> **NOTE**: New since `v0.4.10`.
+
 `DayStepper` is a Widget that lets users increment / decrement the currently provided day by a set number.
 
 ```svelte {title="DayStepper Preview" mode="repl"}

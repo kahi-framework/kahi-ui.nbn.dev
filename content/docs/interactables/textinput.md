@@ -174,6 +174,8 @@ types=["<alpha-value>"]
 
 # TextInput
 
+> **NOTE**: New since `v0.2.7`.
+
 `TextInput` is typically used for capturing string input from an end-user for input into forms, XHR requests, etc.
 
 ```svelte {title="TextInput Preview" mode="repl"}
@@ -393,6 +395,8 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
 ```
 
 ## Flush
+
+> **NOTE**: New since `v0.2.16`.
 
 You can change the appearance of the `TextInput` to be flush with the rest of the Application content via the `variation` property.
 

@@ -71,6 +71,8 @@ Form Components are helpers to supplement input Components that are meant for we
 
 ## HelpText
 
+> **NOTE**: New since `v0.2.7`.
+
 `Form.HelpText` is typically used for displaying information about how to input information into a form properly.
 
 ```svelte {title="Form HelpText" mode="repl"}
@@ -85,6 +87,8 @@ Form Components are helpers to supplement input Components that are meant for we
 ```
 
 ## Label
+
+> **NOTE**: New since `v0.2.7`.
 
 > **NOTE**: This Component sets a [Svelte Context](https://svelte.dev/docs#setContext) for Form IDs / Names that child input Components consume.
 
@@ -102,6 +106,8 @@ Form Components are helpers to supplement input Components that are meant for we
 ```
 
 ## Control
+
+> **NOTE**: New since `v0.2.7`.
 
 > **NOTE**: This Component sets a [Svelte Context](https://svelte.dev/docs#setContext) for Form IDs / Names that child input Components consume.
 
@@ -132,6 +138,8 @@ Form Components are helpers to supplement input Components that are meant for we
 ```
 
 ## Group
+
+> **NOTE**: New since `v0.2.7`.
 
 > **NOTE**: This Component is renderless, it does not render its own DOM nodes.
 

@@ -76,6 +76,8 @@ All Components have access to the global margin and padding HTML data attributes
 
 ## Margin
 
+> **NOTE**: New since `v0.2.0`.
+
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `margin={["small", "tablet:large"]}`
 
 You can set margins for your Components via the `margin` property.
@@ -124,6 +126,8 @@ You can set margins for your Components via the `margin` property.
 ```
 
 ## Padding
+
+> **NOTE**: New since `v0.2.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `padding={["small", "tablet:large"]}`
 

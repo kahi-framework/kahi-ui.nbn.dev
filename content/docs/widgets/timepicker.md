@@ -92,6 +92,8 @@ types=["CustomEvent<void>"]
 
 # TimePicker
 
+> **NOTE**: New since `v0.4.10`.
+
 `TimePicker` is a Widget that displays a set of hour, minute, second clock scrollable areas that a user can select from.
 
 ```svelte {title="TimePicker Preview" mode="repl"}

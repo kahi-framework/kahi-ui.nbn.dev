@@ -122,6 +122,8 @@ types=["<alpha-value>"]
 
 # Switch
 
+> **NOTE**: New since `v0.2.7`.
+
 `Switch` is typically used to present to the end-user features, settings, and other toggles that they can turn on / off.
 
 ```svelte {title="Switch Preview" mode="repl"}

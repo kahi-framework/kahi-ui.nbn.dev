@@ -102,6 +102,8 @@ types=["<alpha-value>"]
 
 # Accordion
 
+> **NOTE**: New since `v0.4.5`.
+
 `Accordion` Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
 
 ```svelte {title="Accordion Preview" mode="repl"}

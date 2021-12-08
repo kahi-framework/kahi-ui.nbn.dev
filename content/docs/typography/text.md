@@ -103,6 +103,8 @@ types=["<alpha-value>"]
 
 # Text
 
+> **NOTE**: New since `v0.2.0`.
+
 `Text` is used to render paragraphs of text in your interface, among other types of text.
 
 ```svelte {title="Text Preview" mode="repl"}
@@ -232,7 +234,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
 ## Palette
 
-You can change the color palette of the `Text` via the `palette` property.
+You can change the color palette of `Text` via the `palette` property.
 
 ```svelte {title="Text Palette" mode="repl"}
 <script>

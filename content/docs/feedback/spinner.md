@@ -37,6 +37,8 @@ types=["<length>"]
 
 # Spinner
 
+> **NOTE**: New since `v0.2.0`.
+
 `Spinner` is an indicator used to tell the end-user that the Web Application is loading something in the background.
 
 ```svelte {title="Spinner Preview" mode="repl"}

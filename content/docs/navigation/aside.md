@@ -78,6 +78,10 @@ types=["{}"]
 
 # Aside
 
+> **NOTE**: New since `v0.2.0`.
+
+> **WARNING**: This Component will receive a breaking refactoring in a future update.
+
 `Aside` is used to vertically present the end-user with actions and links that can be accessed anytime on the Web Application.
 
 ```svelte {title="Aside Preview" mode="repl"}

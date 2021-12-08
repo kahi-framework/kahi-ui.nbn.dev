@@ -1,5 +1,7 @@
 # keybind
 
+> **NOTE**: New since `v0.3.1`.
+
 `keybind` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_bind(event: IKeybindEvent): void` callback whenever your assigned element has focus.
 
 ```svelte {title="keybind Preview" mode="repl"}

@@ -68,6 +68,8 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 # Badge
 
+> **NOTE**: New since `v0.2.0`.
+
 `Badge` is typically used to subtlely display to the user some type of ancillary information, relating to its siblings / parent UI elements.
 
 ```svelte {title="Badge Preview" mode="repl"}
@@ -128,7 +130,7 @@ You can change the color palette of the `Badge` via the `palette` property.
 
 ## Position
 
-> **WARNING**: This feature has been deprecated for removal in the future. Please use [`Position`](../layouts/position.md) instead.
+> **WARNING**: This feature has been deprecated for removal in `v0.5.0`. Please use [`Position`](../layouts/position.md) instead.
 
 You can change the position of the `Badge` to raise it above in its parent to more explictly call out the information.
 

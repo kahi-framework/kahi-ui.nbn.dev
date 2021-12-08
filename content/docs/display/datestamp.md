@@ -37,6 +37,8 @@ types=["2-digit", "numeric"]
 
 # DateStamp
 
+> **NOTE**: New since `v0.4.10`.
+
 `DateStamp` formats an [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp into a human readable string, using the user preferences provided by the Browser.
 
 ```svelte {title="DateStamp Preview" mode="repl"}

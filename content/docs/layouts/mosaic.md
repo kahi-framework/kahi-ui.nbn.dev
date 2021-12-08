@@ -42,6 +42,8 @@ types=["{}"]
 
 # Mosaic
 
+> **NOTE**: New since `v0.2.0`.
+
 `Mosaic` is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.
 
 ```svelte {title="Mosaic Preview" mode="repl"}

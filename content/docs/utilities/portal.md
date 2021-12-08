@@ -28,6 +28,8 @@ types=["{}"]
 
 # Portal
 
+> **NOTE**: New since `v0.2.0`.
+
 `Portal` is used to render a layout outside of its original containing DOM tree, moving it somewhere else.
 
 ```svelte {title="Portal Preview" mode="repl"}
@@ -63,6 +65,8 @@ types=["{}"]
 `Portal` wraps your slotted content in a `display: contents` containing element, so keep that in mind in your CSS selectors. It also only remounts its self to the target on clientside Browsers with Javascript enabled. So you need to plan a SSR-compatible fallback if using in a SSR scenario.
 
 ## Loading
+
+> **NOTE**: New since `v0.3.5`.
 
 > **NOTE**: Use the in-Browser developer tools to see this functionality in action.
 

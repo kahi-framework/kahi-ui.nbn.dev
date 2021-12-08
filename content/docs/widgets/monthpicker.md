@@ -77,6 +77,8 @@ types=["CustomEvent<void>"]
 
 # MonthPicker
 
+> **NOTE**: New since `v0.4.10`.
+
 `MonthPicker` is a Widget that displays a fiscal quaterly grid of months that a user can select from.
 
 ```svelte {title="MonthPicker Preview" mode="repl"}

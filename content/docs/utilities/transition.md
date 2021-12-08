@@ -134,6 +134,8 @@ types=["<length-percentage>, <length-percentage>"]
 
 # Transition
 
+> **NOTE**: New since `v0.4.0`.
+
 `Transition` is used to apply transitional animations on a containing element that will also include its children. Typically used for situations like changing between pages.
 
 ```svelte {title="Transition Preview" mode="repl"}
@@ -201,6 +203,8 @@ Based on the animaton duration properties in the currently loaded theme. You can
 ```
 
 ## Duration
+
+> **NOTE**: New since `v0.4.2`.
 
 Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to increase / shorten the animation duration via the `duration` property.
 

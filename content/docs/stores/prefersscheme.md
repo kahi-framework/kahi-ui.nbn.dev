@@ -1,5 +1,7 @@
 # prefersscheme
 
+> **NOTE**: New since `v0.2.3`.
+
 `prefersscheme` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever [`matchMedia(SCHEME)`](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) is validated.
 
 > **NOTE**: Change your Operating System's color settings to see changes.

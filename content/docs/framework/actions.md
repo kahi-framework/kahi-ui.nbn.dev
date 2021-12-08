@@ -1,5 +1,7 @@
 # Actions
 
+> **NOTE**: New since `v0.4.11`.
+
 As a limitation of Svelte, you cannot use [Actions](https://svelte.dev/docs#use_action) on Components. So the Framework provides a special syntax to support forwarding actions to a Component's main elements.
 
 <!-- prettier-ignore -->

@@ -162,6 +162,8 @@ types=["<alpha-value>"]
 
 # Button
 
+> **NOTE**: New since `v0.2.0`.
+
 `Button` is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.
 
 ```svelte {title="Button Preview" mode="repl"}

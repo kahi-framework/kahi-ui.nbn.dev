@@ -62,6 +62,8 @@ types=["{}"]
 
 # Grid
 
+> **NOTE**: New since `v0.2.0`.
+
 `Grid` is a multi-part layout pattern for setting up a grid of items organized to a 12-point system.
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
@@ -588,6 +590,8 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 ```
 
 ## Item Span
+
+> **NOTE**: New since `v0.2.10`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `span={["3", "tablet:2", "mobile:1"]}`
 

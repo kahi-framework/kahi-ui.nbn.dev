@@ -137,6 +137,8 @@ types=["<alpha-value>"]
 
 # Check
 
+> **NOTE**: New since `v0.2.7`.
+
 `Check` is typically used to present a set of options to the end-user, which they can then choose from.
 
 ```svelte {title="Check Preview" mode="repl"}
@@ -387,6 +389,8 @@ You can change the size of the `Check` via the `size` property.
 ```
 
 ## Flush
+
+> **NOTE**: New since `v0.2.13`.
 
 You can change the appearance of the `Check` to be flush with the rest of the Application content via the `variation` property.
 

@@ -137,6 +137,8 @@ types=["<alpha-value>"]
 
 # Radio
 
+> **NOTE**: New since `v0.2.7`.
+
 `Radio` is typically used to present a set of mutually-exclusive options to the end-user, which they can then choose from.
 
 ```svelte {title="Radio Preview" mode="repl"}
@@ -382,6 +384,8 @@ You can change the size of the `Radio` via the `size` property.
 ```
 
 ## Flush
+
+> **NOTE**: New since `v0.2.13`.
 
 You can change the appearance of the `Radio` to be flush with the rest of the Application content via the `variation` property.
 

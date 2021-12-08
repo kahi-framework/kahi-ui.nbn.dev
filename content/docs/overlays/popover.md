@@ -60,6 +60,10 @@ types=["{}"]
 
 # Popover
 
+> **NOTE**: New since `v0.2.11`.
+
+> **WARNING**: This Component will receive a breaking refactoring in `v0.5.0`.
+
 `Popover` is typically used for hiding content that'll clip onto the page when activated via a button or something else.
 
 ```svelte {title="Popover Preview" mode="repl"}
@@ -238,6 +242,8 @@ You can optionally have the `Popover` dismissible by clicking outside the `Popov
 ```
 
 ## Once
+
+> **NOTE**: New since `v0.4.11`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 

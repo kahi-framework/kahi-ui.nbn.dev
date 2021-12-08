@@ -22,6 +22,8 @@ types=["<length>"]
 
 # Group
 
+> **NOTE**: New since `v0.2.0`.
+
 `Group` is a layout primitive used for grouping together like Components with their inner border radii removed.
 
 ```svelte {title="Group Preview" mode="repl"}
@@ -93,7 +95,7 @@ You can set the `Group` to render its children Components vertically, via the `o
 You can set the `variation` property to `stacked` to visually stack children Components, like avatar stacks.
 
 <!--
-    TODO: Two more avatars, would probably look nicer without ones that would blend into each other
+    TODO: Two more _different_ avatars, would probably look nicer without ones that would blend into each other
 -->
 
 ```svelte {title="Group Stacked" mode="repl"}

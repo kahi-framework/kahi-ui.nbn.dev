@@ -117,6 +117,8 @@ types=["<length>"]
 
 # Hero
 
+> **NOTE**: New since `v0.2.0`.
+
 `Hero` is a multi-part surface pattern for displaying banner text with subtitling and actions, typically used for landing pages, error messages, and loading placeholders.
 
 ```svelte {title="Hero Preview" mode="repl"}
@@ -124,10 +126,7 @@ types=["<length>"]
     import {Button, Hero} from "@kahi-ui/framework";
 </script>
 
-<Hero.Container
-    palette="negative"
-    height="viewport-100"
->
+<Hero.Container palette="negative" height="100">
     <Hero.Header>404</Hero.Header>
     <Hero.Section>
         The page you tried to access is missing or no

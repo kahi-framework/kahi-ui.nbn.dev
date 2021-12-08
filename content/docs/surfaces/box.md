@@ -44,6 +44,8 @@ types=["<length>", "<percentage>"]
 
 # Box
 
+> **NOTE**: New since `v0.2.0`.
+
 `Box` is a surface primitive for encapsulating section content in a block of color.
 
 ```svelte {title="Box Preview" mode="repl"}
@@ -163,6 +165,8 @@ You can change the color palette of the `Box` via the `palette` property.
 ```
 
 ## Elevation
+
+> **NOTE**: New since `v0.3.5`.
 
 You can set how "high" your `Box` will appear to be over top the page via the `elevation` property.
 

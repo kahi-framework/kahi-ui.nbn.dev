@@ -1,5 +1,7 @@
 # mutation_observer
 
+> **NOTE**: New since `v0.4.1`.
+
 `mutation_observer` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_mutate(mutations: MutationRecord[]): void` callback whenever the targetted element intersects the root viewport.
 
 ```svelte {title="mutation_observer Preview" mode="repl"}

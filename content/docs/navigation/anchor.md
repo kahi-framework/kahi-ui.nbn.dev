@@ -52,6 +52,8 @@ types=["<text-decoration>"]
 
 # Anchor
 
+> **NOTE**: New since `v0.2.0`.
+
 `Anchor` are used for navigating from page to page, or to external websites.
 
 ```svelte {title="Anchor Preview" mode="repl"}
@@ -107,6 +109,8 @@ When navigating to external links, for **security purposes** it's recommended to
 ```
 
 ## Palette
+
+> **NOTE**: New since `v0.4.3`.
 
 You can change the color palette of the `Anchor` via the `palette` property.
 

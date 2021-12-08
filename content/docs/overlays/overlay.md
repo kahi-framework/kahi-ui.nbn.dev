@@ -80,6 +80,10 @@ types=["{}"]
 
 # Overlay
 
+> **NOTE**: New since `v0.2.4`.
+
+> **WARNING**: This Component will receive a breaking refactoring in `v0.5.0`.
+
 `Overlay` is typically used for rendering full-screen content over the rest of the page, optionally including a backdrop or being toggleable.
 
 ```svelte {title="Overlay Preview" mode="repl"}
@@ -272,6 +276,8 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop via t
 ```
 
 ## Once
+
+> **NOTE**: New since `v0.4.11`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 

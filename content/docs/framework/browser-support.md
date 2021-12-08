@@ -24,4 +24,4 @@ The features listed below are used within Kahi UI, and are newer features. So th
 
 ### Javascript
 
--   TODO: Run through the codebase and look for newer JS features used
+> **TODO**: Run through the codebase and look for newer JS features used
