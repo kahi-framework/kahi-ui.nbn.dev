@@ -126,10 +126,7 @@ types=["<length>"]
     import {Button, Hero} from "@kahi-ui/framework";
 </script>
 
-<Hero.Container
-    palette="negative"
-    height="100"
->
+<Hero.Container palette="negative" height="100">
     <Hero.Header>404</Hero.Header>
     <Hero.Section>
         The page you tried to access is missing or no
