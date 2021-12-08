@@ -128,7 +128,7 @@ types=["<length>"]
 
 <Hero.Container
     palette="negative"
-    height="viewport-100"
+    height="100"
 >
     <Hero.Header>404</Hero.Header>
     <Hero.Section>
