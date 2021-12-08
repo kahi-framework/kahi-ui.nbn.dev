@@ -3,8 +3,12 @@
 </article>
 
 <style>
-    :global(.content-article) :global(a) {
+    :global(.content-article) :global(a:not([data-palette])) {
         color: rgb(var(--palette-accent-boldest));
+    }
+
+    :global(.content-article) :global(.repl-render) :global(a:not([data-palette])) {
+        color: inherit;
     }
 
     :global(.content-article) > :global(h1),
