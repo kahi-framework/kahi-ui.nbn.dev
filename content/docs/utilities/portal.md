@@ -28,6 +28,8 @@ types=["{}"]
 
 # Portal
 
+> **NOTE**: New since `v0.2.0`.
+
 `Portal` is used to render a layout outside of its original containing DOM tree, moving it somewhere else.
 
 ```svelte {title="Portal Preview" mode="repl"}
