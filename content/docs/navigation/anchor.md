@@ -110,6 +110,8 @@ When navigating to external links, for **security purposes** it's recommended to
 
 ## Palette
 
+> **NOTE**: New since `v0.4.3`.
+
 You can change the color palette of the `Anchor` via the `palette` property.
 
 ```svelte {title="Anchor Palette" mode="repl"}
