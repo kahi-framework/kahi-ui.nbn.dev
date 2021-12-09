@@ -2,7 +2,7 @@
 
 > **NOTE**: New since `v0.4.13`.
 
-...
+`click_inside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_inside(event: MouseEvent): void` callback whenever your attached element is clicked inside of.
 
 ```svelte {title="click_inside Preview" mode="repl"}
 
@@ -20,7 +20,7 @@ Svelte Actions are always ran on Javascript-enabled Browser. So should not be us
 
 ## Ignore
 
-...
+You can ignore elements that matches a given CSS Selector via the `IClickInsideOptions.ignore: string` option.
 
 ```svelte {title="click_inside Ignore" mode="repl"}
 

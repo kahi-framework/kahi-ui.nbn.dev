@@ -2,7 +2,7 @@
 
 > **NOTE**: New since `v0.2.11`.
 
-`click_outside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_outside(event: MouseEvent): void` callback whenever your assigned element is clicked outside of.
+`click_outside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_outside(event: MouseEvent): void` callback whenever your attached element is clicked outside of.
 
 ```svelte {title="click_outside Preview" mode="repl"}
 <script>
@@ -40,7 +40,7 @@ Svelte Actions are always ran on Javascript-enabled Browser. So should not be us
 
 > **NOTE**: New since `v0.4.13`.
 
-...
+You can ignore elements that matches a given CSS Selector via the `IClickOutsideOptions.ignore: string` option.
 
 ```svelte {title="click_outside Ignore" mode="repl"}
 

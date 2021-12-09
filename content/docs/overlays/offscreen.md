@@ -194,9 +194,15 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-...
+Whenever the `Offscreen` becomes active, focus is moved to the first found focusable element, then restored to the previously focused element when dismissed.
 
 ```svelte {title="Offscreen Auto Focus" mode="repl"}
+
+```
+
+You can customize which element is focused on activation with a reference or CSS Selector, via the `focus_target` property
+
+```svelte {title="Offscreen Auto Focus Target" mode="repl"}
 
 ```
 
@@ -206,9 +212,15 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-...
+While the `Offscreen` is active, focus movement is trapped within the first and last found focusable elements.
 
 ```svelte {title="Offscreen Focus Trapping" mode="repl"}
+
+```
+
+You can customize which elements are used as the first and last with references or CSS Selectors, via the `focus_first` / `focus_last` properties.
+
+```svelte {title="Offscreen Focus Trapping First + Last" mode="repl"}
 
 ```
 
@@ -216,7 +228,9 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 
 > **NOTE**: New since `v0.4.13`.
 
-...
+> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+
+You can customize the loading behavior of slotted content via the `loading` property.
 
 ```svelte {title="Offscreen Loading" mode="repl"}
 

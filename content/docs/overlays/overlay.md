@@ -177,9 +177,15 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-...
+Whenever the `Overlay` becomes active, focus is moved to the first found focusable element, then restored to the previously focused element when dismissed.
 
 ```svelte {title="Overlay Auto Focus" mode="repl"}
+
+```
+
+You can customize which element is focused on activation with a reference or CSS Selector, via the `focus_target` property
+
+```svelte {title="Overlay Auto Focus Target" mode="repl"}
 
 ```
 
@@ -189,9 +195,15 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-...
+While the `Overlay` is active, focus movement is trapped within the first and last found focusable elements.
 
 ```svelte {title="Overlay Focus Trapping" mode="repl"}
+
+```
+
+You can customize which elements are used as the first and last with references or CSS Selectors, via the `focus_first` / `focus_last` properties.
+
+```svelte {title="Overlay Focus Trapping First + Last" mode="repl"}
 
 ```
 
@@ -199,7 +211,9 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 
 > **NOTE**: New since `v0.4.13`.
 
-...
+> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+
+You can customize the loading behavior of slotted content via the `loading` property.
 
 ```svelte {title="Overlay Loading" mode="repl"}
 

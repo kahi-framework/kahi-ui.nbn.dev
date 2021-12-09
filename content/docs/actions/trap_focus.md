@@ -2,7 +2,7 @@
 
 > **NOTE**: New since `v0.4.13`.
 
-...
+`trap_focus` is a [Svelte Action](https://svelte.dev/docs#use_action), which when `ITrapFocusOptions.enabled: boolean` is `true`, traps focus movement (`TAB` / `SHIFT+TAB`) to within the attached element's first and last found focusable elements.
 
 ```svelte {title="trap_focus Preview" mode="repl"}
 
@@ -20,7 +20,7 @@ Svelte Actions are always ran on Javascript-enabled Browser. So should not be us
 
 ## First + Last
 
-...
+You can customize the first / last focusable elements with references or CSS Selectors via the `ITrapFocusOptions.first: HTMLElement | string` / `ITrapFocusOptions.last: HTMLElement | string` options.
 
 ```svelte {title="trap_focus First + Last" mode="repl"}
 
