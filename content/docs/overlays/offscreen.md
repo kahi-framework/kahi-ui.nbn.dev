@@ -188,6 +188,40 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 </Offscreen>
 ```
 
+## Auto Focus
+
+> **NOTE**: New since `v0.4.13`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+...
+
+```svelte {title="Offscreen Auto Focus" mode="repl"}
+
+```
+
+## Focus Trapping
+
+> **NOTE**: New since `v0.4.13`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+...
+
+```svelte {title="Offscreen Focus Trapping" mode="repl"}
+
+```
+
+## Loading
+
+> **NOTE**: New since `v0.4.13`.
+
+...
+
+```svelte {title="Offscreen Loading" mode="repl"}
+
+```
+
 ## Captive
 
 You can optionally include a backdrop by passing via the `captive` property.
@@ -261,7 +295,11 @@ You can optionally include a backdrop by passing via the `captive` property.
 
 ## Dismissible
 
-You can optionally have the `Offscreen` dismissible by clicking the backdrop via the `dismissible` property.
+> **NOTE**: Added keybinding support since `v0.4.13`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can optionally have the `Offscreen` dismissible by clicking the backdrop or pressing the `ESC` key, via the `dismissible` property.
 
 ```svelte {title="Offscreen Dismissible" mode="repl"}
 <script>

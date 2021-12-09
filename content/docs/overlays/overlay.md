@@ -171,6 +171,40 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 </Overlay>
 ```
 
+## Auto Focus
+
+> **NOTE**: New since `v0.4.13`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+...
+
+```svelte {title="Overlay Auto Focus" mode="repl"}
+
+```
+
+## Focus Trapping
+
+> **NOTE**: New since `v0.4.13`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+...
+
+```svelte {title="Overlay Focus Trapping" mode="repl"}
+
+```
+
+## Loading
+
+> **NOTE**: New since `v0.4.13`.
+
+...
+
+```svelte {title="Overlay Loading" mode="repl"}
+
+```
+
 ## Captive
 
 You can optionally include a backdrop by passing via the `captive` property.
@@ -222,7 +256,11 @@ You can optionally include a backdrop by passing via the `captive` property.
 
 ## Dismissible
 
-You can optionally have the `Overlay` dismissible by clicking the backdrop via the `dismissible` property.
+> **NOTE**: Added keybinding support since `v0.4.13`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can optionally have the `Overlay` dismissible by clicking the backdrop or pressing the `ESC` key, via the `dismissible` property.
 
 ```svelte {title="Overlay Dismissible" mode="repl"}
 <script>
