@@ -168,10 +168,14 @@ export default define_navigation({
         {
             text: "Actions",
             items: [
-                {href: "/docs/actions/click_outside"},
+                {href: "/docs/actions/auto_focus", badge: "NEW"},
+                {href: "/docs/actions/click_inside", badge: "NEW"},
+                {href: "/docs/actions/click_outside", badge: "UPDATED"},
                 {href: "/docs/actions/intersection_observer"},
-                {href: "/docs/actions/keybind"},
+                {href: "/docs/actions/keybind", badge: "UPDATED"},
                 {href: "/docs/actions/mutation_observer"},
+                {href: "/docs/actions/overflow_clipping", badge: "NEW"},
+                {href: "/docs/actions/trap_focus", badge: "NEW"},
             ],
         },
 

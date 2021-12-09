@@ -34,4 +34,14 @@ import {click_outside} from "@kahi-ui/framework";
 
 ## Compatibility
 
-Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
+Svelte Actions are always ran on Javascript-enabled Browser. So should not be used for critical end-user functionality, only progressive enhancement.
+
+## Ignore
+
+> **NOTE**: New since `v0.4.13`.
+
+...
+
+```svelte {title="click_outside Ignore" mode="repl"}
+
+```

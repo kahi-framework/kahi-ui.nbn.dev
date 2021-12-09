@@ -56,3 +56,23 @@ import {keybind} from "@kahi-ui/framework";
 ## Compatibility
 
 Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
+
+## Event Management
+
+...
+
+## Binds
+
+...
+
+## Repeat
+
+...
+
+## Throttling
+
+> **NOTE**: New since `v0.4.13`.
+
+...
+
+... mention `throttle_cancel` ...
