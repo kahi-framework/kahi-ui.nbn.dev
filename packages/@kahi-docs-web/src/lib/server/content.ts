@@ -28,8 +28,13 @@ if (dev) {
 
     watcher.init();
     watcher.on("+", ({path, stats}: {path: string; stats: Stats}) => {
-        if (!path.endsWith(".md") || !stats.isFile) return;
+        if (!stats.isFile || !path.endsWith(".md")) return;
 
-        _invalidate_render(join(PATH_CONTENT, path));
+        const file_path = join(PATH_CONTENT, path);
+        const identifier = path.replace(".md", "");
+
+        _invalidate_render(file_path, {
+            identifier: normalize_pathname(identifier),
+        });
     });
 }
