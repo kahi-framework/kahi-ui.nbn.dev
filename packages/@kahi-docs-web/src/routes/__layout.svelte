@@ -1,4 +1,6 @@
 <script>
+    import "@kahi-ui/framework/dist/kahi-ui.framework.css";
+
     import {browser} from "$app/env";
     import {htmlpalette} from "@kahi-ui/framework";
 
