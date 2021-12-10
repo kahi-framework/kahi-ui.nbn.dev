@@ -107,10 +107,7 @@ types=["{}"]
     captive
     dismissible
 >
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>Are you sure?</Card.Header>
 
         <Card.Section>
@@ -158,10 +155,7 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 <Button for="overlay-toggleable">Toggle Modal</Button>
 
 <Overlay logic_id="overlay-toggleable">
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>Toggleable Modal</Card.Header>
 
         <Card.Footer>
@@ -194,10 +188,7 @@ Whenever the `Overlay` becomes active, focus is moved to the first found focusab
 </Button>
 
 <Overlay logic_id="overlay-auto-focus">
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>AUTO FOCUSED Modal</Card.Header>
 
         <Card.Footer>
@@ -212,7 +203,7 @@ Whenever the `Overlay` becomes active, focus is moved to the first found focusab
             <ContextButton
                 palette="inverse"
                 variation="clear"
-                tabindex="3"
+                tabindex="2"
             >
                 Index #2
             </ContextButton>
@@ -246,10 +237,7 @@ You can customize which element is focused on activation with a reference or CSS
     logic_id="overlay-auto-focus-target"
     focus_target={target_element}
 >
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>AUTO FOCUSED Modal</Card.Header>
 
         <Card.Footer>
@@ -265,7 +253,7 @@ You can customize which element is focused on activation with a reference or CSS
                 bind:element={target_element}
                 palette="inverse"
                 variation="clear"
-                tabindex="3"
+                tabindex="2"
             >
                 Index #2
             </ContextButton>
@@ -279,6 +267,8 @@ You can customize which element is focused on activation with a reference or CSS
 > **NOTE**: New since `v0.4.13`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+> **NOTE**: Click the `Link` button, to test out the functionality in the Playground.
 
 While the `Overlay` is active, focus movement is trapped within the first and last found focusable elements.
 
@@ -297,10 +287,7 @@ While the `Overlay` is active, focus movement is trapped within the first and la
 </Button>
 
 <Overlay logic_id="overlay-focus-trapping">
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>FOCUS TRAPPED Modal</Card.Header>
 
         <Card.Footer>
@@ -325,7 +312,7 @@ While the `Overlay` is active, focus movement is trapped within the first and la
                 variation="clear"
                 tabindex="5"
             >
-                #5
+                Index #5
             </ContextButton>
 
             <ContextButton
@@ -376,10 +363,7 @@ You can customize which elements are used as the first and last with references 
     focus_first={first_element}
     focus_last={last_element}
 >
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>FOCUS TRAPPED Modal</Card.Header>
 
         <Card.Footer>
@@ -452,10 +436,7 @@ You can customize the loading behavior of slotted content via the `loading` prop
 </Button>
 
 <Overlay logic_id="overlay-loading" loading="lazy">
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>LAZY Modal</Card.Header>
 
         <Card.Footer>
@@ -493,10 +474,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 </Button>
 
 <Overlay logic_id="overlay-non-captive">
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>NON CAPTIVE Modal</Card.Header>
 
         <Card.Footer>
@@ -506,10 +484,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 </Overlay>
 
 <Overlay logic_id="overlay-is-captive" captive>
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>CAPTIVE Modal</Card.Header>
 
         <Card.Footer>
@@ -546,10 +521,7 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
 </Button>
 
 <Overlay logic_id="overlay-non-dismissible" captive>
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>
             NON DISMISSIBLE Modal
         </Card.Header>
@@ -565,10 +537,7 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
     captive
     dismissible
 >
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>DISMISSIBLE Modal</Card.Header>
 
         <Card.Footer>
@@ -608,10 +577,7 @@ You can enable having the `Overlay` dismissed whenever inner content is clicked 
     dismissible
     once
 >
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>Are you sure?</Card.Header>
 
         <Card.Section>
@@ -655,10 +621,7 @@ You can manually open / close the `Overlay` via the `state` property.
 </Button>
 
 <Overlay logic_id="overlay-state" bind:state>
-    <Card.Container
-        palette="auto"
-        max_width="75"
-    >
+    <Card.Container palette="auto" max_width="75">
         <Card.Header>Toggleable Modal</Card.Header>
 
         <Card.Footer>

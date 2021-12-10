@@ -4,6 +4,7 @@
     import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
         Card,
+        Center,
         Clickable,
         Ellipsis,
         Overlay,
@@ -174,9 +175,11 @@
     {:else}
         <Card.Container palette="auto" margin_top="huge" width="prose" max_width="viewport-75">
             <Card.Header>
-                <Text is="span" align="center" width="100">
-                    Initializing search engine<Ellipsis />
-                </Text>
+                <Center width="100">
+                    <Text is="span">
+                        Initializing search engine<Ellipsis />
+                    </Text>
+                </Center>
             </Card.Header>
         </Card.Container>
     {/if}

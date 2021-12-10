@@ -197,13 +197,104 @@ You can make the `Offscreen` toggleable via the `logic_id` property, and then re
 Whenever the `Offscreen` becomes active, focus is moved to the first found focusable element, then restored to the previously focused element when dismissed.
 
 ```svelte {title="Offscreen Auto Focus" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
 
+<Button for="offscreen-auto-focus" palette="accent">
+    Open AUTO FOCUS Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-auto-focus"
+    placement="top"
+    hidden
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="2"
+            >
+                Index #2
+            </ContextButton>
+        </Stack>
+    </Box>
+</Offscreen>
 ```
 
 You can customize which element is focused on activation with a reference or CSS Selector, via the `focus_target` property
 
 ```svelte {title="Offscreen Auto Focus Target" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
 
+    let target_element;
+</script>
+
+<Button
+    for="offscreen-auto-focus-target"
+    palette="accent"
+>
+    Open AUTO FOCUS Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-auto-focus-target"
+    placement="top"
+    focus_target={target_element}
+    hidden
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                bind:element={target_element}
+                palette="light"
+                variation="clear"
+                tabindex="2"
+            >
+                Index #2
+            </ContextButton>
+        </Stack>
+    </Box>
+</Offscreen>
 ```
 
 ## Focus Trapping
@@ -212,16 +303,164 @@ You can customize which element is focused on activation with a reference or CSS
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
+> **NOTE**: Click the `Link` button, to test out the functionality in the Playground.
+
 While the `Offscreen` is active, focus movement is trapped within the first and last found focusable elements.
 
 ```svelte {title="Offscreen Focus Trapping" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
 
+<Button
+    for="offscreen-focus-trapping"
+    palette="accent"
+>
+    Open FOCUS TRAPPED Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-focus-trapping"
+    placement="top"
+    hidden
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="3"
+            >
+                Index #3
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="5"
+            >
+                Index #5
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="4"
+            >
+                Index #4
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="2"
+            >
+                Index #2
+            </ContextButton>
+        </Stack>
+    </Box>
+</Offscreen>
 ```
 
 You can customize which elements are used as the first and last with references or CSS Selectors, via the `focus_first` / `focus_last` properties.
 
 ```svelte {title="Offscreen Focus Trapping First + Last" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
 
+    let first_element;
+    let last_element;
+</script>
+
+<Button
+    for="offscreen-focus-trapping-first-last"
+    palette="accent"
+>
+    Open FOCUS TRAPPED Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-focus-trapping-first-last"
+    placement="top"
+    focus_target={first_element}
+    focus_first={first_element}
+    focus_last={last_element}
+    hidden
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="3"
+            >
+                Index #3
+            </ContextButton>
+
+            <ContextButton
+                bind:element={first_element}
+                palette="light"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                bind:element={last_element}
+                palette="light"
+                variation="clear"
+                tabindex="5"
+            >
+                Index #5
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="4"
+            >
+                Index #4
+            </ContextButton>
+
+            <ContextButton
+                palette="light"
+                variation="clear"
+                tabindex="2"
+            >
+                Index #2
+            </ContextButton>
+        </Stack>
+    </Box>
+</Offscreen>
 ```
 
 ## Loading
@@ -233,7 +472,43 @@ You can customize which elements are used as the first and last with references 
 You can customize the loading behavior of slotted content via the `loading` property.
 
 ```svelte {title="Offscreen Loading" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        ContextButton,
+        Offscreen,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
 
+<Button for="offscreen-loading" palette="accent">
+    Open LAZY Offscreen
+</Button>
+
+<Offscreen
+    logic_id="offscreen-loading"
+    placement="top"
+    loading="lazy"
+    hidden
+>
+    <Box palette="accent" padding="medium">
+        <Stack
+            orientation="horizontal"
+            alignment_y="center"
+            spacing="medium"
+        >
+            <ContextButton
+                palette="light"
+                variation="clear"
+            >
+                X
+            </ContextButton>
+
+            LAZY Offscreen
+        </Stack>
+    </Box>
+</Offscreen>
 ```
 
 ## Captive
