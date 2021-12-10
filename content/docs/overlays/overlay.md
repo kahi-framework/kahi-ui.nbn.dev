@@ -180,13 +180,98 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 Whenever the `Overlay` becomes active, focus is moved to the first found focusable element, then restored to the previously focused element when dismissed.
 
 ```svelte {title="Overlay Auto Focus" mode="repl"}
+<script>
+    import {
+        Button,
+        Card,
+        ContextButton,
+        Overlay,
+    } from "@kahi-ui/framework";
+</script>
 
+<Button for="overlay-auto-focus" palette="accent">
+    Open AUTO FOCUSED Modal
+</Button>
+
+<Overlay logic_id="overlay-auto-focus">
+    <Card.Container
+        palette="auto"
+        max_width="viewport-75"
+    >
+        <Card.Header>AUTO FOCUSED Modal</Card.Header>
+
+        <Card.Footer>
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="3"
+            >
+                Index #2
+            </ContextButton>
+        </Card.Footer>
+    </Card.Container>
+</Overlay>
 ```
 
 You can customize which element is focused on activation with a reference or CSS Selector, via the `focus_target` property
 
 ```svelte {title="Overlay Auto Focus Target" mode="repl"}
+<script>
+    import {
+        Button,
+        Card,
+        ContextButton,
+        Overlay,
+    } from "@kahi-ui/framework";
 
+    let target_element;
+</script>
+
+<Button
+    for="overlay-auto-focus-target"
+    palette="accent"
+>
+    Open AUTO FOCUSED Modal
+</Button>
+
+<Overlay
+    logic_id="overlay-auto-focus-target"
+    focus_target={target_element}
+>
+    <Card.Container
+        palette="auto"
+        max_width="viewport-75"
+    >
+        <Card.Header>AUTO FOCUSED Modal</Card.Header>
+
+        <Card.Footer>
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                bind:element={target_element}
+                palette="inverse"
+                variation="clear"
+                tabindex="3"
+            >
+                Index #2
+            </ContextButton>
+        </Card.Footer>
+    </Card.Container>
+</Overlay>
 ```
 
 ## Focus Trapping
@@ -198,13 +283,150 @@ You can customize which element is focused on activation with a reference or CSS
 While the `Overlay` is active, focus movement is trapped within the first and last found focusable elements.
 
 ```svelte {title="Overlay Focus Trapping" mode="repl"}
+<script>
+    import {
+        Button,
+        Card,
+        ContextButton,
+        Overlay,
+    } from "@kahi-ui/framework";
+</script>
 
+<Button for="overlay-focus-trapping" palette="accent">
+    Open FOCUS TRAPPED Modal
+</Button>
+
+<Overlay logic_id="overlay-focus-trapping">
+    <Card.Container
+        palette="auto"
+        max_width="viewport-75"
+    >
+        <Card.Header>FOCUS TRAPPED Modal</Card.Header>
+
+        <Card.Footer>
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="3"
+            >
+                Index #3
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="5"
+            >
+                #5
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="4"
+            >
+                Index #4
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="2"
+            >
+                Index #2
+            </ContextButton>
+        </Card.Footer>
+    </Card.Container>
+</Overlay>
 ```
 
 You can customize which elements are used as the first and last with references or CSS Selectors, via the `focus_first` / `focus_last` properties.
 
 ```svelte {title="Overlay Focus Trapping First + Last" mode="repl"}
+<script>
+    import {
+        Button,
+        Card,
+        ContextButton,
+        Overlay,
+    } from "@kahi-ui/framework";
 
+    let first_element;
+    let last_element;
+</script>
+
+<Button
+    for="overlay-focus-trapping-first-last"
+    palette="accent"
+>
+    Open FOCUS TRAPPED Modal
+</Button>
+
+<Overlay
+    logic_id="overlay-focus-trapping-first-last"
+    focus_target={first_element}
+    focus_first={first_element}
+    focus_last={last_element}
+>
+    <Card.Container
+        palette="auto"
+        max_width="viewport-75"
+    >
+        <Card.Header>FOCUS TRAPPED Modal</Card.Header>
+
+        <Card.Footer>
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="3"
+            >
+                Index #3
+            </ContextButton>
+
+            <ContextButton
+                bind:element={first_element}
+                palette="inverse"
+                variation="clear"
+                tabindex="1"
+            >
+                Index #1
+            </ContextButton>
+
+            <ContextButton
+                bind:element={last_element}
+                palette="inverse"
+                variation="clear"
+                tabindex="5"
+            >
+                Index #5
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="4"
+            >
+                Index #4
+            </ContextButton>
+
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+                tabindex="2"
+            >
+                Index #2
+            </ContextButton>
+        </Card.Footer>
+    </Card.Container>
+</Overlay>
 ```
 
 ## Loading
@@ -216,7 +438,36 @@ You can customize which elements are used as the first and last with references 
 You can customize the loading behavior of slotted content via the `loading` property.
 
 ```svelte {title="Overlay Loading" mode="repl"}
+<script>
+    import {
+        Button,
+        Card,
+        ContextButton,
+        Overlay,
+    } from "@kahi-ui/framework";
+</script>
 
+<Button for="overlay-loading" palette="accent">
+    Open LAZY Modal
+</Button>
+
+<Overlay logic_id="overlay-loading" loading="lazy">
+    <Card.Container
+        palette="auto"
+        max_width="viewport-75"
+    >
+        <Card.Header>LAZY Modal</Card.Header>
+
+        <Card.Footer>
+            <ContextButton
+                palette="inverse"
+                variation="clear"
+            >
+                Close
+            </ContextButton>
+        </Card.Footer>
+    </Card.Container>
+</Overlay>
 ```
 
 ## Captive
