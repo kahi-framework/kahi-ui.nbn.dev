@@ -109,7 +109,7 @@ types=["{}"]
 >
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>Are you sure?</Card.Header>
 
@@ -160,7 +160,7 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 <Overlay logic_id="overlay-toggleable">
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>Toggleable Modal</Card.Header>
 
@@ -196,7 +196,7 @@ Whenever the `Overlay` becomes active, focus is moved to the first found focusab
 <Overlay logic_id="overlay-auto-focus">
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>AUTO FOCUSED Modal</Card.Header>
 
@@ -248,7 +248,7 @@ You can customize which element is focused on activation with a reference or CSS
 >
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>AUTO FOCUSED Modal</Card.Header>
 
@@ -299,7 +299,7 @@ While the `Overlay` is active, focus movement is trapped within the first and la
 <Overlay logic_id="overlay-focus-trapping">
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>FOCUS TRAPPED Modal</Card.Header>
 
@@ -378,7 +378,7 @@ You can customize which elements are used as the first and last with references 
 >
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>FOCUS TRAPPED Modal</Card.Header>
 
@@ -454,7 +454,7 @@ You can customize the loading behavior of slotted content via the `loading` prop
 <Overlay logic_id="overlay-loading" loading="lazy">
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>LAZY Modal</Card.Header>
 
@@ -495,7 +495,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 <Overlay logic_id="overlay-non-captive">
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>NON CAPTIVE Modal</Card.Header>
 
@@ -508,7 +508,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 <Overlay logic_id="overlay-is-captive" captive>
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>CAPTIVE Modal</Card.Header>
 
@@ -548,7 +548,7 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
 <Overlay logic_id="overlay-non-dismissible" captive>
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>
             NON DISMISSIBLE Modal
@@ -567,7 +567,7 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
 >
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>DISMISSIBLE Modal</Card.Header>
 
@@ -610,7 +610,7 @@ You can enable having the `Overlay` dismissed whenever inner content is clicked 
 >
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>Are you sure?</Card.Header>
 
@@ -657,7 +657,7 @@ You can manually open / close the `Overlay` via the `state` property.
 <Overlay logic_id="overlay-state" bind:state>
     <Card.Container
         palette="auto"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Card.Header>Toggleable Modal</Card.Header>
 
@@ -715,7 +715,7 @@ You can align `Overlay` content via the `alignment`, `alignment_x`, and `alignme
         palette="auto"
         elevation="medium"
         width="content-max"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Tile.Section>
             <Tile.Header>File Deleted</Tile.Header>
@@ -764,7 +764,7 @@ You can adjust the spacing between `Overlay` content via the `spacing`, `spacing
         palette="auto"
         elevation="medium"
         width="content-max"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Tile.Section>
             <Tile.Header>File Deleted</Tile.Header>
@@ -789,7 +789,7 @@ You can adjust the spacing between `Overlay` content via the `spacing`, `spacing
         palette="auto"
         elevation="medium"
         width="content-max"
-        max_width="viewport-75"
+        max_width="75"
     >
         <Tile.Section>
             <Tile.Header>File Deleted</Tile.Header>
