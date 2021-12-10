@@ -15,6 +15,7 @@
         Tile,
     } from "@kahi-ui/framework";
 
+    import {scroll_into_container} from "../client/element";
     import {next_keybind, previous_keybind} from "../client/keybind";
     import type {ISearcher, ISearchResult} from "../../lib/client/search";
     import {make_searcher} from "../../lib/client/search";
@@ -27,6 +28,7 @@
 
     let container_element: HTMLDivElement;
     let input_element: HTMLInputElement;
+    let scrollable_element: HTMLDivElement;
 
     let current: number = -1;
     let results: ISearchResult[] | null = null;
@@ -80,17 +82,14 @@
             if (!anchor_element || !tile_element) return;
 
             anchor_element.focus();
-            tile_element.scrollIntoView({behavior: "smooth", block: "nearest"});
-
-            return;
-        }
-
-        input_element.focus();
+            scroll_into_container(tile_element, scrollable_element, "center", "smooth");
+        } else input_element.focus();
     }
 
     $: if (!state) value = "";
     $: if (state && !promise) promise = make_searcher().then((_searcher) => (searcher = _searcher));
     $: if (searcher) results = value ? searcher(value) : null;
+    $: if (state && searcher && input_element) input_element.focus();
 
     $: {
         // HACK: Marking `value` here to make this block reactive
@@ -131,7 +130,7 @@
 
             {#if results}
                 <Card.Section>
-                    <Scrollable max_height="viewport-50">
+                    <Scrollable bind:element={scrollable_element} max_height="viewport-50">
                         <Stack spacing="small">
                             {#each results as result, index (result.identifier)}
                                 <Clickable.Container>
