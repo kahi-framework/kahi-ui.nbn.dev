@@ -6,44 +6,49 @@
 
 ```svelte {title="keybind Preview" mode="repl"}
 <script>
-    import {keybind} from "@kahi-ui/framework";
+    import {
+        Box,
+        TextInput,
+        keybind,
+    } from "@kahi-ui/framework";
 
-    let is_input_active = false;
-    let is_window_active = false;
+    let input_active = false;
+    let window_active = false;
 </script>
 
 <svelte:window
     use:keybind={{
-        binds: "control+/",
+        binds: "shift+m",
         on_bind: (event) =>
-            (is_window_active = event.detail.active),
+            (window_active = event.detail.active),
     }}
 />
 
-<div
-    class="box"
-    data-palette={is_window_active
+<Box
+    palette={window_active
         ? "affirmative"
         : "negative"}
-    data-padding="small"
+    padding="small"
 >
-    Click inside the REPL, and press CTRL+/ to activate
-    bind.
-</div>
+    Press SHIFT+M to activate bind.
+</Box>
 
 <br />
 
-<input
-    type="text"
+<TextInput
     placeholder="Click inside of me for focus, and press CTRL+ENTER to activate bind."
-    data-palette={is_input_active
-        ? "affirmative"
-        : "negative"}
-    use:keybind={{
-        binds: "control+enter",
-        on_bind: (event) =>
-            (is_input_active = event.detail.active),
-    }}
+    palette={input_active ? "affirmative" : "negative"}
+    actions={[
+        [
+            keybind,
+            {
+                binds: "control+enter",
+                on_bind: (event) =>
+                    (input_active =
+                        event.detail.active),
+            },
+        ],
+    ]}
 />
 ```
 
@@ -62,22 +67,65 @@ Svelte Actions are always ran on the Browser only with Javascript is enabled. So
 You can configure which set of keys you want to activate the binding by listing the [Key Values](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/key/Key_Values) in a `key1+key2+keyN` format via the `IKeybindOptions.binds: string | string[]` option. You can (_theoretically_) listen to as many keys as you want.
 
 ```svelte {title="keybind Binding" mode="repl"}
+<script>
+    import {
+        Box,
+        TextInput,
+        keybind,
+    } from "@kahi-ui/framework";
 
+    let active = false;
+</script>
+
+<svelte:window
+    use:keybind={{
+        binds: "shift+m",
+        on_bind: (event) =>
+            (active = event.detail.active),
+    }}
+/>
+
+<Box
+    palette={active ? "affirmative" : "negative"}
+    padding="small"
+>
+    Press SHIFT+M to activate bind.
+</Box>
 ```
 
 You can also have a single binding listen to multiple sets of keys by passing in an array.
 
 ```svelte {title="keybind Multiple Bindings" mode="repl"}
+<script>
+    import {
+        Box,
+        Text,
+        keybind,
+    } from "@kahi-ui/framework";
 
+    let active = false;
+</script>
+
+<svelte:window
+    use:keybind={{
+        binds: ["control+enter", "shift+m"],
+        on_bind: (event) =>
+            (active = event.detail.active),
+    }}
+/>
+
+<Box
+    palette={active ? "affirmative" : "negative"}
+    padding="small"
+>
+    Press CTRL+ENTER <Text is="strong">OR</Text> SHIFT+M
+    to activate bind.
+</Box>
 ```
 
 ## Active Binding
 
 You can detect if the keybind is currently being pressed via the `IKeybindEvent.detail.active` member.
-
-```svelte {title="keybind Active Binding" mode="repl"}
-
-```
 
 ## Event Management
 
@@ -89,10 +137,43 @@ Just like with regular events, you can use `IKeybindEvent.preventDefault: () => 
 
 ## Repeat
 
-You can enable listening to repeat binding activations (e.g. binding being held down) via the `IKeybindOptions.repeat: boolean` option.
+You can enable listening to repeat binding activations (e.g. binding being held down) via the `IKeybindOptions.repeat: boolean` option. And then detect if the current callback is a repeat via the `IKeybindEvent.detail.repeat` member.
 
 ```svelte {title="keybind Repeat" mode="repl"}
+<script>
+    import {
+        Box,
+        Code,
+        keybind,
+    } from "@kahi-ui/framework";
 
+    let active = false;
+    let value = "";
+</script>
+
+<svelte:window
+    use:keybind={{
+        binds: "shift+m",
+        repeat: true,
+        on_bind: (event) => {
+            active = event.detail.active;
+            if (event.detail.repeat) {
+                value += "I am on repeat!\n";
+            }
+        },
+    }}
+/>
+
+<Box
+    palette={active ? "affirmative" : "negative"}
+    padding="small"
+>
+    Press and hold SHIFT+M to activate bind.
+</Box>
+
+<Code is="pre">
+    {value}
+</Code>
 ```
 
 ## Throttling
