@@ -7,39 +7,36 @@
 
         <link rel="icon" href="/favicon.ico" />
 
-        <link rel="stylesheet" href="/assets/styles/kahi-ui.framework.css" />
-        <link rel="stylesheet" href="/assets/styles/prism-tomorrow.css" />
-
         <title>Form — Kahi UI</title><meta property="og:description" content="Straight-forward Svelte UI for the Web" data-svelte="svelte-1yod5ue"><meta property="og:image" content="https://kahi-ui.nbn.dev/assets/images/logo-social.png" data-svelte="svelte-1yod5ue"><meta property="og:site_name" content="Kahi UI" data-svelte="svelte-1yod5ue"><meta property="og:title" content="Form — Kahi UI" data-svelte="svelte-1yod5ue"><meta name="twitter:card" content="summary_large_image" data-svelte="svelte-1yod5ue">
 
 		
 
-		<link rel="modulepreload" href="/_app/start-2a7348d6.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-b0241e9c.js">
+		<link rel="modulepreload" href="/_app/start-ca385ce4.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-c0c13bc7.js">
 		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
 		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-4b7896c8.js">
-		<link rel="modulepreload" href="/_app/chunks/preferences-427a9cb9.js">
-		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-542ea23e.js">
-		<link rel="modulepreload" href="/_app/chunks/stores-c474defd.js">
-		<link rel="modulepreload" href="/_app/chunks/AppNavigation-ce8ae94d.js">
-		<link rel="modulepreload" href="/_app/chunks/Code-17585f45.js">
-		<link rel="modulepreload" href="/_app/chunks/AppAnchor-64536932.js">
-		<link rel="modulepreload" href="/_app/chunks/AppFooter-0aed33fa.js">
-		<link rel="modulepreload" href="/_app/pages/docs/[...identifier].svelte-01ec05e0.js">
-		<link rel="modulepreload" href="/_app/chunks/REPLEmbed-a9576230.js">
-		<link rel="modulepreload" href="/_app/chunks/REPLSplit-f57ada30.js">
-		<link rel="modulepreload" href="/_app/chunks/PageMetadata-a07ad796.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-496ac2f4.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-627433f0.js">
+		<link rel="modulepreload" href="/_app/pages/docs/__layout.svelte-22603b3b.js">
+		<link rel="modulepreload" href="/_app/chunks/stores-1cd9a285.js">
+		<link rel="modulepreload" href="/_app/chunks/AppNavigation-ddc057e1.js">
+		<link rel="modulepreload" href="/_app/chunks/Code-6367ec49.js">
+		<link rel="modulepreload" href="/_app/chunks/AppAnchor-9a22c699.js">
+		<link rel="modulepreload" href="/_app/chunks/AppFooter-1ffb6781.js">
+		<link rel="modulepreload" href="/_app/pages/docs/[...identifier].svelte-f5462942.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLEmbed-7e030fca.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLSplit-b02a873a.js">
+		<link rel="modulepreload" href="/_app/chunks/PageMetadata-38b50fe9.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b0dbfe59.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-c5494d02.css">
 		<link rel="stylesheet" href="/_app/assets/pages/docs/__layout.svelte-9de583fc.css">
 		<link rel="stylesheet" href="/_app/assets/AppNavigation-f445eb1a.css">
 		<link rel="stylesheet" href="/_app/assets/AppFooter-d2b1941c.css">
 		<link rel="stylesheet" href="/_app/assets/REPLEmbed-0a420c95.css">
-		<link rel="stylesheet" href="/_app/assets/REPLSplit-bdaaab8b.css">
+		<link rel="stylesheet" href="/_app/assets/REPLSplit-05233b75.css">
 
 		<script type="module">
-			import { start } from "/_app/start-2a7348d6.js";
+			import { start } from "/_app/start-ca385ce4.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
@@ -52,9 +49,9 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-4b7896c8.js"),
-						import("/_app/pages/docs/__layout.svelte-542ea23e.js"),
-						import("/_app/pages/docs/[...identifier].svelte-01ec05e0.js")
+						import("/_app/pages/__layout.svelte-496ac2f4.js"),
+						import("/_app/pages/docs/__layout.svelte-22603b3b.js"),
+						import("/_app/pages/docs/[...identifier].svelte-f5462942.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -87,11 +84,14 @@
 
 <a href="/api/v4/search.json" hidden></a>
 
-<div class="aside-layout"><input role="presentation" id="aside-navigation" type="checkbox">
+<div class="aside-layout">
 
-    <label class="context-backdrop " for="aside-navigation"></label>
+<input role="presentation" id="aside-navigation" type="checkbox">
 
-<div data-hidden="mobile tablet" class="offscreen "><nav class="aside aside-navigation" data-variation="sticky">
+    <label role="button" class="context-backdrop " for="aside-navigation"></label>
+
+<div data-hidden="mobile tablet" class="offscreen ">
+    <nav class="aside aside-navigation" data-variation="sticky">
     <section data-margin-bottom="none"><nav class="menu " data-sizing="small"><ul><li><span role="separator">Resources
 
                     
@@ -134,9 +134,7 @@
                                     </a>
                                 </li><li><a href="/docs/framework/actions">Actions
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/framework/elements">Elements
 
@@ -155,9 +153,7 @@
 
     <ul><li><a href="/docs/globals/html5">HTML5
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/globals/hidden">Hidden
 
@@ -180,27 +176,19 @@
 
     <ul><li><a href="/docs/typography/blockquote">Blockquote
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/typography/code">Code
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/typography/heading">Heading
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/typography/text">Text
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li>
                         </ul>
@@ -226,15 +214,11 @@
                                     </a>
                                 </li><li><a href="/docs/display/datestamp">DateStamp
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/display/datetimestamp">DateTimeStamp
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/display/list">List
 
@@ -246,9 +230,7 @@
                                     </a>
                                 </li><li><a href="/docs/display/timestamp">TimeStamp
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li>
                         </ul>
@@ -313,15 +295,11 @@
                                     </a>
                                 </li><li><a href="/docs/interactables/filedropinput">FileDropInput
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a aria-current="page" href="/docs/interactables/form">Form
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/interactables/hiddeninput">HiddenInput
 
@@ -348,45 +326,31 @@
 
     <ul><li><a href="/docs/widgets/daypicker">DayPicker
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/widgets/daystepper">DayStepper
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/widgets/monthpicker">MonthPicker
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/widgets/monthstepper">MonthStepper
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/widgets/timepicker">TimePicker
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/widgets/yearpicker">YearPicker
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li><li><a href="/docs/widgets/yearstepper">YearStepper
 
-                                        <span class="spacer "></span>
-                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
-                                            </span>
+                                        
                                     </a>
                                 </li>
                         </ul>
@@ -425,13 +389,13 @@
                                     </a>
                                 </li><li><a href="/docs/layouts/scrollable">Scrollable
 
-                                        
-                                    </a>
-                                </li><li><a href="/docs/layouts/spacer">Spacer
-
                                         <span class="spacer "></span>
                                             <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
                                             </span>
+                                    </a>
+                                </li><li><a href="/docs/layouts/spacer">Spacer
+
+                                        
                                     </a>
                                 </li><li><a href="/docs/layouts/stack">Stack
 
@@ -558,9 +522,23 @@
                     
                 </span>
 
-    <ul><li><a href="/docs/actions/click_outside">click_outside
+    <ul><li><a href="/docs/actions/auto_focus">auto_focus
 
-                                        
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
+                                    </a>
+                                </li><li><a href="/docs/actions/click_inside">click_inside
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
+                                    </a>
+                                </li><li><a href="/docs/actions/click_outside">click_outside
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
+                                            </span>
                                     </a>
                                 </li><li><a href="/docs/actions/intersection_observer">intersection_observer
 
@@ -568,11 +546,25 @@
                                     </a>
                                 </li><li><a href="/docs/actions/keybind">keybind
 
-                                        
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">UPDATED
+                                            </span>
                                     </a>
                                 </li><li><a href="/docs/actions/mutation_observer">mutation_observer
 
                                         
+                                    </a>
+                                </li><li><a href="/docs/actions/overflow_clipping">overflow_clipping
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
+                                    </a>
+                                </li><li><a href="/docs/actions/trap_focus">trap_focus
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-shape="rounded">NEW
+                                            </span>
                                     </a>
                                 </li>
                         </ul>
@@ -609,9 +601,9 @@
                         </ul>
                     </li></ul></nav></section>
 
-            <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-size="huge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg></label>
+            <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" tabindex="0" data-size="huge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg></label>
     
-            <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" data-palette="dark" data-size="huge" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></label>
+            <label class="button context-button " data-hidden="desktop widescreen" role="button" for="aside-navigation" tabindex="0" data-palette="dark" data-size="huge" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></label>
     </nav></div>
     
 
@@ -620,13 +612,15 @@
 <nav class="omni app-navigation" data-palette="dark"><header><a href="/" sveltekit:prefetch>Kahi UI</a>
         <hr data-orientation="vertical">
 
-        <a href="https://github.com/novacbn/kahi-ui/releases/v0.4.12" target="_blank" rel="noopener noreferrer"><small class="text ">v0.4.12</small></a></header>
+        <a href="https://github.com/novacbn/kahi-ui/releases/v0.4.13" target="_blank" rel="noopener noreferrer"><small class="text ">v0.4.13</small></a></header>
 
     <footer><section class="app-navigation-search" data-hidden data-padding-x="large" data-max-width="prose"><input type="search" data-align="center" data-size="small" data-variation="block" placeholder="[CTRL+/] Search" value=""></section>
 
-        <section><input role="presentation" id="app-navigation" type="checkbox">
+        <section>
 
-<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="button context-button " data-hidden="widescreen" role="button" for="app-navigation" data-palette="light" data-size="huge" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
+<input role="presentation" id="app-navigation" type="checkbox">
+
+<div data-hidden="mobile tablet desktop" class="popover " data-alignment-x="left" data-spacing="small"><label class="button context-button " data-hidden="widescreen" role="button" for="app-navigation" tabindex="0" data-palette="light" data-size="huge" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg></label>
 
                 <div data-hidden="widescreen" data-padding="medium" class="box " data-shape="rounded"><nav class="menu " data-hidden="widescreen"><ul><li><a href="/docs/framework/getting-started" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path></svg>
                                     Documentation
@@ -791,7 +785,7 @@
 
     <div class="tab content-api"><input role="presentation" type="radio" id="content-api-properties" name="content-api" checked value="content-api-properties">
 
-<label data-palette="accent" for="content-api-properties">Properties</label>
+<label role="button" data-palette="accent" for="content-api-properties" tabindex="0">Properties</label>
 
                 <section><h3 id="api-reference-properties-form.control" class="heading "><code class="code ">Form.Control
         </code>
@@ -902,7 +896,7 @@
 
         <input role="presentation" type="radio" id="content-api-events" name="content-api"  value="content-api-events">
 
-<label data-palette="accent" for="content-api-events">Events</label>
+<label role="button" data-palette="accent" for="content-api-events" tabindex="0">Events</label>
 
                 <section><h3 id="api-reference-events-form.group" class="heading "><code class="code ">Form.Group
         </code>
@@ -932,7 +926,7 @@
 
         <input role="presentation" type="radio" id="content-api-slots" name="content-api"  value="content-api-slots">
 
-<label data-palette="accent" for="content-api-slots">Slots</label>
+<label role="button" data-palette="accent" for="content-api-slots" tabindex="0">Slots</label>
 
                 <section><h3 id="api-reference-slots-form.control" class="heading "><code class="code ">Form.Control
         </code>
@@ -1034,7 +1028,7 @@
 
         <input role="presentation" type="radio" id="content-api-custom-properties" name="content-api"  value="content-api-custom-properties">
 
-<label data-palette="accent" for="content-api-custom-properties">Custom Properties</label>
+<label role="button" data-palette="accent" for="content-api-custom-properties" tabindex="0">Custom Properties</label>
 
                 <section><h3 id="api-reference-custom-properties-form.control" class="heading "><code class="code ">Form.Control
         </code>
@@ -1103,7 +1097,7 @@
 
     <footer class="box app-footer" data-padding-y="huge"><div class="stack " data-alignment-x="center"><a href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><h2 class="heading ">Kahi UI</h2></a>
 
-        <p class="text " data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/v0.4.12" target="_blank" rel="noopener noreferrer"><span data-margin-y="tiny" role="separator" data-palette="accent">v0.4.12</span></a>
+        <p class="text " data-align="center"><a href="https://github.com/novacbn/kahi-ui/releases/v0.4.13" target="_blank" rel="noopener noreferrer"><span data-margin-y="tiny" role="separator" data-palette="accent">v0.4.13</span></a>
 
             Made and developed by
             <br>
@@ -1113,7 +1107,7 @@
 
 
 
-			<script type="application/json" data-type="svelte-data" data-url="/api/v4/navigation/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":[{\"text\":\"Resources\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fofficial\",\"text\":\"Official\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fcommunity\",\"text\":\"Community\"}]},{\"text\":\"Framework\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fgetting-started\",\"text\":\"Getting Started\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Ffaq\",\"text\":\"F.A.Q.\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fbrowser-support\",\"text\":\"Browser Support\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fresponsitivity\",\"text\":\"Responsitivity\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fcustom-properties\",\"text\":\"Custom Properties\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fframework\u002Factions\",\"text\":\"Actions\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Felements\",\"text\":\"Elements\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fevents\",\"text\":\"Events\"}]},{\"text\":\"Globals\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhtml5\",\"text\":\"HTML5\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhidden\",\"text\":\"Hidden\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fsizings\",\"text\":\"Sizings\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fspacings\",\"text\":\"Spacings\"}]},{\"text\":\"Typography\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fblockquote\",\"text\":\"Blockquote\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fcode\",\"text\":\"Code\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fheading\",\"text\":\"Heading\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ftypography\u002Ftext\",\"text\":\"Text\"}]},{\"text\":\"Embedded\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fembedded\u002Ffigure\",\"text\":\"Figure\"}]},{\"text\":\"Display\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fbadge\",\"text\":\"Badge\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatestamp\",\"text\":\"DateStamp\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatetimestamp\",\"text\":\"DateTimeStamp\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Flist\",\"text\":\"List\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftable\",\"text\":\"Table\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftimestamp\",\"text\":\"TimeStamp\"}]},{\"text\":\"Disclosure\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Faccordion\",\"text\":\"Accordion\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Fcarousel\",\"text\":\"Carousel\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Ftab\",\"text\":\"Tab\"}]},{\"text\":\"Feedback\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fdot\",\"text\":\"Dot\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fellipsis\",\"text\":\"Ellipsis\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fprogress\",\"text\":\"Progress\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fspinner\",\"text\":\"Spinner\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fwave\",\"text\":\"Wave\"}]},{\"text\":\"Interactables\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fbutton\",\"text\":\"Button\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fcheck\",\"text\":\"Check\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ffiledropinput\",\"text\":\"FileDropInput\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fform\",\"text\":\"Form\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fhiddeninput\",\"text\":\"HiddenInput\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fradio\",\"text\":\"Radio\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fswitch\",\"text\":\"Switch\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ftextinput\",\"text\":\"TextInput\"}]},{\"text\":\"Widgets\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaypicker\",\"text\":\"DayPicker\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaystepper\",\"text\":\"DayStepper\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthpicker\",\"text\":\"MonthPicker\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthstepper\",\"text\":\"MonthStepper\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Ftimepicker\",\"text\":\"TimePicker\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearpicker\",\"text\":\"YearPicker\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearstepper\",\"text\":\"YearStepper\"}]},{\"text\":\"Layouts\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcenter\",\"text\":\"Center\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcontainer\",\"text\":\"Container\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fdivider\",\"text\":\"Divider\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgrid\",\"text\":\"Grid\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgroup\",\"text\":\"Group\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fmosaic\",\"text\":\"Mosaic\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fposition\",\"text\":\"Position\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fscrollable\",\"text\":\"Scrollable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fspacer\",\"text\":\"Spacer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fstack\",\"text\":\"Stack\"}]},{\"text\":\"Surfaces\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fbox\",\"text\":\"Box\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fcard\",\"text\":\"Card\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fhero\",\"text\":\"Hero\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Ftile\",\"text\":\"Tile\"}]},{\"text\":\"Navigation\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fanchor\",\"text\":\"Anchor\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Faside\",\"text\":\"Aside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\",\"text\":\"Breadcrumb\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fmenu\",\"text\":\"Menu\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fomni\",\"text\":\"Omni\"}]},{\"text\":\"Overlays\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fclickable\",\"text\":\"Clickable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foffscreen\",\"text\":\"Offscreen\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foverlay\",\"text\":\"Overlay\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fpopover\",\"text\":\"Popover\"}]},{\"text\":\"Utilities\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fbrowserrender\",\"text\":\"BrowserRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\",\"text\":\"ContextBackdrop\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fcontextbutton\",\"text\":\"ContextButton\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fintersectionrender\",\"text\":\"IntersectionRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fportal\",\"text\":\"Portal\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fserverrender\",\"text\":\"ServerRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Ftransition\",\"text\":\"Transition\"}]},{\"text\":\"Actions\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_outside\",\"text\":\"click_outside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fintersection_observer\",\"text\":\"intersection_observer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fkeybind\",\"text\":\"keybind\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fmutation_observer\",\"text\":\"mutation_observer\"}]},{\"text\":\"Stores\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fdarkmode\",\"text\":\"darkmode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\",\"text\":\"htmlpalette\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fmediaquery\",\"text\":\"mediaquery\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fprefersscheme\",\"text\":\"prefersscheme\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fscrolllock\",\"text\":\"scrolllock\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fviewport\",\"text\":\"viewport\"}]}]}"}</script>
+			<script type="application/json" data-type="svelte-data" data-url="/api/v4/navigation/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":[{\"text\":\"Resources\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fofficial\",\"text\":\"Official\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fcommunity\",\"text\":\"Community\"}]},{\"text\":\"Framework\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fgetting-started\",\"text\":\"Getting Started\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Ffaq\",\"text\":\"F.A.Q.\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fbrowser-support\",\"text\":\"Browser Support\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fresponsitivity\",\"text\":\"Responsitivity\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fcustom-properties\",\"text\":\"Custom Properties\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Factions\",\"text\":\"Actions\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Felements\",\"text\":\"Elements\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fevents\",\"text\":\"Events\"}]},{\"text\":\"Globals\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhtml5\",\"text\":\"HTML5\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhidden\",\"text\":\"Hidden\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fsizings\",\"text\":\"Sizings\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fspacings\",\"text\":\"Spacings\"}]},{\"text\":\"Typography\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fblockquote\",\"text\":\"Blockquote\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fcode\",\"text\":\"Code\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fheading\",\"text\":\"Heading\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Ftext\",\"text\":\"Text\"}]},{\"text\":\"Embedded\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fembedded\u002Ffigure\",\"text\":\"Figure\"}]},{\"text\":\"Display\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fbadge\",\"text\":\"Badge\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatestamp\",\"text\":\"DateStamp\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatetimestamp\",\"text\":\"DateTimeStamp\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Flist\",\"text\":\"List\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftable\",\"text\":\"Table\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftimestamp\",\"text\":\"TimeStamp\"}]},{\"text\":\"Disclosure\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Faccordion\",\"text\":\"Accordion\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Fcarousel\",\"text\":\"Carousel\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Ftab\",\"text\":\"Tab\"}]},{\"text\":\"Feedback\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fdot\",\"text\":\"Dot\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fellipsis\",\"text\":\"Ellipsis\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fprogress\",\"text\":\"Progress\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fspinner\",\"text\":\"Spinner\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fwave\",\"text\":\"Wave\"}]},{\"text\":\"Interactables\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fbutton\",\"text\":\"Button\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fcheck\",\"text\":\"Check\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ffiledropinput\",\"text\":\"FileDropInput\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fform\",\"text\":\"Form\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fhiddeninput\",\"text\":\"HiddenInput\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fradio\",\"text\":\"Radio\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fswitch\",\"text\":\"Switch\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ftextinput\",\"text\":\"TextInput\"}]},{\"text\":\"Widgets\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaypicker\",\"text\":\"DayPicker\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaystepper\",\"text\":\"DayStepper\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthpicker\",\"text\":\"MonthPicker\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthstepper\",\"text\":\"MonthStepper\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Ftimepicker\",\"text\":\"TimePicker\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearpicker\",\"text\":\"YearPicker\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearstepper\",\"text\":\"YearStepper\"}]},{\"text\":\"Layouts\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcenter\",\"text\":\"Center\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcontainer\",\"text\":\"Container\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fdivider\",\"text\":\"Divider\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgrid\",\"text\":\"Grid\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgroup\",\"text\":\"Group\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fmosaic\",\"text\":\"Mosaic\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fposition\",\"text\":\"Position\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fscrollable\",\"text\":\"Scrollable\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fspacer\",\"text\":\"Spacer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fstack\",\"text\":\"Stack\"}]},{\"text\":\"Surfaces\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fbox\",\"text\":\"Box\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fcard\",\"text\":\"Card\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fhero\",\"text\":\"Hero\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Ftile\",\"text\":\"Tile\"}]},{\"text\":\"Navigation\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fanchor\",\"text\":\"Anchor\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Faside\",\"text\":\"Aside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\",\"text\":\"Breadcrumb\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fmenu\",\"text\":\"Menu\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fomni\",\"text\":\"Omni\"}]},{\"text\":\"Overlays\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fclickable\",\"text\":\"Clickable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foffscreen\",\"text\":\"Offscreen\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foverlay\",\"text\":\"Overlay\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fpopover\",\"text\":\"Popover\"}]},{\"text\":\"Utilities\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fbrowserrender\",\"text\":\"BrowserRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fcontextbackdrop\",\"text\":\"ContextBackdrop\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fcontextbutton\",\"text\":\"ContextButton\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fintersectionrender\",\"text\":\"IntersectionRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fportal\",\"text\":\"Portal\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fserverrender\",\"text\":\"ServerRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Ftransition\",\"text\":\"Transition\"}]},{\"text\":\"Actions\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Factions\u002Fauto_focus\",\"text\":\"auto_focus\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_inside\",\"text\":\"click_inside\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_outside\",\"text\":\"click_outside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fintersection_observer\",\"text\":\"intersection_observer\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Factions\u002Fkeybind\",\"text\":\"keybind\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fmutation_observer\",\"text\":\"mutation_observer\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Factions\u002Foverflow_clipping\",\"text\":\"overflow_clipping\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Factions\u002Ftrap_focus\",\"text\":\"trap_focus\"}]},{\"text\":\"Stores\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fdarkmode\",\"text\":\"darkmode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fhtmlpalette\",\"text\":\"htmlpalette\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fmediaquery\",\"text\":\"mediaquery\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fprefersscheme\",\"text\":\"prefersscheme\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fscrolllock\",\"text\":\"scrolllock\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fviewport\",\"text\":\"viewport\"}]}]}"}</script>
 
 	<script type="application/json" data-type="svelte-data" data-url="/api/v4/content/docs/interactables/form.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"metadata\":{\"authors\":{},\"created_at\":1626291196000,\"identifier\":\"\u002Fdocs\u002Finteractables\u002Fform\",\"modified_at\":1638925320000,\"sections\":[{\"identifier\":\"form\",\"level\":1,\"text\":\"Form\"},{\"identifier\":\"helptext\",\"level\":2,\"text\":\"HelpText\"},{\"identifier\":\"label\",\"level\":2,\"text\":\"Label\"},{\"identifier\":\"control\",\"level\":2,\"text\":\"Control\"},{\"identifier\":\"group\",\"level\":2,\"text\":\"Group\"}],\"snippets\":[{\"identifier\":\"form-helptext\",\"script\":\"\u003Cscript\u003E\\n    import {Form, TextInput} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CTextInput type=\\\"password\\\" \u002F\u003E\\n\u003CForm.HelpText\u003E\\n    passwords must be 8+ characters at minimum\\n\u003C\u002FForm.HelpText\u003E\",\"syntax\":\"svelte\",\"title\":\"Form HelpText\"},{\"identifier\":\"form-label\",\"script\":\"\u003Cscript\u003E\\n    import {Check, Form} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Label for=\\\"form-label-group\\\"\u003E\\n    \u003CCheck \u002F\u003E\\n    Click me!\\n\u003C\u002FForm.Label\u003E\",\"syntax\":\"svelte\",\"title\":\"Form Label\"},{\"identifier\":\"form-control\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Code,\\n        Form,\\n        TextInput,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let value = \\\"sample@sample.org\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CForm.Control logic_id=\\\"form-control\\\"\u003E\\n    \u003CForm.Label\u003E\\n        Register E-Mail for Newsletter\\n    \u003C\u002FForm.Label\u003E\\n\\n    \u003CTextInput bind:value \u002F\u003E\\n    \u003CForm.HelpText\u003E\\n        Make sure to enter a valid E-Mail Address, e.g.\\n        \u003CCode\u003Esample@sample.org\u003C\u002FCode\u003E\\n    \u003C\u002FForm.HelpText\u003E\\n\u003C\u002FForm.Control\u003E\",\"syntax\":\"svelte\",\"title\":\"Form Control\"},{\"identifier\":\"form-group\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Form,\\n        Radio,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\\n    let logic_state = \\\"vanilla\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CText is=\\\"strong\\\"\u003E\\n    Select an Ice Cream Flavor\\n    \u003CText is=\\\"sup\\\"\u003E{logic_state}\u003C\u002FText\u003E\\n\u003C\u002FText\u003E\\n\\n\u003CStack spacing=\\\"small\\\" margin_top=\\\"small\\\"\u003E\\n    \u003CForm.Group\\n        logic_name=\\\"form-group\\\"\\n        bind:logic_state\\n    \u003E\\n        \u003CRadio\\n            id=\\\"form-group-bubblegum\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"bubblegum\\\"\\n        \u003E\\n            Bubblegum\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"form-group-chocolate\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"chocolate\\\"\\n        \u003E\\n            Chocolate\\n        \u003C\u002FRadio\u003E\\n\\n        \u003CRadio\\n            id=\\\"form-group-vanilla\\\"\\n            palette=\\\"accent\\\"\\n            size=\\\"tiny\\\"\\n            value=\\\"vanilla\\\"\\n        \u003E\\n            Vanilla\\n        \u003C\u002FRadio\u003E\\n    \u003C\u002FForm.Group\u003E\\n\u003C\u002FStack\u003E\",\"syntax\":\"svelte\",\"title\":\"Form Group\"}],\"title\":\"Form\"},\"references\":{\"custom_properties\":{\"Form.Control\":[{\"name\":\"--form-control-gap\",\"description\":\"Controls the spacing gap between child elements, e.g. icons.\",\"types\":[\"\u003Clength\u003E\"]}],\"Form.Label\":[{\"name\":\"--form-label-gap\",\"description\":\"Controls the spacing gap between child elements, e.g. icons.\",\"types\":[\"\u003Clength\u003E\"]}]},\"events\":{\"Form.Group\":[{\"name\":\"change\",\"description\":\"Fires whenever the \u003Ccode\u003Elogic_state\u003C\u002Fcode\u003E has its value changed via the \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E.\",\"types\":[\"CustomEvent\u003Cvoid\u003E\"]}]},\"properties\":{\"Form.Control\":[{\"name\":\"logic_id\",\"description\":\"Sets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-id\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to target \u002F assign as.\",\"types\":[\"string\"]},{\"name\":\"logic_name\",\"description\":\"Sets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-name\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ename\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to group as.\",\"types\":[\"string\"]}],\"Form.Group\":[{\"name\":\"logic_name\",\"description\":\"Sets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-name\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Ename\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to group as.\",\"types\":[\"string\"]},{\"name\":\"logic_id\",\"description\":\"Sets the form \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Finput#attr-id\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Eid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute in a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for child Form Components to target \u002F assign as.\",\"types\":[\"string\"]},{\"name\":\"logic_state\",\"description\":\"Controls the currently active Form Component via a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E.\",\"types\":[\"string\"]}],\"Form.Label\":[{\"name\":\"for\",\"description\":\"Sets the \u003Ca href=\\\"https:\u002F\u002Fdeveloper.mozilla.org\u002Fen-US\u002Fdocs\u002FWeb\u002FHTML\u002FElement\u002Flabel#attr-for\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003E\u003Ccode\u003Efor\u003C\u002Fcode\u003E\u003C\u002Fa\u003E attribute of the element that is targetted.\",\"types\":[\"string\"]}]},\"slots\":{\"Form.Control\":[{\"name\":\"default\",\"description\":\"Default unnamed slot.\",\"types\":[\"{}\"]}],\"Form.Group\":[{\"name\":\"default\",\"description\":\"Default unnamed slot.\",\"types\":[\"{}\"]}],\"Form.HelpText\":[{\"name\":\"default\",\"description\":\"Default unnamed slot.\",\"types\":[\"{}\"]}],\"Form.Label\":[{\"name\":\"default\",\"description\":\"Default unnamed slot.\",\"types\":[\"{}\"]}]}},\"render\":\"\u003Ch1 id=\\\"form\\\"\u003EForm\u003C\u002Fh1\u003E\\n\u003Cp\u003EForm Components are helpers to supplement input Components that are meant for webforms like \u003Ca href=\\\".\u002Ftextinput\\\" svelte:prefetch=\\\"true\\\"\u003ETextInput\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"helptext\\\"\u003EHelpText\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: New since \u003Ccode\u003Ev0.2.7\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.HelpText\u003C\u002Fcode\u003E is typically used for displaying information about how to input information into a form properly.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"form-helptext\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EForm\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E TextInput\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ETextInput\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Etype\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Epassword\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E\u002F\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EForm.HelpText\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    passwords must be 8+ characters at minimum\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EForm.HelpText\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"label\\\"\u003ELabel\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: New since \u003Ccode\u003Ev0.2.7\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: This Component sets a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for Form IDs \u002F Names that child input Components consume.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.Label\u003C\u002Fcode\u003E focuses the target input Component whenever its child content is clicked.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"form-label\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003ECheck\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E Form\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EForm.Label\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Efor\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eform-label-group\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ECheck\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E\u002F\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    Click me!\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EForm.Label\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"control\\\"\u003EControl\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: New since \u003Ccode\u003Ev0.2.7\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: This Component sets a \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Context\u003C\u002Fa\u003E for Form IDs \u002F Names that child input Components consume.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.Control\u003C\u002Fcode\u003E is typically used to display form and input Components in a preformatted stack.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"form-control\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003E\\n        Code\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Form\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        TextInput\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token keyword\\\"\u003Elet\u003C\u002Fspan\u003E value \u003Cspan class=\\\"token operator\\\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"sample@sample.org\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EForm.Control\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Elogic_id\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eform-control\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EForm.Label\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        Register E-Mail for Newsletter\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EForm.Label\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ETextInput\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003E\u003Cspan class=\\\"token namespace\\\"\u003Ebind:\u003C\u002Fspan\u003Evalue\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E\u002F\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EForm.HelpText\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        Make sure to enter a valid E-Mail Address, e.g.\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ECode\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003Esample@sample.org\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003ECode\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EForm.HelpText\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EForm.Control\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"group\\\"\u003EGroup\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: New since \u003Ccode\u003Ev0.2.7\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: This Component is renderless, it does not render its own DOM nodes.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003E\u003Ccode\u003EForm.Group\u003C\u002Fcode\u003E let's you directly set the relevant form-related \u003Ca href=\\\"https:\u002F\u002Fsvelte.dev\u002Fdocs#setContext\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003ESvelte Contexts\u003C\u002Fa\u003E via its properties without using any preformatted shown above.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"form-group\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003E\\n        Form\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Radio\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Stack\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Text\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token keyword\\\"\u003Elet\u003C\u002Fspan\u003E logic_state \u003Cspan class=\\\"token operator\\\"\u003E=\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"vanilla\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EText\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Eis\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Estrong\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    Select an Ice Cream Flavor\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EText\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Eis\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Esup\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003Elogic_state\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EText\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EText\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EStack\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Espacing\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Esmall\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin_top\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Esmall\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EForm.Group\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token attr-name\\\"\u003Elogic_name\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eform-group\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token attr-name\\\"\u003E\u003Cspan class=\\\"token namespace\\\"\u003Ebind:\u003C\u002Fspan\u003Elogic_state\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ERadio\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Eid\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eform-group-bubblegum\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eaccent\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Esize\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etiny\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Evalue\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ebubblegum\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            Bubblegum\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003ERadio\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ERadio\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Eid\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eform-group-chocolate\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eaccent\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Esize\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etiny\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Evalue\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Echocolate\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            Chocolate\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003ERadio\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ERadio\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Eid\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eform-group-vanilla\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eaccent\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Esize\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etiny\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            \u003Cspan class=\\\"token attr-name\\\"\u003Evalue\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Evanilla\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            Vanilla\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003ERadio\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EForm.Group\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EStack\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\"}}"}</script>
 		

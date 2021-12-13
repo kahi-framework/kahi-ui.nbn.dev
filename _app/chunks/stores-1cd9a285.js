@@ -1,0 +1,1 @@
+import{C as o,y as c,aE as n}from"./vendor-c0c13bc7.js";function b(e){return{init(r){const t=o(r);return c(e,{subscribe:t.subscribe}),t},subscribe(r,t){const s=n(e);if(!s)throw ReferenceError(`bad dispatch to 'subscribe' (failed to lookup context '${e.toString()}')`);return s.subscribe(r,t)}}}export{b as m};
