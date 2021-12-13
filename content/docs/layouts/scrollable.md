@@ -1,4 +1,9 @@
 +++
+[[events.Scrollable]]
+name="scroll"
+description="Fires whenever the `Scrollable` is scrolled by the user."
+types=["Event"]
+
 [[slots.Scrollable]]
 name="default"
 description="Default unnamed slot."

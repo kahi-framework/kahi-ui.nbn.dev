@@ -1,4 +1,7 @@
 <script>
+    import "@kahi-ui/framework/dist/kahi-ui.framework.css";
+    import "prismjs/themes/prism-tomorrow.css";
+
     import {browser} from "$app/env";
     import {htmlpalette} from "@kahi-ui/framework";
 

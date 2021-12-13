@@ -50,12 +50,12 @@
 >
     <Box palette="dark" shape="rounded" margin="medium" padding="small">
         <Menu.Container orientation={["desktop:horizontal", "widescreen:horizontal"]} sizing="tiny">
-            <Menu.Anchor href={_href} target="_blank" palette="accent" variation="clear">
+            <Menu.Anchor href={_href} target="_blank" palette="accent">
                 <ExternalLink />
                 Link
             </Menu.Anchor>
 
-            <Menu.Button palette="affirmative" variation="clear" on:click={on_copy_click}>
+            <Menu.Button palette="affirmative" on:click={on_copy_click}>
                 <Copy />
                 Copy
             </Menu.Button>
@@ -63,7 +63,6 @@
             <Menu.Button
                 active={mode === SPLIT_MODE.split}
                 palette="light"
-                variation="clear"
                 on:click={() => (mode = SPLIT_MODE.split)}
             >
                 <Sidebar />
@@ -73,7 +72,6 @@
             <Menu.Button
                 active={mode === SPLIT_MODE.first}
                 palette="light"
-                variation="clear"
                 on:click={() => (mode = SPLIT_MODE.first)}
             >
                 <Code />
@@ -83,7 +81,6 @@
             <Menu.Button
                 active={mode === SPLIT_MODE.last}
                 palette="light"
-                variation="clear"
                 on:click={() => (mode = SPLIT_MODE.last)}
             >
                 <Image />

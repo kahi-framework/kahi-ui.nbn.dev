@@ -37,7 +37,7 @@ types=["{}"]
     import {Figure} from "@kahi-ui/framework";
 </script>
 
-<Figure max_width="viewport-33">
+<Figure max_width="33">
     <img src={IMAGE_BACKGROUND} />
 </Figure>
 ```
@@ -103,7 +103,7 @@ You can modify the size of the child content between five presets via the `size`
 <Stack class="figure-size" spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
-        <Figure max_width="viewport-25">
+        <Figure max_width="25">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>

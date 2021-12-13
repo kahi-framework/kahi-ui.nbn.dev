@@ -6,7 +6,7 @@
 
     import type {IRouteError, ISnippetGet} from "../../../lib/shared/api";
 
-    export const load: Load = async ({fetch, page}) => {
+    export const load: Load = async ({fetch}) => {
         // HACK: SvelteKit errors out when accessing query params during build,
         // so we need to special case SSR to just skip the backend functionality
         if (!browser) return {};

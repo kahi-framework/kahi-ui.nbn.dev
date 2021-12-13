@@ -30,7 +30,6 @@
 <script lang="ts">
     import {browser} from "$app/env";
     import {base} from "$app/paths";
-    import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
         Box,
         ContextButton,
@@ -56,16 +55,11 @@
     export let state: boolean = false;
     let search_state: boolean = false;
 
-    function on_search_bind(event: IKeybindEvent): void {
+    function on_search_active(event: Event): void {
         event.preventDefault();
 
-        state = false;
-        search_state = true;
-    }
-
-    function on_search_focus(event: FocusEvent | MouseEvent): void {
-        const {target} = event;
-        if (target instanceof HTMLInputElement) target.blur();
+        const target = event.target as HTMLElement | null;
+        if (target) target.blur();
 
         state = false;
         search_state = true;
@@ -74,7 +68,7 @@
     $: if (!$_collapse_viewports) state = false;
 </script>
 
-<svelte:window use:search_keybind={on_search_bind} />
+<svelte:window use:search_keybind={on_search_active} />
 
 <Omni.Container class="app-navigation" palette="dark">
     <Omni.Header>
@@ -101,7 +95,7 @@
                 size="small"
                 variation="block"
                 align="center"
-                on:focus={on_search_focus}
+                on:focus={on_search_active}
             />
         </Omni.Section>
 
@@ -134,7 +128,7 @@
                                 <ThemeButton has_text />
                             </Menu.Item>
 
-                            <Menu.Button hidden={!$_search_viewports} on:click={on_search_focus}>
+                            <Menu.Button hidden={!$_search_viewports} on:click={on_search_active}>
                                 <Search />
                                 Search
                             </Menu.Button>

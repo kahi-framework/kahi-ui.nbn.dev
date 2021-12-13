@@ -15,7 +15,7 @@ export default define_navigation({
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
                 {href: "/docs/framework/custom-properties"},
-                {href: "/docs/framework/actions", badge: "NEW"},
+                {href: "/docs/framework/actions"},
                 {href: "/docs/framework/elements"},
                 {href: "/docs/framework/events"},
             ],
@@ -24,7 +24,7 @@ export default define_navigation({
         {
             text: "Globals",
             items: [
-                {href: "/docs/globals/html5", badge: "UPDATED"},
+                {href: "/docs/globals/html5"},
                 {href: "/docs/globals/hidden"},
                 {href: "/docs/globals/sizings"},
                 {href: "/docs/globals/spacings"},
@@ -34,10 +34,10 @@ export default define_navigation({
         {
             text: "Typography",
             items: [
-                {href: "/docs/typography/blockquote", badge: "UPDATED"},
-                {href: "/docs/typography/code", badge: "UPDATED"},
-                {href: "/docs/typography/heading", badge: "UPDATED"},
-                {href: "/docs/typography/text", badge: "UPDATED"},
+                {href: "/docs/typography/blockquote"},
+                {href: "/docs/typography/code"},
+                {href: "/docs/typography/heading"},
+                {href: "/docs/typography/text"},
             ],
         },
 
@@ -50,11 +50,11 @@ export default define_navigation({
             text: "Display",
             items: [
                 {href: "/docs/display/badge"},
-                {href: "/docs/display/datestamp", badge: "NEW"},
-                {href: "/docs/display/datetimestamp", badge: "NEW"},
+                {href: "/docs/display/datestamp"},
+                {href: "/docs/display/datetimestamp"},
                 {href: "/docs/display/list"},
                 {href: "/docs/display/table"},
-                {href: "/docs/display/timestamp", badge: "NEW"},
+                {href: "/docs/display/timestamp"},
             ],
         },
 
@@ -83,8 +83,8 @@ export default define_navigation({
             items: [
                 {href: "/docs/interactables/button"},
                 {href: "/docs/interactables/check"},
-                {href: "/docs/interactables/filedropinput", badge: "UPDATED"},
-                {href: "/docs/interactables/form", badge: "UPDATED"},
+                {href: "/docs/interactables/filedropinput"},
+                {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/hiddeninput"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
@@ -95,13 +95,13 @@ export default define_navigation({
         {
             text: "Widgets",
             items: [
-                {href: "/docs/widgets/daypicker", badge: "NEW"},
-                {href: "/docs/widgets/daystepper", badge: "NEW"},
-                {href: "/docs/widgets/monthpicker", badge: "NEW"},
-                {href: "/docs/widgets/monthstepper", badge: "NEW"},
-                {href: "/docs/widgets/timepicker", badge: "UPDATED"},
-                {href: "/docs/widgets/yearpicker", badge: "NEW"},
-                {href: "/docs/widgets/yearstepper", badge: "NEW"},
+                {href: "/docs/widgets/daypicker"},
+                {href: "/docs/widgets/daystepper"},
+                {href: "/docs/widgets/monthpicker"},
+                {href: "/docs/widgets/monthstepper"},
+                {href: "/docs/widgets/timepicker"},
+                {href: "/docs/widgets/yearpicker"},
+                {href: "/docs/widgets/yearstepper"},
             ],
         },
 
@@ -115,8 +115,8 @@ export default define_navigation({
                 {href: "/docs/layouts/group"},
                 {href: "/docs/layouts/mosaic"},
                 {href: "/docs/layouts/position"},
-                {href: "/docs/layouts/scrollable"},
-                {href: "/docs/layouts/spacer", badge: "UPDATED"},
+                {href: "/docs/layouts/scrollable", badge: "UPDATED"},
+                {href: "/docs/layouts/spacer"},
                 {href: "/docs/layouts/stack"},
             ],
         },
@@ -168,10 +168,14 @@ export default define_navigation({
         {
             text: "Actions",
             items: [
-                {href: "/docs/actions/click_outside"},
+                {href: "/docs/actions/auto_focus", badge: "NEW"},
+                {href: "/docs/actions/click_inside", badge: "NEW"},
+                {href: "/docs/actions/click_outside", badge: "UPDATED"},
                 {href: "/docs/actions/intersection_observer"},
-                {href: "/docs/actions/keybind"},
+                {href: "/docs/actions/keybind", badge: "UPDATED"},
                 {href: "/docs/actions/mutation_observer"},
+                {href: "/docs/actions/overflow_clipping", badge: "NEW"},
+                {href: "/docs/actions/trap_focus", badge: "NEW"},
             ],
         },
 
