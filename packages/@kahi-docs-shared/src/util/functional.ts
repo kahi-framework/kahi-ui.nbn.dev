@@ -25,4 +25,4 @@ export function memoize<Arguments extends any[], Results>(
     ];
 }
 
-export function noop(...args: any[]): void {}
+export function noop(): void {}

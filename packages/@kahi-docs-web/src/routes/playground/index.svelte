@@ -6,7 +6,7 @@
 
     import type {IRouteError, ISnippetGet} from "../../lib/shared/api";
 
-    export const load: Load = async ({fetch, page}) => {
+    export const load: Load = async ({fetch}) => {
         // HACK: SvelteKit errors out when accessing query params during build,
         // so we need to special case SSR to just skip the backend functionality
         if (!browser) return {};
@@ -61,7 +61,7 @@
 </script>
 
 <script lang="ts">
-    import {Box, Menu, Spacer, Stack, Text, viewports} from "@kahi-ui/framework";
+    import {Box, Menu, Stack, Text, viewports} from "@kahi-ui/framework";
     import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
@@ -118,19 +118,18 @@
             orientation="horizontal"
         >
             <Menu.Container orientation="horizontal" sizing="small">
-                <Menu.Button palette="accent" variation="clear" on:click={() => (state = true)}>
+                <Menu.Button palette="accent" on:click={() => (state = true)}>
                     <Share2 />
                     Share
                 </Menu.Button>
 
-                <Menu.Button palette="affirmative" variation="clear" on:click={on_copy_click}>
+                <Menu.Button palette="affirmative" on:click={on_copy_click}>
                     <Copy />
                     Copy
                 </Menu.Button>
 
                 <Menu.Button
                     palette="inverse"
-                    variation="clear"
                     on:click={() =>
                         (orientation =
                             orientation === SPLIT_ORIENTATION.horizontal
@@ -144,7 +143,6 @@
                 <Menu.Button
                     active={mode === SPLIT_MODE.split}
                     palette="inverse"
-                    variation="clear"
                     on:click={() => (mode = SPLIT_MODE.split)}
                 >
                     <Sidebar />
@@ -154,7 +152,6 @@
                 <Menu.Button
                     active={mode === SPLIT_MODE.first}
                     palette="inverse"
-                    variation="clear"
                     on:click={() => (mode = SPLIT_MODE.first)}
                 >
                     <Code />
@@ -164,7 +161,6 @@
                 <Menu.Button
                     active={mode === SPLIT_MODE.last}
                     palette="inverse"
-                    variation="clear"
                     on:click={() => (mode = SPLIT_MODE.last)}
                 >
                     <Image />

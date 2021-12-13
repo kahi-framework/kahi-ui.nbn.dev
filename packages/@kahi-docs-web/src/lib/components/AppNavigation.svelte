@@ -30,7 +30,6 @@
 <script lang="ts">
     import {browser} from "$app/env";
     import {base} from "$app/paths";
-    import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
         Box,
         ContextButton,
