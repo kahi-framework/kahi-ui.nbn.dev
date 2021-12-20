@@ -1,0 +1,1 @@
+{"data":{"identifier":"sveltekit-noscroll","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>\n\n<Anchor\n    href=\"/docs/interactables/button\"\n    sveltekit:noscroll\n>\n    Goto Button\n</Anchor>","syntax":"svelte","title":"SvelteKit NoScroll"}}

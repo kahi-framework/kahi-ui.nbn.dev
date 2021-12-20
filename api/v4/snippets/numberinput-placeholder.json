@@ -1,0 +1,1 @@
+{"data":{"identifier":"numberinput-placeholder","script":"<script>\n    import {NumberInput} from \"@kahi-ui/framework\";\n</script>\n\n<NumberInput placeholder=\"...enter a number\" />","syntax":"svelte","title":"NumberInput Placeholder"}}
