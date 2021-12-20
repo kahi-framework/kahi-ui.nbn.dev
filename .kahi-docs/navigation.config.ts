@@ -28,6 +28,7 @@ export default define_navigation({
                 {href: "/docs/globals/hidden"},
                 {href: "/docs/globals/sizings"},
                 {href: "/docs/globals/spacings"},
+                {href: "/docs/globals/sveltekit", badge: "NEW"},
             ],
         },
 
