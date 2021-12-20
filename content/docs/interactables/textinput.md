@@ -226,7 +226,7 @@ types=["<alpha-value>"]
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can enable input masking (dropping input that doesn't match a constraint) by enabling the `mask` property and setting `pattern` property.
+You can enable input masking (dropping input that doesn't match a constraint) by enabling `mask` and setting the `pattern` properties.
 
 > **NOTE**: The below input is masked to [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) input, e.g. `abcdef1234567890`
 
