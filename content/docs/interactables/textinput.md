@@ -57,6 +57,11 @@ description="Sets the minimum amount of characters that the end-user <strong>MUS
 types=["number"]
 
 [[properties.TextInput]]
+name="mask"
+description="Enables user input masking dropping characters that aren't validated by the `pattern` property or `mask` event."
+types=["string"]
+
+[[properties.TextInput]]
 name="pattern"
 description="Sets a validation Regular Expression on `TextInput`, which will fail submission on a `<form>` if the input is invalid."
 types=["RegExp", "string"]
@@ -101,7 +106,7 @@ name="input"
 description="Fires whenever the `TextInput` has its value changed."
 types=["InputEvent"]
 
-[[events.NumberInput]]
+[[events.TextInput]]
 name="mask"
 description="Fires whenever the `TextInput` is receiving input and the `mask` property is set to `true`."
 types=["CustomEvent<{value: string}>"]
