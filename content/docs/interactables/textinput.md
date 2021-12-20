@@ -101,6 +101,11 @@ name="input"
 description="Fires whenever the `TextInput` has its value changed."
 types=["InputEvent"]
 
+[[events.NumberInput]]
+name="mask"
+description="Fires whenever the `TextInput` is receiving input and the `mask` property is set to `true`."
+types=["CustomEvent<{value: string}>"]
+
 [[custom_properties.TextInput]]
 name="--textinput-palette-background-bold"
 description="Controls the default RGB color value used for `background` (block) / `border-color` (outline) / `color` (flush)."
@@ -208,6 +213,66 @@ types=["<alpha-value>"]
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
+```
+
+## Input Masking
+
+> **NOTE**: New since `v0.4.14`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can enable input masking (dropping input that doesn't match a constraint) by enabling the `mask` property and setting `pattern` property.
+
+> **NOTE**: The below input is masked to [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) input, e.g. `abcdef1234567890`
+
+```svelte {title="TextInput Input Masking - Pattern" mode="repl"}
+<script>
+    import {TextInput} from "@kahi-ui/framework";
+</script>
+
+<TextInput pattern="[0-9a-fA-F]+" mask />
+```
+
+Or by implementing custom logic via the `mask` event.
+
+```svelte {title="TextInput Input Masking - Event" mode="repl"}
+<script>
+    import {TextInput} from "@kahi-ui/framework";
+
+    const CHARACTERS_HEXADECIMAL = new Set([
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+    ]);
+
+    function on_mask(event) {
+        for (const character of event.detail.value) {
+            if (
+                !CHARACTERS_HEXADECIMAL.has(
+                    character.toLowerCase()
+                )
+            ) {
+                event.preventDefault();
+                return;
+            }
+        }
+    }
+</script>
+
+<TextInput mask on:mask={on_mask} />
 ```
 
 ## Palette
