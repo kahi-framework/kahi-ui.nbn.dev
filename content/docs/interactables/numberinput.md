@@ -306,8 +306,5 @@ You can set how wide your `NumberInput` to an approximation of character width v
     import {NumberInput} from "@kahi-ui/framework";
 </script>
 
-<NumberInput
-    value="This input should be about 4 characters wide."
-    characters="4"
-/>
+<NumberInput characters="2" />
 ```
