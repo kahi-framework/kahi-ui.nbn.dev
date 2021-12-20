@@ -48,13 +48,18 @@ types=["string"]
 
 [[properties.TextInput]]
 name="max_length"
-description="Sets the maximum amount of characters that the end-user <strong>CAN</strong> input, which will fail submission on a `<form>` if the input is invalid."
+description="Sets the maximum amount of characters that the end-user **CAN** input, which will fail submission on a `<form>` if the input is invalid."
 types=["number"]
 
 [[properties.TextInput]]
 name="min_length"
-description="Sets the minimum amount of characters that the end-user <strong>MUST</strong> input, which will fail submission on a `<form>` if the input is invalid."
+description="Sets the minimum amount of characters that the end-user **MUST** input, which will fail submission on a `<form>` if the input is invalid."
 types=["number"]
+
+[[properties.TextInput]]
+name="mask"
+description="Enables user input masking dropping characters that aren't validated by the `pattern` property or `mask` event."
+types=["string"]
 
 [[properties.TextInput]]
 name="pattern"
@@ -78,17 +83,17 @@ types=["number", "string"]
 
 [[properties.TextInput]]
 name="lines"
-description="<strong>(TEXTAREA ONLY)</strong> Sets the height of the `TextInput` to an approximation of the amount of text lines to display."
+description="**(TEXTAREA ONLY)** Sets the height of the `TextInput` to an approximation of the amount of text lines to display."
 types=["number", "string"]
 
 [[properties.TextInput]]
 name="resizable"
-description="<strong>(TEXTAREA ONLY)</strong> Sets if the `TextArea` should be resizable by the end-user."
+description="**(TEXTAREA ONLY)** Sets if the `TextArea` should be resizable by the end-user."
 types=["boolean", "x", "y"]
 
 [[properties.TextInput]]
 name="spell_check"
-description="<strong>(TEXTAREA ONLY)</strong> Sets if Browser spellcheck should be enabled. Allows the Browser to automatically determine this, if unset."
+description="**(TEXTAREA ONLY)** Sets if Browser spellcheck should be enabled. Allows the Browser to automatically determine this, if unset."
 types=["boolean"]
 
 [[events.TextInput]]
@@ -100,6 +105,11 @@ types=["InputEvent"]
 name="input"
 description="Fires whenever the `TextInput` has its value changed."
 types=["InputEvent"]
+
+[[events.TextInput]]
+name="mask"
+description="Fires whenever the `TextInput` is receiving input and the `mask` property is set to `true`."
+types=["CustomEvent<{value: string}>"]
 
 [[custom_properties.TextInput]]
 name="--textinput-palette-background-bold"
@@ -208,6 +218,68 @@ types=["<alpha-value>"]
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
+```
+
+## Input Masking
+
+> **NOTE**: New since `v0.4.14`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+> **IMPORTANT**: This feature only runs on the Browser, you need to **ALWAYS** validate user-generated input on the server.
+
+You can enable input masking (dropping input that doesn't match a constraint) by enabling `mask` and setting the `pattern` properties.
+
+> **NOTE**: The below input is masked to [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) input, e.g. `abcdef1234567890`
+
+```svelte {title="TextInput Input Masking - Pattern" mode="repl"}
+<script>
+    import {TextInput} from "@kahi-ui/framework";
+</script>
+
+<TextInput pattern="[0-9a-fA-F]+" mask />
+```
+
+Or by implementing custom logic via the `mask` event.
+
+```svelte {title="TextInput Input Masking - Event" mode="repl"}
+<script>
+    import {TextInput} from "@kahi-ui/framework";
+
+    const CHARACTERS_HEXADECIMAL = new Set([
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+    ]);
+
+    function on_mask(event) {
+        for (const character of event.detail.value) {
+            if (
+                !CHARACTERS_HEXADECIMAL.has(
+                    character.toLowerCase()
+                )
+            ) {
+                event.preventDefault();
+                return;
+            }
+        }
+    }
+</script>
+
+<TextInput mask on:mask={on_mask} />
 ```
 
 ## Palette

@@ -37,13 +37,13 @@ types=["center", "stretch"]
 
 [[properties.Offscreen]]
 name="alignment_x"
-description="<strong>(`top/bottom` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Offscreen` along the horizontal axis."
+description="**(`top/bottom` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Offscreen` along the horizontal axis."
 default="stretch"
 types=["center", "stretch", "left", "right"]
 
 [[properties.Offscreen]]
 name="alignment_y"
-description="<strong>(`left/right` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Offscreen` along the vertical axis."
+description="**(`left/right` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Offscreen` along the vertical axis."
 default="stretch"
 types=["center", "stretch", "bottom", "top"]
 

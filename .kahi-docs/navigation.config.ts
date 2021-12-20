@@ -28,6 +28,7 @@ export default define_navigation({
                 {href: "/docs/globals/hidden"},
                 {href: "/docs/globals/sizings"},
                 {href: "/docs/globals/spacings"},
+                {href: "/docs/globals/sveltekit", badge: "NEW"},
             ],
         },
 
@@ -86,9 +87,10 @@ export default define_navigation({
                 {href: "/docs/interactables/filedropinput"},
                 {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/hiddeninput"},
+                {href: "/docs/interactables/numberinput", badge: "NEW"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
-                {href: "/docs/interactables/textinput"},
+                {href: "/docs/interactables/textinput", badge: "UPDATED"},
             ],
         },
 
@@ -115,7 +117,7 @@ export default define_navigation({
                 {href: "/docs/layouts/group"},
                 {href: "/docs/layouts/mosaic"},
                 {href: "/docs/layouts/position"},
-                {href: "/docs/layouts/scrollable", badge: "UPDATED"},
+                {href: "/docs/layouts/scrollable"},
                 {href: "/docs/layouts/spacer"},
                 {href: "/docs/layouts/stack"},
             ],
@@ -146,9 +148,9 @@ export default define_navigation({
             text: "Overlays",
             items: [
                 {href: "/docs/overlays/clickable"},
-                {href: "/docs/overlays/offscreen", badge: "UPDATED"},
-                {href: "/docs/overlays/overlay", badge: "UPDATED"},
-                {href: "/docs/overlays/popover", badge: "UPDATED"},
+                {href: "/docs/overlays/offscreen"},
+                {href: "/docs/overlays/overlay"},
+                {href: "/docs/overlays/popover"},
             ],
         },
 
@@ -168,14 +170,14 @@ export default define_navigation({
         {
             text: "Actions",
             items: [
-                {href: "/docs/actions/auto_focus", badge: "NEW"},
-                {href: "/docs/actions/click_inside", badge: "NEW"},
-                {href: "/docs/actions/click_outside", badge: "UPDATED"},
+                {href: "/docs/actions/auto_focus"},
+                {href: "/docs/actions/click_inside"},
+                {href: "/docs/actions/click_outside"},
                 {href: "/docs/actions/intersection_observer"},
-                {href: "/docs/actions/keybind", badge: "UPDATED"},
+                {href: "/docs/actions/keybind"},
                 {href: "/docs/actions/mutation_observer"},
-                {href: "/docs/actions/overflow_clipping", badge: "NEW"},
-                {href: "/docs/actions/trap_focus", badge: "NEW"},
+                {href: "/docs/actions/overflow_clipping"},
+                {href: "/docs/actions/trap_focus"},
             ],
         },
 
