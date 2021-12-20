@@ -26,13 +26,13 @@ types=["boolean"]
 
 [[properties.Popover]]
 name="alignment_x"
-description="<strong>(`top/bottom` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Popover` along the horizontal axis."
+description="**(`top/bottom` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Popover` along the horizontal axis."
 default="center"
 types=["center", "left", "right"]
 
 [[properties.Popover]]
 name="alignment_y"
-description="<strong>(`left/right` PLACEMENT ONLY)</strong> Adjusts where the child content will be placed within the `Popover` along the vertical axis."
+description="**(`left/right` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Popover` along the vertical axis."
 default="center"
 types=["center", "bottom", "top"]
 

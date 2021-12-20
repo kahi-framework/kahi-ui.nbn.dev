@@ -48,12 +48,12 @@ types=["string"]
 
 [[properties.TextInput]]
 name="max_length"
-description="Sets the maximum amount of characters that the end-user <strong>CAN</strong> input, which will fail submission on a `<form>` if the input is invalid."
+description="Sets the maximum amount of characters that the end-user **CAN** input, which will fail submission on a `<form>` if the input is invalid."
 types=["number"]
 
 [[properties.TextInput]]
 name="min_length"
-description="Sets the minimum amount of characters that the end-user <strong>MUST</strong> input, which will fail submission on a `<form>` if the input is invalid."
+description="Sets the minimum amount of characters that the end-user **MUST** input, which will fail submission on a `<form>` if the input is invalid."
 types=["number"]
 
 [[properties.TextInput]]
@@ -83,17 +83,17 @@ types=["number", "string"]
 
 [[properties.TextInput]]
 name="lines"
-description="<strong>(TEXTAREA ONLY)</strong> Sets the height of the `TextInput` to an approximation of the amount of text lines to display."
+description="**(TEXTAREA ONLY)** Sets the height of the `TextInput` to an approximation of the amount of text lines to display."
 types=["number", "string"]
 
 [[properties.TextInput]]
 name="resizable"
-description="<strong>(TEXTAREA ONLY)</strong> Sets if the `TextArea` should be resizable by the end-user."
+description="**(TEXTAREA ONLY)** Sets if the `TextArea` should be resizable by the end-user."
 types=["boolean", "x", "y"]
 
 [[properties.TextInput]]
 name="spell_check"
-description="<strong>(TEXTAREA ONLY)</strong> Sets if Browser spellcheck should be enabled. Allows the Browser to automatically determine this, if unset."
+description="**(TEXTAREA ONLY)** Sets if Browser spellcheck should be enabled. Allows the Browser to automatically determine this, if unset."
 types=["boolean"]
 
 [[events.TextInput]]
