@@ -64,6 +64,8 @@ types=["InputEvent"]
 
 > **NOTE**: New since `v0.4.14`.
 
+> **IMPORTANT**: Input masking only runs on the Browser, you **ALWAYS** validate user-generated input on the server.
+
 `NumberInput` is a subset of [`TextInput`](./textinput.md), which only accepts numbers and masks user input accordingly.
 
 ```svelte {title="NumberInput Preview" mode="repl"}
