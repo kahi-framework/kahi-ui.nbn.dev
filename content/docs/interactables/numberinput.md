@@ -294,7 +294,7 @@ You can set the `NumberInput` to show placeholder text whenever there is no curr
     import {NumberInput} from "@kahi-ui/framework";
 </script>
 
-<NumberInput placeholder="...enter some text" />
+<NumberInput placeholder="...enter a number" />
 ```
 
 ## Field Character Size
