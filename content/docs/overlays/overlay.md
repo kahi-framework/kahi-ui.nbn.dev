@@ -82,7 +82,7 @@ types=["{}"]
 
 > **NOTE**: New since `v0.2.4`.
 
-> **WARNING**: This Component will receive a breaking refactoring in `v0.5.0`.
+> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
 `Overlay` is typically used for rendering full-screen content over the rest of the page, optionally including a backdrop or being toggleable.
 
