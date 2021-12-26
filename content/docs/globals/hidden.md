@@ -1,7 +1,7 @@
 +++
 [[properties."*"]]
 name="hidden"
-description="Alters the Component to not render anything and take up physical space in a page's layout."
+description="Alters the Component to not render anything or take up physical space in a page's layout."
 types=["boolean", "{VIEWPORT}"]
 +++
 
