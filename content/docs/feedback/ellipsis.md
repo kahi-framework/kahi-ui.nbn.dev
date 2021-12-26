@@ -1,18 +1,8 @@
 +++
-[[properties.Ellipsis]]
-name="character"
-description="Changes the character being rendered for the animation."
-types=["string"]
-
 [[slots.Ellipsis]]
 name="default"
-description="Default unnamed slot."
+description="Alters the rendered animated character."
 types=["{}"]
-
-[[custom_properties.Ellipsis]]
-name="--ellipsis-character"
-description="Controls the default character used, when no developer-supplied character is present."
-types=["<string>"]
 
 [[custom_properties.Ellipsis]]
 name="--ellipsis-content-first-animation-delay"
@@ -38,6 +28,8 @@ types=["<alpha-value>"]
 # Ellipsis
 
 > **NOTE**: New since `v0.2.5`.
+
+> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
 `Ellipsis` is a text-based indicator used to tell the end-user that the Web Application is loading something in the background.
 
@@ -79,11 +71,9 @@ types=["<alpha-value>"]
 </script>
 ```
 
-## Character
+## Slot
 
-> **WARNING**: This feature will be refactored in `v0.5.0`.
-
-You can customize the text character used for the animation via the `character` property.
+You can customize the text character used for the animation via the by passing into the `default` slot.
 
 ```svelte {title="Ellipsis Character" mode="repl"}
 <script>
@@ -95,6 +85,6 @@ You can customize the text character used for the animation via the `character` 
 
 <Heading>
     Loading
-    <Ellipsis character="?" />
+    <Ellipsis>?</Ellipsis>
 </Heading>
 ```
