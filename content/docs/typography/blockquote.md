@@ -17,7 +17,7 @@ types=["{}"]
 [[custom_properties."Blockquote.Container"]]
 name="--blockquote-background-color"
 description="Controls the default `background` color."
-types=["<alpha-value>"]
+types=["<r,g,b>"]
 
 [[custom_properties."Blockquote.Container"]]
 name="--blockquote-background-opacity"

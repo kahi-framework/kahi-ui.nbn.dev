@@ -38,7 +38,7 @@ types=["{}"]
 [[custom_properties.Text]]
 name="--text-kbd-background-color"
 description="Controls the default `background` color."
-types=["<alpha-value>"]
+types=["<r,g,b>"]
 
 [[custom_properties.Text]]
 name="--text-kbd-background-opacity"
