@@ -25,6 +25,8 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 > **NOTE**: New since `v0.2.0`.
 
+> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+
 `Spacer` is a layout primitive that takes up all available space between its two immediate siblings.
 
 ```svelte {title="Spacer Preview" mode="repl"}
