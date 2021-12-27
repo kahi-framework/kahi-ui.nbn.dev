@@ -355,52 +355,52 @@ You can adjust which side your content is placed on via the `placement` property
 
 ```svelte {title="Popover Placement" mode="repl"}
 <script>
-    import {
-        Box,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
+    import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
 <Popover
     logic_id="popover-placement-right"
-    alignment_y="bottom"
-    placement="right"
-    spacing="medium"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
+    <Popover.Button palette="accent">
         Open RIGHT Popover
-    </ContextButton>
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
+    <Popover.Section
+        alignment_y="bottom"
+        placement="right"
+        spacing="medium"
     >
-        This is a RIGHT Popover.
-    </Box>
+        <Box
+            palette="inverse"
+            max_width="content-max"
+            padding="medium"
+        >
+            This is a RIGHT Popover.
+        </Box>
+    </Popover.Section>
 </Popover>
 
 <Popover
     logic_id="popover-placement-bottom"
-    alignment_x="right"
-    spacing="medium"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
+    <Popover.Button palette="accent">
         Open BOTTOM Popover
-    </ContextButton>
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
+    <Popover.Section
+        alignment_x="right"
+        spacing="medium"
     >
-        This is a BOTTOM Popover.
-    </Box>
+        <Box
+            palette="inverse"
+            max_width="content-max"
+            padding="medium"
+        >
+            This is a BOTTOM Popover.
+        </Box>
+    </Popover.Section>
 </Popover>
 ```
 
