@@ -982,3 +982,82 @@ You can adjust the spacing between `Overlay` content via the `spacing`, `spacing
     </Tile.Container>
 </Overlay>
 ```
+
+## Transition
+
+You can change which built-in [`Transition`](../utilities/transition.md) is animated using `clip`, `fade`, `scale`, or `slide` via the `animation` property.
+
+```svelte {title="Overlay Transition"}
+<script>
+    import {
+        Button,
+        Card,
+        Overlay,
+    } from "@kahi-ui/framework";
+</script>
+
+<Button for="overlay-transition">
+    Open SLIDE Overlay
+</Button>
+
+<Overlay.Container logic_id="overlay-transition">
+    <Overlay.Section>
+        <Card.Container
+            animation="slide"
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>SLIDE Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+```
+
+## Direction
+
+You can change which direction the entrance animation comes from via the `direction` property.
+
+```svelte {title="Overlay Transition"}
+<script>
+    import {
+        Button,
+        Card,
+        Overlay,
+    } from "@kahi-ui/framework";
+</script>
+
+<Button for="overlay-direction">
+    Open SLIDE Overlay
+</Button>
+
+<Overlay.Container logic_id="overlay-direction">
+    <Overlay.Section>
+        <Card.Container
+            animation="slide"
+            direction="right"
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>SLIDE Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+```
