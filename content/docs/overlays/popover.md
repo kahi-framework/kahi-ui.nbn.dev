@@ -176,45 +176,6 @@ types=["{}"]
 
 You can make the `Popover` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
 
-## Hidden
-
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
-
-`Popover` adds special handling for the `hidden` property, allowing you to instead customize when the child content is hidden or rendered normally.
-
-```svelte {title="Popover Hidden" mode="repl"}
-<script>
-    import {
-        Box,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
-</script>
-
-<Popover
-    logic_id="popover-hidden"
-    alignment_x="right"
-    hidden="mobile"
-    spacing="medium"
-    dismissible
->
-    <ContextButton
-        palette="accent"
-        hidden={["tablet", "desktop", "widescreen"]}
-    >
-        Open HIDDEN Popover
-    </ContextButton>
-
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
-    >
-        This was HIDDEN on MOBILE only.
-    </Box>
-</Popover>
-```
-
 ## Dismissible
 
 > **NOTE**: Added keybinding support since `v0.4.13`.
