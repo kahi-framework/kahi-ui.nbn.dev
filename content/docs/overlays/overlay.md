@@ -773,7 +773,7 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can enable having the `Overlay` dismissed whenever inner content is clicked via the `once` property.
+You can enable having the `Overlay` dismissed whenever `<Overlay.Section>` inner content is clicked via the `once` property.
 
 ```svelte {title="Overlay Once" mode="repl"}
 <script>

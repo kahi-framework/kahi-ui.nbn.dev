@@ -253,55 +253,51 @@ You can manually open / close the `Popover` via the `logic_state` property.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can optionally have the `Popover` dismissible by clicking outside the `Popover` child content or pressing the `ESC` key, via the `dismissible` property.
+You can optionally have the `Popover` dismissible by clicking outside the `<Popover.Section>` child content, pressing the `ESC` key, or inner content losing focus, via the `dismissible` property.
 
 ```svelte {title="Popover Dismissible" mode="repl"}
 <script>
-    import {
-        Box,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
+    import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
-<Popover
-    logic_id="popover-non-dismissible"
-    alignment_x="right"
-    spacing="medium"
-    hidden
+<Popover.Container
+    logic_id="popover-dismissible-disabled"
 >
-    <ContextButton palette="accent">
-        Open NON DISMISSIBLE Popover
-    </ContextButton>
+    <Popover.Button>
+        Open NON-DISMISSIBLE Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
-    >
-        This is a NON DISMISSIBLE Popover.
-    </Box>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            NON-DISMISSIBLE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-is-dismissible"
-    alignment_x="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-dismissible-enabled"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
+    <Popover.Button>
         Open DISMISSIBLE Popover
-    </ContextButton>
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
-    >
-        This is a DISMISSIBLE Popover.
-    </Box>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            DISMISSIBLE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Once
@@ -314,70 +310,43 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
 
 ```svelte {title="Popover Once" mode="repl"}
 <script>
-    import {
-        Card,
-        ContextButton,
-        Menu,
-        Popover,
-        Spacer,
-        Text,
-    } from "@kahi-ui/framework";
+    import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
-<Popover
-    logic_id="popover-once"
-    alignment_x="right"
-    spacing="medium"
-    dismissible
-    hidden
+<Popover.Container logic_id="popover-once-disabled">
+    <Popover.Button>
+        Open NON-ONCE Popover
+    </Popover.Button>
+
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            NON-ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+
+<Popover.Container
+    logic_id="popover-once-enabled"
     once
 >
-    <ContextButton palette="accent">
-        Open ONCE Popover
-    </ContextButton>
+    <Popover.Button>Open ONCE Popover</Popover.Button>
 
-    <Card.Container
-        palette="auto"
-        elevation="medium"
-        max_width="content-max"
-    >
-        <Card.Section>
-            <Menu.Container>
-                <Menu.Button>
-                    Copy
-                    <Spacer
-                        variation="inline"
-                        spacing="medium"
-                    />
-
-                    <Text is="kbd">CTRL+C</Text>
-                </Menu.Button>
-
-                <Menu.Button>
-                    Cut
-                    <Spacer
-                        variation="inline"
-                        spacing="medium"
-                    />
-
-                    <Text is="kbd">CTRL+X</Text>
-                </Menu.Button>
-
-                <Menu.Divider />
-
-                <Menu.Button>
-                    Delete
-                    <Spacer
-                        variation="inline"
-                        spacing="medium"
-                    />
-
-                    <Text is="kbd">DEL</Text>
-                </Menu.Button>
-            </Menu.Container>
-        </Card.Section>
-    </Card.Container>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Placement
