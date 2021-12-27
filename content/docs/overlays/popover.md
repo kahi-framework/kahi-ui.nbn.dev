@@ -90,8 +90,7 @@ types=["{}"]
 ```svelte {title="Popover Preview" mode="repl"}
 <script>
     import {
-        Card,
-        ContextButton,
+        Box,
         Menu,
         Popover,
         Spacer,
@@ -99,28 +98,28 @@ types=["{}"]
     } from "@kahi-ui/framework";
 </script>
 
-<Popover
+<Popover.Container
     logic_id="popover-preview"
-    alignment_x="right"
-    spacing="medium"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open Menu
+    </Popover.Button>
 
-    <Card.Container
-        palette="auto"
-        elevation="medium"
-        max_width="content-max"
+    <Popover.Section
+        alignment_x="right"
+        spacing="medium"
     >
-        <Card.Section>
+        <Box
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
             <Menu.Container>
                 <Menu.Button>
                     Copy
                     <Spacer
-                        variation="inline"
+                        is="span"
                         spacing="medium"
                     />
 
@@ -130,7 +129,7 @@ types=["{}"]
                 <Menu.Button>
                     Cut
                     <Spacer
-                        variation="inline"
+                        is="span"
                         spacing="medium"
                     />
 
@@ -142,16 +141,16 @@ types=["{}"]
                 <Menu.Button>
                     Delete
                     <Spacer
-                        variation="inline"
+                        is="span"
                         spacing="medium"
                     />
 
                     <Text is="kbd">DEL</Text>
                 </Menu.Button>
             </Menu.Container>
-        </Card.Section>
-    </Card.Container>
-</Popover>
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Imports
@@ -172,9 +171,81 @@ types=["{}"]
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Popover`, it will automatically inherit the set `logic_id`.
+You can make the `Popover` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md). Alternatively, `<Popover.Button>` can be used while inside a `<Popover.Container>` tree, which automatically inherits `logic_id` via [Svelte Context](https://svelte.dev/docs#setContext).
 
-You can make the `Popover` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
+```svelte {title="Popover Logic ID" mode="repl"}
+<script>
+    import {Box, Popover} from "@kahi-ui/framework";
+</script>
+
+<Popover.Container logic_id="popover-logic-id">
+    <Popover.Button palette="accent">
+        Open Popover
+    </Popover.Button>
+
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            <Popover.Button
+                palette="auto"
+                variation="clear"
+            >
+                Dismiss
+            </Popover.Button>
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+```
+
+## Logic State
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the `Popover` via the `logic_state` property.
+
+```svelte {title="Popover Logic State" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        Popover,
+    } from "@kahi-ui/framework";
+
+    let logic_state = false;
+</script>
+
+<Popover.Container
+    logic_id="popover-logic-state"
+    bind:logic_state
+>
+    <Popover.Button>
+        Open TOGGABLE Popover
+    </Popover.Button>
+
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            TOGGABLE Popover
+            <br />
+
+            <Button
+                on:click={() =>
+                    (logic_state = !logic_state)}
+            >
+                Toggle Popover
+            </Button>
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+```
 
 ## Dismissible
 
@@ -305,49 +376,6 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
                 </Menu.Button>
             </Menu.Container>
         </Card.Section>
-    </Card.Container>
-</Popover>
-```
-
-## State
-
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
-
-You can manually open / close the `Popover` via the `state` property.
-
-```svelte {title="Popover State" mode="repl"}
-<script>
-    import {
-        Button,
-        Card,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
-
-    let state = false;
-</script>
-
-<Button on:click={() => (state = !state)}>
-    Toggle Popover
-</Button>
-
-<Popover
-    logic_id="popover-state"
-    alignment_x="right"
-    spacing="medium"
-    bind:state
-    hidden
->
-    <ContextButton palette="accent">
-        Open Popover
-    </ContextButton>
-
-    <Card.Container
-        palette="auto"
-        elevation="medium"
-        max_width="content-max"
-    >
-        <Card.Section>Toggleable Popover</Card.Section>
     </Card.Container>
 </Popover>
 ```
