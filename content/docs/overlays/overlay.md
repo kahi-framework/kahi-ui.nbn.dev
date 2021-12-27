@@ -550,29 +550,34 @@ You can customize the loading behavior of slotted content via the `loading` prop
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-loading" palette="accent">
-    Open LAZY Modal
-</Button>
+<Button for="overlay-lazy">Open LAZY Overlay</Button>
 
-<Overlay logic_id="overlay-loading" loading="lazy">
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>LAZY Modal</Card.Header>
+<Overlay.Container
+    logic_id="overlay-lazy"
+    loading="lazy"
+>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>LAZY Overlay</Card.Header>
 
-        <Card.Footer>
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-            >
-                Close
-            </ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Captive
@@ -584,38 +589,61 @@ You can optionally include a backdrop by passing via the `captive` property.
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-non-captive">
-    Open NON CAPTIVE Modal
+<Button for="overlay-captive-disabled">
+    Open NON-CAPTIVE Overlay
+</Button>
+<Button for="overlay-captive-enabled">
+    Open CAPTIVE Overlay
 </Button>
 
-<Button for="overlay-is-captive" palette="accent">
-    Open CAPTIVE Modal
-</Button>
+<Overlay.Container logic_id="overlay-captive-disabled">
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                NON-CAPTIVE Overlay
+            </Card.Header>
 
-<Overlay logic_id="overlay-non-captive">
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>NON CAPTIVE Modal</Card.Header>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 
-        <Card.Footer>
-            <ContextButton>Dismiss</ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+<Overlay.Container
+    logic_id="overlay-captive-enabled"
+    captive
+>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>CAPTIVE Overlay</Card.Header>
 
-<Overlay logic_id="overlay-is-captive" captive>
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>CAPTIVE Modal</Card.Header>
-
-        <Card.Footer>
-            <ContextButton>Dismiss</ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Dismissible
@@ -631,44 +659,67 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-non-dismissible">
-    Open NON DISMISSIBLE Modal
+<Button for="overlay-dismissible-disabled">
+    Open NON-DISMISSIBLE Overlay
+</Button>
+<Button for="overlay-dismissible-enabled">
+    Open DISMISSIBLE Overlay
 </Button>
 
-<Button for="overlay-is-dismissible" palette="accent">
-    Open DISMISSIBLE Modal
-</Button>
+<Overlay.Container
+    logic_id="overlay-dismissible-disabled"
+    captive
+>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                NON-DISMISSIBLE Overlay
+            </Card.Header>
 
-<Overlay logic_id="overlay-non-dismissible" captive>
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>
-            NON DISMISSIBLE Modal
-        </Card.Header>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 
-        <Card.Footer>
-            <ContextButton>Dismiss</ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
-
-<Overlay
-    logic_id="overlay-is-dismissible"
+<Overlay.Container
+    logic_id="overlay-dismissible-enabled"
     captive
     dismissible
 >
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>DISMISSIBLE Modal</Card.Header>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                DISMISSIBLE Overlay
+            </Card.Header>
 
-        <Card.Footer>
-            <ContextButton>Dismiss</ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Once
@@ -684,42 +735,63 @@ You can enable having the `Overlay` dismissed whenever inner content is clicked 
     import {
         Button,
         Card,
-        Code,
-        ContextButton,
         Overlay,
-        Text,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-once" palette="accent">
-    Open ONCE Modal
+<Button for="overlay-once-disabled">
+    Open NON-ONCE Overlay
+</Button>
+<Button for="overlay-once-enabled">
+    Open ONCE Overlay
 </Button>
 
-<Overlay
-    logic_id="overlay-once"
+<Overlay.Container
+    logic_id="overlay-once-disabled"
     captive
-    dismissible
+>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>NON-ONCE Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+
+<Overlay.Container
+    logic_id="overlay-once-enabled"
+    captive
     once
 >
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>Are you sure?</Card.Header>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>ONCE Overlay</Card.Header>
 
-        <Card.Section>
-            <Text>
-                Are you sure you want to delete:
-                <Code>important-file.docx</Code>?
-            </Text>
-        </Card.Section>
-
-        <Card.Footer>
-            <ContextButton variation="clear">
-                Cancel
-            </ContextButton>
-
-            <Button palette="negative">Delete</Button>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## State
