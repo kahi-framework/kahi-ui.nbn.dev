@@ -246,38 +246,63 @@ Whenever the `Overlay` becomes active, focus is moved to the first found focusab
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-auto-focus" palette="accent">
-    Open AUTO FOCUSED Modal
+<Button for="overlay-auto-focus">
+    Open AUTO FOCUSED Overlay
 </Button>
 
-<Overlay logic_id="overlay-auto-focus">
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>AUTO FOCUSED Modal</Card.Header>
+<Overlay.Container logic_id="overlay-auto-focus">
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                AUTO FOCUSED Overlay
+            </Card.Header>
 
-        <Card.Footer>
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="1"
-            >
-                Index #1
-            </ContextButton>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #1
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="2"
-            >
-                Index #2
-            </ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #2
+                </Overlay.Button>
+
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #3
+                </Overlay.Button>
+
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #4
+                </Overlay.Button>
+
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #5
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 You can customize which element is focused on activation with a reference or CSS Selector, via the `focus_target` property
@@ -287,47 +312,69 @@ You can customize which element is focused on activation with a reference or CSS
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 
     let target_element;
 </script>
 
-<Button
-    for="overlay-auto-focus-target"
-    palette="accent"
->
-    Open AUTO FOCUSED Modal
+<Button for="overlay-auto-focus-target">
+    Open AUTO FOCUSED Overlay
 </Button>
 
-<Overlay
+<Overlay.Container
     logic_id="overlay-auto-focus-target"
     focus_target={target_element}
 >
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>AUTO FOCUSED Modal</Card.Header>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                AUTO FOCUSED Overlay
+            </Card.Header>
 
-        <Card.Footer>
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="1"
-            >
-                Index #1
-            </ContextButton>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #1
+                </Overlay.Button>
 
-            <ContextButton
-                bind:element={target_element}
-                palette="inverse"
-                variation="clear"
-                tabindex="2"
-            >
-                Index #2
-            </ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #2
+                </Overlay.Button>
+
+                <Overlay.Button
+                    bind:element={target_element}
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #3
+                </Overlay.Button>
+
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #4
+                </Overlay.Button>
+
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #5
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Focus Trapping
@@ -350,57 +397,64 @@ While the `Overlay` is active, focus movement is trapped within the first and la
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-focus-trapping" palette="accent">
-    Open FOCUS TRAPPED Modal
+<Button for="overlay-focus-trapping">
+    Open FOCUS TRAPPED Overlay
 </Button>
 
-<Overlay logic_id="overlay-focus-trapping">
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>FOCUS TRAPPED Modal</Card.Header>
+<Overlay.Container logic_id="overlay-focus-trapping">
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                FOCUS TRAPPED Overlay
+            </Card.Header>
 
-        <Card.Footer>
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="3"
-            >
-                Index #3
-            </ContextButton>
+            <Card.Footer>
+                <Overlay.Button
+                    tabindex="3"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #3
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="1"
-            >
-                Index #1
-            </ContextButton>
+                <Overlay.Button
+                    tabindex="1"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #1
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="5"
-            >
-                Index #5
-            </ContextButton>
+                <Overlay.Button
+                    tabindex="5"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #5
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="4"
-            >
-                Index #4
-            </ContextButton>
+                <Overlay.Button
+                    tabindex="4"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #4
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="2"
-            >
-                Index #2
-            </ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+                <Overlay.Button
+                    tabindex="2"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #2
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 You can customize which elements are used as the first and last with references or CSS Selectors, via the `focus_first` / `focus_last` properties.
@@ -410,7 +464,6 @@ You can customize which elements are used as the first and last with references 
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 
@@ -418,67 +471,70 @@ You can customize which elements are used as the first and last with references 
     let last_element;
 </script>
 
-<Button
-    for="overlay-focus-trapping-first-last"
-    palette="accent"
->
-    Open FOCUS TRAPPED Modal
+<Button for="overlay-focus-trapping-first-last">
+    Open FOCUS TRAPPED Overlay
 </Button>
 
-<Overlay
+<Overlay.Container
     logic_id="overlay-focus-trapping-first-last"
-    focus_target={first_element}
     focus_first={first_element}
     focus_last={last_element}
 >
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>FOCUS TRAPPED Modal</Card.Header>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                FOCUS TRAPPED Overlay
+            </Card.Header>
 
-        <Card.Footer>
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="3"
-            >
-                Index #3
-            </ContextButton>
+            <Card.Footer>
+                <Overlay.Button
+                    tabindex="3"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #3
+                </Overlay.Button>
 
-            <ContextButton
-                bind:element={first_element}
-                palette="inverse"
-                variation="clear"
-                tabindex="1"
-            >
-                Index #1
-            </ContextButton>
+                <Overlay.Button
+                    bind:element={first_element}
+                    tabindex="1"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #1
+                </Overlay.Button>
 
-            <ContextButton
-                bind:element={last_element}
-                palette="inverse"
-                variation="clear"
-                tabindex="5"
-            >
-                Index #5
-            </ContextButton>
+                <Overlay.Button
+                    bind:element={last_element}
+                    tabindex="5"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #5
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="4"
-            >
-                Index #4
-            </ContextButton>
+                <Overlay.Button
+                    tabindex="4"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #4
+                </Overlay.Button>
 
-            <ContextButton
-                palette="inverse"
-                variation="clear"
-                tabindex="2"
-            >
-                Index #2
-            </ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+                <Overlay.Button
+                    tabindex="2"
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss #2
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Loading
