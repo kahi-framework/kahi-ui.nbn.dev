@@ -233,6 +233,51 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 </Overlay.Container>
 ```
 
+## Logic State
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the `Overlay` via the `state` property.
+
+```svelte {title="Overlay State" mode="repl"}
+<script>
+    import {
+        Button,
+        Card,
+        Overlay,
+    } from "@kahi-ui/framework";
+
+    let logic_state = false;
+</script>
+
+<Button on:click={() => (logic_state = !logic_state)}>
+    Toggle Overlay
+</Button>
+
+<Overlay.Container
+    logic_id="overlay-logic-state"
+    bind:logic_state
+>
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>TOGGABLE Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+```
+
 ## Auto Focus
 
 > **NOTE**: New since `v0.4.13`.
@@ -792,39 +837,6 @@ You can enable having the `Overlay` dismissed whenever inner content is clicked 
         </Card.Container>
     </Overlay.Section>
 </Overlay.Container>
-```
-
-## State
-
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
-
-You can manually open / close the `Overlay` via the `state` property.
-
-```svelte {title="Overlay State" mode="repl"}
-<script>
-    import {
-        Button,
-        Card,
-        ContextButton,
-        Overlay,
-    } from "@kahi-ui/framework";
-
-    let state = false;
-</script>
-
-<Button on:click={() => (state = !state)}>
-    Toggle Modal
-</Button>
-
-<Overlay logic_id="overlay-state" bind:state>
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>Toggleable Modal</Card.Header>
-
-        <Card.Footer>
-            <ContextButton>Dismiss</ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
 ```
 
 ## Orientation
