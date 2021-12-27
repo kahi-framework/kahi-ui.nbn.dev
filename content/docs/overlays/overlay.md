@@ -139,77 +139,98 @@ types=["{}"]
         Button,
         Card,
         Code,
-        ContextButton,
         Overlay,
         Text,
     } from "@kahi-ui/framework";
 </script>
 
 <Button for="overlay-preview" palette="accent">
-    Open Modal
+    Open MODAL
 </Button>
 
-<Overlay
+<Overlay.Container
     logic_id="overlay-preview"
     captive
     dismissible
 >
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>Are you sure?</Card.Header>
+    <Overlay.Section>
+        <Card.Container palette="auto" max_width="75">
+            <Card.Header>Are you sure?</Card.Header>
 
-        <Card.Section>
-            <Text>
-                Are you sure you want to delete:
-                <Code>important-file.docx</Code>?
-            </Text>
-        </Card.Section>
+            <Card.Section>
+                <Text>
+                    Are you sure you want to delete:
+                    <Code>important-file.docx</Code>?
+                </Text>
+            </Card.Section>
 
-        <Card.Footer>
-            <ContextButton variation="clear">
-                Cancel
-            </ContextButton>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="inverse"
+                    variation="clear"
+                >
+                    Cancel
+                </Overlay.Button>
 
-            <Button palette="negative">Delete</Button>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+                <Button palette="negative">
+                    Delete
+                </Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Imports
 
+<!-- prettier-ignore -->
 ```svelte {title="Overlay Imports"}
 <script>
     import {Overlay} from "@kahi-ui/framework";
+
+    const {
+        Container,
+        Button,
+        Group,
+        Section
+    } = Overlay;
 </script>
 ```
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Overlay`, it will automatically inherit the set `logic_id`.
-
-You can make the `Overlay` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
+You can make the `Overlay` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md). Alternatively, `<Overlay.Button>` can be used while inside a `<Overlay.Container>` tree, which automatically inherits `logic_id` via [Svelte Context](https://svelte.dev/docs#setContext).
 
 ```svelte {title="Overlay Logic ID" mode="repl"}
 <script>
     import {
         Button,
         Card,
-        ContextButton,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-toggleable">Toggle Modal</Button>
+<Button for="overlay-logic-id">Open Overlay</Button>
 
-<Overlay logic_id="overlay-toggleable">
-    <Card.Container palette="auto" max_width="75">
-        <Card.Header>Toggleable Modal</Card.Header>
+<Overlay.Container logic_id="overlay-logic-id">
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>Opened Overlay</Card.Header>
 
-        <Card.Footer>
-            <ContextButton>Dismiss</ContextButton>
-        </Card.Footer>
-    </Card.Container>
-</Overlay>
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Auto Focus
