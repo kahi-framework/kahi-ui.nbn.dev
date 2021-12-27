@@ -850,20 +850,22 @@ You can set the `Overlay` to render horizontally via the `orientation` property.
     import {Box, Overlay} from "@kahi-ui/framework";
 </script>
 
-<Overlay
-    orientation="horizontal"
-    spacing="medium"
-    padding_bottom="medium"
-    padding_right="medium"
->
-    <Box>I am the first Box!</Box>
-    <Box>And I am a sibling!</Box>
-</Overlay>
+<Overlay.Container>
+    <Overlay.Section
+        orientation="horizontal"
+        spacing="medium"
+        padding_bottom="medium"
+        padding_right="medium"
+    >
+        <Box>I am the first Box!</Box>
+        <Box>And I am a sibling!</Box>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Alignment
 
-You can align `Overlay` content via the `alignment`, `alignment_x`, and `alignment_y` properties respectively.
+You can align `<Overlay.Section>` child content via the `alignment`, `alignment_x`, and `alignment_y` properties.
 
 ```svelte {title="Overlay Alignment" mode="repl"}
 <script>
@@ -876,42 +878,69 @@ You can align `Overlay` content via the `alignment`, `alignment_x`, and `alignme
     } from "@kahi-ui/framework";
 </script>
 
-<Overlay
-    alignment_x="right"
-    alignment_y="bottom"
-    padding_bottom="medium"
-    padding_right="medium"
->
-    <Tile.Container
-        palette="auto"
-        elevation="medium"
-        width="content-max"
-        max_width="75"
+<Overlay.Container>
+    <Overlay.Section
+        alignment_x="right"
+        alignment_y="bottom"
+        padding_bottom="medium"
+        padding_right="medium"
     >
-        <Tile.Section>
-            <Tile.Header>File Deleted</Tile.Header>
+        <Tile.Container
+            palette="auto"
+            elevation="medium"
+            width="content-max"
+            max_width="75"
+        >
+            <Tile.Section>
+                <Tile.Header>File Deleted</Tile.Header>
 
-            <Text>
-                <Code>important_file.docx</Code> was deleted
-                from cloud storage.
-            </Text>
-        </Tile.Section>
+                <Text>
+                    <Code>important_file.docx</Code> was
+                    deleted from cloud storage.
+                </Text>
+            </Tile.Section>
 
-        <Tile.Footer>
-            <Button
-                palette="negative"
-                data-size="small"
-            >
-                X
-            </Button>
-        </Tile.Footer>
-    </Tile.Container>
-</Overlay>
+            <Tile.Footer>
+                <Button
+                    palette="negative"
+                    data-size="small"
+                >
+                    X
+                </Button>
+            </Tile.Footer>
+        </Tile.Container>
+
+        <Tile.Container
+            palette="auto"
+            elevation="medium"
+            width="content-max"
+            max_width="75"
+        >
+            <Tile.Section>
+                <Tile.Header>File Deleted</Tile.Header>
+
+                <Text>
+                    <Code>other_file.png</Code> was deleted
+                    from cloud storage.
+                </Text>
+            </Tile.Section>
+
+            <Tile.Footer>
+                <Button
+                    palette="negative"
+                    data-size="small"
+                >
+                    X
+                </Button>
+            </Tile.Footer>
+        </Tile.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Spacing
 
-You can adjust the spacing between `Overlay` content via the `spacing`, `spacing_x`, and `spacing_y` properties respectively.
+You can adjust the spacing between `<Overlay.Section>` child content via the `spacing`, `spacing_x`, and `spacing_y` properties.
 
 ```svelte {title="Overlay Spacing" mode="repl"}
 <script>
@@ -924,63 +953,65 @@ You can adjust the spacing between `Overlay` content via the `spacing`, `spacing
     } from "@kahi-ui/framework";
 </script>
 
-<Overlay
-    alignment_x="right"
-    alignment_y="bottom"
-    spacing="medium"
-    padding_bottom="medium"
-    padding_right="medium"
->
-    <Tile.Container
-        palette="auto"
-        elevation="medium"
-        width="content-max"
-        max_width="75"
+<Overlay.Container>
+    <Overlay.Section
+        alignment_x="right"
+        alignment_y="bottom"
+        spacing="medium"
+        padding_bottom="medium"
+        padding_right="medium"
     >
-        <Tile.Section>
-            <Tile.Header>File Deleted</Tile.Header>
+        <Tile.Container
+            palette="auto"
+            elevation="medium"
+            width="content-max"
+            max_width="75"
+        >
+            <Tile.Section>
+                <Tile.Header>File Deleted</Tile.Header>
 
-            <Text>
-                <Code>important_file.docx</Code> was deleted
-                from cloud storage.
-            </Text>
-        </Tile.Section>
+                <Text>
+                    <Code>important_file.docx</Code> was
+                    deleted from cloud storage.
+                </Text>
+            </Tile.Section>
 
-        <Tile.Footer>
-            <Button
-                palette="negative"
-                data-size="small"
-            >
-                X
-            </Button>
-        </Tile.Footer>
-    </Tile.Container>
+            <Tile.Footer>
+                <Button
+                    palette="negative"
+                    data-size="small"
+                >
+                    X
+                </Button>
+            </Tile.Footer>
+        </Tile.Container>
 
-    <Tile.Container
-        palette="auto"
-        elevation="medium"
-        width="content-max"
-        max_width="75"
-    >
-        <Tile.Section>
-            <Tile.Header>File Deleted</Tile.Header>
+        <Tile.Container
+            palette="auto"
+            elevation="medium"
+            width="content-max"
+            max_width="75"
+        >
+            <Tile.Section>
+                <Tile.Header>File Deleted</Tile.Header>
 
-            <Text>
-                <Code>other_file.png</Code> was deleted
-                from cloud storage.
-            </Text>
-        </Tile.Section>
+                <Text>
+                    <Code>other_file.png</Code> was deleted
+                    from cloud storage.
+                </Text>
+            </Tile.Section>
 
-        <Tile.Footer>
-            <Button
-                palette="negative"
-                data-size="small"
-            >
-                X
-            </Button>
-        </Tile.Footer>
-    </Tile.Container>
-</Overlay>
+            <Tile.Footer>
+                <Button
+                    palette="negative"
+                    data-size="small"
+                >
+                    X
+                </Button>
+            </Tile.Footer>
+        </Tile.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
 
 ## Transition
