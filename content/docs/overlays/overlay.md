@@ -1,78 +1,125 @@
 +++
-[[properties.Overlay]]
+[[properties."Overlay.Container"]]
 name="logic_id"
-description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `Overlay`, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `<Overlay.Container>`, which controls the visible state via CSS."
 types=["string"]
 
-[[properties.Overlay]]
-name="state"
-description="Controls the visible state of the `Overlay` whenever `logic_id` is set."
+[[properties."Overlay.Container"]]
+name="logic_state"
+description="Controls the visible state of the `<Overlay.Container>` whenever `logic_id` is set."
 types=["boolean"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Container"]]
+name="focus_first"
+description="Configures the starting element used to set the boundaries of the focus trapping looping. Otherwise, the first focusable element found will be used."
+types=["null", "HTMLElement", "string"]
+
+[[properties."Overlay.Container"]]
+name="focus_last"
+description="Configures the end element used to set the boundaries of the focus trapping looping. Otherwise, the last focusable element found will be used."
+types=["null", "HTMLElement", "string"]
+
+[[properties."Overlay.Container"]]
+name="focus_target"
+description="Configures the element given focus when `logic_state` is enabled. Otherwise, the first focusable element found will be used."
+types=["null", "HTMLElement", "string"]
+
+[[properties."Overlay.Container"]]
 name="captive"
-description="Renders a `ContextBackdrop` as a sibling before the `Overlay`, which becomes active whenever the visible state is active."
+description="Renders a `Backdrop` as a sibling before the `<Overlay.Section>`, which becomes visible whenever `logic_state` is active."
 types=["boolean"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Container"]]
 name="dismissible"
-description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
+description="Adjusts enables the child `Backdrop` to be clickable for dismissing, if `captive` is enabled. Also enabling the user to press `ESC` to dismiss."
 types=["boolean"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Container"]]
+name="loading"
+description="When the property is set and the `logic_state` view is not active, the child content in `<Overlay.Section>` is not rendered to DOM."
+types=["lazy"]
+
+[[properties."Overlay.Container"]]
 name="once"
-description="Enables dismissing of the `Overlay` whenever inner content is clicked."
+description="Enables dismissing of the `<Overlay.Container>` whenever inner content is clicked."
 types=["boolean"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
+name="animation"
+description="Selects the animation to be ran whenever `logic_state` is active."
+default="scale"
+types=["clip", "fade", "scale", "slide"]
+
+[[properties."Overlay.Section"]]
+name="direction"
+description="Sets the direction in which the selected animation will move to, if applicable."
+default="bottom"
+types=["bottom", "left", "right", "top"]
+
+[[properties."Overlay.Section"]]
 name="orientation"
-description="Renders the `Overlay` children horizontally."
+description="Renders the `<Overlay.Section>` children horizontally."
 types=["horizontal", "{VIEWPORT}:horizontal"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
 name="alignment"
-description="Adjusts where the child content will be placed within the `Overlay` along both axis."
+description="Adjusts where the child content will be placed within the `<Overlay.Section>` along both axis."
 default="center"
 types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
 name="alignment_x"
-description="Adjusts where the child content will be placed within the `Overlay` along the horizontal axis."
+description="Adjusts where the child content will be placed within the `<Overlay.Section>` along the horizontal axis."
 default="center"
 types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
 name="alignment_y"
-description="Adjusts where the child content will be placed within the `Overlay` along the vertical axis."
+description="Adjusts where the child content will be placed within the `<Overlay.Section>` along the vertical axis."
 default="center"
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
 name="spacing"
-description="Adjusts the visual spacing between child content in the `Overlay`."
+description="Adjusts the visual spacing between child content in the `<Overlay.Section>`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between child content in the `Overlay`."
+description="Adjusts the horizontal visual spacing between child content in the `<Overlay.Section>`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
-[[properties.Overlay]]
+[[properties."Overlay.Section"]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between child content in the `Overlay`."
+description="Adjusts the vertical visual spacing between child content in the `<Overlay.Section>`."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
-[[events.Overlay]]
+[[events."Overlay.Container"]]
 name="active"
-description="Fires whenever the `Overlay` is activated."
+description="Fires whenever the `Overlay.Container` is activated."
 types=["CustomEvent<void>"]
 
-[[events.Overlay]]
+[[events."Overlay.Container"]]
 name="dismiss"
-description="Fires whenever the `Overlay` is dismissed."
+description="Fires whenever the `Overlay.Container` is dismissed."
 types=["CustomEvent<void>"]
 
-[[slots.Overlay]]
+[[slots."Overlay.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Overlay.Button"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Overlay.Group"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Overlay.Section"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
