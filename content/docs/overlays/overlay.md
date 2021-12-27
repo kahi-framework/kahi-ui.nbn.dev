@@ -1,7 +1,7 @@
 +++
 [[properties."Overlay.Container"]]
 name="logic_id"
-description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `<Overlay.Container>`, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before child `<Overlay.Section>`, which controls the visible state via CSS."
 types=["string"]
 
 [[properties."Overlay.Container"]]
@@ -21,7 +21,7 @@ types=["null", "HTMLElement", "string"]
 
 [[properties."Overlay.Container"]]
 name="focus_target"
-description="Configures the element given focus when `logic_state` is enabled. Otherwise, the first focusable element found will be used."
+description="Configures the element given focus when `logic_state` is active. Otherwise, the first focusable element found will be used."
 types=["null", "HTMLElement", "string"]
 
 [[properties."Overlay.Container"]]
@@ -31,7 +31,7 @@ types=["boolean"]
 
 [[properties."Overlay.Container"]]
 name="dismissible"
-description="Adjusts enables the child `Backdrop` to be clickable for dismissing, if `captive` is enabled. Also enabling the user to press `ESC` to dismiss."
+description="Enables the child `Backdrop` to be clickable for dismissing, if `captive` is enabled. Also enabling the user to press `ESC` to dismiss."
 types=["boolean"]
 
 [[properties."Overlay.Container"]]
@@ -96,12 +96,12 @@ types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[events."Overlay.Container"]]
 name="active"
-description="Fires whenever the `Overlay.Container` is activated."
+description="Fires whenever the `<Overlay.Container>` is activated."
 types=["CustomEvent<void>"]
 
 [[events."Overlay.Container"]]
 name="dismiss"
-description="Fires whenever the `Overlay.Container` is dismissed."
+description="Fires whenever the `<Overlay.Container>` is dismissed."
 types=["CustomEvent<void>"]
 
 [[slots."Overlay.Container"]]
