@@ -373,8 +373,9 @@ You can adjust which side your content is placed on via the `placement` property
     >
         <Box
             palette="inverse"
-            max_width="content-max"
+            elevation="high"
             padding="medium"
+            shape="rounded"
         >
             This is a RIGHT Popover.
         </Box>
@@ -395,8 +396,9 @@ You can adjust which side your content is placed on via the `placement` property
     >
         <Box
             palette="inverse"
-            max_width="content-max"
+            elevation="high"
             padding="medium"
+            shape="rounded"
         >
             This is a BOTTOM Popover.
         </Box>
@@ -412,138 +414,147 @@ You can align `Popover` which direction the child content breaks, via the `align
 <script>
     import {
         Box,
-        ContextButton,
         Popover,
         Spacer,
     } from "@kahi-ui/framework";
 </script>
 
-<Popover
-    logic_id="popover-alignment-right"
-    alignment_x="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-x-right"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open RIGHT Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open RIGHT X Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="huge"
-        padding_y="medium"
+    <Popover.Section
+        alignment_x="right"
+        spacing="medium"
     >
-        This is a RIGHT Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a RIGHT X Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-center-horizontal"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-x-center"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open CENTER Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open CENTER X Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="huge"
-        padding_y="medium"
-    >
-        This is a CENTER Popover.
-    </Box>
-</Popover>
+    <Popover.Section spacing="medium">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a CENTER X Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-left"
-    alignment_x="left"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-x-left"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open LEFT Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open LEFT X Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="huge"
-        padding_y="medium"
+    <Popover.Section
+        alignment_x="left"
+        spacing="medium"
     >
-        This is a LEFT Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a LEFT X Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
 <Spacer spacing="huge" />
 
-<Popover
-    logic_id="popover-alignment-top"
-    alignment_y="top"
-    placement="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-y-top"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open TOP Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open TOP Y Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="medium"
-        padding_y="huge"
+    <Popover.Section
+        placement="right"
+        alignment_y="top"
+        spacing="medium"
     >
-        This is a TOP Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a TOP Y Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-center-vertical"
-    placement="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-y-center"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open CENTER Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open CENTER Y Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="medium"
-        padding_y="huge"
+    <Popover.Section
+        placement="right"
+        spacing="medium"
     >
-        This is a CENTER Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a CENTER Y Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-bottom"
-    alignment_y="bottom"
-    placement="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-y-bottom"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open BOTTOM Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open BOTTOM Y Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="medium"
-        padding_y="huge"
+    <Popover.Section
+        placement="right"
+        alignment_y="bottom"
+        spacing="medium"
     >
-        This is a BOTTOM Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a BOTTOM Y Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
