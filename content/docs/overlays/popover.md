@@ -1,58 +1,79 @@
 +++
-[[properties.Popover]]
+[[properties."Popover.Container"]]
 name="logic_id"
-description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `Popover`, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before child `<Popover.Section>`, which controls the visible state via CSS."
 types=["string"]
 
-[[properties.Popover]]
-name="hidden"
-description="Controls when the `Popover` hides its child content."
-types=["boolean", "{VIEWPORT}"]
-
-[[properties.Popover]]
-name="state"
-description="Controls the visible state of the `Popover` whenever `logic_id` is set."
+[[properties."Popover.Container"]]
+name="logic_state"
+description="Controls the visible state of the `<Popover.Container>` whenever `logic_id` is set."
 types=["boolean"]
 
-[[properties.Popover]]
+[[properties."Popover.Container"]]
+name="focus_target"
+description="Configures the element given focus when `logic_state` is active. Otherwise, the first focusable element found will be used."
+types=["null", "HTMLElement", "string"]
+
+[[properties."Popover.Container"]]
 name="dismissible"
-description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
+description="Enables the user to press `ESC` to dismiss. Also enables dismissing via inner content losing focus or clicking outside of `<Popover.Section>`."
 types=["boolean"]
 
-[[properties.Popover]]
+[[properties."Popover.Container"]]
 name="once"
-description="Enables dismissing of the `Popover` whenever inner content is clicked."
+description="Enables dismissing of the `<Popover.Container>` whenever inner content is clicked."
 types=["boolean"]
 
-[[properties.Popover]]
+[[properties."Popover.Section"]]
+name="animation"
+description="Selects the animation to be ran whenever `logic_state` is active."
+default="clip"
+types=["clip", "fade", "scale", "slide"]
+
+[[properties."Popover.Section"]]
+name="placement"
+description="Adjusts where the child content will be placed within the `<Popover.Section>` along the vertical axis."
+default="bottom"
+types=["top", "left", "bottom", "right"]
+
+[[properties."Popover.Section"]]
 name="alignment_x"
-description="**(`top/bottom` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Popover` along the horizontal axis."
+description="**(`top/bottom` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `<Popover.Section>` along the horizontal axis."
 default="center"
 types=["center", "left", "right"]
 
-[[properties.Popover]]
+[[properties."Popover.Section"]]
 name="alignment_y"
-description="**(`left/right` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Popover` along the vertical axis."
+description="**(`left/right` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `<Popover.Section>` along the vertical axis."
 default="center"
 types=["center", "bottom", "top"]
 
-[[properties.Popover]]
-name="placement"
-description="Adjusts where the child content will be placed within the `Popover` along the vertical axis."
-default="left"
-types=["top", "left", "bottom", "right"]
-
-[[events.Popover]]
+[[events."Popover.Container"]]
 name="active"
-description="Fires whenever the `Popover` is activated."
+description="Fires whenever the `<Popover.Container>` is activated."
 types=["CustomEvent<void>"]
 
-[[events.Popover]]
+[[events."Popover.Container"]]
 name="dismiss"
-description="Fires whenever the `Popover` is dismissed."
+description="Fires whenever the `<Popover.Container>` is dismissed."
 types=["CustomEvent<void>"]
 
-[[slots.Popover]]
+[[slots."Popover.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Popover.Button"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Popover.Group"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Popover.Section"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
@@ -135,9 +156,17 @@ types=["{}"]
 
 ## Imports
 
+<!-- prettier-ignore -->
 ```svelte {title="Popover Imports"}
 <script>
     import {Popover} from "@kahi-ui/framework";
+
+    const {
+        Container,
+        Button,
+        Group,
+        Section
+    } = Popover;
 </script>
 ```
 
