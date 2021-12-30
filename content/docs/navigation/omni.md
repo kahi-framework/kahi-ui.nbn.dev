@@ -65,25 +65,15 @@ types=["{}"]
 
     <Omni.Section>
         <Menu.Container>
-            <Menu.Button
-                palette="light"
-                variation="clear"
-                active
-            >
+            <Menu.Button variation="clear" active>
                 Docs
             </Menu.Button>
 
-            <Menu.Button
-                palette="light"
-                variation="clear"
-            >
+            <Menu.Button variation="clear">
                 Playground
             </Menu.Button>
 
-            <Menu.Button
-                palette="light"
-                variation="clear"
-            >
+            <Menu.Button variation="clear">
                 Storybook
             </Menu.Button>
         </Menu.Container>
@@ -91,10 +81,7 @@ types=["{}"]
 
     <Omni.Footer>
         <Menu.Container>
-            <Menu.Button
-                palette="light"
-                variation="clear"
-            >
+            <Menu.Button variation="clear">
                 GitHub
             </Menu.Button>
         </Menu.Container>
@@ -272,25 +259,15 @@ You can adjust which side the content divider border will appear via the `placem
 
     <Omni.Section>
         <Menu.Container>
-            <Menu.Button
-                palette="light"
-                variation="clear"
-                active
-            >
+            <Menu.Button variation="clear" active>
                 Docs
             </Menu.Button>
 
-            <Menu.Button
-                palette="light"
-                variation="clear"
-            >
+            <Menu.Button variation="clear">
                 Playground
             </Menu.Button>
 
-            <Menu.Button
-                palette="light"
-                variation="clear"
-            >
+            <Menu.Button variation="clear">
                 Storybook
             </Menu.Button>
         </Menu.Container>
@@ -298,10 +275,7 @@ You can adjust which side the content divider border will appear via the `placem
 
     <Omni.Footer>
         <Menu.Container>
-            <Menu.Button
-                palette="light"
-                variation="clear"
-            >
+            <Menu.Button variation="clear">
                 GitHub
             </Menu.Button>
         </Menu.Container>
