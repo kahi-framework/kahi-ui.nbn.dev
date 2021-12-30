@@ -1,63 +1,23 @@
 +++
 [[properties."Aside.Container"]]
-name="logic_id"
-description="Alters the `Aside.Container` to be collapsible on Mobile / Tablet Viewports by wrapping the layout in a [`Offscreen`](../overlays/offscreen.md) Component."
-types=["string"]
-
-[[properties."Aside.Container"]]
-name="state"
-description="Controls the visible state of the `Aside.Container` whenever `logic_id` is set."
-types=["boolean"]
-
-[[properties."Aside.Container"]]
-name="captive"
-description="Renders a `ContextBackdrop` as a sibling before the `Aside.Container`, which becomes active whenever the visible state is active."
-types=["boolean"]
-
-[[properties."Aside.Container"]]
-name="dismissible"
-description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
-types=["boolean"]
-
-[[properties."Aside.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties."Aside.Container"]]
 name="placement"
-description="Adjusts which side the content divider border is placed, and which side the `Aside.Container` slides in from when the `logic_id` property is set."
+description="Adjusts which side the content divider border is placed, and which side the `Aside.Container` appears when `variation` is set to `sticky`."
 default="left"
 types=["left", "right"]
 
 [[properties."Aside.Container"]]
 name="variation"
-description="Adjusts the `Aside.Container` to remain at the top of the Viewport, even when the parent body / element is scrolled."
+description="Adjusts the `Aside.Container` to remain at the horizontal sides of the viewport, even when the parent element is scrolled."
 types=["sticky"]
-
-[[events."Aside.Container"]]
-name="active"
-description="Fires whenever the `Aside` is activated."
-types=["CustomEvent<void>"]
-
-[[events."Aside.Container"]]
-name="dismiss"
-description="Fires whenever the `Aside` is dismissed."
-types=["CustomEvent<void>"]
 
 [[slots."Aside.Container"]]
 name="default"
 description="Default unnamed slot."
-types=["{}"]
-
-[[slots."Aside.Container"]]
-name="close"
-description="Slot for rendering a `ContextButton` that closes an opened `Aside.Container`."
-types=["{}"]
-
-[[slots."Aside.Container"]]
-name="open"
-description="Slot for rendering a `ContextButton` that opens a collapsed `Aside.Container`."
 types=["{}"]
 
 [[slots."Aside.Footer"]]
@@ -99,6 +59,7 @@ types=["{}"]
 <Aside.Container
     palette="dark"
     max_width="content-max"
+    height="100"
 >
     <Aside.Header>
         <Anchor href="#">Kahi UI</Anchor>
@@ -133,7 +94,7 @@ types=["{}"]
 
     <Aside.Footer>
         <Anchor href="#">
-            <Text is="small">v0.2.0</Text>
+            <Text is="small">v0.5.0</Text>
         </Anchor>
     </Aside.Footer>
 </Aside.Container>
@@ -169,20 +130,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 <Mosaic sizing="medium" spacing="medium">
     <Aside.Container>
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -191,7 +144,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -204,20 +157,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 
     <Aside.Container palette="accent">
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -226,7 +171,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -239,20 +184,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 
     <Aside.Container palette="dark">
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -261,7 +198,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -274,20 +211,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 
     <Aside.Container palette="light">
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -296,7 +225,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -309,20 +238,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 
     <Aside.Container palette="alert">
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -331,7 +252,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -344,20 +265,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 
     <Aside.Container palette="affirmative">
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -366,7 +279,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -379,20 +292,12 @@ You can change the color palette of the `Aside` via the `palette` property.
 
     <Aside.Container palette="negative">
         <Aside.Header>
-            Kahi UI
+            <Anchor href="#">Kahi UI</Anchor>
             <Divider />
         </Aside.Header>
 
         <Aside.Section>
             <Menu.Container>
-                <Menu.Heading>DISPLAY</Menu.Heading>
-
-                <Menu.Button>
-                    Badge
-                    <Spacer />
-                    <span>ICON</span>
-                </Menu.Button>
-
                 <Menu.Heading>FEEDBACK</Menu.Heading>
 
                 <Menu.Button>
@@ -401,7 +306,7 @@ You can change the color palette of the `Aside` via the `palette` property.
                     <span>ICON</span>
                 </Menu.Button>
 
-                <Menu.Button>
+                <Menu.Button active>
                     Spinner
                     <Spacer />
                     <span>ICON</span>
@@ -414,90 +319,17 @@ You can change the color palette of the `Aside` via the `palette` property.
 </Mosaic>
 ```
 
-## Logic ID
-
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Aside.Container`, it will automatically inherit the set `logic_id`.
-
-> **NOTE**: Interally when the `logic_id` property is set, the `Aside.Container` wrapped in an [`Offscreen`](../overlays/offscreen.md) Component to provide the collapsing functionality.
-
-You can make the `Overlay` collapsible on Mobile and Tablet Viewports via the `logic_id` property. And then place two [`ContextButton`](../utilities/contextbutton.md) Components as the last children of a `Aside.Container`. Where they'll be floated over the Web Application content, with the first one being the open button. And the second one being the close button.
-
-```svelte {title="Aside Logic ID" mode="repl"}
-<script>
-    import {
-        Anchor,
-        Aside,
-        ContextButton,
-        Divider,
-        Menu,
-        Spacer,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Aside.Container
-    logic_id="aside-logic-id"
-    palette="dark"
-    max_width="content-max"
-    captive
-    dismissible
->
-    <Aside.Header>
-        <Anchor href="#">Kahi UI</Anchor>
-        <Divider />
-    </Aside.Header>
-
-    <Aside.Section>
-        <Menu.Container>
-            <Menu.Heading>DISPLAY</Menu.Heading>
-
-            <Menu.Button>
-                Badge
-                <Spacer />
-                <span>ICON</span>
-            </Menu.Button>
-
-            <Menu.Heading>FEEDBACK</Menu.Heading>
-
-            <Menu.Button>
-                Dot
-                <Spacer />
-                <span>ICON</span>
-            </Menu.Button>
-
-            <Menu.Button active>
-                Spinner
-                <Spacer />
-                <span>ICON</span>
-            </Menu.Button>
-        </Menu.Container>
-    </Aside.Section>
-
-    <Aside.Footer>
-        <Anchor href="#">
-            <Text is="small">v0.2.0</Text>
-        </Anchor>
-    </Aside.Footer>
-
-    <ContextButton variation="clear">+</ContextButton>
-    <ContextButton palette="dark" variation="clear">
-        x
-    </ContextButton>
-</Aside.Container>
-```
-
 ## Placement
 
 > **IMPORTANT**: The `placement` property does **NOT** affect how it will appear in your layout. You need to manually handle that.
 
-You can adjust which side the content divider border will appear, and which side a collapsible `Aside.Container` will slide out from via the `placement` property.
+You can adjust which side the content divider border will appear via the `placement` property.
 
 ```svelte {title="Aside Placement" mode="repl"}
 <script>
     import {
         Anchor,
         Aside,
-        ContextButton,
         Divider,
         Menu,
         Spacer,
@@ -506,12 +338,10 @@ You can adjust which side the content divider border will appear, and which side
 </script>
 
 <Aside.Container
-    logic_id="aside-logic-id"
     placement="right"
-    palette="dark"
+    palette="inverse"
     max_width="content-max"
-    captive
-    dismissible
+    height="100"
 >
     <Aside.Header>
         <Anchor href="#">Kahi UI</Anchor>
@@ -520,14 +350,6 @@ You can adjust which side the content divider border will appear, and which side
 
     <Aside.Section>
         <Menu.Container>
-            <Menu.Heading>DISPLAY</Menu.Heading>
-
-            <Menu.Button>
-                Badge
-                <Spacer />
-                <span>ICON</span>
-            </Menu.Button>
-
             <Menu.Heading>FEEDBACK</Menu.Heading>
 
             <Menu.Button>
@@ -546,13 +368,18 @@ You can adjust which side the content divider border will appear, and which side
 
     <Aside.Footer>
         <Anchor href="#">
-            <Text is="small">v0.2.0</Text>
+            <Text is="small">v0.5.0</Text>
         </Anchor>
     </Aside.Footer>
-
-    <ContextButton variation="clear">+</ContextButton>
-    <ContextButton palette="dark" variation="clear">
-        x
-    </ContextButton>
 </Aside.Container>
+```
+
+## Collapsing
+
+> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+
+While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinonated collapsable navigations interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
+
+```svelte {title="Aside Collapsing" mode="repl"}
+
 ```
