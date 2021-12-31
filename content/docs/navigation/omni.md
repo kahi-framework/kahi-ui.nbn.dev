@@ -287,8 +287,97 @@ You can adjust which side the content divider border will appear via the `placem
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 
-While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinonated collapsable navigations interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
+While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinionated collapsable navigations interfaces. Via Components like [`Popover`](../overlays/popover.md) and features like [`hidden`](../globals/hidden.md).
 
 ```svelte {title="Omni Collapsing" mode="repl"}
+<script>
+    import {
+        Anchor,
+        Box,
+        Divider,
+        Menu,
+        Omni,
+        Popover,
+    } from "@kahi-ui/framework";
+</script>
 
+<Omni.Container palette="dark" width="100">
+    <Omni.Header>
+        <Anchor href="#">Kahi UI</Anchor>
+        <Divider orientation="vertical" />
+        <Anchor href="#">
+            <Text is="small">v0.5.0</Text>
+        </Anchor>
+    </Omni.Header>
+
+    <Omni.Section hidden={["mobile", "tablet"]}>
+        <Menu.Container orientation="horizontal">
+            <Menu.Button variation="clear" active>
+                Docs
+            </Menu.Button>
+
+            <Menu.Button variation="clear">
+                Playground
+            </Menu.Button>
+
+            <Menu.Button variation="clear">
+                Storybook
+            </Menu.Button>
+        </Menu.Container>
+    </Omni.Section>
+
+    <Omni.Footer>
+        <Menu.Container
+            hidden={["mobile", "tablet"]}
+            orientation="horizontal"
+        >
+            <Menu.Button variation="clear">
+                GitHub
+            </Menu.Button>
+        </Menu.Container>
+
+        <Popover.Container
+            hidden={["desktop", "widescreen"]}
+            logic_id="popover-preview-omni-overflow"
+            dismissible
+        >
+            <Popover.Button variation="clear">
+                +
+            </Popover.Button>
+
+            <Popover.Section
+                alignment_x="left"
+                spacing="small"
+            >
+                <Box
+                    palette="auto"
+                    elevation="high"
+                    padding="medium"
+                    shape="rounded"
+                >
+                    <Menu.Container>
+                        <Menu.Button
+                            variation="clear"
+                            active
+                        >
+                            Docs
+                        </Menu.Button>
+
+                        <Menu.Button variation="clear">
+                            Playground
+                        </Menu.Button>
+
+                        <Menu.Button variation="clear">
+                            Storybook
+                        </Menu.Button>
+
+                        <Menu.Button variation="clear">
+                            GitHub
+                        </Menu.Button>
+                    </Menu.Container>
+                </Box>
+            </Popover.Section>
+        </Popover.Container>
+    </Omni.Footer>
+</Omni.Container>
 ```
