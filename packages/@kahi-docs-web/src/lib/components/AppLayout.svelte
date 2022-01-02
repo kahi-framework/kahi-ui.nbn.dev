@@ -4,12 +4,11 @@
 </script>
 
 <div class="app-layout">
-    <AppNavigation />
-
     <main class="app-container">
         <slot />
     </main>
 
+    <AppNavigation />
     <AppFooter />
 </div>
 

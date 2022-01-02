@@ -5,7 +5,7 @@
      * TODO: Scroll to current active item when collapsed on Mobile / Tablet
      */
 
-    import {Aside, Badge, ContextButton, Menu, Spacer} from "@kahi-ui/framework";
+    import {Aside, Badge, Button, Menu, Overlay, Position, Spacer} from "@kahi-ui/framework";
     import {onMount} from "svelte";
 
     import {navigation} from "@kahi-docs/shared";
@@ -19,10 +19,6 @@
 
     let section_element: HTMLElement | undefined = undefined;
 
-    export let element: HTMLElement | undefined = undefined;
-
-    export let state: boolean = false;
-
     onMount(() => {
         if (!section_element) return;
 
@@ -31,69 +27,72 @@
     });
 </script>
 
-<Aside.Container
-    bind:element
+<Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
+    <Button for="aside-navigation">
+        <MenuIcon />
+    </Button>
+</Position>
+
+<Overlay.Container
     class="aside-navigation"
     logic_id="aside-navigation"
-    variation="sticky"
-    bind:state
-    captive
+    contents={["desktop", "widescreen"]}
     dismissible
 >
-    <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-    <Aside.Section bind:element={section_element} margin_bottom="none">
-        <Menu.Container sizing="small">
-            {#each $navigation as menu (menu.text)}
-                <Menu.Divider>
-                    {menu.text}
+    <Overlay.Backdrop hidden={["desktop", "widescreen"]} />
 
-                    <svelte:fragment slot="sub-menu">
-                        <Menu.SubMenu>
-                            {#each menu.items as anchor (anchor.href)}
-                                <Menu.Item>
-                                    <AppAnchor href={anchor.href}>
-                                        {anchor.text}
+    <Overlay.Section
+        animation="slide"
+        direction="left"
+        alignment_x="left"
+        contents={["desktop", "widescreen"]}
+    >
+        <Aside.Container variation="sticky">
+            <!-- TODO: Margin modifier is temp until Framework update to fix it -->
+            <Aside.Section margin_bottom="none">
+                <Menu.Container sizing="small">
+                    {#each $navigation as menu (menu.text)}
+                        <Menu.Divider>
+                            {menu.text}
 
-                                        {#if anchor.badge}
-                                            <Spacer is="span" />
-                                            <Badge palette="accent" shape="rounded">
-                                                {anchor.badge}
-                                            </Badge>
-                                        {/if}
-                                    </AppAnchor>
-                                </Menu.Item>
-                            {/each}
-                        </Menu.SubMenu>
-                    </svelte:fragment>
-                </Menu.Divider>
-            {/each}
-        </Menu.Container>
-    </Aside.Section>
+                            <svelte:fragment slot="sub-menu">
+                                <Menu.SubMenu>
+                                    {#each menu.items as anchor (anchor.href)}
+                                        <Menu.Item>
+                                            <AppAnchor href={anchor.href}>
+                                                {anchor.text}
 
-    <svelte:fragment slot="close">
-        <ContextButton
-            size="huge"
-            palette="dark"
-            variation="clear"
-            hidden={["desktop", "widescreen"]}
-        >
-            <X />
-        </ContextButton>
-    </svelte:fragment>
+                                                {#if anchor.badge}
+                                                    <Spacer is="span" />
+                                                    <Badge palette="accent" shape="rounded">
+                                                        {anchor.badge}
+                                                    </Badge>
+                                                {/if}
+                                            </AppAnchor>
+                                        </Menu.Item>
+                                    {/each}
+                                </Menu.SubMenu>
+                            </svelte:fragment>
+                        </Menu.Divider>
+                    {/each}
+                </Menu.Container>
+            </Aside.Section>
 
-    <svelte:fragment slot="open">
-        <ContextButton size="huge" hidden={["desktop", "widescreen"]}>
-            <MenuIcon />
-        </ContextButton>
-    </svelte:fragment>
-</Aside.Container>
+            <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
+                <Overlay.Button variation="clear">
+                    <X />
+                </Overlay.Button>
+            </Position>
+        </Aside.Container>
+    </Overlay.Section>
+</Overlay.Container>
 
 <style>
     /**
      * NOTE: Need custom styling here to support the layout
      */
 
-    :global(.aside-navigation) {
+    :global(.aside-navigation .aside) {
         grid-area: aside;
 
         width: 18rem;
@@ -111,15 +110,8 @@
     }
 
     @media (min-width: 768px) {
-        :global(.aside-navigation) {
+        :global(.aside-navigation .aside) {
             padding-top: 4.4rem;
-        }
-    }
-
-    @media (max-width: 767.9px) {
-        :global(label[for="aside-navigation"]),
-        :global(.aside-navigation) {
-            z-index: 2;
         }
     }
 </style>

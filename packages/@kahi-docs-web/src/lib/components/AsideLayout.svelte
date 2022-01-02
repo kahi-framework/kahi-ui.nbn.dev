@@ -5,12 +5,12 @@
 </script>
 
 <div class="aside-layout">
-    <AsideNavigation />
-    <AppNavigation />
-
     <main class="aside-container">
         <slot />
     </main>
+
+    <AsideNavigation />
+    <AppNavigation />
 
     <AppFooter />
 </div>
