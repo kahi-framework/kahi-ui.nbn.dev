@@ -29,6 +29,7 @@ export default define_navigation({
         {
             text: "Globals",
             items: [
+                {href: "/docs/globals/contents", badge: "NEW"},
                 {href: "/docs/globals/html5"},
                 {href: "/docs/globals/hidden"},
                 {href: "/docs/globals/sizings"},
@@ -121,7 +122,7 @@ export default define_navigation({
                 {href: "/docs/layouts/grid"},
                 {href: "/docs/layouts/group"},
                 {href: "/docs/layouts/mosaic"},
-                {href: "/docs/layouts/position"},
+                {href: "/docs/layouts/position", badge: "UPDATED"},
                 {href: "/docs/layouts/scrollable"},
                 {href: "/docs/layouts/spacer", badge: "UPDATED"},
                 {href: "/docs/layouts/stack"},
