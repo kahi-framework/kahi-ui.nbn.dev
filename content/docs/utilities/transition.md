@@ -24,7 +24,7 @@ types=["number", "string"]
 name="variation"
 description="Controls the variation of the selected animation, if applicable."
 default="undefined"
-types=["undefined", "enter", "exit"]
+types=["undefined", "explicit", "enter", "exit"]
 
 [[events.Transition]]
 name="animationend"
@@ -36,100 +36,20 @@ name="animationstart"
 description="Fires whenever the `Transition` animation starts."
 types=["AnimationEvent"]
 
+[[events.Transition]]
+name="transitionend"
+description="Fires whenever the `Transition` `variation="explicit"` animation ends."
+types=["TransitionEvent"]
+
+[[events.Transition]]
+name="transitionstart"
+description="Fires whenever the `Transition` `variation="explicit"` animation starts."
+types=["TransitionEvent"]
+
 [[slots.Transition]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-bottom-end-clip-path"
-description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-bottom-start-clip-path"
-description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-left-end-clip-path"
-description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-left-start-clip-path"
-description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-right-end-clip-path"
-description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-right-start-clip-path"
-description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-top-end-clip-path"
-description="Controls the `clip-path: inset` used for end of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-clip-top-start-clip-path"
-description="Controls the `clip-path: inset` used for start of a enter `clip` animation. (reverse in exit variation)"
-types=["<length-percentage> <length-percentage> <length-percentage> <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-scale-end-scale"
-description="Controls the `transform: scale` used for end of a enter `scale` animation. (reverse in exit variation)"
-types=["<number>"]
-
-[[custom_properties.Transition]]
-name="--transition-scale-start-scale"
-description="Controls the `transform: scale` used for start of a enter `scale` animation. (reverse in exit variation)"
-types=["<number>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-bottom-end-translate"
-description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-bottom-start-translate"
-description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-left-end-translate"
-description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-left-start-translate"
-description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-right-end-translate"
-description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-right-start-translate"
-description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-top-end-translate"
-description="Controls the `transform: translate` used for end of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
-
-[[custom_properties.Transition]]
-name="--transition-slide-top-start-translate"
-description="Controls the `transform: translate` used for start of a enter `slide` animation. (reverse in exit variation)"
-types=["<length-percentage>, <length-percentage>"]
 +++
 
 # Transition
@@ -170,6 +90,38 @@ types=["<length-percentage>, <length-percentage>"]
 <script>
     import {Transition} from "@kahi-ui/framework";
 </script>
+```
+
+## Explicit
+
+> **NOTE**: New since `v0.5.0`.
+
+You can alter `Transition` to use its [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations. Which skips the first-paint iteration of the animation via the `variation` property.
+
+```svelte {title="Transition Explicit"}
+<script>
+    import {
+        Box,
+        Button,
+        Transition,
+    } from "@kahi-ui/framework";
+
+    let variation = "exit";
+</script>
+
+<Button
+    on:click={() =>
+        (variation =
+            variation === "exit" ? "enter" : "exit")}
+>
+    Toggle Variation
+</Button>
+
+<Transition animation="clip" variation="explicit" {variation}>
+    <Box palette="inverse" padding="medium">
+        hello world!
+    </Box>
+</Transition>
 ```
 
 ## Delay
