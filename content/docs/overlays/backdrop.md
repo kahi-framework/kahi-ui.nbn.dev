@@ -16,7 +16,7 @@ types=["<alpha-value>"]
 
 `Backdrop` stretches across its parent element, providing a dimmed background that sits under sibling content. Useful for things like prompts.
 
-```svelte {title="Backdrop Preview"}
+```svelte {title="Backdrop Preview" mode="repl"}
 <script>
     import {Backdrop} from "@kahi-ui/framework";
 </script>

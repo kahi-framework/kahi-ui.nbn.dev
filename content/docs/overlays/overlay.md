@@ -648,8 +648,6 @@ You can optionally include a backdrop by passing via composing [`Backdrop`](./ba
 </Button>
 
 <Overlay.Container logic_id="overlay-no-backdrop">
-    <Backdrop />
-
     <Overlay.Section>
         <Card.Container
             palette="inverse"
@@ -1054,7 +1052,7 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
 
 You can change which built-in [`Transition`](../utilities/transition.md) is animated using `clip`, `fade`, `scale`, or `slide` via the `animation` property.
 
-```svelte {title="Overlay Transition"}
+```svelte {title="Overlay Transition" mode="repl"}
 <script>
     import {
         Button,
@@ -1070,7 +1068,6 @@ You can change which built-in [`Transition`](../utilities/transition.md) is anim
 <Overlay.Container logic_id="overlay-transition">
     <Overlay.Section>
         <Card.Container
-            animation="slide"
             palette="inverse"
             max_width="75"
         >
@@ -1093,7 +1090,7 @@ You can change which built-in [`Transition`](../utilities/transition.md) is anim
 
 You can change which direction the entrance animation comes from via the `direction` property.
 
-```svelte {title="Overlay Transition"}
+```svelte {title="Overlay Transition" mode="repl"}
 <script>
     import {
         Button,
