@@ -338,7 +338,7 @@ While this Component does not have built-in collapsing, the Framework provides t
 
         <Popover.Container
             hidden={["desktop", "widescreen"]}
-            logic_id="popover-preview-omni-overflow"
+            logic_id="omni-collapsing"
             dismissible
         >
             <Popover.Button variation="clear">
