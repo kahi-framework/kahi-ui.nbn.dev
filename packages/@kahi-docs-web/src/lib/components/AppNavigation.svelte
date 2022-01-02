@@ -30,17 +30,7 @@
 <script lang="ts">
     import {browser} from "$app/env";
     import {base} from "$app/paths";
-    import {
-        Box,
-        ContextButton,
-        Divider,
-        Menu,
-        Popover,
-        Portal,
-        Omni,
-        Text,
-        TextInput,
-    } from "@kahi-ui/framework";
+    import {Box, Divider, Menu, Popover, Portal, Omni, Text, TextInput} from "@kahi-ui/framework";
 
     import {search_keybind} from "../client/keybind";
     import {PACKAGE_VERSION} from "../shared/constants";
@@ -52,7 +42,7 @@
     import PromptSearch from "./PromptSearch.svelte";
     import ThemeButton from "./ThemeButton.svelte";
 
-    export let state: boolean = false;
+    let logic_state: boolean = false;
     let search_state: boolean = false;
 
     function on_search_active(event: Event): void {
@@ -61,11 +51,11 @@
         const target = event.target as HTMLElement | null;
         if (target) target.blur();
 
-        state = false;
+        logic_state = false;
         search_state = true;
     }
 
-    $: if (!$_collapse_viewports) state = false;
+    $: if (!$_collapse_viewports) logic_state = false;
 </script>
 
 <svelte:window use:search_keybind={on_search_active} />
@@ -82,38 +72,36 @@
         </AppAnchor>
     </Omni.Header>
 
-    <Omni.Footer>
-        <Omni.Section
-            class="app-navigation-search"
-            hidden={!browser || $_search_viewports}
-            padding_x="large"
+    <Omni.Section
+        class="app-navigation-search"
+        hidden={!browser || $_search_viewports}
+        margin_x="medium"
+    >
+        <TextInput
+            type="search"
+            placeholder="[CTRL+/] Search"
+            size="small"
+            variation="block"
+            align="center"
             max_width="prose"
+            on:focusin={on_search_active}
+        />
+    </Omni.Section>
+
+    <Omni.Footer>
+        <Popover.Container
+            logic_id="app-navigation"
+            hidden={["widescreen"]}
+            dismissible
+            bind:logic_state
         >
-            <TextInput
-                type="search"
-                placeholder="[CTRL+/] Search"
-                size="small"
-                variation="block"
-                align="center"
-                on:focus={on_search_active}
-            />
-        </Omni.Section>
+            <Popover.Button palette="light" variation="clear" size="huge">
+                <MoreVertical />
+            </Popover.Button>
 
-        <Omni.Section>
-            <Popover
-                logic_id="app-navigation"
-                alignment_x="left"
-                spacing="small"
-                hidden={["mobile", "tablet", "desktop"]}
-                dismissible
-                bind:state
-            >
-                <ContextButton palette="light" variation="clear" size="huge" hidden="widescreen">
-                    <MoreVertical />
-                </ContextButton>
-
-                <Box hidden="widescreen" padding="medium" shape="rounded">
-                    <Menu.Container hidden="widescreen">
+            <Popover.Section alignment_x="left" spacing="small">
+                <Box elevation="high" padding="medium" shape="rounded">
+                    <Menu.Container>
                         {#each LINKS_APPLICATION as item (item.href)}
                             <Menu.Item>
                                 <AppAnchor href={item.href} no_handle prefetch>
@@ -135,35 +123,35 @@
                         {/if}
                     </Menu.Container>
                 </Box>
-            </Popover>
+            </Popover.Section>
+        </Popover.Container>
 
-            <Menu.Container
-                hidden={["mobile", "tablet", "desktop"]}
-                orientation="horizontal"
-                sizing="small"
-            >
-                {#each LINKS_APPLICATION as item (item.href)}
-                    <Menu.Item>
-                        <AppAnchor href={item.href} no_handle prefetch>
-                            <svelte:component this={item.icon} />
-                            {item.variation === "flush" ? "" : item.text}
-                        </AppAnchor>
-                    </Menu.Item>
-                {/each}
+        <Menu.Container
+            hidden={["mobile", "tablet", "desktop"]}
+            orientation="horizontal"
+            sizing="small"
+        >
+            {#each LINKS_APPLICATION as item (item.href)}
+                <Menu.Item>
+                    <AppAnchor href={item.href} no_handle prefetch>
+                        <svelte:component this={item.icon} />
+                        {item.variation === "flush" ? "" : item.text}
+                    </AppAnchor>
+                </Menu.Item>
+            {/each}
 
-                {#if browser}
-                    <Menu.Item>
-                        <ThemeButton />
-                    </Menu.Item>
-                {/if}
-            </Menu.Container>
-        </Omni.Section>
+            {#if browser}
+                <Menu.Item>
+                    <ThemeButton />
+                </Menu.Item>
+            {/if}
+        </Menu.Container>
     </Omni.Footer>
 </Omni.Container>
 
 {#if browser}
     <Portal>
-        <PromptSearch bind:state={search_state} />
+        <PromptSearch bind:logic_state={search_state} />
     </Portal>
 {/if}
 

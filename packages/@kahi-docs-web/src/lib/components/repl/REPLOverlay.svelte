@@ -13,9 +13,11 @@
     export let alignment_y: PROPERTY_ALIGNMENT_Y_BREAKPOINT | undefined = undefined;
 </script>
 
-<Overlay class="repl-overlay {_class}" {alignment_x} {alignment_y} {style}>
-    <slot />
-</Overlay>
+<Overlay.Container class="repl-overlay {_class}" {style}>
+    <Overlay.Section {alignment_x} {alignment_y}>
+        <slot />
+    </Overlay.Section>
+</Overlay.Container>
 
 <style>
     :global(.repl-overlay) {

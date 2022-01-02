@@ -22,7 +22,7 @@
 
     import {compress_safe} from "@kahi-docs/shared";
 
-    export let state: boolean = false;
+    export let logic_state: boolean = false;
     export let value: string;
 
     $: _compressed = compress_safe(value);
@@ -30,39 +30,47 @@
     $: _href_embed = `${location.origin}/playground/embed/?script=${_compressed}`;
 </script>
 
-<Overlay class="share-prompt" logic_id="share-prompt" bind:state captive dismissible>
-    <Card.Container palette="auto" width="prose" max_width="viewport-75">
-        <Card.Header>Share Playground</Card.Header>
+<Overlay.Container class="share-prompt" logic_id="share-prompt" dismissible bind:logic_state>
+    <Overlay.Backdrop />
 
-        <Card.Section>
-            <Form.Control logic_id="playground-href">
-                <Form.Label>
-                    <Text is="strong">Playground</Text>:
-                </Form.Label>
+    <Overlay.Section>
+        <Card.Container palette="auto" width="prose" max_width="viewport-75">
+            <Card.Header>Share Playground</Card.Header>
 
-                <TextInput value={_href_playground} readonly />
-            </Form.Control>
+            <Card.Section>
+                <Form.Control logic_id="playground-href">
+                    <Form.Label>
+                        <Text is="strong">Playground</Text>:
+                    </Form.Label>
 
-            <Spacer spacing_y="small" />
+                    <TextInput value={_href_playground} readonly />
+                </Form.Control>
 
-            <Form.Control logic_id="embed-iframe">
-                <Form.Label>
-                    <Text is="strong">iframe</Text>:
-                </Form.Label>
+                <!--
+                    TODO: Fix security violations that prevent embedding from working
 
-                <TextInput
-                    is="textarea"
-                    lines={10}
-                    value={TEMPLATE_IFRAME({
-                        href_embed: _href_embed,
-                        href_playground: _href_playground,
-                    })}
-                    readonly
-                />
-            </Form.Control>
-        </Card.Section>
-    </Card.Container>
-</Overlay>
+                    <Spacer spacing_y="small" />
+                    
+                    <Form.Control logic_id="embed-iframe">
+                        <Form.Label>
+                            <Text is="strong">iframe</Text>:
+                        </Form.Label>
+                        
+                        <TextInput
+                            is="textarea"
+                            lines={10}
+                            value={TEMPLATE_IFRAME({
+                                href_embed: _href_embed,
+                                href_playground: _href_playground,
+                            })}
+                            readonly
+                        />
+                    </Form.Control>
+                -->
+            </Card.Section>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
 
 <style>
     :global(.share-prompt) :global(input) {
