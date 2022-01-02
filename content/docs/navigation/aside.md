@@ -462,7 +462,7 @@ While this Component does not have built-in collapsing, the Framework provides t
             </Aside.Footer>
 
             <Position
-                variation={["action", "container"]}
+                variation={["container", "action"]}
                 hidden={["desktop", "widescreen"]}
             >
                 <Overlay.Button variation="clear">
