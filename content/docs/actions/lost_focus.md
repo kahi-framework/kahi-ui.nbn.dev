@@ -7,27 +7,27 @@
 ```svelte {title="lost_focus Preview" mode="repl"}
 <script>
     import {
-        Box,
         Button,
         TextInput,
+        lost_focus,
     } from "@kahi-ui/framework";
 
-    let captured_focus = false;
+    let has_focus = false;
 </script>
 
 <TextInput
-    palette={captured ? "affirmative" : "negative"}
+    palette={has_focus ? "affirmative" : "negative"}
     actions={[
         [
             lost_focus,
             {
-                enabled: captured_focus,
+                enabled: has_focus,
                 on_lost_focus: () =>
-                    (captured_focus = false),
+                    (has_focus = false),
             },
         ],
     ]}
-    on:focusin={() => (captured_focus = true)}
+    on:focusin={() => (has_focus = true)}
 />
 
 <Button>Focus me!</Button>
@@ -45,6 +45,6 @@ Svelte Actions are always ran on Javascript-enabled Browser. So should not be us
 
 ## Ignore
 
-You can ignore elements that matches a given CSS Selector via the `IClickInsideOptions.ignore: string` option.
+You can ignore elements that matches a given CSS Selector via the `ILostFocusOptions.ignore: string` option.
 
 > **TODO**: snippet
