@@ -25,13 +25,8 @@ description="Configures the element given focus when `logic_state` is active. Ot
 types=["null", "HTMLElement", "string"]
 
 [[properties."Overlay.Container"]]
-name="captive"
-description="Renders a `Backdrop` as a sibling before the `<Overlay.Section>`, which becomes visible whenever `logic_state` is active."
-types=["boolean"]
-
-[[properties."Overlay.Container"]]
 name="dismissible"
-description="Enables the child `Backdrop` to be clickable for dismissing, if `captive` is enabled. Also enabling the user to press `ESC` to dismiss."
+description="Enables the user to press `ESC` to dismiss."
 types=["boolean"]
 
 [[properties."Overlay.Container"]]
@@ -150,9 +145,10 @@ types=["{}"]
 
 <Overlay.Container
     logic_id="overlay-preview"
-    captive
     dismissible
 >
+    <Overlay.Backdrop />
+
     <Overlay.Section>
         <Card.Container palette="auto" max_width="75">
             <Card.Header>Are you sure?</Card.Header>
@@ -189,6 +185,7 @@ types=["{}"]
     import {Overlay} from "@kahi-ui/framework";
 
     const {
+        Backdrop,
         Container,
         Button,
         Group,
@@ -624,34 +621,42 @@ You can customize the loading behavior of slotted content via the `loading` prop
 </Overlay.Container>
 ```
 
-## Captive
+## Backdrop
 
-You can optionally include a backdrop by passing via the `captive` property.
+You can optionally include a backdrop by passing via composing [`Backdrop`](./backdrop.md) (non-dismissible) or `<Overlay.Backdrop>` (dismissible) Components.
 
-```svelte {title="Overlay Captive" mode="repl"}
+```svelte {title="Overlay Backdrop" mode="repl"}
 <script>
     import {
+        Backdrop,
         Button,
         Card,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-captive-disabled">
-    Open NON-CAPTIVE Overlay
-</Button>
-<Button for="overlay-captive-enabled">
-    Open CAPTIVE Overlay
+<Button for="overlay-no-backdrop">
+    Open NO Backdrop Overlay
 </Button>
 
-<Overlay.Container logic_id="overlay-captive-disabled">
+<Button for="overlay-backdrop-non-dismissible">
+    Open NON-DISMISSIBLE Backdrop Overlay
+</Button>
+
+<Button for="overlay-backdrop-dismissible">
+    Open DISMISSIBLE Backdrop Overlay
+</Button>
+
+<Overlay.Container logic_id="overlay-no-backdrop">
+    <Backdrop />
+
     <Overlay.Section>
         <Card.Container
             palette="inverse"
             max_width="75"
         >
             <Card.Header>
-                NON-CAPTIVE Overlay
+                NO Backdrop Overlay
             </Card.Header>
 
             <Card.Footer>
@@ -667,15 +672,44 @@ You can optionally include a backdrop by passing via the `captive` property.
 </Overlay.Container>
 
 <Overlay.Container
-    logic_id="overlay-captive-enabled"
-    captive
+    logic_id="overlay-backdrop-non-dismissible"
 >
+    <Backdrop />
+
     <Overlay.Section>
         <Card.Container
             palette="inverse"
             max_width="75"
         >
-            <Card.Header>CAPTIVE Overlay</Card.Header>
+            <Card.Header>
+                NON-DISMISSIBLE Backdrop Overlay
+            </Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+
+<Overlay.Container
+    logic_id="overlay-backdrop-dismissible"
+>
+    <Overlay.Backdrop />
+
+    <Overlay.Section>
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>
+                DISMISSIBLE Backdrop Overlay
+            </Card.Header>
 
             <Card.Footer>
                 <Overlay.Button
@@ -696,7 +730,7 @@ You can optionally include a backdrop by passing via the `captive` property.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can optionally have the `Overlay` dismissible by clicking the backdrop or pressing the `ESC` key, via the `dismissible` property.
+You can optionally have the `Overlay` dismissible by pressing the `ESC` key, via the `dismissible` property.
 
 ```svelte {title="Overlay Dismissible" mode="repl"}
 <script>
@@ -710,14 +744,16 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
 <Button for="overlay-dismissible-disabled">
     Open NON-DISMISSIBLE Overlay
 </Button>
+
 <Button for="overlay-dismissible-enabled">
     Open DISMISSIBLE Overlay
 </Button>
 
 <Overlay.Container
     logic_id="overlay-dismissible-disabled"
-    captive
 >
+    <Overlay.Backdrop />
+
     <Overlay.Section>
         <Card.Container
             palette="inverse"
@@ -741,9 +777,10 @@ You can optionally have the `Overlay` dismissible by clicking the backdrop or pr
 
 <Overlay.Container
     logic_id="overlay-dismissible-enabled"
-    captive
     dismissible
 >
+    <Overlay.Backdrop />
+
     <Overlay.Section>
         <Card.Container
             palette="inverse"
@@ -790,10 +827,9 @@ You can enable having the `Overlay` dismissed whenever `<Overlay.Section>` inner
     Open ONCE Overlay
 </Button>
 
-<Overlay.Container
-    logic_id="overlay-once-disabled"
-    captive
->
+<Overlay.Container logic_id="overlay-once-disabled">
+    <Overlay.Backdrop />
+
     <Overlay.Section>
         <Card.Container
             palette="inverse"
@@ -815,9 +851,10 @@ You can enable having the `Overlay` dismissed whenever `<Overlay.Section>` inner
 
 <Overlay.Container
     logic_id="overlay-once-enabled"
-    captive
     once
 >
+    <Overlay.Backdrop />
+
     <Overlay.Section>
         <Card.Container
             palette="inverse"
