@@ -24,7 +24,7 @@ types=["number", "string"]
 name="variation"
 description="Controls the variation of the selected animation, if applicable."
 default="undefined"
-types=["undefined", "explicit", "enter", "exit"]
+types=["undefined", "enter", "exit", "[\"explicit\", ${VARIATION}]"]
 
 [[events.Transition]]
 name="animationend"
@@ -86,7 +86,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte {title="Transition Imports"}
+```svelte {title="Transition Imports" mode="repl"}
 <script>
     import {Transition} from "@kahi-ui/framework";
 </script>
@@ -95,6 +95,8 @@ types=["{}"]
 ## Explicit
 
 > **NOTE**: New since `v0.5.0`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
 You can alter `Transition` to use its [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations. Which skips the first-paint iteration of the animation via the `variation` property.
 
@@ -117,7 +119,10 @@ You can alter `Transition` to use its [CSS Transitions](https://developer.mozill
     Toggle Variation
 </Button>
 
-<Transition animation="clip" variation="explicit" {variation}>
+<Transition
+    animation="clip"
+    variation={["explicit", variation]}
+>
     <Box palette="inverse" padding="medium">
         hello world!
     </Box>
