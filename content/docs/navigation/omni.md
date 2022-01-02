@@ -51,6 +51,7 @@ types=["{}"]
         Divider,
         Menu,
         Omni,
+        Text,
     } from "@kahi-ui/framework";
 </script>
 
@@ -64,7 +65,7 @@ types=["{}"]
     </Omni.Header>
 
     <Omni.Section>
-        <Menu.Container>
+        <Menu.Container orientation="horizontal">
             <Menu.Button variation="clear" active>
                 Docs
             </Menu.Button>
@@ -80,7 +81,7 @@ types=["{}"]
     </Omni.Section>
 
     <Omni.Footer>
-        <Menu.Container>
+        <Menu.Container orientation="horizontal">
             <Menu.Button variation="clear">
                 GitHub
             </Menu.Button>
@@ -106,6 +107,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 ```svelte {title="Omni Palette" mode="repl"}
 <script>
     import {
+        Anchor,
         Divider,
         Menu,
         Omni,
@@ -113,7 +115,7 @@ You can change the color palette of the `Omni` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack orientation="horizontal" spacing="medium">
+<Stack spacing="medium">
     <Omni.Container width="100">
         <Omni.Header>
             <Anchor href="#">Kahi UI</Anchor>
@@ -122,7 +124,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -138,7 +140,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -154,7 +156,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -170,7 +172,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -186,7 +188,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -202,7 +204,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -218,7 +220,7 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Header>
 
         <Omni.Footer>
-            <Menu.Container>
+            <Menu.Container orientation="horizontal">
                 <Menu.Button variation="clear">
                     GitHub
                 </Menu.Button>
@@ -241,12 +243,13 @@ You can adjust which side the content divider border will appear via the `placem
         Divider,
         Menu,
         Omni,
+        Text,
     } from "@kahi-ui/framework";
 </script>
 
 <Omni.Container
     placement="bottom"
-    palette="dark"
+    palette="inverse"
     width="100"
 >
     <Omni.Header>
@@ -258,7 +261,7 @@ You can adjust which side the content divider border will appear via the `placem
     </Omni.Header>
 
     <Omni.Section>
-        <Menu.Container>
+        <Menu.Container orientation="horizontal">
             <Menu.Button variation="clear" active>
                 Docs
             </Menu.Button>
@@ -274,7 +277,7 @@ You can adjust which side the content divider border will appear via the `placem
     </Omni.Section>
 
     <Omni.Footer>
-        <Menu.Container>
+        <Menu.Container orientation="horizontal">
             <Menu.Button variation="clear">
                 GitHub
             </Menu.Button>
@@ -298,10 +301,11 @@ While this Component does not have built-in collapsing, the Framework provides t
         Menu,
         Omni,
         Popover,
+        Text,
     } from "@kahi-ui/framework";
 </script>
 
-<Omni.Container palette="dark" width="100">
+<Omni.Container palette="inverse" width="100">
     <Omni.Header>
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
