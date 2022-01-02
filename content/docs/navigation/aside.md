@@ -378,8 +378,98 @@ You can adjust which side the content divider border will appear via the `placem
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 
-While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinonated collapsable navigations interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
+While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinionated collapsable navigations interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
 
 ```svelte {title="Aside Collapsing" mode="repl"}
+<script>
+    import {
+        Anchor,
+        Aside,
+        Button,
+        Menu,
+        Position,
+        Overlay,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
 
+<Position
+    variation="action"
+    alignment_x="left"
+    hidden={["desktop", "widescreen"]}
+>
+    <Button for="aside-collapsing">+</Button>
+</Position>
+
+<Overlay.Container
+    logic_id="aside-collapsing"
+    dismissible
+>
+    <Overlay.Backdrop
+        hidden={["desktop", "widescreen"]}
+    />
+
+    <Overlay.Section
+        contents={["desktop", "widescreen"]}
+        animation="slide"
+        direction="left"
+        alignment_x="left"
+    >
+        <Aside.Container
+            palette="dark"
+            max_width="content-max"
+            height="100"
+        >
+            <Aside.Header>
+                <Anchor href="#">Kahi UI</Anchor>
+                <Divider />
+            </Aside.Header>
+
+            <Aside.Section>
+                <Menu.Container>
+                    <Menu.Heading>
+                        DISPLAY
+                    </Menu.Heading>
+
+                    <Menu.Button>
+                        Badge
+                        <Spacer />
+                        <span>ICON</span>
+                    </Menu.Button>
+
+                    <Menu.Heading>
+                        FEEDBACK
+                    </Menu.Heading>
+
+                    <Menu.Button>
+                        Dot
+                        <Spacer />
+                        <span>ICON</span>
+                    </Menu.Button>
+
+                    <Menu.Button active>
+                        Spinner
+                        <Spacer />
+                        <span>ICON</span>
+                    </Menu.Button>
+                </Menu.Container>
+            </Aside.Section>
+
+            <Aside.Footer>
+                <Anchor href="#">
+                    <Text is="small">v0.5.0</Text>
+                </Anchor>
+            </Aside.Footer>
+
+            <Position
+                variation={["action", "container"]}
+                hidden={["desktop", "widescreen"]}
+            >
+                <Overlay.Button variation="clear">
+                    -
+                </Overlay.Button>
+            </Position>
+        </Aside.Container>
+    </Overlay.Section>
+</Overlay.Container>
 ```
