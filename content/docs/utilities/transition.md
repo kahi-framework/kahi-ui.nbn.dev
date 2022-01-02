@@ -38,12 +38,12 @@ types=["AnimationEvent"]
 
 [[events.Transition]]
 name="transitionend"
-description="Fires whenever the `Transition` `variation="explicit"` animation ends."
+description="Fires whenever the `Transition` `variation=\"explicit\"` animation ends."
 types=["TransitionEvent"]
 
 [[events.Transition]]
 name="transitionstart"
-description="Fires whenever the `Transition` `variation="explicit"` animation starts."
+description="Fires whenever the `Transition` `variation=\"explicit\"` animation starts."
 types=["TransitionEvent"]
 
 [[slots.Transition]]

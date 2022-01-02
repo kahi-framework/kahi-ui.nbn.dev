@@ -21,7 +21,7 @@ types=["top", "bottom"]
 
 [[properties.Position]]
 name="spacing"
-description="Adjusts how far off the corner the `Position` sets its self for the `variation="action"` property."
+description="Adjusts how far off the corner the `Position` sets its self for the `variation=\"action\"` property."
 types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Position]]
