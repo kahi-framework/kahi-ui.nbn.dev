@@ -386,9 +386,11 @@ While this Component does not have built-in collapsing, the Framework provides t
         Anchor,
         Aside,
         Button,
+        Divider,
         Menu,
         Position,
         Overlay,
+        Spacer,
         Text,
     } from "@kahi-ui/framework";
 </script>
@@ -416,7 +418,7 @@ While this Component does not have built-in collapsing, the Framework provides t
         alignment_x="left"
     >
         <Aside.Container
-            palette="dark"
+            palette="inverse"
             max_width="content-max"
             height="100"
         >
