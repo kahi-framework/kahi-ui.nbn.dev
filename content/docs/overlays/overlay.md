@@ -1061,12 +1061,84 @@ You can change which built-in [`Transition`](../utilities/transition.md) is anim
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-transition">
+<Button for="overlay-transition-clip">
+    Open CLIP Overlay
+</Button>
+
+<Button for="overlay-transition-fade">
+    Open FADE Overlay
+</Button>
+
+<Button for="overlay-transition-scale">
+    Open SCALE Overlay
+</Button>
+
+<Button for="overlay-transition-slide">
     Open SLIDE Overlay
 </Button>
 
-<Overlay.Container logic_id="overlay-transition">
-    <Overlay.Section>
+<Overlay.Container logic_id="overlay-transition-clip">
+    <Overlay.Section animation="clip">
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>CLIP Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+
+<Overlay.Container logic_id="overlay-transition-fade">
+    <Overlay.Section animation="fade">
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>FADE Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+
+<Overlay.Container logic_id="overlay-transition-scale">
+    <Overlay.Section animation="scale">
+        <Card.Container
+            palette="inverse"
+            max_width="75"
+        >
+            <Card.Header>SCALE Overlay</Card.Header>
+
+            <Card.Footer>
+                <Overlay.Button
+                    palette="auto"
+                    variation="clear"
+                >
+                    Dismiss
+                </Overlay.Button>
+            </Card.Footer>
+        </Card.Container>
+    </Overlay.Section>
+</Overlay.Container>
+
+<Overlay.Container logic_id="overlay-transition-slide">
+    <Overlay.Section animation="slide" direction="top">
         <Card.Container
             palette="inverse"
             max_width="75"
@@ -1104,10 +1176,11 @@ You can change which direction the entrance animation comes from via the `direct
 </Button>
 
 <Overlay.Container logic_id="overlay-direction">
-    <Overlay.Section>
+    <Overlay.Section
+        animation="slide"
+        direction="left"
+    >
         <Card.Container
-            animation="slide"
-            direction="right"
             palette="inverse"
             max_width="75"
         >

@@ -358,7 +358,7 @@ You can adjust which side your content is placed on via the `placement` property
     import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
-<Popover
+<Popover.Container
     logic_id="popover-placement-right"
     dismissible
 >
@@ -380,9 +380,9 @@ You can adjust which side your content is placed on via the `placement` property
             This is a RIGHT Popover.
         </Box>
     </Popover.Section>
-</Popover>
+</Popover.Container>
 
-<Popover
+<Popover.Container
     logic_id="popover-placement-bottom"
     dismissible
 >
@@ -403,7 +403,7 @@ You can adjust which side your content is placed on via the `placement` property
             This is a BOTTOM Popover.
         </Box>
     </Popover.Section>
-</Popover>
+</Popover.Container>
 ```
 
 ## Alignment
