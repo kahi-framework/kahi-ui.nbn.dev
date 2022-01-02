@@ -103,7 +103,7 @@
 <Overlay.Container class="search-prompt" logic_id="search-prompt" dismissible bind:logic_state>
     <Overlay.Backdrop />
 
-    <Overlay.Section alignment_y="top">
+    <Overlay.Section animation="slide" direction="top" alignment_y="top">
         {#if searcher}
             <Card.Container
                 bind:element={container_element}
