@@ -11,29 +11,28 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-306e1801.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-326671fa.js">
-		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
-		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-3d92121d.js">
-		<link rel="modulepreload" href="/_app/chunks/preferences-1d531b8a.js">
-		<link rel="modulepreload" href="/_app/pages/playground/__layout.svelte-c9fc2ded.js">
-		<link rel="modulepreload" href="/_app/pages/playground/embed/index.svelte-4e8b6752.js">
-		<link rel="modulepreload" href="/_app/chunks/REPLEmbed-4f60fd0b.js">
-		<link rel="modulepreload" href="/_app/chunks/REPLSplit-68598583.js">
-		<link rel="modulepreload" href="/_app/chunks/Code-d0c3763a.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-cb282f8c.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f34370e8.css">
 		<link rel="stylesheet" href="/_app/assets/REPLEmbed-0a420c95.css">
 		<link rel="stylesheet" href="/_app/assets/REPLSplit-05233b75.css">
+		<link rel="modulepreload" href="/_app/start-c7b0e62f.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-d5e45a85.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-011f0de8.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-2a9b7c18.js">
+		<link rel="modulepreload" href="/_app/pages/playground/__layout.svelte-e38eeb8c.js">
+		<link rel="modulepreload" href="/_app/pages/playground/embed/index.svelte-25d13223.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLEmbed-0c92f5b7.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLSplit-f4fe7aff.js">
+		<link rel="modulepreload" href="/_app/chunks/Code-9faa8ba7.js">
 
 		<script type="module">
-			import { start } from "/_app/start-306e1801.js";
+			import { start } from "/_app/start-c7b0e62f.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
 				session: {},
-				host: location.host,
 				route: true,
 				spa: false,
 				trailing_slash: "never",
@@ -41,16 +40,12 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-3d92121d.js"),
-						import("/_app/pages/playground/__layout.svelte-c9fc2ded.js"),
-						import("/_app/pages/playground/embed/index.svelte-4e8b6752.js")
+						import("/_app/pages/__layout.svelte-011f0de8.js"),
+						import("/_app/pages/playground/__layout.svelte-e38eeb8c.js"),
+						import("/_app/pages/playground/embed/index.svelte-25d13223.js")
 					],
-					page: {
-						host: location.host, // TODO this is redundant
-						path: "\u002Fplayground\u002Fembed",
-						query: new URLSearchParams(""),
-						params: {}
-					}
+					url: new URL("http://prerender/playground/embed"),
+					params: {}
 				}
 			});
 		</script>
@@ -83,8 +78,5 @@
     </section></div>
 
 
-
-			
-		
     </body>
 </html>

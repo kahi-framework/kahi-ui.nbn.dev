@@ -11,32 +11,31 @@
 
 		
 
-		<link rel="modulepreload" href="/_app/start-306e1801.js">
-		<link rel="modulepreload" href="/_app/chunks/vendor-326671fa.js">
-		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
-		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
-		<link rel="modulepreload" href="/_app/pages/__layout.svelte-3d92121d.js">
-		<link rel="modulepreload" href="/_app/chunks/preferences-1d531b8a.js">
-		<link rel="modulepreload" href="/_app/pages/playground/__layout.svelte-c9fc2ded.js">
-		<link rel="modulepreload" href="/_app/pages/playground/index.svelte-2616fb96.js">
-		<link rel="modulepreload" href="/_app/chunks/PageMetadata-7b3259d7.js">
-		<link rel="modulepreload" href="/_app/chunks/REPLSplit-68598583.js">
-		<link rel="modulepreload" href="/_app/chunks/AppNavigation-b9b7ea12.js">
-		<link rel="modulepreload" href="/_app/chunks/Code-d0c3763a.js">
-		<link rel="modulepreload" href="/_app/chunks/AppAnchor-2724f6b6.js">
 		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
-		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-cb282f8c.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-f34370e8.css">
 		<link rel="stylesheet" href="/_app/assets/pages/playground/index.svelte-4f21f074.css">
 		<link rel="stylesheet" href="/_app/assets/REPLSplit-05233b75.css">
 		<link rel="stylesheet" href="/_app/assets/AppNavigation-f445eb1a.css">
+		<link rel="modulepreload" href="/_app/start-c7b0e62f.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-d5e45a85.js">
+		<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+		<link rel="modulepreload" href="/_app/chunks/paths-28a87002.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-011f0de8.js">
+		<link rel="modulepreload" href="/_app/chunks/preferences-2a9b7c18.js">
+		<link rel="modulepreload" href="/_app/pages/playground/__layout.svelte-e38eeb8c.js">
+		<link rel="modulepreload" href="/_app/pages/playground/index.svelte-6c877d60.js">
+		<link rel="modulepreload" href="/_app/chunks/PageMetadata-e3de930e.js">
+		<link rel="modulepreload" href="/_app/chunks/REPLSplit-f4fe7aff.js">
+		<link rel="modulepreload" href="/_app/chunks/AppNavigation-8a06746d.js">
+		<link rel="modulepreload" href="/_app/chunks/Code-9faa8ba7.js">
+		<link rel="modulepreload" href="/_app/chunks/AppAnchor-880d55b7.js">
 
 		<script type="module">
-			import { start } from "/_app/start-306e1801.js";
+			import { start } from "/_app/start-c7b0e62f.js";
 			start({
 				target: document.querySelector("body"),
 				paths: {"base":"","assets":""},
 				session: {},
-				host: location.host,
 				route: true,
 				spa: false,
 				trailing_slash: "never",
@@ -44,16 +43,12 @@
 					status: 200,
 					error: null,
 					nodes: [
-						import("/_app/pages/__layout.svelte-3d92121d.js"),
-						import("/_app/pages/playground/__layout.svelte-c9fc2ded.js"),
-						import("/_app/pages/playground/index.svelte-2616fb96.js")
+						import("/_app/pages/__layout.svelte-011f0de8.js"),
+						import("/_app/pages/playground/__layout.svelte-e38eeb8c.js"),
+						import("/_app/pages/playground/index.svelte-6c877d60.js")
 					],
-					page: {
-						host: location.host, // TODO this is redundant
-						path: "\u002Fplayground",
-						query: new URLSearchParams(""),
-						params: {}
-					}
+					url: new URL("http://prerender/playground"),
+					params: {}
 				}
 			});
 		</script>
@@ -86,8 +81,5 @@
     </section></div>
 
 
-
-			
-		
     </body>
 </html>
