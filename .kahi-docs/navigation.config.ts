@@ -167,7 +167,7 @@ export default define_navigation({
                 {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
-                {href: "/docs/utilities/transition"},
+                {href: "/docs/utilities/transition", badge: "UPDATED"},
             ],
         },
 
