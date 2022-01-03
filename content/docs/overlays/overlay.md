@@ -665,7 +665,7 @@ You can optionally include a backdrop by passing via composing the `<Overlay.Bac
 </Overlay.Container>
 
 <Overlay.Container logic_id="overlay-backdrop-has">
-    <Backdrop />
+    <Overlay.Backdrop />
 
     <Overlay.Section>
         <Card.Container

@@ -105,7 +105,7 @@ types=["{}"]
 
 You can alter `Transition` to use its [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations. Which skips the first-paint iteration of the animation via the `behavior` property.
 
-```svelte {title="Transition Explicit"}
+```svelte {title="Transition Explicit" mode="repl"}
 <script>
     import {
         Box,
