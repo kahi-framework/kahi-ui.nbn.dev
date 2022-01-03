@@ -3,8 +3,8 @@
 
     import type {IContentGet, IRouteError} from "../../lib/shared/api";
 
-    export const load: Load = async ({fetch, page}) => {
-        const {identifier = ""} = page.params;
+    export const load: Load = async ({fetch, params}) => {
+        const {identifier = ""} = params;
 
         const response = await fetch(`/api/v4/content/docs/${identifier}.json`);
         if (!response.ok) {

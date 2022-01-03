@@ -59,7 +59,7 @@
                                 <Menu.SubMenu>
                                     {#each menu.items as anchor (anchor.href)}
                                         <Menu.Item>
-                                            <AppAnchor href={anchor.href}>
+                                            <AppAnchor href={anchor.href} prefetch>
                                                 {anchor.text}
 
                                                 {#if anchor.badge}
