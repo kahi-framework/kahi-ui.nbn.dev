@@ -26,7 +26,7 @@ types=["null", "HTMLElement", "string"]
 
 [[properties."Overlay.Container"]]
 name="dismissible"
-description="Enables the user to press `ESC` to dismiss."
+description="Enables the user to press `ESC` or click the `<Overlay.Backdrop>` to dismiss."
 types=["boolean"]
 
 [[properties."Overlay.Container"]]
@@ -623,38 +623,33 @@ You can customize the loading behavior of slotted content via the `loading` prop
 
 ## Backdrop
 
-You can optionally include a backdrop by passing via composing [`Backdrop`](./backdrop.md) (non-dismissible) or `<Overlay.Backdrop>` (dismissible) Components.
+You can optionally include a backdrop by passing via composing the `<Overlay.Backdrop>` Component.
 
 ```svelte {title="Overlay Backdrop" mode="repl"}
 <script>
     import {
-        Backdrop,
         Button,
         Card,
         Overlay,
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-no-backdrop">
-    Open NO Backdrop Overlay
+<Button for="overlay-backdrop-no">
+    Open NO BACKDROP Overlay
 </Button>
 
-<Button for="overlay-backdrop-non-dismissible">
-    Open NON-DISMISSIBLE Backdrop Overlay
+<Button for="overlay-backdrop-has">
+    Open HAS BACKDROP Overlay
 </Button>
 
-<Button for="overlay-backdrop-dismissible">
-    Open DISMISSIBLE Backdrop Overlay
-</Button>
-
-<Overlay.Container logic_id="overlay-no-backdrop">
+<Overlay.Container logic_id="overlay-backdrop-no">
     <Overlay.Section>
         <Card.Container
             palette="inverse"
             max_width="75"
         >
             <Card.Header>
-                NO Backdrop Overlay
+                NO BACKDROP Overlay
             </Card.Header>
 
             <Card.Footer>
@@ -669,9 +664,7 @@ You can optionally include a backdrop by passing via composing [`Backdrop`](./ba
     </Overlay.Section>
 </Overlay.Container>
 
-<Overlay.Container
-    logic_id="overlay-backdrop-non-dismissible"
->
+<Overlay.Container logic_id="overlay-backdrop-has">
     <Backdrop />
 
     <Overlay.Section>
@@ -680,33 +673,7 @@ You can optionally include a backdrop by passing via composing [`Backdrop`](./ba
             max_width="75"
         >
             <Card.Header>
-                NON-DISMISSIBLE Backdrop Overlay
-            </Card.Header>
-
-            <Card.Footer>
-                <Overlay.Button
-                    palette="auto"
-                    variation="clear"
-                >
-                    Dismiss
-                </Overlay.Button>
-            </Card.Footer>
-        </Card.Container>
-    </Overlay.Section>
-</Overlay.Container>
-
-<Overlay.Container
-    logic_id="overlay-backdrop-dismissible"
->
-    <Overlay.Backdrop />
-
-    <Overlay.Section>
-        <Card.Container
-            palette="inverse"
-            max_width="75"
-        >
-            <Card.Header>
-                DISMISSIBLE Backdrop Overlay
+                HAS BACKDROP Overlay
             </Card.Header>
 
             <Card.Footer>
@@ -728,7 +695,7 @@ You can optionally include a backdrop by passing via composing [`Backdrop`](./ba
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can optionally have the `Overlay` dismissible by pressing the `ESC` key, via the `dismissible` property.
+You can optionally have the `Overlay` dismissible by pressing the `ESC` key or clicking the `<Overlay.Backdrop>` if applicable, via the `dismissible` property.
 
 ```svelte {title="Overlay Dismissible" mode="repl"}
 <script>

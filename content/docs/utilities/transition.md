@@ -5,6 +5,11 @@ description="Selects the animation to be ran on the containing `Transition` elem
 types=["clip", "fade", "scale", "slide"]
 
 [[properties.Transition]]
+name="behavior"
+description="Alters to use the [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations."
+types=["explicit"]
+
+[[properties.Transition]]
 name="delay"
 description="Sets how long after a `variation` property change in a percentage range (e.g. `0.2`) that the animation should start."
 types=["number", "string"]
@@ -24,7 +29,7 @@ types=["number", "string"]
 name="variation"
 description="Controls the variation of the selected animation, if applicable."
 default="undefined"
-types=["undefined", "enter", "exit", "[\"explicit\", ${VARIATION}]"]
+types=["undefined", "enter", "exit"]
 
 [[events.Transition]]
 name="animationend"
@@ -38,12 +43,12 @@ types=["AnimationEvent"]
 
 [[events.Transition]]
 name="transitionend"
-description="Fires whenever the `Transition` `variation=\"explicit\"` animation ends."
+description="Fires whenever the `Transition` `behavior=\"explicit\"` animation ends."
 types=["TransitionEvent"]
 
 [[events.Transition]]
 name="transitionstart"
-description="Fires whenever the `Transition` `variation=\"explicit\"` animation starts."
+description="Fires whenever the `Transition` `behavior=\"explicit\"` animation starts."
 types=["TransitionEvent"]
 
 [[slots.Transition]]
@@ -98,7 +103,7 @@ types=["{}"]
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can alter `Transition` to use its [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations. Which skips the first-paint iteration of the animation via the `variation` property.
+You can alter `Transition` to use its [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations. Which skips the first-paint iteration of the animation via the `behavior` property.
 
 ```svelte {title="Transition Explicit"}
 <script>
@@ -121,7 +126,8 @@ You can alter `Transition` to use its [CSS Transitions](https://developer.mozill
 
 <Transition
     animation="clip"
-    variation={["explicit", variation]}
+    behavior="explicit"
+    {variation}
 >
     <Box palette="inverse" padding="medium">
         hello world!
