@@ -1,7 +1,7 @@
 +++
 [[properties."*"]]
 name="hidden"
-description="Alters the Component to not render anything and take up physical space in a page's layout."
+description="Alters the Component to not render anything or take up physical space in a page's layout."
 types=["boolean", "{VIEWPORT}"]
 +++
 
@@ -12,6 +12,8 @@ types=["boolean", "{VIEWPORT}"]
 All Components have access to the `data-hidden` global HTML attribute via the `hidden` property. Unlike the standard [`hidden`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/hidden) HTML attribute, `data-hidden` supports [Responsitivity](../framework/responsitivity.md).
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `hidden={["mobile", "tablet"]}`
 
 ```svelte {title="Hidden Preview" mode="repl"}
 <script>

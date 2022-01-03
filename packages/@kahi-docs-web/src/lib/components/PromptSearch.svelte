@@ -24,7 +24,7 @@
     import ArrowRight from "./icons/ArrowRight.svelte";
     import File from "./icons/File.svelte";
 
-    export let state: boolean = false;
+    export let logic_state: boolean = false;
 
     let container_element: HTMLDivElement;
     let input_element: HTMLInputElement;
@@ -86,10 +86,11 @@
         } else input_element.focus();
     }
 
-    $: if (!state) value = "";
-    $: if (state && !promise) promise = make_searcher().then((_searcher) => (searcher = _searcher));
+    $: if (!logic_state) value = "";
+    $: if (logic_state && !promise)
+        promise = make_searcher().then((_searcher) => (searcher = _searcher));
     $: if (searcher) results = value ? searcher(value) : null;
-    $: if (state && searcher && input_element) input_element.focus();
+    $: if (logic_state && searcher && input_element) input_element.focus();
 
     $: {
         // HACK: Marking `value` here to make this block reactive
@@ -99,87 +100,84 @@
     }
 </script>
 
-<Overlay
-    class="search-prompt"
-    logic_id="search-prompt"
-    alignment_y="top"
-    bind:state
-    captive
-    dismissible
->
-    {#if searcher}
-        <Card.Container
-            bind:element={container_element}
-            palette="auto"
-            margin_top="huge"
-            width="prose"
-            max_width="viewport-75"
-            actions={[
-                [next_keybind, on_next_keybind],
-                [previous_keybind, on_previous_keybind],
-            ]}
-        >
-            <Card.Section>
-                <TextInput
-                    bind:element={input_element}
-                    placeholder="Search docs..."
-                    variation="block"
-                    bind:value
-                />
-            </Card.Section>
+<Overlay.Container class="search-prompt" logic_id="search-prompt" dismissible bind:logic_state>
+    <Overlay.Backdrop />
 
-            {#if results}
+    <Overlay.Section animation="slide" direction="top" alignment_y="top">
+        {#if searcher}
+            <Card.Container
+                bind:element={container_element}
+                palette="auto"
+                margin_top="huge"
+                width="prose"
+                max_width="viewport-75"
+                actions={[
+                    [next_keybind, on_next_keybind],
+                    [previous_keybind, on_previous_keybind],
+                ]}
+            >
                 <Card.Section>
-                    <Scrollable bind:element={scrollable_element} max_height="viewport-50">
-                        <Stack spacing="small">
-                            {#each results as result, index (result.identifier)}
-                                <Clickable.Container>
-                                    <Tile.Container
-                                        palette={index === current ? "accent" : undefined}
-                                        sizing="small"
-                                        on:pointerenter={on_select_enter.bind(null, index)}
-                                    >
-                                        <Tile.Figure style="font-size:24px;">
-                                            <File />
-                                        </Tile.Figure>
-
-                                        <Tile.Section>
-                                            <Tile.Header>
-                                                <Clickable.Anchor
-                                                    href={result.identifier}
-                                                    target="_blank"
-                                                >
-                                                    {result.title}
-                                                </Clickable.Anchor>
-                                            </Tile.Header>
-                                        </Tile.Section>
-
-                                        <Tile.Footer>
-                                            <ArrowRight />
-                                        </Tile.Footer>
-                                    </Tile.Container>
-                                </Clickable.Container>
-                            {/each}
-                        </Stack>
-                    </Scrollable>
+                    <TextInput
+                        bind:element={input_element}
+                        placeholder="Search docs..."
+                        variation="block"
+                        bind:value
+                    />
                 </Card.Section>
-            {/if}
 
-            <Card.Section>
-                <AppAnchor href="https://github.com/nextapps-de/flexsearch" palette="accent">
-                    Powered by FlexSearch
-                </AppAnchor>
-            </Card.Section>
-        </Card.Container>
-    {:else}
-        <Card.Container palette="auto" margin_top="huge" width="prose" max_width="viewport-75">
-            <Card.Header>
-                <Center width="100">
-                    <Text is="span">
-                        Initializing search engine<Ellipsis />
-                    </Text>
-                </Center>
-            </Card.Header>
-        </Card.Container>
-    {/if}
-</Overlay>
+                {#if results}
+                    <Card.Section>
+                        <Scrollable bind:element={scrollable_element} max_height="viewport-50">
+                            <Stack spacing="small">
+                                {#each results as result, index (result.identifier)}
+                                    <Clickable.Container>
+                                        <Tile.Container
+                                            palette={index === current ? "accent" : undefined}
+                                            sizing="small"
+                                            on:pointerenter={on_select_enter.bind(null, index)}
+                                        >
+                                            <Tile.Figure style="font-size:24px;">
+                                                <File />
+                                            </Tile.Figure>
+
+                                            <Tile.Section>
+                                                <Tile.Header>
+                                                    <Clickable.Anchor
+                                                        href={result.identifier}
+                                                        target="_blank"
+                                                    >
+                                                        {result.title}
+                                                    </Clickable.Anchor>
+                                                </Tile.Header>
+                                            </Tile.Section>
+
+                                            <Tile.Footer>
+                                                <ArrowRight />
+                                            </Tile.Footer>
+                                        </Tile.Container>
+                                    </Clickable.Container>
+                                {/each}
+                            </Stack>
+                        </Scrollable>
+                    </Card.Section>
+                {/if}
+
+                <Card.Section>
+                    <AppAnchor href="https://github.com/nextapps-de/flexsearch" palette="accent">
+                        Powered by FlexSearch
+                    </AppAnchor>
+                </Card.Section>
+            </Card.Container>
+        {:else}
+            <Card.Container palette="auto" margin_top="huge" width="prose" max_width="viewport-75">
+                <Card.Header>
+                    <Center width="100">
+                        <Text is="span">
+                            Initializing search engine<Ellipsis />
+                        </Text>
+                    </Center>
+                </Card.Header>
+            </Card.Container>
+        {/if}
+    </Overlay.Section>
+</Overlay.Container>

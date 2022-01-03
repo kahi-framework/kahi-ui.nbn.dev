@@ -94,7 +94,7 @@
     let orientation: keyof typeof SPLIT_ORIENTATION = $vertical_viewports
         ? SPLIT_ORIENTATION.vertical
         : SPLIT_ORIENTATION.horizontal;
-    let state: boolean = false;
+    let logic_state: boolean = false;
     let value: string = (snippet?.script ?? script ?? $session) || (fallback?.script ?? "");
 
     function on_copy_click(event: MouseEvent): void {
@@ -118,7 +118,7 @@
             orientation="horizontal"
         >
             <Menu.Container orientation="horizontal" sizing="small">
-                <Menu.Button palette="accent" on:click={() => (state = true)}>
+                <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
                     <Share2 />
                     Share
                 </Menu.Button>
@@ -173,4 +173,4 @@
     <REPLSplit {mode} {orientation} bind:value />
 </StaticLayout>
 
-<PromptShare bind:state {value} />
+<PromptShare {value} bind:logic_state />

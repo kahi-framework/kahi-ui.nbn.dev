@@ -9,11 +9,6 @@ name="palette"
 description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
-[[properties.Dot]]
-name="position"
-description="**(DEPRECATED)** Sets higher positioning on the `Dot`."
-types=["floated", "raised"]
-
 [[slots.Dot]]
 name="default"
 description="Default unnamed slot."
@@ -33,6 +28,8 @@ types=["<length>", "<percentage>"]
 # Dot
 
 > **NOTE**: New since `v0.2.0`.
+
+> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
 `Dot` is typically used for calling out other UI elements to the end-user, that they need attention.
 
@@ -149,42 +146,4 @@ You can have the `Dot` perform animations to grab the end-user's attention via t
         display: block;
     }
 </style>
-```
-
-## Position
-
-> **WARNING**: This feature has been deprecated for removal in `v0.5.0`. Please use [`Position`](../layouts/position.md) instead.
-
-You can change the position of the `Dot` to raise it above in its parent to more explictly call out a Component.
-
-```svelte {title="Dot Position" mode="repl"}
-<script>
-    import {
-        Button,
-        Dot,
-        Stack,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack
-    orientation="horizontal"
-    spacing="medium"
-    variation="wrap"
->
-    <Text>
-        Sample Text (RAISED)
-        <Dot palette="accent" position="raised" />
-    </Text>
-
-    <div>
-        <Button palette="accent">
-            Open Inbox (FLOATED)
-            <Dot
-                palette="negative"
-                position="floated"
-            />
-        </Button>
-    </div>
-</Stack>
 ```

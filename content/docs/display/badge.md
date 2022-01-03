@@ -5,11 +5,6 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Badge]]
-name="position"
-description="**(DEPRECATED)** Sets higher positioning on the `Badge`."
-types=["floated", "raised"]
-
-[[properties.Badge]]
 name="shape"
 description="Changes the shape of the `Badge`."
 default="none"
@@ -70,6 +65,8 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 > **NOTE**: New since `v0.2.0`.
 
+> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+
 `Badge` is typically used to subtlely display to the user some type of ancillary information, relating to its siblings / parent UI elements.
 
 ```svelte {title="Badge Preview" mode="repl"}
@@ -125,44 +122,6 @@ You can change the color palette of the `Badge` via the `palette` property.
     <Badge palette="negative">
         This is a NEGATIVE Badge
     </Badge>
-</Stack>
-```
-
-## Position
-
-> **WARNING**: This feature has been deprecated for removal in `v0.5.0`. Please use [`Position`](../layouts/position.md) instead.
-
-You can change the position of the `Badge` to raise it above in its parent to more explictly call out the information.
-
-```svelte {title="Badge Position" mode="repl"}
-<script>
-    import {
-        Badge,
-        Button,
-        Stack,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack spacing="medium">
-    <Text>
-        Sample Text (RAISED)
-        <Badge palette="accent" position="raised">
-            +99
-        </Badge>
-    </Text>
-
-    <div>
-        <Button palette="accent">
-            Open Inbox (FLOATED)
-            <Badge
-                palette="negative"
-                position="floated"
-            >
-                +99
-            </Badge>
-        </Button>
-    </div>
 </Stack>
 ```
 

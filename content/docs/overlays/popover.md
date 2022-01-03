@@ -1,58 +1,79 @@
 +++
-[[properties.Popover]]
+[[properties."Popover.Container"]]
 name="logic_id"
-description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before the `Popover`, which controls the visible state via CSS."
+description="Renders a `<input role=\"presentation\" type=\"checkbox\" />` as sibling before child `<Popover.Section>`, which controls the visible state via CSS."
 types=["string"]
 
-[[properties.Popover]]
-name="hidden"
-description="Controls when the `Popover` hides its child content."
-types=["boolean", "{VIEWPORT}"]
-
-[[properties.Popover]]
-name="state"
-description="Controls the visible state of the `Popover` whenever `logic_id` is set."
+[[properties."Popover.Container"]]
+name="logic_state"
+description="Controls the visible state of the `<Popover.Container>` whenever `logic_id` is set."
 types=["boolean"]
 
-[[properties.Popover]]
+[[properties."Popover.Container"]]
+name="focus_target"
+description="Configures the element given focus when `logic_state` is active. Otherwise, the first focusable element found will be used."
+types=["null", "HTMLElement", "string"]
+
+[[properties."Popover.Container"]]
 name="dismissible"
-description="Adjusts the sibling `ContextBackdrop` to be clickable, turning off the visible state when clicked."
+description="Enables the user to press `ESC` to dismiss. Also enables dismissing via inner content losing focus or clicking outside of `<Popover.Section>`."
 types=["boolean"]
 
-[[properties.Popover]]
+[[properties."Popover.Container"]]
 name="once"
-description="Enables dismissing of the `Popover` whenever inner content is clicked."
+description="Enables dismissing of the `<Popover.Container>` whenever inner content is clicked."
 types=["boolean"]
 
-[[properties.Popover]]
+[[properties."Popover.Section"]]
+name="animation"
+description="Selects the animation to be ran whenever `logic_state` is active."
+default="clip"
+types=["clip", "fade", "scale", "slide"]
+
+[[properties."Popover.Section"]]
+name="placement"
+description="Adjusts where the child content will be placed within the `<Popover.Section>` along the vertical axis."
+default="bottom"
+types=["top", "left", "bottom", "right"]
+
+[[properties."Popover.Section"]]
 name="alignment_x"
-description="**(`top/bottom` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Popover` along the horizontal axis."
+description="**(`top/bottom` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `<Popover.Section>` along the horizontal axis."
 default="center"
 types=["center", "left", "right"]
 
-[[properties.Popover]]
+[[properties."Popover.Section"]]
 name="alignment_y"
-description="**(`left/right` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `Popover` along the vertical axis."
+description="**(`left/right` PLACEMENT ONLY)** Adjusts where the child content will be placed within the `<Popover.Section>` along the vertical axis."
 default="center"
 types=["center", "bottom", "top"]
 
-[[properties.Popover]]
-name="placement"
-description="Adjusts where the child content will be placed within the `Popover` along the vertical axis."
-default="left"
-types=["top", "left", "bottom", "right"]
-
-[[events.Popover]]
+[[events."Popover.Container"]]
 name="active"
-description="Fires whenever the `Popover` is activated."
+description="Fires whenever the `<Popover.Container>` is activated."
 types=["CustomEvent<void>"]
 
-[[events.Popover]]
+[[events."Popover.Container"]]
 name="dismiss"
-description="Fires whenever the `Popover` is dismissed."
+description="Fires whenever the `<Popover.Container>` is dismissed."
 types=["CustomEvent<void>"]
 
-[[slots.Popover]]
+[[slots."Popover.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Popover.Button"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Popover.Group"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Popover.Section"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
@@ -62,15 +83,14 @@ types=["{}"]
 
 > **NOTE**: New since `v0.2.11`.
 
-> **WARNING**: This Component will receive a breaking refactoring in `v0.5.0`.
+> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
 `Popover` is typically used for hiding content that'll clip onto the page when activated via a button or something else.
 
 ```svelte {title="Popover Preview" mode="repl"}
 <script>
     import {
-        Card,
-        ContextButton,
+        Box,
         Menu,
         Popover,
         Spacer,
@@ -78,28 +98,28 @@ types=["{}"]
     } from "@kahi-ui/framework";
 </script>
 
-<Popover
+<Popover.Container
     logic_id="popover-preview"
-    alignment_x="right"
-    spacing="medium"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open Menu
+    </Popover.Button>
 
-    <Card.Container
-        palette="auto"
-        elevation="medium"
-        max_width="content-max"
+    <Popover.Section
+        alignment_x="right"
+        spacing="medium"
     >
-        <Card.Section>
+        <Box
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
             <Menu.Container>
                 <Menu.Button>
                     Copy
                     <Spacer
-                        variation="inline"
+                        is="span"
                         spacing="medium"
                     />
 
@@ -109,7 +129,7 @@ types=["{}"]
                 <Menu.Button>
                     Cut
                     <Spacer
-                        variation="inline"
+                        is="span"
                         spacing="medium"
                     />
 
@@ -121,69 +141,110 @@ types=["{}"]
                 <Menu.Button>
                     Delete
                     <Spacer
-                        variation="inline"
+                        is="span"
                         spacing="medium"
                     />
 
                     <Text is="kbd">DEL</Text>
                 </Menu.Button>
             </Menu.Container>
-        </Card.Section>
-    </Card.Container>
-</Popover>
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Imports
 
+<!-- prettier-ignore -->
 ```svelte {title="Popover Imports"}
 <script>
     import {Popover} from "@kahi-ui/framework";
+
+    const {
+        Container,
+        Button,
+        Group,
+        Section
+    } = Popover;
 </script>
 ```
 
 ## Logic ID
 
-> **NOTE**: When you use a [`ContextButton`](../utilities/contextbutton.md) within a `Popover`, it will automatically inherit the set `logic_id`.
+You can make the `Popover` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md). Alternatively, `<Popover.Button>` can be used while inside a `<Popover.Container>` tree, which automatically inherits `logic_id` via [Svelte Context](https://svelte.dev/docs#setContext).
 
-You can make the `Popover` toggleable via the `logic_id` property, and then referencing that with a [`Button`](../interactables/button.md).
+```svelte {title="Popover Logic ID" mode="repl"}
+<script>
+    import {Box, Popover} from "@kahi-ui/framework";
+</script>
 
-## Hidden
+<Popover.Container logic_id="popover-logic-id">
+    <Popover.Button palette="accent">
+        Open Popover
+    </Popover.Button>
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            <Popover.Button
+                palette="auto"
+                variation="clear"
+            >
+                Dismiss
+            </Popover.Button>
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+```
 
-`Popover` adds special handling for the `hidden` property, allowing you to instead customize when the child content is hidden or rendered normally.
+## Logic State
 
-```svelte {title="Popover Hidden" mode="repl"}
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the `Popover` via the `logic_state` property.
+
+```svelte {title="Popover Logic State" mode="repl"}
 <script>
     import {
         Box,
-        ContextButton,
+        Button,
         Popover,
     } from "@kahi-ui/framework";
+
+    let logic_state = false;
 </script>
 
-<Popover
-    logic_id="popover-hidden"
-    alignment_x="right"
-    hidden="mobile"
-    spacing="medium"
-    dismissible
+<Popover.Container
+    logic_id="popover-logic-state"
+    bind:logic_state
 >
-    <ContextButton
-        palette="accent"
-        hidden={["tablet", "desktop", "widescreen"]}
-    >
-        Open HIDDEN Popover
-    </ContextButton>
+    <Popover.Button>
+        Open TOGGABLE Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
-    >
-        This was HIDDEN on MOBILE only.
-    </Box>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            TOGGABLE Popover
+            <br />
+
+            <Button
+                on:click={() =>
+                    (logic_state = !logic_state)}
+            >
+                Toggle Popover
+            </Button>
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Dismissible
@@ -192,55 +253,51 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can optionally have the `Popover` dismissible by clicking outside the `Popover` child content or pressing the `ESC` key, via the `dismissible` property.
+You can optionally have the `Popover` dismissible by clicking outside the `<Popover.Section>` child content, pressing the `ESC` key, or inner content losing focus, via the `dismissible` property.
 
 ```svelte {title="Popover Dismissible" mode="repl"}
 <script>
-    import {
-        Box,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
+    import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
-<Popover
-    logic_id="popover-non-dismissible"
-    alignment_x="right"
-    spacing="medium"
-    hidden
+<Popover.Container
+    logic_id="popover-dismissible-disabled"
 >
-    <ContextButton palette="accent">
-        Open NON DISMISSIBLE Popover
-    </ContextButton>
+    <Popover.Button>
+        Open NON-DISMISSIBLE Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
-    >
-        This is a NON DISMISSIBLE Popover.
-    </Box>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            NON-DISMISSIBLE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-is-dismissible"
-    alignment_x="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-dismissible-enabled"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
+    <Popover.Button>
         Open DISMISSIBLE Popover
-    </ContextButton>
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
-    >
-        This is a DISMISSIBLE Popover.
-    </Box>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            DISMISSIBLE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Once
@@ -253,113 +310,43 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
 
 ```svelte {title="Popover Once" mode="repl"}
 <script>
-    import {
-        Card,
-        ContextButton,
-        Menu,
-        Popover,
-        Spacer,
-        Text,
-    } from "@kahi-ui/framework";
+    import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
-<Popover
-    logic_id="popover-once"
-    alignment_x="right"
-    spacing="medium"
-    dismissible
-    hidden
+<Popover.Container logic_id="popover-once-disabled">
+    <Popover.Button>
+        Open NON-ONCE Popover
+    </Popover.Button>
+
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            NON-ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+
+<Popover.Container
+    logic_id="popover-once-enabled"
     once
 >
-    <ContextButton palette="accent">
-        Open ONCE Popover
-    </ContextButton>
+    <Popover.Button>Open ONCE Popover</Popover.Button>
 
-    <Card.Container
-        palette="auto"
-        elevation="medium"
-        max_width="content-max"
-    >
-        <Card.Section>
-            <Menu.Container>
-                <Menu.Button>
-                    Copy
-                    <Spacer
-                        variation="inline"
-                        spacing="medium"
-                    />
-
-                    <Text is="kbd">CTRL+C</Text>
-                </Menu.Button>
-
-                <Menu.Button>
-                    Cut
-                    <Spacer
-                        variation="inline"
-                        spacing="medium"
-                    />
-
-                    <Text is="kbd">CTRL+X</Text>
-                </Menu.Button>
-
-                <Menu.Divider />
-
-                <Menu.Button>
-                    Delete
-                    <Spacer
-                        variation="inline"
-                        spacing="medium"
-                    />
-
-                    <Text is="kbd">DEL</Text>
-                </Menu.Button>
-            </Menu.Container>
-        </Card.Section>
-    </Card.Container>
-</Popover>
-```
-
-## State
-
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
-
-You can manually open / close the `Popover` via the `state` property.
-
-```svelte {title="Popover State" mode="repl"}
-<script>
-    import {
-        Button,
-        Card,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
-
-    let state = false;
-</script>
-
-<Button on:click={() => (state = !state)}>
-    Toggle Popover
-</Button>
-
-<Popover
-    logic_id="popover-state"
-    alignment_x="right"
-    spacing="medium"
-    bind:state
-    hidden
->
-    <ContextButton palette="accent">
-        Open Popover
-    </ContextButton>
-
-    <Card.Container
-        palette="auto"
-        elevation="medium"
-        max_width="content-max"
-    >
-        <Card.Section>Toggleable Popover</Card.Section>
-    </Card.Container>
-</Popover>
+    <Popover.Section alignment_x="right">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Placement
@@ -368,53 +355,55 @@ You can adjust which side your content is placed on via the `placement` property
 
 ```svelte {title="Popover Placement" mode="repl"}
 <script>
-    import {
-        Box,
-        ContextButton,
-        Popover,
-    } from "@kahi-ui/framework";
+    import {Box, Popover} from "@kahi-ui/framework";
 </script>
 
-<Popover
+<Popover.Container
     logic_id="popover-placement-right"
-    alignment_y="bottom"
-    placement="right"
-    spacing="medium"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
+    <Popover.Button palette="accent">
         Open RIGHT Popover
-    </ContextButton>
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
+    <Popover.Section
+        alignment_y="bottom"
+        placement="right"
+        spacing="medium"
     >
-        This is a RIGHT Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a RIGHT Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
+<Popover.Container
     logic_id="popover-placement-bottom"
-    alignment_x="right"
-    spacing="medium"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
+    <Popover.Button palette="accent">
         Open BOTTOM Popover
-    </ContextButton>
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding="medium"
+    <Popover.Section
+        alignment_x="right"
+        spacing="medium"
     >
-        This is a BOTTOM Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a BOTTOM Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```
 
 ## Alignment
@@ -425,138 +414,147 @@ You can align `Popover` which direction the child content breaks, via the `align
 <script>
     import {
         Box,
-        ContextButton,
         Popover,
         Spacer,
     } from "@kahi-ui/framework";
 </script>
 
-<Popover
-    logic_id="popover-alignment-right"
-    alignment_x="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-x-right"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open RIGHT Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open RIGHT X Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="huge"
-        padding_y="medium"
+    <Popover.Section
+        alignment_x="right"
+        spacing="medium"
     >
-        This is a RIGHT Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a RIGHT X Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-center-horizontal"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-x-center"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open CENTER Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open CENTER X Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="huge"
-        padding_y="medium"
-    >
-        This is a CENTER Popover.
-    </Box>
-</Popover>
+    <Popover.Section spacing="medium">
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a CENTER X Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-left"
-    alignment_x="left"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-x-left"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open LEFT Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open LEFT X Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="huge"
-        padding_y="medium"
+    <Popover.Section
+        alignment_x="left"
+        spacing="medium"
     >
-        This is a LEFT Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a LEFT X Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
 <Spacer spacing="huge" />
 
-<Popover
-    logic_id="popover-alignment-top"
-    alignment_y="top"
-    placement="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-y-top"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open TOP Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open TOP Y Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="medium"
-        padding_y="huge"
+    <Popover.Section
+        placement="right"
+        alignment_y="top"
+        spacing="medium"
     >
-        This is a TOP Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a TOP Y Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-center-vertical"
-    placement="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-y-center"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open CENTER Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open CENTER Y Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="medium"
-        padding_y="huge"
+    <Popover.Section
+        placement="right"
+        spacing="medium"
     >
-        This is a CENTER Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a CENTER Y Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 
-<Popover
-    logic_id="popover-alignment-bottom"
-    alignment_y="bottom"
-    placement="right"
-    spacing="medium"
+<Popover.Container
+    logic_id="popover-alignment-y-bottom"
     dismissible
-    hidden
 >
-    <ContextButton palette="accent">
-        Open BOTTOM Popover
-    </ContextButton>
+    <Popover.Button palette="accent">
+        Open BOTTOM Y Popover
+    </Popover.Button>
 
-    <Box
-        palette="inverse"
-        max_width="content-max"
-        padding_x="medium"
-        padding_y="huge"
+    <Popover.Section
+        placement="right"
+        alignment_y="bottom"
+        spacing="medium"
     >
-        This is a BOTTOM Popover.
-    </Box>
-</Popover>
+        <Box
+            palette="inverse"
+            elevation="high"
+            padding="medium"
+            shape="rounded"
+        >
+            This is a BOTTOM Y Popover.
+        </Box>
+    </Popover.Section>
+</Popover.Container>
 ```

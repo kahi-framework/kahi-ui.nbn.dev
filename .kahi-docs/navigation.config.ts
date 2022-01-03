@@ -8,6 +8,11 @@ export default define_navigation({
         },
 
         {
+            text: "Migrations",
+            items: [{href: "/docs/migrations/0.4.x-to-0.5.x", badge: "NEW"}],
+        },
+
+        {
             text: "Framework",
             items: [
                 {href: "/docs/framework/getting-started"},
@@ -24,11 +29,12 @@ export default define_navigation({
         {
             text: "Globals",
             items: [
+                {href: "/docs/globals/contents", badge: "NEW"},
                 {href: "/docs/globals/html5"},
                 {href: "/docs/globals/hidden"},
                 {href: "/docs/globals/sizings"},
                 {href: "/docs/globals/spacings"},
-                {href: "/docs/globals/sveltekit", badge: "NEW"},
+                {href: "/docs/globals/sveltekit"},
             ],
         },
 
@@ -50,7 +56,7 @@ export default define_navigation({
         {
             text: "Display",
             items: [
-                {href: "/docs/display/badge"},
+                {href: "/docs/display/badge", badge: "UPDATED"},
                 {href: "/docs/display/datestamp"},
                 {href: "/docs/display/datetimestamp"},
                 {href: "/docs/display/list"},
@@ -71,8 +77,8 @@ export default define_navigation({
         {
             text: "Feedback",
             items: [
-                {href: "/docs/feedback/dot"},
-                {href: "/docs/feedback/ellipsis"},
+                {href: "/docs/feedback/dot", badge: "UPDATED"},
+                {href: "/docs/feedback/ellipsis", badge: "UPDATED"},
                 {href: "/docs/feedback/progress"},
                 {href: "/docs/feedback/spinner"},
                 {href: "/docs/feedback/wave"},
@@ -83,13 +89,13 @@ export default define_navigation({
             text: "Interactables",
             items: [
                 {href: "/docs/interactables/button"},
-                {href: "/docs/interactables/check"},
+                {href: "/docs/interactables/check", badge: "UPDATED"},
                 {href: "/docs/interactables/filedropinput"},
                 {href: "/docs/interactables/form"},
                 {href: "/docs/interactables/hiddeninput"},
-                {href: "/docs/interactables/numberinput", badge: "NEW"},
-                {href: "/docs/interactables/radio"},
-                {href: "/docs/interactables/switch"},
+                {href: "/docs/interactables/numberinput"},
+                {href: "/docs/interactables/radio", badge: "UPDATED"},
+                {href: "/docs/interactables/switch", badge: "UPDATED"},
                 {href: "/docs/interactables/textinput", badge: "UPDATED"},
             ],
         },
@@ -116,9 +122,9 @@ export default define_navigation({
                 {href: "/docs/layouts/grid"},
                 {href: "/docs/layouts/group"},
                 {href: "/docs/layouts/mosaic"},
-                {href: "/docs/layouts/position"},
+                {href: "/docs/layouts/position", badge: "UPDATED"},
                 {href: "/docs/layouts/scrollable"},
-                {href: "/docs/layouts/spacer"},
+                {href: "/docs/layouts/spacer", badge: "UPDATED"},
                 {href: "/docs/layouts/stack"},
             ],
         },
@@ -137,20 +143,20 @@ export default define_navigation({
             text: "Navigation",
             items: [
                 {href: "/docs/navigation/anchor"},
-                {href: "/docs/navigation/aside"},
+                {href: "/docs/navigation/aside", badge: "UPDATED"},
                 {href: "/docs/navigation/breadcrumb"},
                 {href: "/docs/navigation/menu"},
-                {href: "/docs/navigation/omni"},
+                {href: "/docs/navigation/omni", badge: "UPDATED"},
             ],
         },
 
         {
             text: "Overlays",
             items: [
+                {href: "/docs/overlays/backdrop", badge: "UPDATED"},
                 {href: "/docs/overlays/clickable"},
-                {href: "/docs/overlays/offscreen"},
-                {href: "/docs/overlays/overlay"},
-                {href: "/docs/overlays/popover"},
+                {href: "/docs/overlays/overlay", badge: "UPDATED"},
+                {href: "/docs/overlays/popover", badge: "UPDATED"},
             ],
         },
 
@@ -158,12 +164,10 @@ export default define_navigation({
             text: "Utilities",
             items: [
                 {href: "/docs/utilities/browserrender"},
-                {href: "/docs/utilities/contextbackdrop"},
-                {href: "/docs/utilities/contextbutton"},
                 {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
-                {href: "/docs/utilities/transition"},
+                {href: "/docs/utilities/transition", badge: "UPDATED"},
             ],
         },
 
@@ -175,6 +179,7 @@ export default define_navigation({
                 {href: "/docs/actions/click_outside"},
                 {href: "/docs/actions/intersection_observer"},
                 {href: "/docs/actions/keybind"},
+                {href: "/docs/actions/lost_focus", badge: "NEW"},
                 {href: "/docs/actions/mutation_observer"},
                 {href: "/docs/actions/overflow_clipping"},
                 {href: "/docs/actions/trap_focus"},
