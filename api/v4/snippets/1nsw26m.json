@@ -1,0 +1,1 @@
+{"data":{"identifier":"1nsw26m","script":"<script>\n    import {Box, Overlay} from \"@kahi-ui/framework\";\n</script>\n\n<Overlay.Container>\n    <Overlay.Section spacing=\"medium\">\n        <Box>I am a Box!</Box>\n        <Box>And I am another Box!</Box>\n    </Overlay.Section>\n</Overlay.Container>","syntax":"svelte","title":"1nsw26m"}}

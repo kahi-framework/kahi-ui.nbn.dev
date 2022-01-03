@@ -1,0 +1,1 @@
+{"data":{"identifier":"8dd4bv","script":"<script>\n    import {Badge, Button} from \"@kahi-ui/framework\";\n</script>\n\n<Button palette=\"accent\">\n    Open Inbox\n    <Badge palette=\"negative\" position=\"floated\">\n        +99\n    </Badge>\n</Button>","syntax":"svelte","title":"8dd4bv"}}

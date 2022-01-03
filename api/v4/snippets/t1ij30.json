@@ -1,0 +1,1 @@
+{"data":{"identifier":"t1ij30","script":"<script>\n    import {Button, Overlay} from \"@kahi-ui/framework\";\n</script>\n\n<Button for=\"overlay-captive-property\">\n    Open Overlay\n</Button>\n\n<Overlay\n    logic_id=\"overlay-captive-property\"\n    captive\n    dismissible\n>\n    ...\n</Overlay>","syntax":"svelte","title":"t1ij30"}}

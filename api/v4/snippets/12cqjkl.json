@@ -1,0 +1,1 @@
+{"data":{"identifier":"12cqjkl","script":"<script>\n    import {Switch} from \"@kahi-ui/framework\";\n\n    function on_focus_in(event) {\n        // ...\n    }\n\n    function on_focus_out(event) {\n        // ...\n    }\n</script>\n\n<Switch\n    on:focusin={on_focus_in}\n    on:focusout={on_focus_out}\n/>","syntax":"svelte","title":"12cqjkl"}}

@@ -1,1 +1,1 @@
-{"data":{"identifier":"overlay-imports","script":"<script>\n    import {Overlay} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Overlay Imports"}}
+{"data":{"identifier":"overlay-imports","script":"<script>\n    import {Overlay} from \"@kahi-ui/framework\";\n\n    const {\n        Backdrop,\n        Container,\n        Button,\n        Group,\n        Section\n    } = Overlay;\n</script>","syntax":"svelte","title":"Overlay Imports"}}

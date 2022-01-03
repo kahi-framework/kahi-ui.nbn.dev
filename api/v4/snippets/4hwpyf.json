@@ -1,0 +1,1 @@
+{"data":{"identifier":"4hwpyf","script":"<script>\n    import {Position} from \"@kahi-ui/framework\";\n</script>\n\n<Position variation=\"floated\" alignment_y=\"top\">\n    ...\n</Position>","syntax":"svelte","title":"4hwpyf"}}

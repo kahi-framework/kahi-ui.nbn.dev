@@ -1,0 +1,1 @@
+{"data":{"identifier":"omni-imports","script":"<script>\n    import {Omni} from \"@kahi-ui/framework\";\n\n    const {Container, Footer, Header, Section} = Omni;\n</script>","syntax":"svelte","title":"Omni Imports"}}

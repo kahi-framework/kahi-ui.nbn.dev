@@ -1,0 +1,1 @@
+{"data":{"identifier":"1cfaidt","script":"<script>\n    import {Switch} from \"@kahi-ui/framework\";\n\n    function on_blur(event) {\n        // ...\n    }\n\n    function on_focus(event) {\n        // ...\n    }\n</script>\n\n<Switch on:blur={on_blur} on:focus={on_focus} />","syntax":"svelte","title":"1cfaidt"}}

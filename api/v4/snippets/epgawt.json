@@ -1,0 +1,1 @@
+{"data":{"identifier":"epgawt","script":"<script>\n    import {\n        Box,\n        ContextButton,\n        Popover,\n    } from \"@kahi-ui/framework\";\n</script>\n\n<Popover logic_id=\"popover-context-button\">\n    <ContextButton>Open Popover</ContextButton>\n\n    <Box>I am a Box!</Box>\n</Popover>","syntax":"svelte","title":"epgawt"}}

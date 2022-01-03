@@ -1,0 +1,1 @@
+{"data":{"identifier":"x9hskd","script":"<script>\n    import {Button, Overlay} from \"@kahi-ui/framework\";\n</script>\n\n<Button for=\"overlay-backdrop-component\">\n    Open Overlay\n</Button>\n\n<Overlay.Container\n    logic_id=\"overlay-backdrop-component\"\n>\n    <Overlay.Backdrop />\n\n    ...\n</Overlay.Container>","syntax":"svelte","title":"x9hskd"}}

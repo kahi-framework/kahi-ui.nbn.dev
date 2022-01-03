@@ -1,1 +1,0 @@
-import{C as o,y as n,aE as c}from"./vendor-60ec2bc5.js";function b(e){return{init(r){const t=o(r);return n(e,{subscribe:t.subscribe}),t},subscribe(r,t){const s=c(e);if(!s)throw ReferenceError(`bad dispatch to 'subscribe' (failed to lookup context '${e.toString()}')`);return s.subscribe(r,t)}}}export{b as m};

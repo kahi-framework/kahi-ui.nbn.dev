@@ -1,0 +1,1 @@
+{"data":{"identifier":"yu2o6f","script":"<script>\n    import {Box, Popover} from \"@kahi-ui/framework\";\n</script>\n\n<Popover spacing=\"medium\">\n    <!-- ... -->\n\n    <Box>I am a Box!</Box>\n</Popover>","syntax":"svelte","title":"yu2o6f"}}
