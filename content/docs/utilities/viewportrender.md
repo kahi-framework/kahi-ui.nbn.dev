@@ -53,7 +53,7 @@ types=["{}"]
 </ViewportRender>
 
 <ViewportRender desktop widescreen>
-    <Box palette="affirmative" padding="small">
+    <Box palette="negative" padding="small">
         I am only visible on DESKTOP+WIDESCREEN
         Viewports!
     </Box>
