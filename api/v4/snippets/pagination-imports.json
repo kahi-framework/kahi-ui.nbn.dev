@@ -1,0 +1,1 @@
+{"data":{"identifier":"pagination-imports","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Pagination Imports"}}

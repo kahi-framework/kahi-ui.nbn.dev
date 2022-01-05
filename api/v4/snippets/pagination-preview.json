@@ -1,0 +1,1 @@
+{"data":{"identifier":"pagination-preview","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n\n    let value = 5;\n</script>\n\n<Pagination\n    pages={10}\n    palette=\"accent\"\n    {value}\n    on:select={(event) => {\n        const page = event.detail.page;\n\n        value = page;\n    }}\n/>","syntax":"svelte","title":"Pagination Preview"}}

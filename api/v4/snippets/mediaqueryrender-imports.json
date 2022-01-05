@@ -1,0 +1,1 @@
+{"data":{"identifier":"mediaqueryrender-imports","script":"<script>\n    import {MediaQueryRender} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"MediaQueryRender Imports"}}

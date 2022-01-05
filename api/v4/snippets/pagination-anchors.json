@@ -1,0 +1,1 @@
+{"data":{"identifier":"pagination-anchors","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>\n\n<Pagination\n    href={\"/path/to/list?page=${page}\"}\n    pages={42}\n    value={24}\n    palette=\"accent\"\n/>","syntax":"svelte","title":"Pagination Anchors"}}
