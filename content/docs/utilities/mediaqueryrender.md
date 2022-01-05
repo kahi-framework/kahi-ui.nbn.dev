@@ -34,7 +34,6 @@ types=["{}"]
     import {
         Box,
         MediaQueryRender,
-        Text,
     } from "@kahi-ui/framework";
 </script>
 
@@ -147,7 +146,6 @@ By default, `MediaQueryRender` will never render when running in SSR environment
     import {
         Box,
         MediaQueryRender,
-        Text,
     } from "@kahi-ui/framework";
 </script>
 
