@@ -63,7 +63,11 @@ types=["{}"]
     pages={10}
     palette="accent"
     {value}
-    on:select={(page) => (value = page)}
+    on:select={(event) => {
+        const page = event.detail.page;
+
+        value = page;
+    }}
 />
 ```
 
@@ -127,14 +131,20 @@ You can change how many incremental / decremental steps of paging buttons are di
 
 You can alter the icons / text used for the previous / next buttons via the `previous` / `next` slots respectively.
 
+<!-- prettier-ignore -->
 ```svelte {title="Pagination Slot" mode="repl"}
 <script>
     import {Pagination} from "@kahi-ui/framework";
 </script>
 
 <Pagination pages={10} value={5} palette="accent">
-    <slot name="previous">-</slot>
-    <slot name="next">+</slot>
+    <svelte:fragment slot="previous">
+        -
+    </svelte:fragment>
+
+    <svelte:fragment slot="next">
+        +
+    </svelte:fragment>
 </Pagination>
 ```
 
