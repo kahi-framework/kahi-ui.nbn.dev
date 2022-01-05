@@ -88,7 +88,7 @@ export default define_navigation({
         {
             text: "Interactables",
             items: [
-                {href: "/docs/interactables/button"},
+                {href: "/docs/interactables/button", badge: "UPDATED"},
                 {href: "/docs/interactables/check", badge: "UPDATED"},
                 {href: "/docs/interactables/filedropinput"},
                 {href: "/docs/interactables/form"},
@@ -105,6 +105,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/widgets/daypicker"},
                 {href: "/docs/widgets/daystepper"},
+                {href: "/docs/widgets/pagination", badge: "NEW"},
                 {href: "/docs/widgets/monthpicker"},
                 {href: "/docs/widgets/monthstepper"},
                 {href: "/docs/widgets/timepicker"},
@@ -165,9 +166,11 @@ export default define_navigation({
             items: [
                 {href: "/docs/utilities/browserrender"},
                 {href: "/docs/utilities/intersectionrender"},
+                {href: "/docs/utilities/mediaqueryrender", badge: "NEW"},
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
                 {href: "/docs/utilities/transition", badge: "UPDATED"},
+                {href: "/docs/utilities/viewportrender", badge: "NEW"},
             ],
         },
 

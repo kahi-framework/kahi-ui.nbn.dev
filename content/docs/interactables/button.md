@@ -12,7 +12,7 @@ types=["tiny", "small", "medium", "large", "huge"]
 [[properties.Button]]
 name="variation"
 description="Changes the how the `Button` is rendered."
-types=["clear", "outline"]
+types=["clear", "outline", "subtle", "[\"subtle\", \"clear\" | \"outline\"]"]
 
 [[properties.Button]]
 name="active"
@@ -343,6 +343,36 @@ You can change the size of the `Button` via the `size` property.
 
     <Button variation="outline" palette="negative">
         This is a NEGATIVE Button!
+    </Button>
+</Stack>
+```
+
+## Subtle
+
+> **NOTE**: New since `v0.5.1`.
+
+You can alter the `Button` Component to use less intense / remove "attention grabbing" animations via the `variation` property.
+
+```svelte {title="Button Subtle" mode="repl"}
+<script>
+    import {Button, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="subtle">
+        This is a SUBTLE BLOCK Button!
+    </Button>
+
+    <Button variation={["subtle", "clear"]}>
+        This is a CLEAR OUTLINE Button!
+    </Button>
+
+    <Button variation={["subtle", "outline"]}>
+        This is a SUBTLE OUTLINE Button!
     </Button>
 </Stack>
 ```
