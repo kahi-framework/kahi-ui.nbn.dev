@@ -347,6 +347,12 @@ You can change the size of the `Button` via the `size` property.
 </Stack>
 ```
 
+## Subtle
+
+> **NOTE**: New since `v0.5.1`.
+
+...
+
 ## Types
 
 You can change make the `Button` a `<a>` by passing the `href` property, or a `<label>` by passing the `for` property. And also, change the input type between `<input type="button" />` **(DEFAULT)**, `<input type="reset" />`, `<input type="submit" />` via the `type` / `value` properties.
