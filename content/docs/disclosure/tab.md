@@ -237,7 +237,7 @@ types=["<length>"]
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can manually open / close the choose which `<Accordion.Section>` is open via the `logic_state` property.
+You can manually open / close the choose which `<Tab.Section>` is open via the `logic_state` property.
 
 ```svelte {title="Tab Logic State" mode="repl"}
 <script>
@@ -260,14 +260,14 @@ You can manually open / close the choose which `<Accordion.Section>` is open via
 
 <Button
     on:click={() =>
-        (logic_state = "tab-logic-state-1")}
+        (logic_state = "tab-logic-state-2")}
 >
     Select Tab Two
 </Button>
 
 <Button
     on:click={() =>
-        (logic_state = "tab-logic-state-1")}
+        (logic_state = "tab-logic-state-3")}
 >
     Select Tab Three
 </Button>
@@ -278,9 +278,8 @@ You can manually open / close the choose which `<Accordion.Section>` is open via
     bind:logic_state
 >
     <Tab.Group logic_id="tab-logic-state-1">
-        <Tab.Label palette="accent"
-            >Tab One <span>ICON</span></Tab.Label
-        >
+        <Tab.Label palette="accent">Tab One</Tab.Label>
+
         <Tab.Section>
             <Heading>Tab One Content</Heading>
 
@@ -298,9 +297,8 @@ You can manually open / close the choose which `<Accordion.Section>` is open via
     </Tab.Group>
 
     <Tab.Group logic_id="tab-logic-state-2">
-        <Tab.Label palette="accent"
-            >Tab Two <span>ICON</span></Tab.Label
-        >
+        <Tab.Label palette="accent">Tab Two</Tab.Label>
+
         <Tab.Section>
             <Heading>Tab Two Content</Heading>
 
@@ -318,9 +316,10 @@ You can manually open / close the choose which `<Accordion.Section>` is open via
     </Tab.Group>
 
     <Tab.Group logic_id="tab-logic-state-3">
-        <Tab.Label palette="accent"
-            >Tab Three <span>ICON</span></Tab.Label
-        >
+        <Tab.Label palette="accent">
+            Tab Three
+        </Tab.Label>
+
         <Tab.Section>
             <Heading>Tab Three Content</Heading>
 
