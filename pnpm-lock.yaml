@@ -6,14 +6,14 @@ importers:
     specifiers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/shared': workspace:^
-      '@kahi-ui/framework': 0.5.1
+      '@kahi-ui/framework': 0.5.2
       prettier: ^2.4.1
       prettier-plugin-svelte: ^2.4.0
       svelte: ^3.44.0
     dependencies:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
-      '@kahi-ui/framework': 0.5.1
+      '@kahi-ui/framework': 0.5.2
     devDependencies:
       prettier: 2.4.1
       prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.0
@@ -119,7 +119,7 @@ importers:
       '@kahi-docs/markdown': workspace:^
       '@kahi-docs/node': workspace:^
       '@kahi-docs/shared': workspace:^
-      '@kahi-ui/framework': 0.5.1
+      '@kahi-ui/framework': 0.5.2
       '@novacbn/svelte-codejar': ^0.1.1
       '@novacbn/svelte-pipeline': 0.3.0
       '@sveltejs/adapter-static': ^1.0.0-next.24
@@ -150,7 +150,7 @@ importers:
       '@kahi-docs/markdown': link:../@kahi-docs-markdown
       '@kahi-docs/node': link:../@kahi-docs-node
       '@kahi-docs/shared': link:../@kahi-docs-shared
-      '@kahi-ui/framework': 0.5.1
+      '@kahi-ui/framework': 0.5.2
       '@novacbn/svelte-codejar': 0.1.1
       '@novacbn/svelte-pipeline': 0.3.0
       flexsearch: 0.7.21
@@ -194,8 +194,8 @@ packages:
       es-abstract: 1.19.1
     dev: false
 
-  /@kahi-ui/framework/0.5.1:
-    resolution: {integrity: sha512-+E5JBS2KcHdjMKCylT3nLY9ZfE8JElkMCRO9MN1uU43e3AajWXfGLa+9rx19ZwfuMFwzs4AGs2UsTOm1RT/vJQ==}
+  /@kahi-ui/framework/0.5.2:
+    resolution: {integrity: sha512-88IOluSlE7qRzzUqYDoum0+Gob/BG1Q18hCrKkpV+FXup2k/oF27Xt2E7JkC2hpykNFC0S9wluiD3svjrL1Jmg==}
     dependencies:
       svelte: 3.44.0
     dev: false
