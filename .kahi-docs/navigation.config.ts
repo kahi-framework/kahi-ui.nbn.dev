@@ -68,9 +68,9 @@ export default define_navigation({
         {
             text: "Disclosure",
             items: [
-                {href: "/docs/disclosure/accordion"},
+                {href: "/docs/disclosure/accordion", badge: "UPDATED"},
                 {href: "/docs/disclosure/carousel"},
-                {href: "/docs/disclosure/tab"},
+                {href: "/docs/disclosure/tab", badge: "UPDATED"},
             ],
         },
 
