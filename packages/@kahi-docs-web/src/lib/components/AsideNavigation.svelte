@@ -28,7 +28,7 @@
 </script>
 
 <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
-    <Button for="aside-navigation">
+    <Button for="aside-navigation" size="huge">
         <MenuIcon />
     </Button>
 </Position>
@@ -79,7 +79,7 @@
             </Aside.Section>
 
             <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
-                <Overlay.Button variation="clear">
+                <Overlay.Button variation="clear" size="huge">
                     <X />
                 </Overlay.Button>
             </Position>
