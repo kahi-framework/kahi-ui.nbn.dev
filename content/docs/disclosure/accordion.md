@@ -183,12 +183,17 @@ types=["<alpha-value>"]
 
 ## Imports
 
+<!-- prettier-ignore -->
 ```svelte {title="Accordion Imports"}
 <script>
     import {Accordion} from "@kahi-ui/framework";
 
-    const {Container, Label, Group, Section} =
-        Accordion;
+    const {
+        Container,
+        Label,
+        Group,
+        Section
+    } = Accordion;
 </script>
 ```
 
