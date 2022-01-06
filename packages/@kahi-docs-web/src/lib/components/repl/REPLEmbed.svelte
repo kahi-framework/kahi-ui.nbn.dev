@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Box, Menu, viewports} from "@kahi-ui/framework";
+    import {Box, Menu, Position, viewports} from "@kahi-ui/framework";
 
     import {compress_safe} from "@kahi-docs/shared";
 
@@ -12,7 +12,6 @@
     import Sidebar from "../icons/Sidebar.svelte";
 
     import REPLSplit from "./REPLSplit.svelte";
-    import REPLOverlay from "./REPLOverlay.svelte";
 
     let mode: keyof typeof SPLIT_MODE = SPLIT_MODE.split;
 
@@ -43,11 +42,7 @@
     bind:value
 />
 
-<REPLOverlay
-    class="repl-embed-overlay"
-    alignment_x={["left", "desktop:right", "widescreen:right"]}
-    alignment_y="bottom"
->
+<Position class="repl-embed-overlay" variation={["container", "action"]}>
     <Box palette="dark" shape="rounded" margin="medium" padding="small">
         <Menu.Container orientation={["desktop:horizontal", "widescreen:horizontal"]} sizing="tiny">
             <Menu.Anchor href={_href} target="_blank" palette="accent">
@@ -88,7 +83,7 @@
             </Menu.Button>
         </Menu.Container>
     </Box>
-</REPLOverlay>
+</Position>
 
 <style>
     :global(.repl-embed-overlay) :global(.box:hover) {
