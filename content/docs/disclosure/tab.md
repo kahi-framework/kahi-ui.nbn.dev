@@ -231,6 +231,114 @@ types=["<length>"]
 </script>
 ```
 
+## Logic State
+
+> **NOTE**: New since `v0.5.2`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the choose which `<Accordion.Section>` is open via the `logic_state` property.
+
+```svelte {title="Tab Logic State" mode="repl"}
+<script>
+    import {
+        Button,
+        Heading,
+        Tab,
+        Text,
+    } from "@kahi-ui/framework";
+
+    let logic_state = "tab-logic-state-1";
+</script>
+
+<Button
+    on:click={() =>
+        (logic_state = "tab-logic-state-1")}
+>
+    Select Tab One
+</Button>
+
+<Button
+    on:click={() =>
+        (logic_state = "tab-logic-state-1")}
+>
+    Select Tab Two
+</Button>
+
+<Button
+    on:click={() =>
+        (logic_state = "tab-logic-state-1")}
+>
+    Select Tab Three
+</Button>
+
+<Tab.Container
+    logic_name="tab-logic-state"
+    alignment_x="stretch"
+    bind:logic_state
+>
+    <Tab.Group logic_id="tab-logic-state-1">
+        <Tab.Label palette="accent"
+            >Tab One <span>ICON</span></Tab.Label
+        >
+        <Tab.Section>
+            <Heading>Tab One Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Tab.Section>
+    </Tab.Group>
+
+    <Tab.Group logic_id="tab-logic-state-2">
+        <Tab.Label palette="accent"
+            >Tab Two <span>ICON</span></Tab.Label
+        >
+        <Tab.Section>
+            <Heading>Tab Two Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Tab.Section>
+    </Tab.Group>
+
+    <Tab.Group logic_id="tab-logic-state-3">
+        <Tab.Label palette="accent"
+            >Tab Three <span>ICON</span></Tab.Label
+        >
+        <Tab.Section>
+            <Heading>Tab Three Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Tab.Section>
+    </Tab.Group>
+</Tab.Container>
+```
+
 ## Palette
 
 You can change the color palette of the `Tab` radio buttons via the `palette` property.

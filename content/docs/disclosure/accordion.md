@@ -197,6 +197,122 @@ types=["<alpha-value>"]
 </script>
 ```
 
+## Logic State
+
+> **NOTE**: New since `v0.5.2`.
+
+> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+
+You can manually open / close the choose which `<Accordion.Section>` is open via the `logic_state` property.
+
+```svelte {title="Accordion Logic State" mode="repl"}
+<script>
+    import {
+        Accordion,
+        Button,
+        Heading,
+        Text,
+    } from "@kahi-ui/framework";
+
+    let logic_state = "accordion-logic-state-1";
+</script>
+
+<Button
+    on:click={() =>
+        (logic_state = "accordion-logic-state-1")}
+>
+    Select Section One
+</Button>
+
+<Button
+    on:click={() =>
+        (logic_state = "accordion-logic-state-2")}
+>
+    Select Section Two
+</Button>
+
+<Button
+    on:click={() =>
+        (logic_state = "accordion-logic-state-3")}
+>
+    Select Section Three
+</Button>
+
+<Accordion.Container
+    logic_name="accordion-logic-state"
+    bind:logic_state
+>
+    <Accordion.Group
+        logic_id="accordion-logic-state-1"
+    >
+        <Accordion.Label palette="accent">
+            Section One
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>Item One Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-logic-state-2"
+    >
+        <Accordion.Label palette="accent">
+            Section Two
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>Item Two Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-logic-state-3"
+    >
+        <Accordion.Label palette="accent">
+            Section Three
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>Item Three Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+</Accordion.Container>
+```
+
 ## Inclusive
 
 You can change the behavior of the `Accordion` to allow multiple items to be revealed at once via the `behavior` property.
