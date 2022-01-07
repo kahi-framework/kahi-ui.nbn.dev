@@ -103,6 +103,7 @@ export default define_navigation({
         {
             text: "Widgets",
             items: [
+                {href: "/docs/widgets/datatable", badge: "NEW"},
                 {href: "/docs/widgets/daypicker"},
                 {href: "/docs/widgets/daystepper"},
                 {href: "/docs/widgets/pagination", badge: "NEW"},
