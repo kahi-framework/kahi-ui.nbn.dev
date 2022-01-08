@@ -372,8 +372,8 @@ You can control the current page via the `page` property.
 <DataTable
     columns={COLUMNS}
     rows={ROWS}
-    palette="accent"
     page={3}
+    palette="accent"
     paginate
 />
 ```
@@ -496,8 +496,8 @@ Finally, you can also set up how many rows appear per page via the `paging` prop
 <DataTable
     columns={COLUMNS}
     rows={ROWS}
-    palette="accent"
     paging={8}
+    palette="accent"
     paginate
 />
 ```
@@ -617,15 +617,13 @@ Finally, you can also set up how many rows appear per page via the `paging` prop
             species: "Kel Dor",
         },
     ];
-
-
 </script>
 
 <DataTable
     columns={COLUMNS}
     rows={ROWS}
-    palette="accent"
     searching="Bounty Hunter"
+    palette="accent"
 />
 ```
 
