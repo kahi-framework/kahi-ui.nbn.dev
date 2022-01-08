@@ -1161,10 +1161,61 @@ By default, `DataTable` alphabetizes each row's members converted into lower cas
 
 ## Variation
 
-...
+Just like the [`Table`](../display/table.md) Component, you can customize the `variation` property.
 
 ```svelte {title="DataTable Variation" mode="repl"}
+<script>
+    import {
+        DataTable,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
 
+<Stack spacing="medium">
+    <div>
+        <Text is="strong">DEFAULT</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">BORDERS</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            variation="borders"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">STRIPES</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            variation="stripes"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">BORDERS+STRIPES</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            variation={["borders", "stripes"]}
+            paginate
+        />
+    </div>
+</Stack>
 ```
 
 ## Palette
