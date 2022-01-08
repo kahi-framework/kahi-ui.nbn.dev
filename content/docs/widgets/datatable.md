@@ -1035,7 +1035,7 @@ By default, `DataTable` alphabetizes each row's members converted into lower cas
                 // Instead of alphabetizing, we're sorting by length of
                 // the `occupation` strings
 
-                return a.length >= b.length;
+                return a.length > b.length ? 1 : -1;
             },
         },
 
