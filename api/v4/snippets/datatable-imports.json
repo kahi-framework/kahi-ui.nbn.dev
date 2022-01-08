@@ -1,0 +1,1 @@
+{"data":{"identifier":"datatable-imports","script":"<script>\n    import {DataTable} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"DataTable Imports"}}
