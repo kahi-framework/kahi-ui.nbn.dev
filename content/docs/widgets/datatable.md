@@ -762,22 +762,381 @@ By default, `DataTable` fuzzy filters each row's members converted into lower ca
 
 ## Sorting
 
-...
+By passing in the `sorting` member in your `columns` property metadata, you can enable sorting on individual columns.
 
 ```svelte {title="DataTable Sorting" mode="repl"}
+<script>
+    import {DataTable} from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+            sorting: true,
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+/>
 ```
 
-...
+By passing a column key to the `sorting` property, you can set which is the column actively being sorted by. Then you can set the `sorting_mode` property to choose either `ascending` or `decending` sort.
 
 ```svelte {title="DataTable Sorting Mode" mode="repl"}
+<script>
+    import {DataTable} from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+            sorting: true,
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    sorting="occupation"
+    sorting_mode="decending"
+    palette="accent"
+/>
 ```
 
-...
+By default, `DataTable` alphabetizes each row's members converted into lower case strings. You can customize this behavior on a per column-basis via the `sorting_algorithm` member in the column metadata.
 
 ```svelte {title="DataTable Sorting Algorithm" mode="repl"}
+<script>
+    import {DataTable} from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+            sorting: true,
+            sorting_algorithm: (a, b) => {
+                // Instead of alphabetizing, we're sorting by length of
+                // the `occupation` strings
+
+                return a.length >= b.length;
+            },
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+/>
 ```
 
 ## Slot
