@@ -15,7 +15,7 @@
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/shared": "workspace:^",
-        "@kahi-ui/framework": "0.5.2"
+        "@kahi-ui/framework": "0.5.3"
     },
     "devDependencies": {
         "prettier": "^2.4.1",
