@@ -68,12 +68,27 @@ types=["{key: keyof T, row: T}"]
 
 [[slots.DataTable]]
 name="next"
-description="Used for customizing the next / previous paging button content."
+description="Used for customizing the next paging button content."
 types=["{}"]
 
 [[slots.DataTable]]
 name="previous"
-description="Used for customizing the not-sorted, ascending sort, descending sort button content."
+description="Used for customizing the previous paging button content."
+types=["{}"]
+
+[[slots.DataTable]]
+name="unsorted"
+description="Used for customizing the not-sorted button content."
+types=["{}"]
+
+[[slots.DataTable]]
+name="ascending"
+description="Used for customizing the ascending sort button content."
+types=["{}"]
+
+[[slots.DataTable]]
+name="descending"
+description="Used for customizing the descending sort button content."
 types=["{}"]
 +++
 
