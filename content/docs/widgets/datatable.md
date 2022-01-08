@@ -131,7 +131,7 @@
 
 ## Pagination
 
-Via the `paginate` property, you can enable pagination of the input data.
+Via the `paginate` property, you can enable pagination of the input rows.
 
 ```svelte {title="DataTable Pagination" mode="repl"}
 <script>
@@ -378,7 +378,7 @@ You can control the current page via the `page` property.
 />
 ```
 
-Finally, you can also set up how many data items appear per page via the `paging` property.
+Finally, you can also set up how many rows appear per page via the `paging` property.
 
 ```svelte {title="DataTable Pagination Paging" mode="repl"}
 <script>
