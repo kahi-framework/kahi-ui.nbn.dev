@@ -2,6 +2,12 @@
 
 Below you can find resources made maintained by Kahi UI contributors.
 
+## Discussion / Support
+
+> Official support provided by contributors and community members.
+
+-   [Issue Tracker](https://github.com/novacbn/kahi-ui/issues) — Official GitHub issue tracker for filing bugs and requesting support.
+
 ## Showcase
 
 > Projects that show off the Kahi UI framework.
