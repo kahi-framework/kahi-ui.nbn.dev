@@ -1429,7 +1429,7 @@ You can also customize the icons of the decrement / increment paging buttons via
 </DataTable>
 ```
 
-Finally, you can also customize the icons for the not sorted, ascending sort, and decending sort via the `unsorted`, `ascending`, and `decending` slots respectively.
+Finally, you can also customize the icons for the not sorted, ascending sort, and decending sorting buttons via the `unsorted`, `ascending`, and `decending` slots respectively.
 
 ```svelte {title="DataTable Slot Sorting" mode="repl"}
 <script>
@@ -1442,6 +1442,7 @@ Finally, you can also customize the icons for the not sorted, ascending sort, an
         {
             text: "First Name",
             key: "first_name",
+            sorting: true,
         },
 
         {
