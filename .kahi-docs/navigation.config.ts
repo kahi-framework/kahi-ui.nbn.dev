@@ -182,7 +182,7 @@ export default define_navigation({
                 {href: "/docs/actions/click_inside"},
                 {href: "/docs/actions/click_outside"},
                 {href: "/docs/actions/intersection_observer"},
-                {href: "/docs/actions/keybind"},
+                {href: "/docs/actions/keybind", badge: "UPDATED"},
                 {href: "/docs/actions/lost_focus", badge: "NEW"},
                 {href: "/docs/actions/mutation_observer"},
                 {href: "/docs/actions/overflow_clipping"},
