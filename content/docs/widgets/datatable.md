@@ -1169,16 +1169,173 @@ By default, `DataTable` alphabetizes each row's members converted into lower cas
 
 ## Palette
 
-...
+You can change the color palette of all the interactables via the `palette` property.
 
 ```svelte {title="DataTable Palette" mode="repl"}
+<script>
+    import {
+        DataTable,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
 
+<Stack spacing="medium">
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">ACCENT</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="accent"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">DARK</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="dark"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">LIGHT</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="light"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">ALERT</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="alert"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">AFFIRMATIVE</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="affirmative"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">NEGATIVE</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="negative"
+            paginate
+        />
+    </div>
+</Stack>
 ```
 
 ## Sizing
 
-...
+You can alter the overall spacing / sizing look and feel via the `sizing` property.
 
 ```svelte {title="DataTable Sizing" mode="repl"}
+<script>
+    import {
+        DataTable,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
 
+<Stack spacing="medium">
+    <div>
+        <Text is="strong">DEFAULT</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">TINY</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            sizing="tiny"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            sizing="small"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            sizing="medium"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            sizing="large"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            sizing="huge"
+            paginate
+        />
+    </div>
+</Stack>
 ```
