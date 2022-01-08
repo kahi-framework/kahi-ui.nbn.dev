@@ -885,7 +885,7 @@ By passing in the `sorting` member in your `columns` property metadata, you can 
 />
 ```
 
-By passing a column key to the `sorting` property, you can set which is the column actively being sorted by. Then you can set the `sorting_mode` property to choose either `ascending` or `decending` sort.
+By passing a column key to the `sorting` property, you can set which is the column actively being sorted by. Then you can set the `sorting_mode` property to choose either `ascending` or `descending` sort.
 
 ```svelte {title="DataTable Sorting Mode" mode="repl"}
 <script>
@@ -1005,7 +1005,7 @@ By passing a column key to the `sorting` property, you can set which is the colu
     columns={COLUMNS}
     rows={ROWS}
     sorting="occupation"
-    sorting_mode="decending"
+    sorting_mode="descending"
     palette="accent"
 />
 ```
@@ -1429,7 +1429,7 @@ You can also customize the icons of the decrement / increment paging buttons via
 </DataTable>
 ```
 
-Finally, you can also customize the icons for the not sorted, ascending sort, and decending sorting buttons via the `unsorted`, `ascending`, and `decending` slots respectively.
+Finally, you can also customize the icons for the not sorted, ascending sort, and descending sorting buttons via the `unsorted`, `ascending`, and `descending` slots respectively.
 
 ```svelte {title="DataTable Slot Sorting" mode="repl"}
 <script>
@@ -1562,7 +1562,7 @@ Finally, you can also customize the icons for the not sorted, ascending sort, an
         ASC
     </svelte:fragment>
 
-    <svelte:fragment slot="decending">
+    <svelte:fragment slot="descending">
         DEC
     </svelte:fragment>
 </DataTable>
