@@ -94,6 +94,8 @@ types=["{}"]
 
 # DataTable
 
+> **NOTE**: New since `v0.5.3`.
+
 > **WARNING**: While this Widget is available in Javascript-disabled Browsers, it can result in [Cumulative Layout Shift](https://web.dev/cls/).
 
 `DataTable` is a subset of [`Table`](../display/table.md) Widget which automatically handles formatting tabular data into HTML.
