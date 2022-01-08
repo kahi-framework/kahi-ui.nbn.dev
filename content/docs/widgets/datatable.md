@@ -1170,6 +1170,114 @@ Just like the [`Table`](../display/table.md) Component, you can customize the `v
         Stack,
         Text,
     } from "@kahi-ui/framework";
+
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
 </script>
 
 <Stack spacing="medium">
@@ -1229,6 +1337,114 @@ You can change the color palette of all the interactables via the `palette` prop
         Stack,
         Text,
     } from "@kahi-ui/framework";
+
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
 </script>
 
 <Stack spacing="medium">
@@ -1321,6 +1537,114 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Stack,
         Text,
     } from "@kahi-ui/framework";
+
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
 </script>
 
 <Stack spacing="medium">
