@@ -223,6 +223,14 @@ types=["{}"]
 />
 ```
 
+## Imports
+
+```svelte {title="DataTable Imports"}
+<script>
+    import {DataTable} from "@kahi-ui/framework";
+</script>
+```
+
 ## Pagination
 
 Via the `paginate` property, you can enable pagination of the input rows.
