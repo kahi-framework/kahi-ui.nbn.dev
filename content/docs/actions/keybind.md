@@ -92,22 +92,22 @@ The Framework provides a series of built-in keybinds using pre-configured standa
 -   `navigate_down` — Used for navigating to the next item down.
 
     -   `ArrowDown`
-    -   Repeatable, 250ms throttle
+    -   Repeatable, `250ms` throttle
 
 -   `navigate_left` — Used for navigating to the next item left.
 
     -   `ArrowLeft`
-    -   Repeatable, 250ms throttle
+    -   Repeatable, `250ms` throttle
 
 -   `navigate_right` — Used for navigating to the next item right.
 
     -   `ArrowRight`
-    -   Repeatable, 250ms throttle
+    -   Repeatable, `250ms` throttle
 
 -   `navigate_up` — Used for navigating to the next item up.
 
     -   `ArrowUp`
-    -   Repeatable, 250ms throttle
+    -   Repeatable, `250ms` throttle
 
 ```svelte {title="Keybind Built-In" mode="repl"}
 <script>
