@@ -504,10 +504,262 @@ Finally, you can also set up how many rows appear per page via the `paging` prop
 
 ## Searching
 
-...
+`DataTable` includes a bottom left search box which allows users to filter rows based on the input. You can customize the default via the `searching` property.
 
 ```svelte {title="DataTable Searching" mode="repl"}
+<script>
+    import {DataTable} from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+
+
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+    searching="Bounty Hunter"
+/>
+```
+
+By default, `DataTable` fuzzy filters each row's members converted into lower case strings. You can customize this behavior via the `searching_algorithm` property.
+
+```svelte {title="DataTable Searching Algorithm" mode="repl"}
+<script>
+    import {DataTable} from "@kahi-ui/framework";
+
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+
+    let searching = "";
+
+    function searching_algorithm(row) {
+        // Instead of fuzzy searching the strings, we're only
+        // looking if the first name BEGINS with our search filter
+
+        return row.first_name.startsWith(searching);
+    }
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+    {searching_algorithm}
+    bind:searching
+/>
 ```
 
 ## Sorting
