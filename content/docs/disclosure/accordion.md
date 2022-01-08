@@ -203,7 +203,7 @@ types=["<alpha-value>"]
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can manually open / close the choose which `<Accordion.Section>` is open via the `logic_state` property.
+You can manually choose which `<Accordion.Section>` Components are active via the `logic_state` property.
 
 ```svelte {title="Accordion Logic State" mode="repl"}
 <script>

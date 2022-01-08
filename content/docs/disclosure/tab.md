@@ -237,7 +237,7 @@ types=["<length>"]
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
-You can manually open / close the choose which `<Tab.Section>` is open via the `logic_state` property.
+You can manually choose which `<Tab.Section>` Component is active via the `logic_state` property.
 
 ```svelte {title="Tab Logic State" mode="repl"}
 <script>

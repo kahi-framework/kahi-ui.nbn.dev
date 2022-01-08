@@ -55,12 +55,93 @@
 ## Imports
 
 ```javascript {title="keybind Imports"}
-import {keybind} from "@kahi-ui/framework";
+import {
+    keybind,
+    action_activate,
+    action_exit,
+    action_submit,
+    navigate_down,
+    navigate_left,
+    navigate_right,
+    navigate_up,
+} from "@kahi-ui/framework";
 ```
 
 ## Compatibility
 
 Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
+
+## Built-In
+
+> **NOTE**: New since `v0.5.3`.
+
+The Framework provides a series of built-in keybinds using pre-configured standard keybinds that you can use in your own code.
+
+-   `action_activate` — Used for activating the current context, e.g. a focused label.
+
+    -   `Enter`, ` ` _(space)_
+
+-   `action_exit` — Used for exiting the current context, e.g. a prompt.
+
+    -   `Esc`
+
+-   `action_submit` — Used for submitting the current context, e.g. a focused input.
+
+    -   `Enter`
+
+-   `navigate_down` — Used for navigating to the next item down.
+
+    -   `ArrowDown`
+    -   Repeatable, `250ms` throttle
+
+-   `navigate_left` — Used for navigating to the next item left.
+
+    -   `ArrowLeft`
+    -   Repeatable, `250ms` throttle
+
+-   `navigate_right` — Used for navigating to the next item right.
+
+    -   `ArrowRight`
+    -   Repeatable, `250ms` throttle
+
+-   `navigate_up` — Used for navigating to the next item up.
+
+    -   `ArrowUp`
+    -   Repeatable, `250ms` throttle
+
+```svelte {title="Keybind Built-In" mode="repl"}
+<script>
+    import {
+        TextInput,
+        action_submit,
+    } from "@kahi-ui/framework";
+
+    let active = false;
+    let value = "";
+</script>
+
+<TextInput
+    palette={active ? "affirmative" : "negative"}
+    placeholder="Enter a value and then press enter."
+    actions={[
+        [
+            action_submit,
+            {
+                on_bind: (event) => {
+                    active = event.detail.active;
+
+                    if (active) {
+                        alert(
+                            `You submitted "${value}" as your input!`
+                        );
+                    }
+                },
+            },
+        ],
+    ]}
+    bind:value
+/>
+```
 
 ## Binding
 
@@ -68,11 +149,7 @@ You can configure which set of keys you want to activate the binding by listing 
 
 ```svelte {title="keybind Binding" mode="repl"}
 <script>
-    import {
-        Box,
-        TextInput,
-        keybind,
-    } from "@kahi-ui/framework";
+    import {Box, keybind} from "@kahi-ui/framework";
 
     let active = false;
 </script>
