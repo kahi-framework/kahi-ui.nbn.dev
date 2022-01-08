@@ -1,3 +1,82 @@
++++
+[[properties.DataTable]]
+name="columns"
+description="Configures metadata on how `DataTable` should renders the tabular data."
+types=["{key: keyof T, text: string, sorting?: boolean, sorting_algorithm?: (a: T[keyof T], b: T[keyof T]) => number}[]"]
+
+[[properties.DataTable]]
+name="rows"
+description="Sets the tabular data that `DataTable` is to render."
+types=["T[]"]
+
+[[properties.DataTable]]
+name="page"
+description="Sets the current page of the pagination."
+default="1"
+types=["1", "number", "string"]
+
+[[properties.DataTable]]
+name="paginate"
+description="Enables `DataTable` to split the tabular data into paged views."
+types=["boolean"]
+
+[[properties.DataTable]]
+name="paging"
+description="Sets how many rows should appear per page."
+default="5"
+types=["5", "number", "string"]
+
+[[properties.DataTable]]
+name="sorting"
+description="Sets which row member that `DataTable` is currently sorting by."
+types=["keyof T"]
+
+[[properties.DataTable]]
+name="sorting_mode"
+description="Sets which direction `DataTable` is sorting the row member by."
+types=["ascending", "descending"]
+
+[[properties.DataTable]]
+name="searching"
+description="Sets the current search query that `DataTable` is using to filter the tabular data."
+types=["string"]
+
+[[properties.DataTable]]
+name="searching_algorithm"
+description="Optional custom searching filter. By default, all row members are lowercased and fuzzy searched."
+types=["(row: T) => boolean"]
+
+[[properties.DataTable]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+
+[[properties.DataTable]]
+name="sizing"
+description="Alters the overall spacing / sizing."
+types=["tiny", "small", "medium", "large", "huge"]
+
+[[properties.DataTable]]
+name="variation"
+description="Alters how the `DataTable` renders with various additions."
+types=["borders", "stripes"]
+
+[[slots.DataTable]]
+name="default"
+description="Used for customizing how each column in a row is rendered in a table cell."
+types=["{key: keyof T, row: T}"]
+
+[[slots.DataTable]]
+name="next"
+description="Used for customizing the next / previous paging button content."
+types=["{}"]
+
+[[slots.DataTable]]
+name="previous"
+description="Used for customizing the not-sorted, ascending sort, descending sort button content."
+types=["{}"]
++++
+
 # DataTable
 
 > **WARNING**: While this Widget is available in Javascript-disabled Browsers, it can result in [Cumulative Layout Shift](https://web.dev/cls/).
