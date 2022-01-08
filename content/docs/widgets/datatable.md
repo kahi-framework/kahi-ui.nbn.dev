@@ -1141,22 +1141,430 @@ By default, `DataTable` alphabetizes each row's members converted into lower cas
 
 ## Slot
 
-...
+You can customize how each row member is rendered via the `default` slot.
 
 ```svelte {title="DataTable Slot" mode="repl"}
+<script>
+    import {
+        DataTable,
+        TextInput,
+    } from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    let ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+
+    function on_first_name_input(row, event) {
+        const index = ROWS.findIndex(
+            (_row) => row === _row
+        );
+
+        // NOTE: You should always clone your array / object data
+        // before making mutations! Saves headaches down the road
+        ROWS = [...ROWS];
+
+        ROWS[index] = {
+            ...row,
+            first_name: event.target.value,
+        };
+    }
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+>
+    <svelte:fragment let:key let:row>
+        {#if key === "first_name"}
+            <TextInput
+                value={row["first_name"]}
+                variation="flush"
+                width="100"
+                on:input={on_first_name_input.bind(
+                    null,
+                    row
+                )}
+            />
+        {:else}
+            {row[key]}
+        {/if}
+    </svelte:fragment>
+</DataTable>
 ```
 
-...
+You can also customize the icons of the decrement / increment paging buttons via the `previous` / `next` slots respectively.
 
 ```svelte {title="DataTable Slot Paging" mode="repl"}
+<script>
+    import {
+        DataTable,
+        TextInput,
+    } from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+    paginate
+>
+    <svelte:fragment slot="previous">
+        -
+    </svelte:fragment>
+
+    <svelte:fragment slot="next">+</svelte:fragment>
+</DataTable>
 ```
 
-...
+Finally, you can also customize the icons for the not sorted, ascending sort, and decending sort via the `unsorted`, `ascending`, and `decending` slots respectively.
 
 ```svelte {title="DataTable Slot Sorting" mode="repl"}
+<script>
+    import {
+        DataTable,
+        TextInput,
+    } from "@kahi-ui/framework";
 
+    const COLUMNS = [
+        {
+            text: "First Name",
+            key: "first_name",
+        },
+
+        {
+            text: "Last Name",
+            key: "last_name",
+        },
+
+        {
+            text: "Occupation",
+            key: "occupation",
+        },
+
+        {
+            text: "Species",
+            key: "species",
+        },
+    ];
+
+    const ROWS = [
+        {
+            first_name: "Ahsoka",
+            last_name: "Tano",
+            occupation: "Unknown",
+            species: "Togruta",
+        },
+
+        {
+            first_name: "Cad",
+            last_name: "Bane",
+            occupation: "Bounty Hunter",
+            species: "Duros",
+        },
+
+        {
+            first_name: "Cobb",
+            last_name: "Vanth",
+            occupation: "Marshal",
+            species: "Human",
+        },
+
+        {
+            first_name: "Din",
+            last_name: "Djarin",
+            occupation: "Bounty Hunter",
+            species: "Human",
+        },
+
+        {
+            first_name: "Fennec",
+            last_name: "Shand",
+            occupation: "Assassin",
+            species: "Human",
+        },
+
+        {
+            first_name: "Gilad",
+            last_name: "Pellaeon",
+            occupation: "Grand Admiral",
+            species: "Human",
+        },
+
+        {
+            first_name: "Jagged",
+            last_name: "Fel",
+            occupation: "Emperor",
+            species: "Human",
+        },
+
+        {
+            first_name: "Max",
+            last_name: "Rebo",
+            occupation: "Musician",
+            species: "Ortolan",
+        },
+
+        {
+            first_name: "Mok",
+            last_name: "Shaiz",
+            occupation: "Mayor",
+            species: "Ithorian",
+        },
+
+        {
+            first_name: "Natasi",
+            last_name: "Daala",
+            occupation: "Chief of State",
+            species: "Human",
+        },
+
+        {
+            first_name: "Quinlan",
+            last_name: "Vos",
+            occupation: "Jedi Master",
+            species: "Kiffar",
+        },
+
+        {
+            first_name: "Tila",
+            last_name: "Mong",
+            occupation: "Baron Do Sage",
+            species: "Kel Dor",
+        },
+    ];
+</script>
+
+<DataTable
+    columns={COLUMNS}
+    rows={ROWS}
+    palette="accent"
+    paginate
+>
+    <svelte:fragment slot="unsorted">
+        =/=
+    </svelte:fragment>
+
+    <svelte:fragment slot="ascending">
+        ASC
+    </svelte:fragment>
+
+    <svelte:fragment slot="decending">
+        DEC
+    </svelte:fragment>
+</DataTable>
 ```
 
 ## Variation
