@@ -29,6 +29,8 @@
 
 ## Imports
 
+> **DEPRECATED**: This property will be renamed `htmlpalette` -> `htmlmode` in `v0.6.0`.
+
 ```javascript {title="htmlpalette Imports"}
 import {htmlpalette} from "@kahi-ui/framework";
 ```
