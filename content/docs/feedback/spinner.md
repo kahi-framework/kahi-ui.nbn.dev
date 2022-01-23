@@ -5,7 +5,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Spinner]]
-name="size"
+name="sizing"
 description="Renders the `Spinner` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -58,7 +58,7 @@ types=["<length>"]
 <Hero.Container margin_top="medium">
     <Hero.Header>Loading</Hero.Header>
     <Hero.Footer>
-        <Spinner size="medium" />
+        <Spinner sizing="medium" />
     </Hero.Footer>
 </Hero.Container>
 ```
@@ -135,9 +135,11 @@ You can change the color palette of the `Spinner` via the `palette` property.
 
 ## Size
 
-You can change the size of the `Spinner` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="Spinner Size" mode="repl"}
+You can change the size of the `Spinner` via the `sizing` property.
+
+```svelte {title="Spinner Sizing" mode="repl"}
 <script>
     import {
         Spinner,
@@ -147,7 +149,7 @@ You can change the size of the `Spinner` via the `size` property.
 </script>
 
 <Stack
-    class="spinner-size"
+    class="spinner-sizing"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -184,7 +186,7 @@ You can change the size of the `Spinner` via the `size` property.
 </Stack>
 
 <style>
-    :global(.spinner-size .spinner) {
+    :global(.spinner-sizing .spinner) {
         display: block;
     }
 </style>

@@ -1,7 +1,7 @@
 +++
 [[properties.Container]]
 name="viewport"
-description="Controls the max width of the `Container` in relation to a Viewport preset."
+description="**(DEPRECATED)** Controls the max width of the `Container` in relation to a Viewport preset."
 default="prose"
 types=["prose", "mobile", "table", "desktop", "widescreen", "{VIEWPORT}:{SIZE}"]
 
@@ -54,6 +54,8 @@ types=["<length>"]
 ```
 
 ## Viewports
+
+> **DEPRECATED**: This property will be removed in `v0.6.0`, in favor of new `width` / `max_width` values.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `viewport={["mobile", "widescreen:prose"]}`
 
