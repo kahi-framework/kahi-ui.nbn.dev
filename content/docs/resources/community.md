@@ -17,3 +17,11 @@ If you want to list your project that uses Kahi UI, just [create a Pull Request]
 > Iconography projects that have been shown to work well with Kahi UI.
 
 -   [Lucide Icons](https://github.com/lucide-icons/lucide) — Community fork of [Feather Icons](https://feathericons.com/), provides lightweight SVG icons. _(used by this documentation site)_
+
+## Web Applications
+
+> Deployed Web Applications that utilize Kahi UI as their design language.
+
+### 3D Rendering
+
+-   [The Raytracer Challenge REPL](https://raytracer.xyz) / [jakobwesthoff/the_raytracer_challenge_repl](https://github.com/jakobwesthoff/the_raytracer_challenge_repl) — REPL for rendering raytraced scenes in modern browsers with a live editor.
