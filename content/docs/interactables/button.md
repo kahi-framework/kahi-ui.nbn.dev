@@ -243,7 +243,9 @@ You can change the size of the `Button` via the `sizing` property.
 >
     <Button>This is a DEFAULT Button!</Button>
 
-    <Button sizing="tiny">This is a TINY Button!</Button>
+    <Button sizing="tiny">
+        This is a TINY Button!
+    </Button>
 
     <Button sizing="small">
         This is a SMALL Button!
@@ -257,7 +259,9 @@ You can change the size of the `Button` via the `sizing` property.
         This is a LARGE Button!
     </Button>
 
-    <Button sizing="huge">This is a HUGE Button!</Button>
+    <Button sizing="huge">
+        This is a HUGE Button!
+    </Button>
 </Stack>
 ```
 
