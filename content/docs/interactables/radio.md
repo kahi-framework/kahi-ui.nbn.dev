@@ -5,7 +5,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Radio]]
-name="size"
+name="sizing"
 description="Renders the `Radio` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -168,7 +168,7 @@ types=["<alpha-value>"]
         <Radio
             id="radio-preview-bubblegum"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="bubblegum"
         >
             Bubblegum
@@ -177,7 +177,7 @@ types=["<alpha-value>"]
         <Radio
             id="radio-preview-chocolate"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="chocolate"
         >
             Chocolate
@@ -186,7 +186,7 @@ types=["<alpha-value>"]
         <Radio
             id="radio-preview-vanilla"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="vanilla"
         >
             Vanilla
@@ -325,11 +325,13 @@ You can change the color palette of the `Radio` via the `palette` property.
 </style>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Radio` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="Radio Size" mode="repl"}
+You can change the size of the `Radio` via the `sizing` property.
+
+```svelte {title="Radio Sizing" mode="repl"}
 <script>
     import {
         Form,
@@ -339,9 +341,9 @@ You can change the size of the `Radio` via the `size` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Form.Group logic_name="radio-size">
+<Form.Group logic_name="radio-sizing">
     <Stack
-        class="radio-size"
+        class="radio-sizing"
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
@@ -353,33 +355,33 @@ You can change the size of the `Radio` via the `size` property.
 
         <div>
             <Text is="strong">TINY</Text>
-            <Radio size="tiny" />
+            <Radio sizing="tiny" />
         </div>
 
         <div>
             <Text is="strong">SMALL</Text>
-            <Radio size="small" />
+            <Radio sizing="small" />
         </div>
 
         <div>
             <Text is="strong">MEDIUM</Text>
-            <Radio size="medium" />
+            <Radio sizing="medium" />
         </div>
 
         <div>
             <Text is="strong">LARGE</Text>
-            <Radio size="large" />
+            <Radio sizing="large" />
         </div>
 
         <div>
             <Text is="strong">HUGE</Text>
-            <Radio size="huge" />
+            <Radio sizing="huge" />
         </div>
     </Stack>
 </Form.Group>
 
 <style>
-    :global(.radio-size strong) {
+    :global(.radio-sizing strong) {
         display: block;
     }
 </style>

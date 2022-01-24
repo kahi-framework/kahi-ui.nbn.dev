@@ -1,6 +1,8 @@
 import type MarkdownIt from "markdown-it";
 
 export enum BLOCKQUOTE_MODE {
+    deprecated = "deprecated",
+
     important = "important",
 
     note = "note",
@@ -9,6 +11,8 @@ export enum BLOCKQUOTE_MODE {
 }
 
 const BLOCKQUOTE_PALETTES: Record<string, string | undefined> = {
+    [BLOCKQUOTE_MODE.deprecated]: "negative",
+
     [BLOCKQUOTE_MODE.important]: "negative",
 
     [BLOCKQUOTE_MODE.note]: "accent",

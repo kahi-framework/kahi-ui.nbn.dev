@@ -5,7 +5,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Check]]
-name="size"
+name="sizing"
 description="Renders the `Check` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -170,7 +170,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-cheese"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="cheese"
         >
             Cheese
@@ -179,7 +179,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-pepperoni"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="pepperoni"
         >
             Pepperoni
@@ -188,7 +188,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-onion"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="onion"
         >
             Onion
@@ -197,7 +197,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-pineapple"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="pineapple"
         >
             Pineapple
@@ -333,11 +333,13 @@ You can change the color palette of the `Check` via the `palette` property.
 </style>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Check` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="Check Size" mode="repl"}
+You can change the size of the `Check` via the `sizing` property.
+
+```svelte {title="Check Sizing" mode="repl"}
 <script>
     import {
         Check,
@@ -347,7 +349,7 @@ You can change the size of the `Check` via the `size` property.
 </script>
 
 <Stack
-    class="check-size"
+    class="check-sizing"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -359,32 +361,32 @@ You can change the size of the `Check` via the `size` property.
 
     <div>
         <Text is="strong">TINY</Text>
-        <Check size="tiny" />
+        <Check sizing="tiny" />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Check size="small" />
+        <Check sizing="small" />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Check size="medium" />
+        <Check sizing="medium" />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Check size="large" />
+        <Check sizing="large" />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Check size="huge" />
+        <Check sizing="huge" />
     </div>
 </Stack>
 
 <style>
-    :global(.check-size strong) {
+    :global(.check-sizing strong) {
         display: block;
     }
 </style>

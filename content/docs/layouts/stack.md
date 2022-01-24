@@ -67,6 +67,8 @@ types=["{}"]
 
 ## Imports
 
+> **DEPRECATED**: `<Stack>` will be renamed to `<Stack.Container>` in `v0.6.0`.
+
 ```svelte {title="Stack Imports"}
 <script>
     import {Stack} from "@kahi-ui/framework";

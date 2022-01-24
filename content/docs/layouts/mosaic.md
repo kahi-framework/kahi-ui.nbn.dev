@@ -86,6 +86,8 @@ types=["{}"]
 
 ## Imports
 
+> **DEPRECATED**: `<Mosaic>` will be renamed to `<Mosaic.Container>` in `v0.6.0`.
+
 ```svelte {title="Mosaic Imports"}
 <script>
     import {Mosaic} from "@kahi-ui/framework";

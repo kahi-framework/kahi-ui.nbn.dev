@@ -6,7 +6,7 @@ default="h1"
 types=["h1", "h2", "h3", "h4", "h5", "h6"]
 
 [[properties.Heading]]
-name="align"
+name="alignment_x"
 description="Changes how the text is aligned within the containing box."
 types=["center", "justify", "left", "right"]
 
@@ -181,11 +181,11 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 </script>
 ```
 
-## Size
+## Sizing
 
 You can adjust the size of `Heading` by passing the `is` property.
 
-```svelte {title="Heading Size" mode="repl"}
+```svelte {title="Heading Sizing" mode="repl"}
 <script>
     import {
         Heading,
@@ -195,7 +195,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 </script>
 
 <Stack
-    class="heading-size"
+    class="heading-sizing"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -262,7 +262,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 </Stack>
 
 <style>
-    :global(.heading-size > div) {
+    :global(.heading-sizing > div) {
         max-width: 25ch;
     }
 </style>
@@ -367,11 +367,13 @@ You can change the color palette of `Heading` via the `palette` property.
 </style>
 ```
 
-## Align
+## Alignment
 
-You can adjust the text alignment of the `Heading` via the `align` property.
+> **DEPRECATED**: This property will be renamed `align` -> `alignment_x` in `v0.6.0`.
 
-```svelte {title="Heading Align" mode="repl"}
+You can adjust the text alignment of the `Heading` via the `alignment_x` property.
+
+```svelte {title="Heading Alignment" mode="repl"}
 <script>
     import {
         Heading,
@@ -393,7 +395,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">CENTER</Text>
-        <Heading align="center">
+        <Heading alignment_x="center">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -403,7 +405,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">JUSTIFY</Text>
-        <Heading align="justify">
+        <Heading alignment_x="justify">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -413,7 +415,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">LEFT</Text>
-        <Heading align="left">
+        <Heading alignment_x="left">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -423,7 +425,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">RIGHT</Text>
-        <Heading align="right">
+        <Heading alignment_x="right">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis

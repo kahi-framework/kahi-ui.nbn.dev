@@ -5,7 +5,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.NumberInput]]
-name="size"
+name="sizing"
 description="Renders the `NumberInput` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -147,11 +147,13 @@ You can change the color palette of the `NumberInput` via the `palette` property
 </Stack>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `NumberInput` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="NumberInput Size" mode="repl"}
+You can change the size of the `NumberInput` via the `sizing` property.
+
+```svelte {title="NumberInput Sizing" mode="repl"}
 <script>
     import {
         Stack,
@@ -171,31 +173,31 @@ You can change the size of the `NumberInput` via the `size` property.
     />
 
     <NumberInput
-        size="tiny"
+        sizing="tiny"
         characters="20"
         placeholder="This is a TINY NumberInput"
     />
 
     <NumberInput
-        size="small"
+        sizing="small"
         characters="20"
         placeholder="This is a SMALL NumberInput"
     />
 
     <NumberInput
-        size="medium"
+        sizing="medium"
         characters="20"
         placeholder="This is a MEDIUM NumberInput"
     />
 
     <NumberInput
-        size="large"
+        sizing="large"
         characters="20"
         placeholder="This is a LARGE NumberInput"
     />
 
     <NumberInput
-        size="huge"
+        sizing="huge"
         characters="20"
         placeholder="This is a HUGE NumberInput"
     />

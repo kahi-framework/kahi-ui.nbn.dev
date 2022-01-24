@@ -101,7 +101,7 @@ types=["{}"]
 
 [[slots."Menu.Divider"]]
 name="default"
-description="Slot for rendering `Menu.SubMenu` Components."
+description="Slot for rendering `Menu.Section` Components."
 types=["{}"]
 
 [[slots."Menu.Heading"]]
@@ -111,7 +111,7 @@ types=["{}"]
 
 [[slots."Menu.Heading"]]
 name="default"
-description="Slot for rendering `Menu.SubMenu` Components."
+description="Slot for rendering `Menu.Section` Components."
 types=["{}"]
 
 [[slots."Menu.Item"]]
@@ -124,7 +124,7 @@ name="default"
 description="Default unnamed slot."
 types=["{}"]
 
-[[slots."Menu.SubMenu"]]
+[[slots."Menu.Section"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
@@ -182,7 +182,7 @@ types=["{}"]
         Heading,
         Item,
         Label,
-        SubMenu,
+        Section,
     } = Menu;
 </script>
 ```
@@ -207,11 +207,13 @@ You can alter the orientation of how the `Menu.Container` lays out the children.
 </Menu.Container>
 ```
 
-## Sub Menus
+## Section
 
-You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragment slot="sub-menu">` in `<Menu.Divider>` or `<Menu.Heading>` Components.
+> **DEPRECATED**: `<Menu.SubMenu>` will be renamed to `<Menu.Section>` in `v0.6.0`.
 
-```svelte {title="Menu Sub Menu" mode="repl"}
+You can nest more menus via `<Menu.Section>` Component and using `<svelte:fragment slot="sub-menu">` in `<Menu.Divider>` or `<Menu.Heading>` Components.
+
+```svelte {title="Menu Section" mode="repl"}
 <script>
     import {
         Box,
@@ -226,7 +228,7 @@ You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragme
         <Menu.Heading>
             FEEDBACK
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button active>
                         Dot
                         <Spacer />
@@ -238,20 +240,20 @@ You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragme
                         <Spacer />
                         <Text is="span">ICON</Text>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
 
         <Menu.Heading>
             OVERLAYS
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button>
                         Overlay
                         <Spacer />
                         <Text is="span">ICON</Text>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -277,7 +279,7 @@ In place of `<Menu.Heading>` you can also use `<Menu.Divider>` with text content
         <Menu.Divider>
             FEEDBACK
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button active>
                         Dot
                         <Spacer />
@@ -289,7 +291,7 @@ In place of `<Menu.Heading>` you can also use `<Menu.Divider>` with text content
                         <Spacer />
                         <Text is="span">ICON</Text>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Divider>
     </Menu.Container>
@@ -314,7 +316,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             DEFAULT
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button active>
                         Dot
                         <Spacer />
@@ -326,7 +328,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -335,7 +337,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             ACCENT
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button
                         palette="accent"
                         active
@@ -350,7 +352,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -359,7 +361,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             DARK
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button palette="dark" active>
                         Dot
                         <Spacer />
@@ -371,7 +373,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -380,7 +382,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             LIGHT
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button
                         palette="light"
                         active
@@ -395,7 +397,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -404,7 +406,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             ALERT
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button
                         palette="alert"
                         active
@@ -419,7 +421,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -428,7 +430,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             AFFIRMATIVE
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button
                         palette="affirmative"
                         active
@@ -443,7 +445,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>
@@ -452,7 +454,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
         <Menu.Heading>
             NEGATIVE
             <svelte:fragment slot="sub-menu">
-                <Menu.SubMenu>
+                <Menu.Section>
                     <Menu.Button
                         palette="negative"
                         active
@@ -467,7 +469,7 @@ You can change the color palette of the `Menu.Anchor` / `Menu.Button` / `Menu.La
                         <Spacer />
                         <span>ICON</span>
                     </Menu.Button>
-                </Menu.SubMenu>
+                </Menu.Section>
             </svelte:fragment>
         </Menu.Heading>
     </Menu.Container>

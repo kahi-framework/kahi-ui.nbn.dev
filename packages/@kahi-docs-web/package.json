@@ -45,13 +45,13 @@
         "typescript": "^4.4.4"
     },
     "dependencies": {
-        "@js-temporal/polyfill": "^0.2.0",
+        "@js-temporal/polyfill": "0.3.0",
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/highlight": "workspace:^",
         "@kahi-docs/markdown": "workspace:^",
         "@kahi-docs/node": "workspace:^",
         "@kahi-docs/shared": "workspace:^",
-        "@kahi-ui/framework": "0.5.3",
+        "@kahi-ui/framework": "0.5.4",
         "@novacbn/svelte-codejar": "^0.1.1",
         "@novacbn/svelte-pipeline": "0.3.0",
         "flexsearch": "^0.7.21",

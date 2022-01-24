@@ -10,7 +10,7 @@ description="Changes the shape of the `Progress`."
 types=["circle"]
 
 [[properties.Progress]]
-name="size"
+name="sizing"
 description="Renders the `Progress` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -238,9 +238,11 @@ You can change the color palette of the `Progress` via the `palette` property.
 </Stack>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Progress` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
+
+You can change the size of the `Progress` via the `sizing` property.
 
 ```svelte {title="Progress Palette" mode="repl"}
 <script>
@@ -272,7 +274,7 @@ You can change the size of the `Progress` via the `size` property.
             <Progress
                 shape="circle"
                 value={0.5}
-                size="tiny"
+                sizing="tiny"
             />
         </div>
 
@@ -283,7 +285,7 @@ You can change the size of the `Progress` via the `size` property.
             <Progress
                 shape="circle"
                 value={0.5}
-                size="small"
+                sizing="small"
             />
         </div>
 
@@ -294,7 +296,7 @@ You can change the size of the `Progress` via the `size` property.
             <Progress
                 shape="circle"
                 value={0.5}
-                size="medium"
+                sizing="medium"
             />
         </div>
 
@@ -305,7 +307,7 @@ You can change the size of the `Progress` via the `size` property.
             <Progress
                 shape="circle"
                 value={0.5}
-                size="large"
+                sizing="large"
             />
         </div>
 
@@ -316,7 +318,7 @@ You can change the size of the `Progress` via the `size` property.
             <Progress
                 shape="circle"
                 value={0.5}
-                size="huge"
+                sizing="huge"
             />
         </div>
     </Stack>
@@ -329,27 +331,27 @@ You can change the size of the `Progress` via the `size` property.
 
         <div>
             <Text is="strong">TINY</Text>
-            <Progress value={0.5} size="tiny" />
+            <Progress value={0.5} sizing="tiny" />
         </div>
 
         <div>
             <Text is="strong">SMALL</Text>
-            <Progress value={0.5} size="small" />
+            <Progress value={0.5} sizing="small" />
         </div>
 
         <div>
             <Text is="strong">MEDIUM</Text>
-            <Progress value={0.5} size="medium" />
+            <Progress value={0.5} sizing="medium" />
         </div>
 
         <div>
             <Text is="strong">LARGE</Text>
-            <Progress value={0.5} size="large" />
+            <Progress value={0.5} sizing="large" />
         </div>
 
         <div>
             <Text is="strong">HUGE</Text>
-            <Progress value={0.5} size="huge" />
+            <Progress value={0.5} sizing="huge" />
         </div>
     </Mosaic>
 </Stack>

@@ -5,7 +5,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Switch]]
-name="size"
+name="sizing"
 description="Renders the `Switch` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -266,11 +266,13 @@ You can change the color palette of the `Switch` via the `palette` property.
 </style>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Switch` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="Switch Size" mode="repl"}
+You can change the size of the `Switch` via the `sizing` property.
+
+```svelte {title="Switch Sizing" mode="repl"}
 <script>
     import {
         Switch,
@@ -280,7 +282,7 @@ You can change the size of the `Switch` via the `size` property.
 </script>
 
 <Stack
-    class="switch-size"
+    class="switch-sizing"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -292,32 +294,32 @@ You can change the size of the `Switch` via the `size` property.
 
     <div>
         <Text is="strong">TINY</Text>
-        <Switch size="tiny" />
+        <Switch sizing="tiny" />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Switch size="small" />
+        <Switch sizing="small" />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Switch size="medium" />
+        <Switch sizing="medium" />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Switch size="large" />
+        <Switch sizing="large" />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Switch size="huge" />
+        <Switch sizing="huge" />
     </div>
 </Stack>
 
 <style>
-    :global(.switch-size strong) {
+    :global(.switch-sizing strong) {
         display: block;
     }
 </style>

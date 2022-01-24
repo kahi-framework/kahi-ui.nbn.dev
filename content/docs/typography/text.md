@@ -6,7 +6,7 @@ default="p"
 types=["abbr", "b", "del", "em", "i", "ins", "kbd", "mark", "p", "pre", "s", "samp", "small", "span", "strong", "sub", "sup", "u"]
 
 [[properties.Text]]
-name="align"
+name="alignment_x"
 description="Changes how the text is aligned within the containing box."
 types=["center", "justify", "left", "right"]
 
@@ -16,7 +16,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Text]]
-name="size"
+name="sizing"
 description="Changes how big the text will be rendered."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -131,17 +131,19 @@ types=["<alpha-value>"]
 </script>
 ```
 
-## Size
+## Sizing
 
-You can adjust the size of `Text` by passing the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="Text Size" mode="repl"}
+You can adjust the size of `Text` by passing the `sizing` property.
+
+```svelte {title="Text Sizing" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
 <Stack
-    class="text-size"
+    class="text-sizing"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -161,7 +163,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">TINY</Text>
-        <Text size="tiny">
+        <Text sizing="tiny">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -174,7 +176,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Text size="small">
+        <Text sizing="small">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -187,7 +189,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Text size="medium">
+        <Text sizing="medium">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -200,7 +202,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Text size="large">
+        <Text sizing="large">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -213,7 +215,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Text size="huge">
+        <Text sizing="huge">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -226,7 +228,7 @@ You can adjust the size of `Text` by passing the `size` property.
 </Stack>
 
 <style>
-    :global(.text-size > div) {
+    :global(.text-sizing > div) {
         max-width: 25ch;
     }
 </style>
@@ -346,11 +348,13 @@ You can change the color palette of `Text` via the `palette` property.
 </style>
 ```
 
-## Align
+## Alignment
 
-You can adjust the text alignment of the `Text` via the `align` property.
+> **DEPRECATED**: This property will be renamed `align` -> `alignment_x` in `v0.6.0`.
 
-```svelte {title="Text Align" mode="repl"}
+You can adjust the text alignment of the `Text` via the `alignment_x` property.
+
+```svelte {title="Text Alignment" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -371,7 +375,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">CENTER</Text>
-        <Text align="center">
+        <Text alignment_x="center">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -384,7 +388,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">JUSTIFY</Text>
-        <Text align="justify">
+        <Text alignment_x="justify">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -397,7 +401,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">LEFT</Text>
-        <Text align="left">
+        <Text alignment_x="left">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -410,7 +414,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">RIGHT</Text>
-        <Text align="right">
+        <Text alignment_x="right">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis

@@ -17,7 +17,7 @@ types=["tiny", "small", "medium", "large", "huge"]
 
 [[properties.Figure]]
 name="variation"
-description="Alters how some of the other properties changes the `Figure`. e.g. `size`"
+description="**(DEPRECATED)** Alters how some of the other properties changes the `Figure`. e.g. `size`"
 types=["icon"]
 
 [[slots.Figure]]
@@ -88,6 +88,10 @@ You can modify the shape of the child content via the `shape` property.
 ```
 
 ## Size
+
+> **DEPRECATED**: This property will be elevated to becoming a global property in `v0.6.0`.
+
+> **DEPRECATED**: `variation="icon"` will be removed in favor `size="icon-{SIZE}"` in `v0.6.0`, e.g. `size="icon-huge"`.
 
 You can modify the size of the child content between five presets via the `size` property. Along with separate set of sizes meant for icon-sized content by including `variation="icon"`.
 

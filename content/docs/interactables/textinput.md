@@ -17,7 +17,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.TextInput]]
-name="size"
+name="sizing"
 description="Renders the `TextInput` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -345,11 +345,13 @@ You can change the color palette of the `TextInput` via the `palette` property.
 </Stack>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `TextInput` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="TextInput Size" mode="repl"}
+You can change the size of the `TextInput` via the `sizing` property.
+
+```svelte {title="TextInput Sizing" mode="repl"}
 <script>
     import {
         Stack,
@@ -369,31 +371,31 @@ You can change the size of the `TextInput` via the `size` property.
     />
 
     <TextInput
-        size="tiny"
+        sizing="tiny"
         characters="20"
         value="This is a TINY TextInput"
     />
 
     <TextInput
-        size="small"
+        sizing="small"
         characters="20"
         value="This is a SMALL TextInput"
     />
 
     <TextInput
-        size="medium"
+        sizing="medium"
         characters="20"
         value="This is a MEDIUM TextInput"
     />
 
     <TextInput
-        size="large"
+        sizing="large"
         characters="20"
         value="This is a LARGE TextInput"
     />
 
     <TextInput
-        size="huge"
+        sizing="huge"
         characters="20"
         value="This is a HUGE TextInput"
     />

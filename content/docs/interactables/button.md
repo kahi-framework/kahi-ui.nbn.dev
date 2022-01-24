@@ -5,7 +5,7 @@ description="Alters the displayed color scheme."
 types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
 
 [[properties.Button]]
-name="size"
+name="sizing"
 description="Renders the `Button` at a different sizes."
 types=["tiny", "small", "medium", "large", "huge"]
 
@@ -224,11 +224,13 @@ You can change the color palette of the `Button` via the `palette` property.
 </Stack>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Button` via the `size` property.
+> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-```svelte {title="Button Size" mode="repl"}
+You can change the size of the `Button` via the `sizing` property.
+
+```svelte {title="Button Sizing" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
@@ -241,21 +243,25 @@ You can change the size of the `Button` via the `size` property.
 >
     <Button>This is a DEFAULT Button!</Button>
 
-    <Button size="tiny">This is a TINY Button!</Button>
+    <Button sizing="tiny">
+        This is a TINY Button!
+    </Button>
 
-    <Button size="small">
+    <Button sizing="small">
         This is a SMALL Button!
     </Button>
 
-    <Button size="medium">
+    <Button sizing="medium">
         This is a MEDIUM Button!
     </Button>
 
-    <Button size="large">
+    <Button sizing="large">
         This is a LARGE Button!
     </Button>
 
-    <Button size="huge">This is a HUGE Button!</Button>
+    <Button sizing="huge">
+        This is a HUGE Button!
+    </Button>
 </Stack>
 ```
 
