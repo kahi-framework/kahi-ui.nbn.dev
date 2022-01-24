@@ -24,4 +24,4 @@ If you want to list your project that uses Kahi UI, just [create a Pull Request]
 
 ### 3D Rendering
 
--   [The Raytracer Challenge REPL](https://raytracer.xyz) / [jakobwesthoff/the_raytracer_challenge_repl](https://github.com/jakobwesthoff/the_raytracer_challenge_repl) — REPL for rendering raytraced scenes in modern browsers with a live editor.
+-   [The Raytracer Challenge REPL](https://raytracer.xyz) - [jakobwesthoff/the_raytracer_challenge_repl](https://github.com/jakobwesthoff/the_raytracer_challenge_repl) — REPL for rendering raytraced scenes in modern browsers with a live editor.
