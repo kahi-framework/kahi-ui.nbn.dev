@@ -133,7 +133,7 @@ You can change the color palette of the `Spinner` via the `palette` property.
 </style>
 ```
 
-## Size
+## Sizing
 
 > **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
@@ -161,27 +161,27 @@ You can change the size of the `Spinner` via the `sizing` property.
 
     <div>
         <Text is="strong">TINY</Text>
-        <Spinner size="tiny" />
+        <Spinner sizing="tiny" />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Spinner size="small" />
+        <Spinner sizing="small" />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Spinner size="medium" />
+        <Spinner sizing="medium" />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Spinner size="large" />
+        <Spinner sizing="large" />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Spinner size="huge" />
+        <Spinner sizing="huge" />
     </div>
 </Stack>
 

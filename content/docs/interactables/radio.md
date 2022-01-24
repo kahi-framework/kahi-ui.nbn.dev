@@ -325,11 +325,11 @@ You can change the color palette of the `Radio` via the `palette` property.
 </style>
 ```
 
-## Size
+## Sizing
 
 > **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-You can change the size of the `Radio` via the `size` property.
+You can change the size of the `Radio` via the `sizing` property.
 
 ```svelte {title="Radio Sizing" mode="repl"}
 <script>

@@ -333,11 +333,11 @@ You can change the color palette of the `Check` via the `palette` property.
 </style>
 ```
 
-## Size
+## Sizing
 
 > **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
 
-You can change the size of the `Check` via the `size` property.
+You can change the size of the `Check` via the `sizing` property.
 
 ```svelte {title="Check Sizing" mode="repl"}
 <script>

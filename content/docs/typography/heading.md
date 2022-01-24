@@ -181,11 +181,11 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 </script>
 ```
 
-## Size
+## Sizing
 
 You can adjust the size of `Heading` by passing the `is` property.
 
-```svelte {title="Heading Size" mode="repl"}
+```svelte {title="Heading Sizing" mode="repl"}
 <script>
     import {
         Heading,
@@ -195,7 +195,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 </script>
 
 <Stack
-    class="heading-size"
+    class="heading-sizing"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -262,7 +262,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 </Stack>
 
 <style>
-    :global(.heading-size > div) {
+    :global(.heading-sizing > div) {
         max-width: 25ch;
     }
 </style>
@@ -425,7 +425,7 @@ You can adjust the text alignment of the `Heading` via the `alignment_x` propert
 
     <div>
         <Text is="strong">RIGHT</Text>
-        <Heading align="ment_xright">
+        <Heading alignment_x="right">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
