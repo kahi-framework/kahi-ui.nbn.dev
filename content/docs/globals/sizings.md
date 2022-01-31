@@ -32,7 +32,7 @@ types=["auto", "content-fit", "content-max", "content-min", "prose", "stretch", 
 
 # Sizings
 
-All Components have access to the global width and height HTML data attributes. All of which, supports [Responitivity](../framework/responsitivity.md).
+All Components have access to the global width and height HTML data attributes. All of which, supports [Responsitivity](../framework/responsitivity.md).
 
 ## Width
 
