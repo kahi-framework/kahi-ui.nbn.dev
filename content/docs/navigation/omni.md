@@ -66,25 +66,15 @@ types=["{}"]
 
     <Omni.Section>
         <Menu.Container orientation="horizontal">
-            <Menu.Button variation="clear" active>
-                Docs
-            </Menu.Button>
-
-            <Menu.Button variation="clear">
-                Playground
-            </Menu.Button>
-
-            <Menu.Button variation="clear">
-                Storybook
-            </Menu.Button>
+            <Menu.Button active>Docs</Menu.Button>
+            <Menu.Button>Playground</Menu.Button>
+            <Menu.Button>Storybook</Menu.Button>
         </Menu.Container>
     </Omni.Section>
 
     <Omni.Footer>
         <Menu.Container orientation="horizontal">
-            <Menu.Button variation="clear">
-                GitHub
-            </Menu.Button>
+            <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
     </Omni.Footer>
 </Omni.Container>
@@ -125,9 +115,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -141,9 +129,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -157,9 +143,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -173,9 +157,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -189,9 +171,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -205,9 +185,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -221,9 +199,7 @@ You can change the color palette of the `Omni` via the `palette` property.
 
         <Omni.Footer>
             <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
+                <Menu.Button>GitHub</Menu.Button>
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
@@ -262,25 +238,15 @@ You can adjust which side the content divider border will appear via the `placem
 
     <Omni.Section>
         <Menu.Container orientation="horizontal">
-            <Menu.Button variation="clear" active>
-                Docs
-            </Menu.Button>
-
-            <Menu.Button variation="clear">
-                Playground
-            </Menu.Button>
-
-            <Menu.Button variation="clear">
-                Storybook
-            </Menu.Button>
+            <Menu.Button active>Docs</Menu.Button>
+            <Menu.Button>Playground</Menu.Button>
+            <Menu.Button>Storybook</Menu.Button>
         </Menu.Container>
     </Omni.Section>
 
     <Omni.Footer>
         <Menu.Container orientation="horizontal">
-            <Menu.Button variation="clear">
-                GitHub
-            </Menu.Button>
+            <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
     </Omni.Footer>
 </Omni.Container>
@@ -316,17 +282,9 @@ While this Component does not have built-in collapsing, the Framework provides t
 
     <Omni.Section hidden={["mobile", "tablet"]}>
         <Menu.Container orientation="horizontal">
-            <Menu.Button variation="clear" active>
-                Docs
-            </Menu.Button>
-
-            <Menu.Button variation="clear">
-                Playground
-            </Menu.Button>
-
-            <Menu.Button variation="clear">
-                Storybook
-            </Menu.Button>
+            <Menu.Button active>Docs</Menu.Button>
+            <Menu.Button>Playground</Menu.Button>
+            <Menu.Button>Storybook</Menu.Button>
         </Menu.Container>
     </Omni.Section>
 
@@ -335,9 +293,7 @@ While this Component does not have built-in collapsing, the Framework provides t
             hidden={["mobile", "tablet"]}
             orientation="horizontal"
         >
-            <Menu.Button variation="clear">
-                GitHub
-            </Menu.Button>
+            <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
 
         <Popover.Container
@@ -360,22 +316,19 @@ While this Component does not have built-in collapsing, the Framework provides t
                     shape="rounded"
                 >
                     <Menu.Container>
-                        <Menu.Button
-                            variation="clear"
-                            active
-                        >
+                        <Menu.Button active>
                             Docs
                         </Menu.Button>
 
-                        <Menu.Button variation="clear">
+                        <Menu.Button>
                             Playground
                         </Menu.Button>
 
-                        <Menu.Button variation="clear">
+                        <Menu.Button>
                             Storybook
                         </Menu.Button>
 
-                        <Menu.Button variation="clear">
+                        <Menu.Button>
                             GitHub
                         </Menu.Button>
                     </Menu.Container>
