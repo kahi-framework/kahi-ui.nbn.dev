@@ -72,7 +72,7 @@ types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}
 
 # Spacings
 
-All Components have access to the global margin and padding HTML data attributes. All of which, supports [Responitivity](../framework/responsitivity.md).
+All Components have access to the global margin and padding HTML data attributes. All of which, supports [Responsitivity](../framework/responsitivity.md).
 
 ## Margin
 
