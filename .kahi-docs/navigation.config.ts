@@ -59,9 +59,10 @@ export default define_navigation({
         {
             text: "Display",
             items: [
-                {href: "/docs/display/badge"},
+                {href: "/docs/display/badge", badge: "UPDATED"},
                 {href: "/docs/display/datestamp"},
                 {href: "/docs/display/datetimestamp"},
+                {href: "/docs/display/kbd", badge: "NEW"},
                 {href: "/docs/display/list"},
                 {href: "/docs/display/table"},
                 {href: "/docs/display/timestamp"},
@@ -80,11 +81,9 @@ export default define_navigation({
         {
             text: "Feedback",
             items: [
-                {href: "/docs/feedback/dot"},
-                {href: "/docs/feedback/ellipsis"},
-                {href: "/docs/feedback/progress"},
-                {href: "/docs/feedback/spinner"},
-                {href: "/docs/feedback/wave"},
+                {href: "/docs/feedback/dot", badge: "UPDATED"},
+                {href: "/docs/feedback/ellipsis", badge: "UPDATED"},
+                {href: "/docs/feedback/progress", badge: "UPDATED"},
             ],
         },
 
