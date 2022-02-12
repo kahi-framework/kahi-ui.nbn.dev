@@ -1,7 +1,7 @@
 +++
 [[properties."List.Container"]]
 name="is"
-description="Changes the HTML tag used for rendering the list, and the list item prefixing."
+description="Alters the HTML tag rendered to the DOM, changing the list item prefixes."
 default="ul"
 types=["ol", "ul"]
 
@@ -49,11 +49,11 @@ types=["<length>"]
 </script>
 ```
 
-## Types
+## Elements
 
 You can change what type of list is being rendered via the `is` property.
 
-```svelte {title="List Types" mode="repl"}
+```svelte {title="List Elements" mode="repl"}
 <script>
     import {
         List,
@@ -62,7 +62,7 @@ You can change what type of list is being rendered via the `is` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -104,5 +104,5 @@ You can change what type of list is being rendered via the `is` property.
             </List.Container>
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 ```

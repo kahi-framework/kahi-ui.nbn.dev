@@ -1,4 +1,16 @@
 +++
+[[properties.Ellipsis]]
+name="animation"
+description="Alters the animation played infinitely."
+default="pulse"
+types=["bounce", "ping", "pulse"]
+
+[[properties.Ellipsis]]
+name="iterations"
+description="Alters how many times the `default` slot is repeated."
+default="3"
+types=["3", "number"]
+
 [[slots.Ellipsis]]
 name="default"
 description="Alters the rendered animated character."
@@ -31,7 +43,7 @@ types=["<alpha-value>"]
 
 > **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
-`Ellipsis` is a text-based indicator used to tell the end-user that the Web Application is loading something in the background.
+`Ellipsis` is an indicator used to tell the user that something is loading in the background.
 
 ```svelte {title="Ellipsis Preview" mode="repl"}
 <script>
@@ -44,7 +56,7 @@ types=["<alpha-value>"]
     } from "@kahi-ui/framework";
 </script>
 
-<Stack alignment_x="left" spacing="medium">
+<Stack.Container alignment_x="left" spacing="medium">
     <Button disabled>
         <!--
             NOTE: Wrapping text and Component together to
@@ -60,7 +72,7 @@ types=["<alpha-value>"]
         Loading
         <Ellipsis />
     </Heading>
-</Stack>
+</Stack.Container>
 ```
 
 ## Imports
@@ -73,9 +85,9 @@ types=["<alpha-value>"]
 
 ## Slot
 
-You can customize the text character used for the animation via the by passing into the `default` slot.
+You can customize the content used for the animation via the by passing into the `default` slot.
 
-```svelte {title="Ellipsis Character" mode="repl"}
+```svelte {title="Ellipsis Slot" mode="repl"}
 <script>
     import {
         Ellipsis,
@@ -84,7 +96,84 @@ You can customize the text character used for the animation via the by passing i
 </script>
 
 <Heading>
-    Loading
-    <Ellipsis>?</Ellipsis>
+    Loading<Ellipsis>/</Ellipsis>
 </Heading>
+```
+
+## Animations
+
+> **NOTE**: New since `v0.6.0`.
+
+You can customize which animation is played via the `animation` property.
+
+```svelte {title="Ellipsis Animations" mode="repl"}
+<script>
+    import {
+        Ellipsis,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <br />
+        <Ellipsis />
+    </div>
+
+    <div>
+        <Text is="strong">BOUNCE</Text>
+        <br />
+        <Ellipsis animation="bounce" />
+    </div>
+
+    <div>
+        <Text is="strong">PING</Text>
+        <br />
+        <Ellipsis animation="ping" />
+    </div>
+
+    <div>
+        <Text is="strong">PULSE</Text>
+        <br />
+        <Ellipsis animation="pulse" />
+    </div>
+</Stack.Container>
+```
+
+## Iterations
+
+> **NOTE**: New since `v0.6.0`.
+
+You can customize how many times the content is repeated via the `iterations` property.
+
+```svelte {title="Ellipsis Iterations" mode="repl"}
+<script>
+    import {
+        Dot,
+        Ellipsis,
+        NumberInput,
+    } from "@kahi-ui/framework";
+
+    let iterations = 5;
+</script>
+
+<NumberInput bind:value={iterations} />
+
+<!--
+    NOTE: The animation can desync if `iterations` is changed during
+    runtime. So for the demo, a `#key` block is used to recreate the
+    Component every time `iterations` is updated
+-->
+
+{#key iterations}
+    <Ellipsis animation="bounce" {iterations}>
+        <Dot palette="accent" />
+    </Ellipsis>
+{/key}
 ```

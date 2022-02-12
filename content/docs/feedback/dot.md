@@ -1,13 +1,8 @@
 +++
 [[properties.Dot]]
-name="animation"
-description="Sets an attention grabbing animation."
-types=["pulse"]
-
-[[properties.Dot]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[slots.Dot]]
 name="default"
@@ -62,88 +57,63 @@ You can change the color palette of the `Dot` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="dot-palette"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Dot />
     </div>
 
     <div>
         <Text is="strong">ACCENT</Text>
+        <br />
         <Dot palette="accent" />
     </div>
 
     <div>
+        <Text is="strong">NEUTRAL</Text>
+        <br />
+        <Dot palette="neutral" />
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
+        <br />
         <Dot palette="dark" />
     </div>
 
     <div>
         <Text is="strong">LIGHT</Text>
+        <br />
         <Dot palette="light" />
     </div>
 
     <div>
         <Text is="strong">ALERT</Text>
+        <br />
         <Dot palette="alert" />
     </div>
 
     <div>
         <Text is="strong">AFFIRMATIVE</Text>
+        <br />
         <Dot palette="affirmative" />
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <br />
+        <Dot palette="informative" />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
+        <br />
         <Dot palette="negative" />
     </div>
-</Stack>
-
-<style>
-    :global(.dot-palette .dot) {
-        display: block;
-    }
-</style>
-```
-
-## Animation
-
-You can have the `Dot` perform animations to grab the end-user's attention via the `animation` property.
-
-```svelte {title="Dot Animation" mode="repl"}
-<script>
-    import {
-        Dot,
-        Stack,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack
-    class="dot-animation"
-    orientation="horizontal"
-    spacing="medium"
-    variation="wrap"
->
-    <div>
-        <Text is="strong">DEFAULT</Text>
-        <Dot />
-    </div>
-
-    <div>
-        <Text is="strong">PULSE</Text>
-        <Dot animation="pulse" />
-    </div>
-</Stack>
-
-<style>
-    :global(.dot-animation .dot) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
