@@ -2,12 +2,23 @@
 [[properties.NumberInput]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.NumberInput]]
-name="size"
+name="radius"
+description="Changes the border radius of the `NumberInput`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
+
+[[properties.NumberInput]]
+name="shape"
+description="Changes the shape of the `NumberInput`."
+types=["circle", "pill", "{VIEWPORT}:{SHAPE}"]
+
+[[properties.NumberInput]]
+name="sizing"
 description="Renders the `NumberInput` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.NumberInput]]
 name="variation"
@@ -45,7 +56,17 @@ description="Sets the text value of the `NumberInput`."
 types=["number"]
 
 [[properties.NumberInput]]
-name="characters"
+name="max"
+description="Sets the maximum amount of characters that the end-user **CAN** input, which will fail submission on a `<form>` if the input is invalid."
+types=["number", "string"]
+
+[[properties.NumberInput]]
+name="min"
+description="Sets the minimum amount of characters that the end-user **MUST** input, which will fail submission on a `<form>` if the input is invalid."
+types=["number", "string"]
+
+[[properties.NumberInput]]
+name="span_x="
 description="Sets the width of the `NumberInput` to an approximation of the amount of characters to display."
 types=["number", "string"]
 
@@ -66,7 +87,7 @@ types=["InputEvent"]
 
 > **IMPORTANT**: Input masking only runs on the Browser, you need to **ALWAYS** validate user-generated input on the server.
 
-`NumberInput` is a subset of [`TextInput`](./textinput.md), which only accepts numbers and masks user input accordingly.
+`NumberInput` is a subset of [`NumberInput`](./textinput.md), which only accepts numbers and masks user input accordingly.
 
 ```svelte {title="NumberInput Preview" mode="repl"}
 <script>
@@ -86,6 +107,22 @@ types=["InputEvent"]
 </script>
 ```
 
+## Maximum + Minimum
+
+> **NOTE**: New since `v0.6.0`.
+
+You can have the `NumberInput` use disallow typing in numbers not within the range of the `max` and `min` properties.
+
+```svelte {title="NumberInput Maximum + Minimum" mode="repl"}
+<script>
+    import {NumberInput} from "@kahi-ui/framework";
+
+    let value = 42;
+</script>
+
+<NumberInput max={84} min={-84} bind:value />
+```
+
 ## Palette
 
 You can change the color palette of the `NumberInput` via the `palette` property.
@@ -93,113 +130,70 @@ You can change the color palette of the `NumberInput` via the `palette` property
 ```svelte {title="NumberInput Palette" mode="repl"}
 <script>
     import {
-        Stack,
         NumberInput,
+        Stack,
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
     variation="wrap"
 >
     <NumberInput
-        characters="20"
+        span_x="20"
         placeholder="This is a DEFAULT NumberInput"
     />
 
     <NumberInput
         palette="accent"
-        characters="20"
+        span_x="20"
         placeholder="This is a ACCENT NumberInput"
     />
 
     <NumberInput
+        palette="neutral"
+        span_x="20"
+        placeholder="This is a NEUTRAL NumberInput"
+    />
+
+    <NumberInput
         palette="dark"
-        characters="20"
+        span_x="20"
         placeholder="This is a DARK NumberInput"
     />
 
     <NumberInput
         palette="light"
-        characters="20"
+        span_x="20"
         placeholder="This is a LIGHT NumberInput"
     />
 
     <NumberInput
         palette="alert"
-        characters="20"
+        span_x="20"
         placeholder="This is a ALERT NumberInput"
     />
 
     <NumberInput
         palette="affirmative"
-        characters="20"
+        span_x="20"
         placeholder="This is a AFFIRMATIVE NumberInput"
     />
 
     <NumberInput
+        palette="informative"
+        span_x="20"
+        placeholder="This is a INFORMATIVE NumberInput"
+    />
+
+    <NumberInput
         palette="negative"
-        characters="20"
+        span_x="20"
         placeholder="This is a NEGATIVE NumberInput"
     />
-</Stack>
-```
-
-## Size
-
-You can change the size of the `NumberInput` via the `size` property.
-
-```svelte {title="NumberInput Size" mode="repl"}
-<script>
-    import {
-        Stack,
-        NumberInput,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack
-    orientation="horizontal"
-    alignment_y="top"
-    spacing="medium"
-    variation="wrap"
->
-    <NumberInput
-        characters="20"
-        placeholder="This is a DEFAULT NumberInput"
-    />
-
-    <NumberInput
-        size="tiny"
-        characters="20"
-        placeholder="This is a TINY NumberInput"
-    />
-
-    <NumberInput
-        size="small"
-        characters="20"
-        placeholder="This is a SMALL NumberInput"
-    />
-
-    <NumberInput
-        size="medium"
-        characters="20"
-        placeholder="This is a MEDIUM NumberInput"
-    />
-
-    <NumberInput
-        size="large"
-        characters="20"
-        placeholder="This is a LARGE NumberInput"
-    />
-
-    <NumberInput
-        size="huge"
-        characters="20"
-        placeholder="This is a HUGE NumberInput"
-    />
-</Stack>
+</Stack.Container>
 ```
 
 ## Block
@@ -209,12 +203,12 @@ You can alter the `NumberInput` render as an opaque block via the `variation` pr
 ```svelte {title="NumberInput Block" mode="repl"}
 <script>
     import {
-        Stack,
         NumberInput,
+        Stack,
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -222,52 +216,52 @@ You can alter the `NumberInput` render as an opaque block via the `variation` pr
 >
     <NumberInput
         variation="block"
-        characters="20"
+        span_x="20"
         placeholder="This is a DEFAULT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="accent"
-        characters="20"
+        span_x="20"
         placeholder="This is a ACCENT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="dark"
-        characters="20"
+        span_x="20"
         placeholder="This is a DARK NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="light"
-        characters="20"
+        span_x="20"
         placeholder="This is a LIGHT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="alert"
-        characters="20"
+        span_x="20"
         placeholder="This is a ALERT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="affirmative"
-        characters="20"
+        span_x="20"
         placeholder="This is a AFFIRMATIVE NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="negative"
-        characters="20"
+        span_x="20"
         placeholder="This is a NEGATIVE NumberInput"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## Flush
@@ -282,9 +276,196 @@ You can change the appearance of the `NumberInput` to be flush with the rest of 
 Input some text:
 <NumberInput
     variation="flush"
-    characters="20"
+    span_x="20"
     placeholder="This is a FLUSH NumberInput"
 />
+```
+
+## Sizing
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can change the size of the `NumberInput` via the `sizing` property.
+
+```svelte {title="NumberInput Sizing" mode="repl"}
+<script>
+    import {
+        NumberInput,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    alignment_y="top"
+    spacing="medium"
+    variation="wrap"
+>
+    <NumberInput
+        span_x="20"
+        placeholder="This is a DEFAULT NumberInput"
+    />
+
+    <NumberInput
+        sizing="nano"
+        span_x="20"
+        placeholder="This is a NANO NumberInput"
+    />
+
+    <NumberInput
+        sizing="tiny"
+        span_x="20"
+        placeholder="This is a TINY NumberInput"
+    />
+
+    <NumberInput
+        sizing="small"
+        span_x="20"
+        placeholder="This is a SMALL NumberInput"
+    />
+
+    <NumberInput
+        sizing="medium"
+        span_x="20"
+        placeholder="This is a MEDIUM NumberInput"
+    />
+
+    <NumberInput
+        sizing="large"
+        span_x="20"
+        placeholder="This is a LARGE NumberInput"
+    />
+
+    <NumberInput
+        sizing="huge"
+        span_x="20"
+        placeholder="This is a HUGE NumberInput"
+    />
+
+    <NumberInput
+        sizing="massive"
+        span_x="20"
+        placeholder="This is a MASSIVE NumberInput"
+    />
+</Stack.Container>
+```
+
+## Radius
+
+> **NOTE**: New since `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can change the border radius of the `NumberInput` via the `radius` property.
+
+```svelte {title="NumberInput Radius" mode="repl"}
+<script>
+    import {
+        NumberInput,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    alignment_y="top"
+    spacing="medium"
+    variation="wrap"
+>
+    <NumberInput
+        span_x="20"
+        placeholder="This is a DEFAULT NumberInput"
+    />
+
+    <NumberInput
+        radius="none"
+        span_x="20"
+        placeholder="This is a NONE NumberInput"
+    />
+
+    <NumberInput
+        radius="nano"
+        span_x="20"
+        placeholder="This is a NANO NumberInput"
+    />
+
+    <NumberInput
+        radius="tiny"
+        span_x="20"
+        placeholder="This is a TINY NumberInput"
+    />
+
+    <NumberInput
+        radius="small"
+        span_x="20"
+        placeholder="This is a SMALL NumberInput"
+    />
+
+    <NumberInput
+        sizing="medium"
+        span_x="20"
+        placeholder="This is a MEDIUM NumberInput"
+    />
+
+    <NumberInput
+        radius="large"
+        span_x="20"
+        placeholder="This is a LARGE NumberInput"
+    />
+
+    <NumberInput
+        radius="huge"
+        span_x="20"
+        placeholder="This is a HUGE NumberInput"
+    />
+
+    <NumberInput
+        radius="massive"
+        span_x="20"
+        placeholder="This is a MASSIVE NumberInput"
+    />
+</Stack.Container>
+```
+
+## Shapes
+
+> **NOTE**: New since `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
+
+You can change the shape of the `NumberInput` via the `shape` property.
+
+```svelte {title="NumberInput Shapes" mode="repl"}
+<script>
+    import {
+        NumberInput,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    alignment_y="top"
+    spacing="medium"
+    variation="wrap"
+>
+    <NumberInput
+        span_x="20"
+        placeholder="This is a DEFAULT NumberInput"
+    />
+
+    <NumberInput
+        shape="circle"
+        span_x="20"
+        placeholder="This is a CIRCLE NumberInput"
+    />
+
+    <NumberInput
+        shape="pill"
+        span_x="20"
+        placeholder="This is a PILL NumberInput"
+    />
+</Stack.Container>
 ```
 
 ## Placeholder
@@ -299,14 +480,14 @@ You can set the `NumberInput` to show placeholder text whenever there is no curr
 <NumberInput placeholder="...enter a number" />
 ```
 
-## Field Character Size
+## Span X
 
-You can set how wide your `NumberInput` to an approximation of character width via the `characters` property.
+You can set how wide your `NumberInput` to an approximation of character width via the `span_x` property.
 
-```svelte {title="NumberInput Field Character Size" mode="repl"}
+```svelte {title="NumberInput Span X" mode="repl"}
 <script>
     import {NumberInput} from "@kahi-ui/framework";
 </script>
 
-<NumberInput characters="2" />
+<NumberInput span_x="2" />
 ```

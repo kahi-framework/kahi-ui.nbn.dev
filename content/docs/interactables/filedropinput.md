@@ -1,5 +1,10 @@
 +++
 [[properties.FileDropInput]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties.FileDropInput]]
 name="accept"
 description="Sets [`accept`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file#accept), configuring which file types should be prompted for."
 types=["string"]
@@ -10,11 +15,11 @@ description="Sets if the `FileDropInput` should accept multiple files as input."
 types=["boolean"]
 
 [[properties.FileDropInput]]
-name="palette"
-description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+name="name"
+description="Sets the form name of the `FileDropInput`."
+types=["string"]
 
-[[events.FileDropInput]]
+[[.Containerevents.FileDropInput]]
 name="change"
 description="Fires whenever the `FileDropInput` value has changed."
 types=["MouseEvent"]
@@ -104,20 +109,25 @@ types=["<length>"]
     let files = [];
 </script>
 
-<FileDropInput
-    class="filedropinput-preview"
-    multiple
-    on:change={on_change}
->
-    <Stack spacing="medium">
-        <Text is="strong">&uparrow;</Text>
+<FileDropInput multiple on:change={on_change}>
+    <Stack.Container spacing="medium">
+        <Text
+            is="strong"
+            variation="block"
+            sizing="large"
+        >
+            &uparrow;
+        </Text>
 
         <Text>Drag-and-drop files here...</Text>
-    </Stack>
+    </Stack.Container>
 </FileDropInput>
 
 {#if files.length > 0}
-    <Stack spacing="medium" margin_y="medium">
+    <Stack.Container
+        spacing="medium"
+        margin_y="medium"
+    >
         {#each files as file (file.name)}
             <Tile.Container
                 sizing="small"
@@ -146,9 +156,9 @@ types=["<length>"]
                 </Tile.Footer>
             </Tile.Container>
         {/each}
-    </Stack>
+    </Stack.Container>
 
-    <Stack alignment_x="right">
+    <Stack.Container alignment_x="right">
         <Button
             variation="clear"
             palette="negative"
@@ -156,14 +166,8 @@ types=["<length>"]
         >
             Clear All
         </Button>
-    </Stack>
+    </Stack.Container>
 {/if}
-
-<style>
-    :global(.filedropinput-preview) :global(strong) {
-        font-size: 3em;
-    }
-</style>
 ```
 
 ## Imports
@@ -188,64 +192,131 @@ You can change the color palette of the `FileDropInput` via the `palette` proper
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic
-    class="filedropinput-palette"
-    sizing="medium"
-    spacing="medium"
->
+<Mosaic.Container sizing="medium" spacing="medium">
     <FileDropInput>
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
-            <Text>NEUTRAL</Text>
-        </Stack>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
+            <Text>DEFAULT</Text>
+        </Stack.Container>
     </FileDropInput>
 
     <FileDropInput palette="accent">
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
             <Text>ACCENT</Text>
-        </Stack>
+        </Stack.Container>
+    </FileDropInput>
+
+    <FileDropInput palette="neutral">
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
+            <Text>NEUTRAL</Text>
+        </Stack.Container>
     </FileDropInput>
 
     <FileDropInput palette="dark">
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
             <Text>DARK</Text>
-        </Stack>
+        </Stack.Container>
     </FileDropInput>
 
     <FileDropInput palette="light">
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
             <Text>LIGHT</Text>
-        </Stack>
+        </Stack.Container>
     </FileDropInput>
 
     <FileDropInput palette="alert">
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
             <Text>ALERT</Text>
-        </Stack>
+        </Stack.Container>
     </FileDropInput>
 
     <FileDropInput palette="affirmative">
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
             <Text>AFFIRMATIVE</Text>
-        </Stack>
+        </Stack.Container>
+    </FileDropInput>
+
+    <FileDropInput palette="informative">
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
+
+            <Text>INFORMATIVE</Text>
+        </Stack.Container>
     </FileDropInput>
 
     <FileDropInput palette="negative">
-        <Stack spacing="medium">
-            <Text is="strong">&uparrow;</Text>
-            <Text>NEGATIVE</Text>
-        </Stack>
-    </FileDropInput>
-</Mosaic>
+        <Stack.Container spacing="medium">
+            <Text
+                is="strong"
+                variation="block"
+                sizing="large"
+            >
+                &uparrow;
+            </Text>
 
-<style>
-    :global(.filedropinput-palette) :global(strong) {
-        font-size: 3em;
-    }
-</style>
+            <Text>NEGATIVE</Text>
+        </Stack.Container>
+    </FileDropInput>
+</Mosaic.Container>
 ```

@@ -1,47 +1,52 @@
 +++
-[[properties.Switch]]
+[[properties.Check]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
-[[properties.Switch]]
-name="size"
-description="Renders the `Switch` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+[[properties.Check]]
+name="sizing"
+description="Renders the `Check` at a different sizes."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
-[[properties.Switch]]
+[[properties.Check]]
+name="variation"
+description="Alters the appearance of the `Check`."
+types=["flush"]
+
+[[properties.Check]]
 name="active"
-description="Renders the `Switch` with `aria-pressed` attribute, and styles the `Switch` as if it where being clicked."
+description="Renders the `Check` with `aria-pressed` attribute, and styles the `Check` as if it where being clicked."
 types=["boolean"]
 
-[[properties.Switch]]
+[[properties.Check]]
 name="disabled"
-description="Renders the `Switch` with `disabled` attribute, and styles the `Switch` partially transparent."
+description="Renders the `Check` with `disabled` attribute, and styles the `Check` partially transparent."
 types=["boolean"]
 
-[[properties.Switch]]
+[[properties.Check]]
 name="name"
-description="Sets the form name of the `Switch`."
+description="Sets the form name of the `Check`."
 types=["string"]
 
-[[properties.Switch]]
+[[properties.Check]]
 name="state"
-description="Sets the checked state of the `Switch`."
+description="Sets the checked state of the `Check`."
 types=["boolean"]
 
-[[properties.Switch]]
+[[properties.Check]]
 name="value"
 description="Sets the value sent whenever the parent `<form>` is submitted."
 types=["string"]
 
-[[events.Switch]]
+[[events.Check]]
 name="change"
-description="Fires whenever the `Switch` has its value changed."
+description="Fires whenever the `Check` has its value changed."
 types=["InputEvent"]
 
-[[events.Switch]]
+[[events.Check]]
 name="input"
-description="Fires whenever the `Switch` has its value changed."
+description="Fires whenever the `Check` has its value changed."
 types=["InputEvent"]
 
 [[custom_properties.Switch]]
@@ -161,47 +166,46 @@ You can control the state of the `Switch` via the `active`, `disabled`, and `sta
 </script>
 
 <Stack
-    class="switch-states"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Switch />
     </div>
 
     <div>
         <Text is="strong">STATE</Text>
+        <br />
         <Switch state />
     </div>
 
     <div>
         <Text is="strong">ACTIVE NO-STATE</Text>
+        <br />
         <Switch active />
     </div>
 
     <div>
         <Text is="strong">ACTIVE STATE</Text>
+        <br />
         <Switch active state />
     </div>
 
     <div>
         <Text is="strong">DISABLED NO-STATE</Text>
+        <br />
         <Switch disabled />
     </div>
 
     <div>
         <Text is="strong">DISABLED STATE</Text>
+        <br />
         <Switch disabled state />
     </div>
 </Stack>
-
-<style>
-    :global(.switch-states strong) {
-        display: block;
-    }
-</style>
 ```
 
 ## Palette
@@ -218,59 +222,73 @@ You can change the color palette of the `Switch` via the `palette` property.
 </script>
 
 <Stack
-    class="switch-palette"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Switch />
     </div>
 
     <div>
         <Text is="strong">ACCENT</Text>
+        <br />
         <Switch palette="accent" />
     </div>
 
     <div>
+        <Text is="strong">NEUTRAL</Text>
+        <br />
+        <Switch palette="neutral" />
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
+        <br />
         <Switch palette="dark" />
     </div>
 
     <div>
         <Text is="strong">LIGHT</Text>
+        <br />
         <Switch palette="light" />
     </div>
 
     <div>
         <Text is="strong">ALERT</Text>
+        <br />
         <Switch palette="alert" />
     </div>
 
     <div>
         <Text is="strong">AFFIRMATIVE</Text>
+        <br />
         <Switch palette="affirmative" />
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <br />
+        <Switch palette="informative" />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
+        <br />
         <Switch palette="negative" />
     </div>
 </Stack>
-
-<style>
-    :global(.switch-palette strong) {
-        display: block;
-    }
-</style>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Switch` via the `size` property.
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
-```svelte {title="Switch Size" mode="repl"}
+You can change the size of the `Switch` via the `sizing` property.
+
+```svelte {title="Switch Sizing" mode="repl"}
 <script>
     import {
         Switch,
@@ -280,45 +298,56 @@ You can change the size of the `Switch` via the `size` property.
 </script>
 
 <Stack
-    class="switch-size"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Switch />
     </div>
 
     <div>
+        <Text is="strong">NANO</Text>
+        <br />
+        <Switch sizing="nano" />
+    </div>
+
+    <div>
         <Text is="strong">TINY</Text>
-        <Switch size="tiny" />
+        <br />
+        <Switch sizing="tiny" />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Switch size="small" />
+        <br />
+        <Switch sizing="small" />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Switch size="medium" />
+        <br />
+        <Switch sizing="medium" />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Switch size="large" />
+        <br />
+        <Switch sizing="large" />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Switch size="huge" />
+        <br />
+        <Switch sizing="huge" />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <br />
+        <Switch sizing="massive" />
     </div>
 </Stack>
-
-<style>
-    :global(.switch-size strong) {
-        display: block;
-    }
-</style>
 ```

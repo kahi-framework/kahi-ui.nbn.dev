@@ -2,12 +2,12 @@
 [[properties.Check]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Check]]
-name="size"
+name="sizing"
 description="Renders the `Check` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Check]]
 name="variation"
@@ -160,7 +160,7 @@ types=["<alpha-value>"]
     <Text is="sup">{logic_state}</Text>
 </Text>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="small"
     variation="wrap"
@@ -203,7 +203,7 @@ types=["<alpha-value>"]
             Pineapple
         </Check>
     </Form.Group>
-</Stack>
+</Stack.Container>
 ```
 
 ## Imports
@@ -227,48 +227,47 @@ You can control the state of the `Check` via the `active`, `disabled`, and `stat
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="check-states"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Check />
     </div>
 
     <div>
         <Text is="strong">STATE</Text>
+        <br />
         <Check state />
     </div>
 
     <div>
         <Text is="strong">ACTIVE NO-STATE</Text>
+        <br />
         <Check active />
     </div>
 
     <div>
         <Text is="strong">ACTIVE STATE</Text>
+        <br />
         <Check active state />
     </div>
 
     <div>
         <Text is="strong">DISABLED NO-STATE</Text>
+        <br />
         <Check disabled />
     </div>
 
     <div>
         <Text is="strong">DISABLED STATE</Text>
+        <br />
         <Check disabled state />
     </div>
-</Stack>
-
-<style>
-    :global(.check-states strong) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
 
 ## Palette
@@ -284,60 +283,74 @@ You can change the color palette of the `Check` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="check-palette"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Check />
     </div>
 
     <div>
         <Text is="strong">ACCENT</Text>
+        <br />
         <Check palette="accent" />
     </div>
 
     <div>
+        <Text is="strong">NEUTRAL</Text>
+        <br />
+        <Check palette="neutral" />
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
+        <br />
         <Check palette="dark" />
     </div>
 
     <div>
         <Text is="strong">LIGHT</Text>
+        <br />
         <Check palette="light" />
     </div>
 
     <div>
         <Text is="strong">ALERT</Text>
+        <br />
         <Check palette="alert" />
     </div>
 
     <div>
         <Text is="strong">AFFIRMATIVE</Text>
+        <br />
         <Check palette="affirmative" />
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <br />
+        <Check palette="informative" />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
+        <br />
         <Check palette="negative" />
     </div>
-</Stack>
-
-<style>
-    :global(.check-palette strong) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Check` via the `size` property.
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
-```svelte {title="Check Size" mode="repl"}
+You can change the size of the `Check` via the `sizing` property.
+
+```svelte {title="Check Sizing" mode="repl"}
 <script>
     import {
         Check,
@@ -346,48 +359,59 @@ You can change the size of the `Check` via the `size` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="check-size"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Check />
     </div>
 
     <div>
+        <Text is="strong">NANO</Text>
+        <br />
+        <Check sizing="nano" />
+    </div>
+
+    <div>
         <Text is="strong">TINY</Text>
-        <Check size="tiny" />
+        <br />
+        <Check sizing="tiny" />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Check size="small" />
+        <br />
+        <Check sizing="small" />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Check size="medium" />
+        <br />
+        <Check sizing="medium" />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Check size="large" />
+        <br />
+        <Check sizing="large" />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Check size="huge" />
+        <br />
+        <Check sizing="huge" />
     </div>
-</Stack>
 
-<style>
-    :global(.check-size strong) {
-        display: block;
-    }
-</style>
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <br />
+        <Check sizing="massive" />
+    </div>
+</Stack.Container>
 ```
 
 ## Flush

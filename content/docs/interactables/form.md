@@ -29,12 +29,23 @@ name="for"
 description="Sets the [`for`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label#attr-for) attribute of the element that is targetted."
 types=["string"]
 
+[[properties."Form.Legend"]]
+name="is"
+description="Alters the HTML tag rendered to the DOM."
+default="legend"
+types=["legend", "span"]
+
 [[events."Form.Group"]]
 name="change"
 description="Fires whenever the `logic_state` has its value changed via the [Svelte Context](https://svelte.dev/docs#setContext)."
 types=["CustomEvent<void>"]
 
 [[slots."Form.Control"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Form.FieldSet"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
@@ -54,6 +65,11 @@ name="default"
 description="Default unnamed slot."
 types=["{}"]
 
+[[slots."Form.Legend"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
 [[custom_properties."Form.Control"]]
 name="--form-control-gap"
 description="Controls the spacing gap between child elements, e.g. icons."
@@ -67,7 +83,7 @@ types=["<length>"]
 
 # Form
 
-Form Components are helpers to supplement input Components that are meant for webforms like [TextInput](./textinput.md).
+Form Components are helpers to supplement input Components that are meant for form Components like [TextInput](./textinput.md).
 
 ## HelpText
 
@@ -143,7 +159,7 @@ Form Components are helpers to supplement input Components that are meant for we
 
 > **NOTE**: This Component is renderless, it does not render its own DOM nodes.
 
-`Form.Group` let's you directly set the relevant form-related [Svelte Contexts](https://svelte.dev/docs#setContext) via its properties without using any preformatted shown above.
+`Form.Group` lets you directly set the relevant form-related [Svelte Contexts](https://svelte.dev/docs#setContext) via its properties without using any preformatted shown above.
 
 ```svelte {title="Form Group" mode="repl"}
 <script>
@@ -195,4 +211,58 @@ Form Components are helpers to supplement input Components that are meant for we
         </Radio>
     </Form.Group>
 </Stack>
+```
+
+## Legend
+
+> **NOTE**: New since `v0.6.0`.
+
+> **IMPORTANT**: When using outside of a `Form.FieldSet`, use `<Form.Legend is="span">` for semantically correct HTML tags.
+
+`Form.Legend` is typically used for categorization headings, rendering text as smaller bold text with letter spacing.
+
+```svelte {title="Form Legend" mode="repl"}
+<script>
+    import {Form} from "@kahi-ui/framework";
+</script>
+
+<Form.Legend>VEGETABLES</Form.Legend>
+```
+
+## FieldSet
+
+> **NOTE**: New since `v0.6.0`.
+
+`Form.FieldSet` is typically used for grouping together related form Components into a visually distinct box.
+
+```svelte {title="Form Legend" mode="repl"}
+<script>
+    import {
+        Form,
+        Stack,
+        TextInput,
+    } from "@kahi-ui/framework";
+</script>
+
+<Form.FieldSet>
+    <Form.Legend>Personal Details</Form.Legend>
+
+    <Stack.Container spacing="medium">
+        <Form.Control
+            logic_id="form-fieldset-first-name"
+            logic_name="form-fieldset-first-name"
+        >
+            <Form.Label>First Name</Form.Label>
+            <TextInput value="John" />
+        </Form.Control>
+
+        <Form.Control
+            logic_id="form-fieldset-first-name"
+            logic_name="form-fieldset-first-name"
+        >
+            <Form.Label>Last Name</Form.Label>
+            <TextInput value="Smith" />
+        </Form.Control>
+    </Stack.Container>
+</Form.FieldSet>
 ```

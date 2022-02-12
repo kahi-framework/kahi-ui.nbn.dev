@@ -2,12 +2,12 @@
 [[properties.Radio]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Radio]]
-name="size"
+name="sizing"
 description="Renders the `Radio` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Radio]]
 name="variation"
@@ -160,7 +160,7 @@ types=["<alpha-value>"]
     <Text is="sup">{logic_state}</Text>
 </Text>
 
-<Stack spacing="small" margin_top="small">
+<Stack.Container spacing="small" margin_top="small">
     <Form.Group
         logic_name="radio-preview"
         bind:logic_state
@@ -192,7 +192,7 @@ types=["<alpha-value>"]
             Vanilla
         </Radio>
     </Form.Group>
-</Stack>
+</Stack.Container>
 ```
 
 ## Imports
@@ -217,47 +217,46 @@ You can control the state of the `Radio` via the `active`, `disabled`, and `stat
 </script>
 
 <Stack
-    class="radio-states"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Radio />
     </div>
 
     <div>
         <Text is="strong">STATE</Text>
+        <br />
         <Radio state />
     </div>
 
     <div>
         <Text is="strong">ACTIVE NO-STATE</Text>
+        <br />
         <Radio active />
     </div>
 
     <div>
         <Text is="strong">ACTIVE STATE</Text>
+        <br />
         <Radio active state />
     </div>
 
     <div>
         <Text is="strong">DISABLED NO-STATE</Text>
+        <br />
         <Radio disabled />
     </div>
 
     <div>
         <Text is="strong">DISABLED STATE</Text>
+        <br />
         <Radio disabled state />
     </div>
 </Stack>
-
-<style>
-    :global(.radio-states strong) {
-        display: block;
-    }
-</style>
 ```
 
 ## Palette
@@ -275,61 +274,75 @@ You can change the color palette of the `Radio` via the `palette` property.
 </script>
 
 <Form.Group logic_name="radio-palette">
-    <Stack
-        class="radio-palette"
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
     >
         <div>
             <Text is="strong">DEFAULT</Text>
+            <br />
             <Radio />
         </div>
 
         <div>
             <Text is="strong">ACCENT</Text>
+            <br />
             <Radio palette="accent" />
         </div>
 
         <div>
+            <Text is="strong">NEUTRAL</Text>
+            <br />
+            <Radio palette="neutral" />
+        </div>
+
+        <div>
             <Text is="strong">DARK</Text>
+            <br />
             <Radio palette="dark" />
         </div>
 
         <div>
             <Text is="strong">LIGHT</Text>
+            <br />
             <Radio palette="light" />
         </div>
 
         <div>
             <Text is="strong">ALERT</Text>
+            <br />
             <Radio palette="alert" />
         </div>
 
         <div>
             <Text is="strong">AFFIRMATIVE</Text>
+            <br />
             <Radio palette="affirmative" />
         </div>
 
         <div>
+            <Text is="strong">INFORMATIVE</Text>
+            <br />
+            <Radio palette="informative" />
+        </div>
+
+        <div>
             <Text is="strong">NEGATIVE</Text>
+            <br />
             <Radio palette="negative" />
         </div>
-    </Stack>
+    </Stack.Container>
 </Form.Group>
-
-<style>
-    :global(.radio-palette strong) {
-        display: block;
-    }
-</style>
 ```
 
-## Size
+## Sizing
 
-You can change the size of the `Radio` via the `size` property.
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
-```svelte {title="Radio Size" mode="repl"}
+You can change the size of the `Radio` via the `sizing` property.
+
+```svelte {title="Radio Sizing" mode="repl"}
 <script>
     import {
         Form,
@@ -339,50 +352,61 @@ You can change the size of the `Radio` via the `size` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Form.Group logic_name="radio-size">
-    <Stack
-        class="radio-size"
+<Form.Group logic_name="radio-sizing">
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
     >
         <div>
             <Text is="strong">DEFAULT</Text>
+            <br />
             <Radio />
         </div>
 
         <div>
+            <Text is="strong">NANO</Text>
+            <br />
+            <Radio sizing="nano" />
+        </div>
+
+        <div>
             <Text is="strong">TINY</Text>
-            <Radio size="tiny" />
+            <br />
+            <Radio sizing="tiny" />
         </div>
 
         <div>
             <Text is="strong">SMALL</Text>
-            <Radio size="small" />
+            <br />
+            <Radio sizing="small" />
         </div>
 
         <div>
             <Text is="strong">MEDIUM</Text>
-            <Radio size="medium" />
+            <br />
+            <Radio sizing="medium" />
         </div>
 
         <div>
             <Text is="strong">LARGE</Text>
-            <Radio size="large" />
+            <br />
+            <Radio sizing="large" />
         </div>
 
         <div>
             <Text is="strong">HUGE</Text>
-            <Radio size="huge" />
+            <br />
+            <Radio sizing="huge" />
         </div>
-    </Stack>
-</Form.Group>
 
-<style>
-    :global(.radio-size strong) {
-        display: block;
-    }
-</style>
+        <div>
+            <Text is="strong">MASSIVE</Text>
+            <br />
+            <Radio sizing="massive" />
+        </div>
+    </Stack.Container>
+</Form.Group>
 ```
 
 ## Flush

@@ -14,12 +14,23 @@ types=["email", "password", "search", "text", "url"]
 [[properties.TextInput]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.TextInput]]
-name="size"
+name="radius"
+description="Changes the border radius of the `TextInput`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
+
+[[properties.TextInput]]
+name="shape"
+description="Changes the shape of the `TextInput`."
+types=["circle", "pill", "{VIEWPORT}:{SHAPE}"]
+
+[[properties.TextInput]]
+name="sizing"
 description="Renders the `TextInput` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.TextInput]]
 name="variation"
@@ -303,99 +314,44 @@ You can change the color palette of the `TextInput` via the `palette` property.
     variation="wrap"
 >
     <TextInput
-        characters="20"
+        span_x="20"
         value="This is a DEFAULT TextInput"
     />
 
     <TextInput
         palette="accent"
-        characters="20"
+        span_x="20"
         value="This is a ACCENT TextInput"
     />
 
     <TextInput
         palette="dark"
-        characters="20"
+        span_x="20"
         value="This is a DARK TextInput"
     />
 
     <TextInput
         palette="light"
-        characters="20"
+        span_x="20"
         value="This is a LIGHT TextInput"
     />
 
     <TextInput
         palette="alert"
-        characters="20"
+        span_x="20"
         value="This is a ALERT TextInput"
     />
 
     <TextInput
         palette="affirmative"
-        characters="20"
+        span_x="20"
         value="This is a AFFIRMATIVE TextInput"
     />
 
     <TextInput
         palette="negative"
-        characters="20"
+        span_x="20"
         value="This is a NEGATIVE TextInput"
-    />
-</Stack>
-```
-
-## Size
-
-You can change the size of the `TextInput` via the `size` property.
-
-```svelte {title="TextInput Size" mode="repl"}
-<script>
-    import {
-        Stack,
-        TextInput,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack
-    orientation="horizontal"
-    alignment_y="top"
-    spacing="medium"
-    variation="wrap"
->
-    <TextInput
-        characters="20"
-        value="This is a DEFAULT TextInput"
-    />
-
-    <TextInput
-        size="tiny"
-        characters="20"
-        value="This is a TINY TextInput"
-    />
-
-    <TextInput
-        size="small"
-        characters="20"
-        value="This is a SMALL TextInput"
-    />
-
-    <TextInput
-        size="medium"
-        characters="20"
-        value="This is a MEDIUM TextInput"
-    />
-
-    <TextInput
-        size="large"
-        characters="20"
-        value="This is a LARGE TextInput"
-    />
-
-    <TextInput
-        size="huge"
-        characters="20"
-        value="This is a HUGE TextInput"
     />
 </Stack>
 ```
@@ -420,49 +376,49 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
 >
     <TextInput
         variation="block"
-        characters="20"
+        span_x="20"
         value="This is a DEFAULT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="accent"
-        characters="20"
+        span_x="20"
         value="This is a ACCENT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="dark"
-        characters="20"
+        span_x="20"
         value="This is a DARK TextInput"
     />
 
     <TextInput
         variation="block"
         palette="light"
-        characters="20"
+        span_x="20"
         value="This is a LIGHT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="alert"
-        characters="20"
+        span_x="20"
         value="This is a ALERT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="affirmative"
-        characters="20"
+        span_x="20"
         value="This is a AFFIRMATIVE TextInput"
     />
 
     <TextInput
         variation="block"
         palette="negative"
-        characters="20"
+        span_x="20"
         value="This is a NEGATIVE TextInput"
     />
 </Stack>
@@ -482,16 +438,203 @@ You can change the appearance of the `TextInput` to be flush with the rest of th
 Input some text:
 <TextInput
     variation="flush"
-    characters="20"
+    span_x="20"
     value="This is a FLUSH TextInput"
 />
 ```
 
-## Input Type
+## Sizing
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can change the size of the `TextInput` via the `sizing` property.
+
+```svelte {title="TextInput Sizing" mode="repl"}
+<script>
+    import {
+        Stack,
+        TextInput,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    alignment_y="top"
+    spacing="medium"
+    variation="wrap"
+>
+    <TextInput
+        span_x="20"
+        value="This is a DEFAULT TextInput"
+    />
+
+    <TextInput
+        sizing="nano"
+        span_x="20"
+        value="This is a NANO TextInput"
+    />
+
+    <TextInput
+        sizing="tiny"
+        span_x="20"
+        value="This is a TINY TextInput"
+    />
+
+    <TextInput
+        sizing="small"
+        span_x="20"
+        value="This is a SMALL TextInput"
+    />
+
+    <TextInput
+        sizing="medium"
+        span_x="20"
+        value="This is a MEDIUM TextInput"
+    />
+
+    <TextInput
+        sizing="large"
+        span_x="20"
+        value="This is a LARGE TextInput"
+    />
+
+    <TextInput
+        sizing="huge"
+        span_x="20"
+        value="This is a HUGE TextInput"
+    />
+
+    <TextInput
+        sizing="massive"
+        span_x="20"
+        value="This is a MASSIVE TextInput"
+    />
+</Stack>
+```
+
+## Radius
+
+> **NOTE**: New since `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can change the border radius of the `TextInput` via the `radius` property.
+
+```svelte {title="TextInput Radius" mode="repl"}
+<script>
+    import {
+        Stack,
+        TextInput,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    alignment_y="top"
+    spacing="medium"
+    variation="wrap"
+>
+    <TextInput
+        span_x="20"
+        value="This is a DEFAULT TextInput"
+    />
+
+    <TextInput
+        radius="none"
+        span_x="20"
+        value="This is a NONE TextInput"
+    />
+
+    <TextInput
+        radius="nano"
+        span_x="20"
+        value="This is a NANO TextInput"
+    />
+
+    <TextInput
+        radius="tiny"
+        span_x="20"
+        value="This is a TINY TextInput"
+    />
+
+    <TextInput
+        radius="small"
+        span_x="20"
+        value="This is a SMALL TextInput"
+    />
+
+    <TextInput
+        radius="medium"
+        span_x="20"
+        value="This is a MEDIUM TextInput"
+    />
+
+    <TextInput
+        sizing="large"
+        span_x="20"
+        value="This is a LARGE TextInput"
+    />
+
+    <TextInput
+        radius="huge"
+        span_x="20"
+        value="This is a HUGE TextInput"
+    />
+
+    <TextInput
+        radius="massive"
+        span_x="20"
+        value="This is a MASSIVE TextInput"
+    />
+</Stack>
+```
+
+## Shapes
+
+> **NOTE**: New since `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
+
+You can change the shape of the `TextInput` via the `shape` property.
+
+```svelte {title="TextInput Shapes" mode="repl"}
+<script>
+    import {
+        Stack,
+        TextInput,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    orientation="horizontal"
+    alignment_y="top"
+    spacing="medium"
+    variation="wrap"
+>
+    <TextInput
+        span_x="20"
+        value="This is a DEFAULT TextInput"
+    />
+
+    <TextInput
+        shape="nano"
+        span_x="20"
+        value="This is a CIRCLE TextInput"
+    />
+
+    <TextInput
+        shape="pill"
+        span_x="20"
+        value="This is a PILL TextInput"
+    />
+</Stack>
+```
+
+## Types
 
 You can change your input type between `email`, `password`, `search`, `text` **(DEFAULT)**, `url` via the `type` property.
 
-```svelte {title="TextInput Input Type" mode="repl"}
+```svelte {title="TextInput Types" mode="repl"}
 <script>
     import {
         Stack,
@@ -507,49 +650,22 @@ You can change your input type between `email`, `password`, `search`, `text` **(
 >
     <TextInput
         type="email"
-        characters="20"
+        span_x="20"
         value="sample@sample.org"
     />
 
     <TextInput
         type="password"
-        characters="20"
+        span_x="20"
         value="abcdef1002"
     />
 
     <TextInput
         type="url"
-        characters="20"
+        span_x="20"
         value="https://google.com"
     />
 </Stack>
-```
-
-## Placeholder
-
-You can set the `TextInput` to show placeholder text whenever there is no current value.
-
-```svelte {title="TextInput Placeholder" mode="repl"}
-<script>
-    import {TextInput} from "@kahi-ui/framework";
-</script>
-
-<TextInput placeholder="...enter some text" />
-```
-
-## Field Character Size
-
-You can set how wide your `TextInput` to an approximation of character width via the `characters` property.
-
-```svelte {title="TextInput Field Character Size" mode="repl"}
-<script>
-    import {TextInput} from "@kahi-ui/framework";
-</script>
-
-<TextInput
-    value="This input should be about 4 characters wide."
-    characters="4"
-/>
 ```
 
 ## TextArea
@@ -567,25 +683,42 @@ You can have the `TextInput` render as a `<textarea>` via the `is` property.
 />
 ```
 
-## Field Line Size
+## Placeholder
 
-You can set how tall your `<textarea>` based `TextInput` to an approximation of character lines via the `lines` property.
+You can set the `TextInput` to show placeholder text whenever there is no current value.
 
-```svelte {title="TextInput Field Line Size" mode="repl"}
+```svelte {title="TextInput Placeholder" mode="repl"}
+<script>
+    import {TextInput} from "@kahi-ui/framework";
+</script>
+
+<TextInput placeholder="...enter some text" />
+```
+
+## Span X + Y
+
+You can set how wide your `TextInput` to an approximation of character width and new lines via the `span_x` and `span_y` properties respectively.
+
+```svelte {title="TextInput Span X + Y" mode="repl"}
 <script>
     import {TextInput} from "@kahi-ui/framework";
 </script>
 
 <TextInput
+    value="This input should be about 4 characters wide."
+    span_x="4"
+/>
+
+<TextInput
     is="textarea"
     value="This input should be about 3 lines tall."
-    lines="3"
+    span_y="3"
 />
 ```
 
 ## Resizable TextArea
 
-You alter the a `<textarea>` based `TextInput` to resizable both axis `true`, horizontally `x`, and vertically `y` via the `resizable` property.
+You alter the a `<textarea>` based `TextInput` to resizable both axis `true`, horizontally `x`, or vertically `y` via the `resizable` property.
 
 ```svelte {title="TextInput Resizable TextArea" mode="repl"}
 <script>
