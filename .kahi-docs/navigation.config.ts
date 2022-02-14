@@ -121,22 +121,22 @@ export default define_navigation({
             text: "Layouts",
             items: [
                 {href: "/docs/layouts/center"},
-                {href: "/docs/layouts/container"},
+                {href: "/docs/layouts/container", badge: "UPDATED"},
                 {href: "/docs/layouts/divider"},
                 {href: "/docs/layouts/grid"},
-                {href: "/docs/layouts/group"},
-                {href: "/docs/layouts/mosaic"},
+                {href: "/docs/layouts/group", badge: "UPDATED"},
+                {href: "/docs/layouts/mosaic", badge: "UPDATED"},
                 {href: "/docs/layouts/position"},
                 {href: "/docs/layouts/scrollable"},
                 {href: "/docs/layouts/spacer"},
-                {href: "/docs/layouts/stack"},
+                {href: "/docs/layouts/stack", badge: "UPDATED"},
             ],
         },
 
         {
             text: "Surfaces",
             items: [
-                {href: "/docs/surfaces/box"},
+                {href: "/docs/surfaces/box", badge: "UPDATED"},
                 {href: "/docs/surfaces/card"},
                 {href: "/docs/surfaces/hero"},
                 {href: "/docs/surfaces/tile"},
