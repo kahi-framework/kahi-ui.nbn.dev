@@ -3,18 +3,28 @@
 name="elevation"
 description="Alters how \"high\" the `Box` appears to be off the page."
 default="none"
-types=["none", "lowest", "low", "medium", "high", "highest"]
+types=["none", "lowest", "lower", "low", "medium", "high", "higher", "highest", "{VIEWPORT}:{ELEVATION}"]
 
 [[properties.Box]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties.Box]]
+name="radius"
+description="Changes the border radius of the `Box`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
 
 [[properties.Box]]
 name="shape"
 description="Changes the shape of the `Box`."
-default="none"
-types=["none", "pill", "rounded"]
+types=["none", "circle", "pill", "{VIEWPORT}:{SHAPE}"]
+
+[[properties.Box]]
+name="variation"
+description="Alters the appearance of the `Box`."
+types=["borders"]
 
 [[slots.Box]]
 name="default"
@@ -77,9 +87,9 @@ You can change the color palette of the `Box` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="large">
+<Mosaic.Container sizing="medium" spacing="large">
     <Box>
-        <Text is="strong">NEUTRAL / DEFAULT</Text>
+        <Text is="strong">DEFAULT</Text>
 
         <Text>
             Lorem ipsum dolor sit amet, consectetur
@@ -92,6 +102,18 @@ You can change the color palette of the `Box` via the `palette` property.
 
     <Box palette="accent">
         <Text is="strong">ACCENT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box palette="neutral">
+        <Text is="strong">NEUTRAL</Text>
 
         <Text>
             Lorem ipsum dolor sit amet, consectetur
@@ -150,6 +172,18 @@ You can change the color palette of the `Box` via the `palette` property.
         </Text>
     </Box>
 
+    <Box palette="informative">
+        <Text is="strong">INFORMATIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
     <Box palette="negative">
         <Text is="strong">NEGATIVE</Text>
 
@@ -161,12 +195,140 @@ You can change the color palette of the `Box` via the `palette` property.
             iaculis dolor tincidunt non.
         </Text>
     </Box>
-</Mosaic>
+</Mosaic.Container>
+```
+
+## Borders
+
+> **NOTE**: New since `v0.6.0`.
+
+You can change the appearance of `Box` to show borders via the `variation` property.
+
+```svelte {title="Box Borders" mode="repl"}
+<script>
+    import {
+        Box,
+        Mosaic,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic.Container sizing="medium" spacing="large">
+    <Box variation="borders">
+        <Text is="strong">DEFAULT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="accent">
+        <Text is="strong">ACCENT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="neutral">
+        <Text is="strong">NEUTRAL</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="dark">
+        <Text is="strong">DARK</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="light">
+        <Text is="strong">LIGHT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="alert">
+        <Text is="strong">ALERT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box palette="affirmative">
+        <Text is="strong">AFFIRMATIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="informative">
+        <Text is="strong">INFORMATIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box variation="borders" palette="negative">
+        <Text is="strong">NEGATIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+</Mosaic.Container>
 ```
 
 ## Elevation
 
 > **NOTE**: New since `v0.3.5`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `elevation={["low", "tablet:lowest", "mobile:lowest"]}`
 
 You can set how "high" your `Box` will appear to be over top the page via the `elevation` property.
 
@@ -179,9 +341,9 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="large">
+<Mosaic.Container sizing="medium" spacing="large">
     <Box>
-        <Text is="strong">NONE / DEFAULT</Text>
+        <Text is="strong">DEFAULT</Text>
 
         <Text>
             Lorem ipsum dolor sit amet, consectetur
@@ -194,6 +356,18 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
 
     <Box elevation="lowest">
         <Text is="strong">LOWEST</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box elevation="lower">
+        <Text is="strong">LOWER</Text>
 
         <Text>
             Lorem ipsum dolor sit amet, consectetur
@@ -240,6 +414,18 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
         </Text>
     </Box>
 
+    <Box elevation="higher">
+        <Text is="strong">HIGHER</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
     <Box elevation="highest">
         <Text is="strong">HIGHEST</Text>
 
@@ -251,10 +437,128 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
             iaculis dolor tincidunt non.
         </Text>
     </Box>
-</Mosaic>
+</Mosaic.Container>
+```
+
+## Radius
+
+> **NOTE**: New since `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can modify the border radius of the `Box` via the `radius` property.
+
+```svelte {title="Box Radius" mode="repl"}
+<script>
+    import {
+        Box,
+        Mosaic,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic.Container sizing="medium" spacing="large">
+    <Box padding="huge">
+        <Text is="strong">DEFAULT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="nano" padding="huge">
+        <Text is="strong">NANO</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="tiny" padding="huge">
+        <Text is="strong">TINY</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="small" padding="huge">
+        <Text is="strong">SMALL</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="medium" padding="huge">
+        <Text is="strong">MEDIUM</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="large" padding="huge">
+        <Text is="strong">LARGE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="huge" padding="huge">
+        <Text is="strong">HUGE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box radius="massive" padding="huge">
+        <Text is="strong">MASSIVE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+</Mosaic.Container>
 ```
 
 ## Shape
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
 
 You can modify the shape of the `Box` via the `shape` property.
 
@@ -267,9 +571,21 @@ You can modify the shape of the `Box` via the `shape` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="large">
+<Mosaic.Container sizing="medium" spacing="large">
     <Box padding="huge">
-        <Text is="strong">NONE / DEFAULT</Text>
+        <Text is="strong">DEFAULT</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non.
+        </Text>
+    </Box>
+
+    <Box shape="circle" padding="huge">
+        <Text is="strong">CIRCLE</Text>
 
         <Text>
             Lorem ipsum dolor sit amet, consectetur
@@ -291,17 +607,5 @@ You can modify the shape of the `Box` via the `shape` property.
             iaculis dolor tincidunt non.
         </Text>
     </Box>
-
-    <Box shape="rounded" padding="huge">
-        <Text is="strong">ROUNDED</Text>
-
-        <Text>
-            Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Proin et consectetur orci.
-            Curabitur a egestas turpis, vitae convallis
-            sapien. Sed pellentesque rutrum tellus, in
-            iaculis dolor tincidunt non.
-        </Text>
-    </Box>
-</Mosaic>
+</Mosaic.Container>
 ```
