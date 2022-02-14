@@ -195,8 +195,8 @@ export default define_navigation({
         {
             text: "Stores",
             items: [
-                {href: "/docs/stores/darkmode"},
-                {href: "/docs/stores/htmlpalette"},
+                {href: "/docs/stores/darkmode", badge: "UPDATED"},
+                {href: "/docs/stores/htmlmode", badge: "UPDATED"},
                 {href: "/docs/stores/mediaquery"},
                 {href: "/docs/stores/prefersscheme"},
                 {href: "/docs/stores/scrolllock"},
