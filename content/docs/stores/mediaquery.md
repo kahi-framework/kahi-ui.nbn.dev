@@ -2,7 +2,7 @@
 
 > **NOTE**: New since `v0.2.14`.
 
-`mediaquery` / `mediaqueries` are [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a provided [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) is currently active.
+`mediaquery` / `mediaqueries` are **readonly** [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a provided [Media Query](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) is currently active.
 
 ```svelte {title="mediaquery Prevew" mode="repl"}
 <script>

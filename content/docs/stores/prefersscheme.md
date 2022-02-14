@@ -2,7 +2,7 @@
 
 > **NOTE**: New since `v0.2.3`.
 
-`prefersscheme` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever [`matchMedia(SCHEME)`](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) is validated.
+`prefersscheme` is a **readonly** [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever [`matchMedia(SCHEME)`](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) is validated.
 
 > **NOTE**: Change your Operating System's color settings to see changes.
 
@@ -15,18 +15,22 @@
         prefersscheme,
     } from "@kahi-ui/framework";
 
-    const darkmode_store = prefersscheme("dark");
-    const lightmode_store = prefersscheme("light");
+    const darkscheme_store = prefersscheme("dark");
+    const lightscheme_store = prefersscheme("light");
 </script>
 
 <Heading>User Color Scheme Preferences</Heading>
 
 <Text>
-    Darkmode: <Code>{$darkmode_store}</Code>
+    Dark Scheme Preference: <Code
+        >{$darkscheme_store}</Code
+    >
 </Text>
 
 <Text>
-    Lightmode: <Code>{$lightmode_store}</Code>
+    Light Scheme Preference: <Code
+        >{$lightscheme_store}</Code
+    >
 </Text>
 ```
 
@@ -42,9 +46,9 @@ import {
 
 ## Built-in Shortcuts
 
-The `prefersscheme` Store also comes with two preconfigured default shortcuts, `prefersdark` and `preferslight`.
+The `prefersscheme` Store also comes with two **readonly** preconfigured shortcut Stores, `prefersdark` and `preferslight`.
 
-```svelte {title="prefersscheme Shortcuts" mode="repl"}
+```svelte {title="prefersscheme Built-In Shortcuts" mode="repl"}
 <script>
     import {
         Code,
@@ -54,18 +58,22 @@ The `prefersscheme` Store also comes with two preconfigured default shortcuts, `
         preferslight,
     } from "@kahi-ui/framework";
 
-    const darkmode_store = prefersdark();
-    const lightmode_store = preferslight();
+    const darkscheme_store = prefersdark();
+    const lightscheme_store = preferslight();
 </script>
 
 <Heading>User Color Scheme Preferences</Heading>
 
 <Text>
-    Darkmode: <Code>{$darkmode_store}</Code>
+    Dark Scheme Preference: <Code
+        >{$darkscheme_store}</Code
+    >
 </Text>
 
 <Text>
-    Lightmode: <Code>{$lightmode_store}</Code>
+    Light Scheme Preference: <Code
+        >{$lightscheme_store}</Code
+    >
 </Text>
 ```
 
