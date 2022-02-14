@@ -58,14 +58,14 @@ description="Sets the form name of the `TextInput`."
 types=["string"]
 
 [[properties.TextInput]]
-name="max_length"
+name="max"
 description="Sets the maximum amount of characters that the end-user **CAN** input, which will fail submission on a `<form>` if the input is invalid."
-types=["number"]
+types=["number", "string"]
 
 [[properties.TextInput]]
-name="min_length"
+name="min"
 description="Sets the minimum amount of characters that the end-user **MUST** input, which will fail submission on a `<form>` if the input is invalid."
-types=["number"]
+types=["number", "string"]
 
 [[properties.TextInput]]
 name="mask"
