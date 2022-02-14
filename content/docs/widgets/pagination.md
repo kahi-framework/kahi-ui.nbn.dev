@@ -23,12 +23,12 @@ types=["number", "string"]
 [[properties.Pagination]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Pagination]]
 name="sizing"
 description="Sets the sizing of the paging buttons."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[events.Pagination]]
 name="select"
@@ -178,6 +178,16 @@ You can change the color palette of the `Pagination` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">NEUTRAL</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            palette="neutral"
+        />
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
 
         <Pagination
@@ -218,6 +228,16 @@ You can change the color palette of the `Pagination` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            palette="informative"
+        />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
 
         <Pagination
@@ -246,6 +266,16 @@ You can alter the overall sizing look and feel via the `sizing` property.
     <div>
         <Text is="strong">DEFAULT</Text>
         <Pagination pages={10} value={5} />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            sizing="nano"
+        />
     </div>
 
     <div>
@@ -295,6 +325,16 @@ You can alter the overall sizing look and feel via the `sizing` property.
             pages={10}
             value={5}
             sizing="huge"
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            sizing="massive"
         />
     </div>
 </Stack>

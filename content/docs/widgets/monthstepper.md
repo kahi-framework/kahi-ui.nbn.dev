@@ -15,10 +15,10 @@ description="Disables months from being stepped through without visual changes."
 types=["boolean"]
 
 [[properties.MonthStepper]]
-name="step"
+name="steps"
 description="Sets how many months are stepped through at each button click."
 default="1"
-types=["1", "number"]
+types=["1", "number", "string"]
 
 [[properties.MonthStepper]]
 name="max"
@@ -33,17 +33,12 @@ types=["string"]
 [[properties.MonthStepper]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.MonthStepper]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `MonthStepper`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.MonthStepper]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.MonthStepper]]
 name="locale"
@@ -76,7 +71,7 @@ types=["CustomEvent<void>"]
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 </script>
 
 <MonthStepper palette="accent" {value} />
@@ -98,7 +93,7 @@ You can disable all interactivity via the `disabled` property.
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 </script>
 
 <MonthStepper palette="accent" {value} disabled />
@@ -112,7 +107,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 </script>
 
 <MonthStepper palette="accent" {value} readonly />
@@ -126,27 +121,27 @@ You can set maximum and minimum range of steppable months via the `max` / `min` 
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 
-    const max = "2021-07-01[u-ca=gregory]";
-    const min = "2021-05-01[u-ca=gregory]";
+    const max = "2021-07-01";
+    const min = "2021-05-01";
 </script>
 
 <MonthStepper palette="accent" {max} {min} {value} />
 ```
 
-## Step
+## Steps
 
-You can control how many months the buttons increment / decrement via the `step` property.
+You can control how many months the buttons increment / decrement via the `steps` property.
 
 ```svelte {title="MonthStepper Step" mode="repl"}
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 </script>
 
-<MonthStepper palette="accent" step={3} {value} />
+<MonthStepper palette="accent" steps={3} {value} />
 ```
 
 ## Custom Format
@@ -157,7 +152,7 @@ You can customize how the month and year components of the current timestamp is 
 <script>
     import {MonthStepper} from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 </script>
 
 <MonthStepper
@@ -180,7 +175,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Text,
     } from "@kahi-ui/framework";
 
-    const value = "2021-06-01[u-ca=gregory]";
+    const value = "2021-06-01";
 </script>
 
 <Stack
@@ -193,6 +188,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <Text is="strong">DEFAULT</Text>
 
         <MonthStepper palette="accent" {value} />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <MonthStepper
+            palette="accent"
+            sizing="nano"
+            {value}
+        />
     </div>
 
     <div>
@@ -241,6 +246,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <MonthStepper
             palette="accent"
             sizing="huge"
+            {value}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <MonthStepper
+            palette="accent"
+            sizing="massive"
             {value}
         />
     </div>

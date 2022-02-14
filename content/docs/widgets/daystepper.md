@@ -15,10 +15,10 @@ description="Disables days from being stepped through without visual changes."
 types=["boolean"]
 
 [[properties.DayStepper]]
-name="step"
+name="steps"
 description="Sets how many days are stepped through at each button click."
 default="1"
-types=["1", "number"]
+types=["1", "number", "string"]
 
 [[properties.DayStepper]]
 name="max"
@@ -33,17 +33,12 @@ types=["string"]
 [[properties.DayStepper]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.DayStepper]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `DayStepper`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.DayStepper]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.DayStepper]]
 name="locale"
@@ -81,7 +76,7 @@ types=["CustomEvent<void>"]
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 </script>
 
 <DayStepper palette="accent" {value} />
@@ -103,7 +98,7 @@ You can disable all interactivity via the `disabled` property.
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 </script>
 
 <DayStepper palette="accent" {value} disabled />
@@ -117,7 +112,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 </script>
 
 <DayStepper palette="accent" {value} readonly />
@@ -131,27 +126,27 @@ You can set maximum and minimum range of steppable days via the `max` / `min` pr
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 
-    const max = "2021-11-13[u-ca=gregory]";
-    const min = "2021-11-07[u-ca=gregory]";
+    const max = "2021-11-13";
+    const min = "2021-11-07";
 </script>
 
 <DayStepper palette="accent" {max} {min} {value} />
 ```
 
-## Step
+## Steps
 
-You can control how many days the buttons increment / decrement via the `step` property.
+You can control how many days the buttons increment / decrement via the `steps` property.
 
 ```svelte {title="DayStepper Step" mode="repl"}
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 </script>
 
-<DayStepper palette="accent" step={3} {value} />
+<DayStepper palette="accent" steps={3} {value} />
 ```
 
 ## Custom Format
@@ -162,7 +157,7 @@ You can customize how the day and month components of the current timestamp is d
 <script>
     import {DayStepper} from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 </script>
 
 <DayStepper
@@ -186,7 +181,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Text,
     } from "@kahi-ui/framework";
 
-    const value = "2021-11-10[u-ca=gregory]";
+    const value = "2021-11-10";
 </script>
 
 <Stack
@@ -199,6 +194,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <Text is="strong">DEFAULT</Text>
 
         <DayStepper palette="accent" {value} />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <DayStepper
+            palette="accent"
+            sizing="nano"
+            {value}
+        />
     </div>
 
     <div>
@@ -247,6 +252,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <DayStepper
             palette="accent"
             sizing="huge"
+            {value}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <DayStepper
+            palette="accent"
+            sizing="massive"
             {value}
         />
     </div>

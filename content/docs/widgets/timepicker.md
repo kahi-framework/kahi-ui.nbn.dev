@@ -7,7 +7,7 @@ types=["string"]
 [[properties.TimePicker]]
 name="disabled"
 description="Disables any component of time from being selected."
-types=["boolean"]
+types=["boolean", "string[]"]
 
 [[properties.TimePicker]]
 name="readonly"
@@ -27,7 +27,7 @@ types=["boolean"]
 [[properties.TimePicker]]
 name="highlight"
 description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the current time to be highlighted as outlines."
-types=["string"]
+types=["string[]"]
 
 [[properties.TimePicker]]
 name="max"
@@ -42,17 +42,12 @@ types=["string"]
 [[properties.TimePicker]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.TimePicker]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `TimePicker`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.TimePicker]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.TimePicker]]
 name="locale"
@@ -190,6 +185,22 @@ You can disable all interactivity via the `disabled` property.
 <TimePicker palette="accent" {value} disabled />
 ```
 
+## Disabled Timestamps
+
+You can disable all interactivity via the `disabled` property.
+
+```svelte {title="TimePicker Disabled" mode="repl"}
+<script>
+    import {TimePicker} from "@kahi-ui/framework";
+
+    const value = "13:30:15";
+
+    const disabled = ["11:00:00", "15:00:00"];
+</script>
+
+<TimePicker palette="accent" {disabled} {value} />
+```
+
 ## Highlight
 
 > **NOTE**: By default, the current time is used.
@@ -202,7 +213,7 @@ You can select a specific timestamp to be highlighted as outlines via the `highl
 
     const value = "13:30:15";
 
-    const highlight = "15:00:00";
+    const highlight = ["15:00:00"];
 </script>
 
 <TimePicker palette="accent" {highlight} {value} />
@@ -274,6 +285,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
     </div>
 
     <div>
+        <Text is="strong">NANO</Text>
+
+        <TimePicker
+            palette="accent"
+            sizing="nano"
+            {value}
+        />
+    </div>
+
+    <div>
         <Text is="strong">TINY</Text>
 
         <TimePicker
@@ -319,6 +340,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <TimePicker
             palette="accent"
             sizing="huge"
+            {value}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <TimePicker
+            palette="accent"
+            sizing="massive"
             {value}
         />
     </div>

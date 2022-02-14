@@ -47,17 +47,12 @@ types=["string"]
 [[properties.DayPicker]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.DayPicker]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `DayPicker`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.DayPicker]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.DayPicker]]
 name="locale"
@@ -90,8 +85,8 @@ types=["CustomEvent<void>"]
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
-    const value = ["2021-11-05[u-ca=gregory]"];
+    const timestamp = "2021-11-10";
+    const value = ["2021-11-05"];
 </script>
 
 <DayPicker
@@ -118,7 +113,7 @@ You can disable all interactivity via the `disabled` property.
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 </script>
 
 <DayPicker
@@ -137,12 +132,9 @@ You can disable specific days from being selected via the `disabled` property.
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 
-    const disabled = [
-        "2021-11-05[u-ca=gregory]",
-        "2021-11-19[u-ca=gregory]",
-    ];
+    const disabled = ["2021-11-05", "2021-11-19"];
 </script>
 
 <DayPicker
@@ -161,11 +153,8 @@ You can allow for multiple days to be selected via the `multiple` property.
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
-    const value = [
-        "2021-11-05[u-ca=gregory]",
-        "2021-11-19[u-ca=gregory]",
-    ];
+    const timestamp = "2021-11-10";
+    const value = ["2021-11-05", "2021-11-19"];
 </script>
 
 <DayPicker
@@ -185,8 +174,8 @@ You can disable selected days from being unselected via the `once` property.
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
-    const value = ["2021-11-05[u-ca=gregory]"];
+    const timestamp = "2021-11-10";
+    const value = ["2021-11-05"];
 </script>
 
 <DayPicker
@@ -206,7 +195,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 </script>
 
 <DayPicker
@@ -227,12 +216,12 @@ You can select a specific set of days to be highlighted as outlines via the `hig
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 
     const highlight = [
-        "2021-11-11[u-ca=gregory]",
-        "2021-11-12[u-ca=gregory]",
-        "2021-11-13[u-ca=gregory]",
+        "2021-11-11",
+        "2021-11-12",
+        "2021-11-13",
     ];
 </script>
 
@@ -252,10 +241,10 @@ You can set maximum and minimum range of selectable days via the `max` / `min` p
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 
-    const max = "2021-11-19[u-ca=gregory]";
-    const min = "2021-11-05[u-ca=gregory]";
+    const max = "2021-11-19";
+    const min = "2021-11-05";
 </script>
 
 <DayPicker
@@ -275,7 +264,7 @@ You can customize how the day component of the available timestamps is displayed
 <script>
     import {DayPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 </script>
 
 <DayPicker
@@ -299,7 +288,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Text,
     } from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10[u-ca=gregory]";
+    const timestamp = "2021-11-10";
 </script>
 
 <Stack
@@ -313,6 +302,17 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
 
         <DayPicker
             palette="accent"
+            width="content-max"
+            {timestamp}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <DayPicker
+            palette="accent"
+            sizing="nano"
             width="content-max"
             {timestamp}
         />
@@ -368,6 +368,17 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <DayPicker
             palette="accent"
             sizing="huge"
+            width="content-max"
+            {timestamp}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <DayPicker
+            palette="accent"
+            sizing="massive"
             width="content-max"
             {timestamp}
         />

@@ -15,10 +15,10 @@ description="Disables months from being stepped through without visual changes."
 types=["boolean"]
 
 [[properties.YearStepper]]
-name="step"
+name="steps"
 description="Sets how many months are stepped through at each button click."
 default="1"
-types=["1", "number"]
+types=["1", "number", "number"]
 
 [[properties.YearStepper]]
 name="max"
@@ -33,17 +33,12 @@ types=["string"]
 [[properties.YearStepper]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.YearStepper]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `YearStepper`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.YearStepper]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.YearStepper]]
 name="locale"
@@ -71,7 +66,7 @@ types=["CustomEvent<void>"]
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 </script>
 
 <YearStepper palette="accent" {value} />
@@ -93,7 +88,7 @@ You can disable all interactivity via the `disabled` property.
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 </script>
 
 <YearStepper palette="accent" {value} disabled />
@@ -107,7 +102,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 </script>
 
 <YearStepper palette="accent" {value} readonly />
@@ -121,27 +116,27 @@ You can set maximum and minimum range of steppable years via the `max` / `min` p
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 
-    const max = "2025-01-01[u-ca=gregory]";
-    const min = "2023-01-01[u-ca=gregory]";
+    const max = "2025-01-01";
+    const min = "2023-01-01";
 </script>
 
 <YearStepper palette="accent" {max} {min} {value} />
 ```
 
-## Step
+## Steps
 
-You can control how many years the buttons increment / decrement via the `step` property.
+You can control how many years the buttons increment / decrement via the `steps` property.
 
 ```svelte {title="YearStepper Step" mode="repl"}
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 </script>
 
-<YearStepper palette="accent" step={3} {value} />
+<YearStepper palette="accent" steps={3} {value} />
 ```
 
 ## Custom Format
@@ -152,7 +147,7 @@ You can customize how the year component of the current timestamp is displayed v
 <script>
     import {YearStepper} from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 </script>
 
 <YearStepper palette="accent" year="2-digit" {value} />
@@ -170,7 +165,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Text,
     } from "@kahi-ui/framework";
 
-    const value = "2024-01-01[u-ca=gregory]";
+    const value = "2024-01-01";
 </script>
 
 <Stack
@@ -183,6 +178,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <Text is="strong">DEFAULT</Text>
 
         <YearStepper palette="accent" {value} />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <YearStepper
+            palette="accent"
+            sizing="nano"
+            {value}
+        />
     </div>
 
     <div>
@@ -231,6 +236,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <YearStepper
             palette="accent"
             sizing="huge"
+            {value}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <YearStepper
+            palette="accent"
+            sizing="massive"
             {value}
         />
     </div>

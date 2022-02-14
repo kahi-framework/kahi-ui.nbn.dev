@@ -47,17 +47,12 @@ types=["string"]
 [[properties.YearPicker]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.YearPicker]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `YearPicker`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.YearPicker]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.YearPicker]]
 name="locale"
@@ -85,8 +80,8 @@ types=["CustomEvent<void>"]
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
-    const value = ["2024-01-01[u-ca=gregory]"];
+    const timestamp = "2020-01-01";
+    const value = ["2024-01-01"];
 </script>
 
 <YearPicker
@@ -113,7 +108,7 @@ You can disable all interactivity via the `disabled` property.
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 </script>
 
 <YearPicker
@@ -132,12 +127,9 @@ You can disable specific years from being selected via the `disabled` property.
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 
-    const disabled = [
-        "2025-01-01[u-ca=gregory]",
-        "2023-01-01[u-ca=gregory]",
-    ];
+    const disabled = ["2025-01-01", "2023-01-01"];
 </script>
 
 <YearPicker
@@ -156,11 +148,8 @@ You can allow for multiple years to be selected via the `multiple` property.
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
-    const value = [
-        "2025-01-01[u-ca=gregory]",
-        "2023-01-01[u-ca=gregory]",
-    ];
+    const timestamp = "2020-01-01";
+    const value = ["2025-01-01", "2023-01-01"];
 </script>
 
 <YearPicker
@@ -180,8 +169,8 @@ You can disable selected years from being unselected via the `once` property.
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
-    const value = ["2024-01-01[u-ca=gregory]"];
+    const timestamp = "2020-01-01";
+    const value = ["2024-01-01"];
 </script>
 
 <YearPicker
@@ -201,7 +190,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 </script>
 
 <YearPicker
@@ -222,12 +211,12 @@ You can select a specific set of years to be highlighted as outlines via the `hi
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 
     const highlight = [
-        "2025-01-01[u-ca=gregory]",
-        "2026-01-01[u-ca=gregory]",
-        "2027-01-01[u-ca=gregory]",
+        "2025-01-01",
+        "2026-01-01",
+        "2027-01-01",
     ];
 </script>
 
@@ -247,10 +236,10 @@ You can set maximum and minimum range of selectable years via the `max` / `min` 
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 
-    const max = "2025-01-01[u-ca=gregory]";
-    const min = "2023-01-01[u-ca=gregory]";
+    const max = "2025-01-01";
+    const min = "2023-01-01";
 </script>
 
 <YearPicker
@@ -270,7 +259,7 @@ You can customize how the year component of the available timestamps is displaye
 <script>
     import {YearPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 </script>
 
 <YearPicker
@@ -293,7 +282,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Text,
     } from "@kahi-ui/framework";
 
-    const timestamp = "2020-01-01[u-ca=gregory]";
+    const timestamp = "2020-01-01";
 </script>
 
 <Stack
