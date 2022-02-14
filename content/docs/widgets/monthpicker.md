@@ -285,7 +285,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
     const timestamp = "2021-01-01";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     alignment_y="top"
@@ -377,5 +377,5 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
             {timestamp}
         />
     </div>
-</Stack>
+</Stack.Container>
 ```

@@ -168,7 +168,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
     const value = "2024-01-01";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     alignment_y="top"
@@ -249,5 +249,5 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
             {value}
         />
     </div>
-</Stack>
+</Stack.Container>
 ```

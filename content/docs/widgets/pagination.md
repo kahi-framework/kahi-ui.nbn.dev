@@ -161,7 +161,7 @@ You can change the color palette of the `Pagination` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Pagination pages={10} value={5} />
@@ -246,7 +246,7 @@ You can change the color palette of the `Pagination` via the `palette` property.
             palette="negative"
         />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ### Sizing
@@ -262,7 +262,7 @@ You can alter the overall sizing look and feel via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Pagination pages={10} value={5} />
@@ -337,5 +337,5 @@ You can alter the overall sizing look and feel via the `sizing` property.
             sizing="massive"
         />
     </div>
-</Stack>
+</Stack.Container>
 ```
