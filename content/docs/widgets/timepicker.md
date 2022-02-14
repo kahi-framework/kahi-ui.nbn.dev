@@ -210,7 +210,7 @@ You can select a specific timestamp to be highlighted as outlines via the `highl
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of selectable times via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of selectable times via the `max` / `min` properties.
 
 ```svelte {title="TimePicker Maximum + Minimum" mode="repl"}
 <script>

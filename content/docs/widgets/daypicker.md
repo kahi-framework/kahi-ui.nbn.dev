@@ -246,7 +246,7 @@ You can select a specific set of days to be highlighted as outlines via the `hig
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of selectable days via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of selectable days via the `max` / `min` properties.
 
 ```svelte {title="DayPicker Maximum + Minimum" mode="repl"}
 <script>

@@ -241,7 +241,7 @@ You can select a specific set of years to be highlighted as outlines via the `hi
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of selectable years via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of selectable years via the `max` / `min` properties.
 
 ```svelte {title="YearPicker Maximum + Minimum" mode="repl"}
 <script>

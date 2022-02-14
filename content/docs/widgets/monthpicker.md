@@ -241,7 +241,7 @@ You can select a specific set of months to be highlighted as outlines via the `h
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of selectable months via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of selectable months via the `max` / `min` properties.
 
 ```svelte {title="MonthPicker Maximum + Minimum" mode="repl"}
 <script>

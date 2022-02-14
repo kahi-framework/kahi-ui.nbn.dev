@@ -115,7 +115,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of steppable years via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of steppable years via the `max` / `min` properties.
 
 ```svelte {title="YearStepper Maximum + Minimum" mode="repl"}
 <script>

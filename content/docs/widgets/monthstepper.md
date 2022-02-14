@@ -120,7 +120,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of steppable months via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of steppable months via the `max` / `min` properties.
 
 ```svelte {title="MonthStepper Maximum + Minimum" mode="repl"}
 <script>
