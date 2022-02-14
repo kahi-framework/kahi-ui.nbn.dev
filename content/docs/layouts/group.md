@@ -5,6 +5,21 @@ description="Sets the `Group` to render its children vertically."
 types=["vertical"]
 
 [[properties.Group]]
+name="spacing"
+description="Adjusts the negative visual spacing between child items in the `Group`, when `variation="stacked"`."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
+
+[[properties.Group]]
+name="spacing_x"
+description="Adjusts the negative horizontal visual spacing between child items in the `Group`, when `variation="stacked"`."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
+
+[[properties.Group]]
+name="spacing_y"
+description="Adjusts the negative horizontal visual spacing between child items in the `Group`, when `variation="stacked"`."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
+
+[[properties.Group]]
 name="variation"
 description="Sets how the `Group` should display the its children relative to the previous item."
 types=["stacked"]
@@ -61,7 +76,7 @@ You can set the `Group` to render its children Components vertically, via the `o
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -87,7 +102,7 @@ You can set the `Group` to render its children Components vertically, via the `o
             </Group>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Stacked
@@ -101,6 +116,7 @@ You can set the `variation` property to `stacked` to visually stack children Com
 ```svelte {title="Group Stacked" mode="repl"}
 <script>
     import {
+        Center,
         Figure,
         Group,
         Stack,
@@ -108,91 +124,256 @@ You can set the `variation` property to `stacked` to visually stack children Com
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="group-stacked"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Group variation="stacked">
-            <Figure
-                variation="icon"
-                size="medium"
-                shape="pill"
-            >
+            <Figure size="icon-medium" shape="circle">
                 <img src={IMAGE_AVATAR} />
             </Figure>
 
-            <Figure
-                variation="icon"
-                size="medium"
-                shape="pill"
-            >
+            <Figure size="icon-medium" shape="circle">
                 <img src={IMAGE_AVATAR} />
             </Figure>
 
-            <Figure
-                variation="icon"
-                size="medium"
-                shape="pill"
-            >
+            <Figure size="icon-medium" shape="circle">
                 <img src={IMAGE_AVATAR} />
             </Figure>
 
-            <Stack
-                alignment_y="center"
-                padding_left="small"
-            >
+            <Center padding_left="small">
                 <Text is="small">+7</Text>
-            </Stack>
+            </Center>
         </Group>
     </div>
 
     <div>
         <Text is="strong">VERTICAL</Text>
+        <br />
         <Group
             variation="stacked"
             orientation="vertical"
         >
-            <Figure
-                variation="icon"
-                size="medium"
-                shape="pill"
-            >
+            <Figure size="icon-medium" shape="circle">
                 <img src={IMAGE_AVATAR} />
             </Figure>
 
-            <Figure
-                variation="icon"
-                size="medium"
-                shape="pill"
-            >
+            <Figure size="icon-medium" shape="circle">
                 <img src={IMAGE_AVATAR} />
             </Figure>
 
-            <Figure
-                variation="icon"
-                size="medium"
-                shape="pill"
-            >
+            <Figure size="icon-medium" shape="circle">
                 <img src={IMAGE_AVATAR} />
             </Figure>
 
-            <Stack
-                alignment_x="center"
-                padding_top="small"
-            >
+            <Center padding_top="small">
                 <Text is="small">+7</Text>
-            </Stack>
+            </Center>
         </Group>
     </div>
-</Stack>
+</Stack.Container>
+```
 
-<style>
-    :global(.group-stacked strong) {
-        display: block;
-    }
-</style>
+## Spacing
+
+> **NOTE**: New since `v0.6.0`.
+
+When the `variation` property is set to `stacked`, you can control the negative spacing via the `spacing`, `spacing_x`, and `spacing_y` properties.
+
+```svelte {title="Group Spacing" mode="repl"}
+<script>
+    import {
+        Center,
+        Figure,
+        Group,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <br />
+        <Group variation="stacked">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <br />
+        <Group variation="stacked" spacing="nano">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">TINY</Text>
+        <br />
+        <Group variation="stacked" spacing="tiny">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+        <br />
+        <Group variation="stacked" spacing="small">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+        <br />
+        <Group variation="stacked" spacing="medium">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+        <br />
+        <Group variation="stacked" spacing="large">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+        <br />
+        <Group variation="stacked" spacing="huge">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <br />
+        <Group variation="stacked" spacing="massive">
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Figure size="icon-medium" shape="circle">
+                <img src={IMAGE_AVATAR} />
+            </Figure>
+
+            <Center padding_left="small">
+                <Text is="small">+7</Text>
+            </Center>
+        </Group>
+    </div>
+</Stack.Container>
 ```

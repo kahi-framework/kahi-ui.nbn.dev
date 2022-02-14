@@ -8,17 +8,17 @@ types=["div", "span"]
 [[properties.Spacer]]
 name="spacing"
 description="Adjusts the visual spacing between the two immediate siblings of the `Spacer`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Spacer]]
 name="spacing_x"
 description="Adjusts the horizontal visual spacing between the two immediate siblings of the `Spacer`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Spacer]]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between the two immediate siblings of the `Spacer`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 +++
 
 # Spacer
@@ -75,11 +75,24 @@ You can adjust the spacing between the immediate siblings via the `spacing`, `sp
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
+    <div>
+        <Text is="strong">NANO</Text>
+        <Box
+            palette="inverse"
+            padding_x="small"
+            padding_y="tiny"
+        >
+            TOP
+            <Spacer spacing="nano" />
+            BOTTOM
+        </Box>
+    </div>
+
     <div>
         <Text is="strong">TINY</Text>
         <Box
@@ -144,7 +157,20 @@ You can adjust the spacing between the immediate siblings via the `spacing`, `sp
             BOTTOM
         </Box>
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Box
+            palette="inverse"
+            padding_x="small"
+            padding_y="tiny"
+        >
+            TOP
+            <Spacer spacing="massive" />
+            BOTTOM
+        </Box>
+    </div>
+</Stack.Container>
 ```
 
 ## Inline
@@ -163,7 +189,7 @@ You can have the `Spacer` rendering as an inline `<span>` via the `is` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -199,5 +225,5 @@ You can have the `Spacer` rendering as an inline `<span>` via the `is` property.
             RIGHT
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 ```

@@ -1,10 +1,4 @@
 +++
-[[properties.Container]]
-name="viewport"
-description="Controls the max width of the `Container` in relation to a Viewport preset."
-default="prose"
-types=["prose", "mobile", "table", "desktop", "widescreen", "{VIEWPORT}:{SIZE}"]
-
 [[slots.Container]]
 name="default"
 description="Default unnamed slot."
@@ -51,30 +45,4 @@ types=["<length>"]
 <script>
     import {Container} from "@kahi-ui/framework";
 </script>
-```
-
-## Viewports
-
-> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `viewport={["mobile", "widescreen:prose"]}`
-
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
-
-You can customize the `Container` to be constrained to specific Viewport sizes.
-
-```svelte {title="Svelte Viewports" mode="repl"}
-<script>
-    import {Container, Text} from "@kahi-ui/framework";
-</script>
-
-<Container viewport="tablet">
-    <Text>
-        Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Proin et consectetur orci.
-        Curabitur a egestas turpis, vitae convallis
-        sapien. Sed pellentesque rutrum tellus, in
-        iaculis dolor tincidunt non. Orci varius
-        natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-    </Text>
-</Container>
 ```

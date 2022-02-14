@@ -1,40 +1,60 @@
 +++
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="sizing"
 description="Sets the minimum width each child item divided up into, out of the space available."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SIZING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="alignment"
-description="Adjusts where the child items will be placed within the `Mosaic` along both axis."
+description="Adjusts where the child items will be placed within the `Mosaic.Container` along both axis."
 types=["center", "stretch", "{VIEWPORT}:{ALIGNMENT}"]
 
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="alignment_x"
-description="Adjusts where the child items will be placed within the `Mosaic` along the horizontal axis."
+description="Adjusts where the child items will be placed within the `Mosaic.Container` along the horizontal axis."
 types=["center", "stretch", "left", "right", "{VIEWPORT}:{ALIGNMENT}"]
 
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="alignment_y"
-description="Adjusts where the child items will be placed within the `Mosaic` along the vertical axis."
+description="Adjusts where the child items will be placed within the `Mosaic.Container` along the vertical axis."
 types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="spacing"
-description="Adjusts the visual spacing between child items in the `Mosaic`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+description="Adjusts the visual spacing between child items in the `Mosaic.Container`."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="spacing_x"
-description="Adjusts the horizontal visual spacing between child items in the `Mosaic`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+description="Adjusts the horizontal visual spacing between child items in the `Mosaic.Container`."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
-[[properties.Mosaic]]
+[[properties."Mosaic.Container"]]
 name="spacing_y"
-description="Adjusts the vertical visual spacing between child items in the `Mosaic`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+description="Adjusts the vertical visual spacing between child items in the `Mosaic.Container`."
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
-[[slots.Mosaic]]
+[[properties."Mosaic.Item"]]
+name="span"
+description="In a point scale of 1...12, sets how many columns and rows the `Mosaic.Item` will span."
+types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
+
+[[properties."Mosaic.Item"]]
+name="span_x"
+description="In a point scale of 1...12, sets how many columns the `Mosaic.Item` will span."
+types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
+
+[[properties."Mosaic.Item"]]
+name="span_y"
+description="In a point scale of 1...12, sets how many rows the `Mosaic.Item` will span."
+types=["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "{VIEWPORT}:{POINTS}"]
+
+[[slots."Mosaic.Container"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Mosaic.Item"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
@@ -51,37 +71,27 @@ types=["{}"]
     import {Box, Mosaic} from "@kahi-ui/framework";
 </script>
 
-<Mosaic
-    class="mosaic-preview"
-    sizing="tiny"
-    spacing="medium"
->
-    <Box palette="alert" />
-    <Box palette="affirmative" />
-    <Box palette="negative" />
+<Mosaic.Container sizing="tiny" spacing="medium">
+    <Box palette="alert" height="icon-massive" />
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
 
-    <Box palette="affirmative" />
-    <Box palette="negative" />
-    <Box palette="alert" />
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
+    <Box palette="alert" height="icon-massive" />
 
-    <Box palette="alert" />
-    <Box palette="affirmative" />
-    <Box palette="negative" />
+    <Box palette="alert" height="icon-massive" />
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
 
-    <Box palette="negative" />
-    <Box palette="alert" />
-    <Box palette="affirmative" />
+    <Box palette="negative" height="icon-massive" />
+    <Box palette="alert" height="icon-massive" />
+    <Box palette="affirmative" height="icon-massive" />
 
-    <Box palette="affirmative" />
-    <Box palette="negative" />
-    <Box palette="alert" />
-</Mosaic>
-
-<style>
-    :global(.mosaic-preview .box) {
-        height: 3rem;
-    }
-</style>
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
+    <Box palette="alert" height="icon-massive" />
+</Mosaic.Container>
 ```
 
 ## Imports
@@ -89,6 +99,8 @@ types=["{}"]
 ```svelte {title="Mosaic Imports"}
 <script>
     import {Mosaic} from "@kahi-ui/framework";
+
+    const {Container, Item} = Mosaic;
 </script>
 ```
 
@@ -108,77 +120,191 @@ You can alter how large each `Mosaic` item should be via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="mosaic-sizing"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
+        <Text is="strong">NANO</Text>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="nano"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
+        </Box>
+    </div>
+
+    <div>
         <Text is="strong">TINY</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny" spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
 
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="small" spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="small"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
 
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="medium" spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="medium"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
 
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="large" spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="large"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
 
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="huge" spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="huge"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
-</Stack>
 
-<style>
-    :global(.mosaic-sizing .mosaic .box) {
-        height: 3rem;
-    }
-</style>
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="huge"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
+        </Box>
+    </div>
+</Stack.Container>
 ```
 
 ## Spacing
@@ -197,82 +323,254 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="mosaic-spacing"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container sizing="tiny">
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
+        </Box>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="nano"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">TINY</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny" spacing="tiny">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="tiny"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny" spacing="small">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="small"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny" spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="medium"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny" spacing="large">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="large"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Box palette="dark" padding="small">
-            <Mosaic sizing="tiny" spacing="huge">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Mosaic>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="huge"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
         </Box>
     </div>
-</Stack>
 
-<style>
-    :global(.mosaic-spacing .mosaic .box) {
-        height: 3rem;
-    }
-</style>
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Box palette="inverse" padding="small">
+            <Mosaic.Container
+                sizing="tiny"
+                spacing="massive"
+            >
+                <Box
+                    palette="alert"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    height="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    height="icon-massive"
+                />
+            </Mosaic.Container>
+        </Box>
+    </div>
+</Stack.Container>
+```
+
+## Item Span
+
+> **NOTE**: New since `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `span={["3", "tablet:2", "mobile:1"]}`
+
+You can adjust span of individual items via the `span`, `span_x`, `span_y` properties, by wrapping the items in `Mosaic.Item`.
+
+```svelte {title="Mosaic Item Span" mode="repl"}
+<script>
+    import {Box, Mosaic} from "@kahi-ui/framework";
+</script>
+
+<Mosaic.Container sizing="tiny" spacing="medium">
+    <Box palette="alert" height="icon-massive" />
+    <Mosaic.Item
+        span_x={["3", "mobile:1", "tablet:2"]}
+    >
+        <Box
+            palette="affirmative"
+            height="icon-massive"
+        />
+    </Mosaic.Item>
+    <Box palette="negative" height="icon-massive" />
+
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
+    <Box palette="alert" height="icon-massive" />
+
+    <Box palette="alert" height="icon-massive" />
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
+
+    <Mosaic.Item span_x="2">
+        <Box
+            palette="negative"
+            height="icon-massive"
+        />
+    </Mosaic.Item>
+    <Box palette="alert" height="icon-massive" />
+    <Box palette="affirmative" height="icon-massive" />
+
+    <Box palette="affirmative" height="icon-massive" />
+    <Box palette="negative" height="icon-massive" />
+    <Box palette="alert" height="icon-massive" />
+</Mosaic.Container>
 ```

@@ -22,17 +22,17 @@ types=["top", "bottom"]
 [[properties.Position]]
 name="spacing"
 description="Adjusts how far off the corner the `Position` sets its self for the `variation=\"action\"` property."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Position]]
 name="spacing_x"
 description="Adjusts how far off the corner the `Position` sets its self horizontally for the `variation=\"action\"` property."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Position]]
 name="spacing_y"
 description="Adjusts how far off the corner the `Position` sets its self vertically for the `variation=\"action\"` property."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[slots.Position]]
 name="default"

@@ -2,7 +2,7 @@
 [[properties.Divider]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Divider]]
 name="orientation"
@@ -90,7 +90,7 @@ You can change the color palette of the `Divider` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="medium">
+<Mosaic.Container sizing="medium" spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Divider />
@@ -99,6 +99,11 @@ You can change the color palette of the `Divider` via the `palette` property.
     <div>
         <Text is="strong">ACCENT</Text>
         <Divider palette="accent" />
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+        <Divider palette="neutral" />
     </div>
 
     <div>
@@ -122,10 +127,15 @@ You can change the color palette of the `Divider` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <Divider palette="informative" />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
         <Divider palette="negative" />
     </div>
-</Mosaic>
+</Mosaic.Container>
 ```
 
 ## Orientation
@@ -143,7 +153,7 @@ You can set the `Divider` to render vertically via the `orientation` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="divider-orientation"
     orientation="horizontal"
     spacing="medium"
@@ -166,7 +176,7 @@ You can set the `Divider` to render vertically via the `orientation` property.
             <Divider orientation="vertical" />
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.divider-orientation
@@ -201,7 +211,7 @@ You can set the `Divider` to render vertically via the `orientation` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="divider-text"
     orientation="horizontal"
     spacing="medium"
@@ -220,7 +230,7 @@ You can set the `Divider` to render vertically via the `orientation` property.
             </Divider>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.divider-text > div:first-child > .box) {

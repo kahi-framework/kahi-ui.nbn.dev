@@ -22,17 +22,17 @@ types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 [[properties."Grid.Container"]]
 name="spacing"
 description="Adjusts the visual spacing between child items in the `Grid.Container`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Container"]]
 name="spacing_x"
 description="Adjusts the horizontal visual spacing between child items in the `Grid.Container`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Container"]]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child items in the `Grid.Container`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Item"]]
 name="span"
