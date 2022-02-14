@@ -167,12 +167,13 @@ export default define_navigation({
         {
             text: "Utilities",
             items: [
+                {href: "/docs/utilities/animation", badge: "UPDATED"},
                 {href: "/docs/utilities/browserrender"},
                 {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/mediaqueryrender"},
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
-                {href: "/docs/utilities/transition"},
+                {href: "/docs/utilities/transition", badge: "UPDATED"},
                 {href: "/docs/utilities/viewportrender"},
             ],
         },
