@@ -187,7 +187,9 @@ You can disable all interactivity via the `disabled` property.
 
 ## Disabled Timestamps
 
-You can disable all interactivity via the `disabled` property.
+> **NOTE**: New since `v0.6.0`.
+
+You can disable specific timestamps from being selected via the `disabled` property.
 
 ```svelte {title="TimePicker Disabled" mode="repl"}
 <script>
