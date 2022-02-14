@@ -1,5 +1,11 @@
 +++
 [[properties.Transition]]
+name="is"
+description="Alters the HTML tag rendered to the DOM."
+default="div"
+types=["div", "span"]
+
+[[properties.Transition]]
 name="animation"
 description="Selects the animation to be ran on the containing `Transition` element."
 types=["clip", "fade", "scale", "slide"]
@@ -269,6 +275,66 @@ You can control which direction the `Transition` animation will "expand", "move"
         hello world!
     </Box>
 </Transition>
+```
+
+## Elements
+
+> **NOTE**: New since `v0.6.0`.
+
+You can change the HTML tag rendered to DOM via the `is` property.
+
+```svelte {title="Transition Elements" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        Transition,
+    } from "@kahi-ui/framework";
+
+    let variation = undefined;
+</script>
+
+<Button
+    on:click={() =>
+        (variation =
+            variation === "exit" ? "enter" : "exit")}
+>
+    Toggle Variation
+</Button>
+
+<Stack.Container
+    spacing="medium"
+    orientation="horizontal"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DIV / BLOCK</Text>
+
+        <Transition
+            is="div"
+            animation="clip"
+            {variation}
+        >
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+    </div>
+
+    <div>
+        <Text is="strong">SPAN / INLINE</Text>
+
+        <Transition
+            is="span"
+            animation="clip"
+            {variation}
+        >
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+    </div>
+</Stack.Container>
 ```
 
 ## Fade
