@@ -165,7 +165,7 @@ You can control the state of the `Switch` via the `active`, `disabled`, and `sta
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -205,7 +205,7 @@ You can control the state of the `Switch` via the `active`, `disabled`, and `sta
         <br />
         <Switch disabled state />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Palette
@@ -221,7 +221,7 @@ You can change the color palette of the `Switch` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -279,7 +279,7 @@ You can change the color palette of the `Switch` via the `palette` property.
         <br />
         <Switch palette="negative" />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Sizing
@@ -297,7 +297,7 @@ You can change the size of the `Switch` via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -349,5 +349,5 @@ You can change the size of the `Switch` via the `sizing` property.
         <br />
         <Switch sizing="massive" />
     </div>
-</Stack>
+</Stack.Container>
 ```

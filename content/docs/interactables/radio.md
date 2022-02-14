@@ -216,7 +216,7 @@ You can control the state of the `Radio` via the `active`, `disabled`, and `stat
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -256,7 +256,7 @@ You can control the state of the `Radio` via the `active`, `disabled`, and `stat
         <br />
         <Radio disabled state />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Palette

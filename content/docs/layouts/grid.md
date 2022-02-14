@@ -132,7 +132,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="grid-points"
     orientation="horizontal"
     spacing="medium"
@@ -449,7 +449,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
             </Grid.Container>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.grid-points .grid) {
@@ -478,7 +478,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="grid-spacing"
     orientation="horizontal"
     spacing="medium"
@@ -576,7 +576,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
             </Grid.Container>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.grid-spacing .grid) {

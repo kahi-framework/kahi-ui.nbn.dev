@@ -43,11 +43,11 @@ types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT
     padding_x="small"
     padding_y="tiny"
 >
-    <Stack orientation="horizontal">
+    <Stack.Container orientation="horizontal">
         LEFT
         <Spacer />
         RIGHT
-    </Stack>
+    </Stack.Container>
 </Box>
 ```
 

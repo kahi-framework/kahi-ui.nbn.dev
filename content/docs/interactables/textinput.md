@@ -307,7 +307,7 @@ You can change the color palette of the `TextInput` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -353,7 +353,7 @@ You can change the color palette of the `TextInput` via the `palette` property.
         span_x="20"
         value="This is a NEGATIVE TextInput"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## Block
@@ -368,7 +368,7 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -421,7 +421,7 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
         span_x="20"
         value="This is a NEGATIVE TextInput"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## Flush
@@ -457,7 +457,7 @@ You can change the size of the `TextInput` via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -509,7 +509,7 @@ You can change the size of the `TextInput` via the `sizing` property.
         span_x="20"
         value="This is a MASSIVE TextInput"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## Radius
@@ -528,7 +528,7 @@ You can change the border radius of the `TextInput` via the `radius` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -586,7 +586,7 @@ You can change the border radius of the `TextInput` via the `radius` property.
         span_x="20"
         value="This is a MASSIVE TextInput"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## Shapes
@@ -605,7 +605,7 @@ You can change the shape of the `TextInput` via the `shape` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -627,7 +627,7 @@ You can change the shape of the `TextInput` via the `shape` property.
         span_x="20"
         value="This is a PILL TextInput"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## Types
@@ -642,7 +642,7 @@ You can change your input type between `email`, `password`, `search`, `text` **(
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -665,7 +665,7 @@ You can change your input type between `email`, `password`, `search`, `text` **(
         span_x="20"
         value="https://google.com"
     />
-</Stack>
+</Stack.Container>
 ```
 
 ## TextArea

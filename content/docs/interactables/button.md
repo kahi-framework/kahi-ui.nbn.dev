@@ -258,7 +258,7 @@ You can change the color palette of the `Button` via the `palette` property.
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -298,7 +298,7 @@ You can change the color palette of the `Button` via the `palette` property.
     <Button variation="clear" palette="negative">
         This is a NEGATIVE Button!
     </Button>
-</Stack>
+</Stack.Container>
 ```
 
 ## Outline
@@ -310,7 +310,7 @@ You can change the color palette of the `Button` via the `palette` property.
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -350,7 +350,7 @@ You can change the color palette of the `Button` via the `palette` property.
     <Button variation="outline" palette="negative">
         This is a NEGATIVE Button!
     </Button>
-</Stack>
+</Stack.Container>
 ```
 
 ## Subtle
@@ -364,7 +364,7 @@ You can alter the `Button` Component to use less intense / remove "attention gra
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -386,7 +386,7 @@ You can alter the `Button` Component to use less intense / remove "attention gra
     >
         This is a SUBTLE OUTLINE Button!
     </Button>
-</Stack>
+</Stack.Container>
 ```
 
 ## Sizing

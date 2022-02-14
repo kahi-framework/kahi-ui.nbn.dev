@@ -178,7 +178,7 @@ Form Components are helpers to supplement input Components that are meant for fo
     <Text is="sup">{logic_state}</Text>
 </Text>
 
-<Stack spacing="small" margin_top="small">
+<Stack.Container spacing="small" margin_top="small">
     <Form.Group
         logic_name="form-group"
         bind:logic_state
@@ -210,7 +210,7 @@ Form Components are helpers to supplement input Components that are meant for fo
             Vanilla
         </Radio>
     </Form.Group>
-</Stack>
+</Stack.Container>
 ```
 
 ## Legend

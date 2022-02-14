@@ -245,7 +245,7 @@ You can change the color palette of the `Tile` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <Tile.Container width="content-max">
         <Tile.Figure>
             <img src={IMAGE_AVATAR} />
@@ -455,7 +455,7 @@ You can change the color palette of the `Tile` via the `palette` property.
             <Text is="small">NEGATIVE</Text>
         </Tile.Footer>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Elevation
@@ -475,7 +475,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="large">
+<Stack.Container spacing="large">
     <Tile.Container width="content-max">
         <Tile.Figure>
             <img src={IMAGE_AVATAR} />
@@ -664,7 +664,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
             <Text is="small">HIGHEST</Text>
         </Tile.Footer>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Orientation
@@ -685,7 +685,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <Tile.Container width="content-max">
         <Tile.Figure>
             <img src={IMAGE_AVATAR} />
@@ -741,7 +741,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
             </Button>
         </Tile.Footer>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Sizing
@@ -761,7 +761,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     alignment_y="top"
@@ -908,7 +908,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
             </Text>
         </Tile.Section>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Flush
