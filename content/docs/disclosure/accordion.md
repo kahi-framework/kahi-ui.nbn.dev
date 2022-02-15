@@ -201,7 +201,7 @@ types=["<alpha-value>"]
 
 > **NOTE**: Introduced feature in `v0.5.2`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can manually choose which `<Accordion.Section>` Components are active via the `logic_state` property.
 

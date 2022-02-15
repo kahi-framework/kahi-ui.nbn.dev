@@ -235,7 +235,7 @@ types=["<length>"]
 
 > **NOTE**: Introduced feature in `v0.5.2`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can manually choose which `<Tab.Section>` Component is active via the `logic_state` property.
 

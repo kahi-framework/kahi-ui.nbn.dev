@@ -237,7 +237,7 @@ types=["<alpha-value>"]
 
 > **NOTE**: Introduced feature in `v0.4.14`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 > **IMPORTANT**: This feature only runs on the Browser, you need to **ALWAYS** validate user-generated input on the server.
 

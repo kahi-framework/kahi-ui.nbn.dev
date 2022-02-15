@@ -232,7 +232,7 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
 
 ## Logic State
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can manually open / close the `Overlay` via the `logic_state` property.
 
@@ -279,7 +279,7 @@ You can manually open / close the `Overlay` via the `logic_state` property.
 
 > **NOTE**: Introduced feature in `v0.4.13`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 Whenever the `Overlay` becomes active, focus is moved to the first found focusable element, then restored to the previously focused element when dismissed.
 
@@ -423,7 +423,7 @@ You can customize which element is focused on activation with a reference or CSS
 
 > **NOTE**: Introduced feature in `v0.4.13`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 > **NOTE**: Click the `Link` button, to test out the functionality in the Playground.
 
@@ -693,7 +693,7 @@ You can optionally include a backdrop by passing via composing the `<Overlay.Bac
 
 > **NOTE**: Added keybinding support since `v0.4.13`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can optionally have the `Overlay` dismissible by pressing the `ESC` key or clicking the `<Overlay.Backdrop>` if applicable, via the `dismissible` property.
 
@@ -772,7 +772,7 @@ You can optionally have the `Overlay` dismissible by pressing the `ESC` key or c
 
 > **NOTE**: Introduced feature in `v0.4.11`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can enable having the `Overlay` dismissed whenever `<Overlay.Section>` inner content is clicked via the `once` property.
 

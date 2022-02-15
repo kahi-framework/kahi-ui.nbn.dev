@@ -203,7 +203,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
 
 ## Logic State
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can manually open / close the `Popover` via the `logic_state` property.
 
@@ -251,7 +251,7 @@ You can manually open / close the `Popover` via the `logic_state` property.
 
 > **NOTE**: Added keybinding support since `v0.4.13`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can optionally have the `Popover` dismissible by clicking outside the `<Popover.Section>` child content, pressing the `ESC` key, or inner content losing focus, via the `dismissible` property.
 
@@ -304,7 +304,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
 
 > **NOTE**: Introduced feature in `v0.4.11`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can enable having the `Popover` dismissed whenever inner content is clicked via the `once` property.
 
