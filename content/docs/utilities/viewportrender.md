@@ -74,7 +74,7 @@ The Component only runs on clientside Browsers with Javascript enabled. So you n
 
 ## Fallthrough
 
-> **NOTE**: The REPL runs on your Browser, so this will always render anyway.
+> **USAGE**: REPL renders in your Browser, so this feature will always render conditionally anyway.
 
 > **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 

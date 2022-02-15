@@ -13,7 +13,7 @@ types=["{}"]
 
 `ServerRender` disables rendering of child content that doesn't work on the Browser, or doesn't make sense there. e.g. reading a file from local disk
 
-> **NOTE**: The REPL runs on your Browser, so this will always be blank.
+> **USAGE**: REPL renders in your Browser, so this feature will never render the content.
 
 ```svelte {title="ServerRender Preview" mode="repl"}
 <script>

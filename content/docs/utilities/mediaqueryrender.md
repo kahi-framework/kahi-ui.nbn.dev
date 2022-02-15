@@ -137,7 +137,7 @@ When working with multiple Media Queries, you can specify that **ALL** Media Que
 
 ## Fallthrough
 
-> **NOTE**: The REPL runs on your Browser, so this will always render anyway.
+> **USAGE**: REPL renders in your Browser, so this feature will always conditionally render anyway.
 
 By default, `MediaQueryRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 

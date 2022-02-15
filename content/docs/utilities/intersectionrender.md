@@ -239,7 +239,7 @@ You can change the behavior of `IntersectionObserver` by passing in the `loading
 
 ## Fallthrough
 
-> **NOTE**: The REPL runs on your Browser, so this will always render anyway.
+> **USAGE**: REPL renders in your Browser, so this feature will always conditionally render anyway.
 
 By default, `IntersectionRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 
