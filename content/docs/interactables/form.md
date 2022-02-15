@@ -157,7 +157,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 > **NOTE**: Introduced feature in `v0.2.7`.
 
-> **NOTE**: This Component is renderless, it does not render its own DOM nodes.
+> **NOTE**: This feature is renderless, meaning it does not render anything extra to the DOM.
 
 `Form.Group` lets you directly set the relevant form-related [Svelte Contexts](https://svelte.dev/docs#setContext) via its properties without using any preformatted shown above.
 

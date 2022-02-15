@@ -9,7 +9,7 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.4.1`.
 
-> **NOTE**: This Component is renderless, it does not render its own DOM nodes.
+> **NOTE**: This feature is renderless, meaning it does not render anything extra to the DOM.
 
 `BrowserRender` disables rendering of child content that either doesn't work in a SSR environment or doesn't make sense there. e.g. `<canvas>` rendering
 

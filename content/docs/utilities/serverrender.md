@@ -9,7 +9,7 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.4.1`.
 
-> **NOTE**: This Component is renderless, it does not render its own DOM nodes.
+> **NOTE**: This feature is renderless, meaning it does not render anything extra to the DOM.
 
 `ServerRender` disables rendering of child content that doesn't work on the Browser, or doesn't make sense there. e.g. reading a file from local disk
 
