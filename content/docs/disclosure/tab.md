@@ -891,7 +891,7 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
 
 ## Loading
 
-> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+> **USAGE**: Use your Browser's devtools to observe this feature.
 
 You can customize the slot loading behavior of individual `Tab.Section` Components to not render their children, via the `loading` property.
 

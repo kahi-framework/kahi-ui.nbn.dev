@@ -677,7 +677,7 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
 
 ## Loading
 
-> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+> **USAGE**: Use your Browser's devtools to observe this feature.
 
 You can customize the slot loading behavior of individual `Accordion.Section` Components to not render their children, via the `loading` property.
 

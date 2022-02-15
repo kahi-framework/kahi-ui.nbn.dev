@@ -582,7 +582,7 @@ You can customize which elements are used as the first and last with references 
 
 > **NOTE**: Introduced feature in `v0.4.13`.
 
-> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+> **USAGE**: Use your Browser's devtools to observe this feature.
 
 You can customize the loading behavior of slotted content via the `loading` property.
 

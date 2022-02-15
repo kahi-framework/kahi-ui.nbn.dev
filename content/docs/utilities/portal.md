@@ -68,7 +68,7 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.3.5`.
 
-> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+> **USAGE**: Use your Browser's devtools to observe this feature.
 
 You can customize the slot loading behavior of `Portal` Components to not render their children, via the `loading` property.
 
