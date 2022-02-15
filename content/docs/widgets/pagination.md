@@ -93,7 +93,7 @@ You can set how many pages there are for the associated content and which page i
 
 ## Anchors
 
-> **IMPORTANT**: The `${page}` token is non-standard, it needs to be set as a Javascript string literal, e.g. `href={"/path/to/list/${href}"}`
+> **IMPORTANT**: The `${page}` token is non-standard string substitution provided by this feature, and must be set via string expressions, e.g. `href={"/path/to/list/${page}"}`.
 
 You can have the paging buttons be anchors via `href` property. And adding `${page}` in your link where you want the page number to be inserted.
 
