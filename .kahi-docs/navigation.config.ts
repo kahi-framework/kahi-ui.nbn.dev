@@ -46,14 +46,14 @@ export default define_navigation({
             items: [
                 {href: "/docs/typography/blockquote"},
                 {href: "/docs/typography/code"},
-                {href: "/docs/typography/heading"},
-                {href: "/docs/typography/text"},
+                {href: "/docs/typography/heading", badge: "UPDATED"},
+                {href: "/docs/typography/text", badge: "UPDATED"},
             ],
         },
 
         {
             text: "Embedded",
-            items: [{href: "/docs/embedded/figure"}],
+            items: [{href: "/docs/embedded/figure", badge: "UPDATED"}],
         },
 
         {
@@ -91,13 +91,13 @@ export default define_navigation({
             text: "Interactables",
             items: [
                 {href: "/docs/interactables/button", badge: "UPDATED"},
-                {href: "/docs/interactables/check"},
+                {href: "/docs/interactables/check", badge: "UPDATED"},
                 {href: "/docs/interactables/filedropinput"},
                 {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/hiddeninput"},
                 {href: "/docs/interactables/numberinput", badge: "UPDATED"},
-                {href: "/docs/interactables/radio"},
-                {href: "/docs/interactables/switch"},
+                {href: "/docs/interactables/radio", badge: "UPDATED"},
+                {href: "/docs/interactables/switch", badge: "UPDATED"},
                 {href: "/docs/interactables/textinput", badge: "UPDATED"},
             ],
         },
@@ -106,14 +106,14 @@ export default define_navigation({
             text: "Widgets",
             items: [
                 {href: "/docs/widgets/datatable"},
-                {href: "/docs/widgets/daypicker"},
-                {href: "/docs/widgets/daystepper"},
+                {href: "/docs/widgets/daypicker", badge: "UPDATED"},
+                {href: "/docs/widgets/daystepper", badge: "UPDATED"},
                 {href: "/docs/widgets/pagination"},
-                {href: "/docs/widgets/monthpicker"},
-                {href: "/docs/widgets/monthstepper"},
-                {href: "/docs/widgets/timepicker"},
-                {href: "/docs/widgets/yearpicker"},
-                {href: "/docs/widgets/yearstepper"},
+                {href: "/docs/widgets/monthpicker", badge: "UPDATED"},
+                {href: "/docs/widgets/monthstepper", badge: "UPDATED"},
+                {href: "/docs/widgets/timepicker", badge: "UPDATED"},
+                {href: "/docs/widgets/yearpicker", badge: "UPDATED"},
+                {href: "/docs/widgets/yearstepper", badge: "UPDATED"},
             ],
         },
 
@@ -149,7 +149,7 @@ export default define_navigation({
                 {href: "/docs/navigation/anchor"},
                 {href: "/docs/navigation/aside"},
                 {href: "/docs/navigation/breadcrumb"},
-                {href: "/docs/navigation/menu"},
+                {href: "/docs/navigation/menu", badge: "UPDATED"},
                 {href: "/docs/navigation/omni"},
             ],
         },
@@ -159,8 +159,8 @@ export default define_navigation({
             items: [
                 {href: "/docs/overlays/backdrop"},
                 {href: "/docs/overlays/clickable"},
-                {href: "/docs/overlays/overlay"},
-                {href: "/docs/overlays/popover"},
+                {href: "/docs/overlays/overlay", badge: "UPDATED"},
+                {href: "/docs/overlays/popover", badge: "UPDATED"},
             ],
         },
 
