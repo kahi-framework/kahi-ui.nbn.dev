@@ -54,7 +54,7 @@ types=["<length>", "<percentage>"]
 
 # Progress
 
-> **NOTE**: New since `v0.3.1`.
+> **NOTE**: Introduced feature in `v0.3.1`.
 
 `Progress` is typically used to render feedback to the end-user about how complete a current task is.
 
@@ -98,7 +98,7 @@ types=["<length>", "<percentage>"]
 
 ## Radius
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
 

@@ -122,7 +122,7 @@ types=["{}"]
 
 # Overlay
 
-> **NOTE**: New since `v0.2.4`.
+> **NOTE**: Introduced feature in `v0.2.4`.
 
 > **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
@@ -277,7 +277,7 @@ You can manually open / close the `Overlay` via the `logic_state` property.
 
 ## Auto Focus
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
@@ -421,7 +421,7 @@ You can customize which element is focused on activation with a reference or CSS
 
 ## Focus Trapping
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
@@ -580,7 +580,7 @@ You can customize which elements are used as the first and last with references 
 
 ## Loading
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 > **NOTE**: Use the in-Browser developer tools to see this functionality in action.
 
@@ -770,7 +770,7 @@ You can optionally have the `Overlay` dismissible by pressing the `ESC` key or c
 
 ## Once
 
-> **NOTE**: New since `v0.4.11`.
+> **NOTE**: Introduced feature in `v0.4.11`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 

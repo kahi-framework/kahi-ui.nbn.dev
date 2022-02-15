@@ -94,7 +94,7 @@ types=["{}"]
 
 # DataTable
 
-> **NOTE**: New since `v0.5.3`.
+> **NOTE**: Introduced feature in `v0.5.3`.
 
 > **WARNING**: While this Widget is available in Javascript-disabled Browsers, it can result in [Cumulative Layout Shift](https://web.dev/cls/).
 

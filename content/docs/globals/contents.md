@@ -7,7 +7,7 @@ types=["boolean", "{VIEWPORT}"]
 
 # Contents
 
-> **NOTE**: New since `v0.5.0`.
+> **NOTE**: Introduced feature in `v0.5.0`.
 
 All Components have access to the `data-contents` global HTML attribute via the `contents` property which [removes the Component's bounding box / stylings](https://developer.mozilla.org/en-US/docs/Web/CSS/display#box) from the DOM tree.
 

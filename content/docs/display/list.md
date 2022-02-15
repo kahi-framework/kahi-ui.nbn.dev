@@ -23,7 +23,7 @@ types=["<length>"]
 
 # List
 
-> **NOTE**: New since `v0.2.4`.
+> **NOTE**: Introduced feature in `v0.2.4`.
 
 `List` is used for rendering simple text lists.
 

@@ -65,7 +65,7 @@ types=["{}"]
 
 # Transition
 
-> **NOTE**: New since `v0.4.0`.
+> **NOTE**: Introduced feature in `v0.4.0`.
 
 `Transition` is used to apply transitional animations on a containing element that will also include its children. Typically used for situations like changing between pages.
 
@@ -105,7 +105,7 @@ types=["{}"]
 
 ## Explicit
 
-> **NOTE**: New since `v0.5.0`.
+> **NOTE**: Introduced feature in `v0.5.0`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
@@ -173,7 +173,7 @@ Based on the animaton duration properties in the currently loaded theme. You can
 
 ## Duration
 
-> **NOTE**: New since `v0.4.2`.
+> **NOTE**: Introduced feature in `v0.4.2`.
 
 Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to increase / shorten the animation duration via the `duration` property.
 
@@ -279,7 +279,7 @@ You can control which direction the `Transition` animation will "expand", "move"
 
 ## Elements
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can change the HTML tag rendered to DOM via the `is` property.
 

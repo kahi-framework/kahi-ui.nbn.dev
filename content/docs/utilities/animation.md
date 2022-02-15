@@ -49,7 +49,7 @@ types=["{}"]
 
 # Animation
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 `Animation` is used to apply infinitely repeating animations on a containing element that will also include its children. Typically used for situations like alerting users to new E-Mail in their inbox, etc...
 

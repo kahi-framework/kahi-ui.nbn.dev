@@ -102,7 +102,7 @@ types=["<alpha-value>"]
 
 # Accordion
 
-> **NOTE**: New since `v0.4.5`.
+> **NOTE**: Introduced feature in `v0.4.5`.
 
 `Accordion` Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
 
@@ -199,7 +199,7 @@ types=["<alpha-value>"]
 
 ## Logic State
 
-> **NOTE**: New since `v0.5.2`.
+> **NOTE**: Introduced feature in `v0.5.2`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
@@ -397,7 +397,7 @@ You can change the behavior of the `Accordion` to allow multiple items to be rev
 
 ## Slot
 
-> **NOTE**: New since `v0.5.2`.
+> **NOTE**: Introduced feature in `v0.5.2`.
 
 You can customize the icons the icons that represent the if an `<Accordion.Section>` Component is open or not via the `close` / `open` slots.
 

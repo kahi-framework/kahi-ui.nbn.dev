@@ -62,7 +62,7 @@ types=["<alpha-value>"]
 
 # Breadcrumb
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Breadcrumb` is typically used to render a series of links with separators. With the each link left of the right-most a state in the end-user's navigation history. Or, a route hierarchy of the Web Application. e.g. directory paths
 

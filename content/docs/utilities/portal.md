@@ -28,7 +28,7 @@ types=["{}"]
 
 # Portal
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Portal` is used to render a layout outside of its original containing DOM tree, moving it somewhere else.
 
@@ -66,7 +66,7 @@ types=["{}"]
 
 ## Loading
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 > **NOTE**: Use the in-Browser developer tools to see this functionality in action.
 

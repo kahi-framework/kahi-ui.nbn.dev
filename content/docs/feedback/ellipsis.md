@@ -39,7 +39,7 @@ types=["<alpha-value>"]
 
 # Ellipsis
 
-> **NOTE**: New since `v0.2.5`.
+> **NOTE**: Introduced feature in `v0.2.5`.
 
 > **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
@@ -102,7 +102,7 @@ You can customize the content used for the animation via the by passing into the
 
 ## Animations
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can customize which animation is played via the `animation` property.
 
@@ -148,7 +148,7 @@ You can customize which animation is played via the `animation` property.
 
 ## Iterations
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can customize how many times the content is repeated via the `iterations` property.
 

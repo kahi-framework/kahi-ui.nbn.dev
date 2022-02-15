@@ -37,7 +37,7 @@ types=["<length>"]
 
 # Group
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Group` is a layout primitive used for grouping together like Components with their inner border radii removed.
 
@@ -180,7 +180,7 @@ You can set the `variation` property to `stacked` to visually stack children Com
 
 ## Spacing
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 When the `variation` property is set to `stacked`, you can control the negative spacing via the `spacing`, `spacing_x`, and `spacing_y` properties.
 

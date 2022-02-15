@@ -1,6 +1,6 @@
 # lost_focus
 
-> **NOTE**: New since `v0.5.0`.
+> **NOTE**: Introduced feature in `v0.5.0`.
 
 `lost_focus` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_lost_focus(): void` callback whenever another element is focused which is not a child of the attached element, OR, the Browser window / tab is no longer actively focused.
 

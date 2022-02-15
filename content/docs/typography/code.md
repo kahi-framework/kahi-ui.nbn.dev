@@ -53,7 +53,7 @@ types=["<length>"]
 
 # Code
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Code` is used to render inline monospaced text, typically for showing programming code / application configuration to an end-user.
 

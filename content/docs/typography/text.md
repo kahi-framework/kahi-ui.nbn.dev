@@ -103,7 +103,7 @@ types=["<alpha-value>"]
 
 # Text
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Text` is used to render paragraphs of text in your interface, among other types of text.
 

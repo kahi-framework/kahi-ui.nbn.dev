@@ -87,7 +87,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 ## HelpText
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 `Form.HelpText` is typically used for displaying information about how to input information into a form properly.
 
@@ -104,7 +104,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 ## Label
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 > **NOTE**: This Component sets a [Svelte Context](https://svelte.dev/docs#setContext) for Form IDs / Names that child input Components consume.
 
@@ -123,7 +123,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 ## Control
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 > **NOTE**: This Component sets a [Svelte Context](https://svelte.dev/docs#setContext) for Form IDs / Names that child input Components consume.
 
@@ -155,7 +155,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 ## Group
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 > **NOTE**: This Component is renderless, it does not render its own DOM nodes.
 
@@ -215,7 +215,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 ## Legend
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **IMPORTANT**: When using outside of a `Form.FieldSet`, use `<Form.Legend is="span">` for semantically correct HTML tags.
 
@@ -231,7 +231,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 ## FieldSet
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 `Form.FieldSet` is typically used for grouping together related form Components into a visually distinct box.
 

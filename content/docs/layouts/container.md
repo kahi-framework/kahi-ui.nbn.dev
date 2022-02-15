@@ -17,7 +17,7 @@ types=["<length>"]
 
 # Container
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Container` is a layout primitive used to typically constrain chunks of content to a max width or parent width, and centered horizontally with padding. By default it sets the max width to 65 characters.
 

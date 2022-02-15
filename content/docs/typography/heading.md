@@ -158,7 +158,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 # Heading
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Heading` is typically used for delineating sections of content within your Web Application.
 
@@ -270,7 +270,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 
 ## Palette
 
-> **NOTE**: New since `v0.2.16`.
+> **NOTE**: Introduced feature in `v0.2.16`.
 
 You can change the color palette of `Heading` via the `palette` property.
 

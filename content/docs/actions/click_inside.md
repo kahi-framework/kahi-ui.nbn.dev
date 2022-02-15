@@ -1,6 +1,6 @@
 # click_inside
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 `click_inside` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_click_inside(event: MouseEvent): void` callback whenever your attached element is clicked inside of.
 

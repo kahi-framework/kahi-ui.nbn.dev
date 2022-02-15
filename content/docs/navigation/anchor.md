@@ -52,7 +52,7 @@ types=["<text-decoration>"]
 
 # Anchor
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Anchor` are used for navigating from page to page, or to external websites.
 
@@ -137,7 +137,7 @@ You can control the state of the `Anchor` via the `disabled` property.
 
 ## Palette
 
-> **NOTE**: New since `v0.4.3`.
+> **NOTE**: Introduced feature in `v0.4.3`.
 
 You can change the color palette of the `Anchor` via the `palette` property.
 

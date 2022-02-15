@@ -54,7 +54,7 @@ types=["<length>", "<percentage>"]
 
 # Box
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Box` is a surface primitive for encapsulating section content in a block of color.
 
@@ -200,7 +200,7 @@ You can change the color palette of the `Box` via the `palette` property.
 
 ## Borders
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can change the appearance of `Box` to show borders via the `variation` property.
 
@@ -326,7 +326,7 @@ You can change the appearance of `Box` to show borders via the `variation` prope
 
 ## Elevation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `elevation={["low", "tablet:lowest", "mobile:lowest"]}`
 
@@ -442,7 +442,7 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
 
 ## Radius
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
 

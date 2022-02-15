@@ -1,6 +1,6 @@
 # prefersscheme
 
-> **NOTE**: New since `v0.2.3`.
+> **NOTE**: Introduced feature in `v0.2.3`.
 
 `prefersscheme` is a **readonly** [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever [`matchMedia(SCHEME)`](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) is validated.
 

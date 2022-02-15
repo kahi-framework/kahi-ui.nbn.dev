@@ -1,6 +1,6 @@
 # darkmode
 
-> **NOTE**: New since `v0.2.3`.
+> **NOTE**: Introduced feature in `v0.2.3`.
 
 `darkmode` is a **readonly** [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever either [`htmldark`](./htmlmode.md) or [`prefersdark`](./prefersscheme.md) are truthy.
 
@@ -28,7 +28,7 @@ import {darkmode, lightmode} from "@kahi-ui/framework";
 
 ## Light Mode
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 To check if lightmode is enabled, the `lightmode` Store is available.
 

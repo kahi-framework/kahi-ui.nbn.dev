@@ -87,7 +87,7 @@ types=["CustomEvent<void>"]
 
 # TimePicker
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `TimePicker` is a Widget that displays a set of hour, minute, second clock scrollable areas that a user can select from.
 
@@ -187,7 +187,7 @@ You can disable all interactivity via the `disabled` property.
 
 ## Disabled Timestamps
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can disable specific timestamps from being selected via the `disabled` property.
 

@@ -32,7 +32,7 @@ types=["{}"]
 
 # ViewportRender
 
-> **NOTE**: New since `v0.5.1`.
+> **NOTE**: Introduced feature in `v0.5.1`.
 
 > **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
 

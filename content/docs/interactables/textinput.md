@@ -195,7 +195,7 @@ types=["<alpha-value>"]
 
 # TextInput
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 > **WARNING**: Received a breaking change in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
@@ -235,7 +235,7 @@ types=["<alpha-value>"]
 
 ## Input Masking
 
-> **NOTE**: New since `v0.4.14`.
+> **NOTE**: Introduced feature in `v0.4.14`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 
@@ -426,7 +426,7 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
 
 ## Flush
 
-> **NOTE**: New since `v0.2.16`.
+> **NOTE**: Introduced feature in `v0.2.16`.
 
 You can change the appearance of the `TextInput` to be flush with the rest of the Application content via the `variation` property.
 
@@ -514,7 +514,7 @@ You can change the size of the `TextInput` via the `sizing` property.
 
 ## Radius
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
 
@@ -591,7 +591,7 @@ You can change the border radius of the `TextInput` via the `radius` property.
 
 ## Shapes
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
 

@@ -32,7 +32,7 @@ types=["2-digit", "numeric"]
 
 # TimeStamp
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `TimeStamp` formats an [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp into a human readable string, using the user preferences provided by the Browser.
 

@@ -1,6 +1,6 @@
 # Kbd
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 `Kbd` is typically used to communicate a keybinding to the user.
 

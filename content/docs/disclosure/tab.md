@@ -147,7 +147,7 @@ types=["<length>"]
 
 # Tab
 
-> **NOTE**: New since `v0.3.1`.
+> **NOTE**: Introduced feature in `v0.3.1`.
 
 `Tab` Components are typically used for turning what would be multi-page content, into a single page with a set of radio buttons to toggle between views.
 
@@ -233,7 +233,7 @@ types=["<length>"]
 
 ## Logic State
 
-> **NOTE**: New since `v0.5.2`.
+> **NOTE**: Introduced feature in `v0.5.2`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 

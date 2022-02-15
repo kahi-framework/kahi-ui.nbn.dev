@@ -1,6 +1,6 @@
 # scrolllock
 
-> **NOTE**: New since `v0.2.4`.
+> **NOTE**: Introduced feature in `v0.2.4`.
 
 `scrolllock` is a [Svelte Store](https://svelte.dev/docs#svelte_store) which sets `overflow: hidden;` on an [`HTMLElement`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement) whenever the Store is set to `true`. Restoring the previous value of `overflow` whenever set back to `false`. Allowing for connecting Component open states like for modals, to the prevent overscrolling the main document body.
 

@@ -57,7 +57,7 @@ types=["<length>"]
 
 # Blockquote
 
-> **NOTE**: New since `v0.2.5`.
+> **NOTE**: Introduced feature in `v0.2.5`.
 
 `Blockquote` is typically used to render a block of text, that's attributed to a certain source of information.
 

@@ -62,7 +62,7 @@ types=["{}"]
 
 # Mosaic
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Mosaic` is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.
 
@@ -529,7 +529,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
 ## Item Span
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `span={["3", "tablet:2", "mobile:1"]}`
 

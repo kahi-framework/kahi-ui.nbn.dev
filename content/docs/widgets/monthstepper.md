@@ -63,7 +63,7 @@ types=["CustomEvent<void>"]
 
 # MonthStepper
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `MonthStepper` is a Widget that lets users increment / decrement the currently provided month by a set number.
 

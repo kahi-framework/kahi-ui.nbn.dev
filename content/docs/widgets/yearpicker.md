@@ -72,7 +72,7 @@ types=["CustomEvent<void>"]
 
 # YearPicker
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `YearPicker` is a Widget that displays a decade-based grid of years that a user can select from.
 

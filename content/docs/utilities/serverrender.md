@@ -7,7 +7,7 @@ types=["{}"]
 
 # ServerRender
 
-> **NOTE**: New since `v0.4.1`.
+> **NOTE**: Introduced feature in `v0.4.1`.
 
 > **NOTE**: This Component is renderless, it does not render its own DOM nodes.
 

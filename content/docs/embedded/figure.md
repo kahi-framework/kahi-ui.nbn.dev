@@ -23,7 +23,7 @@ types=["{}"]
 
 # Figure
 
-> **NOTE**: New since `v0.2.1`.
+> **NOTE**: Introduced feature in `v0.2.1`.
 
 `Figure` is a multimedia container Component, providing modifications for things such as images and videos.
 
@@ -135,7 +135,7 @@ You can change how the child content is stretched across the `Figure` container 
 
 ## Radius
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
 
@@ -218,7 +218,7 @@ You can modify the border radius of the child content via the `radius` property.
 
 ## Shape
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
 

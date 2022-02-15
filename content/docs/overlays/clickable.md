@@ -57,7 +57,7 @@ types=["<integer>"]
 
 # Clickable
 
-> **NOTE**: New since `v0.4.3`.
+> **NOTE**: Introduced feature in `v0.4.3`.
 
 `Clickable` stretches a nested `<Clickable.Anchor>` / `<Clickable.Label>` child across its parent element, while surfacing other interactive elements above the overlay.
 

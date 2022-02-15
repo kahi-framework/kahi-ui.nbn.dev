@@ -1,6 +1,6 @@
 # viewport
 
-> **NOTE**: New since `v0.2.14`.
+> **NOTE**: Introduced feature in `v0.2.14`.
 
 `viewport` / `viewports` are **readonly** [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a [Viewport](../framework/responsitivity.md) selected in initialization is currently active.
 

@@ -1,6 +1,6 @@
 # htmlmode
 
-> **NOTE**: New since `v0.2.3`.
+> **NOTE**: Introduced feature in `v0.2.3`.
 
 `htmlmode` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which is bound to `<html data-mode="XXX">` and updates whenever that attribute is changed. Defaulting to an empty string (`""`) if not set.
 
@@ -39,7 +39,7 @@ import {
 
 ## Built-In Shortcuts
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 The `htmlmode` Store also comes with two **readonly** preconfigured shortcut Stores, `htmldark` and `htmllight`.
 

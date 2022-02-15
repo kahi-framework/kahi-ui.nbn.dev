@@ -83,7 +83,7 @@ types=["InputEvent"]
 
 # NumberInput
 
-> **NOTE**: New since `v0.4.14`.
+> **NOTE**: Introduced feature in `v0.4.14`.
 
 > **IMPORTANT**: Input masking only runs on the Browser, you need to **ALWAYS** validate user-generated input on the server.
 
@@ -109,7 +109,7 @@ types=["InputEvent"]
 
 ## Maximum + Minimum
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can have the `NumberInput` use disallow typing in numbers not within the range of the `max` and `min` properties.
 
@@ -352,7 +352,7 @@ You can change the size of the `NumberInput` via the `sizing` property.
 
 ## Radius
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
 
@@ -429,7 +429,7 @@ You can change the border radius of the `NumberInput` via the `radius` property.
 
 ## Shapes
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
 

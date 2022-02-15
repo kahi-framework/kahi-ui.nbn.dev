@@ -1,6 +1,6 @@
 # overflow_clipping
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 > **IMPORTANT**: `overflow_clipping` only detects if the attached element has is clipping on a given axis, not if the scrollbar is visible.
 

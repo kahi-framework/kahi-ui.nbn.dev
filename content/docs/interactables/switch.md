@@ -127,7 +127,7 @@ types=["<alpha-value>"]
 
 # Switch
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 > **WARNING**: Received a breaking change in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 

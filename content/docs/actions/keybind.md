@@ -1,6 +1,6 @@
 # keybind
 
-> **NOTE**: New since `v0.3.1`.
+> **NOTE**: Introduced feature in `v0.3.1`.
 
 `keybind` is a [Svelte Action](https://svelte.dev/docs#use_action), which runs a `on_bind(event: IKeybindEvent): void` callback whenever your assigned element has focus.
 
@@ -71,9 +71,9 @@ import {
 
 Svelte Actions are always ran on the Browser only with Javascript is enabled. So should not be used for critical end-user functionality, only progressive enhancement.
 
-## Built-In
+## Built-In Shortcuts
 
-> **NOTE**: New since `v0.5.3`.
+> **NOTE**: Introduced feature in `v0.5.3`.
 
 The Framework provides a series of built-in keybinds using pre-configured standard keybinds that you can use in your own code.
 
@@ -109,7 +109,7 @@ The Framework provides a series of built-in keybinds using pre-configured standa
     -   `ArrowUp`
     -   Repeatable, `250ms` throttle
 
-```svelte {title="Keybind Built-In" mode="repl"}
+```svelte {title="Keybind Built-In Shortcuts" mode="repl"}
 <script>
     import {
         TextInput,
@@ -320,7 +320,7 @@ When listening to repeat binding activations, you can throttle activation callba
 </Code>
 ```
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 > **NOTE**: By using `throttle_cancel` in this pseudo search UI, the Browser scrolling via arrow keys is disabled.
 

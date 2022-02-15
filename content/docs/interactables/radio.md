@@ -137,7 +137,7 @@ types=["<alpha-value>"]
 
 # Radio
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 > **WARNING**: Received a breaking change in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
@@ -411,7 +411,7 @@ You can change the size of the `Radio` via the `sizing` property.
 
 ## Flush
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 You can change the appearance of the `Radio` to be flush with the rest of the Application content via the `variation` property.
 

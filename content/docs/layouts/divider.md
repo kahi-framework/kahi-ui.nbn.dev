@@ -57,7 +57,7 @@ types=["<length>"]
 
 # Divider
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Divider` is typically used to visually separate content for easier reading comprehension.
 

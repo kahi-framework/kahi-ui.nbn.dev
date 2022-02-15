@@ -36,7 +36,7 @@ All Components have access to the global width and height HTML data attributes. 
 
 ## Width
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `width={["25", "tablet:viewport-50"]}`
 
@@ -239,7 +239,7 @@ You can set a defined width for your Components via the `width` property.
 
 ## Height
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `height={["25", "tablet:viewport-50"]}`
 
@@ -448,7 +448,7 @@ You can set a defined height for your Components via the `height` property.
 
 ## Minimums / Maximums
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 You can also set minimums or maximum sizes via prefixing your properties with `max_` or `min_`.
 

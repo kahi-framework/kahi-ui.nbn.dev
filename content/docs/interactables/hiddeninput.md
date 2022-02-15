@@ -1,6 +1,6 @@
 # HiddenInput
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 > **TODO**: documentation
 

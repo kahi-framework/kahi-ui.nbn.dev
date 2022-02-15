@@ -179,7 +179,7 @@ types=["<alpha-value>"]
 
 # Button
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Button` is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.
 
@@ -355,7 +355,7 @@ You can change the color palette of the `Button` via the `palette` property.
 
 ## Subtle
 
-> **NOTE**: New since `v0.5.1`.
+> **NOTE**: Introduced feature in `v0.5.1`.
 
 You can alter the `Button` Component to use less intense / remove "attention grabbing" animations via the `variation` property.
 
@@ -499,7 +499,7 @@ You can change the size of the `Button` via the `sizing` property.
 
 ## Radius
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
 
@@ -554,7 +554,7 @@ You can change the border radius of the `Button` via the `radius` property.
 
 ## Shapes
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
 

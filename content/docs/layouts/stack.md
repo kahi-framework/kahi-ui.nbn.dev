@@ -42,7 +42,7 @@ types=["{}"]
 
 # Stack
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children.
 
@@ -542,7 +542,7 @@ You can alter the `Stack` to wraps its children into the next line via the `vari
 
 ## Item Stretch
 
-> **NOTE**: New since `v0.6.0`.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
 You can adjust span of individual items via the `variation="stretch"` property, when wrapping an item in `Stack.Item`.
 

@@ -81,7 +81,7 @@ types=["{}"]
 
 # Popover
 
-> **NOTE**: New since `v0.2.11`.
+> **NOTE**: Introduced feature in `v0.2.11`.
 
 > **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
@@ -302,7 +302,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
 
 ## Once
 
-> **NOTE**: New since `v0.4.11`.
+> **NOTE**: Introduced feature in `v0.4.11`.
 
 > **WARNING**: This feature is only available in Javascript-enabled Browsers.
 

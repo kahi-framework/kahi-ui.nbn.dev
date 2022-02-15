@@ -1,6 +1,6 @@
 # auto_focus
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 `auto_focus` is a [Svelte Action](https://svelte.dev/docs#use_action), which when `IAutoFocusOptions.enabled: boolean` is `true`, focuses the first focusable element found within the attached element. When `false`, restores focus to the previously focused element.
 

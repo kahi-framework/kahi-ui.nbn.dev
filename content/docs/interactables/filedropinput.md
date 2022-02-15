@@ -67,7 +67,7 @@ types=["<length>"]
 
 # FileDropInput
 
-> **NOTE**: New since `v0.4.6`.
+> **NOTE**: Introduced feature in `v0.4.6`.
 
 > **NOTE**: Keep in mind, while the Component _does work_ without Javascript, it cannot display its value like `FileInput` can without.
 

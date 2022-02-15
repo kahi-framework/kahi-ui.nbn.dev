@@ -48,7 +48,7 @@ types=["{}"]
 
 # Pagination
 
-> **NOTE**: New since `v0.5.1`.
+> **NOTE**: Introduced feature in `v0.5.1`.
 
 `Pagination` is typically used for allowing the user to navigate data or content that is separated into groupings of information, or "pages".
 

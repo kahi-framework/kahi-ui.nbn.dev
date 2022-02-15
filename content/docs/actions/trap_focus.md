@@ -1,6 +1,6 @@
 # trap_focus
 
-> **NOTE**: New since `v0.4.13`.
+> **NOTE**: Introduced feature in `v0.4.13`.
 
 > **NOTE**: Click the `Link` button, to test out the functionality in the Playground.
 

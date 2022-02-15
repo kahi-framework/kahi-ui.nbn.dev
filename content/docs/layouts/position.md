@@ -42,7 +42,7 @@ types=["{}"]
 
 # Position
 
-> **NOTE**: New since `v0.4.2`.
+> **NOTE**: Introduced feature in `v0.4.2`.
 
 > **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
 
@@ -85,7 +85,7 @@ types=["{}"]
 
 ## Action
 
-> **NOTE**: New since `v0.5.0`.
+> **NOTE**: Introduced feature in `v0.5.0`.
 
 Typically used for FABs (Floating Action Buttons), you can set the `Position` to float its self (and its children) into a corner relative to the viewport via the `variation` property.
 

@@ -178,7 +178,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 # Tile
 
-> **NOTE**: New since `v0.2.1`.
+> **NOTE**: Introduced feature in `v0.2.1`.
 
 `Tile` is a multi-part surface pattern for displaying a section of content in a short-form horizontal format.
 
@@ -460,7 +460,7 @@ You can change the color palette of the `Tile` via the `palette` property.
 
 ## Elevation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `elevation={["low", "tablet:lowest", "mobile:lowest"]}`
 
@@ -669,7 +669,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
 
 ## Orientation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
 
@@ -746,7 +746,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
 
 ## Sizing
 
-> **NOTE**: New since `v0.3.3`.
+> **NOTE**: Introduced feature in `v0.3.3`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
@@ -913,7 +913,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 
 ## Flush
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 You can change the appearance of the `Tile` to be flush with the rest of the Application content via the `variation` property.
 
