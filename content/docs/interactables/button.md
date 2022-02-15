@@ -389,6 +389,65 @@ You can alter the `Button` Component to use less intense / remove "attention gra
 </Stack.Container>
 ```
 
+## States
+
+You can control the state of the `Button` via the `active` and `disabled` properties.
+
+```svelte {title="Button States" mode="repl"}
+<script>
+    import {
+        Button,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Text is="strong">DEFAULT</Text>
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button>DEFAULT</Button>
+    <Button disabled>DISABLED INACTIVE</Button>
+    <Button active>ACTIVE</Button>
+    <Button active disabled>DISABLED ACTIVE</Button>
+</Stack.Container>
+
+<Text is="strong">OUTLINE</Text>
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="outline">DEFAULT</Button>
+    <Button variation="outline" disabled>
+        DISABLED INACTIVE
+    </Button>
+
+    <Button variation="outline" active>ACTIVE</Button>
+    <Button variation="outline" active disabled>
+        DISABLED ACTIVE
+    </Button>
+</Stack.Container>
+
+<Text is="strong">CLEAR</Text>
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="clear">DEFAULT</Button>
+    <Button variation="clear" disabled>
+        DISABLED INACTIVE
+    </Button>
+    <Button variation="clear" active>ACTIVE</Button>
+    <Button variation="clear" active disabled>
+        DISABLED ACTIVE
+    </Button>
+</Stack.Container>
+```
+
 ## Sizing
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
