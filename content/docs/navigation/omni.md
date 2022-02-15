@@ -2,7 +2,7 @@
 [[properties."Omni.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Omni.Container"]]
 name="placement"
@@ -58,7 +58,7 @@ types=["{}"]
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
 
@@ -113,7 +113,7 @@ You can change the color palette of the `Omni` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <Omni.Container width="100">
         <Omni.Header>
             <Anchor href="#">Kahi UI</Anchor>
@@ -135,6 +135,22 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Anchor href="#">Kahi UI</Anchor>
             <Divider orientation="vertical" />
             ACCENT
+        </Omni.Header>
+
+        <Omni.Footer>
+            <Menu.Container orientation="horizontal">
+                <Menu.Button variation="clear">
+                    GitHub
+                </Menu.Button>
+            </Menu.Container>
+        </Omni.Footer>
+    </Omni.Container>
+
+    <Omni.Container palette="neutral" width="100">
+        <Omni.Header>
+            <Anchor href="#">Kahi UI</Anchor>
+            <Divider orientation="vertical" />
+            NEUTRAL
         </Omni.Header>
 
         <Omni.Footer>
@@ -210,6 +226,22 @@ You can change the color palette of the `Omni` via the `palette` property.
         </Omni.Footer>
     </Omni.Container>
 
+    <Omni.Container palette="informative" width="100">
+        <Omni.Header>
+            <Anchor href="#">Kahi UI</Anchor>
+            <Divider orientation="vertical" />
+            INFORMATIVE
+        </Omni.Header>
+
+        <Omni.Footer>
+            <Menu.Container orientation="horizontal">
+                <Menu.Button variation="clear">
+                    GitHub
+                </Menu.Button>
+            </Menu.Container>
+        </Omni.Footer>
+    </Omni.Container>
+
     <Omni.Container palette="negative" width="100">
         <Omni.Header>
             <Anchor href="#">Kahi UI</Anchor>
@@ -225,7 +257,7 @@ You can change the color palette of the `Omni` via the `palette` property.
             </Menu.Container>
         </Omni.Footer>
     </Omni.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Placement
@@ -254,7 +286,7 @@ You can adjust which side the content divider border will appear via the `placem
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
 
@@ -288,7 +320,7 @@ You can adjust which side the content divider border will appear via the `placem
 
 > **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 
-While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinionated collapsable navigations interfaces. Via Components like [`Popover`](../overlays/popover.md) and features like [`hidden`](../globals/hidden.md).
+While `Omni` does not have built-in collapsing, the Framework provides the primitives for you to build collapsable interfaces. Via Components like [`Popover`](../overlays/popover.md) and features like [`hidden`](../globals/hidden.md).
 
 ```svelte {title="Omni Collapsing" mode="repl"}
 <script>
@@ -308,7 +340,7 @@ While this Component does not have built-in collapsing, the Framework provides t
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
 

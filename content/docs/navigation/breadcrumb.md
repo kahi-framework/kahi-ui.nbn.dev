@@ -1,10 +1,20 @@
 +++
 [[properties."Breadcrumb.Container"]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties."Breadcrumb.Container"]]
 name="separator"
 description="Alters the separator rendered between each breadcrumb item."
 types=["string"]
 
-[[properties."Breadcrumb.Item"]]
+[[properties."Breadcrumb.Anchor"]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties."Breadcrumb.Anchor"]]
 name="active"
 description="Alters the breadcrumb item to render bolder when active. Sets [`aria-current=\"page\"`](https://www.digitala11y.com/aria-current-state) on `Breadcrumb.Anchor`."
 types=["boolean"]
@@ -29,6 +39,16 @@ name="target"
 description="Sets the target of the `Breadcrumb.Anchor` being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
 types=["string"]
 
+[[properties."Breadcrumb.Button"]]
+name="palette"
+description="Alters the displayed color scheme."
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties."Breadcrumb.Button"]]
+name="active"
+description="Alters the breadcrumb item to render bolder when active. Sets `aria-pressed=\"true\"` on `Breadcrumb.Button`."
+types=["boolean"]
+
 [[slots."Breadcrumb.Container"]]
 name="default"
 description="Default unnamed slot."
@@ -39,7 +59,12 @@ name="default"
 description="Default unnamed slot."
 types=["{}"]
 
-[[slots."Breadcrumb.Item"]]
+[[slots."Breadcrumb.Button"]]
+name="default"
+description="Default unnamed slot."
+types=["{}"]
+
+[[slots."Breadcrumb.Group"]]
 name="default"
 description="Default unnamed slot."
 types=["{}"]
@@ -92,7 +117,13 @@ types=["<alpha-value>"]
 <script>
     import {Breadcrumb} from "@kahi-ui/framework";
 
-    const {Container, Anchor, Item} = Breadcrumb;
+    const {
+        Container,
+        Anchor,
+        Button,
+        Group,
+        Separator,
+    } = Breadcrumb;
 </script>
 ```
 
@@ -118,4 +149,181 @@ You can alter the separator between items rendered via the `separator` property.
         John Doe
     </Breadcrumb.Anchor>
 </Breadcrumb.Container>
+```
+
+## Palette
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can change the color palette of the `Breadcrumb.Anchor` / `Breadcrumb.Button` Components via the `palette` property.
+
+```svelte {title="Breadcrumb Palette" mode="repl"}
+<script>
+    import {
+        Breadcrumb,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Breadcrumb.Container>
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            DEFAULT
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="accent">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            ACCENT
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="neutral">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            NEUTRAL
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="dark">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            DARK
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="light">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            LIGHT
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="affirmative">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            AFFIRMATIVE
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="informative">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            INFORMATIVE
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container palette="negative">
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            NEGATIVE
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+</Stack.Container>
+```
+
+## Elements
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can render `Breadcrumb` items as `<button>` HTML tags by using `<Breadcrumb.Button>`, which is useful if your navigation doesn't work via URLs.
+
+```svelte {title="Breadcrumb Elements" mode="repl"}
+<script>
+    import {
+        Breadcrumb,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Breadcrumb.Container>
+        <Breadcrumb.Anchor href="#">
+            Home
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#">
+            Contacts
+        </Breadcrumb.Anchor>
+
+        <Breadcrumb.Anchor href="#" active>
+            Anchor
+        </Breadcrumb.Anchor>
+    </Breadcrumb.Container>
+
+    <Breadcrumb.Container>
+        <Breadcrumb.Button>Home</Breadcrumb.Button>
+        <Breadcrumb.Button>Contacts</Breadcrumb.Button>
+
+        <Breadcrumb.Button active>
+            Button
+        </Breadcrumb.Button>
+    </Breadcrumb.Container>
+</Stack.Container>
 ```
