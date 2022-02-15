@@ -44,8 +44,6 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.4.2`.
 
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
-
 `Position` is a layout primitive that can float itself and child content in specific regions of the containing Components.
 
 ```svelte {title="Position Preview" mode="repl"}
@@ -164,10 +162,6 @@ You can also adjust the `Position` to sit relative to the parent container inste
 ```
 
 ## Indicator
-
-> **WARNING**: `<Position variation="floated">` was deprecated and renamed to `<Position variation="indicator">` in `v0.5.0`.
-
-> **IMPORTANT**: `<Position variation="indicator" placement="top/bottom">` was removed and renamed to `<Position variation="indicator" alignment_y="top/bottom">` in `v0.5.0`.
 
 Typically used for unread indicators, you can set the `Position` to float its self (and its children) onto a corner relative to its parent container via the `variation` property.
 

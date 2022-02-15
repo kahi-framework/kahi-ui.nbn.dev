@@ -12,8 +12,6 @@ types=["<alpha-value>"]
 
 # Backdrop
 
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
-
 `Backdrop` stretches across its parent element, providing a dimmed background that sits under sibling content. Useful for things like prompts.
 
 ```svelte {title="Backdrop Preview" mode="repl"}

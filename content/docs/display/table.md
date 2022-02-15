@@ -2,7 +2,7 @@
 [[properties."Table.Container"]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `Table.Container`."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties."Table.Container"]]
 name="variation"

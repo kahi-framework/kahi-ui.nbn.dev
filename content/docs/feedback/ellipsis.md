@@ -41,8 +41,6 @@ types=["<alpha-value>"]
 
 > **NOTE**: Introduced feature in `v0.2.5`.
 
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
-
 `Ellipsis` is an indicator used to tell the user that something is loading in the background.
 
 ```svelte {title="Ellipsis Preview" mode="repl"}

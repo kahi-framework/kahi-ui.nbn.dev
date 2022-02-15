@@ -139,8 +139,6 @@ types=["<alpha-value>"]
 
 > **NOTE**: Introduced feature in `v0.2.7`.
 
-> **WARNING**: Received a breaking change in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
-
 `Check` is typically used to present a set of options to the end-user, which they can then choose from.
 
 ```svelte {title="Check Preview" mode="repl"}
