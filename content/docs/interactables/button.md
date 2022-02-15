@@ -450,6 +450,8 @@ You can control the state of the `Button` via the `active` and `disabled` proper
 
 ## Sizing
 
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the size of the `Button` via the `sizing` property.
@@ -584,6 +586,8 @@ You can change the shape of the `Button` via the `shape` property.
 ```
 
 ## Elements
+
+> **WARNING**: This feature was updated to require explicit `is` property in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can alter the HTML element tag rendered to DOM via the `is` property to render things like links and form buttons.
 

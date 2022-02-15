@@ -24,6 +24,8 @@ types=["<length>", "<percentage>"]
 
 > **NOTE**: Introduced feature in `v0.2.0`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `Dot` is typically used for calling out other UI elements to the end-user, that they need attention.
 
 ```svelte {title="Dot Preview" mode="repl"}

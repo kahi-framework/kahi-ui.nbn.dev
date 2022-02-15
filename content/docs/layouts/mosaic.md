@@ -96,6 +96,8 @@ types=["{}"]
 
 ## Imports
 
+> **WARNING**: This feature was renamed from `<Mosaic>` to `<Mosaic.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 ```svelte {title="Mosaic Imports"}
 <script>
     import {Mosaic} from "@kahi-ui/framework";

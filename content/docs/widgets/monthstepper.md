@@ -65,6 +65,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: Introduced feature in `v0.4.10`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `MonthStepper` is a Widget that lets users increment / decrement the currently provided month by a set number.
 
 ```svelte {title="MonthStepper Preview" mode="repl"}
@@ -131,6 +133,8 @@ You can set maximum and minimum range of steppable months via the `max` / `min` 
 ```
 
 ## Steps
+
+> **WARNING**: This feature was renamed from `step` to `steps` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can control how many months the buttons increment / decrement via the `steps` property.
 

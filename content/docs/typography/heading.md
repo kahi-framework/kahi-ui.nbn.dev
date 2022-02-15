@@ -369,6 +369,8 @@ You can change the color palette of `Heading` via the `palette` property.
 
 ## Align
 
+> **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 You can adjust the text alignment of the `Heading` via the `align` property.
 
 ```svelte {title="Heading Align" mode="repl"}

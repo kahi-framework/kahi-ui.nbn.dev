@@ -133,6 +133,8 @@ types=["<alpha-value>"]
 
 ## Size
 
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 You can adjust the size of `Text` by passing the `size` property.
 
 ```svelte {title="Text Size" mode="repl"}
@@ -348,6 +350,8 @@ You can change the color palette of `Text` via the `palette` property.
 
 ## Align
 
+> **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 You can adjust the text alignment of the `Text` via the `align` property.
 
 ```svelte {title="Text Align" mode="repl"}
@@ -559,7 +563,9 @@ P R E F O R M A T T E D T E X T
 </Text>
 ```
 
-## Other Tags
+## Elements
+
+> **WARNING**: This feature had `<Text is="kbd">` move to standalone Component [`<Kbd>`](../display/kbd.md) in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can also access most of the other HTML text tags via the `is` property.
 
@@ -583,7 +589,6 @@ You can also access most of the other HTML text tags via the `is` property.
     <Text is="ins">Inserted</Text>
     <Text is="u">Underline</Text>
 
-    <Text is="kbd">CTRL + C</Text>
     <Text is="mark">Highlighted</Text>
     <Text is="samp">Sample</Text>
 

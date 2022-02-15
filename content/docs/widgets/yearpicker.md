@@ -74,6 +74,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: Introduced feature in `v0.4.10`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `YearPicker` is a Widget that displays a decade-based grid of years that a user can select from.
 
 ```svelte {title="YearPicker Preview" mode="repl"}

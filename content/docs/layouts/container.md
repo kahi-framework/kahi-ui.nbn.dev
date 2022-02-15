@@ -19,6 +19,8 @@ types=["<length>"]
 
 > **NOTE**: Introduced feature in `v0.2.0`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `Container` is a layout primitive used to typically constrain chunks of content to a max width or parent width, and centered horizontally with padding. By default it sets the max width to 65 characters.
 
 ```svelte {title="Container Preview" mode="repl"}

@@ -207,6 +207,8 @@ You can disable specific timestamps from being selected via the `disabled` prope
 
 > **NOTE**: By default, the current time is used.
 
+> **WARNING**: This feature was changes to accept `string[]` instead of `string` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 You can select a specific timestamp to be highlighted as outlines via the `highlight` property.
 
 ```svelte {title="TimePicker Highlight" mode="repl"}

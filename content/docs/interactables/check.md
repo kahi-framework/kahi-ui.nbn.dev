@@ -344,6 +344,8 @@ You can change the color palette of the `Check` via the `palette` property.
 
 ## Sizing
 
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the size of the `Check` via the `sizing` property.

@@ -209,6 +209,8 @@ You can alter the orientation of how the `Menu.Container` lays out the children.
 
 ## Sub Menus
 
+> **WARNING**: This feature was renamed from `<Menu.SubMenu>` to `<Menu.Section>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragment slot="sub-menu">` in `<Menu.Divider>` or `<Menu.Heading>` Components.
 
 ```svelte {title="Menu Sub Menu" mode="repl"}
@@ -259,6 +261,8 @@ You can nest more menus via `<Menu.SubMenu>` Component and using `<svelte:fragme
 ```
 
 ## Text Divider
+
+> **WARNING**: This feature was renamed from `<Menu.Divider>...</Menu.Divider>` to `<Menu.Heading variation="divider">...</Menu.Heading>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 In place of `<Menu.Heading>` you can also use `<Menu.Divider>` with text content.
 

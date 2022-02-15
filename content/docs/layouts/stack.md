@@ -60,6 +60,8 @@ types=["{}"]
 
 ## Imports
 
+> **WARNING**: This feature was renamed from `<Stack>` to `<Stack.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 ```svelte {title="Stack Imports"}
 <script>
     import {Stack} from "@kahi-ui/framework";

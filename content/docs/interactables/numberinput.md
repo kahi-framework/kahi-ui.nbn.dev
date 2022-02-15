@@ -283,6 +283,8 @@ Input some text:
 
 ## Sizing
 
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the size of the `NumberInput` via the `sizing` property.
@@ -468,6 +470,12 @@ You can change the shape of the `NumberInput` via the `shape` property.
 </Stack.Container>
 ```
 
+## Alignment
+
+> **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
+...
+
 ## Placeholder
 
 You can set the `NumberInput` to show placeholder text whenever there is no current value.
@@ -481,6 +489,8 @@ You can set the `NumberInput` to show placeholder text whenever there is no curr
 ```
 
 ## Span X
+
+> **WARNING**: This feature was renamed from `characters` to `span_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can set how wide your `NumberInput` to an approximation of character width via the `span_x` property.
 

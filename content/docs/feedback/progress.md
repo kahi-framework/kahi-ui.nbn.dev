@@ -347,6 +347,8 @@ You can change the color palette of the `Progress` via the `palette` property.
 
 ## Sizing
 
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 You can change the size of the `Progress` via the `sizing` property.
 
 ```svelte {title="Progress Sizing" mode="repl"}

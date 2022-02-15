@@ -124,6 +124,8 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.2.4`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `Overlay` is typically used for rendering full-screen content over the rest of the page, optionally including a backdrop or being toggleable.
 
 ```svelte {title="Overlay Preview" mode="repl"}

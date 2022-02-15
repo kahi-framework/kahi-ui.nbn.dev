@@ -60,6 +60,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: Introduced feature in `v0.4.10`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `YearStepper` is a Widget that lets users increment / decrement the currently provided year by a set number.
 
 ```svelte {title="YearStepper Preview" mode="repl"}
@@ -126,6 +128,8 @@ You can set maximum and minimum range of steppable years via the `max` / `min` p
 ```
 
 ## Steps
+
+> **WARNING**: This feature was renamed from `step` to `steps` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can control how many years the buttons increment / decrement via the `steps` property.
 

@@ -231,6 +231,12 @@ types=["<alpha-value>"]
 </script>
 ```
 
+## Maximum + Minimum
+
+> **WARNING**: This feature was renamed from `max_length` / `min_length` to `max` / `min` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md) respectively.
+
+...
+
 ## Input Masking
 
 > **NOTE**: Introduced feature in `v0.4.14`.
@@ -440,6 +446,8 @@ Input some text:
 ```
 
 ## Sizing
+
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
@@ -679,6 +687,12 @@ You can have the `TextInput` render as a `<textarea>` via the `is` property.
 />
 ```
 
+## Alignment
+
+> **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
+...
+
 ## Placeholder
 
 You can set the `TextInput` to show placeholder text whenever there is no current value.
@@ -692,6 +706,8 @@ You can set the `TextInput` to show placeholder text whenever there is no curren
 ```
 
 ## Span X + Y
+
+> **WARNING**: This feature was renamed from `characters` / `lines` to `span_x` / `span_y` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md) respectively.
 
 You can set how wide your `TextInput` to an approximation of character width and new lines via the `span_x` and `span_y` properties respectively.
 

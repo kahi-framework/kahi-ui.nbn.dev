@@ -83,6 +83,8 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.2.11`.
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `Popover` is typically used for hiding content that'll clip onto the page when activated via a button or something else.
 
 ```svelte {title="Popover Preview" mode="repl"}

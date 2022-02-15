@@ -2,6 +2,8 @@
 
 > **NOTE**: Introduced feature in `v0.2.3`.
 
+> **WARNING**: This feature was renamed from `htmlpalette` to `htmlmode` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 > **USAGE**: This feature can be demonstrated by clicking the **Theme Toggle** button in the top navigation.
 
 `htmlmode` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which is bound to `<html data-mode="XXX">` and updates whenever that attribute is changed. Defaulting to an empty string (`""`) if not set.
