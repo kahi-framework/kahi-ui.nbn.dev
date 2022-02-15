@@ -77,17 +77,17 @@ types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 [[properties."Overlay.Section"]]
 name="spacing"
 description="Adjusts the visual spacing between child content in the `<Overlay.Section>`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Overlay.Section"]]
 name="spacing_x"
 description="Adjusts the horizontal visual spacing between child content in the `<Overlay.Section>`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Overlay.Section"]]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child content in the `<Overlay.Section>`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[events."Overlay.Container"]]
 name="active"
@@ -788,6 +788,7 @@ You can enable having the `Overlay` dismissed whenever `<Overlay.Section>` inner
 <Button for="overlay-once-disabled">
     Open NON-ONCE Overlay
 </Button>
+
 <Button for="overlay-once-enabled">
     Open ONCE Overlay
 </Button>
