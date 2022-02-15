@@ -24,6 +24,11 @@ name="once"
 description="Enables dismissing of the `<Popover.Container>` whenever inner content is clicked."
 types=["boolean"]
 
+[[properties."Popover.Container"]]
+name="variation"
+description="Alters the functionality of the `<Popover.Container>` to activate via hovering / focusing."
+types=["tooltip"]
+
 [[properties."Popover.Section"]]
 name="animation"
 description="Selects the animation to be ran whenever `logic_state` is active."
@@ -344,6 +349,67 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
             shape="rounded"
         >
             ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+```
+
+## Tooltip
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can alter the functionality of a `<Popover.Container>` Component to activate by hovering or focusing the inner content via the `variation` property.
+
+```svelte {title="Popover Tooltip" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        Popover,
+    } from "@kahi-ui/framework";
+</script>
+
+<Popover.Container variation="tooltip">
+    Hover me!
+
+    <Popover.Section
+        alignment_x="right"
+        spacing="nano"
+        animation="fade"
+    >
+        <Box
+            elevation="low"
+            palette="neutral"
+            padding="small"
+            radius="nano"
+        >
+            I contain extra information!
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+
+Plus some other text...
+
+<br />
+<br />
+
+<Popover.Container variation="tooltip">
+    <Button palette="accent">
+        Some Undescriptive Button
+    </Button>
+
+    <Popover.Section
+        alignment_x="right"
+        spacing="nano"
+        animation="fade"
+    >
+        <Box
+            elevation="low"
+            palette="neutral"
+            padding="small"
+            radius="nano"
+        >
+            I describe the button!
         </Box>
     </Popover.Section>
 </Popover.Container>
