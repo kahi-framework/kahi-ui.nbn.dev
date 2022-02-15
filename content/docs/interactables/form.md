@@ -102,6 +102,23 @@ Form Components are helpers to supplement input Components that are meant for fo
 </Form.HelpText>
 ```
 
+## Imports
+
+```svelte {title="Form Imports"}
+<script>
+    import {Form} from "@kahi-ui/framework";
+
+    const {
+        Control,
+        Group,
+        FieldSet,
+        HelpText,
+        Label,
+        Legend,
+    } = Form;
+</script>
+```
+
 ## Label
 
 > **NOTE**: Introduced feature in `v0.2.7`.
