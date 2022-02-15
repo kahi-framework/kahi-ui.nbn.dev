@@ -1,8 +1,8 @@
 +++
 [[properties.Figure]]
 name="fit"
-description="Alters how the media of the `Figure` should fit within its containing box."
-types=["contain", "cover", "fill", "none", "scale-down"]
+description="Alters the inner media content should fit within `Figure`."
+types=["contain", "cover", "fill", "none", "scale-down", "{VIEWPORT}:{FIT}"]
 
 [[properties.Figure]]
 name="radius"
@@ -46,8 +46,6 @@ types=["{}"]
 ```
 
 ## Fit
-
-> **NOTE**: Added responsitivity in `v0.6.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `fit={["contain", "tablet:cover", "mobile:cover"]}`
 
