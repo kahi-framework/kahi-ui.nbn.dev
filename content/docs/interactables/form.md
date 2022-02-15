@@ -106,7 +106,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 > **NOTE**: Introduced feature in `v0.2.7`.
 
-> **NOTE**: This Component sets a [Svelte Context](https://svelte.dev/docs#setContext) for Form IDs / Names that child input Components consume.
+> **IMPORTANT**: This feature sets a [Svelte Context](https://svelte.dev/docs#setContext) that inner content can consume.
 
 `Form.Label` focuses the target input Component whenever its child content is clicked.
 
@@ -125,7 +125,7 @@ Form Components are helpers to supplement input Components that are meant for fo
 
 > **NOTE**: Introduced feature in `v0.2.7`.
 
-> **NOTE**: This Component sets a [Svelte Context](https://svelte.dev/docs#setContext) for Form IDs / Names that child input Components consume.
+> **IMPORTANT**: This feature sets a [Svelte Context](https://svelte.dev/docs#setContext) that inner content can consume.
 
 `Form.Control` is typically used to display form and input Components in a preformatted stack.
 
