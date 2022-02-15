@@ -425,7 +425,7 @@ You can customize which element is focused on activation with a reference or CSS
 
 > **WARNING**: This feature is only available in Javascript-enabled clients.
 
-> **NOTE**: Click the `Link` button, to test out the functionality in the Playground.
+> **USAGE**: This feature can not be demonstrated in the REPL, click the **Link** button to open in Playground.
 
 While the `Overlay` is active, focus movement is trapped within the first and last found focusable elements.
 
