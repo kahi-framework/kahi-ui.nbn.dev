@@ -5,6 +5,8 @@ export enum BLOCKQUOTE_MODE {
 
     note = "note",
 
+    usage = "usage",
+
     warning = "warning",
 }
 
@@ -12,6 +14,8 @@ const BLOCKQUOTE_PALETTES: Record<string, string | undefined> = {
     [BLOCKQUOTE_MODE.important]: "negative",
 
     [BLOCKQUOTE_MODE.note]: "accent",
+
+    [BLOCKQUOTE_MODE.usage]: "informative",
 
     [BLOCKQUOTE_MODE.warning]: "alert",
 };
