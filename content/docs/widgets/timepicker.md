@@ -125,7 +125,7 @@ You can enable the displaying of a "NOW" button to allow the user to set the pic
 
 ## Auto Scroll
 
-> **WARNING**: This property will cause layout reflowing. And can result poor performance when mounted during points of high activity. e.g. when your web page first loads
+> **WARNING**: This feature can cause performance degradation in when mounted.
 
 You can enable auto scrolling to the currently set `value` when `TimePicker` is mounted, via the `scroll` property.
 

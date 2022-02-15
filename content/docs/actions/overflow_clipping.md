@@ -4,7 +4,7 @@
 
 > **IMPORTANT**: `overflow_clipping` only detects if the attached element has is clipping on a given axis, not if the scrollbar is visible.
 
-> **WARNING**: This feature can cause layout thrashing.
+> **WARNING**: This feature can cause performance degradation while enabled.
 
 `overflow_clipping` is a [Svelte Action](https://svelte.dev/docs#use_action), which when `IOverflowClippingOptions.enabled: boolean` is `true`, runs the `IOverflowClippingOptions.on_clip: (entry: {horizontal: boolean, vertical: boolean}) => void` callback. Whenever content is clipping the bounding box of the attached element.
 
