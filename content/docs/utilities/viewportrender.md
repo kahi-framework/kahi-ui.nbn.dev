@@ -34,7 +34,7 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.5.1`.
 
-> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 `ViewportRender` disables rendering of child content while the provided [Viewport(s)](../framework/responsitivity.md) are not active.
 
@@ -76,7 +76,7 @@ The Component only runs on clientside Browsers with Javascript enabled. So you n
 
 > **USAGE**: REPL renders in your Browser, so this feature will always render conditionally anyway.
 
-> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 By default, `ViewportRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 

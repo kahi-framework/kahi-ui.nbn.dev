@@ -428,7 +428,7 @@ You can adjust which side the content divider border will appear via the `placem
 
 ## Collapsing
 
-> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 While `Aside` does not have built-in collapsing, the Framework provides the primitives for you to build collapsable interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
 
