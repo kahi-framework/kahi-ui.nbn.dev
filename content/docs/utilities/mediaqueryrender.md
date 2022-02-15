@@ -25,7 +25,7 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.5.1`.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 
 `MediaQueryRender` disables rendering of child content while the provided [Media Quer(y/eries)](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) are not active.
 
@@ -61,7 +61,7 @@ The Component only runs on clientside Browsers with Javascript enabled. So you n
 
 ## Multiple Queries
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 
 You can specify multiple Media Queries by passing in a string array (`string[]`) via the `queries` property.
 
@@ -91,7 +91,7 @@ You can specify multiple Media Queries by passing in a string array (`string[]`)
 
 ## Behavior
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 
 When working with multiple Media Queries, you can specify that **ALL** Media Queries must be valid in order to render. Via the `behavior` property.
 

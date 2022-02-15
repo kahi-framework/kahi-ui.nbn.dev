@@ -66,7 +66,7 @@ types=["{}"]
 
 `Grid` is a multi-part layout pattern for setting up a grid of items organized to a 12-point system.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 
 ```svelte {title="Grid Preview" mode="repl"}
 <script>

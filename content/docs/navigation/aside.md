@@ -376,7 +376,7 @@ You can adjust which side the content divider border will appear via the `placem
 
 ## Collapsing
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not viewport modifiers, resize your Browser to observe this feature.
 
 While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinionated collapsable navigations interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
 
