@@ -85,7 +85,7 @@ types=["InputEvent"]
 
 > **NOTE**: Introduced feature in `v0.4.14`.
 
-> **IMPORTANT**: Input masking only runs on the Browser, you need to **ALWAYS** validate user-generated input on the server.
+> **IMPORTANT**: This feature only runs on Javascript-enabled clients, you **NEED** to **ALWAYS** validate user input on the server.
 
 `NumberInput` is a subset of [`NumberInput`](./textinput.md), which only accepts numbers and masks user input accordingly.
 

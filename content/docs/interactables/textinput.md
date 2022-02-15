@@ -237,9 +237,7 @@ types=["<alpha-value>"]
 
 > **NOTE**: Introduced feature in `v0.4.14`.
 
-> **WARNING**: This feature is only available in Javascript-enabled clients.
-
-> **IMPORTANT**: This feature only runs on the Browser, you need to **ALWAYS** validate user-generated input on the server.
+> **IMPORTANT**: This feature only runs on Javascript-enabled clients, you **NEED** to **ALWAYS** validate user input on the server.
 
 You can enable input masking (dropping input that doesn't match a constraint) by enabling `mask` and setting the `pattern` properties.
 
