@@ -2,9 +2,9 @@
 
 > **NOTE**: Introduced feature in `v0.2.3`.
 
-`htmlmode` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which is bound to `<html data-mode="XXX">` and updates whenever that attribute is changed. Defaulting to an empty string (`""`) if not set.
+> **USAGE**: This feature can be demonstrated by clicking the **Theme Toggle** button in the top navigation.
 
-> **NOTE**: Click the color scheme button in the Navigation topbar to see changes.
+`htmlmode` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which is bound to `<html data-mode="XXX">` and updates whenever that attribute is changed. Defaulting to an empty string (`""`) if not set.
 
 ```svelte {title="htmlmode Preview" mode="repl"}
 <script>

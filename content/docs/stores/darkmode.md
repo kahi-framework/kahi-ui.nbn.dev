@@ -2,9 +2,9 @@
 
 > **NOTE**: Introduced feature in `v0.2.3`.
 
-`darkmode` is a **readonly** [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever either [`htmldark`](./htmlmode.md) or [`prefersdark`](./prefersscheme.md) are truthy.
+> **USAGE**: This feature can be demonstrated by clicking the **Theme Toggle** button in the top navigation.
 
-> **NOTE**: Click the color scheme button in the top navigation to see changes.
+`darkmode` is a **readonly** [Svelte Store](https://svelte.dev/docs#svelte_store), which returns `true` whenever either [`htmldark`](./htmlmode.md) or [`prefersdark`](./prefersscheme.md) are truthy.
 
 ```svelte {title="darkmode Preview" mode="repl"}
 <script>
