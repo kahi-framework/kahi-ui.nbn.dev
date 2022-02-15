@@ -96,7 +96,7 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.5.3`.
 
-> **WARNING**: While this Widget is available in Javascript-disabled Browsers, it can result in [Cumulative Layout Shift](https://web.dev/cls/).
+> **WARNING**: This feature can cause layout shifting and performance degradation during rehydration.
 
 `DataTable` is a subset of [`Table`](../display/table.md) Widget which automatically handles formatting tabular data into HTML.
 
