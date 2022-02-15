@@ -58,7 +58,7 @@ types=["CustomEvent<void>"]
 
 # YearStepper
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `YearStepper` is a Widget that lets users increment / decrement the currently provided year by a set number.
 
