@@ -16,10 +16,6 @@ Yes, however there is no official support to do so. Visit [Releases](https://git
 
 Yes! The library is explictly made in mind that Svelte should be used to sprinkle extra functionality ontop of logic baked in HTML / CSS. If you find something not working properly, [file an issue](https://github.com/novacbn/kahi-ui/issues).
 
-## Is Themeing Supported?
-
-Not at the moment, but that'll be tackled via global [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) at a later time.
-
 ## Is Accessibility / ARIA Supported?
 
 While I want to implement full proper support, including keyboard navigation. It is currently not being pursued and will be tackled at a later date. However if you encounter something that'll be detrimental [file an issue](https://github.com/novacbn/kahi-ui/issues).
