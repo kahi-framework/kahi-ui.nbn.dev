@@ -128,7 +128,9 @@ You can set margins for your Components via the `margin` property.
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="massive">MASSIVE</Box>
+        <Box palette="alert" margin="massive">
+            MASSIVE
+        </Box>
     </Box>
 </Stack>
 ```

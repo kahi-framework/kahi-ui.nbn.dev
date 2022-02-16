@@ -285,10 +285,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-nano</Text>
-        <Box
-            palette="negative"
-            width="icon-nano"
-        >
+        <Box palette="negative" width="icon-nano">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -297,10 +294,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-tiny</Text>
-        <Box
-            palette="alert"
-            width="icon-tiny"
-        >
+        <Box palette="alert" width="icon-tiny">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -309,10 +303,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-small</Text>
-        <Box
-            palette="affirmative"
-            width="icon-small"
-        >
+        <Box palette="affirmative" width="icon-small">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -321,10 +312,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-medium</Text>
-        <Box
-            palette="negative"
-            width="icon-medium"
-        >
+        <Box palette="negative" width="icon-medium">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -333,10 +321,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-large</Text>
-        <Box
-            palette="alert"
-            width="icon-large"
-        >
+        <Box palette="alert" width="icon-large">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -345,10 +330,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-huge</Text>
-        <Box
-            palette="affirmative"
-            width="icon-huge"
-        >
+        <Box palette="affirmative" width="icon-huge">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -357,10 +339,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">icon-massive</Text>
-        <Box
-            palette="negative"
-            width="icon-massive"
-        >
+        <Box palette="negative" width="icon-massive">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -369,10 +348,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">nano</Text>
-        <Box
-            palette="alert"
-            width="nano"
-        >
+        <Box palette="alert" width="nano">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -381,10 +357,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">tiny</Text>
-        <Box
-            palette="affirmative"
-            width="tiny"
-        >
+        <Box palette="affirmative" width="tiny">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -393,10 +366,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">small</Text>
-        <Box
-            palette="negative"
-            width="small"
-        >
+        <Box palette="negative" width="small">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -405,10 +375,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">medium</Text>
-        <Box
-            palette="alert"
-            width="medium"
-        >
+        <Box palette="alert" width="medium">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -417,10 +384,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">large</Text>
-        <Box
-            palette="affirmative"
-            width="large"
-        >
+        <Box palette="affirmative" width="large">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -429,10 +393,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">huge</Text>
-        <Box
-            palette="negative"
-            width="huge"
-        >
+        <Box palette="negative" width="huge">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -441,10 +402,7 @@ You can set a defined width for your Components via the `width` property.
 
     <div>
         <Text is="strong">massive</Text>
-        <Box
-            palette="alert"
-            width="massive"
-        >
+        <Box palette="alert" width="massive">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -476,7 +434,10 @@ You can set a defined height for your Components via the `height` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack.Container orientation="horizontal" spacing="medium">
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+>
     <div>
         <Text is="strong">auto</Text>
         <Box palette="affirmative" height="auto">
@@ -704,10 +665,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-nano</Text>
-        <Box
-            palette="negative"
-            width="icon-nano"
-        >
+        <Box palette="negative" width="icon-nano">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -716,10 +674,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-tiny</Text>
-        <Box
-            palette="alert"
-            width="icon-tiny"
-        >
+        <Box palette="alert" width="icon-tiny">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -728,10 +683,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-small</Text>
-        <Box
-            palette="affirmative"
-            width="icon-small"
-        >
+        <Box palette="affirmative" width="icon-small">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -740,10 +692,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-medium</Text>
-        <Box
-            palette="negative"
-            width="icon-medium"
-        >
+        <Box palette="negative" width="icon-medium">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -752,10 +701,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-large</Text>
-        <Box
-            palette="alert"
-            width="icon-large"
-        >
+        <Box palette="alert" width="icon-large">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -764,10 +710,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-huge</Text>
-        <Box
-            palette="affirmative"
-            width="icon-huge"
-        >
+        <Box palette="affirmative" width="icon-huge">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -776,10 +719,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">icon-massive</Text>
-        <Box
-            palette="negative"
-            width="icon-massive"
-        >
+        <Box palette="negative" width="icon-massive">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -788,10 +728,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">nano</Text>
-        <Box
-            palette="alert"
-            width="nano"
-        >
+        <Box palette="alert" width="nano">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -800,10 +737,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">tiny</Text>
-        <Box
-            palette="affirmative"
-            width="tiny"
-        >
+        <Box palette="affirmative" width="tiny">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -812,10 +746,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">small</Text>
-        <Box
-            palette="negative"
-            width="small"
-        >
+        <Box palette="negative" width="small">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -824,10 +755,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">medium</Text>
-        <Box
-            palette="alert"
-            width="medium"
-        >
+        <Box palette="alert" width="medium">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -836,10 +764,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">large</Text>
-        <Box
-            palette="affirmative"
-            width="large"
-        >
+        <Box palette="affirmative" width="large">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -848,10 +773,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">huge</Text>
-        <Box
-            palette="negative"
-            width="huge"
-        >
+        <Box palette="negative" width="huge">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -860,10 +782,7 @@ You can set a defined height for your Components via the `height` property.
 
     <div>
         <Text is="strong">massive</Text>
-        <Box
-            palette="alert"
-            width="massive"
-        >
+        <Box palette="alert" width="massive">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1090,10 +1009,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">viewport-100</Text>
-        <Box
-            palette="affirmative"
-            size="viewport-100"
-        >
+        <Box palette="affirmative" size="viewport-100">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1102,10 +1018,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-nano</Text>
-        <Box
-            palette="negative"
-            size="icon-nano"
-        >
+        <Box palette="negative" size="icon-nano">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1114,10 +1027,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-tiny</Text>
-        <Box
-            palette="alert"
-            size="icon-tiny"
-        >
+        <Box palette="alert" size="icon-tiny">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1126,10 +1036,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-small</Text>
-        <Box
-            palette="affirmative"
-            size="icon-small"
-        >
+        <Box palette="affirmative" size="icon-small">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1138,10 +1045,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-medium</Text>
-        <Box
-            palette="negative"
-            size="icon-medium"
-        >
+        <Box palette="negative" size="icon-medium">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1150,10 +1054,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-large</Text>
-        <Box
-            palette="alert"
-            size="icon-large"
-        >
+        <Box palette="alert" size="icon-large">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1162,10 +1063,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-huge</Text>
-        <Box
-            palette="affirmative"
-            size="icon-huge"
-        >
+        <Box palette="affirmative" size="icon-huge">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1174,10 +1072,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">icon-massive</Text>
-        <Box
-            palette="negative"
-            size="icon-massive"
-        >
+        <Box palette="negative" size="icon-massive">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1186,10 +1081,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">nano</Text>
-        <Box
-            palette="alert"
-            size="nano"
-        >
+        <Box palette="alert" size="nano">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1198,10 +1090,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">tiny</Text>
-        <Box
-            palette="affirmative"
-            size="tiny"
-        >
+        <Box palette="affirmative" size="tiny">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1210,10 +1099,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">small</Text>
-        <Box
-            palette="negative"
-            size="small"
-        >
+        <Box palette="negative" size="small">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1222,10 +1108,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">medium</Text>
-        <Box
-            palette="alert"
-            size="medium"
-        >
+        <Box palette="alert" size="medium">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1234,10 +1117,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">large</Text>
-        <Box
-            palette="affirmative"
-            size="large"
-        >
+        <Box palette="affirmative" size="large">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1246,10 +1126,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">huge</Text>
-        <Box
-            palette="negative"
-            size="huge"
-        >
+        <Box palette="negative" size="huge">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
@@ -1258,10 +1135,7 @@ You can set a defined width + height for your Components via the `size` property
 
     <div>
         <Text is="strong">massive</Text>
-        <Box
-            palette="alert"
-            size="massive"
-        >
+        <Box palette="alert" size="massive">
             <Text variation="truncate">
                 Lorem ipsum dolor
             </Text>
