@@ -142,7 +142,7 @@ You can adjust the size of `Text` by passing the `sizing` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="text-sizing-inline"
     orientation="horizontal"
     spacing="medium"
@@ -251,7 +251,7 @@ You can adjust the size of `Text` by passing the `sizing` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-sizing-inline > div) {
@@ -267,7 +267,7 @@ You can also access bigger font sizing via the `variation` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="text-sizing-block"
     orientation="horizontal"
     spacing="medium"
@@ -376,7 +376,7 @@ You can also access bigger font sizing via the `variation` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-sizing-block > div) {
@@ -394,7 +394,7 @@ You can change the color palette of `Text` via the `palette` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="text-palette"
     orientation="horizontal"
     spacing="medium"
@@ -516,7 +516,7 @@ You can change the color palette of `Text` via the `palette` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-palette > div) {
@@ -536,7 +536,7 @@ You can adjust the text alignment of the `Text` via the `alignment_x` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Text>
@@ -601,7 +601,7 @@ You can adjust the text alignment of the `Text` via the `alignment_x` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Transform
@@ -613,7 +613,7 @@ You can alter the rendered text capitalization via the `transform` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="text-transform"
     orientation="horizontal"
     spacing="medium"
@@ -670,7 +670,7 @@ You can alter the rendered text capitalization via the `transform` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-transform > div) {
@@ -688,7 +688,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack class="text-variation" spacing="medium">
+<Stack.Container class="text-variation" spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Text>
@@ -714,7 +714,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-variation > div) {
@@ -725,7 +725,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
 
 ## Elements
 
-> **WARNING**: This feature had `<Text is="kbd">` move to standalone Component [`<Kbd>`](../display/kbd.md) in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+> **WARNING**: The feature `<Text is="kbd">` was moved to standalone Component [`<Kbd>`](../display/kbd.md) in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can also access most of the other HTML text tags via the `is` property.
 
@@ -734,7 +734,7 @@ You can also access most of the other HTML text tags via the `is` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack alignment_x="left" spacing="medium">
+<Stack.Container alignment_x="left" spacing="medium">
     <Text is="abbr">Abbreviation</Text>
 
     <Text is="b">Bold</Text>
@@ -754,5 +754,5 @@ You can also access most of the other HTML text tags via the `is` property.
 
     <Text is="sub">sub</Text>
     <Text is="sup">sup</Text>
-</Stack>
+</Stack.Container>
 ```

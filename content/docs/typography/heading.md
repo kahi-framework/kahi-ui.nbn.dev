@@ -194,7 +194,7 @@ You can adjust the size of `Heading` by passing the `is` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="heading-sizing-inline"
     orientation="horizontal"
     spacing="medium"
@@ -259,7 +259,7 @@ You can adjust the size of `Heading` by passing the `is` property.
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-sizing-inline > div) {
@@ -279,7 +279,7 @@ You can also access bigger font sizing via the `variation` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="heading-sizing-block"
     orientation="horizontal"
     spacing="medium"
@@ -344,7 +344,7 @@ You can also access bigger font sizing via the `variation` property.
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-sizing-block > div) {
@@ -368,7 +368,7 @@ You can change the color palette of `Heading` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="heading-palette"
     orientation="horizontal"
     spacing="medium"
@@ -463,7 +463,7 @@ You can change the color palette of `Heading` via the `palette` property.
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-palette > div) {
@@ -487,7 +487,7 @@ You can adjust the text alignment of the `Heading` via the `alignment_x` propert
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Heading>
@@ -537,7 +537,7 @@ You can adjust the text alignment of the `Heading` via the `alignment_x` propert
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Transform
@@ -553,7 +553,7 @@ You can alter the rendered text capitalization via the `transform` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="heading-transform"
     orientation="horizontal"
     spacing="medium"
@@ -590,7 +590,7 @@ You can alter the rendered text capitalization via the `transform` property.
             adipiscing elit.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-transform > div) {
@@ -612,7 +612,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
     } from "@kahi-ui/framework";
 </script>
 
-<Stack class="heading-variation" spacing="medium">
+<Stack.Container class="heading-variation" spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Heading>
@@ -632,7 +632,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-variation > div) {
