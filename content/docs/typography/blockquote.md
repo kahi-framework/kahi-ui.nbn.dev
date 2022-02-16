@@ -2,7 +2,7 @@
 [[properties."Blockquote.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[slots."Blockquote.Container"]]
 name="default"
@@ -121,7 +121,7 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -257,5 +257,5 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
 
         <Blockquote.Cite>— NEGATIVE</Blockquote.Cite>
     </Blockquote.Container>
-</Stack>
+</Stack.Container>
 ```

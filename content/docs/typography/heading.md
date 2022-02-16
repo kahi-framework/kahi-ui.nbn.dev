@@ -6,14 +6,14 @@ default="h1"
 types=["h1", "h2", "h3", "h4", "h5", "h6"]
 
 [[properties.Heading]]
-name="align"
+name="alignment_x"
 description="Changes how the text is aligned within the containing box."
 types=["center", "justify", "left", "right"]
 
 [[properties.Heading]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Heading]]
 name="transform"
@@ -181,11 +181,11 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 </script>
 ```
 
-## Size
+## Sizing
 
 You can adjust the size of `Heading` by passing the `is` property.
 
-```svelte {title="Heading Size" mode="repl"}
+```svelte {title="Heading Sizing Inline" mode="repl"}
 <script>
     import {
         Heading,
@@ -195,7 +195,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 </script>
 
 <Stack
-    class="heading-size"
+    class="heading-sizing-inline"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -262,7 +262,92 @@ You can adjust the size of `Heading` by passing the `is` property.
 </Stack>
 
 <style>
-    :global(.heading-size > div) {
+    :global(.heading-sizing-inline > div) {
+        max-width: 25ch;
+    }
+</style>
+```
+
+You can also access bigger font sizing via the `variation` property.
+
+```svelte {title="Heading Sizing Block" mode="repl"}
+<script>
+    import {
+        Heading,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack
+    class="heading-sizing-block"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">H1</Text>
+        <Heading is="h1" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H2</Text>
+        <Heading is="h2" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H3</Text>
+        <Heading is="h3" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H4</Text>
+        <Heading is="h4" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H5</Text>
+        <Heading is="h5" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H6</Text>
+        <Heading is="h6" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+</Stack>
+
+<style>
+    :global(.heading-sizing-block > div) {
         max-width: 25ch;
     }
 </style>
@@ -302,6 +387,16 @@ You can change the color palette of `Heading` via the `palette` property.
     <div>
         <Text is="strong">ACCENT</Text>
         <Heading palette="accent">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+        <Heading palette="neutral">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -350,6 +445,16 @@ You can change the color palette of `Heading` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <Heading palette="informative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
         <Heading palette="negative">
             Lorem ipsum dolor sit amet, consectetur
@@ -367,13 +472,13 @@ You can change the color palette of `Heading` via the `palette` property.
 </style>
 ```
 
-## Align
+## Alignment
 
 > **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-You can adjust the text alignment of the `Heading` via the `align` property.
+You can adjust the text alignment of the `Heading` via the `alignment_x` property.
 
-```svelte {title="Heading Align" mode="repl"}
+```svelte {title="Heading Alignment" mode="repl"}
 <script>
     import {
         Heading,
@@ -395,7 +500,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">CENTER</Text>
-        <Heading align="center">
+        <Heading alignment_x="center">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -405,7 +510,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">JUSTIFY</Text>
-        <Heading align="justify">
+        <Heading alignment_x="justify">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -415,7 +520,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">LEFT</Text>
-        <Heading align="left">
+        <Heading alignment_x="left">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -425,7 +530,7 @@ You can adjust the text alignment of the `Heading` via the `align` property.
 
     <div>
         <Text is="strong">RIGHT</Text>
-        <Heading align="right">
+        <Heading alignment_x="right">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis

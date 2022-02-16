@@ -3,22 +3,22 @@
 name="is"
 description="Changes the HTML tag used for rendering the text, altering its appearance."
 default="p"
-types=["abbr", "b", "del", "em", "i", "ins", "kbd", "mark", "p", "pre", "s", "samp", "small", "span", "strong", "sub", "sup", "u"]
+types=["abbr", "b", "del", "em", "i", "ins", "mark", "p", "s", "samp", "small", "span", "strong", "sub", "sup", "u"]
 
 [[properties.Text]]
-name="align"
+name="alignment_x"
 description="Changes how the text is aligned within the containing box."
 types=["center", "justify", "left", "right"]
 
 [[properties.Text]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Text]]
-name="size"
+name="sizing"
 description="Changes how big the text will be rendered."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Text]]
 name="transform"
@@ -131,19 +131,19 @@ types=["<alpha-value>"]
 </script>
 ```
 
-## Size
+## Sizing
 
 > **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-You can adjust the size of `Text` by passing the `size` property.
+You can adjust the size of `Text` by passing the `sizing` property.
 
-```svelte {title="Text Size" mode="repl"}
+```svelte {title="Text Sizing Inline" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
 <Stack
-    class="text-size"
+    class="text-sizing-inline"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -162,8 +162,21 @@ You can adjust the size of `Text` by passing the `size` property.
     </div>
 
     <div>
+        <Text is="strong">NANO</Text>
+        <Text sizing="nano">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
         <Text is="strong">TINY</Text>
-        <Text size="tiny">
+        <Text sizing="tiny">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -176,7 +189,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Text size="small">
+        <Text sizing="small">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -189,7 +202,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Text size="medium">
+        <Text sizing="medium">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -202,7 +215,7 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Text size="large">
+        <Text sizing="large">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -215,7 +228,20 @@ You can adjust the size of `Text` by passing the `size` property.
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Text size="huge">
+        <Text sizing="huge">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Text sizing="massive">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -228,7 +254,132 @@ You can adjust the size of `Text` by passing the `size` property.
 </Stack>
 
 <style>
-    :global(.text-size > div) {
+    :global(.text-sizing-inline > div) {
+        max-width: 25ch;
+    }
+</style>
+```
+
+You can also access bigger font sizing via the `variation` property.
+
+```svelte {title="Text Sizing Block" mode="repl"}
+<script>
+    import {Stack, Text} from "@kahi-ui/framework";
+</script>
+
+<Stack
+    class="text-sizing-block"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Text variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <Text sizing="nano" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">TINY</Text>
+        <Text sizing="tiny" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+        <Text sizing="small" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+        <Text sizing="medium" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+        <Text sizing="large" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+        <Text sizing="huge" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Text sizing="massive" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+</Stack>
+
+<style>
+    :global(.text-sizing-block > div) {
         max-width: 25ch;
     }
 </style>
@@ -265,6 +416,19 @@ You can change the color palette of `Text` via the `palette` property.
     <div>
         <Text is="strong">ACCENT</Text>
         <Text palette="accent">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+        <Text palette="neutral">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -328,6 +492,19 @@ You can change the color palette of `Text` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <Text palette="informative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
         <Text palette="negative">
             Lorem ipsum dolor sit amet, consectetur
@@ -348,13 +525,13 @@ You can change the color palette of `Text` via the `palette` property.
 </style>
 ```
 
-## Align
+## Alignment
 
 > **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-You can adjust the text alignment of the `Text` via the `align` property.
+You can adjust the text alignment of the `Text` via the `alignment_x` property.
 
-```svelte {title="Text Align" mode="repl"}
+```svelte {title="Text Alignment" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
@@ -375,7 +552,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">CENTER</Text>
-        <Text align="center">
+        <Text alignment_x="center">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -388,7 +565,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">JUSTIFY</Text>
-        <Text align="justify">
+        <Text alignment_x="justify">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -401,7 +578,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">LEFT</Text>
-        <Text align="left">
+        <Text alignment_x="left">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -414,7 +591,7 @@ You can adjust the text alignment of the `Text` via the `align` property.
 
     <div>
         <Text is="strong">RIGHT</Text>
-        <Text align="right">
+        <Text alignment_x="right">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -544,23 +721,6 @@ You can apply variations to the rendered text, like truncating, via the `variati
         max-width: 50ch;
     }
 </style>
-```
-
-## Pre Formatted
-
-You can render text with whitespace and linebreaks preserved via the `is` property.
-
-<!-- prettier-ignore -->
-```svelte {title="Text Pre Formatted" mode="repl"}
-<script>
-    import {Text} from "@kahi-ui/framework";
-</script>
-
-<Text is="pre">
-P R E F O R M A T T E D T E X T
-! " # $ % & ' ( ) * + , - . /
-0 1 2 3 4 5 6 7 8 9
-</Text>
 ```
 
 ## Elements
