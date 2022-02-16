@@ -254,7 +254,7 @@ You can manually open / close the `Popover` via the `logic_state` property.
 
 ## Dismissible
 
-> **NOTE**: Added keybinding support since `v0.4.13`.
+> **NOTE**: Introduced keybinding support in `v0.4.13`.
 
 > **WARNING**: This feature is only available in Javascript-enabled clients.
 

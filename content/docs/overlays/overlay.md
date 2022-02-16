@@ -691,7 +691,7 @@ You can optionally include a backdrop by passing via composing the `<Overlay.Bac
 
 ## Dismissible
 
-> **NOTE**: Added keybinding support since `v0.4.13`.
+> **NOTE**: Introduced keybinding support in `v0.4.13`.
 
 > **WARNING**: This feature is only available in Javascript-enabled clients.
 
