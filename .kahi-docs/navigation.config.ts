@@ -35,7 +35,7 @@ export default define_navigation({
                 {href: "/docs/globals/contents"},
                 {href: "/docs/globals/html5"},
                 {href: "/docs/globals/hidden"},
-                {href: "/docs/globals/sizings"},
+                {href: "/docs/globals/sizes", badge: "UPDATED"},
                 {href: "/docs/globals/spacings"},
                 {href: "/docs/globals/sveltekit"},
             ],
