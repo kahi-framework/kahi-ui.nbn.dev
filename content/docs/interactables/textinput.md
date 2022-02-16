@@ -541,6 +541,8 @@ You can set the `TextInput` to show placeholder text whenever there is no curren
 
 ## Field Character Size
 
+> **DEPRECATED**: This feature will be renamed from `characters` -> `span_y` in `v0.6.0` to consolidate API surface.
+
 You can set how wide your `TextInput` to an approximation of character width via the `characters` property.
 
 ```svelte {title="TextInput Field Character Size" mode="repl"}
@@ -570,6 +572,8 @@ You can have the `TextInput` render as a `<textarea>` via the `is` property.
 ```
 
 ## Field Line Size
+
+> **DEPRECATED**: This feature will be renamed from `lines` -> `span_y` in `v0.6.0` to consolidate API surface.
 
 You can set how tall your `<textarea>` based `TextInput` to an approximation of character lines via the `lines` property.
 

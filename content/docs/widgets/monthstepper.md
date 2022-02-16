@@ -70,6 +70,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: New since `v0.4.10`.
 
+> **DEPRECATED**: This feature will only accept ISO 8601 calendar datestamps in `v0.6.0`.
+
 `MonthStepper` is a Widget that lets users increment / decrement the currently provided month by a set number.
 
 ```svelte {title="MonthStepper Preview" mode="repl"}
@@ -136,6 +138,8 @@ You can set maximum and minimum range of steppable months via the `maximum` / `m
 ```
 
 ## Step
+
+> **DEPRECATED**: This feature will be renamed from `step` -> `steps` in `v0.6.0` to consolidate API surface.
 
 You can control how many months the buttons increment / decrement via the `step` property.
 

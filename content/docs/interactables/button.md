@@ -385,6 +385,8 @@ You can alter the `Button` Component to use less intense / remove "attention gra
 
 ## Types
 
+> **DEPRECATED**: This feature will require an explicit `is` property in `v0.6.0`.
+
 You can change make the `Button` a `<a>` by passing the `href` property, or a `<label>` by passing the `for` property. And also, change the input type between `<input type="button" />` **(DEFAULT)**, `<input type="reset" />`, `<input type="submit" />` via the `type` / `value` properties.
 
 ```svelte {title="Button Types" mode="repl"}

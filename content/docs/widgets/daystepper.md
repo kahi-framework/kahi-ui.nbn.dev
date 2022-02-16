@@ -75,6 +75,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: New since `v0.4.10`.
 
+> **DEPRECATED**: This feature will only accept ISO 8601 calendar datestamps in `v0.6.0`.
+
 `DayStepper` is a Widget that lets users increment / decrement the currently provided day by a set number.
 
 ```svelte {title="DayStepper Preview" mode="repl"}
@@ -141,6 +143,8 @@ You can set maximum and minimum range of steppable days via the `maximum` / `min
 ```
 
 ## Step
+
+> **DEPRECATED**: This feature will be renamed from `step` -> `steps` in `v0.6.0` to consolidate API surface.
 
 You can control how many days the buttons increment / decrement via the `step` property.
 

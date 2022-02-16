@@ -224,6 +224,8 @@ types=["<length>"]
 
 > **NOTE**: New since `v0.4.4`.
 
+> **DEPRECATED**: This feature will be renamed from `colspan` / `rowspan` -> `span_x` / `span_y` in `v0.6.0` to consolidate API surface.
+
 You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
 
 ```svelte {title="Table Spans" mode="repl"}

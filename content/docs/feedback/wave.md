@@ -59,6 +59,8 @@ types=["<easing-function>"]
 
 > **NOTE**: New since `v0.2.5`.
 
+> **DEPRECATED**: This feature will be removed for `<Ellipsis animation="bounce" iterations="5">` in `v0.6.0` due to expanded functionality.
+
 `Wave` is an indicator used to tell the end-user that the Web Application is loading something in the background.
 
 ```svelte {title="Wave Preview" mode="repl"}
