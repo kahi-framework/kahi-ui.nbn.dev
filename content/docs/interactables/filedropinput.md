@@ -19,7 +19,7 @@ name="name"
 description="Sets the form name of the `FileDropInput`."
 types=["string"]
 
-[[.Containerevents.FileDropInput]]
+[[events.FileDropInput]]
 name="change"
 description="Fires whenever the `FileDropInput` value has changed."
 types=["MouseEvent"]
