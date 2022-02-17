@@ -1,4 +1,10 @@
 +++
+[[properties.Container]]
+name="is"
+description="Alters the HTML tag rendered to the DOM."
+default="div"
+types=["article", "div", "main"]
+
 [[slots.Container]]
 name="default"
 description="Default unnamed slot."
@@ -47,4 +53,64 @@ types=["<length>"]
 <script>
     import {Container} from "@kahi-ui/framework";
 </script>
+```
+
+## Elements
+
+> **NOTE**: Introduced feature `<Container is="article">` in `v0.6.0`.
+
+You can change the HTML tag rendered to DOM via the `is` property.
+
+```svelte {title="Container Elements" mode="repl"}
+<script>
+    import {
+        Container,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container spacing="medium">
+    <Container is="article">
+        <Text is="strong">ARTICLE</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </Container>
+
+    <Container is="div">
+        <Text is="strong">DIV</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </Container>
+
+    <Container is="main">
+        <Text is="strong">MAIN</Text>
+
+        <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </Container>
+</Stack.Container>
 ```
