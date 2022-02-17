@@ -59,7 +59,7 @@ export default define_navigation({
         {
             text: "Display",
             items: [
-                {href: "/docs/display/badge", badge: "UPDATED"},
+                {href: "/docs/display/badge"},
                 {href: "/docs/display/datestamp"},
                 {href: "/docs/display/datetimestamp"},
                 {href: "/docs/display/kbd", badge: "NEW"},

@@ -168,7 +168,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-cheese"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="cheese"
         >
             Cheese
@@ -177,7 +177,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-pepperoni"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="pepperoni"
         >
             Pepperoni
@@ -186,7 +186,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-onion"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="onion"
         >
             Onion
@@ -195,7 +195,7 @@ types=["<alpha-value>"]
         <Check
             id="check-preview-pineapple"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="pineapple"
         >
             Pineapple

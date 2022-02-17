@@ -166,7 +166,7 @@ types=["<alpha-value>"]
         <Radio
             id="radio-preview-bubblegum"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="bubblegum"
         >
             Bubblegum
@@ -175,7 +175,7 @@ types=["<alpha-value>"]
         <Radio
             id="radio-preview-chocolate"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="chocolate"
         >
             Chocolate
@@ -184,7 +184,7 @@ types=["<alpha-value>"]
         <Radio
             id="radio-preview-vanilla"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="vanilla"
         >
             Vanilla
