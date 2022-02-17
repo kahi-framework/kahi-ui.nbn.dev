@@ -688,7 +688,10 @@ You can apply variations to the rendered text, like truncating, via the `variati
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack.Container class="text-variation" spacing="medium">
+<Stack.Container
+    class="text-variation"
+    spacing="medium"
+>
     <div>
         <Text is="strong">DEFAULT</Text>
         <Text>

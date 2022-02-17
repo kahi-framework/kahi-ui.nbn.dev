@@ -612,7 +612,10 @@ You can apply variations to the rendered text, like truncating, via the `variati
     } from "@kahi-ui/framework";
 </script>
 
-<Stack.Container class="heading-variation" spacing="medium">
+<Stack.Container
+    class="heading-variation"
+    spacing="medium"
+>
     <div>
         <Text is="strong">DEFAULT</Text>
         <Heading>
