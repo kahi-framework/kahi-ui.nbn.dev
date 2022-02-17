@@ -17,7 +17,7 @@ types=["center", "stretch", "left", "right"]
 [[properties."Tab.Container"]]
 name="sizing"
 description="Sets the size of each `Tab.Anchor` / `Tab.Label` radio buttons."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties."Tab.Group"]]
 name="logic_id"
@@ -47,12 +47,12 @@ types=["string"]
 [[properties."Tab.Anchor"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Tab.Label"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Tab.Section"]]
 name="loading"

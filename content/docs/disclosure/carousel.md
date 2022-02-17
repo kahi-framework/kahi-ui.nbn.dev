@@ -8,17 +8,17 @@ types=["horizontal", "vertical"]
 [[properties."Carousel.Container"]]
 name="spacing"
 description="Adjusts the visual spacing between child items in the `Carousel`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Carousel.Container"]]
 name="spacing_x"
 description="Adjusts the horizontal visual spacing between child items in the `Carousel`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Carousel.Container"]]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child items in the `Carousel`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[slots."Carousel.Container"]]
 name="default"
