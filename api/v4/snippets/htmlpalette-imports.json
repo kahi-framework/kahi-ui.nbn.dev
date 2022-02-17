@@ -1,1 +1,1 @@
-{"data":{"identifier":"htmlpalette-imports","script":"import {htmlpalette} from \"@kahi-ui/framework\";","syntax":"javascript","title":"htmlpalette Imports"}}
+{"data":{"identifier":"htmlpalette-imports","script":"import {htmlmode} from \"@kahi-ui/framework\";","syntax":"javascript","title":"htmlpalette Imports"}}
