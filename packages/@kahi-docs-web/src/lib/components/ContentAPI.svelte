@@ -57,6 +57,12 @@
             </Tab.Group>
         {/if}
 
+        <!--
+            TODO: All the CSS Custom Properties need to completely reevaluated
+            post `0.6.0` release. Since on release they will be out-of-date
+        -->
+
+        <!--
         {#if has_references($content.references.custom_properties)}
             <Tab.Group logic_id="content-api-custom-properties">
                 <Tab.Label palette="accent">Custom Properties</Tab.Label>
@@ -69,5 +75,6 @@
                 </Tab.Section>
             </Tab.Group>
         {/if}
+        -->
     </Tab.Container>
 {/if}
