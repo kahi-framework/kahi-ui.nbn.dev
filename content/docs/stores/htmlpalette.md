@@ -14,17 +14,17 @@
         Code,
         Heading,
         Text,
-        htmlpalette,
+        htmlmode,
     } from "@kahi-ui/framework";
 
-    const palette_store = htmlpalette();
+    const mode_store = htmlmode();
 </script>
 
 <Heading>Application Global Palette</Heading>
 
 <Text>
     <Code>data-palette</Code>: <Code>
-        {$palette_store}
+        {$mode_store}
     </Code>
 </Text>
 ```
@@ -32,7 +32,7 @@
 ## Imports
 
 ```javascript {title="htmlpalette Imports"}
-import {htmlpalette} from "@kahi-ui/framework";
+import {htmlmode} from "@kahi-ui/framework";
 ```
 
 ## Compatibility

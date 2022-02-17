@@ -409,6 +409,7 @@ You can change make the `Button` a `<a>` by passing the `href` property, or a `<
     <Button>This is a DEFAULT Button!</Button>
 
     <Button
+        is="a"
         href="https://google.com"
         target="_blank"
         rel="noopener noreferrer"
@@ -416,18 +417,23 @@ You can change make the `Button` a `<a>` by passing the `href` property, or a `<
         This is an ANCHOR Button!
     </Button>
 
-    <Button for="button-types-label">
+    <Button is="label" for="button-types-label">
         This is a LABEL Button!
     </Button>
 
-    <Button value="This is an INPUT Button!" />
+    <Button
+        is="input"
+        value="This is an INPUT Button!"
+    />
 
     <Button
+        is="input"
         type="submit"
         value="This is a SUBMIT Button!"
     />
 
     <Button
+        is="input"
         type="reset"
         value="This is a RESET Button!"
     />

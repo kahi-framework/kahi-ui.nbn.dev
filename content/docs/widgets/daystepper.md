@@ -146,7 +146,7 @@ You can set maximum and minimum range of steppable days via the `maximum` / `min
 
 > **DEPRECATED**: This feature will be renamed from `step` -> `steps` in `v0.6.0` to consolidate API surface.
 
-You can control how many days the buttons increment / decrement via the `step` property.
+You can control how many days the buttons increment / decrement via the `steps` property.
 
 ```svelte {title="DayStepper Step" mode="repl"}
 <script>
@@ -155,7 +155,7 @@ You can control how many days the buttons increment / decrement via the `step` p
     const value = "2021-11-10[u-ca=gregory]";
 </script>
 
-<DayStepper palette="accent" step={3} {value} />
+<DayStepper palette="accent" steps={3} {value} />
 ```
 
 ## Custom Format
