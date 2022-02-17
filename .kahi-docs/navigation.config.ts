@@ -18,7 +18,7 @@ export default define_navigation({
         {
             text: "Framework",
             items: [
-                {href: "/docs/framework/getting-started"},
+                {href: "/docs/framework/getting-started", badge: "UPDATED"},
                 {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
@@ -46,7 +46,7 @@ export default define_navigation({
             items: [
                 {href: "/docs/typography/blockquote"},
                 {href: "/docs/typography/code"},
-                {href: "/docs/typography/heading", badge: "UPDATED"},
+                {href: "/docs/typography/heading"},
                 {href: "/docs/typography/text", badge: "UPDATED"},
             ],
         },
@@ -64,7 +64,7 @@ export default define_navigation({
                 {href: "/docs/display/datetimestamp"},
                 {href: "/docs/display/kbd", badge: "NEW"},
                 {href: "/docs/display/list"},
-                {href: "/docs/display/table"},
+                {href: "/docs/display/table", badge: "UPDATED"},
                 {href: "/docs/display/timestamp"},
             ],
         },
@@ -91,13 +91,13 @@ export default define_navigation({
             text: "Interactables",
             items: [
                 {href: "/docs/interactables/button", badge: "UPDATED"},
-                {href: "/docs/interactables/check", badge: "UPDATED"},
+                {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/filedropinput"},
                 {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/hiddeninput"},
-                {href: "/docs/interactables/numberinput", badge: "UPDATED"},
-                {href: "/docs/interactables/radio", badge: "UPDATED"},
-                {href: "/docs/interactables/switch", badge: "UPDATED"},
+                {href: "/docs/interactables/numberinput"},
+                {href: "/docs/interactables/radio"},
+                {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput", badge: "UPDATED"},
             ],
         },
@@ -121,7 +121,7 @@ export default define_navigation({
             text: "Layouts",
             items: [
                 {href: "/docs/layouts/center"},
-                {href: "/docs/layouts/container", badge: "UPDATED"},
+                {href: "/docs/layouts/container"},
                 {href: "/docs/layouts/divider"},
                 {href: "/docs/layouts/grid"},
                 {href: "/docs/layouts/group", badge: "UPDATED"},

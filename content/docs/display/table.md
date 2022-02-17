@@ -224,7 +224,7 @@ types=["<length>"]
 
 > **NOTE**: Introduced feature in `v0.4.4`.
 
-You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
+You can use the `span_x` / `span_y` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
 
 ```svelte {title="Table Spans" mode="repl"}
 <script>
@@ -234,12 +234,12 @@ You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.H
 <Table.Container>
     <Table.Header>
         <Table.Row>
-            <Table.Heading colspan={2}>
-                colspan 2 x rowspan 1
+            <Table.Heading span_x={2}>
+                span_x 2 x span_y 1
             </Table.Heading>
 
             <Table.Heading>
-                colspan 1 x rowspan 1
+                span_x 1 x span_y 1
             </Table.Heading>
         </Table.Row>
     </Table.Header>
@@ -247,25 +247,25 @@ You can use the `colspan` / `rowspan` properties on `<Table.Column>` / `<Table.H
     <Table.Section>
         <Table.Row>
             <Table.Column>
-                colspan 1 x rowspan 1
+                span_x 1 x span_y 1
             </Table.Column>
 
-            <Table.Column rowspan={2}>
-                colspan 1 x rowspan 2
+            <Table.Column span_y={2}>
+                span_x 1 x span_y 2
             </Table.Column>
         </Table.Row>
 
         <Table.Row>
             <Table.Column>
-                colspan 1 x rowspan 1
+                span_x 1 x span_y 1
             </Table.Column>
         </Table.Row>
     </Table.Section>
 
     <Table.Footer>
         <Table.Row>
-            <Table.Heading colspan={3}>
-                colspan 3 x rowspan 1
+            <Table.Heading span_x={3}>
+                span_x 3 x span_y 1
             </Table.Heading>
         </Table.Row>
     </Table.Footer>

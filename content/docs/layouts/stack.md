@@ -44,6 +44,8 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.2.0`.
 
+> **WARNING**: This feature was renamed from `<Stack>` to `<Stack.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children.
 
 ```svelte {title="Stack Preview" mode="repl"}
@@ -59,8 +61,6 @@ types=["{}"]
 ```
 
 ## Imports
-
-> **WARNING**: This feature was renamed from `<Stack>` to `<Stack.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 ```svelte {title="Stack Imports"}
 <script>

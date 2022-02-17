@@ -64,6 +64,8 @@ types=["{}"]
 
 > **NOTE**: Introduced feature in `v0.2.0`.
 
+> **WARNING**: This feature was renamed from `<Mosaic>` to `<Mosaic.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 `Mosaic` is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.
 
 ```svelte {title="Mosaic Preview" mode="repl"}
@@ -95,8 +97,6 @@ types=["{}"]
 ```
 
 ## Imports
-
-> **WARNING**: This feature was renamed from `<Mosaic>` to `<Mosaic.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 ```svelte {title="Mosaic Imports"}
 <script>
