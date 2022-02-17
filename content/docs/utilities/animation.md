@@ -29,7 +29,7 @@ types=["number", "string"]
 name="variation"
 description="Controls if the selected `animation` is playing or paused."
 default="play"
-types=["pause, "play"]
+types=["pause", "play"]
 
 [[events.Animation]]
 name="animationend"

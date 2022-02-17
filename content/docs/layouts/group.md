@@ -6,17 +6,17 @@ types=["vertical"]
 
 [[properties.Group]]
 name="spacing"
-description="Adjusts the negative visual spacing between child items in the `Group`, when `variation="stacked"`."
+description="Adjusts the negative visual spacing between child items in the `Group`, when `variation=\"stacked\"`."
 types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Group]]
 name="spacing_x"
-description="Adjusts the negative horizontal visual spacing between child items in the `Group`, when `variation="stacked"`."
+description="Adjusts the negative horizontal visual spacing between child items in the `Group`, when `variation=\"stacked\"`."
 types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Group]]
 name="spacing_y"
-description="Adjusts the negative horizontal visual spacing between child items in the `Group`, when `variation="stacked"`."
+description="Adjusts the negative horizontal visual spacing between child items in the `Group`, when `variation=\"stacked\"`."
 types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Group]]
