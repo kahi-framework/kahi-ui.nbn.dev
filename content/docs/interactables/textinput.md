@@ -303,43 +303,43 @@ You can change the color palette of the `TextInput` via the `palette` property.
     variation="wrap"
 >
     <TextInput
-        characters="20"
+        span_x="20"
         value="This is a DEFAULT TextInput"
     />
 
     <TextInput
         palette="accent"
-        characters="20"
+        span_x="20"
         value="This is a ACCENT TextInput"
     />
 
     <TextInput
         palette="dark"
-        characters="20"
+        span_x="20"
         value="This is a DARK TextInput"
     />
 
     <TextInput
         palette="light"
-        characters="20"
+        span_x="20"
         value="This is a LIGHT TextInput"
     />
 
     <TextInput
         palette="alert"
-        characters="20"
+        span_x="20"
         value="This is a ALERT TextInput"
     />
 
     <TextInput
         palette="affirmative"
-        characters="20"
+        span_x="20"
         value="This is a AFFIRMATIVE TextInput"
     />
 
     <TextInput
         palette="negative"
-        characters="20"
+        span_x="20"
         value="This is a NEGATIVE TextInput"
     />
 </Stack>
@@ -366,37 +366,37 @@ You can change the size of the `TextInput` via the `sizing` property.
     variation="wrap"
 >
     <TextInput
-        characters="20"
+        span_x="20"
         value="This is a DEFAULT TextInput"
     />
 
     <TextInput
         sizing="tiny"
-        characters="20"
+        span_x="20"
         value="This is a TINY TextInput"
     />
 
     <TextInput
         sizing="small"
-        characters="20"
+        span_x="20"
         value="This is a SMALL TextInput"
     />
 
     <TextInput
         sizing="medium"
-        characters="20"
+        span_x="20"
         value="This is a MEDIUM TextInput"
     />
 
     <TextInput
         sizing="large"
-        characters="20"
+        span_x="20"
         value="This is a LARGE TextInput"
     />
 
     <TextInput
         sizing="huge"
-        characters="20"
+        span_x="20"
         value="This is a HUGE TextInput"
     />
 </Stack>
@@ -422,49 +422,49 @@ You can alter the `TextInput` render as an opaque block via the `variation` prop
 >
     <TextInput
         variation="block"
-        characters="20"
+        span_x="20"
         value="This is a DEFAULT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="accent"
-        characters="20"
+        span_x="20"
         value="This is a ACCENT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="dark"
-        characters="20"
+        span_x="20"
         value="This is a DARK TextInput"
     />
 
     <TextInput
         variation="block"
         palette="light"
-        characters="20"
+        span_x="20"
         value="This is a LIGHT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="alert"
-        characters="20"
+        span_x="20"
         value="This is a ALERT TextInput"
     />
 
     <TextInput
         variation="block"
         palette="affirmative"
-        characters="20"
+        span_x="20"
         value="This is a AFFIRMATIVE TextInput"
     />
 
     <TextInput
         variation="block"
         palette="negative"
-        characters="20"
+        span_x="20"
         value="This is a NEGATIVE TextInput"
     />
 </Stack>
@@ -484,7 +484,7 @@ You can change the appearance of the `TextInput` to be flush with the rest of th
 Input some text:
 <TextInput
     variation="flush"
-    characters="20"
+    span_x="20"
     value="This is a FLUSH TextInput"
 />
 ```
@@ -509,19 +509,19 @@ You can change your input type between `email`, `password`, `search`, `text` **(
 >
     <TextInput
         type="email"
-        characters="20"
+        span_x="20"
         value="sample@sample.org"
     />
 
     <TextInput
         type="password"
-        characters="20"
+        span_x="20"
         value="abcdef1002"
     />
 
     <TextInput
         type="url"
-        characters="20"
+        span_x="20"
         value="https://google.com"
     />
 </Stack>

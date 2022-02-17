@@ -266,7 +266,7 @@ You can use the `span_x` / `span_y` properties on `<Table.Column>` / `<Table.Hea
 
     <Table.Footer>
         <Table.Row>
-            <Table.Heading colspan={3}>
+            <Table.Heading span_x={3}>
                 span_x 3 x span_y 1
             </Table.Heading>
         </Table.Row>
