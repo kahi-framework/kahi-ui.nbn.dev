@@ -44,6 +44,8 @@ types=["{}"]
 
 > **NOTE**: New since `v0.2.0`.
 
+> **DEPRECATED**: This feature will be renamed from `<Mosaic>` -> `<Mosaic.Container>` in `v0.6.0` to facilitate per-item customization.
+
 `Mosaic` is a layout primitive for setting up a mosaic of items organized to displaying as many child items at a certain size as possible.
 
 ```svelte {title="Mosaic Preview" mode="repl"}

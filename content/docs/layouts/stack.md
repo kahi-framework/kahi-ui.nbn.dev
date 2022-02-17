@@ -44,6 +44,8 @@ types=["{}"]
 
 > **NOTE**: New since `v0.2.0`.
 
+> **DEPRECATED**: This feature will be renamed from `<Stack>` -> `<Stack.Container>` in `v0.6.0` to facilitate per-item customization.
+
 `Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children. With optional wrapping.
 
 ```svelte {title="Stack Preview" mode="repl"}

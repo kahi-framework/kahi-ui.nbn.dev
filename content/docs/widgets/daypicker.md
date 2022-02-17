@@ -84,6 +84,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: New since `v0.4.10`.
 
+> **DEPRECATED**: This feature will only accept ISO 8601 calendar datestamps in `v0.6.0`.
+
 `DayPicker` is a Widget that displays a calendar-style grid of days that a user can select from.
 
 ```svelte {title="DayPicker Preview" mode="repl"}

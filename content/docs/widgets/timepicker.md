@@ -194,6 +194,8 @@ You can disable all interactivity via the `disabled` property.
 
 > **NOTE**: By default, the current time is used.
 
+> **DEPRECATED**: This feature will be switched from supporting singular strings (_`string`_) to string arrays (_`string[]`_) in `v0.6.0`.
+
 You can select a specific timestamp to be highlighted as outlines via the `highlight` property.
 
 ```svelte {title="TimePicker Highlight" mode="repl"}

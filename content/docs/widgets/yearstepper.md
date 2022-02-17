@@ -65,6 +65,8 @@ types=["CustomEvent<void>"]
 
 > **NOTE**: New since `v0.4.10`.
 
+> **DEPRECATED**: This feature will only accept ISO 8601 calendar datestamps in `v0.6.0`.
+
 `YearStepper` is a Widget that lets users increment / decrement the currently provided year by a set number.
 
 ```svelte {title="YearStepper Preview" mode="repl"}
@@ -132,7 +134,9 @@ You can set maximum and minimum range of steppable years via the `maximum` / `mi
 
 ## Step
 
-You can control how many years the buttons increment / decrement via the `step` property.
+> **DEPRECATED**: This feature will be renamed from `step` -> `steps` in `v0.6.0` to consolidate API surface.
+
+You can control how many years the buttons increment / decrement via the `steps` property.
 
 ```svelte {title="YearStepper Step" mode="repl"}
 <script>
@@ -141,7 +145,7 @@ You can control how many years the buttons increment / decrement via the `step` 
     const value = "2024-01-01[u-ca=gregory]";
 </script>
 
-<YearStepper palette="accent" step={3} {value} />
+<YearStepper palette="accent" steps={3} {value} />
 ```
 
 ## Custom Format

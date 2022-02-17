@@ -565,6 +565,8 @@ P R E F O R M A T T E D T E X T
 
 ## Other Tags
 
+> **DEPRECATED**: The feature `<Text is="kbd">` will be elevated to a standalone `<Kbd>` Component in `v0.6.0`.
+
 You can also access most of the other HTML text tags via the `is` property.
 
 ```svelte {title="Text Other Tags" mode="repl"}

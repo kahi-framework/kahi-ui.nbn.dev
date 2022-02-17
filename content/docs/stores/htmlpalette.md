@@ -2,6 +2,8 @@
 
 > **NOTE**: New since `v0.2.3`.
 
+> **DEPRECATED**: This feature will be renamed `htmlpalette` -> `htmlmode` in `v0.6.0`.
+
 `htmlpalette` is a [Svelte Store](https://svelte.dev/docs#svelte_store), which is bound to `<html data-palette="XXX">` and returns the changes to that attribute. Defaulting to `"light"` if not set.
 
 > **NOTE**: Click the color scheme button in the Navigation topbar to see changes.
@@ -12,27 +14,25 @@
         Code,
         Heading,
         Text,
-        htmlpalette,
+        htmlmode,
     } from "@kahi-ui/framework";
 
-    const palette_store = htmlpalette();
+    const mode_store = htmlmode();
 </script>
 
 <Heading>Application Global Palette</Heading>
 
 <Text>
     <Code>data-palette</Code>: <Code>
-        {$palette_store}
+        {$mode_store}
     </Code>
 </Text>
 ```
 
 ## Imports
 
-> **DEPRECATED**: This Store will be renamed `htmlpalette` -> `htmlmode` in `v0.6.0`.
-
 ```javascript {title="htmlpalette Imports"}
-import {htmlpalette} from "@kahi-ui/framework";
+import {htmlmode} from "@kahi-ui/framework";
 ```
 
 ## Compatibility

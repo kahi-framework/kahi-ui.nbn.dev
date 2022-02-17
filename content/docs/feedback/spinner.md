@@ -39,6 +39,8 @@ types=["<length>"]
 
 > **NOTE**: New since `v0.2.0`.
 
+> **DEPRECATED**: This feature will be removed for `<Progress shape="circle" value={undefined}>` in `v0.6.0` due to duplicate functionality.
+
 `Spinner` is an indicator used to tell the end-user that the Web Application is loading something in the background.
 
 ```svelte {title="Spinner Preview" mode="repl"}

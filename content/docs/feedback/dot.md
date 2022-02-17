@@ -113,6 +113,8 @@ You can change the color palette of the `Dot` via the `palette` property.
 
 ## Animation
 
+> **DEPRECATED**: This feature will be removed in favor of a standalone `Animation` Component in `v0.6.0`.
+
 You can have the `Dot` perform animations to grab the end-user's attention via the `animation` property.
 
 ```svelte {title="Dot Animation" mode="repl"}

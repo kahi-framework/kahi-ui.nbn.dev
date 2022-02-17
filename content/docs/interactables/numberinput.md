@@ -105,43 +105,43 @@ You can change the color palette of the `NumberInput` via the `palette` property
     variation="wrap"
 >
     <NumberInput
-        characters="20"
+        span_x="20"
         placeholder="This is a DEFAULT NumberInput"
     />
 
     <NumberInput
         palette="accent"
-        characters="20"
+        span_x="20"
         placeholder="This is a ACCENT NumberInput"
     />
 
     <NumberInput
         palette="dark"
-        characters="20"
+        span_x="20"
         placeholder="This is a DARK NumberInput"
     />
 
     <NumberInput
         palette="light"
-        characters="20"
+        span_x="20"
         placeholder="This is a LIGHT NumberInput"
     />
 
     <NumberInput
         palette="alert"
-        characters="20"
+        span_x="20"
         placeholder="This is a ALERT NumberInput"
     />
 
     <NumberInput
         palette="affirmative"
-        characters="20"
+        span_x="20"
         placeholder="This is a AFFIRMATIVE NumberInput"
     />
 
     <NumberInput
         palette="negative"
-        characters="20"
+        span_x="20"
         placeholder="This is a NEGATIVE NumberInput"
     />
 </Stack>
@@ -168,37 +168,37 @@ You can change the size of the `NumberInput` via the `sizing` property.
     variation="wrap"
 >
     <NumberInput
-        characters="20"
+        span_x="20"
         placeholder="This is a DEFAULT NumberInput"
     />
 
     <NumberInput
         sizing="tiny"
-        characters="20"
+        span_x="20"
         placeholder="This is a TINY NumberInput"
     />
 
     <NumberInput
         sizing="small"
-        characters="20"
+        span_x="20"
         placeholder="This is a SMALL NumberInput"
     />
 
     <NumberInput
         sizing="medium"
-        characters="20"
+        span_x="20"
         placeholder="This is a MEDIUM NumberInput"
     />
 
     <NumberInput
         sizing="large"
-        characters="20"
+        span_x="20"
         placeholder="This is a LARGE NumberInput"
     />
 
     <NumberInput
         sizing="huge"
-        characters="20"
+        span_x="20"
         placeholder="This is a HUGE NumberInput"
     />
 </Stack>
@@ -224,49 +224,49 @@ You can alter the `NumberInput` render as an opaque block via the `variation` pr
 >
     <NumberInput
         variation="block"
-        characters="20"
+        span_x="20"
         placeholder="This is a DEFAULT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="accent"
-        characters="20"
+        span_x="20"
         placeholder="This is a ACCENT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="dark"
-        characters="20"
+        span_x="20"
         placeholder="This is a DARK NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="light"
-        characters="20"
+        span_x="20"
         placeholder="This is a LIGHT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="alert"
-        characters="20"
+        span_x="20"
         placeholder="This is a ALERT NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="affirmative"
-        characters="20"
+        span_x="20"
         placeholder="This is a AFFIRMATIVE NumberInput"
     />
 
     <NumberInput
         variation="block"
         palette="negative"
-        characters="20"
+        span_x="20"
         placeholder="This is a NEGATIVE NumberInput"
     />
 </Stack>
@@ -284,7 +284,7 @@ You can change the appearance of the `NumberInput` to be flush with the rest of 
 Input some text:
 <NumberInput
     variation="flush"
-    characters="20"
+    span_x="20"
     placeholder="This is a FLUSH NumberInput"
 />
 ```
@@ -303,12 +303,14 @@ You can set the `NumberInput` to show placeholder text whenever there is no curr
 
 ## Field Character Size
 
-You can set how wide your `NumberInput` to an approximation of character width via the `characters` property.
+> **DEPRECATED**: This feature will be renamed from `characters` -> `span_x` in `v0.6.0` to consolidate API surface.
+
+You can set how wide your `NumberInput` to an approximation of character width via the `span_x` property.
 
 ```svelte {title="NumberInput Field Character Size" mode="repl"}
 <script>
     import {NumberInput} from "@kahi-ui/framework";
 </script>
 
-<NumberInput characters="2" />
+<NumberInput span_x="2" />
 ```
