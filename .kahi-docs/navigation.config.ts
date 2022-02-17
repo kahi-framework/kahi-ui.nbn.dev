@@ -120,6 +120,7 @@ export default define_navigation({
         {
             text: "Layouts",
             items: [
+                {href: "/docs/layouts/article", badge: "NEW"},
                 {href: "/docs/layouts/center"},
                 {href: "/docs/layouts/container"},
                 {href: "/docs/layouts/divider"},
