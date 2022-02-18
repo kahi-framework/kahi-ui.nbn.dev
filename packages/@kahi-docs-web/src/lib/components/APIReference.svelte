@@ -38,7 +38,7 @@
                         </Table.Column>
 
                         <Table.Column>
-                            <Stack
+                            <Stack.Container
                                 orientation="horizontal"
                                 alignment_x="right"
                                 spacing="small"
@@ -53,7 +53,7 @@
                                         {/if}
                                     </Code>
                                 {/each}
-                            </Stack>
+                            </Stack.Container>
                         </Table.Column>
                     </Table.Row>
                 {/each}

@@ -22,21 +22,21 @@
 
 <Divider margin_y="large" />
 
-<Stack
+<Stack.Container
     class="content-metadata"
     orientation={["widescreen:horizontal", "desktop:horizontal", "tablet:horizontal"]}
     alignment="center"
     spacing="medium"
     width="100"
 >
-    <Figure variation="icon" size="medium">
+    <Figure size="icon-medium">
         <Clock />
     </Figure>
 
     <div>
         <Heading
             is="h5"
-            align="center"
+            alignment_x="center"
             max_width={["widescreen:content-max", "desktop:content-max", "tablet:content-max"]}
         >
             Last Modified
@@ -48,9 +48,9 @@
     <Spacer hidden="mobile" />
 
     <div>
-        <AppAnchor is="button" href={_edit_url} palette="accent" size="medium" variation="clear">
+        <AppAnchor is="button" href={_edit_url} palette="accent" sizing="medium" variation="clear">
             View page in repository
             <ExternalLink />
         </AppAnchor>
     </div>
-</Stack>
+</Stack.Container>

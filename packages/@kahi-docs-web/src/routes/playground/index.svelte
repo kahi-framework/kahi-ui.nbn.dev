@@ -113,7 +113,7 @@
 
 <StaticLayout>
     <Box padding="small">
-        <Stack
+        <Stack.Container
             alignment_x={["center", "desktop:right", "widescreen:right"]}
             orientation="horizontal"
         >
@@ -167,7 +167,7 @@
                     <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
                 </Menu.Button>
             </Menu.Container>
-        </Stack>
+        </Stack.Container>
     </Box>
 
     <REPLSplit {mode} {orientation} bind:value />

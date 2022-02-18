@@ -1,16 +1,18 @@
 <script>
-    import "@kahi-ui/framework/dist/kahi-ui.framework.css";
     import "prismjs/themes/prism-tomorrow.css";
 
+    import "@kahi-ui/framework/dist/kahi-ui.framework.css";
+    import "@kahi-ui/framework/dist/kahi-ui.theme.default.css";
+
     import {browser} from "$app/env";
-    import {htmlpalette} from "@kahi-ui/framework";
+    import {htmlmode} from "@kahi-ui/framework";
 
     import {preferencetheme} from "@kahi-docs/shared";
 
     import GlobalPrerender from "../lib/components/GlobalPrerender.svelte";
 
-    const _htmlpalette = htmlpalette();
-    $: if (browser) $_htmlpalette = $preferencetheme ?? "";
+    const _htmlmode = htmlmode();
+    $: if (browser) $_htmlmode = $preferencetheme ?? "";
 </script>
 
 <GlobalPrerender />

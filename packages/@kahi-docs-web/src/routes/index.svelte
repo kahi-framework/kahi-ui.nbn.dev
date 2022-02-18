@@ -50,7 +50,7 @@
                 is="button"
                 href="https://github.com/novacbn/kahi-ui"
                 palette="light"
-                size="large"
+                sizing="large"
                 variation="clear"
             >
                 <Code />
@@ -61,7 +61,7 @@
                 is="button"
                 href="/docs/framework/getting-started"
                 palette="accent"
-                size="large"
+                sizing="large"
                 no_handle
                 prefetch
             >
@@ -71,15 +71,15 @@
         </Hero.Footer>
     </Hero.Container>
 
-    <Container viewport="widescreen" padding_y="huge">
-        <Heading is="h2" align="center" variation="headline" padding_x="mobile:tiny">
+    <Container width="100" max_width="widescreen" padding_y="huge">
+        <Heading is="h3" alignment_x="center" variation="block" padding_x="mobile:tiny">
             Straight-forward. Minimal Markup.
         </Heading>
 
         <Text
-            align="center"
-            size="tiny"
-            variation="headline"
+            alignment_x="center"
+            sizing="nano"
+            variation="block"
             margin_top="small"
             margin_bottom="large"
         >
@@ -94,14 +94,14 @@
 
         <Divider palette="accent" margin_y="huge" />
 
-        <Heading is="h2" align="center" variation="headline" padding_x="mobile:tiny">
+        <Heading is="h3" alignment_x="center" variation="block" padding_x="mobile:tiny">
             Features expected of a modern UI.
         </Heading>
 
         <Text
-            align="center"
-            size="tiny"
-            variation="headline"
+            alignment_x="center"
+            sizing="nano"
+            variation="block"
             margin_top="small"
             margin_bottom="large"
         >
@@ -123,7 +123,7 @@
                 </Card.Header>
 
                 <Card.Section padding_bottom="medium">
-                    <Text size="medium">
+                    <Text sizing="medium">
                         Designed with <Text is="strong">Composability</Text> in mind, author new Components
                         <Text is="strong">easily</Text>.
                     </Text>
@@ -141,7 +141,7 @@
                 </Card.Header>
 
                 <Card.Section padding_bottom="medium">
-                    <Text size="medium">
+                    <Text sizing="medium">
                         Created using <Text is="strong">Typescript</Text>, so a pleasent IDE
                         experience
                         <Text is="strong">comes out-of-box</Text>.
@@ -160,7 +160,7 @@
                 </Card.Header>
 
                 <Card.Section padding_bottom="medium">
-                    <Text size="medium">
+                    <Text sizing="medium">
                         Supports automatic <Text is="strong">Dark Mode</Text>, or your choice from
                         the
                         <Text is="strong">built-in palette</Text>.
@@ -179,7 +179,7 @@
                 </Card.Header>
 
                 <Card.Section padding_bottom="medium">
-                    <Text size="medium">
+                    <Text sizing="medium">
                         Most logic is embedded within <Text is="strong">HTML / CSS</Text>, with <Text
                             is="strong"
                         >

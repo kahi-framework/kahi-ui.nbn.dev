@@ -128,7 +128,7 @@
                 {#if results}
                     <Card.Section>
                         <Scrollable bind:element={scrollable_element} max_height="viewport-50">
-                            <Stack spacing="small">
+                            <Stack.Container spacing="small">
                                 {#each results as result, index (result.identifier)}
                                     <Clickable.Container>
                                         <Tile.Container
@@ -157,7 +157,7 @@
                                         </Tile.Container>
                                     </Clickable.Container>
                                 {/each}
-                            </Stack>
+                            </Stack.Container>
                         </Scrollable>
                     </Card.Section>
                 {/if}

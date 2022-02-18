@@ -1,3 +1,21 @@
+<script context="module" lang="ts">
+    import type {PROPERTY_PALETTE} from "@kahi-ui/framework";
+
+    const BADGE_PALETTES: Record<string, PROPERTY_PALETTE | undefined> = {
+        deprecated: "negative",
+
+        new: "affirmative",
+
+        updated: "accent",
+    };
+
+    function get_palette(text: string): PROPERTY_PALETTE {
+        text = text.toLowerCase();
+
+        return BADGE_PALETTES[text] ?? "neutral";
+    }
+</script>
+
 <script lang="ts">
     /**
      * TODO: Detect page update and scroll menu to new page if applicable
@@ -28,7 +46,7 @@
 </script>
 
 <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
-    <Button for="aside-navigation" size="huge">
+    <Button for="aside-navigation" sizing="huge">
         <MenuIcon />
     </Button>
 </Position>
@@ -47,39 +65,35 @@
         alignment_x="left"
         contents={["desktop", "widescreen"]}
     >
-        <Aside.Container variation="sticky">
+        <Aside.Container palette="neutral" variation="sticky">
             <!-- TODO: Margin modifier is temp until Framework update to fix it -->
             <Aside.Section margin_bottom="none">
                 <Menu.Container sizing="small">
                     {#each $navigation as menu (menu.text)}
-                        <Menu.Divider>
+                        <Menu.Heading>
                             {menu.text}
+                        </Menu.Heading>
 
-                            <svelte:fragment slot="sub-menu">
-                                <Menu.SubMenu>
-                                    {#each menu.items as anchor (anchor.href)}
-                                        <Menu.Item>
-                                            <AppAnchor href={anchor.href} prefetch>
-                                                {anchor.text}
+                        <Menu.Section>
+                            {#each menu.items as anchor (anchor.href)}
+                                <AppAnchor class="menu--item" href={anchor.href} prefetch>
+                                    {anchor.text}
 
-                                                {#if anchor.badge}
-                                                    <Spacer is="span" />
-                                                    <Badge palette="accent" shape="rounded">
-                                                        {anchor.badge}
-                                                    </Badge>
-                                                {/if}
-                                            </AppAnchor>
-                                        </Menu.Item>
-                                    {/each}
-                                </Menu.SubMenu>
-                            </svelte:fragment>
-                        </Menu.Divider>
+                                    {#if anchor.badge}
+                                        <Spacer is="span" />
+                                        <Badge palette={get_palette(anchor.badge)} radius="massive">
+                                            {anchor.badge}
+                                        </Badge>
+                                    {/if}
+                                </AppAnchor>
+                            {/each}
+                        </Menu.Section>
                     {/each}
                 </Menu.Container>
             </Aside.Section>
 
             <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
-                <Overlay.Button variation="clear" size="huge">
+                <Overlay.Button variation="clear" sizing="huge">
                     <X />
                 </Overlay.Button>
             </Position>
@@ -111,7 +125,7 @@
 
     @media (min-width: 768px) {
         :global(.aside-navigation .aside) {
-            padding-top: 4.4rem;
+            padding-top: 69px;
         }
     }
 </style>

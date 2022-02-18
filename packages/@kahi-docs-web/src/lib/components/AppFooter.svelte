@@ -7,23 +7,25 @@
 </script>
 
 <footer class="box app-footer" data-padding-y="huge">
-    <Stack alignment_x="center">
-        <AppAnchor href="https://github.com/novacbn/kahi-ui">
+    <Stack.Container alignment_x="center">
+        <AppAnchor class="anchor" href="https://github.com/novacbn/kahi-ui">
             <Heading is="h2">Kahi UI</Heading>
         </AppAnchor>
 
-        <Text align="center">
+        <Text alignment_x="center">
             <AppAnchor href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}">
                 <Divider margin_y="tiny" palette="accent">
                     v{PACKAGE_VERSION}
                 </Divider>
             </AppAnchor>
 
-            Made and developed by
+            Maintained by
             <br />
-            <AppAnchor href="https://github.com/novacbn" palette="accent">NovacBN</AppAnchor>
+            <AppAnchor class="anchor" href="https://github.com/novacbn" palette="accent">
+                NovacBN
+            </AppAnchor>
         </Text>
-    </Stack>
+    </Stack.Container>
 </footer>
 
 <style>

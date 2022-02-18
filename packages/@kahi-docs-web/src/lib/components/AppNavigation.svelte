@@ -80,9 +80,9 @@
         <TextInput
             type="search"
             placeholder="[CTRL+/] Search"
-            size="small"
+            sizing="tiny"
             variation="block"
-            align="center"
+            alignment_x="center"
             max_width="prose"
             on:focusin={on_search_active}
         />
@@ -95,26 +95,22 @@
             dismissible
             bind:logic_state
         >
-            <Popover.Button palette="light" variation="clear" size="huge">
+            <Popover.Button palette="light" variation="clear" sizing="huge">
                 <MoreVertical />
             </Popover.Button>
 
             <Popover.Section alignment_x="left" spacing="small">
-                <Box elevation="high" padding="medium" shape="rounded">
+                <Box elevation="high" padding="medium" radius="small">
                     <Menu.Container>
                         {#each LINKS_APPLICATION as item (item.href)}
-                            <Menu.Item>
-                                <AppAnchor href={item.href} no_handle prefetch>
-                                    <svelte:component this={item.icon} />
-                                    {item.text}
-                                </AppAnchor>
-                            </Menu.Item>
+                            <AppAnchor class="menu--item" href={item.href} no_handle prefetch>
+                                <svelte:component this={item.icon} />
+                                {item.text}
+                            </AppAnchor>
                         {/each}
 
                         {#if browser}
-                            <Menu.Item>
-                                <ThemeButton has_text />
-                            </Menu.Item>
+                            <ThemeButton class="menu--item" has_text />
 
                             <Menu.Button hidden={!$_search_viewports} on:click={on_search_active}>
                                 <Search />
@@ -129,21 +125,17 @@
         <Menu.Container
             hidden={["mobile", "tablet", "desktop"]}
             orientation="horizontal"
-            sizing="small"
+            sizing="tiny"
         >
             {#each LINKS_APPLICATION as item (item.href)}
-                <Menu.Item>
-                    <AppAnchor href={item.href} no_handle prefetch>
-                        <svelte:component this={item.icon} />
-                        {item.variation === "flush" ? "" : item.text}
-                    </AppAnchor>
-                </Menu.Item>
+                <AppAnchor class="menu--item" href={item.href} no_handle prefetch>
+                    <svelte:component this={item.icon} />
+                    {item.variation === "flush" ? "" : item.text}
+                </AppAnchor>
             {/each}
 
             {#if browser}
-                <Menu.Item>
-                    <ThemeButton />
-                </Menu.Item>
+                <ThemeButton class="menu--item" />
             {/if}
         </Menu.Container>
     </Omni.Footer>
@@ -163,7 +155,7 @@
         top: 0;
 
         width: 100%;
-        height: 4.4rem;
+        height: 69px;
     }
 
     :global(.app-navigation) :global(header) :global(small) {

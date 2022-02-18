@@ -43,7 +43,7 @@
 />
 
 <Position class="repl-embed-overlay" variation={["container", "action"]}>
-    <Box palette="dark" shape="rounded" margin="medium" padding="small">
+    <Box palette="dark" variation="borders" radius="small" margin="medium" padding="small">
         <Menu.Container orientation={["desktop:horizontal", "widescreen:horizontal"]} sizing="tiny">
             <Menu.Anchor href={_href} target="_blank" palette="accent">
                 <ExternalLink />

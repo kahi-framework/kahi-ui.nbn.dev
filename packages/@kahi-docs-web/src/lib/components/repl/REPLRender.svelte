@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-    import {Wave} from "@kahi-ui/framework";
+    import {Dot, Ellipsis} from "@kahi-ui/framework";
     import type {IPipelineSvelteStore} from "@novacbn/svelte-pipeline";
     import type {SvelteComponent} from "svelte";
     import {createEventDispatcher, onMount} from "svelte";
@@ -80,7 +80,9 @@
 
 {#if !is_mounted}
     <REPLOverlay {style}>
-        <Wave />
+        <Ellipsis animation="bounce" iterations="5">
+            <Dot palette="inverse" />
+        </Ellipsis>
     </REPLOverlay>
 {/if}
 
