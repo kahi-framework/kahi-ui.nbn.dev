@@ -190,10 +190,6 @@ types=["{}"]
 </Article>
 ```
 
-## Table
-
-...
-
 ## Small
 
 ```svelte {title="Article Small" mode="repl"}
@@ -205,6 +201,10 @@ types=["{}"]
     <small>I am small text!</small>
 </Article>
 ```
+
+## Table
+
+...
 
 ## Elements
 

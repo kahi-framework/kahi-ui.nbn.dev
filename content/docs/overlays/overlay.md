@@ -905,9 +905,10 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
             <Tile.Footer>
                 <Button
                     palette="negative"
-                    data-size="small"
+                    variation="clear"
+                    sizing="small"
                 >
-                    X
+                    x
                 </Button>
             </Tile.Footer>
         </Tile.Container>
@@ -930,9 +931,10 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
             <Tile.Footer>
                 <Button
                     palette="negative"
-                    data-size="small"
+                    variation="clear"
+                    sizing="small"
                 >
-                    X
+                    x
                 </Button>
             </Tile.Footer>
         </Tile.Container>
@@ -981,9 +983,10 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
             <Tile.Footer>
                 <Button
                     palette="negative"
-                    data-size="small"
+                    variation="clear"
+                    sizing="small"
                 >
-                    X
+                    x
                 </Button>
             </Tile.Footer>
         </Tile.Container>
@@ -1006,9 +1009,10 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
             <Tile.Footer>
                 <Button
                     palette="negative"
-                    data-size="small"
+                    variation="clear"
+                    sizing="small"
                 >
-                    X
+                    x
                 </Button>
             </Tile.Footer>
         </Tile.Container>
