@@ -10,6 +10,8 @@ npm install @kahi-ui/framework
 
 ## Importing Stylesheet
 
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 First if your toolchain supports it, import the required CSS files from `@kahi-ui/framework/dist`:
 
 ```javascript
