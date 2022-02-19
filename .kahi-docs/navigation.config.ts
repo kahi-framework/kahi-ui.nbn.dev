@@ -4,7 +4,11 @@ export default define_navigation({
     docs: [
         {
             text: "Resources",
-            items: [{href: "/docs/resources/official"}, {href: "/docs/resources/community"}],
+            items: [
+                {href: "/docs/resources/official"},
+                {href: "/docs/resources/community"},
+                {href: "/docs/resources/faq"},
+            ],
         },
 
         {
@@ -16,22 +20,38 @@ export default define_navigation({
         },
 
         {
+            text: "Tutorials",
+            items: [{href: "/docs/tutorials/getting-started", badge: "UPDATED"}],
+        },
+
+        {
+            text: "Themeing",
+            items: [
+                {href: "/docs/themeing/custom-properties"},
+                {href: "/docs/themeing/custom-builds", badge: "NEW"},
+                {href: "/docs/themeing/elevations", badge: "NEW"},
+                {href: "/docs/themeing/fonts", badge: "NEW"},
+                {href: "/docs/themeing/palettes", badge: "NEW"},
+                {href: "/docs/themeing/sizings", badge: "NEW"},
+                {href: "/docs/themeing/spacings", badge: "NEW"},
+            ],
+        },
+
+        {
             text: "Framework",
             items: [
-                {href: "/docs/framework/getting-started", badge: "UPDATED"},
-                {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
-                {href: "/docs/framework/custom-properties"},
-                {href: "/docs/framework/actions"},
-                {href: "/docs/framework/elements"},
-                {href: "/docs/framework/events"},
+                {href: "/docs/framework/custom-builds", badge: "NEW"},
             ],
         },
 
         {
             text: "Globals",
             items: [
+                {href: "/docs/globals/actions"},
+                {href: "/docs/globals/elements"},
+                {href: "/docs/globals/events"},
                 {href: "/docs/globals/contents"},
                 {href: "/docs/globals/html5"},
                 {href: "/docs/globals/hidden"},
