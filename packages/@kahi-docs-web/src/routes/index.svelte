@@ -59,7 +59,7 @@
 
             <AppAnchor
                 is="button"
-                href="/docs/framework/getting-started"
+                href="/docs/tutorials/getting-started"
                 palette="accent"
                 sizing="large"
                 no_handle

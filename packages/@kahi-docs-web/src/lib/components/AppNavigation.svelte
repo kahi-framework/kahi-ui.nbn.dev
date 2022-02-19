@@ -8,7 +8,7 @@
     import Package from "./icons/Package.svelte";
 
     const LINKS_APPLICATION = [
-        {href: "/docs/framework/getting-started", text: "Documentation", icon: Book},
+        {href: "/docs/tutorials/getting-started", text: "Documentation", icon: Book},
         {href: "/playground", text: "Playground", icon: Edit},
         {href: "https://github.com/novacbn/kahi-ui", text: "Source", icon: Code},
         {
