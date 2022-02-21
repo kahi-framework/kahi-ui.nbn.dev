@@ -91,7 +91,27 @@ types=["{}"]
 
 ## Code
 
-...
+<!-- prettier-ignore -->
+```svelte {title="Article Code" mode="repl"}
+<script>
+    import {Article} from "@kahi-ui/framework";
+</script>
+
+
+<Article>
+    <code>import * as Kahi from "@kahi-ui/framework";</code>
+
+    <br />
+    <br />
+
+    <pre>import math from "a-math-library";
+
+const result = math.add(1, 1);
+console.log("Our value is:", result);</pre>
+
+    <code>import * as Kahi from "@kahi-ui/framework";</code>
+</Article>
+```
 
 ## Divider
 
