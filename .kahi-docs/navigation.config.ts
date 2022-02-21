@@ -28,7 +28,7 @@ export default define_navigation({
             text: "Themeing",
             items: [
                 {href: "/docs/themeing/custom-properties"},
-                {href: "/docs/themeing/custom-builds", badge: "NEW"},
+                {href: "/docs/themeing/custom-themes", badge: "NEW"},
                 {href: "/docs/themeing/elevations", badge: "NEW"},
                 {href: "/docs/themeing/fonts", badge: "NEW"},
                 {href: "/docs/themeing/palettes", badge: "NEW"},
