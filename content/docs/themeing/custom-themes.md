@@ -462,7 +462,7 @@ Alternatively, you can opt-out of the generative size system and manually specif
 @include variables.define-variables(
     (
         "sizes": (
-            "": (
+            "<TIER>": (
                 "nano": <MULTIPLIER>,
                 "tiny": <MULTIPLIER>,
                 "small": <MULTIPLIER>,
@@ -596,3 +596,57 @@ These definitions relate to border radius modifiers, used for global intrinsics 
 ### Elevations
 
 ...
+
+## Component Theme
+
+Components are usually have this or similar directory structure depending on format (multi-pattern or singular).
+
+```bash
+src/lib/components/:category/:component
+│
+└───:component.css              // CSS Styling for Component
+└───:component.default.css      // `default` Theme Variables for Component
+└───:Component.svelte           // Component Implementation
+└───:Component.stories.svelte   // Storybook Tests
+└───index.ts                    // Exports Entry Point
+```
+
+You can edit each Component's `:component.default.css` stylesheet to modify its `default` theme, just like with the global theme. Using the [`Badge`](../display/badge.md) Component as an example, the stylesheets typically look similar to this.
+
+<!-- prettier-ignore -->
+```scss
+@use "../../../../framework/abstracts/variables";
+
+// NOTE: By using this if statement, `--disable-components-display-badge` turns off this file in custom builds
+@if not env("DISABLE_COMPONENTS_DISPLAY_BADGE") {
+    // NOTE: Every identifier + dot path is treated is treated as a namespaced CSS Custom Property,
+    // e.g. `badge.background.opacity` will be built as `--badge-background-opacity`
+    @include variables.define-variables(
+        (
+            "badge": (
+                // NOTE: Whenever a namespace only has one (1) member instead of multiple, we can
+                // just shortcut to using a period instead of creating a new map like the `font` namespace
+                "background.opacity": 1,
+                "border.radius": none,
+                "color.opacity": 1,
+                "font": (
+                    // NOTE: `variables.format-var` is used to look up variables registered to the global
+                    // themeing variables. This allows the build process to validate our variables exist
+                    "size": variables.format-var("fonts.sizes.inline.nano"),
+                    "weight": bold,
+                ),
+                "gap": (
+                    "x": variables.format-var("spacings.block.small"),
+                    "y": variables.format-var("spacings.block.small"),
+                ),
+                "padding": (
+                    "x": variables.format-var("spacings.block.small"),
+                    "y": variables.format-var("spacings.block.nano"),
+                ),
+            ),
+        )
+    );
+}
+```
+
+For detailed documentation on what each Component's variables are, visit their documentation page and scroll down to the API Reference.
