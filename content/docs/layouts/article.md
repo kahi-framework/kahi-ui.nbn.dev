@@ -27,6 +27,8 @@ types=["{}"]
 
 ## Anchor
 
+Via the `<a>` HTML tag, you can render links with hover effects and emphasis coloring.
+
 ```svelte {title="Article Anchor" mode="repl"}
 <script>
     import {Article} from "@kahi-ui/framework";
@@ -38,6 +40,8 @@ types=["{}"]
 ```
 
 ## Blockquote
+
+Via the `<blockquote>` and `<cite>` HTML tags, you can present formatted quotes.
 
 ```svelte {title="Article Blockquote" mode="repl"}
 <script>
@@ -91,6 +95,8 @@ types=["{}"]
 
 ## Code
 
+Via the `<code>` HTML tag or `<pre><code>` HTML tag pair, you can wrap chunks of code to be smaller and given a background.
+
 <!-- prettier-ignore -->
 ```svelte {title="Article Code" mode="repl"}
 <script>
@@ -115,6 +121,8 @@ console.log("Our value is:", result);</pre>
 
 ## Divider
 
+Via the `<hr>` HTML tag, you can break sections of content with a horizontal line.
+
 ```svelte {title="Article Divider" mode="repl"}
 <script>
     import {Article} from "@kahi-ui/framework";
@@ -130,6 +138,8 @@ console.log("Our value is:", result);</pre>
 ...
 
 ## Heading
+
+Via the `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>` HTML tag, you can wrap text to have header sizing.
 
 ```svelte {title="Article Heading" mode="repl"}
 <script>
@@ -147,6 +157,8 @@ console.log("Our value is:", result);</pre>
 ```
 
 ## List
+
+Via the `<ol>`, `<li>`, and `<ul>` HTML tags, you can create formatted lists.
 
 ```svelte {title="Article List" mode="repl"}
 <script>
@@ -169,6 +181,8 @@ console.log("Our value is:", result);</pre>
 ```
 
 ## Paragraph
+
+Via the `<p>` HTML tag, you can wrap paragraphs of text with bottom margin for formatting.
 
 ```svelte {title="Article Paragraph" mode="repl"}
 <script>
@@ -211,6 +225,8 @@ console.log("Our value is:", result);</pre>
 ```
 
 ## Small
+
+Via the `<small>` HTML tag, you can render text smaller than the current font size and have it blend more with the background.
 
 ```svelte {title="Article Small" mode="repl"}
 <script>
