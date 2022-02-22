@@ -2,7 +2,7 @@
 
 > **IMPORTANT**: Spacing CSS Custom Properties are defined as a unitless multipliers, so Components can customize scaling based on context.
 
-Kahi UI in its `default` theme uses [Modular Scale](https://www.modularscale.com) to produce generative scaling between tiers spacing used throughout the Framework.
+Kahi UI in its `default` theme uses [Modular Scale](https://www.modularscale.com) to produce generative spacing tiers used throughout the Framework.
 
 ## Block Spacings
 

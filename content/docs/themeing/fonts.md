@@ -1,8 +1,72 @@
 # Fonts
 
-> **IMPORTANT**: Font CSS Custom Properties are defined as a unitless multipliers, so Components can customize scaling based on context.
+> **IMPORTANT**: Font size CSS Custom Properties are defined as a unitless multipliers, so Components can customize scaling based on context.
 
-Kahi UI in its `default` theme uses [Modular Scale](https://www.modularscale.com) to produce generative scaling between tiers of font sizes and line heights.
+Kahi UI in its `default` theme uses [Modular Scale](https://www.modularscale.com) to produce generative font size and line height tiers used throughout the Framework.
+
+## Families
+
+Kahi UI provides a few standard font stacks used in different places across the Framework.
+
+```svelte {title="Fonts Families" mode="repl"}
+<script>
+    import {Stack, Text} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div style="max-width:25ch;">
+        <Text is="strong">BLOCK</Text>
+
+        <p
+            style="font-family:var(--fonts-families-block);"
+        >
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </p>
+    </div>
+
+    <div style="max-width:25ch;">
+        <Text is="strong">INLINE</Text>
+
+        <p
+            style="font-family:var(--fonts-families-inline);"
+        >
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </p>
+    </div>
+
+    <div style="max-width:25ch;">
+        <Text is="strong">MONOSPACE</Text>
+
+        <p
+            style="font-family:var(--fonts-families-monospace);"
+        >
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </p>
+    </div>
+</Stack.Container>
+```
 
 ## Line Heights
 
