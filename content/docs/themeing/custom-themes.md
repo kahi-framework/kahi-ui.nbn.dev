@@ -604,8 +604,8 @@ Components are usually have this or similar directory structure depending on for
 ```bash
 src/lib/components/:category/:component
 │
-└───:component.css              // CSS Styling for Component
-└───:component.default.css      // `default` Theme Variables for Component
+└───:component.scss             // Stylesheet for Component
+└───:component.default.scss     // `default` Theme Variables for Component
 └───:Component.svelte           // Component Implementation
 └───:Component.stories.svelte   // Storybook Tests
 └───index.ts                    // Exports Entry Point
