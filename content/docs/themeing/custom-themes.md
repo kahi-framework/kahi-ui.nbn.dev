@@ -24,7 +24,7 @@ These definitions relate to the Framework's overall color design. By default, we
 
 <!-- prettier-ignore -->
 ```scss
-@include constants.define-constants(
+@include constants.define(
     palettes.generate-darklight-palette(
         $dark: (
             // Base color used to generate shades, can be in any color space
@@ -41,7 +41,7 @@ These definitions relate to the Framework's overall color design. By default, we
     )
 );
 
-@include constants.define-constants(
+@include constants.define(
     (
         "palettes": (
             "<PALETTE>": palettes.generate-color-palette(
@@ -69,7 +69,7 @@ Alternatively, you can opt-out of the generative color system and manually speci
 
 <!-- prettier-ignore -->
 ```scss
-@include constants.define-constants(
+@include constants.define(
     (
         "palettes": (
             "<PALETTE>": (
@@ -106,7 +106,7 @@ Alternatively, you can opt-out of the generative color system and manually speci
 As an example `accent` palette based on the `default` theme that ships with Kahi UI.
 
 ```scss
-@include constants.define-constants(
+@include constants.define(
     (
         "palettes": (
             "accent": (
@@ -151,7 +151,7 @@ These definitions relate to the Framework's Viewport breakpoints.
 These definitions relate to the font family stacks used across the Framework.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts.families": (
             "<FAMILY>": <FONT-STACK>,
@@ -168,7 +168,7 @@ These definitions relate to the spacing between letter spacings, typically used 
 
 <!-- prettier-ignore -->
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "letter-spacings": sizes.generate-scaling(
@@ -185,7 +185,7 @@ Alternatively, you can opt-out of the generative spacing system and manually spe
 > **USAGE**: Keep in mind that the spacing scale used in Kahi UI is `nano` is the smallest spacing and `massive` is the biggest.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "letter-spacings": (
@@ -205,7 +205,7 @@ Alternatively, you can opt-out of the generative spacing system and manually spe
 As an example based on the `default` theme that ships with Kahi UI.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "letter-spacings": (
@@ -230,7 +230,7 @@ These definitions relate to the spacing between each line of text. By default we
 
 <!-- prettier-ignore -->
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "line-heights": sizes.generate-scaling(
@@ -247,7 +247,7 @@ Alternatively, you can opt-out of the generative spacing system and manually spe
 > **USAGE**: Keep in mind that the spacing scale used in Kahi UI is `nano` is the smallest spacing and `massive` is the biggest.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "line-heights": (
@@ -267,7 +267,7 @@ Alternatively, you can opt-out of the generative spacing system and manually spe
 As an example based on the `default` theme that ships with Kahi UI.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "line-heights": (
@@ -294,7 +294,7 @@ These definitions relate to the , typically used in . By default we use [Modular
 
 <!-- prettier-ignore -->
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "sizes": (
@@ -313,7 +313,7 @@ Alternatively, you can opt-out of the generative sizing system and manually spec
 > **USAGE**: Keep in mind that the sizing scale used in Kahi UI is `nano` is the smallest and `massive` is the biggest.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "sizes": (
@@ -335,7 +335,7 @@ Alternatively, you can opt-out of the generative sizing system and manually spec
 As an example based on the `inline` tier that the `default` theme that ships with Kahi UI.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "fonts": (
             "sizes": (
@@ -364,7 +364,7 @@ These definitions relate to spacing modifiers, typically used in Layouts Compone
 
 <!-- prettier-ignore -->
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "spacings": (
             "<TIER>": sizes.generate-scaling(
@@ -381,7 +381,7 @@ Alternatively, you can opt-out of the generative spacing system and manually spe
 > **USAGE**: Keep in mind that the spacing scale used in Kahi UI `massive` is the biggest and `nano` is the smallest.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "spacings": (
             "<TIER>": (
@@ -401,7 +401,7 @@ Alternatively, you can opt-out of the generative spacing system and manually spe
 As an example based on the `block` tier that the `default` theme that ships with Kahi UI.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "spacings": (
             "block": (
@@ -423,7 +423,7 @@ As an example based on the `block` tier that the `default` theme that ships with
 These definitions relate to spacing modifiers, used for global intrinsics properties like `margin`.
 
 ```scss
-@include constants.define-constants(
+@include constants.define(
     (
         "spacings": (
             "<CONSTANT>": <SPACING>,
@@ -442,7 +442,7 @@ These definitions relate to size modifiers, used for global intrinsics propertie
 
 <!-- prettier-ignore -->
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "sizes": (
             "<TIER>": sizes.generate-scaling(
@@ -459,7 +459,7 @@ Alternatively, you can opt-out of the generative size system and manually specif
 > **USAGE**: Keep in mind that the size scale used in Kahi UI is `nano` is the smallest and `massive` is the biggest.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "sizes": (
             "<TIER>": (
@@ -479,7 +479,7 @@ Alternatively, you can opt-out of the generative size system and manually specif
 As an example based on the `block` tier that the `default` theme that ships with Kahi UI.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "sizes": (
             "block": (
@@ -501,7 +501,7 @@ As an example based on the `block` tier that the `default` theme that ships with
 These definitions relate to size modifiers, used for global intrinsics properties like `width`.
 
 ```scss
-@include constants.define-constants(
+@include constants.define(
     (
         "sizes": (
             "<CONSTANT>": <SPACING>,
@@ -518,7 +518,7 @@ These definitions relate to sizing modifiers, typically used for Component radii
 
 <!-- prettier-ignore -->
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "radius": sizes.generate-scaling(
                 $base: <BASE-MULTIPLIER>,
@@ -534,7 +534,7 @@ Alternatively, you can opt-out of the generative size system and manually specif
 > **USAGE**: Keep in mind that the size scale used in Kahi UI is `nano` is the smallest and `massive` is the biggest.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "radius": (
             "nano": <MULTIPLIER>,
@@ -552,7 +552,7 @@ Alternatively, you can opt-out of the generative size system and manually specif
 As an example based on the `default` theme that ships with Kahi UI.
 
 ```scss
-@include variables.define-variables(
+@include variables.define(
     (
         "radius": (
             "nano": 0.125,
@@ -572,7 +572,7 @@ As an example based on the `default` theme that ships with Kahi UI.
 These definitions relate to border radius modifiers, used for global intrinsics properties like `shape`.
 
 ```scss
-@include constants.define-constants(
+@include constants.define(
     (
         "radius": (
             "<CONSTANT>": <SPACING>,
@@ -621,7 +621,7 @@ You can edit each Component's `:component.default.css` stylesheet to modify its 
 @if not env("DISABLE_COMPONENTS_DISPLAY_BADGE") {
     // NOTE: Every identifier + dot path is treated is treated as a namespaced CSS Custom Property,
     // e.g. `badge.background.opacity` will be built as `--badge-background-opacity`
-    @include variables.define-variables(
+    @include variables.define(
         (
             "badge": (
                 // NOTE: Whenever a namespace only has one (1) member instead of multiple, we can
