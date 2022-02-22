@@ -98,37 +98,37 @@ You can set margins for your Components via the `margin` property.
     variation="wrap"
 >
     <Box palette="negative">
-        <Box palette="alert" margin="none">NONE</Box>
+        <Box palette="neutral" margin="none">NONE</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="nano">NANO</Box>
+        <Box palette="neutral" margin="nano">NANO</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="tiny">TINY</Box>
+        <Box palette="neutral" margin="tiny">TINY</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="small">SMALL</Box>
+        <Box palette="neutral" margin="small">SMALL</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="medium">
+        <Box palette="neutral" margin="medium">
             MEDIUM
         </Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="large">LARGE</Box>
+        <Box palette="neutral" margin="large">LARGE</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="huge">HUGE</Box>
+        <Box palette="neutral" margin="huge">HUGE</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="massive">
+        <Box palette="neutral" margin="massive">
             MASSIVE
         </Box>
     </Box>
@@ -158,36 +158,36 @@ You can set paddings for your Components via the `padding` property.
     spacing="medium"
     variation="wrap"
 >
-    <Box palette="alert" padding="none">
-        <Box palette="negative">NONE</Box>
+    <Box palette="informative" padding="none">
+        <Box palette="neutral">NONE</Box>
     </Box>
 
-    <Box palette="alert" padding="nano">
-        <Box palette="negative">NANO</Box>
+    <Box palette="informative" padding="nano">
+        <Box palette="neutral">NANO</Box>
     </Box>
 
-    <Box palette="alert" padding="tiny">
-        <Box palette="negative">TINY</Box>
+    <Box palette="informative" padding="tiny">
+        <Box palette="neutral">TINY</Box>
     </Box>
 
-    <Box palette="alert" padding="small">
-        <Box palette="negative">SMALL</Box>
+    <Box palette="informative" padding="small">
+        <Box palette="neutral">SMALL</Box>
     </Box>
 
-    <Box palette="alert" padding="medium">
-        <Box palette="negative">MEDIUM</Box>
+    <Box palette="informative" padding="medium">
+        <Box palette="neutral">MEDIUM</Box>
     </Box>
 
-    <Box palette="alert" padding="large">
-        <Box palette="negative">LARGE</Box>
+    <Box palette="informative" padding="large">
+        <Box palette="neutral">LARGE</Box>
     </Box>
 
-    <Box palette="alert" padding="huge">
-        <Box palette="negative">HUGE</Box>
+    <Box palette="informative" padding="huge">
+        <Box palette="neutral">HUGE</Box>
     </Box>
 
-    <Box palette="alert" padding="massive">
-        <Box palette="negative">MASSIVE</Box>
+    <Box palette="informative" padding="massive">
+        <Box palette="neutral">MASSIVE</Box>
     </Box>
 </Stack>
 ```
