@@ -25,6 +25,15 @@ export default define_navigation({
         },
 
         {
+            text: "Framework",
+            items: [
+                {href: "/docs/framework/browser-support"},
+                {href: "/docs/framework/responsitivity"},
+                {href: "/docs/framework/custom-builds", badge: "NEW"},
+            ],
+        },
+
+        {
             text: "Themeing",
             items: [
                 {href: "/docs/themeing/custom-properties"},
@@ -32,17 +41,8 @@ export default define_navigation({
                 {href: "/docs/themeing/elevations", badge: "NEW"},
                 {href: "/docs/themeing/fonts", badge: "NEW"},
                 {href: "/docs/themeing/palettes", badge: "NEW"},
-                {href: "/docs/themeing/sizings", badge: "NEW"},
+                {href: "/docs/themeing/sizes", badge: "NEW"},
                 {href: "/docs/themeing/spacings", badge: "NEW"},
-            ],
-        },
-
-        {
-            text: "Framework",
-            items: [
-                {href: "/docs/framework/browser-support"},
-                {href: "/docs/framework/responsitivity"},
-                {href: "/docs/framework/custom-builds", badge: "NEW"},
             ],
         },
 
