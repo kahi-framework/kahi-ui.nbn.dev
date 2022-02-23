@@ -110,7 +110,9 @@ You can set margins for your Components via the `margin` property.
     </Box>
 
     <Box palette="negative">
-        <Box palette="neutral" margin="small">SMALL</Box>
+        <Box palette="neutral" margin="small">
+            SMALL
+        </Box>
     </Box>
 
     <Box palette="negative">
@@ -120,7 +122,9 @@ You can set margins for your Components via the `margin` property.
     </Box>
 
     <Box palette="negative">
-        <Box palette="neutral" margin="large">LARGE</Box>
+        <Box palette="neutral" margin="large">
+            LARGE
+        </Box>
     </Box>
 
     <Box palette="negative">
