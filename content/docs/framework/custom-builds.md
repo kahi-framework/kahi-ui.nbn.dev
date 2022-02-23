@@ -56,7 +56,7 @@ package/
 
 ## Filters
 
-Each individual feature of Kahi UI that requires CSS can turned off, removing it from builds. And it's as simple as adding command line parameters. Just run either of the NPM scripts with filter parameter following this format: `--disable-{SCOPE}-{NAME}`.
+Each individual feature of Kahi UI that requires CSS can turned off, removing it from builds. And it's as simple as adding command line parameters. Just run either of the NPM scripts with filter parameters following this format: `--disable-{SCOPE}-{FEATURE}`.
 
 For instance, if wanting to disable [Grid](../layouts/grid.md) and the responsitivity of [Spacings](../globals/spacings.md) (e.g. `margin={["mobile:medium"]}`), try the following.
 

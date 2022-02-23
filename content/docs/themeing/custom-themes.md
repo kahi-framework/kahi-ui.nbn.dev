@@ -10,7 +10,7 @@ Make sure to familiarize yourself with Framework's [Custom Builds](../framework/
 
 ## Global Theme
 
-After having Kahi UI's source code downloaded and installed, view the `src/themes/default/_theme.scss`. This file contains all the non-Component specific definitions that apply every where in the Framework. Which is broken up into the headers as seen below.
+After having Kahi UI's source code downloaded and installed, edit the `src/themes/default/_theme.scss` stylesheet. This file contains all the non-Component specific definitions that apply every where in the Framework. Which is broken up into the headers as seen below.
 
 ### Palettes
 
