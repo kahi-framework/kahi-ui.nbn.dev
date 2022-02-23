@@ -145,7 +145,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="carousel-spacing"
     orientation="horizontal"
     spacing="medium"
@@ -155,6 +155,36 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
         <Text is="strong">DEFAULT</Text>
 
         <Carousel.Container>
+            <Carousel.Section>
+                <Box palette="negative">
+                    <Center height="100">
+                        300 x 200
+                    </Center>
+                </Box>
+            </Carousel.Section>
+
+            <Carousel.Section>
+                <Box palette="affirmative">
+                    <Center height="100">
+                        300 x 200
+                    </Center>
+                </Box>
+            </Carousel.Section>
+
+            <Carousel.Section>
+                <Box palette="alert">
+                    <Center height="100">
+                        300 x 200
+                    </Center>
+                </Box>
+            </Carousel.Section>
+        </Carousel.Container>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <Carousel.Container spacing="nano">
             <Carousel.Section>
                 <Box palette="negative">
                     <Center height="100">
@@ -330,7 +360,37 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
             </Carousel.Section>
         </Carousel.Container>
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <Carousel.Container spacing="massive">
+            <Carousel.Section>
+                <Box palette="negative">
+                    <Center height="100">
+                        300 x 200
+                    </Center>
+                </Box>
+            </Carousel.Section>
+
+            <Carousel.Section>
+                <Box palette="affirmative">
+                    <Center height="100">
+                        300 x 200
+                    </Center>
+                </Box>
+            </Carousel.Section>
+
+            <Carousel.Section>
+                <Box palette="alert">
+                    <Center height="100">
+                        300 x 200
+                    </Center>
+                </Box>
+            </Carousel.Section>
+        </Carousel.Container>
+    </div>
+</Stack.Container>
 
 <style>
     :global(.carousel-spacing) :global(.carousel) {
