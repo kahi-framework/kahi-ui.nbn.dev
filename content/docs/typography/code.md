@@ -55,7 +55,7 @@ types=["<length>"]
 
 > **NOTE**: Introduced feature in `v0.2.0`.
 
-`Code` is used to render inline monospaced text, typically for showing programming code / application configuration to an end-user.
+`Code` is used to render inline monospaced text, typically for showing programming code / application configuration to an user.
 
 ```svelte {title="Code Preview" mode="repl"}
 <script>
@@ -88,13 +88,11 @@ You can change the color palette of `Code` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="code-palette"
-    alignment_x="left"
-    spacing="medium"
->
+<Stack.Container alignment_x="left" spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
+
+        <br />
         <Code>
             import * as Kahi from "@kahi-ui/framework";
         </Code>
@@ -102,13 +100,26 @@ You can change the color palette of `Code` via the `palette` property.
 
     <div>
         <Text is="strong">ACCENT</Text>
+
+        <br />
         <Code palette="accent">
             import * as Kahi from "@kahi-ui/framework";
         </Code>
     </div>
 
     <div>
+        <Text is="strong">NEUTRAL</Text>
+
+        <br />
+        <Code palette="neutral">
+            import * as Kahi from "@kahi-ui/framework";
+        </Code>
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
+
+        <br />
         <Code palette="dark">
             import * as Kahi from "@kahi-ui/framework";
         </Code>
@@ -116,6 +127,8 @@ You can change the color palette of `Code` via the `palette` property.
 
     <div>
         <Text is="strong">LIGHT</Text>
+
+        <br />
         <Code palette="light">
             import * as Kahi from "@kahi-ui/framework";
         </Code>
@@ -123,6 +136,8 @@ You can change the color palette of `Code` via the `palette` property.
 
     <div>
         <Text is="strong">ALERT</Text>
+
+        <br />
         <Code palette="alert">
             import * as Kahi from "@kahi-ui/framework";
         </Code>
@@ -130,24 +145,31 @@ You can change the color palette of `Code` via the `palette` property.
 
     <div>
         <Text is="strong">AFFIRMATIVE</Text>
+
+        <br />
         <Code palette="affirmative">
             import * as Kahi from "@kahi-ui/framework";
         </Code>
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+
+        <br />
+        <Code palette="informative">
+            import * as Kahi from "@kahi-ui/framework";
+        </Code>
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
+
+        <br />
         <Code palette="negative">
             import * as Kahi from "@kahi-ui/framework";
         </Code>
     </div>
-</Stack>
-
-<style>
-    :global(.code-palette code) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
 
 ## Code Block
@@ -162,6 +184,7 @@ You can display blocks of code via a `<pre>` HTML tag by passing `is="pre"`.
 
 <Code is="pre">
 import math from "a-math-library";
+
 const result = math.add(1, 1);
 console.log("Our value is:", result);
 </Code>
