@@ -104,7 +104,7 @@ types=["<alpha-value>"]
 
 > **NOTE**: Introduced feature in `v0.4.5`.
 
-`Accordion` Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
+`Accordion` Components are used for displaying related content in a collapsible stack of buttons, that toggles between views.
 
 ```svelte {title="Accordion Preview" mode="repl"}
 <script>
@@ -560,6 +560,29 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
         </Accordion.Section>
     </Accordion.Group>
 
+    <Accordion.Group
+        logic_id="accordion-palette-neutral"
+    >
+        <Accordion.Label palette="neutral">
+            NEUTRAL Section
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>NEUTRAL Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
     <Accordion.Group logic_id="accordion-palette-dark">
         <Accordion.Label palette="dark">
             DARK Section
@@ -636,6 +659,29 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
 
         <Accordion.Section>
             <Heading>AFFIRMATIVE Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
+        logic_id="accordion-palette-informative"
+    >
+        <Accordion.Label palette="informative">
+            INFORMATIVE Section
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>INFORMATIVE Content</Heading>
 
             <Text>
                 Lorem ipsum dolor sit amet, consectetur
