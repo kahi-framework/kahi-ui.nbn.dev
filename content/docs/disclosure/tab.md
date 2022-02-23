@@ -369,6 +369,16 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
+    <Tab.Group logic_id="tab-palette-neutral">
+        <Tab.Label palette="neutral">
+            Tab NEUTRAL
+        </Tab.Label>
+
+        <Tab.Section>
+            <Heading>Tab NEUTRAL Content</Heading>
+        </Tab.Section>
+    </Tab.Group>
+
     <Tab.Group logic_id="tab-palette-dark">
         <Tab.Label palette="dark">Tab DARK</Tab.Label>
 
@@ -407,6 +417,16 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
         </Tab.Section>
     </Tab.Group>
 
+    <Tab.Group logic_id="tab-palette-informative">
+        <Tab.Label palette="informative">
+            Tab NEGATIVE
+        </Tab.Label>
+
+        <Tab.Section>
+            <Heading>Tab INFORMATIVE Content</Heading>
+        </Tab.Section>
+    </Tab.Group>
+
     <Tab.Group logic_id="tab-palette-negative">
         <Tab.Label palette="negative">
             Tab NEGATIVE
@@ -433,7 +453,7 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
 
@@ -462,6 +482,48 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
             </Tab.Group>
 
             <Tab.Group logic_id="tab-sizing-default-3">
+                <Tab.Label palette="accent">
+                    Tab Three
+                </Tab.Label>
+
+                <Tab.Section>
+                    <Heading>
+                        Tab Three Content
+                    </Heading>
+                </Tab.Section>
+            </Tab.Group>
+        </Tab.Container>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <Tab.Container
+            logic_name="tab-sizing-nano"
+            logic_state="tab-sizing-nano-1"
+            sizing="nano"
+        >
+            <Tab.Group logic_id="tab-sizing-nano-1">
+                <Tab.Label palette="accent">
+                    Tab One
+                </Tab.Label>
+
+                <Tab.Section>
+                    <Heading>Tab One Content</Heading>
+                </Tab.Section>
+            </Tab.Group>
+
+            <Tab.Group logic_id="tab-sizing-nano-2">
+                <Tab.Label palette="accent">
+                    Tab Two
+                </Tab.Label>
+
+                <Tab.Section>
+                    <Heading>Tab Two Content</Heading>
+                </Tab.Section>
+            </Tab.Group>
+
+            <Tab.Group logic_id="tab-sizing-nano-3">
                 <Tab.Label palette="accent">
                     Tab Three
                 </Tab.Label>
@@ -684,7 +746,49 @@ You can alter how large each `Tab` radio button should be via the `sizing` prope
             </Tab.Group>
         </Tab.Container>
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <Tab.Container
+            logic_name="tab-sizing-massive"
+            logic_state="tab-sizing-massive-1"
+            sizing="massive"
+        >
+            <Tab.Group logic_id="tab-sizing-massive-1">
+                <Tab.Label palette="accent">
+                    Tab One
+                </Tab.Label>
+
+                <Tab.Section>
+                    <Heading>Tab One Content</Heading>
+                </Tab.Section>
+            </Tab.Group>
+
+            <Tab.Group logic_id="tab-sizing-massive-2">
+                <Tab.Label palette="accent">
+                    Tab Two
+                </Tab.Label>
+
+                <Tab.Section>
+                    <Heading>Tab Two Content</Heading>
+                </Tab.Section>
+            </Tab.Group>
+
+            <Tab.Group logic_id="tab-sizing-massive-3">
+                <Tab.Label palette="accent">
+                    Tab Three
+                </Tab.Label>
+
+                <Tab.Section>
+                    <Heading>
+                        Tab Three Content
+                    </Heading>
+                </Tab.Section>
+            </Tab.Group>
+        </Tab.Container>
+    </div>
+</Stack.Container>
 ```
 
 ## Alignment
@@ -701,7 +805,7 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">LEFT</Text>
 
@@ -886,7 +990,7 @@ You can change the alignment of each `Tab` radio button via the `alignment_x` pr
             </Tab.Group>
         </Tab.Container>
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Loading
