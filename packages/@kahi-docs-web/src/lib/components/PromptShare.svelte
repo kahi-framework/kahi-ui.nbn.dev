@@ -18,13 +18,7 @@
             <Card.Header>Share Playground</Card.Header>
 
             <Card.Section>
-                <Form.Control logic_id="playground-href">
-                    <Form.Label>
-                        <Text is="strong">Playground</Text>:
-                    </Form.Label>
-
-                    <Code>{_href_playground}</Code>
-                </Form.Control>
+                <Code is="pre">{_href_playground}</Code>
             </Card.Section>
         </Card.Container>
     </Overlay.Section>
