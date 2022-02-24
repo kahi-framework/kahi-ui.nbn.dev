@@ -61,14 +61,12 @@ types=["<alpha-value>"]
             prevent `Ellipsis` from getting icon spacing
         -->
         <Text is="span">
-            Submit
-            <Ellipsis />
+            Submit<Ellipsis />
         </Text>
     </Button>
 
     <Heading>
-        Loading
-        <Ellipsis />
+        Loading<Ellipsis />
     </Heading>
 </Stack.Container>
 ```
@@ -107,6 +105,7 @@ You can customize which animation is played via the `animation` property.
 ```svelte {title="Ellipsis Animations" mode="repl"}
 <script>
     import {
+        Dot,
         Ellipsis,
         Stack,
         Text,
@@ -121,25 +120,33 @@ You can customize which animation is played via the `animation` property.
     <div>
         <Text is="strong">DEFAULT</Text>
         <br />
-        <Ellipsis />
+        <Ellipsis>
+            <Dot palette="accent" />
+        </Ellipsis>
     </div>
 
     <div>
         <Text is="strong">BOUNCE</Text>
         <br />
-        <Ellipsis animation="bounce" />
+        <Ellipsis animation="bounce">
+            <Dot palette="accent" />
+        </Ellipsis>
     </div>
 
     <div>
         <Text is="strong">PING</Text>
         <br />
-        <Ellipsis animation="ping" />
+        <Ellipsis animation="ping">
+            <Dot palette="accent" />
+        </Ellipsis>
     </div>
 
     <div>
         <Text is="strong">PULSE</Text>
         <br />
-        <Ellipsis animation="pulse" />
+        <Ellipsis animation="pulse">
+            <Dot palette="accent" />
+        </Ellipsis>
     </div>
 </Stack.Container>
 ```
