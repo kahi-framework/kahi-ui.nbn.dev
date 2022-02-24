@@ -340,9 +340,10 @@ While `Omni` does not have built-in collapsing, the Framework provides the primi
                 spacing="small"
             >
                 <Box
+                    variation="borders"
                     elevation="medium"
                     padding="medium"
-                    shape="rounded"
+                    radius="tiny"
                 >
                     <Menu.Container>
                         <Menu.Button active>

@@ -116,9 +116,10 @@ types=["{}"]
         spacing="medium"
     >
         <Box
+            variation="borders"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             <Menu.Container>
                 <Menu.Button>
@@ -193,7 +194,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             <Popover.Button
                 palette="auto"
@@ -236,7 +237,7 @@ You can manually open / close the `Popover` via the `logic_state` property.
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             TOGGABLE Popover
             <br />
@@ -277,7 +278,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             NON-DISMISSIBLE Popover
         </Box>
@@ -297,7 +298,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             DISMISSIBLE Popover
         </Box>
@@ -328,7 +329,7 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             NON-ONCE Popover
         </Box>
@@ -346,7 +347,7 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             ONCE Popover
         </Box>
@@ -441,7 +442,7 @@ You can adjust which side your content is placed on via the `placement` property
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a RIGHT Popover.
         </Box>
@@ -464,7 +465,7 @@ You can adjust which side your content is placed on via the `placement` property
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a BOTTOM Popover.
         </Box>
@@ -501,7 +502,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a RIGHT X Popover.
         </Box>
@@ -521,7 +522,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a CENTER X Popover.
         </Box>
@@ -544,7 +545,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a LEFT X Popover.
         </Box>
@@ -570,7 +571,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a TOP Y Popover.
         </Box>
@@ -593,7 +594,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a CENTER Y Popover.
         </Box>
@@ -617,7 +618,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a BOTTOM Y Popover.
         </Box>

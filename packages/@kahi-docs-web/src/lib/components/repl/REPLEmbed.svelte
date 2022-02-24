@@ -48,7 +48,7 @@
     spacing_x="medium"
     spacing_y="small"
 >
-    <Box palette="dark" variation="borders" radius="small" padding="tiny">
+    <Box palette="dark" variation="borders" radius="tiny" padding="tiny">
         <Menu.Container orientation={["desktop:horizontal", "widescreen:horizontal"]} sizing="nano">
             <Menu.Anchor href={_href} target="_blank" palette="accent">
                 <ExternalLink />

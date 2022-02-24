@@ -132,10 +132,10 @@
                                     <Clickable.Container>
                                         <Tile.Container
                                             palette={index === current ? "accent" : undefined}
-                                            sizing="small"
+                                            sizing="tiny"
                                             on:pointerenter={on_select_enter.bind(null, index)}
                                         >
-                                            <Tile.Figure style="font-size:24px;">
+                                            <Tile.Figure>
                                                 <File />
                                             </Tile.Figure>
 
@@ -162,7 +162,11 @@
                 {/if}
 
                 <Card.Section>
-                    <AppAnchor href="https://github.com/nextapps-de/flexsearch" palette="accent">
+                    <AppAnchor
+                        class="anchor"
+                        href="https://github.com/nextapps-de/flexsearch"
+                        palette="accent"
+                    >
                         Powered by FlexSearch
                     </AppAnchor>
                 </Card.Section>
