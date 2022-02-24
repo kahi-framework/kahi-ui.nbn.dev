@@ -36,6 +36,7 @@ export default define_navigation({
         {
             text: "Themeing",
             items: [
+                {href: "/docs/themeing/manual-mode", badge: "NEW"},
                 {href: "/docs/themeing/custom-properties"},
                 {href: "/docs/themeing/custom-themes", badge: "NEW"},
                 {href: "/docs/themeing/elevations", badge: "NEW"},
