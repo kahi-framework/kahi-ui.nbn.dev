@@ -36,6 +36,24 @@ Via the `<a>` HTML tag, you can render links with hover effects and emphasis col
 
 <Article>
     <a href="https://google.com">Goto google.com</a>
+
+    <p>
+        This has nested <a href="#">anchor tags</a>!
+    </p>
+
+    <blockquote>
+        <p>
+            This has nested <a href="#">anchor tags</a
+            >!
+        </p>
+    </blockquote>
+
+    <ul>
+        <li>
+            This has nested <a href="#">anchor tags</a
+            >!
+        </li>
+    </ul>
 </Article>
 ```
 
@@ -116,6 +134,22 @@ const result = math.add(1, 1);
 console.log("Our value is:", result);</pre>
 
     <code>import * as Kahi from "@kahi-ui/framework";</code>
+
+            <p>
+            This has nested <code>code tags</code>!
+        </p>
+
+        <blockquote>
+            <p>
+                This has nested <code>code tags</code>!
+            </p>
+        </blockquote>
+
+        <ul>
+            <li>
+                This has nested <code>code tags</code>!
+            </li>
+        </ul>
 </Article>
 ```
 
