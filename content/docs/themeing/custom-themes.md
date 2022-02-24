@@ -25,7 +25,7 @@ These definitions relate to the Framework's overall color design. By default, we
 <!-- prettier-ignore -->
 ```scss
 @include constants.define(
-    palettes.generate-darklight-palette(
+    generators.darklight(
         $dark: (
             // Base color used to generate shades, can be in any color space
             "base": <COLOR>,
@@ -44,7 +44,7 @@ These definitions relate to the Framework's overall color design. By default, we
 @include constants.define(
     (
         "palettes": (
-            "<PALETTE>": palettes.generate-color-palette(
+            "<PALETTE>": generators.palette(
                     $dark: (
                         // Base darkmode color used to generate shades, can be in any color
                         "base": <COLOR>,
@@ -171,7 +171,7 @@ These definitions relate to the spacing between letter spacings, typically used 
 @include variables.define(
     (
         "fonts": (
-            "letter-spacings": sizes.generate-scaling(
+            "letter-spacings": generators.modular(
                 $base: <BASE-MULTIPLIER>,
                 $ratio: <RATIO>
             ),
@@ -233,7 +233,7 @@ These definitions relate to the spacing between each line of text. By default we
 @include variables.define(
     (
         "fonts": (
-            "line-heights": sizes.generate-scaling(
+            "line-heights": generators.modular(
                 $base: <BASE-MULTIPLIER>,
                 $ratio: <RATIO>
             ),
@@ -298,7 +298,7 @@ These definitions relate to the , typically used in . By default we use [Modular
     (
         "fonts": (
             "sizes": (
-                "<TIER>": sizes.generate-scaling(
+                "<TIER>": generators.modular(
                     $base: <BASE-MULTIPLIER>,
                     $ratio: <RATIO>
                 ),
@@ -367,7 +367,7 @@ These definitions relate to spacing modifiers, typically used in Layouts Compone
 @include variables.define(
     (
         "spacings": (
-            "<TIER>": sizes.generate-scaling(
+            "<TIER>": generators.modular(
                 $base: <BASE-MULTIPLIER>,
                 $ratio: <RATIO>
             ),
@@ -445,7 +445,7 @@ These definitions relate to size modifiers, used for global intrinsics propertie
 @include variables.define(
     (
         "sizes": (
-            "<TIER>": sizes.generate-scaling(
+            "<TIER>": generators.modular(
                 $base: <BASE-MULTIPLIER>,
                 $ratio: <RATIO>
             ),
@@ -520,7 +520,7 @@ These definitions relate to sizing modifiers, typically used for Component radii
 ```scss
 @include variables.define(
     (
-        "radius": sizes.generate-scaling(
+        "radius": generators.modular(
                 $base: <BASE-MULTIPLIER>,
                 $ratio: <RATIO>
             )

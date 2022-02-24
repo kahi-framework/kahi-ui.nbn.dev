@@ -70,15 +70,16 @@ npm run build:framework -- --disable-globals-intrinsics-responsitivity --disable
 
 -   Disclosure
 
-    -   `--disable-components-disclosure-accordion` — [`Accordion`](../display/accordion.md)
-    -   `--disable-components-disclosure-carousel` — [`Carousel`](../display/carousel.md)
-    -   `--disable-components-disclosure-tab` — [`Tab`](../display/tab.md)
+    -   `--disable-components-disclosure-accordion` — [`Accordion`](../disclosure/accordion.md)
+    -   `--disable-components-disclosure-carousel` — [`Carousel`](../disclosure/carousel.md)
+    -   `--disable-components-disclosure-tab` — [`Tab`](../disclosure/tab.md)
 
 -   Display
 
     -   `--disable-components-display-badge` — [`Badge`](../display/badge.md)
     -   `--disable-components-display-kbd` — [`Kbd`](../display/kbd.md)
     -   `--disable-components-display-list` — [`List`](../display/list.md)
+    -   `--disable-components-display-list` — [`Table`](../display/table.md)
 
 -   Embedded
 
@@ -110,7 +111,7 @@ npm run build:framework -- --disable-globals-intrinsics-responsitivity --disable
     -   `--disable-components-layouts-group` — [`Group`](../layouts/group.md)
     -   `--disable-components-layouts-mosaic` — [`Mosaic`](../layouts/mosaic.md)
     -   `--disable-components-layouts-position` — [`Position`](../layouts/position.md)
-    -   `--disable-components-layouts-scrollable` — [`Scrollable`](../layouts/scrollaebl.md)
+    -   `--disable-components-layouts-scrollable` — [`Scrollable`](../layouts/scrollable.md)
     -   `--disable-components-layouts-spacer` — [`Spacer`](../layouts/spacer.md)
     -   `--disable-components-layouts-stack` — [`Stack`](../layouts/stack.md)
 
