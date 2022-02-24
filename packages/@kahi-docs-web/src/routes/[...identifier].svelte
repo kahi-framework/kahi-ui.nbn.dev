@@ -1,12 +1,12 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
-    import type {IContentGet, IRouteError} from "../../lib/shared/api";
+    import type {IContentGet, IRouteError} from "../lib/shared/api";
 
     export const load: Load = async ({fetch, params}) => {
         const {identifier = ""} = params;
 
-        const response = await fetch(`/api/v4/content/docs/${identifier}.json`);
+        const response = await fetch(`/api/v4/content/${identifier}.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 
@@ -36,15 +36,15 @@
     import {page} from "$app/stores";
     import {Hero, Text} from "@kahi-ui/framework";
 
-    import Content from "../../lib/components/Content.svelte";
-    import ContentArticle from "../../lib/components/ContentArticle.svelte";
-    import ContentAPI from "../../lib/components/ContentAPI.svelte";
-    import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
+    import ContentArticle from "../lib/components/ContentArticle.svelte";
+    import ContentAPI from "../lib/components/ContentAPI.svelte";
+    import ContentBody from "../lib/components/ContentBody.svelte";
+    import ContentMetadata from "../lib/components/ContentMetadata.svelte";
 </script>
 
 {#if $page.stuff.content}
     <ContentArticle>
-        <Content />
+        <ContentBody />
 
         {#key $page.stuff.content}
             <ContentAPI />
