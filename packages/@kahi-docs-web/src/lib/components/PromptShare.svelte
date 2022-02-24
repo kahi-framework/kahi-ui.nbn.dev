@@ -34,7 +34,7 @@
     <Overlay.Backdrop />
 
     <Overlay.Section>
-        <Card.Container palette="auto" width="prose" max_width="viewport-75">
+        <Card.Container width="prose" max_width="viewport-75">
             <Card.Header>Share Playground</Card.Header>
 
             <Card.Section>

@@ -31,7 +31,7 @@
 
     {#if !_initial_load}
         <REPLOverlay>
-            <Box palette="auto" width="100" height="100">
+            <Box width="100" height="100">
                 <Center height="100">
                     <Ellipsis animation="bounce" iterations="5">
                         <Dot palette="inverse" />

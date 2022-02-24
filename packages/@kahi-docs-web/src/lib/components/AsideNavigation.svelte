@@ -65,7 +65,7 @@
         alignment_x="left"
         contents={["desktop", "widescreen"]}
     >
-        <Aside.Container palette="neutral" variation="sticky">
+        <Aside.Container palette="off" variation="sticky">
             <!-- TODO: Margin modifier is temp until Framework update to fix it -->
             <Aside.Section margin_bottom="none">
                 <Menu.Container sizing="tiny">

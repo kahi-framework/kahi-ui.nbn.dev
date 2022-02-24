@@ -107,7 +107,6 @@
         {#if searcher}
             <Card.Container
                 bind:element={container_element}
-                palette="auto"
                 margin_top="huge"
                 width="prose"
                 max_width="viewport-75"
@@ -169,7 +168,7 @@
                 </Card.Section>
             </Card.Container>
         {:else}
-            <Card.Container palette="auto" margin_top="huge" width="prose" max_width="viewport-75">
+            <Card.Container margin_top="huge" width="prose" max_width="viewport-75">
                 <Card.Header>
                     <Center width="100">
                         <Text is="span">
