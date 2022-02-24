@@ -14,13 +14,13 @@ After having Kahi UI's source code downloaded and installed, edit the `src/theme
 
 ### Palettes
 
-> **IMPORTANT**: You must **ALWAYS** include `accent`, `dark`, `light`, and `neutral` color palettes when modifying the theme.
+> **IMPORTANT**: You must **ALWAYS** include `accent`, `dark`, `light`, `neutral`, and `off` color palettes when modifying the theme.
 
 These definitions relate to the Framework's overall color design. By default, we use the Framework's palette generation system, which mixes the base color into the `dark` and `light` colors to produce the various shades that Kahi UI uses in its color design.
 
 > **USAGE**: When using the generative color system, the `dark` and `light` palettes **ALWAYS** needs to come first.
 
-> **USAGE**: When using the generative color system, the foreground color will be automatically selected from the `dark` and `light` palettes.
+> **USAGE**: When using the generative color system, the foreground color will be automatically selected from the `dark` and `light` palettes based on contrast.
 
 <!-- prettier-ignore -->
 ```scss
@@ -155,68 +155,6 @@ These definitions relate to the font family stacks used across the Framework.
     (
         "fonts.families": (
             "<FAMILY>": <FONT-STACK>,
-        ),
-    )
-);
-```
-
-### Font Letter Spacings
-
-> **IMPORTANT**: These definitions must remain unitless! Components typically define their own unit depending on context.
-
-These definitions relate to the spacing between letter spacings, typically used in categorization legends. By default we use [Modular Scale](https://www.modularscale.com/) to generate spacings.
-
-<!-- prettier-ignore -->
-```scss
-@include variables.define(
-    (
-        "fonts": (
-            "letter-spacings": generators.modular(
-                $base: <BASE-MULTIPLIER>,
-                $ratio: <RATIO>
-            ),
-        ),
-    )
-);
-```
-
-Alternatively, you can opt-out of the generative spacing system and manually specify each spacing individually.
-
-> **USAGE**: Keep in mind that the spacing scale used in Kahi UI is `nano` is the smallest spacing and `massive` is the biggest.
-
-```scss
-@include variables.define(
-    (
-        "fonts": (
-            "letter-spacings": (
-                "nano": <MULTIPLIER>,
-                "tiny": <MULTIPLIER>,
-                "small": <MULTIPLIER>,
-                "medium": <MULTIPLIER>,
-                "large": <MULTIPLIER>,
-                "huge": <MULTIPLIER>,
-                "massive": <MULTIPLIER>,
-            ),
-        ),
-    )
-);
-```
-
-As an example based on the `default` theme that ships with Kahi UI.
-
-```scss
-@include variables.define(
-    (
-        "fonts": (
-            "letter-spacings": (
-                "nano": 0.025,
-                "tiny": 0.05,
-                "small": 0.1,
-                "medium": 0.2,
-                "large": 0.4,
-                "huge": 0.8,
-                "massive": 1.6,
-            ),
         ),
     )
 );
@@ -360,7 +298,7 @@ As an example based on the `inline` tier that the `default` theme that ships wit
 
 > **IMPORTANT**: You must **ALWAYS** include `block` and `inline` spacings when modifying the theme.
 
-These definitions relate to spacing modifiers, typically used in Layouts Components or global intrinsics properties like `margin`. By default we use [Modular Scale](https://www.modularscale.com/) to generate spacings.
+These definitions relate to spacing modifiers, typically used in Layout Components, letter spacings, or global intrinsics properties like `margin`. By default we use [Modular Scale](https://www.modularscale.com/) to generate spacings.
 
 <!-- prettier-ignore -->
 ```scss
