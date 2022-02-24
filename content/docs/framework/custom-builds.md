@@ -6,7 +6,7 @@ If you're building a Web Application that's particularly sensitive to latency, p
 
 ## Downloading
 
-First, you'll need to head over to [Releases](https://github.com/novacbn/kahi-ui/releases), download the source code `.zip` / `.tar.gz` archive that matches the version of Kahi UI you're developing against, and decompress the archive onto your file.
+First, you'll need to head over to [Releases](https://github.com/novacbn/kahi-ui/releases), download the source code `.zip` / `.tar.gz` archive that matches the version of Kahi UI you're developing against, and decompress the archive onto your filesystem.
 
 ## Installation
 
