@@ -68,9 +68,9 @@
         <Aside.Container palette="neutral" variation="sticky">
             <!-- TODO: Margin modifier is temp until Framework update to fix it -->
             <Aside.Section margin_bottom="none">
-                <Menu.Container sizing="small">
+                <Menu.Container sizing="tiny">
                     {#each $navigation as menu (menu.text)}
-                        <Menu.Heading>
+                        <Menu.Heading variation="divider">
                             {menu.text}
                         </Menu.Heading>
 

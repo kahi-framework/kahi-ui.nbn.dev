@@ -48,7 +48,7 @@
     <Spacer hidden="mobile" />
 
     <div>
-        <AppAnchor is="button" href={_edit_url} palette="accent" sizing="medium" variation="clear">
+        <AppAnchor is="button" href={_edit_url} palette="accent" sizing="small" variation="clear">
             View page in repository
             <ExternalLink />
         </AppAnchor>
