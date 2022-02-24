@@ -122,15 +122,15 @@
     .split > span {
         display: block;
 
-        border: 5px solid rgba(var(--palette-accent-bold), 0.5);
-        background: rgba(var(--palette-inverse-off-lightest), 0.75);
+        border: 5px solid hsla(var(--palettes-accent-background-bolder), 0.5);
+        background: hsla(var(--palettes-accent-foreground-normal), 0.75);
 
         user-select: none;
-        transition: border-color var(--animation-visual-duration) var(--animation-visual-function);
+        transition: border-color var(--animations-visual-duration) var(--animations-visual-function);
     }
 
     .split[data-grabbing="true"] > span {
-        border-color: rgba(var(--palette-accent-bold), 0.75);
+        border-color: hsla(var(--palettes-accent-background-bolder), 0.75);
     }
 
     .split[data-orientation="horizontal"] > span {
