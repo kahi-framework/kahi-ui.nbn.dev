@@ -1,4 +1,35 @@
-<script>
+<script context="module" lang="ts">
+    import type {Load} from "@sveltejs/kit";
+
+    import type {IRouteError, ISnippetGet} from "../lib/shared/api";
+
+    const SNIPPET_IDENTIFIER = "getting-started-patterns";
+
+    export const load: Load = async ({fetch}) => {
+        const response = await fetch(`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`);
+        if (!response.ok) {
+            const data = (await response.json()) as IRouteError;
+
+            return {
+                status: response.status,
+                error: data.code,
+            };
+        }
+
+        const data = (await response.json()) as ISnippetGet;
+
+        return {
+            props: {
+                snippet: data.data,
+            },
+            stuff: {
+                prerender: [`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`],
+            },
+        };
+    };
+</script>
+
+<script lang="ts">
     import {
         Box,
         Card,
@@ -11,6 +42,8 @@
         Text,
     } from "@kahi-ui/framework";
 
+    import type {ISnippet} from "@kahi-docs/markdown";
+
     import ArrowRight from "../lib/components/icons/ArrowRight.svelte";
     import Code from "../lib/components/icons/Code.svelte";
     import LayoutTemplate from "../lib/components/icons/LayoutTemplate.svelte";
@@ -18,6 +51,9 @@
     import Zap from "../lib/components/icons/Zap.svelte";
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
+    import REPLEmbed from "../lib/components/repl/REPLEmbed.svelte";
+
+    export let snippet: ISnippet;
 </script>
 
 <Hero.Container palette="dark" padding_y="huge">
@@ -77,11 +113,9 @@
         <Text is="small">Develop more UI without writing essays worth of markup.</Text>
     </Text>
 
-    <iframe
-        class="repl-snippet"
-        src="/playground/embed/?snippet=getting-started-patterns"
-        loading="lazy"
-    />
+    <div class="repl-snippet">
+        <REPLEmbed identifier={snippet.identifier} value={snippet.script} />
+    </div>
 
     <Divider palette="accent" margin_y="huge" />
 
