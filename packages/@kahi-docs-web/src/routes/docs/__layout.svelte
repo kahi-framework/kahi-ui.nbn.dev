@@ -17,7 +17,7 @@
         const data = (await response.json()) as INavigationGet;
 
         return {
-            props: {
+            stuff: {
                 navigation: data.data,
             },
         };
@@ -25,16 +25,8 @@
 </script>
 
 <script lang="ts">
-    import type {INavigationMenu} from "@kahi-docs/config";
-    import {navigation as navigation_store} from "@kahi-docs/shared";
-
     import AsideLayout from "../../lib/components/AsideLayout.svelte";
     import ContentArticle from "../../lib/components/ContentArticle.svelte";
-
-    export let navigation: INavigationMenu[];
-
-    const store = navigation_store.init(navigation);
-    $: $store = navigation;
 </script>
 
 <AsideLayout>

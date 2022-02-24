@@ -23,10 +23,9 @@
      * TODO: Scroll to current active item when collapsed on Mobile / Tablet
      */
 
-    import {Aside, Badge, Button, Menu, Overlay, Position, Spacer} from "@kahi-ui/framework";
+    import {page} from "$app/stores";
+    import {Aside, Badge, Button, Menu, Overlay, Position, Spacer, Text} from "@kahi-ui/framework";
     import {onMount} from "svelte";
-
-    import {navigation} from "@kahi-docs/shared";
 
     import {scroll_into_container} from "../client/element";
 
@@ -45,61 +44,68 @@
     });
 </script>
 
-<Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
-    <Button is="label" for="aside-navigation" sizing="small">
-        <MenuIcon />
-    </Button>
-</Position>
+{#if $page.stuff.navigation}
+    <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
+        <Button is="label" for="aside-navigation" sizing="small">
+            <MenuIcon />
+        </Button>
+    </Position>
 
-<Overlay.Container
-    class="aside-navigation"
-    logic_id="aside-navigation"
-    contents={["desktop", "widescreen"]}
-    dismissible
->
-    <Overlay.Backdrop hidden={["desktop", "widescreen"]} />
-
-    <Overlay.Section
-        animation="slide"
-        direction="left"
-        alignment_x="left"
+    <Overlay.Container
+        class="aside-navigation"
+        logic_id="aside-navigation"
         contents={["desktop", "widescreen"]}
+        dismissible
     >
-        <Aside.Container palette="off" variation="sticky">
-            <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-            <Aside.Section margin_bottom="none">
-                <Menu.Container sizing="tiny">
-                    {#each $navigation as menu (menu.text)}
-                        <Menu.Heading variation="divider">
-                            {menu.text}
-                        </Menu.Heading>
+        <Overlay.Backdrop hidden={["desktop", "widescreen"]} />
 
-                        <Menu.Section>
-                            {#each menu.items as anchor (anchor.href)}
-                                <AppAnchor class="menu--item" href={anchor.href} prefetch>
-                                    {anchor.text}
+        <Overlay.Section
+            animation="slide"
+            direction="left"
+            alignment_x="left"
+            contents={["desktop", "widescreen"]}
+        >
+            <Aside.Container palette="off" variation="sticky">
+                <!-- TODO: Margin modifier is temp until Framework update to fix it -->
+                <Aside.Section margin_bottom="none">
+                    <Menu.Container sizing="tiny">
+                        {#each $page.stuff.navigation as menu (menu.text)}
+                            <Menu.Heading variation="divider">
+                                {menu.text}
+                            </Menu.Heading>
 
-                                    {#if anchor.badge}
-                                        <Spacer is="span" />
-                                        <Badge palette={get_palette(anchor.badge)} radius="nano">
-                                            {anchor.badge}
-                                        </Badge>
-                                    {/if}
-                                </AppAnchor>
-                            {/each}
-                        </Menu.Section>
-                    {/each}
-                </Menu.Container>
-            </Aside.Section>
+                            <Menu.Section>
+                                {#each menu.items as anchor (anchor.href)}
+                                    <AppAnchor class="menu--item" href={anchor.href} prefetch>
+                                        {anchor.text}
 
-            <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
-                <Overlay.Button variation="clear" sizing="small">
-                    <X />
-                </Overlay.Button>
-            </Position>
-        </Aside.Container>
-    </Overlay.Section>
-</Overlay.Container>
+                                        {#if anchor.badge}
+                                            <Spacer is="span" />
+                                            <Badge
+                                                palette={get_palette(anchor.badge)}
+                                                radius="nano"
+                                            >
+                                                {anchor.badge}
+                                            </Badge>
+                                        {/if}
+                                    </AppAnchor>
+                                {/each}
+                            </Menu.Section>
+                        {/each}
+                    </Menu.Container>
+                </Aside.Section>
+
+                <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
+                    <Overlay.Button variation="clear" sizing="small">
+                        <X />
+                    </Overlay.Button>
+                </Position>
+            </Aside.Container>
+        </Overlay.Section>
+    </Overlay.Container>
+{:else}
+    <Text is="strong" palette="negative">Error</Text>: failed to load page navigation
+{/if}
 
 <style>
     /**
