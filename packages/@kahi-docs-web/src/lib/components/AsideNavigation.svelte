@@ -81,7 +81,7 @@
 
                                     {#if anchor.badge}
                                         <Spacer is="span" />
-                                        <Badge palette={get_palette(anchor.badge)} radius="massive">
+                                        <Badge palette={get_palette(anchor.badge)} radius="nano">
                                             {anchor.badge}
                                         </Badge>
                                     {/if}
@@ -109,7 +109,7 @@
     :global(.aside-navigation .aside) {
         grid-area: aside;
 
-        width: 18rem;
+        width: 19rem;
         height: 100vh;
         max-height: 100%;
     }
