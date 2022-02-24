@@ -11,7 +11,6 @@ export default {
 
     kit: {
         adapter: adapter(),
-        target: "body",
 
         // Consult https://vitejs.dev/config/ to learn about these options
         /** @type {import('vite').UserConfig} */
