@@ -103,7 +103,7 @@
             </Popover.Button>
 
             <Popover.Section alignment_x="left" spacing="small">
-                <Box elevation="high" padding="medium" radius="small">
+                <Box elevation="medium" padding="medium" radius="small">
                     <Menu.Container>
                         {#each LINKS_APPLICATION as item (item.href)}
                             <AppAnchor class="menu--item" href={item.href} no_handle prefetch>
