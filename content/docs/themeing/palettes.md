@@ -101,6 +101,50 @@ When producing palette shades, the "lightest" shade blends in the background the
     </div>
 
     <div>
+        <Text is="strong">OFF</Text>
+
+        <Stack.Container
+            orientation="horizontal"
+            alignment_x="stretch"
+        >
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-lightest));"
+            />
+
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-lighter));"
+            />
+
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-light));"
+            />
+
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-normal));"
+            />
+
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-bold));"
+            />
+
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-bolder));"
+            />
+
+            <div
+                data-height="icon-massive"
+                style="background: hsl(var(--palettes-off-background-boldest));"
+            />
+        </Stack.Container>
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
 
         <Stack.Container
