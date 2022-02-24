@@ -62,10 +62,13 @@
 
 <Omni.Container class="app-navigation" palette="dark">
     <Omni.Header>
-        <AppAnchor href={base || "/"} no_handle prefetch>Kahi UI</AppAnchor>
+        <AppAnchor class="anchor" href={base || "/"} no_handle prefetch>Kahi UI</AppAnchor>
         <Divider orientation="vertical" />
 
-        <AppAnchor href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}">
+        <AppAnchor
+            class="anchor"
+            href="https://github.com/novacbn/kahi-ui/releases/v{PACKAGE_VERSION}"
+        >
             <Text is="small">
                 v{PACKAGE_VERSION}
             </Text>
