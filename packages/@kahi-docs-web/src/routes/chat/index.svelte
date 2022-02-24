@@ -17,7 +17,7 @@
 <script lang="ts">
     import {Ellipsis, Hero} from "@kahi-ui/framework";
 
-    import AppAnchor from "../lib/components/AppAnchor.svelte";
+    import AppAnchor from "../../lib/components/AppAnchor.svelte";
 </script>
 
 <svelte:head>
@@ -28,7 +28,7 @@
     <Hero.Header>Redirecting<Ellipsis /></Hero.Header>
     <Hero.Footer>
         Click to goto the Kahi UI
-        <AppAnchor href={URL_CHAT}>Discord</AppAnchor>
+        <AppAnchor class="anchor" href={URL_CHAT}>Discord</AppAnchor>
         invite.
     </Hero.Footer>
 </Hero.Container>
