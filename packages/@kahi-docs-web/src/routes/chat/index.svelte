@@ -1,17 +1,5 @@
 <script context="module" lang="ts">
-    import type {Load} from "@sveltejs/kit";
-
     const URL_CHAT = "https://discord.com/invite/8skV3G6bEa";
-
-    export const load: Load = async () => {
-        return {
-            stuff: {
-                metadata: {
-                    description: "Redirecting to Discord...",
-                },
-            },
-        };
-    };
 </script>
 
 <script lang="ts">

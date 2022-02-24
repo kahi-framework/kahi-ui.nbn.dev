@@ -30,22 +30,12 @@
             return {
                 props: {
                     snippet: data.data,
-                    stuff: {
-                        metadata: {
-                            description: "Playground",
-                        },
-                    },
                 },
             };
         } else if (script) {
             return {
                 props: {
                     script: decompress_safe(script),
-                    stuff: {
-                        metadata: {
-                            description: "Playground",
-                        },
-                    },
                 },
             };
         }
@@ -65,11 +55,6 @@
         return {
             props: {
                 fallback: data.data,
-            },
-            stuff: {
-                metadata: {
-                    description: "Playground",
-                },
             },
         };
     };
