@@ -29,8 +29,8 @@
     spacing="medium"
     width="100"
 >
-    <Figure size="icon-medium">
-        <Clock />
+    <Figure size="icon-small">
+        <Clock size="100%" />
     </Figure>
 
     <div>
