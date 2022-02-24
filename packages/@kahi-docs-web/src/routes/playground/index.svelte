@@ -117,7 +117,7 @@
             alignment_x={["center", "desktop:right", "widescreen:right"]}
             orientation="horizontal"
         >
-            <Menu.Container orientation="horizontal" sizing="small">
+            <Menu.Container orientation="horizontal" sizing="tiny">
                 <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
                     <Share2 />
                     Share
