@@ -30,7 +30,7 @@
 
         grid-area: content;
 
-        padding-top: 69px;
+        padding-top: 74px;
 
         overflow: hidden;
     }
