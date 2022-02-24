@@ -10,7 +10,7 @@
 </script>
 
 {#each _components as [component, properties]}
-    <Heading is="h3" id="api-reference-{id}-{component.toLowerCase()}">
+    <Heading is="h3" id="api-reference-{id}-{component.toLowerCase()}" margin_y="medium">
         <Code>
             {component}
         </Code>
