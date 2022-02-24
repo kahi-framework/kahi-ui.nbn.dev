@@ -169,7 +169,11 @@ You can control whether the animation is playing or paused via the `variation` p
 
 ```svelte {title="Animation Variation" mode="repl"}
 <script>
-    import {Animation, Button, Dot} from "@kahi-ui/framework";
+    import {
+        Animation,
+        Button,
+        Dot,
+    } from "@kahi-ui/framework";
 
     let variation = undefined;
 </script>
