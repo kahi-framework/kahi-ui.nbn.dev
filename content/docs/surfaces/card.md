@@ -8,7 +8,7 @@ types=["none", "lowest", "lower", "low", "medium", "high", "higher", "highest", 
 [[properties."Card.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "neutral", "dark", "light", "alert", "affirmative", "informative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Card.Container"]]
 name="sizing"
