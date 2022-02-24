@@ -1,7 +1,7 @@
 <script lang="ts">
+    import {page} from "$app/stores";
+    import {Text} from "@kahi-ui/framework";
     import {getAllContexts, onDestroy, onMount, tick} from "svelte";
-
-    import {content} from "@kahi-docs/shared";
 
     import REPLEmbed from "./repl/REPLEmbed.svelte";
 
@@ -65,11 +65,15 @@
         });
     });
 
-    $: if (observer && $content) on_content();
+    $: if (observer && $page.stuff.content) on_content();
 </script>
 
-{@html $content.render}
+{#if $page.stuff.content}
+    {@html $page.stuff.content.render}
 
-{#each $content.metadata.snippets as snippet}
-    <a href="/api/v4/snippets/{snippet.identifier}.json" hidden />
-{/each}
+    {#each $page.stuff.content.metadata.snippets as snippet}
+        <a href="/api/v4/snippets/{snippet.identifier}.json" hidden />
+    {/each}
+{:else}
+    <Text palette="negative">Error</Text>: failed to load content render
+{/if}

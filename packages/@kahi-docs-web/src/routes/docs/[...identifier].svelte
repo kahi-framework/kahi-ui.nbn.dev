@@ -19,7 +19,7 @@
         const data = (await response.json()) as IContentGet;
 
         return {
-            props: {
+            stuff: {
                 content: data.data,
             },
         };
@@ -27,26 +27,30 @@
 </script>
 
 <script lang="ts">
-    import type {IPageRender} from "@kahi-docs/markdown";
-    import {content as content_store} from "@kahi-docs/shared";
+    import {page} from "$app/stores";
+    import {Hero, Text} from "@kahi-ui/framework";
 
     import Content from "../../lib/components/Content.svelte";
     import ContentAPI from "../../lib/components/ContentAPI.svelte";
     import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
     import PageMetadata from "../../lib/components/PageMetadata.svelte";
-
-    export let content: IPageRender;
-
-    const store = content_store.init(content);
-    $: $store = content;
 </script>
 
-<PageMetadata title={content.metadata.title} separator="—" />
+{#if $page.stuff.content}
+    <PageMetadata title={$page.stuff.content.metadata.title} separator="—" />
 
-<Content />
+    <Content />
 
-{#key content}
-    <ContentAPI />
-{/key}
+    {#key $page.stuff.content}
+        <ContentAPI />
+    {/key}
 
-<ContentMetadata />
+    <ContentMetadata />
+{:else}
+    <Hero.Container palette="negative">
+        <Hero.Header>404</Hero.Header>
+        <Hero.Section>
+            The <Text is="strong">page</Text> you were looking for <Text is="strong">was not</Text> found.
+        </Hero.Section>
+    </Hero.Container>
+{/if}

@@ -5,52 +5,65 @@
 
 <script lang="ts">
     import {browser} from "$app/env";
+    import {page} from "$app/stores";
     import {Divider, Figure, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
-
-    import {content} from "@kahi-docs/shared";
 
     import Clock from "./icons/Clock.svelte";
     import ExternalLink from "./icons/ExternalLink.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
 
-    $: _edit_url = TEMPLATE_EDIT_URL({identifier: $content.metadata.identifier});
-    $: _timestamp = new Date($content.metadata.modified_at).toLocaleString(
-        browser ? navigator.language : "en-US"
-    );
+    $: _edit_url = $page.stuff.content
+        ? TEMPLATE_EDIT_URL({identifier: $page.stuff.content.metadata.identifier})
+        : "";
+    $: _timestamp = $page.stuff.content
+        ? new Date($page.stuff.content.metadata.modified_at).toLocaleString(
+              browser ? navigator.language : "en-US"
+          )
+        : "";
 </script>
 
-<Divider margin_y="large" />
+{#if $page.stuff.content}
+    <Divider margin_y="large" />
 
-<Stack.Container
-    class="content-metadata"
-    orientation={["widescreen:horizontal", "desktop:horizontal", "tablet:horizontal"]}
-    alignment="center"
-    spacing="medium"
-    width="100"
->
-    <Figure size="icon-small">
-        <Clock size="100%" />
-    </Figure>
+    <Stack.Container
+        class="content-metadata"
+        orientation={["widescreen:horizontal", "desktop:horizontal", "tablet:horizontal"]}
+        alignment="center"
+        spacing="medium"
+        width="100"
+    >
+        <Figure size="icon-small">
+            <Clock size="100%" />
+        </Figure>
 
-    <div>
-        <Heading
-            is="h5"
-            alignment_x="center"
-            max_width={["widescreen:content-max", "desktop:content-max", "tablet:content-max"]}
-        >
-            Last Modified
-        </Heading>
+        <div>
+            <Heading
+                is="h5"
+                alignment_x="center"
+                max_width={["widescreen:content-max", "desktop:content-max", "tablet:content-max"]}
+            >
+                Last Modified
+            </Heading>
 
-        <Text is="small">{_timestamp}</Text>
-    </div>
+            <Text is="small">{_timestamp}</Text>
+        </div>
 
-    <Spacer hidden="mobile" />
+        <Spacer hidden="mobile" />
 
-    <div>
-        <AppAnchor is="button" href={_edit_url} palette="accent" sizing="small" variation="clear">
-            View page in repository
-            <ExternalLink />
-        </AppAnchor>
-    </div>
-</Stack.Container>
+        <div>
+            <AppAnchor
+                is="button"
+                href={_edit_url}
+                palette="accent"
+                sizing="small"
+                variation="clear"
+            >
+                View page in repository
+                <ExternalLink />
+            </AppAnchor>
+        </div>
+    </Stack.Container>
+{:else}
+    <Text is="strong" palette="negative">Error</Text>: failed to load content metadata
+{/if}
