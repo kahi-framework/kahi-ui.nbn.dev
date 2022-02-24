@@ -46,7 +46,7 @@
 </script>
 
 <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
-    <Button for="aside-navigation" sizing="small">
+    <Button is="label" for="aside-navigation" sizing="small">
         <MenuIcon />
     </Button>
 </Position>
@@ -122,6 +122,7 @@
     @media (min-width: 768px) {
         :global(.aside-navigation .aside) {
             padding-top: 74px;
+            z-index: 0;
         }
     }
 </style>
