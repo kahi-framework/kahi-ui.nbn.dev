@@ -70,10 +70,6 @@
 
 {#if $page.stuff.content}
     {@html $page.stuff.content.render}
-
-    {#each $page.stuff.content.metadata.snippets as snippet}
-        <a href="/api/v4/snippets/{snippet.identifier}.json" hidden />
-    {/each}
 {:else}
     <Text is="strong" palette="negative">Error</Text>: failed to load content render
 {/if}

@@ -18,9 +18,15 @@
 
         const data = (await response.json()) as IContentGet;
 
+        const content = data.data;
+        const prerender = content.metadata.snippets.map(
+            (snippet) => `/api/v4/snippets/${snippet.identifier}.json`
+        );
+
         return {
             stuff: {
-                content: data.data,
+                content,
+                prerender,
             },
         };
     };

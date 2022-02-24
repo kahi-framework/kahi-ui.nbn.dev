@@ -11,5 +11,7 @@ declare namespace App {
         };
 
         navigation?: import("@kahi-docs/config").INavigationMenu[];
+
+        prerender?: string[];
     }
 }
