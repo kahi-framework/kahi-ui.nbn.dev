@@ -1,24 +1,5 @@
-<script context="module" lang="ts">
-    const TEMPLATE_IFRAME = ({
-        href_embed,
-        href_playground,
-    }: {
-        href_embed: string;
-        href_playground: string;
-    }) => `<iframe
-    src="${href_embed}"
-    loading="lazy"
->
-    See this code running at the
-    <a
-        href="${href_playground}"
-        target="_blank"
-    >Kahi UI Playground</a>.
-</iframe>`;
-</script>
-
 <script lang="ts">
-    import {Card, Code, Form, Overlay, Spacer, Text, TextInput} from "@kahi-ui/framework";
+    import {Card, Code, Form, Overlay, Text} from "@kahi-ui/framework";
 
     import {compress_safe} from "@kahi-docs/shared";
 
@@ -27,7 +8,6 @@
 
     $: _compressed = compress_safe(value);
     $: _href_playground = `${location.origin}/playground/?script=${_compressed}`;
-    $: _href_embed = `${location.origin}/playground/embed/?script=${_compressed}`;
 </script>
 
 <Overlay.Container class="share-prompt" logic_id="share-prompt" dismissible bind:logic_state>
@@ -45,39 +25,13 @@
 
                     <Code>{_href_playground}</Code>
                 </Form.Control>
-
-                <!--
-                    TODO: Fix security violations that prevent embedding from working
-
-                    <Spacer spacing_y="small" />
-                    
-                    <Form.Control logic_id="embed-iframe">
-                        <Form.Label>
-                            <Text is="strong">iframe</Text>:
-                        </Form.Label>
-                        
-                        <TextInput
-                            is="textarea"
-                            lines={10}
-                            value={TEMPLATE_IFRAME({
-                                href_embed: _href_embed,
-                                href_playground: _href_playground,
-                            })}
-                            readonly
-                        />
-                    </Form.Control>
-                -->
             </Card.Section>
         </Card.Container>
     </Overlay.Section>
 </Overlay.Container>
 
 <style>
-    :global(.share-prompt) :global(input) {
+    :global(.share-prompt) :global(code) {
         user-select: all;
-    }
-
-    :global(.share-prompt) :global(textarea) {
-        white-space: pre;
     }
 </style>

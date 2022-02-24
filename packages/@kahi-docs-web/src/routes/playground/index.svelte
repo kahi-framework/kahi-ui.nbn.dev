@@ -84,7 +84,6 @@
 
     import PromptShare from "../../lib/components/PromptShare.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
-    import StaticLayout from "../../lib/components/StaticLayout.svelte";
 
     import Copy from "../../lib/components/icons/Copy.svelte";
     import Code from "../../lib/components/icons/Code.svelte";
@@ -123,66 +122,64 @@
     $: $session = value;
 </script>
 
-<StaticLayout>
-    <Box padding="small">
-        <Stack.Container
-            alignment_x={["center", "desktop:right", "widescreen:right"]}
-            orientation="horizontal"
-        >
-            <Menu.Container orientation="horizontal" sizing="tiny">
-                <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
-                    <Share2 />
-                    Share
-                </Menu.Button>
+<Box padding="small">
+    <Stack.Container
+        alignment_x={["center", "desktop:right", "widescreen:right"]}
+        orientation="horizontal"
+    >
+        <Menu.Container orientation="horizontal" sizing="tiny">
+            <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
+                <Share2 />
+                Share
+            </Menu.Button>
 
-                <Menu.Button palette="affirmative" on:click={on_copy_click}>
-                    <Copy />
-                    Copy
-                </Menu.Button>
+            <Menu.Button palette="affirmative" on:click={on_copy_click}>
+                <Copy />
+                Copy
+            </Menu.Button>
 
-                <Menu.Button
-                    palette="inverse"
-                    on:click={() =>
-                        (orientation =
-                            orientation === SPLIT_ORIENTATION.horizontal
-                                ? SPLIT_ORIENTATION.vertical
-                                : SPLIT_ORIENTATION.horizontal)}
-                >
-                    <RotateCW />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
-                </Menu.Button>
+            <Menu.Button
+                palette="inverse"
+                on:click={() =>
+                    (orientation =
+                        orientation === SPLIT_ORIENTATION.horizontal
+                            ? SPLIT_ORIENTATION.vertical
+                            : SPLIT_ORIENTATION.horizontal)}
+            >
+                <RotateCW />
+                <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
+            </Menu.Button>
 
-                <Menu.Button
-                    active={mode === SPLIT_MODE.split}
-                    palette="inverse"
-                    on:click={() => (mode = SPLIT_MODE.split)}
-                >
-                    <Sidebar />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
-                </Menu.Button>
+            <Menu.Button
+                active={mode === SPLIT_MODE.split}
+                palette="inverse"
+                on:click={() => (mode = SPLIT_MODE.split)}
+            >
+                <Sidebar />
+                <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
+            </Menu.Button>
 
-                <Menu.Button
-                    active={mode === SPLIT_MODE.first}
-                    palette="inverse"
-                    on:click={() => (mode = SPLIT_MODE.first)}
-                >
-                    <Code />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
-                </Menu.Button>
+            <Menu.Button
+                active={mode === SPLIT_MODE.first}
+                palette="inverse"
+                on:click={() => (mode = SPLIT_MODE.first)}
+            >
+                <Code />
+                <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
+            </Menu.Button>
 
-                <Menu.Button
-                    active={mode === SPLIT_MODE.last}
-                    palette="inverse"
-                    on:click={() => (mode = SPLIT_MODE.last)}
-                >
-                    <Image />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
-                </Menu.Button>
-            </Menu.Container>
-        </Stack.Container>
-    </Box>
+            <Menu.Button
+                active={mode === SPLIT_MODE.last}
+                palette="inverse"
+                on:click={() => (mode = SPLIT_MODE.last)}
+            >
+                <Image />
+                <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
+            </Menu.Button>
+        </Menu.Container>
+    </Stack.Container>
+</Box>
 
-    <REPLSplit {mode} {orientation} bind:value />
-</StaticLayout>
+<REPLSplit {mode} {orientation} bind:value />
 
 <PromptShare {value} bind:logic_state />
