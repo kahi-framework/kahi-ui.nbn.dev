@@ -98,13 +98,13 @@
             dismissible
             bind:logic_state
         >
-            <Popover.Button palette="light" variation="clear" sizing="huge">
+            <Popover.Button palette="light" variation="clear" sizing="small">
                 <MoreVertical />
             </Popover.Button>
 
             <Popover.Section alignment_x="left" spacing="small">
                 <Box elevation="medium" padding="medium" radius="small">
-                    <Menu.Container>
+                    <Menu.Container sizing="tiny">
                         {#each LINKS_APPLICATION as item (item.href)}
                             <AppAnchor class="menu--item" href={item.href} no_handle prefetch>
                                 <svelte:component this={item.icon} />

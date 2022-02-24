@@ -46,7 +46,7 @@
 </script>
 
 <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
-    <Button for="aside-navigation" sizing="huge">
+    <Button for="aside-navigation" sizing="small">
         <MenuIcon />
     </Button>
 </Position>
@@ -93,7 +93,7 @@
             </Aside.Section>
 
             <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
-                <Overlay.Button variation="clear" sizing="huge">
+                <Overlay.Button variation="clear" sizing="small">
                     <X />
                 </Overlay.Button>
             </Position>
@@ -112,10 +112,6 @@
         width: 19rem;
         height: 100vh;
         max-height: 100%;
-    }
-
-    :global(.aside-navigation) :global(.badge) {
-        font-size: 80%;
     }
 
     :global(.aside-navigation) :global(span[role="separator"]),
