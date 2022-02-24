@@ -93,6 +93,8 @@ You can set how many pages there are for the associated content and which page i
 
 ## Anchors
 
+> **WARNING**: This feature was updated to require explicit `is` property in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
 > **IMPORTANT**: The `${page}` token is non-standard string substitution provided by this feature, and must be set via string expressions, e.g. `href={"/path/to/list/${page}"}`.
 
 You can have the paging buttons be anchors via `href` property. And adding `${page}` in your link where you want the page number to be inserted.
@@ -103,6 +105,7 @@ You can have the paging buttons be anchors via `href` property. And adding `${pa
 </script>
 
 <Pagination
+    is="a"
     href={"/path/to/list?page=${page}"}
     pages={42}
     value={24}
