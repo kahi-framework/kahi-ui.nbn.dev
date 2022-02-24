@@ -18,7 +18,7 @@
 </script>
 
 <script lang="ts">
-    import {Card, Form, Overlay, Spacer, Text, TextInput} from "@kahi-ui/framework";
+    import {Card, Code, Form, Overlay, Spacer, Text, TextInput} from "@kahi-ui/framework";
 
     import {compress_safe} from "@kahi-docs/shared";
 
@@ -43,7 +43,7 @@
                         <Text is="strong">Playground</Text>:
                     </Form.Label>
 
-                    <TextInput value={_href_playground} readonly />
+                    <Code>{_href_playground}</Code>
                 </Form.Control>
 
                 <!--
