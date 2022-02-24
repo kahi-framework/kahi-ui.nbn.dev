@@ -92,7 +92,7 @@
 
 <style>
     :global(.repl-embed-overlay) :global(.box:hover) {
-        transition: opacity var(--animation-visual-duration) var(--animation-visual-function);
+        transition: opacity var(--animations-visual-duration) var(--animations-visual-function);
     }
 
     :global(.repl-embed-overlay) :global(.box:not(:hover)) {

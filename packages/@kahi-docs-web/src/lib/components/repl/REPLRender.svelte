@@ -90,6 +90,6 @@
     :global(.repl-render) {
         height: 100%;
 
-        padding: var(--spacing-root-small) var(--spacing-root-medium);
+        padding: calc(var(--spacings-block-small) * 1rem) calc(var(--spacings-block-medium) * 1rem);
     }
 </style>

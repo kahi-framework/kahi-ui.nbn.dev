@@ -31,15 +31,6 @@
      * placed here instead of a Component.
      */
 
-    :global([class*="language-"]) {
-        font-size: var(--font-content-size-root-small) !important;
-        line-height: var(--font-content-line-height-small) !important;
-    }
-
-    :global([class*="language-"] > code) {
-        font-size: 1em;
-    }
-
     :global(.highlight),
     :global(.repl-snippet) {
         position: relative;
