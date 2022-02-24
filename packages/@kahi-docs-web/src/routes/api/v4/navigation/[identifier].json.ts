@@ -6,7 +6,7 @@ import {is_internal_url, memoize} from "@kahi-docs/shared";
 
 import NAVIGATION_CONFIG from "../../../../../../../.kahi-docs/navigation.config";
 
-import type {INavigationGet, IRouteError} from "../../../../lib/shared/api";
+import type {INavigationGet} from "../../../../lib/shared/api";
 import {read_content} from "../../../../lib/server/content";
 
 function read_navigation_menus(menus: INavigationMenu[]): Promise<INavigationMenu[]> {
@@ -41,19 +41,6 @@ export const get: RequestHandler = async (request) => {
     const {identifier = ""} = request.params;
 
     const menus = NAVIGATION_CONFIG[identifier];
-    if (!menus) {
-        return {
-            status: 404,
-            headers: {
-                "content-type": "application/json",
-            },
-
-            body: {
-                code: "InvalidIdentifier",
-                message: `invalid navigation menu '${identifier}'`,
-            } as IRouteError,
-        };
-    }
 
     return {
         status: 200,
@@ -63,7 +50,7 @@ export const get: RequestHandler = async (request) => {
 
         // HACK: Apparently `JSONValue` doesn't like my purely JSON data?
         body: {
-            data: await _read_navigation_menus(menus),
+            data: menus ? await _read_navigation_menus(menus) : null,
         } as INavigationGet as any,
     };
 };

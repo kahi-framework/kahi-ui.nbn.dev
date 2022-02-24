@@ -1,14 +1,50 @@
-<script>
+<script context="module" lang="ts">
+    import type {Load} from "@sveltejs/kit";
+
+    import type {INavigationGet, IRouteError} from "../lib/shared/api";
+
+    export const load: Load = async ({fetch, url}) => {
+        const [, category] = url.pathname.split("/");
+
+        if (!category) {
+            return {};
+        }
+
+        const response = await fetch(`/api/v4/navigation/${category}.json`);
+
+        if (!response.ok) {
+            const data = (await response.json()) as IRouteError;
+
+            return {
+                status: response.status,
+                error: data.code,
+            };
+        }
+
+        const data = (await response.json()) as INavigationGet;
+
+        return {
+            stuff: {
+                navigation: data.data,
+            },
+        };
+    };
+</script>
+
+<script lang="ts">
     import "@kahi-ui/framework/dist/kahi-ui.framework.css";
     import "@kahi-ui/framework/dist/kahi-ui.theme.default.css";
 
     import "prismjs/themes/prism-tomorrow.css";
 
     import {browser} from "$app/env";
+    import {page} from "$app/stores";
     import {htmlmode} from "@kahi-ui/framework";
 
     import {preferencetheme} from "@kahi-docs/shared";
 
+    import AppLayout from "../lib/components/AppLayout.svelte";
+    import AsideLayout from "../lib/components/AsideLayout.svelte";
     import PageMetadata from "../lib/components/PageMetadata.svelte";
     import PagePrerender from "../lib/components/PagePrerender.svelte";
 
@@ -19,7 +55,15 @@
 <PageMetadata />
 <PagePrerender />
 
-<slot />
+{#if $page.stuff.navigation}
+    <AsideLayout>
+        <slot />
+    </AsideLayout>
+{:else}
+    <AppLayout>
+        <slot />
+    </AppLayout>
+{/if}
 
 <style>
     :global(body),

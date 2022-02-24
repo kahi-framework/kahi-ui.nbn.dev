@@ -37,18 +37,21 @@
     import {Hero, Text} from "@kahi-ui/framework";
 
     import Content from "../../lib/components/Content.svelte";
+    import ContentArticle from "../../lib/components/ContentArticle.svelte";
     import ContentAPI from "../../lib/components/ContentAPI.svelte";
     import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
 </script>
 
 {#if $page.stuff.content}
-    <Content />
+    <ContentArticle>
+        <Content />
 
-    {#key $page.stuff.content}
-        <ContentAPI />
-    {/key}
+        {#key $page.stuff.content}
+            <ContentAPI />
+        {/key}
 
-    <ContentMetadata />
+        <ContentMetadata />
+    </ContentArticle>
 {:else}
     <Hero.Container palette="negative">
         <Hero.Header>404</Hero.Header>

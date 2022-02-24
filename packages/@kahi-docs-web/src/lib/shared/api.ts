@@ -19,7 +19,9 @@ export interface IContentGet extends IRouteSuccess {
 }
 
 export interface INavigationGet extends IRouteSuccess {
-    data: INavigationMenu[];
+    // HACK: well uh, we can't bail out of build errors when a route fetches
+    // during preload... So we gotta just return this instead
+    data: INavigationMenu[] | null;
 }
 
 export interface ISearchGet extends IRouteSuccess {

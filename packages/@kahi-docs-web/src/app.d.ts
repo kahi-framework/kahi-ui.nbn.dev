@@ -10,7 +10,7 @@ declare namespace App {
             image?: string;
         };
 
-        navigation?: import("@kahi-docs/config").INavigationMenu[];
+        navigation: import("@kahi-docs/config").INavigationMenu[] | null;
 
         prerender?: string[];
     }
