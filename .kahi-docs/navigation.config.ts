@@ -188,7 +188,7 @@ export default define_navigation({
         {
             text: "Utilities",
             items: [
-                {href: "/docs/utilities/animation", badge: "UPDATED"},
+                {href: "/docs/utilities/animation", badge: "NEW"},
                 {href: "/docs/utilities/browserrender"},
                 {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/mediaqueryrender"},
