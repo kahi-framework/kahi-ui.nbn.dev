@@ -419,7 +419,7 @@ You can change the color palette of the `Tab` radio buttons via the `palette` pr
 
     <Tab.Group logic_id="tab-palette-informative">
         <Tab.Label palette="informative">
-            Tab NEGATIVE
+            Tab INFORMATIVE
         </Tab.Label>
 
         <Tab.Section>

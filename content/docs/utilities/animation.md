@@ -75,7 +75,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte {title="Animation Imports" mode="repl"}
+```svelte {title="Animation Imports"}
 <script>
     import {Animation} from "@kahi-ui/framework";
 </script>
@@ -144,6 +144,8 @@ You can control how many times the animation repeats before stopping via the `it
         Dot,
         NumberInput,
     } from "@kahi-ui/framework";
+
+    let iterations = 0;
 </script>
 
 <NumberInput bind:value={iterations} />
@@ -167,7 +169,7 @@ You can control whether the animation is playing or paused via the `variation` p
 
 ```svelte {title="Animation Variation" mode="repl"}
 <script>
-    import {Animation, Dot} from "@kahi-ui/framework";
+    import {Animation, Button, Dot} from "@kahi-ui/framework";
 
     let variation = undefined;
 </script>

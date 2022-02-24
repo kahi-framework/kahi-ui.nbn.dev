@@ -163,6 +163,25 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
 
     <Blockquote.Container
         max_width="prose"
+        palette="neutral"
+    >
+        <Text margin_bottom="medium">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Mauris porta, urna vel
+            tristique varius, ipsum erat auctor odio,
+            id imperdiet mauris velit eget quam. Donec
+            viverra urna eu ligula eleifend, sed
+            molestie lectus convallis. Nullam gravida
+            placerat ex, sodales porttitor nibh.
+            Suspendisse vitae nisi euismod, venenatis
+            dui eu, hendrerit risus.
+        </Text>
+
+        <Blockquote.Cite>— NEUTRAL</Blockquote.Cite>
+    </Blockquote.Container>
+
+    <Blockquote.Container
+        max_width="prose"
         palette="dark"
     >
         <Text margin_bottom="medium">
@@ -237,6 +256,26 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
         <Blockquote.Cite>
             — AFFIRMATIVE
         </Blockquote.Cite>
+    </Blockquote.Container>
+
+    <Blockquote.Container
+        max_width="prose"
+        palette="informative"
+    >
+        <Text margin_bottom="medium">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Mauris porta, urna vel
+            tristique varius, ipsum erat auctor odio,
+            id imperdiet mauris velit eget quam. Donec
+            viverra urna eu ligula eleifend, sed
+            molestie lectus convallis. Nullam gravida
+            placerat ex, sodales porttitor nibh.
+            Suspendisse vitae nisi euismod, venenatis
+            dui eu, hendrerit risus.
+        </Text>
+
+        <Blockquote.Cite>— INFORMATIVE</Blockquote.Cite
+        >
     </Blockquote.Container>
 
     <Blockquote.Container

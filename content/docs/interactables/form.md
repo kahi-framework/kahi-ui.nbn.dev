@@ -203,7 +203,7 @@ Form Components are helpers to supplement input Components that are meant for fo
         <Radio
             id="form-group-bubblegum"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="bubblegum"
         >
             Bubblegum
@@ -212,7 +212,7 @@ Form Components are helpers to supplement input Components that are meant for fo
         <Radio
             id="form-group-chocolate"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="chocolate"
         >
             Chocolate
@@ -221,7 +221,7 @@ Form Components are helpers to supplement input Components that are meant for fo
         <Radio
             id="form-group-vanilla"
             palette="accent"
-            size="tiny"
+            sizing="tiny"
             value="vanilla"
         >
             Vanilla

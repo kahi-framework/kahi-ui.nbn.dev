@@ -426,7 +426,7 @@ You can set how "high" your `Box` will appear to be over top the page via the `e
         </Text>
     </Box>
 
-    <Box elevation="highest">
+    <Box palette="inverse" elevation="highest">
         <Text is="strong">HIGHEST</Text>
 
         <Text>
@@ -458,7 +458,7 @@ You can modify the border radius of the `Box` via the `radius` property.
 </script>
 
 <Mosaic.Container sizing="medium" spacing="large">
-    <Box padding="huge">
+    <Box palette="inverse" padding="huge">
         <Text is="strong">DEFAULT</Text>
 
         <Text>
@@ -470,7 +470,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="nano" padding="huge">
+    <Box
+        palette="inverse"
+        radius="nano"
+        padding="huge"
+    >
         <Text is="strong">NANO</Text>
 
         <Text>
@@ -482,7 +486,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="tiny" padding="huge">
+    <Box
+        palette="inverse"
+        radius="tiny"
+        padding="huge"
+    >
         <Text is="strong">TINY</Text>
 
         <Text>
@@ -494,7 +502,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="small" padding="huge">
+    <Box
+        palette="inverse"
+        radius="small"
+        padding="huge"
+    >
         <Text is="strong">SMALL</Text>
 
         <Text>
@@ -506,7 +518,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="medium" padding="huge">
+    <Box
+        palette="inverse"
+        radius="medium"
+        padding="huge"
+    >
         <Text is="strong">MEDIUM</Text>
 
         <Text>
@@ -518,7 +534,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="large" padding="huge">
+    <Box
+        palette="inverse"
+        radius="large"
+        padding="huge"
+    >
         <Text is="strong">LARGE</Text>
 
         <Text>
@@ -530,7 +550,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="huge" padding="huge">
+    <Box
+        palette="inverse"
+        radius="huge"
+        padding="huge"
+    >
         <Text is="strong">HUGE</Text>
 
         <Text>
@@ -542,7 +566,11 @@ You can modify the border radius of the `Box` via the `radius` property.
         </Text>
     </Box>
 
-    <Box radius="massive" padding="huge">
+    <Box
+        palette="inverse"
+        radius="massive"
+        padding="huge"
+    >
         <Text is="strong">MASSIVE</Text>
 
         <Text>
@@ -572,7 +600,7 @@ You can modify the shape of the `Box` via the `shape` property.
 </script>
 
 <Mosaic.Container sizing="medium" spacing="large">
-    <Box padding="huge">
+    <Box palette="inverse" padding="huge">
         <Text is="strong">DEFAULT</Text>
 
         <Text>
@@ -584,7 +612,11 @@ You can modify the shape of the `Box` via the `shape` property.
         </Text>
     </Box>
 
-    <Box shape="circle" padding="huge">
+    <Box
+        palette="inverse"
+        shape="circle"
+        padding="huge"
+    >
         <Text is="strong">CIRCLE</Text>
 
         <Text>
@@ -596,7 +628,7 @@ You can modify the shape of the `Box` via the `shape` property.
         </Text>
     </Box>
 
-    <Box shape="pill" padding="huge">
+    <Box palette="inverse" shape="pill" padding="huge">
         <Text is="strong">PILL</Text>
 
         <Text>

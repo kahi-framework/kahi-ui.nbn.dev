@@ -148,7 +148,7 @@ You can also adjust the `Position` to sit relative to the parent container inste
     } from "@kahi-ui/framework";
 </script>
 
-<Box padding="medium">
+<Box palette="inverse" padding="medium">
     Hello there!
     <Position
         variation={["container", "action"]}

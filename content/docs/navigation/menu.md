@@ -126,7 +126,7 @@ types=["{}"]
     import {
         Menu,
         Spacer,
-        Kbd,
+        Text,
     } from "@kahi-ui/framework";
 </script>
 
@@ -134,21 +134,21 @@ types=["{}"]
     <Menu.Button>
         Copy
         <Spacer />
-        <Kbd>CTRL+C</Kbd>
+        <Text is="small">CTRL+C</Text>
     </Menu.Button>
 
     <Menu.Button>
         Cut
         <Spacer />
-        <Kbd>CTRL+X</Kbd>
+        <Text is="small">CTRL+X</Text>
     </Menu.Button>
 
-    <Menu.Divider />
+    <Menu.Heading />
 
     <Menu.Button>
         Delete
         <Spacer />
-        <Kbd>DEL</Kbd>
+        <Text is="small">DEL</Text>
     </Menu.Button>
 </Menu.Container>
 ```

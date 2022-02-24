@@ -140,7 +140,8 @@ types=["<length>"]
 
                 <Tile.Footer>
                     <Button
-                        size="small"
+                        variation="clear"
+                        sizing="small"
                         palette="negative"
                         on:click={(event) =>
                             on_remove_click(

@@ -63,7 +63,10 @@ types=["{}"]
     </Omni.Header>
 
     <Omni.Section>
-        <Menu.Container orientation="horizontal">
+        <Menu.Container
+            orientation="horizontal"
+            sizing="tiny"
+        >
             <Menu.Button active>Docs</Menu.Button>
             <Menu.Button>Playground</Menu.Button>
             <Menu.Button>Storybook</Menu.Button>
@@ -71,7 +74,10 @@ types=["{}"]
     </Omni.Section>
 
     <Omni.Footer>
-        <Menu.Container orientation="horizontal">
+        <Menu.Container
+            orientation="horizontal"
+            sizing="tiny"
+        >
             <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
     </Omni.Footer>
@@ -97,7 +103,6 @@ You can change the color palette of the `Omni` via the `palette` property.
     import {
         Anchor,
         Divider,
-        Menu,
         Omni,
         Stack,
     } from "@kahi-ui/framework";
@@ -110,12 +115,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             DEFAULT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="accent" width="100">
@@ -124,12 +123,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             ACCENT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="neutral" width="100">
@@ -138,14 +131,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             NEUTRAL
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="dark" width="100">
@@ -154,12 +139,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             DARK
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="light" width="100">
@@ -168,12 +147,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             LIGHT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="alert" width="100">
@@ -182,12 +155,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             ALERT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="affirmative" width="100">
@@ -196,12 +163,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             AFFIRMATIVE
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="informative" width="100">
@@ -210,14 +171,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             INFORMATIVE
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button variation="clear">
-                    GitHub
-                </Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="negative" width="100">
@@ -226,12 +179,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             NEGATIVE
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 </Stack.Container>
 ```
@@ -247,7 +194,6 @@ You can adjust which side the content divider border will appear via the `placem
     import {
         Anchor,
         Divider,
-        Menu,
         Omni,
         Text,
     } from "@kahi-ui/framework";
@@ -265,20 +211,6 @@ You can adjust which side the content divider border will appear via the `placem
             <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
-
-    <Omni.Section>
-        <Menu.Container orientation="horizontal">
-            <Menu.Button active>Docs</Menu.Button>
-            <Menu.Button>Playground</Menu.Button>
-            <Menu.Button>Storybook</Menu.Button>
-        </Menu.Container>
-    </Omni.Section>
-
-    <Omni.Footer>
-        <Menu.Container orientation="horizontal">
-            <Menu.Button>GitHub</Menu.Button>
-        </Menu.Container>
-    </Omni.Footer>
 </Omni.Container>
 ```
 
@@ -311,7 +243,10 @@ While `Omni` does not have built-in collapsing, the Framework provides the primi
     </Omni.Header>
 
     <Omni.Section hidden={["mobile", "tablet"]}>
-        <Menu.Container orientation="horizontal">
+        <Menu.Container
+            orientation="horizontal"
+            sizing="tiny"
+        >
             <Menu.Button active>Docs</Menu.Button>
             <Menu.Button>Playground</Menu.Button>
             <Menu.Button>Storybook</Menu.Button>
@@ -322,6 +257,7 @@ While `Omni` does not have built-in collapsing, the Framework provides the primi
         <Menu.Container
             hidden={["mobile", "tablet"]}
             orientation="horizontal"
+            sizing="tiny"
         >
             <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
@@ -331,7 +267,10 @@ While `Omni` does not have built-in collapsing, the Framework provides the primi
             logic_id="omni-collapsing"
             dismissible
         >
-            <Popover.Button variation="clear">
+            <Popover.Button
+                palette="light"
+                variation="clear"
+            >
                 +
             </Popover.Button>
 
@@ -345,7 +284,7 @@ While `Omni` does not have built-in collapsing, the Framework provides the primi
                     padding="medium"
                     radius="tiny"
                 >
-                    <Menu.Container>
+                    <Menu.Container sizing="tiny">
                         <Menu.Button active>
                             Docs
                         </Menu.Button>

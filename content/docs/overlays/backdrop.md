@@ -59,10 +59,10 @@ Hello World!
 
 <Backdrop {palette} />
 
-<Position variation="action">
+<Position variation="action" alignment_x="left">
     <Stack.Container
         orientation="horizontal"
-        alignment_x="right"
+        alignment_x="left"
         spacing="small"
         variation="wrap"
         max_width="prose"

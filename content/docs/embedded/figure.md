@@ -161,56 +161,56 @@ You can modify the border radius of the child content via the `radius` property.
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">NONE</Text>
         <Figure radius="none">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">NANO</Text>
         <Figure radius="nano">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">TINY</Text>
         <Figure radius="tiny">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">SMALL</Text>
         <Figure radius="small">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">MEDIUM</Text>
         <Figure radius="medium">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">LARGE</Text>
         <Figure radius="large">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">HUGE</Text>
         <Figure radius="huge">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong" />
+        <Text is="strong">MASSIVE</Text>
         <Figure radius="massive">
             <img src={IMAGE_BACKGROUND} />
         </Figure>

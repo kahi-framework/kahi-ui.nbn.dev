@@ -129,7 +129,7 @@ types=["{}"]
                         spacing="medium"
                     />
 
-                    <Text is="kbd">CTRL+C</Text>
+                    <Text is="small">CTRL+C</Text>
                 </Menu.Button>
 
                 <Menu.Button>
@@ -139,10 +139,10 @@ types=["{}"]
                         spacing="medium"
                     />
 
-                    <Text is="kbd">CTRL+X</Text>
+                    <Text is="small">CTRL+X</Text>
                 </Menu.Button>
 
-                <Menu.Divider />
+                <Menu.Heading />
 
                 <Menu.Button>
                     Delete
@@ -151,7 +151,7 @@ types=["{}"]
                         spacing="medium"
                     />
 
-                    <Text is="kbd">DEL</Text>
+                    <Text is="small">DEL</Text>
                 </Menu.Button>
             </Menu.Container>
         </Box>

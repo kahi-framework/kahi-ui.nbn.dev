@@ -97,7 +97,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte {title="Transition Imports" mode="repl"}
+```svelte {title="Transition Imports"}
 <script>
     import {Transition} from "@kahi-ui/framework";
 </script>
@@ -288,6 +288,7 @@ You can change the HTML tag rendered to DOM via the `is` property.
     import {
         Box,
         Button,
+        Stack,
         Transition,
     } from "@kahi-ui/framework";
 

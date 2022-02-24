@@ -139,7 +139,11 @@ types=["{}"]
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-preview" palette="accent">
+<Button
+    is="label"
+    for="overlay-preview"
+    palette="accent"
+>
     Open MODAL
 </Button>
 
@@ -207,7 +211,9 @@ You can make the `Overlay` toggleable via the `logic_id` property, and then refe
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-logic-id">Open Overlay</Button>
+<Button is="label" for="overlay-logic-id">
+    Open Overlay
+</Button>
 
 <Overlay.Container logic_id="overlay-logic-id">
     <Overlay.Section>
@@ -292,7 +298,7 @@ Whenever the `Overlay` becomes active, focus is moved to the first found focusab
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-auto-focus">
+<Button is="label" for="overlay-auto-focus">
     Open AUTO FOCUSED Overlay
 </Button>
 
@@ -360,7 +366,7 @@ You can customize which element is focused on activation with a reference or CSS
     let target_element;
 </script>
 
-<Button for="overlay-auto-focus-target">
+<Button is="label" for="overlay-auto-focus-target">
     Open AUTO FOCUSED Overlay
 </Button>
 
@@ -438,7 +444,7 @@ While the `Overlay` is active, focus movement is trapped within the first and la
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-focus-trapping">
+<Button is="label" for="overlay-focus-trapping">
     Open FOCUS TRAPPED Overlay
 </Button>
 
@@ -512,7 +518,10 @@ You can customize which elements are used as the first and last with references 
     let last_element;
 </script>
 
-<Button for="overlay-focus-trapping-first-last">
+<Button
+    is="label"
+    for="overlay-focus-trapping-first-last"
+>
     Open FOCUS TRAPPED Overlay
 </Button>
 
@@ -595,7 +604,9 @@ You can customize the loading behavior of slotted content via the `loading` prop
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-lazy">Open LAZY Overlay</Button>
+<Button is="label" for="overlay-lazy">
+    Open LAZY Overlay
+</Button>
 
 <Overlay.Container
     logic_id="overlay-lazy"
@@ -634,11 +645,11 @@ You can optionally include a backdrop by passing via composing the `<Overlay.Bac
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-backdrop-no">
+<Button is="label" for="overlay-backdrop-no">
     Open NO BACKDROP Overlay
 </Button>
 
-<Button for="overlay-backdrop-has">
+<Button is="label" for="overlay-backdrop-has">
     Open HAS BACKDROP Overlay
 </Button>
 
@@ -706,11 +717,11 @@ You can optionally have the `Overlay` dismissible by pressing the `ESC` key or c
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-dismissible-disabled">
+<Button is="label" for="overlay-dismissible-disabled">
     Open NON-DISMISSIBLE Overlay
 </Button>
 
-<Button for="overlay-dismissible-enabled">
+<Button is="label" for="overlay-dismissible-enabled">
     Open DISMISSIBLE Overlay
 </Button>
 
@@ -785,11 +796,11 @@ You can enable having the `Overlay` dismissed whenever `<Overlay.Section>` inner
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-once-disabled">
+<Button is="label" for="overlay-once-disabled">
     Open NON-ONCE Overlay
 </Button>
 
-<Button for="overlay-once-enabled">
+<Button is="label" for="overlay-once-enabled">
     Open ONCE Overlay
 </Button>
 
@@ -882,6 +893,7 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
 
 <Overlay.Container>
     <Overlay.Section
+        spacing="medium"
         alignment_x="right"
         alignment_y="bottom"
         padding_bottom="medium"
@@ -957,9 +969,9 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
 
 <Overlay.Container>
     <Overlay.Section
+        spacing="medium"
         alignment_x="right"
         alignment_y="bottom"
-        spacing="medium"
         padding_bottom="medium"
         padding_right="medium"
     >
@@ -1029,19 +1041,19 @@ You can change which built-in [`Transition`](../utilities/transition.md) is anim
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-transition-clip">
+<Button is="label" for="overlay-transition-clip">
     Open CLIP Overlay
 </Button>
 
-<Button for="overlay-transition-fade">
+<Button is="label" for="overlay-transition-fade">
     Open FADE Overlay
 </Button>
 
-<Button for="overlay-transition-scale">
+<Button is="label" for="overlay-transition-scale">
     Open SCALE Overlay
 </Button>
 
-<Button for="overlay-transition-slide">
+<Button is="label" for="overlay-transition-slide">
     Open SLIDE Overlay
 </Button>
 
@@ -1139,7 +1151,7 @@ You can change which direction the entrance animation comes from via the `direct
     } from "@kahi-ui/framework";
 </script>
 
-<Button for="overlay-direction">
+<Button is="label" for="overlay-direction">
     Open SLIDE Overlay
 </Button>
 

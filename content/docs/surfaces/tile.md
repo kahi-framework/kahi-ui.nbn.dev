@@ -712,10 +712,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
         </Tile.Footer>
     </Tile.Container>
 
-    <Tile.Container
-        palette="accent"
-        width="content-max"
-    >
+    <Tile.Container width="content-max">
         <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>

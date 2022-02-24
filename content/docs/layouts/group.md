@@ -83,7 +83,7 @@ You can set the `Group` to render its children Components vertically, via the `o
 >
     <div>
         <Text is="strong">DEFAULT</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Group>
                 <Button>Button 1</Button>
                 <Button>Button 2</Button>
@@ -94,7 +94,7 @@ You can set the `Group` to render its children Components vertically, via the `o
 
     <div>
         <Text is="strong">VERTICAL</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Group orientation="vertical">
                 <Button>Button 1</Button>
                 <Button>Button 2</Button>

@@ -452,7 +452,9 @@ While `Aside` does not have built-in collapsing, the Framework provides the prim
     alignment_x="left"
     hidden={["desktop", "widescreen"]}
 >
-    <Button for="aside-collapsing">+</Button>
+    <Button is="label" for="aside-collapsing">
+        +
+    </Button>
 </Position>
 
 <Overlay.Container
