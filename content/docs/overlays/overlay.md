@@ -150,8 +150,8 @@ types=["{}"]
     <Overlay.Backdrop />
 
     <Overlay.Section>
-        <Card.Container palette="auto" max_width="75">
-            <Card.Header>Are you sure?</Card.Header>
+        <Card.Container max_width="75">
+            <Card.Header>Delete File?</Card.Header>
 
             <Card.Section>
                 <Text>
@@ -888,7 +888,6 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
         padding_right="medium"
     >
         <Tile.Container
-            palette="auto"
             elevation="medium"
             width="content-max"
             max_width="75"
@@ -914,7 +913,6 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
         </Tile.Container>
 
         <Tile.Container
-            palette="auto"
             elevation="medium"
             width="content-max"
             max_width="75"
@@ -966,7 +964,6 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
         padding_right="medium"
     >
         <Tile.Container
-            palette="auto"
             elevation="medium"
             width="content-max"
             max_width="75"
@@ -992,7 +989,6 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
         </Tile.Container>
 
         <Tile.Container
-            palette="auto"
             elevation="medium"
             width="content-max"
             max_width="75"

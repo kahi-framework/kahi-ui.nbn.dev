@@ -191,7 +191,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
     } from "@kahi-ui/framework";
 </script>
 
-<Tile.Container palette="auto" width="content-max">
+<Tile.Container width="content-max">
     <Tile.Figure>
         <img src={IMAGE_AVATAR} />
     </Tile.Figure>

@@ -129,10 +129,7 @@ types=["<length>"]
         margin_y="medium"
     >
         {#each files as file (file.name)}
-            <Tile.Container
-                sizing="small"
-                palette="auto"
-            >
+            <Tile.Container sizing="small">
                 <Tile.Section>
                     <Tile.Header>
                         {file.name}

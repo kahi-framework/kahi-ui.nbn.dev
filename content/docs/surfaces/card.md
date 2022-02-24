@@ -208,7 +208,7 @@ types=["<length>"]
     } from "@kahi-ui/framework";
 </script>
 
-<Card.Container class="card-preview" palette="auto">
+<Card.Container class="card-preview">
     <Card.Figure>
         <img src={IMAGE_BACKGROUND} />
     </Card.Figure>

@@ -340,8 +340,7 @@ While `Omni` does not have built-in collapsing, the Framework provides the primi
                 spacing="small"
             >
                 <Box
-                    palette="auto"
-                    elevation="high"
+                    elevation="medium"
                     padding="medium"
                     shape="rounded"
                 >

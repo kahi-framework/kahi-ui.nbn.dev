@@ -89,10 +89,7 @@ Some Components are multi-part patterns, so you'll need to import their namespac
     } from "@kahi-ui/framework";
 </script>
 
-<Card.Container
-    class="getting-started-patterns"
-    palette="auto"
->
+<Card.Container class="getting-started-patterns">
     <Card.Figure>
         <img src={IMAGE_BACKGROUND} />
     </Card.Figure>
