@@ -30,12 +30,22 @@
             return {
                 props: {
                     snippet: data.data,
+                    stuff: {
+                        metadata: {
+                            description: "Playground",
+                        },
+                    },
                 },
             };
         } else if (script) {
             return {
                 props: {
                     script: decompress_safe(script),
+                    stuff: {
+                        metadata: {
+                            description: "Playground",
+                        },
+                    },
                 },
             };
         }
@@ -56,6 +66,11 @@
             props: {
                 fallback: data.data,
             },
+            stuff: {
+                metadata: {
+                    description: "Playground",
+                },
+            },
         };
     };
 </script>
@@ -67,7 +82,6 @@
     import type {ISnippet} from "@kahi-docs/markdown";
     import {session} from "@kahi-docs/shared";
 
-    import PageMetadata from "../../lib/components/PageMetadata.svelte";
     import PromptShare from "../../lib/components/PromptShare.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
     import StaticLayout from "../../lib/components/StaticLayout.svelte";
@@ -108,8 +122,6 @@
 
     $: $session = value;
 </script>
-
-<PageMetadata title="Playground" separator="—" />
 
 <StaticLayout>
     <Box padding="small">

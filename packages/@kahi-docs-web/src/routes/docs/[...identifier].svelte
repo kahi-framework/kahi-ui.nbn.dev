@@ -33,12 +33,9 @@
     import Content from "../../lib/components/Content.svelte";
     import ContentAPI from "../../lib/components/ContentAPI.svelte";
     import ContentMetadata from "../../lib/components/ContentMetadata.svelte";
-    import PageMetadata from "../../lib/components/PageMetadata.svelte";
 </script>
 
 {#if $page.stuff.content}
-    <PageMetadata title={$page.stuff.content.metadata.title} separator="—" />
-
     <Content />
 
     {#key $page.stuff.content}

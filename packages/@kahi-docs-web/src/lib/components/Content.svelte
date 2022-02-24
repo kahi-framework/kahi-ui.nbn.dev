@@ -75,5 +75,5 @@
         <a href="/api/v4/snippets/{snippet.identifier}.json" hidden />
     {/each}
 {:else}
-    <Text palette="negative">Error</Text>: failed to load content render
+    <Text is="strong" palette="negative">Error</Text>: failed to load content render
 {/if}

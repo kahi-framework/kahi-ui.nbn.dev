@@ -19,10 +19,7 @@
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
     import AppLayout from "../lib/components/AppLayout.svelte";
-    import PageMetadata from "../lib/components/PageMetadata.svelte";
 </script>
-
-<PageMetadata separator="::" />
 
 <!--
     NOTE: Layout stuff is here in index so nested Application
