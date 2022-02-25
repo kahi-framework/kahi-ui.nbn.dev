@@ -9,8 +9,9 @@
 </script>
 
 <script lang="ts">
-    import {Dot, Ellipsis} from "@kahi-ui/framework";
+    import {Box, Code, Dot, Ellipsis, Text} from "@kahi-ui/framework";
     import type {IPipelineSvelteStore} from "@novacbn/svelte-pipeline";
+    import {PIPELINE_RESULT_TYPES} from "@novacbn/svelte-pipeline";
     import type {SvelteComponent} from "svelte";
     import {createEventDispatcher, onMount} from "svelte";
 
@@ -34,12 +35,22 @@
     let store: IPipelineSvelteStore | undefined;
 
     let is_mounted: boolean = false;
+    let error: string | null = null;
 
     let _class: string = "";
     export let style: string | undefined = undefined;
     export {_class as class};
 
     export let value: string;
+
+    function on_error(event: CustomEvent<{error: Error}>): void {
+        error = event.detail.error.message;
+    }
+
+    function on_mount(event: CustomEvent): void {
+        error = null;
+        is_mounted = true;
+    }
 
     onMount(async () => {
         const [config, module, components] = await import_modules();
@@ -62,6 +73,12 @@
     });
 
     $: if (store) $store = value;
+
+    $: {
+        if (store && $store && $store.type === PIPELINE_RESULT_TYPES.error) {
+            error = $store.message;
+        }
+    }
 </script>
 
 {#if PipelineRenderComponent && store}
@@ -70,8 +87,8 @@
         pipeline={store}
         style={is_mounted ? style : "display:none;"}
         on:destroy={() => (is_mounted = false)}
-        on:error={() => (is_mounted = false)}
-        on:mount={() => (is_mounted = true)}
+        on:error={on_error}
+        on:mount={on_mount}
         on:destroy
         on:error
         on:mount
@@ -79,10 +96,18 @@
 {/if}
 
 {#if !is_mounted}
-    <REPLOverlay {style}>
+    <REPLOverlay>
         <Ellipsis animation="bounce" iterations="5">
             <Dot palette="inverse" />
         </Ellipsis>
+    </REPLOverlay>
+{/if}
+
+{#if error}
+    <REPLOverlay alignment_x="stretch" alignment_y="top">
+        <Box palette="negative" padding="small">
+            <Text is="strong">ERROR</Text>: <Code>{error}</Code>
+        </Box>
     </REPLOverlay>
 {/if}
 
