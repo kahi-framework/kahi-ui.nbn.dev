@@ -124,7 +124,7 @@
     :global(.aside-navigation .aside) {
         grid-area: aside;
 
-        width: 19rem;
+        width: 20rem;
         height: 100vh;
         max-height: 100%;
     }
