@@ -25,35 +25,44 @@
 
     <Stack.Container
         orientation="horizontal"
-        alignment="center"
+        alignment_y="center"
         spacing="small"
         margin_bottom="medium"
     >
-        <Text is="small">
-            {_timestamp}
-        </Text>
-
         {#if $page.stuff.content.metadata.authors}
-            {#each Object.entries($page.stuff.content.metadata.authors) as [name, data] (name)}
-                &bullet;
+            <div>
+                <Stack.Container orientation="horizontal" alignment_y="center" spacing="small">
+                    {#each Object.entries($page.stuff.content.metadata.authors) as [name, data], index (name)}
+                        {#if index > 0}
+                            &bullet;
+                        {/if}
+
+                        <Text is="small">
+                            {#if data?.href}
+                                <AppAnchor class="anchor" href={data.href} palette="informative">
+                                    {name}
+                                </AppAnchor>
+                            {:else}
+                                {name}
+                            {/if}
+                        </Text>
+                    {/each}
+                </Stack.Container>
+
                 <Text is="small">
-                    {#if data?.href}
-                        <AppAnchor class="anchor" href={data.href} palette="informative">
-                            {name}
-                        </AppAnchor>
-                    {:else}
-                        {name}
-                    {/if}
+                    {_timestamp}
                 </Text>
-            {/each}
+            </div>
+        {:else}
+            <Text is="small">
+                {_timestamp}
+            </Text>
         {/if}
 
         <Spacer />
 
         <Text is="small">
-            <AppAnchor class="anchor" href={_edit_url} palette="informative">
-                View page in repository
-            </AppAnchor>
+            <AppAnchor class="anchor" href={_edit_url} palette="informative">View Source</AppAnchor>
         </Text>
     </Stack.Container>
 {:else}
