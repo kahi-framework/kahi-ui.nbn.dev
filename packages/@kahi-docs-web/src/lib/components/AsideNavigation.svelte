@@ -105,7 +105,7 @@
                 </Aside.Section>
 
                 <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
-                    <Overlay.Button variation="clear">
+                    <Overlay.Button palette="inverse" variation="clear">
                         <X size="1em" />
                     </Overlay.Button>
                 </Position>
