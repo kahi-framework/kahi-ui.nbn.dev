@@ -59,3 +59,9 @@
         <slot />
     </a>
 {/if}
+
+<style>
+    a :global(svg) {
+        display: inline-block;
+    }
+</style>

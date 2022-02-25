@@ -6,8 +6,7 @@
 <script lang="ts">
     import {browser} from "$app/env";
     import {page} from "$app/stores";
-    import {Divider, Figure, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
-    import {Clock, ExternalLink} from "lucide-svelte";
+    import {Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
 
     import AppAnchor from "./AppAnchor.svelte";
 
@@ -22,45 +21,40 @@
 </script>
 
 {#if $page.stuff.content}
-    <Divider margin_y="large" />
+    <Heading margin_bottom="small">{$page.stuff.content.metadata.title}</Heading>
 
     <Stack.Container
-        class="content-metadata"
-        orientation={["widescreen:horizontal", "desktop:horizontal", "tablet:horizontal"]}
+        orientation="horizontal"
         alignment="center"
-        spacing="medium"
-        width="100"
+        spacing="small"
+        margin_bottom="medium"
     >
-        <Figure size="icon-small">
-            <Clock size="100%" />
-        </Figure>
+        <Text is="small">
+            {_timestamp}
+        </Text>
 
-        <div>
-            <Heading
-                is="h5"
-                alignment_x="center"
-                max_width={["widescreen:content-max", "desktop:content-max", "tablet:content-max"]}
-            >
-                Last Modified
-            </Heading>
+        {#if $page.stuff.content.metadata.authors}
+            {#each Object.entries($page.stuff.content.metadata.authors) as [name, data] (name)}
+                &bullet;
+                <Text is="small">
+                    {#if data?.href}
+                        <AppAnchor class="anchor" href={data.href} palette="informative">
+                            {name}
+                        </AppAnchor>
+                    {:else}
+                        {name}
+                    {/if}
+                </Text>
+            {/each}
+        {/if}
 
-            <Text is="small">{_timestamp}</Text>
-        </div>
+        <Spacer />
 
-        <Spacer hidden="mobile" />
-
-        <div>
-            <AppAnchor
-                is="button"
-                href={_edit_url}
-                palette="accent"
-                sizing="small"
-                variation="clear"
-            >
+        <Text is="small">
+            <AppAnchor class="anchor" href={_edit_url} palette="informative">
                 View page in repository
-                <ExternalLink size="1em" />
             </AppAnchor>
-        </div>
+        </Text>
     </Stack.Container>
 {:else}
     <Text is="strong" palette="negative">Error</Text>: failed to load content metadata

@@ -1,13 +1,12 @@
-<article
-    class="container article content-article"
-    data-max-width="desktop"
-    data-width="100"
-    data-padding-y="large"
->
+<article class="container article content-article" data-width="100" data-padding-y="large">
     <slot />
 </article>
 
 <style>
+    :global(.content-article) {
+        max-width: calc(var(--sizes-prose) + calc(var(--spacings-block-large) * 1rem));
+    }
+
     :global(.content-article) > :global(pre[class*="language-"]) {
         margin: 0;
     }

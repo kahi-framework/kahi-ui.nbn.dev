@@ -33,24 +33,58 @@
 </script>
 
 <script lang="ts">
+    import {afterNavigate} from "$app/navigation";
     import {page} from "$app/stores";
-    import {Hero, Text} from "@kahi-ui/framework";
+    import {Hero, Tab, Text} from "@kahi-ui/framework";
+
+    import type {IReferenceMap} from "@kahi-docs/markdown";
 
     import ContentArticle from "../lib/components/ContentArticle.svelte";
     import ContentAPI from "../lib/components/ContentAPI.svelte";
     import ContentBody from "../lib/components/ContentBody.svelte";
     import ContentMetadata from "../lib/components/ContentMetadata.svelte";
+
+    let logic_state = "content-switcher-guide";
+
+    function has_references(references?: IReferenceMap): boolean {
+        return references ? Object.keys(references).length > 0 : false;
+    }
+
+    afterNavigate(() => {
+        logic_state = "content-switcher-guide";
+    });
+
+    $: _has_references =
+        has_references($page.stuff.content?.references.events) ||
+        has_references($page.stuff.content?.references.properties) ||
+        has_references($page.stuff.content?.references.slots);
 </script>
 
 {#if $page.stuff.content}
     <ContentArticle>
-        <ContentBody />
-
-        {#key $page.stuff.content}
-            <ContentAPI />
-        {/key}
-
         <ContentMetadata />
+
+        {#if _has_references}
+            <Tab.Container logic_name="content-switcher" alignment_x="stretch" {logic_state}>
+                <Tab.Group logic_id="content-switcher-guide">
+                    <Tab.Label>Guide</Tab.Label>
+
+                    <Tab.Section padding_top="medium">
+                        <ContentBody />
+                    </Tab.Section>
+                </Tab.Group>
+
+                <Tab.Group logic_id="content-switcher-api-reference">
+                    <Tab.Label>API Reference</Tab.Label>
+
+                    <Tab.Section padding_top="medium">
+                        <ContentAPI />
+                    </Tab.Section>
+                </Tab.Group>
+            </Tab.Container>
+        {:else}
+            <ContentBody />
+        {/if}
     </ContentArticle>
 {:else}
     <Hero.Container palette="negative">
