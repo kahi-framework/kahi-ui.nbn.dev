@@ -521,17 +521,25 @@ These definitions relate to border radius modifiers, used for global intrinsics 
 
 ### Easings
 
+> **TODO**: documentation
+
 ...
 
 ### Animations
+
+> **TODO**: documentation
 
 ...
 
 ### Z-Index
 
+> **TODO**: documentation
+
 ...
 
 ### Elevations
+
+> **TODO**: documentation
 
 ...
 

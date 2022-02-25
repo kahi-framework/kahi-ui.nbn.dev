@@ -169,6 +169,8 @@ Via the `<hr>` HTML tag, you can break sections of content with a horizontal lin
 
 ## Embedded
 
+> **TODO**: implementation
+
 ...
 
 ## Heading
