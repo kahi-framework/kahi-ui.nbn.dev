@@ -6,24 +6,44 @@ export interface ITitlePluginEnvironment {
 
 export function TitlePlugin(md: MarkdownIt) {
     const {renderer} = md;
-    const {heading_open} = renderer.rules;
-
-    let current_level: number | null = null;
+    const {heading_close, heading_open, text} = renderer.rules;
 
     renderer.rules.heading_open = (tokens, idx, _options, env: ITitlePluginEnvironment, self) => {
-        const token = tokens[idx];
-        const sibling_token = tokens[idx + 1];
-
-        const level = token.markup.length;
-        if (!current_level || current_level > level) {
+        if (!env.title) {
+            const sibling_token = tokens[idx + 1];
             const content = sibling_token.content.trim();
 
-            current_level = level;
+            sibling_token.hidden = true;
             env.title = content;
+
+            if (heading_open) heading_open(tokens, idx, _options, env, self);
+            return "";
         }
 
         return heading_open
             ? heading_open(tokens, idx, _options, env, self)
+            : self.renderToken(tokens, idx, _options);
+    };
+
+    renderer.rules.heading_close = (tokens, idx, _options, env: ITitlePluginEnvironment, self) => {
+        const sibling_token = tokens[idx - 1];
+        if (sibling_token.hidden) return "";
+
+        return heading_close
+            ? heading_close(tokens, idx, _options, env, self)
+            : self.renderToken(tokens, idx, _options);
+    };
+
+    renderer.rules.text = (tokens, idx, _options, env: ITitlePluginEnvironment, self) => {
+        if (env.title) {
+            const token = tokens[idx];
+            const content = token.content.trim();
+
+            if (env.title === content) return "";
+        }
+
+        return text
+            ? text(tokens, idx, _options, env, self)
             : self.renderToken(tokens, idx, _options);
     };
 }
