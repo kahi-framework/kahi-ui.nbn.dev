@@ -33,6 +33,7 @@
 
             const container = document.createElement("DIV");
             container.setAttribute("class", "repl-snippet");
+            container.setAttribute("data-palette", "auto");
             element.after(container);
 
             // NOTE: We need to hide, rather than remove. Otherwise transitions
