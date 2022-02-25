@@ -4,7 +4,7 @@ export default define_navigation({
     blog: [
         {
             text: "2022 Feburary",
-            items: [{href: "/blog/2022-02-24/0.6.0-alpha-1"}],
+            items: [{href: "/blog/2022-02/0.6.0-alpha-1"}],
         },
     ],
 

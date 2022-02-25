@@ -4,7 +4,7 @@
     export const load: Load = () => {
         return {
             status: 302,
-            redirect: "/blog/2022-02-24/0.6.0-alpha-1",
+            redirect: "/blog/2022-02/0.6.0-alpha-1",
         };
     };
 </script>
