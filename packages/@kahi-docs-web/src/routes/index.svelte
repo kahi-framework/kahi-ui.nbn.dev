@@ -51,7 +51,7 @@
     export let snippet: ISnippet;
 </script>
 
-<Hero.Container palette="dark" padding_y="huge">
+<Hero.Container padding_y="huge">
     <Hero.Header>
         Easy to use Svelte UI for
         <Box palette="accent">rapid prototyping</Box>

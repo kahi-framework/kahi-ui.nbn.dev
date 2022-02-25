@@ -12,7 +12,7 @@
     <meta http-equiv="refresh" content="0;{URL_CHAT}" />
 </svelte:head>
 
-<Hero.Container palette="dark" padding_y="huge" height="viewport-100">
+<Hero.Container padding_y="huge" height="viewport-100">
     <Hero.Header>Redirecting<Ellipsis /></Hero.Header>
     <Hero.Footer>
         Click to goto the Kahi UI
