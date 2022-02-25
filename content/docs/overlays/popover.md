@@ -126,7 +126,7 @@ types=["{}"]
                     Copy
                     <Spacer
                         is="span"
-                        spacing="medium"
+                        spacing_y="medium"
                     />
 
                     <Text is="small">CTRL+C</Text>
@@ -136,7 +136,7 @@ types=["{}"]
                     Cut
                     <Spacer
                         is="span"
-                        spacing="medium"
+                        spacing_y="medium"
                     />
 
                     <Text is="small">CTRL+X</Text>
@@ -148,7 +148,7 @@ types=["{}"]
                     Delete
                     <Spacer
                         is="span"
-                        spacing="medium"
+                        spacing_y="medium"
                     />
 
                     <Text is="small">DEL</Text>
