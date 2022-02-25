@@ -79,7 +79,7 @@ npm run build:framework -- --disable-globals-intrinsics-responsitivity --disable
     -   `--disable-components-display-badge` — [`Badge`](../display/badge.md)
     -   `--disable-components-display-kbd` — [`Kbd`](../display/kbd.md)
     -   `--disable-components-display-list` — [`List`](../display/list.md)
-    -   `--disable-components-display-list` — [`Table`](../display/table.md)
+    -   `--disable-components-display-table` — [`Table`](../display/table.md)
 
 -   Embedded
 
