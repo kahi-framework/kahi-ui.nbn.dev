@@ -2,7 +2,7 @@
 
 ## Where can I get help?
 
-If you need help with something not properly documented or needs clarification, you can visit the [Issue Tracker](https://github.com/novacbn/kahi-ui/issues). File a new issue and it'll be addressed on a spare time effort. Alternatively, visit the [Discord Server](https://kahi-ui.nbn.dev/chat) to talk to other Kahi UI developers.
+If you need help with something not properly documented or needs clarification, you can visit the [Issue Tracker](https://github.com/novacbn/kahi-ui/issues). File a new issue and it'll be addressed on a spare time effort. Alternatively, visit the [Discord Server](https://kahi-ui.nbn.dev/chat) to talk to other developers using Kahi UI.
 
 ## What Browsers are supported?
 
