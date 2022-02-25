@@ -25,12 +25,10 @@
 
     import {page} from "$app/stores";
     import {Aside, Badge, Button, Menu, Overlay, Position, Spacer, Text} from "@kahi-ui/framework";
+    import {Menu as MenuIcon, X} from "lucide-svelte";
     import {onMount} from "svelte";
 
     import {scroll_into_container} from "../client/element";
-
-    import MenuIcon from "./icons/Menu.svelte";
-    import X from "./icons/X.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
 
@@ -47,7 +45,7 @@
 {#if $page.stuff.navigation}
     <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
         <Button is="label" for="aside-navigation" sizing="small">
-            <MenuIcon />
+            <MenuIcon size="1em" />
         </Button>
     </Position>
 
@@ -97,7 +95,7 @@
 
                 <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
                     <Overlay.Button variation="clear" sizing="small">
-                        <X />
+                        <X size="1em" />
                     </Overlay.Button>
                 </Position>
             </Aside.Container>

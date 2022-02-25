@@ -1,15 +1,10 @@
 <script lang="ts">
     import {Box, Menu, Position, viewports} from "@kahi-ui/framework";
+    import {Code, Copy, ExternalLink, Image, Sidebar} from "lucide-svelte";
 
     import {compress_safe} from "@kahi-docs/shared";
 
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../Split.svelte";
-
-    import Code from "../icons/Code.svelte";
-    import Copy from "../icons/Copy.svelte";
-    import ExternalLink from "../icons/ExternalLink.svelte";
-    import Image from "../icons/Image.svelte";
-    import Sidebar from "../icons/Sidebar.svelte";
 
     import REPLSplit from "./REPLSplit.svelte";
 
@@ -51,12 +46,12 @@
     <Box palette="dark" variation="borders" radius="tiny" padding="tiny">
         <Menu.Container orientation={["desktop:horizontal", "widescreen:horizontal"]} sizing="nano">
             <Menu.Anchor href={_href} target="_blank" palette="accent">
-                <ExternalLink />
+                <ExternalLink size="1em" />
                 Link
             </Menu.Anchor>
 
             <Menu.Button palette="affirmative" on:click={on_copy_click}>
-                <Copy />
+                <Copy size="1em" />
                 Copy
             </Menu.Button>
 
@@ -65,7 +60,7 @@
                 palette="light"
                 on:click={() => (mode = SPLIT_MODE.split)}
             >
-                <Sidebar />
+                <Sidebar size="1em" />
                 Split
             </Menu.Button>
 
@@ -74,7 +69,7 @@
                 palette="light"
                 on:click={() => (mode = SPLIT_MODE.first)}
             >
-                <Code />
+                <Code size="1em" />
                 Editor
             </Menu.Button>
 
@@ -83,7 +78,7 @@
                 palette="light"
                 on:click={() => (mode = SPLIT_MODE.last)}
             >
-                <Image />
+                <Image size="1em" />
                 Render
             </Menu.Button>
         </Menu.Container>

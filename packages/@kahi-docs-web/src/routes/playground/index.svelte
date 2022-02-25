@@ -62,6 +62,7 @@
 
 <script lang="ts">
     import {Box, Menu, Stack, Text, viewports} from "@kahi-ui/framework";
+    import {Copy, Code, Image, RotateCw, Share2, Sidebar} from "lucide-svelte";
     import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
@@ -69,13 +70,6 @@
 
     import PromptShare from "../../lib/components/PromptShare.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
-
-    import Copy from "../../lib/components/icons/Copy.svelte";
-    import Code from "../../lib/components/icons/Code.svelte";
-    import Image from "../../lib/components/icons/Image.svelte";
-    import RotateCW from "../../lib/components/icons/RotateCW.svelte";
-    import Share2 from "../../lib/components/icons/Share2.svelte";
-    import Sidebar from "../../lib/components/icons/Sidebar.svelte";
 
     import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
 
@@ -114,12 +108,12 @@
     >
         <Menu.Container orientation="horizontal" sizing="tiny">
             <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
-                <Share2 />
+                <Share2 size="1em" />
                 Share
             </Menu.Button>
 
             <Menu.Button palette="affirmative" on:click={on_copy_click}>
-                <Copy />
+                <Copy size="1em" />
                 Copy
             </Menu.Button>
 
@@ -131,7 +125,7 @@
                             ? SPLIT_ORIENTATION.vertical
                             : SPLIT_ORIENTATION.horizontal)}
             >
-                <RotateCW />
+                <RotateCw size="1em" />
                 <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
             </Menu.Button>
 
@@ -140,7 +134,7 @@
                 palette="inverse"
                 on:click={() => (mode = SPLIT_MODE.split)}
             >
-                <Sidebar />
+                <Sidebar size="1em" />
                 <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
             </Menu.Button>
 
@@ -149,7 +143,7 @@
                 palette="inverse"
                 on:click={() => (mode = SPLIT_MODE.first)}
             >
-                <Code />
+                <Code size="1em" />
                 <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
             </Menu.Button>
 
@@ -158,7 +152,7 @@
                 palette="inverse"
                 on:click={() => (mode = SPLIT_MODE.last)}
             >
-                <Image />
+                <Image size="1em" />
                 <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
             </Menu.Button>
         </Menu.Container>

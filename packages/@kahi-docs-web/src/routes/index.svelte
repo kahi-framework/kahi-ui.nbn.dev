@@ -41,14 +41,9 @@
         Spacer,
         Text,
     } from "@kahi-ui/framework";
+    import {ArrowRight, Code, LayoutTemplate, Moon, Zap} from "lucide-svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
-
-    import ArrowRight from "../lib/components/icons/ArrowRight.svelte";
-    import Code from "../lib/components/icons/Code.svelte";
-    import LayoutTemplate from "../lib/components/icons/LayoutTemplate.svelte";
-    import Moon from "../lib/components/icons/Moon.svelte";
-    import Zap from "../lib/components/icons/Zap.svelte";
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
     import REPLEmbed from "../lib/components/repl/REPLEmbed.svelte";
@@ -80,7 +75,7 @@
             sizing="large"
             variation="clear"
         >
-            <Code />
+            <Code size="1em" />
             Source
         </AppAnchor>
 
@@ -93,7 +88,7 @@
             prefetch
         >
             Getting Started
-            <ArrowRight />
+            <ArrowRight size="1em" />
         </AppAnchor>
     </Hero.Footer>
 </Hero.Container>
@@ -143,7 +138,7 @@
                 <Spacer />
 
                 <Box palette="accent" shape="pill" padding="small" width="content-max">
-                    <LayoutTemplate />
+                    <LayoutTemplate size="1em" />
                 </Box>
             </Card.Header>
 
@@ -161,7 +156,7 @@
                 <Spacer />
 
                 <Box palette="accent" shape="pill" padding="small" width="content-max">
-                    <Code />
+                    <Code size="1em" />
                 </Box>
             </Card.Header>
 
@@ -179,7 +174,7 @@
                 <Spacer />
 
                 <Box palette="accent" shape="pill" padding="small" width="content-max">
-                    <Moon />
+                    <Moon size="1em" />
                 </Box>
             </Card.Header>
 
@@ -197,7 +192,7 @@
                 <Spacer />
 
                 <Box palette="accent" shape="pill" padding="small" width="content-max">
-                    <Zap />
+                    <Zap size="1em" />
                 </Box>
             </Card.Header>
 

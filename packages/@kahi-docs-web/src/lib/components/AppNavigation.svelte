@@ -1,16 +1,17 @@
 <script context="module" lang="ts">
     import {viewports} from "@kahi-ui/framework";
 
-    import Book from "./icons/Book.svelte";
-    import Code from "./icons/Code.svelte";
-    import Edit from "./icons/Edit.svelte";
-    import MessageCircle from "./icons/MessageCircle.svelte";
-    import Package from "./icons/Package.svelte";
+    import {Book, Code, Edit, MessageCircle, Package} from "lucide-svelte";
 
     const LINKS_APPLICATION = [
         {href: "/docs/tutorials/getting-started", text: "Documentation", icon: Book},
         {href: "/playground", text: "Playground", icon: Edit},
-        {href: "https://github.com/novacbn/kahi-ui", text: "Source", icon: Code},
+        {
+            href: "https://github.com/novacbn/kahi-ui",
+            text: "Source",
+            variation: "flush",
+            icon: Code,
+        },
         {
             href: "https://github.com/novacbn/kahi-ui/releases",
             text: "Releases",
@@ -31,12 +32,10 @@
     import {browser} from "$app/env";
     import {base} from "$app/paths";
     import {Box, Divider, Menu, Popover, Portal, Omni, Text, TextInput} from "@kahi-ui/framework";
+    import {MoreVertical, Search} from "lucide-svelte";
 
     import {search_keybind} from "../client/keybind";
     import {PACKAGE_VERSION} from "../shared/constants";
-
-    import MoreVertical from "./icons/MoreVertical.svelte";
-    import Search from "./icons/Search.svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
     import PromptSearch from "./PromptSearch.svelte";
@@ -99,26 +98,28 @@
             bind:logic_state
         >
             <Popover.Button palette="light" variation="clear" sizing="small">
-                <MoreVertical />
+                <MoreVertical size="1em" />
             </Popover.Button>
 
             <Popover.Section alignment_x="left" spacing="small">
                 <Box variation="borders" elevation="medium" padding="medium" radius="tiny">
                     <Menu.Container sizing="tiny">
+                        {#if browser}
+                            <Menu.Button hidden={!$_search_viewports} on:click={on_search_active}>
+                                <Search size="1em" />
+                                Search
+                            </Menu.Button>
+                        {/if}
+
                         {#each LINKS_APPLICATION as item (item.href)}
                             <AppAnchor class="menu--item" href={item.href} no_handle prefetch>
-                                <svelte:component this={item.icon} />
+                                <svelte:component this={item.icon} size="1em" />
                                 {item.text}
                             </AppAnchor>
                         {/each}
 
                         {#if browser}
                             <ThemeButton class="menu--item" has_text />
-
-                            <Menu.Button hidden={!$_search_viewports} on:click={on_search_active}>
-                                <Search />
-                                Search
-                            </Menu.Button>
                         {/if}
                     </Menu.Container>
                 </Box>
@@ -132,7 +133,7 @@
         >
             {#each LINKS_APPLICATION as item (item.href)}
                 <AppAnchor class="menu--item" href={item.href} no_handle prefetch>
-                    <svelte:component this={item.icon} />
+                    <svelte:component this={item.icon} size="1em" />
                     {item.variation === "flush" ? "" : item.text}
                 </AppAnchor>
             {/each}

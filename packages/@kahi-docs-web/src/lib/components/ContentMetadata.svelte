@@ -7,9 +7,7 @@
     import {browser} from "$app/env";
     import {page} from "$app/stores";
     import {Divider, Figure, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
-
-    import Clock from "./icons/Clock.svelte";
-    import ExternalLink from "./icons/ExternalLink.svelte";
+    import {Clock, ExternalLink} from "lucide-svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
 
@@ -60,7 +58,7 @@
                 variation="clear"
             >
                 View page in repository
-                <ExternalLink />
+                <ExternalLink size="1em" />
             </AppAnchor>
         </div>
     </Stack.Container>
