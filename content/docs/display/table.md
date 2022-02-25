@@ -658,7 +658,10 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     <div>
         <Text is="strong">NANO</Text>
 
-        <Table.Container variation="borders" sizing="nano">
+        <Table.Container
+            variation="borders"
+            sizing="nano"
+        >
             <Table.Header>
                 <Table.Row>
                     <Table.Heading />
