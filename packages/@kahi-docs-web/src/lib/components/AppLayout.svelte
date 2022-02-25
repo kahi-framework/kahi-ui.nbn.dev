@@ -30,7 +30,7 @@
     :global(.app-layout) > :global(.app-container) {
         grid-area: content;
 
-        padding-top: 74px;
+        padding-top: 78px;
 
         overflow-x: hidden;
     }

@@ -160,7 +160,7 @@
         top: 0;
 
         width: 100%;
-        height: 74px;
+        height: 78px;
     }
 
     :global(.app-navigation) :global(header) :global(small) {
