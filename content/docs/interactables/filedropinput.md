@@ -82,6 +82,7 @@ types=["<length>"]
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {X} from "lucide-svelte";
 
     function on_change(event) {
         if (!event.isTrusted) return;
@@ -149,7 +150,7 @@ types=["<length>"]
                                 file
                             )}
                     >
-                        x
+                        <X size="1em" />
                     </Button>
                 </Tile.Footer>
             </Tile.Container>
