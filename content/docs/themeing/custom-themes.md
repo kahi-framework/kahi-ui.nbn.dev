@@ -568,18 +568,18 @@ You can edit each Component's `:component.default.css` stylesheet to modify its 
                 "border.radius": none,
                 "color.opacity": 1,
                 "font": (
-                    // NOTE: `variables.format-var` is used to look up variables registered to the global
+                    // NOTE: `variables.use` is used to look up variables registered to the global
                     // themeing variables. This allows the build process to validate our variables exist
-                    "size": variables.format-var("fonts.sizes.inline.nano"),
+                    "size": variables.use("fonts.sizes.inline.nano"),
                     "weight": bold,
                 ),
                 "gap": (
-                    "x": variables.format-var("spacings.block.small"),
-                    "y": variables.format-var("spacings.block.small"),
+                    "x": variables.use("spacings.block.small"),
+                    "y": variables.use("spacings.block.small"),
                 ),
                 "padding": (
-                    "x": variables.format-var("spacings.block.small"),
-                    "y": variables.format-var("spacings.block.nano"),
+                    "x": variables.use("spacings.block.small"),
+                    "y": variables.use("spacings.block.nano"),
                 ),
             ),
         )
