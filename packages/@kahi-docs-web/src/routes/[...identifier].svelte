@@ -41,7 +41,6 @@
 
     import ContentArticle from "../lib/components/ContentArticle.svelte";
     import ContentAPI from "../lib/components/ContentAPI.svelte";
-    import ContentBody from "../lib/components/ContentBody.svelte";
     import ContentContainer from "../lib/components/ContentContainer.svelte";
     import ContentMetadata from "../lib/components/ContentMetadata.svelte";
 
@@ -71,9 +70,7 @@
                     <Tab.Label palette="accent">Guide</Tab.Label>
 
                     <Tab.Section padding_top="medium">
-                        <ContentArticle>
-                            <ContentBody />
-                        </ContentArticle>
+                        <ContentArticle />
                     </Tab.Section>
                 </Tab.Group>
 
@@ -86,9 +83,7 @@
                 </Tab.Group>
             </Tab.Container>
         {:else}
-            <ContentArticle>
-                <ContentBody />
-            </ContentArticle>
+            <ContentArticle />
         {/if}
     </ContentContainer>
 {:else}

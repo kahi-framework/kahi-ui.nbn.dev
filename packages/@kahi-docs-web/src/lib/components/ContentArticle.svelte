@@ -1,9 +1,16 @@
 <script lang="ts">
-    import {Article} from "@kahi-ui/framework";
+    import {page} from "$app/stores";
+    import {Article, Text} from "@kahi-ui/framework";
+
+    import {snippets} from "../client/snippets";
 </script>
 
-<Article class="content-article">
-    <slot />
+<Article class="content-article" actions={[[snippets, $page.stuff.content]]}>
+    {#if $page.stuff.content}
+        {@html $page.stuff.content.render}
+    {:else}
+        <Text is="strong" palette="negative">Error</Text>: failed to load content render
+    {/if}
 </Article>
 
 <style>
