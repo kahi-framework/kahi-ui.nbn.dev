@@ -71,7 +71,7 @@
         <AppAnchor
             is="button"
             href="https://github.com/novacbn/kahi-ui"
-            palette="light"
+            palette="inverse"
             sizing="large"
             variation="clear"
         >
