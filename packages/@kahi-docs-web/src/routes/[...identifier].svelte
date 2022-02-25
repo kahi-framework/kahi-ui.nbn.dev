@@ -67,7 +67,7 @@
         {#if _has_references}
             <Tab.Container logic_name="content-switcher" alignment_x="stretch" {logic_state}>
                 <Tab.Group logic_id="content-switcher-guide">
-                    <Tab.Label>Guide</Tab.Label>
+                    <Tab.Label palette="accent">Guide</Tab.Label>
 
                     <Tab.Section padding_top="medium">
                         <ContentBody />
@@ -75,7 +75,7 @@
                 </Tab.Group>
 
                 <Tab.Group logic_id="content-switcher-api-reference">
-                    <Tab.Label>API Reference</Tab.Label>
+                    <Tab.Label palette="accent">API Reference</Tab.Label>
 
                     <Tab.Section padding_top="medium">
                         <ContentAPI />
