@@ -98,13 +98,13 @@
             dismissible
             bind:logic_state
         >
-            <Popover.Button palette="light" variation="clear" sizing="small">
+            <Popover.Button palette="light" variation="clear">
                 <MoreVertical size="1em" />
             </Popover.Button>
 
             <Popover.Section alignment_x="left" spacing="small">
                 <Box variation="borders" elevation="medium" padding="medium" radius="tiny">
-                    <Menu.Container sizing="tiny">
+                    <Menu.Container>
                         {#if browser}
                             <Menu.Button hidden={!$_search_viewports} on:click={on_search_active}>
                                 <Search size="1em" />

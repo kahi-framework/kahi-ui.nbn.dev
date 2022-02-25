@@ -54,7 +54,7 @@
 
 {#if $page.stuff.navigation}
     <Position variation="action" alignment_x="left" hidden={["desktop", "widescreen"]}>
-        <Button is="label" for="aside-navigation" sizing="small">
+        <Button is="label" for="aside-navigation">
             <MenuIcon size="1em" />
         </Button>
     </Position>
@@ -77,7 +77,7 @@
             <Aside.Container palette="off" variation="sticky">
                 <!-- TODO: Margin modifier is temp until Framework update to fix it -->
                 <Aside.Section bind:element={section_element} margin_bottom="none">
-                    <Menu.Container sizing="tiny">
+                    <Menu.Container>
                         {#each $page.stuff.navigation as menu (menu.text)}
                             <Menu.Heading variation="divider">
                                 {menu.text}
@@ -105,7 +105,7 @@
                 </Aside.Section>
 
                 <Position variation={["container", "action"]} hidden={["desktop", "widescreen"]}>
-                    <Overlay.Button variation="clear" sizing="small">
+                    <Overlay.Button variation="clear">
                         <X size="1em" />
                     </Overlay.Button>
                 </Position>
