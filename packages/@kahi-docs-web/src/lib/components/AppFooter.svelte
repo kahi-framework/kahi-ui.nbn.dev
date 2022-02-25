@@ -6,7 +6,7 @@
     import AppAnchor from "./AppAnchor.svelte";
 </script>
 
-<footer class="box app-footer" data-padding-y="huge">
+<footer class="box app-footer" data-padding-y="large">
     <Stack.Container alignment_x="center">
         <AppAnchor class="anchor" href="https://github.com/novacbn/kahi-ui">
             <Heading is="h2">Kahi UI</Heading>
