@@ -1,12 +1,12 @@
-<article class="container article content-article" data-width="100" data-padding-y="large">
+<script lang="ts">
+    import {Article} from "@kahi-ui/framework";
+</script>
+
+<Article class="content-article">
     <slot />
-</article>
+</Article>
 
 <style>
-    :global(.content-article) {
-        max-width: calc(var(--sizes-prose) + calc(var(--spacings-block-large) * 1rem));
-    }
-
     :global(.content-article) > :global(pre[class*="language-"]) {
         margin: 0;
     }

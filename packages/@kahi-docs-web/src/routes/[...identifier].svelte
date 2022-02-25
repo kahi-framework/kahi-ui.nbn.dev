@@ -42,6 +42,7 @@
     import ContentArticle from "../lib/components/ContentArticle.svelte";
     import ContentAPI from "../lib/components/ContentAPI.svelte";
     import ContentBody from "../lib/components/ContentBody.svelte";
+    import ContentContainer from "../lib/components/ContentContainer.svelte";
     import ContentMetadata from "../lib/components/ContentMetadata.svelte";
 
     let logic_state = "content-switcher-guide";
@@ -61,7 +62,7 @@
 </script>
 
 {#if $page.stuff.content}
-    <ContentArticle>
+    <ContentContainer>
         <ContentMetadata />
 
         {#if _has_references}
@@ -70,7 +71,9 @@
                     <Tab.Label palette="accent">Guide</Tab.Label>
 
                     <Tab.Section padding_top="medium">
-                        <ContentBody />
+                        <ContentArticle>
+                            <ContentBody />
+                        </ContentArticle>
                     </Tab.Section>
                 </Tab.Group>
 
@@ -83,9 +86,11 @@
                 </Tab.Group>
             </Tab.Container>
         {:else}
-            <ContentBody />
+            <ContentArticle>
+                <ContentBody />
+            </ContentArticle>
         {/if}
-    </ContentArticle>
+    </ContentContainer>
 {:else}
     <Hero.Container palette="negative">
         <Hero.Header>404</Hero.Header>
