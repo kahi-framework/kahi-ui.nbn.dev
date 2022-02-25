@@ -91,7 +91,7 @@ You can set margins for your Components via the `margin` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -136,7 +136,7 @@ You can set margins for your Components via the `margin` property.
             MASSIVE
         </Box>
     </Box>
-</Stack>
+</Stack.Container>
 ```
 
 ## Padding
@@ -156,7 +156,7 @@ You can set paddings for your Components via the `padding` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
@@ -193,7 +193,7 @@ You can set paddings for your Components via the `padding` property.
     <Box palette="informative" padding="massive">
         <Box palette="neutral">MASSIVE</Box>
     </Box>
-</Stack>
+</Stack.Container>
 ```
 
 ## Directional
