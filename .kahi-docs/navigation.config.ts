@@ -123,7 +123,7 @@ export default define_navigation({
                 {href: "/docs/interactables/filedropinput"},
                 {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/hiddeninput"},
-                {href: "/docs/interactables/numberinput"},
+                {href: "/docs/interactables/numberinput", badge: "UPDATED"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput", badge: "UPDATED"},
