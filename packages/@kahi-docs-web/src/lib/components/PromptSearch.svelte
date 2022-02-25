@@ -34,9 +34,8 @@
 
     export let logic_state: boolean = false;
 
-    let container_element: HTMLDivElement;
-    let input_element: HTMLInputElement;
-    let scrollable_element: HTMLDivElement;
+    let input_element: HTMLInputElement | undefined;
+    let scrollable_element: HTMLDivElement | undefined;
 
     let current: number = -1;
     let results: ISearchResult[] | null = null;
@@ -45,12 +44,12 @@
     let promise: Promise<any> | null = null;
 
     function get_current(): [HTMLDivElement | null, HTMLAnchorElement | null] {
-        const tile_element = container_element.querySelector<HTMLDivElement>(
-            `.tile[data-palette="accent"]`
-        );
+        if (!scrollable_element) return [null, null];
+
+        const tile_element = scrollable_element.querySelectorAll<HTMLDivElement>(`.tile`)[current];
         if (!tile_element) return [null, null];
 
-        const anchor_element = tile_element.querySelector<HTMLAnchorElement>(".clickable-item");
+        const anchor_element = tile_element.querySelector<HTMLAnchorElement>(".clickable--item");
         return [tile_element, anchor_element];
     }
 
@@ -96,8 +95,8 @@
             if (!anchor_element || !tile_element) return;
 
             anchor_element.focus();
-            scroll_into_container(tile_element, scrollable_element, "center", "smooth");
-        } else input_element.focus();
+            scroll_into_container(tile_element, "center", "smooth", scrollable_element);
+        } else if (input_element) input_element.focus();
     }
 
     $: if (!logic_state) value = "";
@@ -120,7 +119,6 @@
     <Overlay.Section animation="slide" direction="top" alignment_y="top">
         {#if searcher}
             <Card.Container
-                bind:element={container_element}
                 palette="auto"
                 margin_top="huge"
                 width="prose"

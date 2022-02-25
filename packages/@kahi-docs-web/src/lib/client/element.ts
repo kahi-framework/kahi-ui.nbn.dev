@@ -19,9 +19,9 @@ function get_scroll_top(
 
 export function scroll_into_container(
     target: HTMLElement | string,
-    container: HTMLElement | string,
     position: "center" | "end" | "start" = "start",
-    behavior: ScrollBehavior = "auto"
+    behavior: ScrollBehavior = "auto",
+    parent?: HTMLElement
 ): void {
     const target_element =
         typeof target === "string" ? document.querySelector<HTMLElement>(target) : target;
@@ -31,11 +31,10 @@ export function scroll_into_container(
         );
     }
 
-    const container_element =
-        typeof container === "string" ? document.querySelector<HTMLElement>(container) : container;
+    const container_element = parent ?? target_element.parentElement;
     if (!container_element) {
         throw ReferenceError(
-            `bad argument #0 to 'scroll_into_container' (container '${container}' is invalid)`
+            "bad argument #0 to 'scroll_into_container' (target doesn't have parent element)"
         );
     }
 

@@ -26,7 +26,7 @@
     import {page} from "$app/stores";
     import {Aside, Badge, Button, Menu, Overlay, Position, Spacer, Text} from "@kahi-ui/framework";
     import {Menu as MenuIcon, X} from "lucide-svelte";
-    import {onMount} from "svelte";
+    import {onMount, tick} from "svelte";
 
     import {scroll_into_container} from "../client/element";
 
@@ -34,11 +34,21 @@
 
     let section_element: HTMLElement | undefined = undefined;
 
-    onMount(() => {
+    function on_active(event: CustomEvent<void>): void {
+        handle_current();
+    }
+
+    function handle_current() {
         if (!section_element) return;
 
         const link_element = section_element.querySelector<HTMLElement>("a[aria-current]");
-        if (link_element) scroll_into_container(link_element, section_element, "center", "smooth");
+        if (link_element) scroll_into_container(link_element, "center", "smooth", section_element);
+    }
+
+    onMount(async () => {
+        await tick();
+
+        handle_current();
     });
 </script>
 
@@ -54,6 +64,7 @@
         logic_id="aside-navigation"
         contents={["desktop", "widescreen"]}
         dismissible
+        on:active={on_active}
     >
         <Overlay.Backdrop hidden={["desktop", "widescreen"]} />
 
@@ -65,7 +76,7 @@
         >
             <Aside.Container palette="off" variation="sticky">
                 <!-- TODO: Margin modifier is temp until Framework update to fix it -->
-                <Aside.Section margin_bottom="none">
+                <Aside.Section bind:element={section_element} margin_bottom="none">
                     <Menu.Container sizing="tiny">
                         {#each $page.stuff.navigation as menu (menu.text)}
                             <Menu.Heading variation="divider">
