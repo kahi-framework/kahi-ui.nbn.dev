@@ -11,7 +11,6 @@
 <script lang="ts">
     import {Box, Code, Dot, Ellipsis, Text} from "@kahi-ui/framework";
     import type {IPipelineSvelteStore} from "@novacbn/svelte-pipeline";
-    import {PIPELINE_RESULT_TYPES} from "@novacbn/svelte-pipeline";
     import type {SvelteComponent} from "svelte";
     import {createEventDispatcher, onMount} from "svelte";
 
@@ -29,6 +28,9 @@
 
     const dispatch = createEventDispatcher();
 
+    let PIPELINE_RESULT_TYPES:
+        | typeof import("@novacbn/svelte-pipeline").PIPELINE_RESULT_TYPES
+        | undefined;
     let PipelineRenderComponent:
         | typeof import("@novacbn/svelte-pipeline/components").PipelineRenderComponent
         | undefined;
@@ -55,6 +57,7 @@
     onMount(async () => {
         const [config, module, components] = await import_modules();
 
+        ({PIPELINE_RESULT_TYPES} = module);
         ({PipelineRenderComponent} = components);
 
         store = module.pipeline_svelte({
@@ -75,7 +78,12 @@
     $: if (store) $store = value;
 
     $: {
-        if (store && $store && $store.type === PIPELINE_RESULT_TYPES.error) {
+        if (
+            store &&
+            PIPELINE_RESULT_TYPES &&
+            $store &&
+            $store.type === PIPELINE_RESULT_TYPES.error
+        ) {
             error = $store.message;
         }
     }
