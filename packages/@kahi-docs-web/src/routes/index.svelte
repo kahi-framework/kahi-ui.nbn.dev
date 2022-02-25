@@ -81,7 +81,7 @@
 
         <AppAnchor
             is="button"
-            href="/docs/tutorials/getting-started"
+            href="/docs/guides/getting-started"
             palette="accent"
             sizing="large"
             no_handle

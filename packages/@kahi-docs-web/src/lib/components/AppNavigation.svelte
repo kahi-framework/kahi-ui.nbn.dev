@@ -1,10 +1,11 @@
 <script context="module" lang="ts">
     import {viewports} from "@kahi-ui/framework";
 
-    import {Book, Code, Edit, MessageCircle, Package} from "lucide-svelte";
+    import {Book, Code, Edit, Megaphone, MessageCircle, Package} from "lucide-svelte";
 
     const LINKS_APPLICATION = [
-        {href: "/docs/tutorials/getting-started", text: "Documentation", icon: Book},
+        {href: "/blog", text: "Blog", icon: Megaphone},
+        {href: "/docs", text: "Documentation", icon: Book},
         {href: "/playground", text: "Playground", icon: Edit},
         {
             href: "https://github.com/novacbn/kahi-ui",

@@ -1,6 +1,13 @@
 import {define_navigation} from "@kahi-docs/config";
 
 export default define_navigation({
+    blog: [
+        {
+            text: "2022 Feburary",
+            items: [{href: "/blog/2022-02-24/0.6.0-alpha-1"}],
+        },
+    ],
+
     docs: [
         {
             text: "Resources",
@@ -20,8 +27,8 @@ export default define_navigation({
         },
 
         {
-            text: "Tutorials",
-            items: [{href: "/docs/tutorials/getting-started", badge: "UPDATED"}],
+            text: "Guides",
+            items: [{href: "/docs/guides/getting-started", badge: "UPDATED"}],
         },
 
         {

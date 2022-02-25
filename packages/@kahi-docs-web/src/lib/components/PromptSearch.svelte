@@ -1,6 +1,14 @@
-<script lang="ts">
-    import {tick} from "svelte";
+<script context="module" lang="ts">
+    import {Book, Megaphone} from "lucide-svelte";
+    import type {SvelteComponent} from "svelte";
 
+    const CONTENT_ICONS: Record<string, typeof SvelteComponent | undefined> = {
+        blog: Megaphone,
+        docs: Book,
+    };
+</script>
+
+<script lang="ts">
     import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
         Card,
@@ -14,6 +22,8 @@
         TextInput,
         Tile,
     } from "@kahi-ui/framework";
+    import {ArrowRight} from "lucide-svelte";
+    import {tick} from "svelte";
 
     import {scroll_into_container} from "../client/element";
     import {next_keybind, previous_keybind} from "../client/keybind";
@@ -21,8 +31,6 @@
     import {make_searcher} from "../../lib/client/search";
 
     import AppAnchor from "./AppAnchor.svelte";
-    import ArrowRight from "./icons/ArrowRight.svelte";
-    import File from "./icons/File.svelte";
 
     export let logic_state: boolean = false;
 
@@ -74,6 +82,12 @@
         anchor_element.focus();
     }
 
+    function get_icon(href: string): typeof SvelteComponent | null {
+        const category = href.split("/")[1];
+
+        return CONTENT_ICONS[category] ?? null;
+    }
+
     async function handle_current(): Promise<void> {
         if (current > -1) {
             await tick();
@@ -107,6 +121,7 @@
         {#if searcher}
             <Card.Container
                 bind:element={container_element}
+                palette="auto"
                 margin_top="huge"
                 width="prose"
                 max_width="viewport-75"
@@ -132,11 +147,14 @@
                                     <Clickable.Container>
                                         <Tile.Container
                                             palette={index === current ? "accent" : undefined}
+                                            elevation="none"
                                             sizing="tiny"
                                             on:pointerenter={on_select_enter.bind(null, index)}
                                         >
                                             <Tile.Figure>
-                                                <File />
+                                                <svelte:component
+                                                    this={get_icon(result.identifier)}
+                                                />
                                             </Tile.Figure>
 
                                             <Tile.Section>
@@ -151,7 +169,7 @@
                                             </Tile.Section>
 
                                             <Tile.Footer>
-                                                <ArrowRight />
+                                                <ArrowRight size="1em" />
                                             </Tile.Footer>
                                         </Tile.Container>
                                     </Clickable.Container>
@@ -172,7 +190,7 @@
                 </Card.Section>
             </Card.Container>
         {:else}
-            <Card.Container margin_top="huge" width="prose" max_width="viewport-75">
+            <Card.Container palette="auto" margin_top="huge" width="prose" max_width="viewport-75">
                 <Card.Header>
                     <Center width="100">
                         <Text is="span">
