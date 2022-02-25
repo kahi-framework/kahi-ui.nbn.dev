@@ -189,6 +189,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {UserPlus, Slash} from "lucide-svelte";
 </script>
 
 <Tile.Container width="content-max">
@@ -209,9 +210,12 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
     <Tile.Footer>
         <Button palette="affirmative">
-            Add Friend
+            <UserPlus size="1em" />
         </Button>
-        <Button palette="negative">Ban User</Button>
+
+        <Button palette="negative">
+            <Slash size="1em" />
+        </Button>
     </Tile.Footer>
 </Tile.Container>
 ```
@@ -683,6 +687,7 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {UserPlus, Slash} from "lucide-svelte";
 </script>
 
 <Stack.Container spacing="medium">
@@ -703,11 +708,11 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
 
         <Tile.Footer>
             <Button palette="affirmative">
-                Add Friend
+                <UserPlus size="1em" />
             </Button>
 
             <Button palette="negative">
-                Ban User
+                <Slash size="1em" />
             </Button>
         </Tile.Footer>
     </Tile.Container>
@@ -725,16 +730,13 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
             </Text>
         </Tile.Section>
 
-        <Tile.Footer
-            orientation="vertical"
-            alignment_x="stretch"
-        >
+        <Tile.Footer orientation="vertical">
             <Button palette="affirmative">
-                Add Friend
+                <UserPlus size="1em" />
             </Button>
 
             <Button palette="negative">
-                Ban User
+                <Slash size="1em" />
             </Button>
         </Tile.Footer>
     </Tile.Container>
@@ -921,6 +923,7 @@ You can change the appearance of the `Tile` to be flush with the rest of the App
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {UserPlus, Slash} from "lucide-svelte";
 </script>
 
 <Tile.Container width="content-max" variation="flush">
@@ -941,9 +944,12 @@ You can change the appearance of the `Tile` to be flush with the rest of the App
 
     <Tile.Footer>
         <Button palette="affirmative">
-            Add Friend
+            <UserPlus size="1em" />
         </Button>
-        <Button palette="negative">Ban User</Button>
+
+        <Button palette="negative">
+            <Slash size="1em" />
+        </Button>
     </Tile.Footer>
 </Tile.Container>
 ```

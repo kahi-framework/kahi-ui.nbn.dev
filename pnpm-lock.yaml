@@ -7,6 +7,7 @@ importers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/shared': workspace:^
       '@kahi-ui/framework': 0.5.7
+      lucide-svelte: ^0.17.2
       prettier: ^2.4.1
       prettier-plugin-svelte: ^2.4.0
       svelte: ^3.44.0
@@ -14,6 +15,7 @@ importers:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
       '@kahi-ui/framework': 0.5.7
+      lucide-svelte: 0.17.2_svelte@3.44.0
     devDependencies:
       prettier: 2.4.1
       prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.0
@@ -920,6 +922,15 @@ packages:
     dependencies:
       svelte: 3.44.0
       svelte2tsx: 0.4.14_svelte@3.44.0+typescript@4.5.5
+    dev: false
+
+  /lucide-svelte/0.17.2_svelte@3.44.0:
+    resolution: {integrity: sha512-P5B5ge7v/Iv9Rv5EP0UPc3B6llfeWQyPKos5cChO7gq6Pvy6rNEZ0jzfPuE539YZkVD9rM9vZQvpcTwm3NFAbw==}
+    peerDependencies:
+      svelte: ^3.45.0
+      svelte2tsx: ^0.4.12
+    dependencies:
+      svelte: 3.44.0
     dev: false
 
   /magic-string/0.25.7:

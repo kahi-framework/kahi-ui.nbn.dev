@@ -889,6 +889,7 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
         Tile,
         Text,
     } from "@kahi-ui/framework";
+    import {X} from "lucide-svelte";
 </script>
 
 <Overlay.Container>
@@ -919,7 +920,7 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
                     variation="clear"
                     sizing="small"
                 >
-                    x
+                    <X size="1em" />
                 </Button>
             </Tile.Footer>
         </Tile.Container>
@@ -944,7 +945,7 @@ You can align `<Overlay.Section>` child content via the `alignment`, `alignment_
                     variation="clear"
                     sizing="small"
                 >
-                    x
+                    <X size="1em" />
                 </Button>
             </Tile.Footer>
         </Tile.Container>
@@ -965,6 +966,7 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
         Tile,
         Text,
     } from "@kahi-ui/framework";
+    import {X} from "lucide-svelte";
 </script>
 
 <Overlay.Container>
@@ -995,7 +997,7 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
                     variation="clear"
                     sizing="small"
                 >
-                    x
+                    <X size="1em" />
                 </Button>
             </Tile.Footer>
         </Tile.Container>
@@ -1020,7 +1022,7 @@ You can adjust the spacing between `<Overlay.Section>` child content via the `sp
                     variation="clear"
                     sizing="small"
                 >
-                    x
+                    <X size="1em" />
                 </Button>
             </Tile.Footer>
         </Tile.Container>
