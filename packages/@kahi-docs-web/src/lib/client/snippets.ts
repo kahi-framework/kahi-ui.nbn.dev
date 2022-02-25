@@ -1,7 +1,6 @@
 import type {IPageRender} from "@kahi-docs/markdown";
 import {getAllContexts} from "svelte";
 
-// @ts-expect-error
 import REPLEmbed from "../components/repl/REPLEmbed.svelte";
 
 export const snippets = (element: HTMLElement, content?: IPageRender) => {
@@ -12,15 +11,19 @@ export const snippets = (element: HTMLElement, content?: IPageRender) => {
         for (const element of snippet_elements) element.remove();
     }
 
-    function get_repl_elements(): NodeListOf<HTMLElement> {
+    function get_repl_elements(): HTMLElement[] {
+        if (content!.metadata.snippets.length === 0) return [];
+
         const selectors = content!.metadata.snippets
             .map((snippet) => `.repl-snippet[data-identifier="${snippet.identifier}"]`)
             .join(",");
 
-        return element.querySelectorAll<HTMLElement>(selectors);
+        return Array.from(element.querySelectorAll<HTMLElement>(selectors));
     }
 
-    function get_snippet_elements(): NodeListOf<HTMLElement> {
+    function get_snippet_elements(): HTMLElement[] {
+        if (content!.metadata.snippets.length === 0) return [];
+
         const selectors = content!.metadata.snippets
             .map(
                 (snippet) =>
@@ -28,7 +31,7 @@ export const snippets = (element: HTMLElement, content?: IPageRender) => {
             )
             .join(",");
 
-        return element.querySelectorAll<HTMLElement>(selectors);
+        return Array.from(element.querySelectorAll<HTMLElement>(selectors));
     }
 
     function observe_snippets(): void {
