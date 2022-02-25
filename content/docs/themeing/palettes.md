@@ -4,7 +4,7 @@
 
 Kahi UI in its `default` theme uses a simplistic generative palette generator, which mixes the `dark` and `light` colors in steps to produce shading.
 
-When producing palette shades, the "lightest" shade blends in the background the most and "darkest" shade stands out of the background the most. With the background color depends on if the theme is in light or dark mode. In light mode using `light` as the background, and in dark mode using `dark` as the background.
+When producing palette shades, the "lightest" shade blends in the background the most and "boldest" shade stands out of the background the most. With the background palette depending on if the theme is in light or dark mode. In light mode using `light` as the background, and in dark mode using `dark` as the background.
 
 ```svelte {title="Palettes Preview" mode="repl"}
 <script>
