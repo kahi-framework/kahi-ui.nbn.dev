@@ -136,8 +136,8 @@
 
     @media (min-width: 768px) {
         :global(.aside-navigation .aside) {
-            padding-top: 78px;
-            z-index: 0;
+            padding-top: 80px;
+            z-index: 0 !important;
         }
     }
 </style>
