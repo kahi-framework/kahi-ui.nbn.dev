@@ -13,11 +13,12 @@
 </script>
 
 <script lang="ts">
-    import PageMetadata from "../../lib/components/PageMetadata.svelte";
-    import PagePrerender from "../../lib/components/PagePrerender.svelte";
+    import "@kahi-ui/framework/dist/kahi-ui.framework.css";
+    import "@kahi-ui/framework/dist/kahi-ui.theme.default.css";
+
+    import PageHeader from "../../lib/components/PageHeader.svelte";
 </script>
 
-<PageMetadata />
-<PagePrerender />
+<PageHeader />
 
 <slot />

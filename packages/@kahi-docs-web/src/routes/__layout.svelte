@@ -37,23 +37,14 @@
 
     import "prismjs/themes/prism-tomorrow.css";
 
-    import {browser} from "$app/env";
     import {page} from "$app/stores";
-    import {htmlmode} from "@kahi-ui/framework";
-
-    import {preferencetheme} from "@kahi-docs/shared";
 
     import AppLayout from "../lib/components/AppLayout.svelte";
     import AsideLayout from "../lib/components/AsideLayout.svelte";
-    import PageMetadata from "../lib/components/PageMetadata.svelte";
-    import PagePrerender from "../lib/components/PagePrerender.svelte";
-
-    const _htmlmode = htmlmode();
-    $: if (browser) $_htmlmode = $preferencetheme ?? "";
+    import PageHeader from "../lib/components/PageHeader.svelte";
 </script>
 
-<PageMetadata />
-<PagePrerender />
+<PageHeader />
 
 {#if $page.stuff.navigation}
     <AsideLayout>
