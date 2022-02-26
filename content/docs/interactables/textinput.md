@@ -237,6 +237,8 @@ types=["<alpha-value>"]
 
 ...
 
+> **TODO**: snippet
+
 ## Input Masking
 
 > **NOTE**: Introduced feature in `v0.4.14`.
@@ -691,7 +693,51 @@ You can have the `TextInput` render as a `<textarea>` via the `is` property.
 
 > **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-...
+You can alter the alignment of the Component via the `alignment_x` property.
+
+```svelte {title="TextInput Alignment" mode="repl"}
+<script>
+    import {
+        TextInput,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <TextInput
+        value="DEFAULT TextInput"
+        span_x="20"
+    />
+
+    <TextInput
+        alignment_x="left"
+        value="LEFT TextInput"
+        span_x="20"
+    />
+
+    <TextInput
+        alignment_x="center"
+        value="CENTER TextInput"
+        span_x="20"
+    />
+
+    <TextInput
+        alignment_x="right"
+        value="RIGHT TextInput"
+        span_x="20"
+    />
+
+    <TextInput
+        alignment_x="justify"
+        value="JUSTIFY TextInput"
+        span_x="20"
+    />
+</Stack.Container>
+```
 
 ## Placeholder
 

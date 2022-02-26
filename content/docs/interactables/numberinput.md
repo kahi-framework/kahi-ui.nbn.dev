@@ -474,7 +474,51 @@ You can change the shape of the `NumberInput` via the `shape` property.
 
 > **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-...
+You can alter the alignment of the Component via the `alignment_x` property.
+
+```svelte {title="NumberInput Alignment" mode="repl"}
+<script>
+    import {
+        NumberInput,
+        Stack,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <NumberInput
+        placeholder="DEFAULT NumberInput"
+        span_x="20"
+    />
+
+    <NumberInput
+        alignment_x="left"
+        placeholder="LEFT NumberInput"
+        span_x="20"
+    />
+
+    <NumberInput
+        alignment_x="center"
+        placeholder="CENTER NumberInput"
+        span_x="20"
+    />
+
+    <NumberInput
+        alignment_x="right"
+        placeholder="RIGHT NumberInput"
+        span_x="20"
+    />
+
+    <NumberInput
+        alignment_x="justify"
+        placeholder="JUSTIFY NumberInput"
+        span_x="20"
+    />
+</Stack.Container>
+```
 
 ## Placeholder
 
