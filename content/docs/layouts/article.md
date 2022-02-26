@@ -276,7 +276,318 @@ Via the `<small>` HTML tag, you can render text smaller than the current font si
 
 ## Table
 
-...
+Via the `<table>` HTML tag, you can render out tabular data with semantic elements.
+
+```svelte {title="Article Table" mode="repl"}
+<script>
+    import {
+        Article,
+        Scrollable,
+    } from "@kahi-ui/framework";
+</script>
+
+<Article>
+    <table>
+        <thead>
+            <tr>
+                <th />
+                <th>Minimum</th>
+                <th>Maximum</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <strong>mobile</strong>
+                </td>
+
+                <td>
+                    <code>0px</code>
+                </td>
+
+                <td>
+                    <code>640px</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>tablet</strong>
+                </td>
+
+                <td>
+                    <code>641px</code>
+                </td>
+
+                <td>
+                    <code>768px</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>desktop</strong>
+                </td>
+
+                <td>
+                    <code>769px</code>
+                </td>
+
+                <td>
+                    <code>1024px</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>widescreen</strong>
+                </td>
+
+                <td>
+                    <code>1025px</code>
+                </td>
+
+                <td><code>∞</code></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th />
+                <th>Minimum</th>
+                <th>Maximum</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table data-variation="borders stripes">
+        <thead>
+            <tr>
+                <th />
+                <th>Minimum</th>
+                <th>Maximum</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>
+                    <strong>mobile</strong>
+                </td>
+
+                <td>
+                    <code>0px</code>
+                </td>
+
+                <td>
+                    <code>640px</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>tablet</strong>
+                </td>
+
+                <td>
+                    <code>641px</code>
+                </td>
+
+                <td>
+                    <code>768px</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>desktop</strong>
+                </td>
+
+                <td>
+                    <code>769px</code>
+                </td>
+
+                <td>
+                    <code>1024px</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <strong>widescreen</strong>
+                </td>
+
+                <td>
+                    <code>1025px</code>
+                </td>
+
+                <td><code>∞</code></td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th />
+                <th>Minimum</th>
+                <th>Maximum</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <Scrollable width="medium">
+        <table>
+            <thead>
+                <tr>
+                    <th />
+                    <th>Minimum</th>
+                    <th>Maximum</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>mobile</strong>
+                    </td>
+
+                    <td>
+                        <code>0px</code>
+                    </td>
+
+                    <td>
+                        <code>640px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>tablet</strong>
+                    </td>
+
+                    <td>
+                        <code>641px</code>
+                    </td>
+
+                    <td>
+                        <code>768px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>desktop</strong>
+                    </td>
+
+                    <td>
+                        <code>769px</code>
+                    </td>
+
+                    <td>
+                        <code>1024px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>widescreen</strong>
+                    </td>
+
+                    <td>
+                        <code>1025px</code>
+                    </td>
+
+                    <td><code>∞</code></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th />
+                    <th>Minimum</th>
+                    <th>Maximum</th>
+                </tr>
+            </tfoot>
+        </table>
+    </Scrollable>
+
+    <Scrollable width="medium">
+        <table data-variation="borders stripes">
+            <thead>
+                <tr>
+                    <th />
+                    <th>Minimum</th>
+                    <th>Maximum</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>mobile</strong>
+                    </td>
+
+                    <td>
+                        <code>0px</code>
+                    </td>
+
+                    <td>
+                        <code>640px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>tablet</strong>
+                    </td>
+
+                    <td>
+                        <code>641px</code>
+                    </td>
+
+                    <td>
+                        <code>768px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>desktop</strong>
+                    </td>
+
+                    <td>
+                        <code>769px</code>
+                    </td>
+
+                    <td>
+                        <code>1024px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <strong>widescreen</strong>
+                    </td>
+
+                    <td>
+                        <code>1025px</code>
+                    </td>
+
+                    <td><code>∞</code></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th />
+                    <th>Minimum</th>
+                    <th>Maximum</th>
+                </tr>
+            </tfoot>
+        </table>
+    </Scrollable>
+</Article>
+```
 
 ## Elements
 
