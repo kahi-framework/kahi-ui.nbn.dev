@@ -40,7 +40,9 @@ declare module "lucide-svelte" {
     export declare class Search extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class Share2 extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class Sidebar extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
+    export declare class Slash extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class Sun extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
+    export declare class UserPlus extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class X extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class Zap extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
 }
