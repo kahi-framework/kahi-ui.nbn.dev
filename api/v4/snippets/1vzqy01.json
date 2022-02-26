@@ -1,0 +1,1 @@
+{"data":{"identifier":"1vzqy01","script":"@include variables.define(\n    (\n        \"fonts\": (\n            \"line-heights\": generators.modular(\n                $base: <BASE-MULTIPLIER>,\n                $ratio: <RATIO>\n            ),\n        ),\n    )\n);","syntax":"scss","title":"1vzqy01"}}

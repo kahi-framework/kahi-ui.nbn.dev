@@ -1,0 +1,1 @@
+{"data":{"identifier":"oymwje","script":"@include variables.define(\n    (\n        \"sizes\": (\n            \"<TIER>\": generators.modular(\n                $base: <BASE-MULTIPLIER>,\n                $ratio: <RATIO>\n            ),\n        ),\n    )\n);","syntax":"scss","title":"oymwje"}}

@@ -1,0 +1,1 @@
+{"data":{"identifier":"3ebuz2","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput is=\"textarea\" span_x={5} span_y={3} />","syntax":"svelte","title":"3ebuz2"}}

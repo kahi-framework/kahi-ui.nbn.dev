@@ -1,1 +1,0 @@
-{"data":{"identifier":"numberinput-field-character-size","script":"<script>\n    import {NumberInput} from \"@kahi-ui/framework\";\n</script>\n\n<NumberInput span_x=\"2\" />","syntax":"svelte","title":"NumberInput Field Character Size"}}

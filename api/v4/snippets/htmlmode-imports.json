@@ -1,0 +1,1 @@
+{"data":{"identifier":"htmlmode-imports","script":"import {\n    htmlmode,\n    htmldark,\n    htmllight,\n} from \"@kahi-ui/framework\";","syntax":"javascript","title":"htmlmode Imports"}}

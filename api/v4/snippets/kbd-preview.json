@@ -1,0 +1,1 @@
+{"data":{"identifier":"kbd-preview","script":"<script>\n    import {Kbd} from \"@kahi-ui/framework\";\n</script>\n\n<Kbd>CTRL+C</Kbd>","syntax":"svelte","title":"Kbd Preview"}}

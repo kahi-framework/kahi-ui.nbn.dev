@@ -1,0 +1,1 @@
+{"data":{"identifier":"rgd2yt","script":"<script>\n    import {Container} from \"@kahi-ui/framework\";\n</script>\n\n<Container width=\"viewport-mobile\" max_width=\"100\">\n    hello world!\n</Container>","syntax":"svelte","title":"rgd2yt"}}

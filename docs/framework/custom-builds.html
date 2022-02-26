@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <meta http-equiv="content-security-policy" content=""><title>Custom Builds — Kahi UI</title><meta property="og:description" content="Straight-forward Svelte UI for the Web" data-svelte="svelte-189b3we"><meta property="og:image" content="https://kahi-ui.nbn.dev/assets/images/logo-social.png" data-svelte="svelte-189b3we"><meta property="og:site_name" content="Kahi UI" data-svelte="svelte-189b3we"><meta property="og:title" content="Custom Builds — Kahi UI" data-svelte="svelte-189b3we"><meta name="twitter:card" content="summary_large_image" data-svelte="svelte-189b3we">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b4c89636.css">
+	<link rel="stylesheet" href="/_app/assets/PageHeader-bd0525c2.css">
+	<link rel="stylesheet" href="/_app/assets/AppNavigation-94c4f2fc.css">
+	<link rel="stylesheet" href="/_app/assets/AppAnchor-3b0f44e3.css">
+	<link rel="stylesheet" href="/_app/assets/pages/_...identifier_.svelte-9bd3e7aa.css">
+	<link rel="stylesheet" href="/_app/assets/REPLEmbed-74f15d44.css">
+	<link rel="stylesheet" href="/_app/assets/REPLSplit-2ad5a641.css">
+	<link rel="modulepreload" href="/_app/start-c7c53988.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-b10044b0.js">
+	<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+	<link rel="modulepreload" href="/_app/chunks/paths-4b3c6e7e.js">
+	<link rel="modulepreload" href="/_app/chunks/singletons-a6a7384f.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-2da1eac9.js">
+	<link rel="modulepreload" href="/_app/chunks/PageHeader-52834eae.js">
+	<link rel="modulepreload" href="/_app/chunks/preferences-f3c864d1.js">
+	<link rel="modulepreload" href="/_app/chunks/stores-e763cd27.js">
+	<link rel="modulepreload" href="/_app/chunks/AppNavigation-c011a202.js">
+	<link rel="modulepreload" href="/_app/chunks/AppAnchor-eef73d8c.js">
+	<link rel="modulepreload" href="/_app/pages/_...identifier_.svelte-39b03b72.js">
+	<link rel="modulepreload" href="/_app/chunks/REPLEmbed-6ffd01ea.js">
+	<link rel="modulepreload" href="/_app/chunks/REPLSplit-fed70b2a.js">
+
+        <script type="application/javascript">
+            /**
+             * HACK: This is just here due to time to execute Javascript causing
+             * a flash of color on page load
+             */
+
+            if (typeof localStorage !== "undefined") {
+                const theme = localStorage.getItem("kahi-docs.preferences.theme");
+                if (theme) document.documentElement.setAttribute("data-mode", theme);
+            }
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+
+<a href="/api/v4/search.json" hidden></a>
+
+<a href="/api/v4/snippets/yy299a.json" hidden></a><a href="/api/v4/snippets/1pwep2h.json" hidden></a><a href="/api/v4/snippets/8kxmku.json" hidden></a><a href="/api/v4/snippets/1p5xcfd.json" hidden></a><a href="/api/v4/snippets/1sx3vee.json" hidden></a><a href="/api/v4/snippets/h9n6e.json" hidden></a>
+
+<div class="aside-layout"><main class="aside-container"><main data-width="100" data-padding-y="large" class="container content-container"><h1 data-margin-bottom="small" class="heading ">Custom Builds</h1>
+
+    <div data-margin-bottom="medium" class="stack " data-alignment-y="center" data-orientation="horizontal" data-spacing="small"><div><div class="stack " data-alignment-y="center" data-orientation="horizontal" data-spacing="small"></div>
+
+                <small class="text ">2/26/2022, 1:22:34 AM</small></div>
+
+        <div class="spacer "></div>
+
+        <small class="text "><a class="anchor svelte-1wifs10" href="https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/framework/custom-builds.md" target="_blank" rel="noopener noreferrer" data-palette="informative">View Source</a></small></div>
+
+        <div class="article content-article"><!-- HTML_TAG_START --><blockquote data-palette="alert">
+<p><strong>WARNING</strong>: When using manual builds of Kahi UI, you'll need to rebuild the distributables every time you upgrade Kahi UI.</p>
+</blockquote>
+<p>If you're building a Web Application that's particularly sensitive to latency, page sizes, etc. It's recommended to create custom builds of the Framework's CSS distributables.</p>
+<h2 id="downloading">Downloading</h2>
+<p>First, you'll need to head over to <a href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer">Releases</a>, download the source code <code>.zip</code> / <code>.tar.gz</code> archive that matches the version of Kahi UI you're developing against, and decompress the archive onto your filesystem.</p>
+<h2 id="installation">Installation</h2>
+<p>Once you've got everything downloaded and decompressed, open a terminal in the source code directory and install Kahi UI's dependencies.</p>
+<pre class="highlight language-bash" data-identifier="yy299a" data-mode="default" data-syntax="bash"><code><span class="token function">npm</span> ci</code></pre><h2 id="building">Building</h2>
+<p>Now you can start building the CSS distributables via a NPM script.</p>
+<pre class="highlight language-bash" data-identifier="1pwep2h" data-mode="default" data-syntax="bash"><code><span class="token function">npm</span> run build:framework</code></pre><p>Which should output in the <code>package/</code> directory like so.</p>
+<pre class="highlight language-bash" data-identifier="8kxmku" data-mode="default" data-syntax="bash"><code>package/
+│
+└───kahi-ui.framework.css           // Main CSS rules and stylings
+└───kahi-ui.framework.css.map       // Source map <span class="token keyword">for</span> the above <span class="token function">file</span>
+└───kahi-ui.theme.default.css       // Themeing variables that define the <span class="token function">look</span> and feel
+└───kahi-ui.theme.default.css.map   // Source map <span class="token keyword">for</span> the above <span class="token function">file</span></code></pre><p>Then just copy the files you require into your Web Application's codebase and import them.</p>
+<h2 id="minifying">Minifying</h2>
+<p>You can also build the minified versions of the CSS distributables with another NPM script.</p>
+<pre class="highlight language-bash" data-identifier="1p5xcfd" data-mode="default" data-syntax="bash"><code><span class="token function">npm</span> run build:minify</code></pre><p>Which would output to <code>package/</code> without source maps like so.</p>
+<pre class="highlight language-bash" data-identifier="1sx3vee" data-mode="default" data-syntax="bash"><code>package/
+│
+└───kahi-ui.framework.min.css       // Main CSS rules and stylings
+└───kahi-ui.theme.default.min.css   // Themeing variables that define the <span class="token function">look</span> and feel</code></pre><h2 id="filters">Filters</h2>
+<p>Each individual feature of Kahi UI that requires CSS can turned off, removing it from builds. And it's as simple as adding command line parameters. Just run either of the NPM scripts with filter parameters following this format: <code>--disable-{SCOPE}-{FEATURE}</code>.</p>
+<p>For instance, if wanting to disable <a href="../layouts/grid" svelte:prefetch="true">Grid</a> and the responsitivity of <a href="../globals/spacings" svelte:prefetch="true">Spacings</a> (e.g. <code>margin={[&quot;mobile:medium&quot;]}</code>), try the following.</p>
+<blockquote data-palette="informative">
+<p><strong>USAGE</strong>: The double dashes (<code>--</code>) after <code>build:framework</code> / <code>build:minify</code> is required so NPM passes our command line parameters to the script.</p>
+</blockquote>
+<pre class="highlight language-bash" data-identifier="h9n6e" data-mode="default" data-syntax="bash"><code><span class="token function">npm</span> run build:framework -- --disable-globals-intrinsics-responsitivity --disable-components-grid</code></pre><h3 id="components">Components</h3>
+<ul>
+<li>
+<p>Disclosure</p>
+<ul>
+<li><code>--disable-components-disclosure-accordion</code> — <a href="../disclosure/accordion" svelte:prefetch="true"><code>Accordion</code></a></li>
+<li><code>--disable-components-disclosure-carousel</code> — <a href="../disclosure/carousel" svelte:prefetch="true"><code>Carousel</code></a></li>
+<li><code>--disable-components-disclosure-tab</code> — <a href="../disclosure/tab" svelte:prefetch="true"><code>Tab</code></a></li>
+</ul>
+</li>
+<li>
+<p>Display</p>
+<ul>
+<li><code>--disable-components-display-badge</code> — <a href="../display/badge" svelte:prefetch="true"><code>Badge</code></a></li>
+<li><code>--disable-components-display-kbd</code> — <a href="../display/kbd" svelte:prefetch="true"><code>Kbd</code></a></li>
+<li><code>--disable-components-display-list</code> — <a href="../display/list" svelte:prefetch="true"><code>List</code></a></li>
+<li><code>--disable-components-display-table</code> — <a href="../display/table" svelte:prefetch="true"><code>Table</code></a></li>
+</ul>
+</li>
+<li>
+<p>Embedded</p>
+<ul>
+<li><code>--disable-components-embedded-figure</code> — <a href="../embedded/figure" svelte:prefetch="true"><code>Figure</code></a></li>
+</ul>
+</li>
+<li>
+<p>Feedback</p>
+<ul>
+<li><code>--disable-components-feedback-dot</code> — <a href="../feedback/dot" svelte:prefetch="true"><code>Dot</code></a></li>
+<li><code>--disable-components-feedback-ellipsis</code> — <a href="../feedback/ellipsis" svelte:prefetch="true"><code>Ellipsis</code></a></li>
+<li><code>--disable-components-feedback-progress</code> — <a href="../feedback/progress" svelte:prefetch="true"><code>Progress</code></a></li>
+</ul>
+</li>
+<li>
+<p>Interactables</p>
+<ul>
+<li><code>--disable-components-interactables-button</code> — <a href="../interactables/button" svelte:prefetch="true"><code>Button</code></a></li>
+<li><code>--disable-components-interactables-check</code> — <a href="../interactables/check" svelte:prefetch="true"><code>Check</code></a></li>
+<li><code>--disable-components-interactables-file-drop-input</code> — <a href="../interactables/filedropinput" svelte:prefetch="true"><code>FileDropInput</code></a></li>
+<li><code>--disable-components-interactables-form</code> — <a href="../interactables/form" svelte:prefetch="true"><code>Form</code></a></li>
+<li><code>--disable-components-interactables-number-input</code> — <a href="../interactables/numberinput" svelte:prefetch="true"><code>NumberInput</code></a></li>
+<li><code>--disable-components-interactables-radio</code> — <a href="../interactables/radio" svelte:prefetch="true"><code>Radio</code></a></li>
+<li><code>--disable-components-interactables-switch</code> — <a href="../interactables/switch" svelte:prefetch="true"><code>Switch</code></a></li>
+<li><code>--disable-components-interactables-text-input</code> — <a href="../interactables/textinput" svelte:prefetch="true"><code>TextInput</code></a></li>
+</ul>
+</li>
+<li>
+<p>Layouts</p>
+<ul>
+<li><code>--disable-components-layouts-center</code> — <a href="../layouts/center" svelte:prefetch="true"><code>Center</code></a></li>
+<li><code>--disable-components-layouts-container</code> — <a href="../layouts/container" svelte:prefetch="true"><code>Container</code></a></li>
+<li><code>--disable-components-layouts-divider</code> — <a href="../layouts/divider" svelte:prefetch="true"><code>Divider</code></a></li>
+<li><code>--disable-components-layouts-grid</code> — <a href="../layouts/grid" svelte:prefetch="true"><code>Grid</code></a></li>
+<li><code>--disable-components-layouts-group</code> — <a href="../layouts/group" svelte:prefetch="true"><code>Group</code></a></li>
+<li><code>--disable-components-layouts-mosaic</code> — <a href="../layouts/mosaic" svelte:prefetch="true"><code>Mosaic</code></a></li>
+<li><code>--disable-components-layouts-position</code> — <a href="../layouts/position" svelte:prefetch="true"><code>Position</code></a></li>
+<li><code>--disable-components-layouts-scrollable</code> — <a href="../layouts/scrollable" svelte:prefetch="true"><code>Scrollable</code></a></li>
+<li><code>--disable-components-layouts-spacer</code> — <a href="../layouts/spacer" svelte:prefetch="true"><code>Spacer</code></a></li>
+<li><code>--disable-components-layouts-stack</code> — <a href="../layouts/stack" svelte:prefetch="true"><code>Stack</code></a></li>
+</ul>
+</li>
+<li>
+<p>Navigation</p>
+<ul>
+<li><code>--disable-components-navigation-anchor</code> — <a href="../navigation/anchor" svelte:prefetch="true"><code>Anchor</code></a></li>
+<li><code>--disable-components-navigation-aside</code> — <a href="../navigation/aside" svelte:prefetch="true"><code>Aside</code></a></li>
+<li><code>--disable-components-navigation-breadcrumb</code> — <a href="../navigation/breadcrumb" svelte:prefetch="true"><code>Breadcrumb</code></a></li>
+<li><code>--disable-components-navigation-menu</code> — <a href="../navigation/menu" svelte:prefetch="true"><code>Menu</code></a></li>
+<li><code>--disable-components-navigation-omni</code> — <a href="../navigation/omni" svelte:prefetch="true"><code>Omni</code></a></li>
+</ul>
+</li>
+<li>
+<p>Overlays</p>
+<ul>
+<li><code>--disable-components-overlays-backdrop</code> — <a href="../overlays/backdrop" svelte:prefetch="true"><code>Backdrop</code></a></li>
+<li><code>--disable-components-overlays-clickable</code> — <a href="../overlays/clickable" svelte:prefetch="true"><code>Clickable</code></a></li>
+<li><code>--disable-components-overlays-overlay</code> — <a href="../overlays/overlay" svelte:prefetch="true"><code>Overlay</code></a></li>
+<li><code>--disable-components-overlays-popover</code> — <a href="../overlays/popover" svelte:prefetch="true"><code>Popover</code></a></li>
+</ul>
+</li>
+<li>
+<p>Surfaces</p>
+<ul>
+<li><code>--disable-components-surfaces-box</code> — <a href="../surfaces/box" svelte:prefetch="true"><code>Box</code></a></li>
+<li><code>--disable-components-surfaces-card</code> — <a href="../surfaces/card" svelte:prefetch="true"><code>Card</code></a></li>
+<li><code>--disable-components-surfaces-hero</code> — <a href="../surfaces/hero" svelte:prefetch="true"><code>Hero</code></a></li>
+<li><code>--disable-components-surfaces-tile</code> — <a href="../surfaces/tile" svelte:prefetch="true"><code>Tile</code></a></li>
+</ul>
+</li>
+<li>
+<p>Typography</p>
+<ul>
+<li><code>--disable-components-typography-blockquote</code> — <a href="../typography/blockquote" svelte:prefetch="true"><code>Blockquote</code></a></li>
+<li><code>--disable-components-typography-code</code> — <a href="../typography/code" svelte:prefetch="true"><code>Code</code></a></li>
+<li><code>--disable-components-typography-heading</code> — <a href="../typography/heading" svelte:prefetch="true"><code>Heading</code></a></li>
+<li><code>--disable-components-typography-text</code> — <a href="../typography/text" svelte:prefetch="true"><code>Text</code></a></li>
+</ul>
+</li>
+<li>
+<p>Utilities</p>
+<ul>
+<li><code>--disable-components-utilities-animation</code> — <a href="../utilities/animation" svelte:prefetch="true"><code>Animation</code></a></li>
+<li><code>--disable-components-utilities-portal</code> — <a href="../utilities/portal" svelte:prefetch="true"><code>Portal</code></a></li>
+<li><code>--disable-components-utilities-transition</code> — <a href="../utilities/transition" svelte:prefetch="true"><code>Transition</code></a></li>
+</ul>
+</li>
+</ul>
+<h3 id="globals">Globals</h3>
+<blockquote data-palette="alert">
+<p><strong>WARNING</strong>: Most non-Component specific properties are implemented as global CSS attributes to reduce redundancy. If you turn off the feature, it turns off for <strong>ALL</strong> Components.</p>
+</blockquote>
+<ul>
+<li><code>--disable-globals-alignments</code> — <code>&lt;* alignment=&quot;{ALIGNMENT}&quot; alignment_x=&quot;{ALIGNMENT}&quot; alignment_y=&quot;{ALIGNMENT}&quot;&gt;</code></li>
+<li><code>--disable-globals-alignments-responsitivity</code> — <code>&lt;* alignment={[&quot;{VIEWPORT}:{ALIGNMENT}]} alignment_x={[&quot;{VIEWPORT}:{ALIGNMENT}]} alignment_y={[&quot;{VIEWPORT}:{ALIGNMENT}]}&gt;</code></li>
+<li><code>--disable-globals-elevations</code> — <code>&lt;* elevation=&quot;{ELEVATION}&quot;&gt;</code></li>
+<li><code>--disable-globals-elevations-responsitivity</code> — <code>&lt;* elevation={[&quot;{VIEWPORT}:{ELEVATION}&quot;]}&gt;</code></li>
+<li><code>--disable-globals-fit</code> — <code>&lt;* fit=&quot;{FIT}&quot;&gt;</code></li>
+<li><code>--disable-globals-fit-responsitivity</code> — <code>&lt;* fit={[&quot;{VIEWPORT}:{FIT}&quot;]}&gt;</code></li>
+<li><code>--disable-globals-grid</code> — <code>&lt;* points=&quot;{POINTS}&quot; span=&quot;{SPAN}&quot; span_x=&quot;{SPAN}&quot; span_y=&quot;{SPAN}&quot;&gt;</code></li>
+<li><code>--disable-globals-grid-responsitivity</code> — <code>&lt;* points={[&quot;{VIEWPORT}:{POINTS}&quot;]} span={[&quot;{VIEWPORT}:{SPAN}&quot;]} span_x={[&quot;{VIEWPORT}:{SPAN}&quot;]} span_y={[&quot;{VIEWPORT}:{SPAN}&quot;]}&gt;</code></li>
+<li><code>--disable-globals-intrinsics</code> — <code>&lt;* height max_height min_height margin padding size max_size min_size width max_width min_width&gt;</code></li>
+<li><code>--disable-globals-intrinsics-responsitivity</code> — <code>&lt;* height max_height min_height margin padding size max_size min_size width max_width min_width&gt;</code></li>
+<li><code>--disable-globals-orientations</code> — <code>&lt;* orientation=&quot;{ORIENTATION}&quot;&gt;</code></li>
+<li><code>--disable-globals-orientations-responsitivity</code> — <code>&lt;* orientation={[&quot;{VIEWPORT}:{ORIENTATION}&quot;]}&gt;</code></li>
+<li><code>--disable-globals-palettes</code> — <code>&lt;* palette=&quot;{PALETTE}&quot;&gt;</code></li>
+<li><code>--disable-globals-radius</code> — <code>&lt;* radius=&quot;{RADIUS}&quot;&gt;</code></li>
+<li><code>--disable-globals-radius-responsitivity</code> — <code>&lt;* radius={[&quot;{VIEWPORT}:{RADIUS}&quot;]}&gt;</code></li>
+<li><code>--disable-globals-sizings</code> — <code>&lt;* sizing=&quot;{SIZING}&quot;&gt;</code></li>
+<li><code>--disable-globals-sizings-responsitivity</code> — <code>&lt;* sizing={[&quot;{VIEWPORT}:{SIZING}&quot;]}&gt;</code></li>
+<li><code>--disable-globals-spacings</code> — <code>&lt;* spacing=&quot;{SPACING}&quot; spacing_x=&quot;{SPACING}&quot; spacing_y=&quot;{SPACING}&quot;&gt;</code></li>
+<li><code>--disable-globals-spacings-responsitivity</code>— <code>&lt;* spacing={[&quot;{VIEWPORT}:{SPACING}&quot;]} spacing_x={[&quot;{VIEWPORT}:{SPACING}&quot;]} spacing_y={[&quot;{VIEWPORT}:{SPACING}&quot;]}&gt;</code></li>
+</ul>
+<!-- HTML_TAG_END --></div></main></main>
+
+    <div data-hidden="desktop widescreen" class="position " data-alignment-x="left" data-variation="action"><label role="button" class="button " for="aside-navigation" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-menu "><line x1="4" y1="12" x2="20" y2="12"></line>
+  <line x1="4" y1="6" x2="20" y2="6"></line>
+  <line x1="4" y1="18" x2="20" y2="18"></line>
+  </svg></label></div>
+
+    
+
+<input role="presentation" class="overlay--state" id="aside-navigation" type="checkbox">
+
+<div data-contents="desktop widescreen" class="overlay aside-navigation"><label data-hidden="desktop widescreen" role="button" class="backdrop overlay--backdrop " for="aside-navigation"></label>
+
+        <section data-contents="desktop widescreen" class="overlay--section transition " data-animation="slide" data-alignment-x="left" data-behavior="explicit" data-direction="left">
+    <nav class="aside " data-palette="off" data-variation="sticky">
+                <section data-margin-bottom="none" class="aside--section "><nav class="menu "><p role="separator" class="menu--heading " data-variation="divider">Resources
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/resources/official" sveltekit:prefetch>Official
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/resources/community" sveltekit:prefetch>Community
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/resources/faq" sveltekit:prefetch>F.A.Q.
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Migrations
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/migrations/0.5.x-to-0.6.x" sveltekit:prefetch>0.5.x to 0.6.x
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/migrations/0.4.x-to-0.5.x" sveltekit:prefetch>0.4.x to 0.5.x
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Guides
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/guides/getting-started" sveltekit:prefetch>Getting Started
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Framework
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/framework/browser-support" sveltekit:prefetch>Browser Support
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/framework/responsitivity" sveltekit:prefetch>Responsitivity
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" aria-current="page" href="/docs/framework/custom-builds" sveltekit:prefetch>Custom Builds
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Themeing
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/themeing/manual-mode" sveltekit:prefetch>Manual Mode
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/custom-properties" sveltekit:prefetch>Custom Properties
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/custom-themes" sveltekit:prefetch>Custom Themes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/elevations" sveltekit:prefetch>Elevations
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/fonts" sveltekit:prefetch>Fonts
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/palettes" sveltekit:prefetch>Palettes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/sizes" sveltekit:prefetch>Sizes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/spacings" sveltekit:prefetch>Spacings
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Globals
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/globals/actions" sveltekit:prefetch>Actions
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/elements" sveltekit:prefetch>Elements
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/events" sveltekit:prefetch>Events
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/contents" sveltekit:prefetch>Contents
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/html5" sveltekit:prefetch>HTML5
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/hidden" sveltekit:prefetch>Hidden
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/sizes" sveltekit:prefetch>Sizes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/spacings" sveltekit:prefetch>Spacings
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/sveltekit" sveltekit:prefetch>SvelteKit
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Typography
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/typography/blockquote" sveltekit:prefetch>Blockquote
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/typography/code" sveltekit:prefetch>Code
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/typography/heading" sveltekit:prefetch>Heading
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/typography/text" sveltekit:prefetch>Text
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Embedded
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/embedded/figure" sveltekit:prefetch>Figure
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Display
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/display/badge" sveltekit:prefetch>Badge
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/datestamp" sveltekit:prefetch>DateStamp
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/datetimestamp" sveltekit:prefetch>DateTimeStamp
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/kbd" sveltekit:prefetch>Kbd
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/list" sveltekit:prefetch>List
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/table" sveltekit:prefetch>Table
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/timestamp" sveltekit:prefetch>TimeStamp
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Disclosure
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/disclosure/accordion" sveltekit:prefetch>Accordion
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/disclosure/carousel" sveltekit:prefetch>Carousel
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/disclosure/tab" sveltekit:prefetch>Tab
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Feedback
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/feedback/dot" sveltekit:prefetch>Dot
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/feedback/ellipsis" sveltekit:prefetch>Ellipsis
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/feedback/progress" sveltekit:prefetch>Progress
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Interactables
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/interactables/button" sveltekit:prefetch>Button
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/check" sveltekit:prefetch>Check
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/filedropinput" sveltekit:prefetch>FileDropInput
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/form" sveltekit:prefetch>Form
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/hiddeninput" sveltekit:prefetch>HiddenInput
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/numberinput" sveltekit:prefetch>NumberInput
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/radio" sveltekit:prefetch>Radio
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/switch" sveltekit:prefetch>Switch
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/textinput" sveltekit:prefetch>TextInput
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Widgets
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/widgets/datatable" sveltekit:prefetch>DataTable
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/daypicker" sveltekit:prefetch>DayPicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/daystepper" sveltekit:prefetch>DayStepper
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/pagination" sveltekit:prefetch>Pagination
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/monthpicker" sveltekit:prefetch>MonthPicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/monthstepper" sveltekit:prefetch>MonthStepper
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/timepicker" sveltekit:prefetch>TimePicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/yearpicker" sveltekit:prefetch>YearPicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/yearstepper" sveltekit:prefetch>YearStepper
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Layouts
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/layouts/article" sveltekit:prefetch>Article
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/center" sveltekit:prefetch>Center
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/container" sveltekit:prefetch>Container
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/divider" sveltekit:prefetch>Divider
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/grid" sveltekit:prefetch>Grid
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/group" sveltekit:prefetch>Group
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/mosaic" sveltekit:prefetch>Mosaic
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/position" sveltekit:prefetch>Position
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/scrollable" sveltekit:prefetch>Scrollable
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/spacer" sveltekit:prefetch>Spacer
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/stack" sveltekit:prefetch>Stack
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Surfaces
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/surfaces/box" sveltekit:prefetch>Box
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/surfaces/card" sveltekit:prefetch>Card
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/surfaces/hero" sveltekit:prefetch>Hero
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/surfaces/tile" sveltekit:prefetch>Tile
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Navigation
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/navigation/anchor" sveltekit:prefetch>Anchor
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/aside" sveltekit:prefetch>Aside
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/breadcrumb" sveltekit:prefetch>Breadcrumb
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/menu" sveltekit:prefetch>Menu
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/omni" sveltekit:prefetch>Omni
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Overlays
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/overlays/backdrop" sveltekit:prefetch>Backdrop
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/overlays/clickable" sveltekit:prefetch>Clickable
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/overlays/overlay" sveltekit:prefetch>Overlay
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/overlays/popover" sveltekit:prefetch>Popover
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Utilities
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/utilities/animation" sveltekit:prefetch>Animation
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/browserrender" sveltekit:prefetch>BrowserRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/intersectionrender" sveltekit:prefetch>IntersectionRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/mediaqueryrender" sveltekit:prefetch>MediaQueryRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/portal" sveltekit:prefetch>Portal
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/serverrender" sveltekit:prefetch>ServerRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/transition" sveltekit:prefetch>Transition
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/viewportrender" sveltekit:prefetch>ViewportRender
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Actions
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/actions/auto_focus" sveltekit:prefetch>auto_focus
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/click_inside" sveltekit:prefetch>click_inside
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/click_outside" sveltekit:prefetch>click_outside
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/intersection_observer" sveltekit:prefetch>intersection_observer
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/keybind" sveltekit:prefetch>keybind
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/lost_focus" sveltekit:prefetch>lost_focus
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/mutation_observer" sveltekit:prefetch>mutation_observer
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/overflow_clipping" sveltekit:prefetch>overflow_clipping
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/trap_focus" sveltekit:prefetch>trap_focus
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Stores
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/stores/darkmode" sveltekit:prefetch>darkmode
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/htmlmode" sveltekit:prefetch>htmlmode
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/mediaquery" sveltekit:prefetch>mediaquery
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/prefersscheme" sveltekit:prefetch>prefersscheme
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/scrolllock" sveltekit:prefetch>scrolllock
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/viewport" sveltekit:prefetch>viewport
+
+                                        
+                                    </a>
+                            </section></nav></section>
+
+                <div data-hidden="desktop widescreen" class="position " data-variation="container action"><label role="button" class="button overlay--button " for="aside-navigation" tabindex="0" data-palette="inverse" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-x "><line x1="18" y1="6" x2="6" y2="18"></line>
+  <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg></label></div></nav></section></div>
+    
+
+<nav class="omni app-navigation" data-palette="dark"><header class="omni--header "><a class="anchor svelte-1wifs10" href="/" sveltekit:prefetch>Kahi UI</a>
+        <hr class="divider" data-orientation="vertical">
+
+        <a class="anchor svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases/v0.6.1" target="_blank" rel="noopener noreferrer"><small class="text ">v0.6.1</small></a></header>
+
+    <section data-hidden data-margin-x="medium" class="omni--section app-navigation-search"><input data-max-width="prose" type="search" class="text-input " data-alignment-x="center" data-sizing="tiny" data-variation="block" placeholder="[CTRL+/] Search" value=""></section>
+
+    <footer class="omni--footer ">
+
+<input role="presentation" class="popover--state" id="app-navigation" type="checkbox">
+
+<div data-hidden="widescreen" class="popover "><label role="button" class="button popover--button " for="app-navigation" tabindex="0" data-palette="light" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-more-vertical "><circle cx="12" cy="12" r="1"></circle>
+  <circle cx="12" cy="5" r="1"></circle>
+  <circle cx="12" cy="19" r="1"></circle>
+  </svg></label>
+
+            <section class="popover--section transition " data-animation="clip" data-alignment-x="left" data-behavior="explicit" data-direction="top" data-spacing="small">
+    <div data-padding="medium" class="box " data-elevation="medium" data-radius="tiny" data-variation="borders"><nav class="menu ">
+
+                        <a class="menu--item svelte-1wifs10" href="/blog" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-megaphone "><path d="M3 11l18-5v12L3 14v-3z"></path>
+  <path d="M11.6 16.8a3 3 0 11-5.8-1.6"></path>
+  </svg>
+                                Blog
+                            </a><a class="menu--item svelte-1wifs10" href="/docs" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-book "><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+  </svg>
+                                Documentation
+                            </a><a class="menu--item svelte-1wifs10" href="/playground" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-edit "><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+  <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+  </svg>
+                                Playground
+                            </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-code "><polyline points="16 18 22 12 16 6"></polyline>
+  <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+                                Source
+                            </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-package "><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+  <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+  </svg>
+                                Releases
+                            </a><a class="menu--item svelte-1wifs10" href="/chat" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-message-circle "><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+  </svg>
+                                Chat
+                            </a>
+
+                        </nav></div></section></div>
+
+        <nav data-hidden="mobile tablet desktop" class="menu " data-orientation="horizontal" data-sizing="tiny"><a class="menu--item svelte-1wifs10" href="/blog" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-megaphone "><path d="M3 11l18-5v12L3 14v-3z"></path>
+  <path d="M11.6 16.8a3 3 0 11-5.8-1.6"></path>
+  </svg>
+                    Blog
+                </a><a class="menu--item svelte-1wifs10" href="/docs" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-book "><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+  </svg>
+                    Documentation
+                </a><a class="menu--item svelte-1wifs10" href="/playground" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-edit "><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+  <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+  </svg>
+                    Playground
+                </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-code "><polyline points="16 18 22 12 16 6"></polyline>
+  <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+                    
+                </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-package "><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+  <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+  </svg>
+                    
+                </a><a class="menu--item svelte-1wifs10" href="/chat" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-message-circle "><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+  </svg>
+                    
+                </a>
+
+            </nav></footer></nav>
+
+
+
+    <footer class="box app-footer" data-padding-y="large"><div class="stack " data-alignment-x="center"><a class="anchor svelte-1wifs10" href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><h2 class="heading ">Kahi UI</h2></a>
+
+        <p class="text " data-alignment-x="center"><a class=" svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases/v0.6.1" target="_blank" rel="noopener noreferrer"><p data-margin-y="tiny" role="separator" class="divider" data-palette="accent">v0.6.1</p></a>
+
+            Maintained by
+            <br>
+            <a class="anchor svelte-1wifs10" href="https://github.com/novacbn" target="_blank" rel="noopener noreferrer" data-palette="accent">NovacBN
+            </a></p></div>
+</footer>
+</div>
+
+
+		<script type="module" data-hydrate="1pxr58o">
+		import { start } from "/_app/start-c7c53988.js";
+		start({
+			target: document.querySelector('[data-hydrate="1pxr58o"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-2da1eac9.js"),
+						import("/_app/pages/_...identifier_.svelte-39b03b72.js")
+				],
+				params: {identifier:"docs\u002Fframework\u002Fcustom-builds"}
+			}
+		});
+	</script><script type="application/json" data-type="svelte-data" data-url="/api/v4/navigation/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":[{\"text\":\"Resources\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fofficial\",\"text\":\"Official\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fcommunity\",\"text\":\"Community\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Ffaq\",\"text\":\"F.A.Q.\"}]},{\"text\":\"Migrations\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fmigrations\u002F0.5.x-to-0.6.x\",\"text\":\"0.5.x to 0.6.x\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fmigrations\u002F0.4.x-to-0.5.x\",\"text\":\"0.4.x to 0.5.x\"}]},{\"text\":\"Guides\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fguides\u002Fgetting-started\",\"text\":\"Getting Started\"}]},{\"text\":\"Framework\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fbrowser-support\",\"text\":\"Browser Support\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fresponsitivity\",\"text\":\"Responsitivity\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fframework\u002Fcustom-builds\",\"text\":\"Custom Builds\"}]},{\"text\":\"Themeing\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fmanual-mode\",\"text\":\"Manual Mode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fcustom-properties\",\"text\":\"Custom Properties\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fcustom-themes\",\"text\":\"Custom Themes\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Felevations\",\"text\":\"Elevations\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Ffonts\",\"text\":\"Fonts\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fpalettes\",\"text\":\"Palettes\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fsizes\",\"text\":\"Sizes\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fspacings\",\"text\":\"Spacings\"}]},{\"text\":\"Globals\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Factions\",\"text\":\"Actions\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Felements\",\"text\":\"Elements\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fevents\",\"text\":\"Events\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fcontents\",\"text\":\"Contents\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhtml5\",\"text\":\"HTML5\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhidden\",\"text\":\"Hidden\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fsizes\",\"text\":\"Sizes\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fspacings\",\"text\":\"Spacings\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fsveltekit\",\"text\":\"SvelteKit\"}]},{\"text\":\"Typography\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fblockquote\",\"text\":\"Blockquote\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fcode\",\"text\":\"Code\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fheading\",\"text\":\"Heading\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ftypography\u002Ftext\",\"text\":\"Text\"}]},{\"text\":\"Embedded\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fembedded\u002Ffigure\",\"text\":\"Figure\"}]},{\"text\":\"Display\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fbadge\",\"text\":\"Badge\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatestamp\",\"text\":\"DateStamp\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatetimestamp\",\"text\":\"DateTimeStamp\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fkbd\",\"text\":\"Kbd\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Flist\",\"text\":\"List\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftable\",\"text\":\"Table\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftimestamp\",\"text\":\"TimeStamp\"}]},{\"text\":\"Disclosure\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Faccordion\",\"text\":\"Accordion\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Fcarousel\",\"text\":\"Carousel\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Ftab\",\"text\":\"Tab\"}]},{\"text\":\"Feedback\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fdot\",\"text\":\"Dot\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fellipsis\",\"text\":\"Ellipsis\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fprogress\",\"text\":\"Progress\"}]},{\"text\":\"Interactables\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fbutton\",\"text\":\"Button\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fcheck\",\"text\":\"Check\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ffiledropinput\",\"text\":\"FileDropInput\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fform\",\"text\":\"Form\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fhiddeninput\",\"text\":\"HiddenInput\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fnumberinput\",\"text\":\"NumberInput\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fradio\",\"text\":\"Radio\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fswitch\",\"text\":\"Switch\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ftextinput\",\"text\":\"TextInput\"}]},{\"text\":\"Widgets\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdatatable\",\"text\":\"DataTable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaypicker\",\"text\":\"DayPicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaystepper\",\"text\":\"DayStepper\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fpagination\",\"text\":\"Pagination\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthpicker\",\"text\":\"MonthPicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthstepper\",\"text\":\"MonthStepper\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Ftimepicker\",\"text\":\"TimePicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearpicker\",\"text\":\"YearPicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearstepper\",\"text\":\"YearStepper\"}]},{\"text\":\"Layouts\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Flayouts\u002Farticle\",\"text\":\"Article\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcenter\",\"text\":\"Center\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcontainer\",\"text\":\"Container\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fdivider\",\"text\":\"Divider\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgrid\",\"text\":\"Grid\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgroup\",\"text\":\"Group\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fmosaic\",\"text\":\"Mosaic\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fposition\",\"text\":\"Position\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fscrollable\",\"text\":\"Scrollable\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fspacer\",\"text\":\"Spacer\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fstack\",\"text\":\"Stack\"}]},{\"text\":\"Surfaces\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fbox\",\"text\":\"Box\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fcard\",\"text\":\"Card\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fhero\",\"text\":\"Hero\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Ftile\",\"text\":\"Tile\"}]},{\"text\":\"Navigation\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fanchor\",\"text\":\"Anchor\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Faside\",\"text\":\"Aside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\",\"text\":\"Breadcrumb\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fmenu\",\"text\":\"Menu\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fomni\",\"text\":\"Omni\"}]},{\"text\":\"Overlays\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fbackdrop\",\"text\":\"Backdrop\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fclickable\",\"text\":\"Clickable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foverlay\",\"text\":\"Overlay\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fpopover\",\"text\":\"Popover\"}]},{\"text\":\"Utilities\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Futilities\u002Fanimation\",\"text\":\"Animation\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fbrowserrender\",\"text\":\"BrowserRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fintersectionrender\",\"text\":\"IntersectionRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fmediaqueryrender\",\"text\":\"MediaQueryRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fportal\",\"text\":\"Portal\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fserverrender\",\"text\":\"ServerRender\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Futilities\u002Ftransition\",\"text\":\"Transition\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fviewportrender\",\"text\":\"ViewportRender\"}]},{\"text\":\"Actions\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fauto_focus\",\"text\":\"auto_focus\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_inside\",\"text\":\"click_inside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_outside\",\"text\":\"click_outside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fintersection_observer\",\"text\":\"intersection_observer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fkeybind\",\"text\":\"keybind\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Flost_focus\",\"text\":\"lost_focus\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fmutation_observer\",\"text\":\"mutation_observer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Foverflow_clipping\",\"text\":\"overflow_clipping\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Ftrap_focus\",\"text\":\"trap_focus\"}]},{\"text\":\"Stores\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fstores\u002Fdarkmode\",\"text\":\"darkmode\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fstores\u002Fhtmlmode\",\"text\":\"htmlmode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fmediaquery\",\"text\":\"mediaquery\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fprefersscheme\",\"text\":\"prefersscheme\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fscrolllock\",\"text\":\"scrolllock\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fviewport\",\"text\":\"viewport\"}]}]}"}</script>
+	<script type="application/json" data-type="svelte-data" data-url="/api/v4/content/docs/framework/custom-builds.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"metadata\":{\"authors\":{},\"created_at\":1645838554000,\"identifier\":\"\u002Fdocs\u002Fframework\u002Fcustom-builds\",\"modified_at\":1645838554000,\"sections\":[{\"identifier\":\"custom-builds\",\"level\":1,\"text\":\"Custom Builds\"},{\"identifier\":\"downloading\",\"level\":2,\"text\":\"Downloading\"},{\"identifier\":\"installation\",\"level\":2,\"text\":\"Installation\"},{\"identifier\":\"building\",\"level\":2,\"text\":\"Building\"},{\"identifier\":\"minifying\",\"level\":2,\"text\":\"Minifying\"},{\"identifier\":\"filters\",\"level\":2,\"text\":\"Filters\"},{\"identifier\":\"components\",\"level\":3,\"text\":\"Components\"},{\"identifier\":\"globals\",\"level\":3,\"text\":\"Globals\"}],\"snippets\":[{\"identifier\":\"yy299a\",\"script\":\"npm ci\",\"syntax\":\"bash\",\"title\":\"yy299a\"},{\"identifier\":\"1pwep2h\",\"script\":\"npm run build:framework\",\"syntax\":\"bash\",\"title\":\"1pwep2h\"},{\"identifier\":\"8kxmku\",\"script\":\"package\u002F\\n│\\n└───kahi-ui.framework.css           \u002F\u002F Main CSS rules and stylings\\n└───kahi-ui.framework.css.map       \u002F\u002F Source map for the above file\\n└───kahi-ui.theme.default.css       \u002F\u002F Themeing variables that define the look and feel\\n└───kahi-ui.theme.default.css.map   \u002F\u002F Source map for the above file\",\"syntax\":\"bash\",\"title\":\"8kxmku\"},{\"identifier\":\"1p5xcfd\",\"script\":\"npm run build:minify\",\"syntax\":\"bash\",\"title\":\"1p5xcfd\"},{\"identifier\":\"1sx3vee\",\"script\":\"package\u002F\\n│\\n└───kahi-ui.framework.min.css       \u002F\u002F Main CSS rules and stylings\\n└───kahi-ui.theme.default.min.css   \u002F\u002F Themeing variables that define the look and feel\",\"syntax\":\"bash\",\"title\":\"1sx3vee\"},{\"identifier\":\"h9n6e\",\"script\":\"npm run build:framework -- --disable-globals-intrinsics-responsitivity --disable-components-grid\",\"syntax\":\"bash\",\"title\":\"h9n6e\"}],\"title\":\"Custom Builds\"},\"references\":{\"custom_properties\":{},\"events\":{},\"properties\":{},\"slots\":{}},\"render\":\"\u003Cblockquote data-palette=\\\"alert\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003EWARNING\u003C\u002Fstrong\u003E: When using manual builds of Kahi UI, you'll need to rebuild the distributables every time you upgrade Kahi UI.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EIf you're building a Web Application that's particularly sensitive to latency, page sizes, etc. It's recommended to create custom builds of the Framework's CSS distributables.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"downloading\\\"\u003EDownloading\u003C\u002Fh2\u003E\\n\u003Cp\u003EFirst, you'll need to head over to \u003Ca href=\\\"https:\u002F\u002Fgithub.com\u002Fnovacbn\u002Fkahi-ui\u002Freleases\\\" target=\\\"_blank\\\" rel=\\\"noopener noreferrer\\\"\u003EReleases\u003C\u002Fa\u003E, download the source code \u003Ccode\u003E.zip\u003C\u002Fcode\u003E \u002F \u003Ccode\u003E.tar.gz\u003C\u002Fcode\u003E archive that matches the version of Kahi UI you're developing against, and decompress the archive onto your filesystem.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"installation\\\"\u003EInstallation\u003C\u002Fh2\u003E\\n\u003Cp\u003EOnce you've got everything downloaded and decompressed, open a terminal in the source code directory and install Kahi UI's dependencies.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-bash\\\" data-identifier=\\\"yy299a\\\" data-mode=\\\"default\\\" data-syntax=\\\"bash\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token function\\\"\u003Enpm\u003C\u002Fspan\u003E ci\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"building\\\"\u003EBuilding\u003C\u002Fh2\u003E\\n\u003Cp\u003ENow you can start building the CSS distributables via a NPM script.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-bash\\\" data-identifier=\\\"1pwep2h\\\" data-mode=\\\"default\\\" data-syntax=\\\"bash\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token function\\\"\u003Enpm\u003C\u002Fspan\u003E run build:framework\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EWhich should output in the \u003Ccode\u003Epackage\u002F\u003C\u002Fcode\u003E directory like so.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-bash\\\" data-identifier=\\\"8kxmku\\\" data-mode=\\\"default\\\" data-syntax=\\\"bash\\\"\u003E\u003Ccode\u003Epackage\u002F\\n│\\n└───kahi-ui.framework.css           \u002F\u002F Main CSS rules and stylings\\n└───kahi-ui.framework.css.map       \u002F\u002F Source map \u003Cspan class=\\\"token keyword\\\"\u003Efor\u003C\u002Fspan\u003E the above \u003Cspan class=\\\"token function\\\"\u003Efile\u003C\u002Fspan\u003E\\n└───kahi-ui.theme.default.css       \u002F\u002F Themeing variables that define the \u003Cspan class=\\\"token function\\\"\u003Elook\u003C\u002Fspan\u003E and feel\\n└───kahi-ui.theme.default.css.map   \u002F\u002F Source map \u003Cspan class=\\\"token keyword\\\"\u003Efor\u003C\u002Fspan\u003E the above \u003Cspan class=\\\"token function\\\"\u003Efile\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EThen just copy the files you require into your Web Application's codebase and import them.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"minifying\\\"\u003EMinifying\u003C\u002Fh2\u003E\\n\u003Cp\u003EYou can also build the minified versions of the CSS distributables with another NPM script.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-bash\\\" data-identifier=\\\"1p5xcfd\\\" data-mode=\\\"default\\\" data-syntax=\\\"bash\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token function\\\"\u003Enpm\u003C\u002Fspan\u003E run build:minify\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Cp\u003EWhich would output to \u003Ccode\u003Epackage\u002F\u003C\u002Fcode\u003E without source maps like so.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-bash\\\" data-identifier=\\\"1sx3vee\\\" data-mode=\\\"default\\\" data-syntax=\\\"bash\\\"\u003E\u003Ccode\u003Epackage\u002F\\n│\\n└───kahi-ui.framework.min.css       \u002F\u002F Main CSS rules and stylings\\n└───kahi-ui.theme.default.min.css   \u002F\u002F Themeing variables that define the \u003Cspan class=\\\"token function\\\"\u003Elook\u003C\u002Fspan\u003E and feel\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"filters\\\"\u003EFilters\u003C\u002Fh2\u003E\\n\u003Cp\u003EEach individual feature of Kahi UI that requires CSS can turned off, removing it from builds. And it's as simple as adding command line parameters. Just run either of the NPM scripts with filter parameters following this format: \u003Ccode\u003E--disable-{SCOPE}-{FEATURE}\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003Cp\u003EFor instance, if wanting to disable \u003Ca href=\\\"..\u002Flayouts\u002Fgrid\\\" svelte:prefetch=\\\"true\\\"\u003EGrid\u003C\u002Fa\u003E and the responsitivity of \u003Ca href=\\\"..\u002Fglobals\u002Fspacings\\\" svelte:prefetch=\\\"true\\\"\u003ESpacings\u003C\u002Fa\u003E (e.g. \u003Ccode\u003Emargin={[&quot;mobile:medium&quot;]}\u003C\u002Fcode\u003E), try the following.\u003C\u002Fp\u003E\\n\u003Cblockquote data-palette=\\\"informative\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003EUSAGE\u003C\u002Fstrong\u003E: The double dashes (\u003Ccode\u003E--\u003C\u002Fcode\u003E) after \u003Ccode\u003Ebuild:framework\u003C\u002Fcode\u003E \u002F \u003Ccode\u003Ebuild:minify\u003C\u002Fcode\u003E is required so NPM passes our command line parameters to the script.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cpre class=\\\"highlight language-bash\\\" data-identifier=\\\"h9n6e\\\" data-mode=\\\"default\\\" data-syntax=\\\"bash\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token function\\\"\u003Enpm\u003C\u002Fspan\u003E run build:framework -- --disable-globals-intrinsics-responsitivity --disable-components-grid\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch3 id=\\\"components\\\"\u003EComponents\u003C\u002Fh3\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EDisclosure\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-disclosure-accordion\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisclosure\u002Faccordion\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EAccordion\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-disclosure-carousel\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisclosure\u002Fcarousel\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ECarousel\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-disclosure-tab\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisclosure\u002Ftab\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ETab\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EDisplay\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-display-badge\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisplay\u002Fbadge\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EBadge\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-display-kbd\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisplay\u002Fkbd\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EKbd\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-display-list\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisplay\u002Flist\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EList\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-display-table\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fdisplay\u002Ftable\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ETable\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EEmbedded\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-embedded-figure\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fembedded\u002Ffigure\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EFigure\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EFeedback\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-feedback-dot\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ffeedback\u002Fdot\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EDot\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-feedback-ellipsis\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ffeedback\u002Fellipsis\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EEllipsis\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-feedback-progress\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ffeedback\u002Fprogress\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EProgress\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EInteractables\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-button\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Fbutton\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EButton\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-check\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Fcheck\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ECheck\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-file-drop-input\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Ffiledropinput\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EFileDropInput\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-form\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Fform\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EForm\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-number-input\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Fnumberinput\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ENumberInput\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-radio\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Fradio\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ERadio\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-switch\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Fswitch\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ESwitch\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-interactables-text-input\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Finteractables\u002Ftextinput\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ETextInput\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003ELayouts\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-center\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fcenter\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ECenter\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-container\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fcontainer\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EContainer\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-divider\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fdivider\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EDivider\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-grid\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fgrid\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EGrid\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-group\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fgroup\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EGroup\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-mosaic\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fmosaic\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EMosaic\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-position\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fposition\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EPosition\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-scrollable\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fscrollable\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EScrollable\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-spacer\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fspacer\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ESpacer\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-layouts-stack\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Flayouts\u002Fstack\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EStack\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003ENavigation\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-navigation-anchor\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fnavigation\u002Fanchor\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EAnchor\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-navigation-aside\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fnavigation\u002Faside\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EAside\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-navigation-breadcrumb\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fnavigation\u002Fbreadcrumb\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EBreadcrumb\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-navigation-menu\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fnavigation\u002Fmenu\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EMenu\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-navigation-omni\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fnavigation\u002Fomni\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EOmni\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EOverlays\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-overlays-backdrop\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Foverlays\u002Fbackdrop\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EBackdrop\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-overlays-clickable\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Foverlays\u002Fclickable\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EClickable\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-overlays-overlay\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Foverlays\u002Foverlay\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EOverlay\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-overlays-popover\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Foverlays\u002Fpopover\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EPopover\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003ESurfaces\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-surfaces-box\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fsurfaces\u002Fbox\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EBox\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-surfaces-card\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fsurfaces\u002Fcard\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ECard\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-surfaces-hero\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fsurfaces\u002Fhero\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EHero\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-surfaces-tile\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Fsurfaces\u002Ftile\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ETile\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003ETypography\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-typography-blockquote\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ftypography\u002Fblockquote\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EBlockquote\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-typography-code\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ftypography\u002Fcode\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ECode\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-typography-heading\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ftypography\u002Fheading\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EHeading\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-typography-text\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Ftypography\u002Ftext\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EText\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003Cli\u003E\\n\u003Cp\u003EUtilities\u003C\u002Fp\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-utilities-animation\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Futilities\u002Fanimation\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EAnimation\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-utilities-portal\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Futilities\u002Fportal\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003EPortal\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-components-utilities-transition\u003C\u002Fcode\u003E — \u003Ca href=\\\"..\u002Futilities\u002Ftransition\\\" svelte:prefetch=\\\"true\\\"\u003E\u003Ccode\u003ETransition\u003C\u002Fcode\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\u003Ch3 id=\\\"globals\\\"\u003EGlobals\u003C\u002Fh3\u003E\\n\u003Cblockquote data-palette=\\\"alert\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003EWARNING\u003C\u002Fstrong\u003E: Most non-Component specific properties are implemented as global CSS attributes to reduce redundancy. If you turn off the feature, it turns off for \u003Cstrong\u003EALL\u003C\u002Fstrong\u003E Components.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cul\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-alignments\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* alignment=&quot;{ALIGNMENT}&quot; alignment_x=&quot;{ALIGNMENT}&quot; alignment_y=&quot;{ALIGNMENT}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-alignments-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* alignment={[&quot;{VIEWPORT}:{ALIGNMENT}]} alignment_x={[&quot;{VIEWPORT}:{ALIGNMENT}]} alignment_y={[&quot;{VIEWPORT}:{ALIGNMENT}]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-elevations\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* elevation=&quot;{ELEVATION}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-elevations-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* elevation={[&quot;{VIEWPORT}:{ELEVATION}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-fit\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* fit=&quot;{FIT}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-fit-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* fit={[&quot;{VIEWPORT}:{FIT}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-grid\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* points=&quot;{POINTS}&quot; span=&quot;{SPAN}&quot; span_x=&quot;{SPAN}&quot; span_y=&quot;{SPAN}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-grid-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* points={[&quot;{VIEWPORT}:{POINTS}&quot;]} span={[&quot;{VIEWPORT}:{SPAN}&quot;]} span_x={[&quot;{VIEWPORT}:{SPAN}&quot;]} span_y={[&quot;{VIEWPORT}:{SPAN}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-intrinsics\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* height max_height min_height margin padding size max_size min_size width max_width min_width&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-intrinsics-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* height max_height min_height margin padding size max_size min_size width max_width min_width&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-orientations\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* orientation=&quot;{ORIENTATION}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-orientations-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* orientation={[&quot;{VIEWPORT}:{ORIENTATION}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-palettes\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* palette=&quot;{PALETTE}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-radius\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* radius=&quot;{RADIUS}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-radius-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* radius={[&quot;{VIEWPORT}:{RADIUS}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-sizings\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* sizing=&quot;{SIZING}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-sizings-responsitivity\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* sizing={[&quot;{VIEWPORT}:{SIZING}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-spacings\u003C\u002Fcode\u003E — \u003Ccode\u003E&lt;* spacing=&quot;{SPACING}&quot; spacing_x=&quot;{SPACING}&quot; spacing_y=&quot;{SPACING}&quot;&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003Cli\u003E\u003Ccode\u003E--disable-globals-spacings-responsitivity\u003C\u002Fcode\u003E— \u003Ccode\u003E&lt;* spacing={[&quot;{VIEWPORT}:{SPACING}&quot;]} spacing_x={[&quot;{VIEWPORT}:{SPACING}&quot;]} spacing_y={[&quot;{VIEWPORT}:{SPACING}&quot;]}&gt;\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\\n\u003C\u002Ful\u003E\\n\"}}"}</script>
+    </body>
+</html>

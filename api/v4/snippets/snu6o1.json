@@ -1,0 +1,1 @@
+{"data":{"identifier":"snu6o1","script":"<script>\n    import {Animation, Dot} from \"@kahi-ui/framework\";\n</script>\n\n<Animation animation=\"pulse\">\n    <Dot />\n</Animation>","syntax":"svelte","title":"snu6o1"}}

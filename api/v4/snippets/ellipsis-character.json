@@ -1,1 +1,0 @@
-{"data":{"identifier":"ellipsis-character","script":"<script>\n    import {\n        Ellipsis,\n        Heading,\n    } from \"@kahi-ui/framework\";\n</script>\n\n<Heading>\n    Loading\n    <Ellipsis>?</Ellipsis>\n</Heading>","syntax":"svelte","title":"Ellipsis Character"}}

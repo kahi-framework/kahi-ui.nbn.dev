@@ -1,0 +1,1 @@
+{"data":{"identifier":"f5ngoj","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>\n\n<Pagination\n    href={\"/path/to/list?page=${page}\"}\n    pages={10}\n    value={5}\n>\n    This is an ANCHOR Button!\n</Pagination>","syntax":"svelte","title":"f5ngoj"}}

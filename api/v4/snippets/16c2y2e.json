@@ -1,0 +1,1 @@
+{"data":{"identifier":"16c2y2e","script":"@include variables.define(\n    (\n        \"spacings\": (\n            \"<TIER>\": generators.modular(\n                $base: <BASE-MULTIPLIER>,\n                $ratio: <RATIO>\n            ),\n        ),\n    )\n);","syntax":"scss","title":"16c2y2e"}}

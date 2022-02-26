@@ -1,0 +1,1 @@
+{"data":{"identifier":"article-divider","script":"<script>\n    import {Article} from \"@kahi-ui/framework\";\n</script>\n\n<Article>\n    <hr />\n</Article>","syntax":"svelte","title":"Article Divider"}}

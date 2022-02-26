@@ -1,0 +1,1 @@
+{"data":{"identifier":"grslvl","script":"<script>\n    import {Figure} from \"@kahi-ui/framework\";\n</script>\n\n<Figure width=\"icon-small\">\n    <img src=\"...\" />\n</Figure>","syntax":"svelte","title":"grslvl"}}

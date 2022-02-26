@@ -1,0 +1,1 @@
+{"data":{"identifier":"onzjeq","script":"@include constants.define(\n    (\n        \"spacings\": (\n            \"<CONSTANT>\": <SPACING>,\n        ),\n    )\n);","syntax":"scss","title":"onzjeq"}}

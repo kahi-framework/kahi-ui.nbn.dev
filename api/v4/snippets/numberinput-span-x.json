@@ -1,0 +1,1 @@
+{"data":{"identifier":"numberinput-span-x","script":"<script>\n    import {NumberInput} from \"@kahi-ui/framework\";\n</script>\n\n<NumberInput span_x=\"2\" />","syntax":"svelte","title":"NumberInput Span X"}}

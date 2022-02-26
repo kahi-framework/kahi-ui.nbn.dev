@@ -1,0 +1,1 @@
+{"data":{"identifier":"jcecyq","script":"<script>\n    import {Box, Stack} from \"@kahi-ui/framework\";\n</script>\n\n<Stack.Container sizing=\"tiny\" spacing=\"medium\">\n    <Box palette=\"alert\" />\n    <Box palette=\"affirmative\" />\n    <Box palette=\"negative\" />\n</Stack.Container>","syntax":"svelte","title":"jcecyq"}}

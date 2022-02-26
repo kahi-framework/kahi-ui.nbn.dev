@@ -1,1 +1,1 @@
-{"data":{"identifier":"yearstepper-disabled","script":"<script>\n    import {YearStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2024-01-01[u-ca=gregory]\";\n</script>\n\n<YearStepper palette=\"accent\" {value} disabled />","syntax":"svelte","title":"YearStepper Disabled"}}
+{"data":{"identifier":"yearstepper-disabled","script":"<script>\n    import {YearStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2024-01-01\";\n</script>\n\n<YearStepper palette=\"accent\" {value} disabled />","syntax":"svelte","title":"YearStepper Disabled"}}

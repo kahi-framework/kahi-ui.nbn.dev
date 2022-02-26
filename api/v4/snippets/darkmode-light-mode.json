@@ -1,0 +1,1 @@
+{"data":{"identifier":"darkmode-light-mode","script":"<script>\n    import {Text, lightmode} from \"@kahi-ui/framework\";\n\n    const lightmode_store = lightmode();\n</script>\n\n<Text>\n    {$lightmode_store\n        ? \"Lightmode is enabled!\"\n        : \"Lightmode is disabled!\"}\n</Text>","syntax":"svelte","title":"darkmode Light Mode"}}

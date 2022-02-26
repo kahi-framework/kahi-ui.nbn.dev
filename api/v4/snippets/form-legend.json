@@ -1,0 +1,1 @@
+{"data":{"identifier":"form-legend","script":"<script>\n    import {Form} from \"@kahi-ui/framework\";\n</script>\n\n<Form.Legend>VEGETABLES</Form.Legend>","syntax":"svelte","title":"Form Legend"}}

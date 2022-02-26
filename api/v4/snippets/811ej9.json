@@ -1,0 +1,1 @@
+{"data":{"identifier":"811ej9","script":"<script>\n    import {Figure} from \"@kahi-ui/framework\";\n</script>\n\n<Figure width=\"medium\">\n    <img src=\"...\" />\n</Figure>","syntax":"svelte","title":"811ej9"}}

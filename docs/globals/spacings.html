@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+        <link rel="icon" href="/favicon.ico" />
+
+        <meta http-equiv="content-security-policy" content=""><title>Spacings — Kahi UI</title><meta property="og:description" content="Straight-forward Svelte UI for the Web" data-svelte="svelte-189b3we"><meta property="og:image" content="https://kahi-ui.nbn.dev/assets/images/logo-social.png" data-svelte="svelte-189b3we"><meta property="og:site_name" content="Kahi UI" data-svelte="svelte-189b3we"><meta property="og:title" content="Spacings — Kahi UI" data-svelte="svelte-189b3we"><meta name="twitter:card" content="summary_large_image" data-svelte="svelte-189b3we">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-b4c89636.css">
+	<link rel="stylesheet" href="/_app/assets/PageHeader-bd0525c2.css">
+	<link rel="stylesheet" href="/_app/assets/AppNavigation-94c4f2fc.css">
+	<link rel="stylesheet" href="/_app/assets/AppAnchor-3b0f44e3.css">
+	<link rel="stylesheet" href="/_app/assets/pages/_...identifier_.svelte-9bd3e7aa.css">
+	<link rel="stylesheet" href="/_app/assets/REPLEmbed-74f15d44.css">
+	<link rel="stylesheet" href="/_app/assets/REPLSplit-2ad5a641.css">
+	<link rel="modulepreload" href="/_app/start-c7c53988.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-b10044b0.js">
+	<link rel="modulepreload" href="/_app/chunks/preload-helper-ec9aa979.js">
+	<link rel="modulepreload" href="/_app/chunks/paths-4b3c6e7e.js">
+	<link rel="modulepreload" href="/_app/chunks/singletons-a6a7384f.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-2da1eac9.js">
+	<link rel="modulepreload" href="/_app/chunks/PageHeader-52834eae.js">
+	<link rel="modulepreload" href="/_app/chunks/preferences-f3c864d1.js">
+	<link rel="modulepreload" href="/_app/chunks/stores-e763cd27.js">
+	<link rel="modulepreload" href="/_app/chunks/AppNavigation-c011a202.js">
+	<link rel="modulepreload" href="/_app/chunks/AppAnchor-eef73d8c.js">
+	<link rel="modulepreload" href="/_app/pages/_...identifier_.svelte-39b03b72.js">
+	<link rel="modulepreload" href="/_app/chunks/REPLEmbed-6ffd01ea.js">
+	<link rel="modulepreload" href="/_app/chunks/REPLSplit-fed70b2a.js">
+
+        <script type="application/javascript">
+            /**
+             * HACK: This is just here due to time to execute Javascript causing
+             * a flash of color on page load
+             */
+
+            if (typeof localStorage !== "undefined") {
+                const theme = localStorage.getItem("kahi-docs.preferences.theme");
+                if (theme) document.documentElement.setAttribute("data-mode", theme);
+            }
+        </script>
+    </head>
+
+    <body>
+        
+
+
+
+
+
+<a href="/api/v4/search.json" hidden></a>
+
+<a href="/api/v4/snippets/spacings-margin.json" hidden></a><a href="/api/v4/snippets/spacings-padding.json" hidden></a><a href="/api/v4/snippets/spacings-direction.json" hidden></a>
+
+<div class="aside-layout"><main class="aside-container"><main data-width="100" data-padding-y="large" class="container content-container"><h1 data-margin-bottom="small" class="heading ">Spacings</h1>
+
+    <div data-margin-bottom="medium" class="stack " data-alignment-y="center" data-orientation="horizontal" data-spacing="small"><div><div class="stack " data-alignment-y="center" data-orientation="horizontal" data-spacing="small"></div>
+
+                <small class="text ">2/26/2022, 1:22:34 AM</small></div>
+
+        <div class="spacer "></div>
+
+        <small class="text "><a class="anchor svelte-1wifs10" href="https://github.com/kahi-framework/kahi-ui.nbn.dev/tree/main/content/docs/globals/spacings.md" target="_blank" rel="noopener noreferrer" data-palette="informative">View Source</a></small></div>
+
+        <div class="tab " data-alignment-x="stretch"><input role="presentation" type="radio" class="tab--state" id="content-switcher-guide" name="content-switcher" checked value="content-switcher-guide">
+
+<label role="button" class="tab--item " data-palette="accent" for="content-switcher-guide" tabindex="0">Guide</label>
+
+                    <section data-padding-top="medium" class="tab--section "><div class="article content-article"><!-- HTML_TAG_START --><p>All Components have access to the global margin and padding HTML data attributes. All of which, supports <a href="../framework/responsitivity" svelte:prefetch="true">Responsitivity</a>.</p>
+<h2 id="margin">Margin</h2>
+<blockquote data-palette="accent">
+<p><strong>NOTE</strong>: Introduced feature in <code>v0.2.0</code>.</p>
+</blockquote>
+<blockquote data-palette="accent">
+<p><strong>NOTE</strong>: By passing an array, you can set <a href="../framework/responsitivity" svelte:prefetch="true">responsive values</a>. e.g. <code>margin={[&quot;small&quot;, &quot;tablet:large&quot;]}</code></p>
+</blockquote>
+<p>You can set margins for your Components via the <code>margin</code> property.</p>
+<pre class="highlight language-svelte" data-identifier="spacings-margin" data-mode="repl" data-syntax="svelte"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">import</span> <span class="token punctuation">{</span>
+        Box<span class="token punctuation">,</span>
+        Stack<span class="token punctuation">,</span>
+        Text<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@kahi-ui/framework"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Stack.Container</span>
+    <span class="token attr-name">orientation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>horizontal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">alignment_y</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span>
+    <span class="token attr-name">spacing</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>medium<span class="token punctuation">"</span></span>
+    <span class="token attr-name">variation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrap<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>NONE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nano<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>NANO<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tiny<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>TINY<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            SMALL
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>medium<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            MEDIUM
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>large<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            LARGE
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>huge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>HUGE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span> <span class="token attr-name">margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>massive<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            MASSIVE
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Stack.Container</span><span class="token punctuation">></span></span></code></pre><h2 id="padding">Padding</h2>
+<blockquote data-palette="accent">
+<p><strong>NOTE</strong>: Introduced feature in <code>v0.2.0</code>.</p>
+</blockquote>
+<blockquote data-palette="accent">
+<p><strong>NOTE</strong>: By passing an array, you can set <a href="../framework/responsitivity" svelte:prefetch="true">responsive values</a>. e.g. <code>padding={[&quot;small&quot;, &quot;tablet:large&quot;]}</code></p>
+</blockquote>
+<p>You can set paddings for your Components via the <code>padding</code> property.</p>
+<pre class="highlight language-svelte" data-identifier="spacings-padding" data-mode="repl" data-syntax="svelte"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">import</span> <span class="token punctuation">{</span>
+        Box<span class="token punctuation">,</span>
+        Stack<span class="token punctuation">,</span>
+        Text<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@kahi-ui/framework"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Stack.Container</span>
+    <span class="token attr-name">orientation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>horizontal<span class="token punctuation">"</span></span>
+    <span class="token attr-name">alignment_y</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>top<span class="token punctuation">"</span></span>
+    <span class="token attr-name">spacing</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>medium<span class="token punctuation">"</span></span>
+    <span class="token attr-name">variation</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrap<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>none<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>NONE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nano<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>NANO<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tiny<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>TINY<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>SMALL<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>medium<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>MEDIUM<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>large<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>LARGE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>huge<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>HUGE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>informative<span class="token punctuation">"</span></span> <span class="token attr-name">padding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>massive<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>neutral<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>MASSIVE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Stack.Container</span><span class="token punctuation">></span></span></code></pre><h2 id="directional">Directional</h2>
+<p>All <code>Spacings</code> properties have directional support via the <code>*_x</code>, <code>*_y</code>, <code>*_left</code>, <code>*_top</code>, <code>*_right</code>, and <code>*_bottom</code> suffixes.</p>
+<pre class="highlight language-svelte" data-identifier="spacings-direction" data-mode="repl" data-syntax="svelte"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">import</span> <span class="token punctuation">{</span>Box<span class="token punctuation">,</span> Code<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@kahi-ui/framework"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>affirmative<span class="token punctuation">"</span></span> <span class="token attr-name">padding_y</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>small<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Code</span><span class="token punctuation">></span></span>padding_y="small"<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Code</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Box</span> <span class="token attr-name">palette</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>negative<span class="token punctuation">"</span></span> <span class="token attr-name">margin_top</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>large<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Code</span><span class="token punctuation">></span></span>margin_top="large"<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Code</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Box</span><span class="token punctuation">></span></span></code></pre><!-- HTML_TAG_END --></div></section>
+
+                <input role="presentation" type="radio" class="tab--state" id="content-switcher-api-reference" name="content-switcher"  value="content-switcher-api-reference">
+
+<label role="button" class="tab--item " data-palette="accent" for="content-switcher-api-reference" tabindex="0">API Reference</label>
+
+                    <section data-padding-top="medium" class="tab--section ">
+
+    <h2 id="api-reference-Properties" data-margin-y="medium" class="heading ">Properties</h2>
+
+    <h3 id="api-reference-Properties-*" data-margin-y="medium" class="heading "><code class="code ">*
+            </code>
+        </h3>
+
+        <div class="scrollable "><table data-min-width="mobile:content-max tablet:content-max" class="table "><thead class="table--header "><tr class="table--row "><th class="table--heading ">Name</th>
+                        <th class="table--heading ">Description</th>
+                        <th class="table--heading ">Types</th>
+                    </tr>
+                </thead>
+
+                <tbody class="table--section "><tr class="table--row "><td class="table--column "><code class="code ">margin</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing around the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">margin_x</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing around the horizontal axis of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">margin_y</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing around the vertical axis of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">margin_left</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing to the left of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">margin_top</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing to the top of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">margin_right</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing to the right of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">margin_bottom</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the visual spacing to the bottom of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">auto
+                                            
+                                        </code><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding_x</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing along the horizontal axis of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding_y</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing along the vertical axis of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding_left</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing on the left side of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding_top</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing on the top side of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding_right</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing on the right side of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr><tr class="table--row "><td class="table--column "><code class="code ">padding_bottom</code>
+                            </td>
+
+                            <td class="table--column "><!-- HTML_TAG_START -->Alters the inner visual spacing on the bottom side of the Component.<!-- HTML_TAG_END -->
+                            </td>
+
+                            <td class="table--column "><div data-max-width="prose" class="stack " data-alignment-x="right" data-orientation="horizontal" data-spacing="small" data-variation="wrap"><code class="code ">none
+                                            
+                                        </code><code class="code ">nano
+                                            
+                                        </code><code class="code ">tiny
+                                            
+                                        </code><code class="code ">small
+                                            
+                                        </code><code class="code ">medium
+                                            
+                                        </code><code class="code ">large
+                                            
+                                        </code><code class="code ">huge
+                                            
+                                        </code><code class="code ">massive
+                                            
+                                        </code><code class="code ">{VIEWPORT}:{SPACING}
+                                            
+                                        </code>
+                                </div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </div>
+    
+    
+
+    </section></div></main></main>
+
+    <div data-hidden="desktop widescreen" class="position " data-alignment-x="left" data-variation="action"><label role="button" class="button " for="aside-navigation" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-menu "><line x1="4" y1="12" x2="20" y2="12"></line>
+  <line x1="4" y1="6" x2="20" y2="6"></line>
+  <line x1="4" y1="18" x2="20" y2="18"></line>
+  </svg></label></div>
+
+    
+
+<input role="presentation" class="overlay--state" id="aside-navigation" type="checkbox">
+
+<div data-contents="desktop widescreen" class="overlay aside-navigation"><label data-hidden="desktop widescreen" role="button" class="backdrop overlay--backdrop " for="aside-navigation"></label>
+
+        <section data-contents="desktop widescreen" class="overlay--section transition " data-animation="slide" data-alignment-x="left" data-behavior="explicit" data-direction="left">
+    <nav class="aside " data-palette="off" data-variation="sticky">
+                <section data-margin-bottom="none" class="aside--section "><nav class="menu "><p role="separator" class="menu--heading " data-variation="divider">Resources
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/resources/official" sveltekit:prefetch>Official
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/resources/community" sveltekit:prefetch>Community
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/resources/faq" sveltekit:prefetch>F.A.Q.
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Migrations
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/migrations/0.5.x-to-0.6.x" sveltekit:prefetch>0.5.x to 0.6.x
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/migrations/0.4.x-to-0.5.x" sveltekit:prefetch>0.4.x to 0.5.x
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Guides
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/guides/getting-started" sveltekit:prefetch>Getting Started
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Framework
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/framework/browser-support" sveltekit:prefetch>Browser Support
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/framework/responsitivity" sveltekit:prefetch>Responsitivity
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/framework/custom-builds" sveltekit:prefetch>Custom Builds
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Themeing
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/themeing/manual-mode" sveltekit:prefetch>Manual Mode
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/custom-properties" sveltekit:prefetch>Custom Properties
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/custom-themes" sveltekit:prefetch>Custom Themes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/elevations" sveltekit:prefetch>Elevations
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/fonts" sveltekit:prefetch>Fonts
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/palettes" sveltekit:prefetch>Palettes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/sizes" sveltekit:prefetch>Sizes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/themeing/spacings" sveltekit:prefetch>Spacings
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Globals
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/globals/actions" sveltekit:prefetch>Actions
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/elements" sveltekit:prefetch>Elements
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/events" sveltekit:prefetch>Events
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/contents" sveltekit:prefetch>Contents
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/html5" sveltekit:prefetch>HTML5
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/hidden" sveltekit:prefetch>Hidden
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/sizes" sveltekit:prefetch>Sizes
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" aria-current="page" href="/docs/globals/spacings" sveltekit:prefetch>Spacings
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/globals/sveltekit" sveltekit:prefetch>SvelteKit
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Typography
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/typography/blockquote" sveltekit:prefetch>Blockquote
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/typography/code" sveltekit:prefetch>Code
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/typography/heading" sveltekit:prefetch>Heading
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/typography/text" sveltekit:prefetch>Text
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Embedded
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/embedded/figure" sveltekit:prefetch>Figure
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Display
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/display/badge" sveltekit:prefetch>Badge
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/datestamp" sveltekit:prefetch>DateStamp
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/datetimestamp" sveltekit:prefetch>DateTimeStamp
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/kbd" sveltekit:prefetch>Kbd
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/list" sveltekit:prefetch>List
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/table" sveltekit:prefetch>Table
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/display/timestamp" sveltekit:prefetch>TimeStamp
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Disclosure
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/disclosure/accordion" sveltekit:prefetch>Accordion
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/disclosure/carousel" sveltekit:prefetch>Carousel
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/disclosure/tab" sveltekit:prefetch>Tab
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Feedback
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/feedback/dot" sveltekit:prefetch>Dot
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/feedback/ellipsis" sveltekit:prefetch>Ellipsis
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/feedback/progress" sveltekit:prefetch>Progress
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Interactables
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/interactables/button" sveltekit:prefetch>Button
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/check" sveltekit:prefetch>Check
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/filedropinput" sveltekit:prefetch>FileDropInput
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/form" sveltekit:prefetch>Form
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/hiddeninput" sveltekit:prefetch>HiddenInput
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/numberinput" sveltekit:prefetch>NumberInput
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/radio" sveltekit:prefetch>Radio
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/switch" sveltekit:prefetch>Switch
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/interactables/textinput" sveltekit:prefetch>TextInput
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Widgets
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/widgets/datatable" sveltekit:prefetch>DataTable
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/daypicker" sveltekit:prefetch>DayPicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/daystepper" sveltekit:prefetch>DayStepper
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/pagination" sveltekit:prefetch>Pagination
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/monthpicker" sveltekit:prefetch>MonthPicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/monthstepper" sveltekit:prefetch>MonthStepper
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/timepicker" sveltekit:prefetch>TimePicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/yearpicker" sveltekit:prefetch>YearPicker
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/widgets/yearstepper" sveltekit:prefetch>YearStepper
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Layouts
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/layouts/article" sveltekit:prefetch>Article
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/center" sveltekit:prefetch>Center
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/container" sveltekit:prefetch>Container
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/divider" sveltekit:prefetch>Divider
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/grid" sveltekit:prefetch>Grid
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/group" sveltekit:prefetch>Group
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/mosaic" sveltekit:prefetch>Mosaic
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/position" sveltekit:prefetch>Position
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/scrollable" sveltekit:prefetch>Scrollable
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/spacer" sveltekit:prefetch>Spacer
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/layouts/stack" sveltekit:prefetch>Stack
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Surfaces
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/surfaces/box" sveltekit:prefetch>Box
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/surfaces/card" sveltekit:prefetch>Card
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/surfaces/hero" sveltekit:prefetch>Hero
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/surfaces/tile" sveltekit:prefetch>Tile
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Navigation
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/navigation/anchor" sveltekit:prefetch>Anchor
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/aside" sveltekit:prefetch>Aside
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/breadcrumb" sveltekit:prefetch>Breadcrumb
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/menu" sveltekit:prefetch>Menu
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/navigation/omni" sveltekit:prefetch>Omni
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Overlays
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/overlays/backdrop" sveltekit:prefetch>Backdrop
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/overlays/clickable" sveltekit:prefetch>Clickable
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/overlays/overlay" sveltekit:prefetch>Overlay
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/overlays/popover" sveltekit:prefetch>Popover
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Utilities
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/utilities/animation" sveltekit:prefetch>Animation
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="affirmative" data-radius="nano">NEW
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/browserrender" sveltekit:prefetch>BrowserRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/intersectionrender" sveltekit:prefetch>IntersectionRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/mediaqueryrender" sveltekit:prefetch>MediaQueryRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/portal" sveltekit:prefetch>Portal
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/serverrender" sveltekit:prefetch>ServerRender
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/transition" sveltekit:prefetch>Transition
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/utilities/viewportrender" sveltekit:prefetch>ViewportRender
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Actions
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/actions/auto_focus" sveltekit:prefetch>auto_focus
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/click_inside" sveltekit:prefetch>click_inside
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/click_outside" sveltekit:prefetch>click_outside
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/intersection_observer" sveltekit:prefetch>intersection_observer
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/keybind" sveltekit:prefetch>keybind
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/lost_focus" sveltekit:prefetch>lost_focus
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/mutation_observer" sveltekit:prefetch>mutation_observer
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/overflow_clipping" sveltekit:prefetch>overflow_clipping
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/actions/trap_focus" sveltekit:prefetch>trap_focus
+
+                                        
+                                    </a>
+                            </section><p role="separator" class="menu--heading " data-variation="divider">Stores
+                            </p>
+
+                            <section class="menu--section "><a class="menu--item svelte-1wifs10" href="/docs/stores/darkmode" sveltekit:prefetch>darkmode
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/htmlmode" sveltekit:prefetch>htmlmode
+
+                                        <span class="spacer "></span>
+                                            <span class="badge " data-palette="accent" data-radius="nano">UPDATED
+                                            </span>
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/mediaquery" sveltekit:prefetch>mediaquery
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/prefersscheme" sveltekit:prefetch>prefersscheme
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/scrolllock" sveltekit:prefetch>scrolllock
+
+                                        
+                                    </a><a class="menu--item svelte-1wifs10" href="/docs/stores/viewport" sveltekit:prefetch>viewport
+
+                                        
+                                    </a>
+                            </section></nav></section>
+
+                <div data-hidden="desktop widescreen" class="position " data-variation="container action"><label role="button" class="button overlay--button " for="aside-navigation" tabindex="0" data-palette="inverse" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-x "><line x1="18" y1="6" x2="6" y2="18"></line>
+  <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg></label></div></nav></section></div>
+    
+
+<nav class="omni app-navigation" data-palette="dark"><header class="omni--header "><a class="anchor svelte-1wifs10" href="/" sveltekit:prefetch>Kahi UI</a>
+        <hr class="divider" data-orientation="vertical">
+
+        <a class="anchor svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases/v0.6.1" target="_blank" rel="noopener noreferrer"><small class="text ">v0.6.1</small></a></header>
+
+    <section data-hidden data-margin-x="medium" class="omni--section app-navigation-search"><input data-max-width="prose" type="search" class="text-input " data-alignment-x="center" data-sizing="tiny" data-variation="block" placeholder="[CTRL+/] Search" value=""></section>
+
+    <footer class="omni--footer ">
+
+<input role="presentation" class="popover--state" id="app-navigation" type="checkbox">
+
+<div data-hidden="widescreen" class="popover "><label role="button" class="button popover--button " for="app-navigation" tabindex="0" data-palette="light" data-variation="clear"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-more-vertical "><circle cx="12" cy="12" r="1"></circle>
+  <circle cx="12" cy="5" r="1"></circle>
+  <circle cx="12" cy="19" r="1"></circle>
+  </svg></label>
+
+            <section class="popover--section transition " data-animation="clip" data-alignment-x="left" data-behavior="explicit" data-direction="top" data-spacing="small">
+    <div data-padding="medium" class="box " data-elevation="medium" data-radius="tiny" data-variation="borders"><nav class="menu ">
+
+                        <a class="menu--item svelte-1wifs10" href="/blog" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-megaphone "><path d="M3 11l18-5v12L3 14v-3z"></path>
+  <path d="M11.6 16.8a3 3 0 11-5.8-1.6"></path>
+  </svg>
+                                Blog
+                            </a><a class="menu--item svelte-1wifs10" href="/docs" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-book "><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+  </svg>
+                                Documentation
+                            </a><a class="menu--item svelte-1wifs10" href="/playground" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-edit "><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+  <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+  </svg>
+                                Playground
+                            </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-code "><polyline points="16 18 22 12 16 6"></polyline>
+  <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+                                Source
+                            </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-package "><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+  <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+  </svg>
+                                Releases
+                            </a><a class="menu--item svelte-1wifs10" href="/chat" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-message-circle "><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+  </svg>
+                                Chat
+                            </a>
+
+                        </nav></div></section></div>
+
+        <nav data-hidden="mobile tablet desktop" class="menu " data-orientation="horizontal" data-sizing="tiny"><a class="menu--item svelte-1wifs10" href="/blog" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-megaphone "><path d="M3 11l18-5v12L3 14v-3z"></path>
+  <path d="M11.6 16.8a3 3 0 11-5.8-1.6"></path>
+  </svg>
+                    Blog
+                </a><a class="menu--item svelte-1wifs10" href="/docs" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-book "><path d="M4 19.5A2.5 2.5 0 016.5 17H20"></path>
+  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"></path>
+  </svg>
+                    Documentation
+                </a><a class="menu--item svelte-1wifs10" href="/playground" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-edit "><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path>
+  <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+  </svg>
+                    Playground
+                </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-code "><polyline points="16 18 22 12 16 6"></polyline>
+  <polyline points="8 6 2 12 8 18"></polyline>
+  </svg>
+                    
+                </a><a class="menu--item svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-package "><line x1="16.5" y1="9.4" x2="7.5" y2="4.21"></line>
+  <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"></path>
+  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+  </svg>
+                    
+                </a><a class="menu--item svelte-1wifs10" href="/chat" sveltekit:prefetch><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-icon lucide lucide-message-circle "><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+  </svg>
+                    
+                </a>
+
+            </nav></footer></nav>
+
+
+
+    <footer class="box app-footer" data-padding-y="large"><div class="stack " data-alignment-x="center"><a class="anchor svelte-1wifs10" href="https://github.com/novacbn/kahi-ui" target="_blank" rel="noopener noreferrer"><h2 class="heading ">Kahi UI</h2></a>
+
+        <p class="text " data-alignment-x="center"><a class=" svelte-1wifs10" href="https://github.com/novacbn/kahi-ui/releases/v0.6.1" target="_blank" rel="noopener noreferrer"><p data-margin-y="tiny" role="separator" class="divider" data-palette="accent">v0.6.1</p></a>
+
+            Maintained by
+            <br>
+            <a class="anchor svelte-1wifs10" href="https://github.com/novacbn" target="_blank" rel="noopener noreferrer" data-palette="accent">NovacBN
+            </a></p></div>
+</footer>
+</div>
+
+
+		<script type="module" data-hydrate="yq3f40">
+		import { start } from "/_app/start-c7c53988.js";
+		start({
+			target: document.querySelector('[data-hydrate="yq3f40"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-2da1eac9.js"),
+						import("/_app/pages/_...identifier_.svelte-39b03b72.js")
+				],
+				params: {identifier:"docs\u002Fglobals\u002Fspacings"}
+			}
+		});
+	</script><script type="application/json" data-type="svelte-data" data-url="/api/v4/navigation/docs.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":[{\"text\":\"Resources\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fofficial\",\"text\":\"Official\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Fcommunity\",\"text\":\"Community\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fresources\u002Ffaq\",\"text\":\"F.A.Q.\"}]},{\"text\":\"Migrations\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fmigrations\u002F0.5.x-to-0.6.x\",\"text\":\"0.5.x to 0.6.x\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fmigrations\u002F0.4.x-to-0.5.x\",\"text\":\"0.4.x to 0.5.x\"}]},{\"text\":\"Guides\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fguides\u002Fgetting-started\",\"text\":\"Getting Started\"}]},{\"text\":\"Framework\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fbrowser-support\",\"text\":\"Browser Support\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fframework\u002Fresponsitivity\",\"text\":\"Responsitivity\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fframework\u002Fcustom-builds\",\"text\":\"Custom Builds\"}]},{\"text\":\"Themeing\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fmanual-mode\",\"text\":\"Manual Mode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fcustom-properties\",\"text\":\"Custom Properties\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fcustom-themes\",\"text\":\"Custom Themes\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Felevations\",\"text\":\"Elevations\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Ffonts\",\"text\":\"Fonts\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fpalettes\",\"text\":\"Palettes\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fsizes\",\"text\":\"Sizes\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fthemeing\u002Fspacings\",\"text\":\"Spacings\"}]},{\"text\":\"Globals\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Factions\",\"text\":\"Actions\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Felements\",\"text\":\"Elements\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fevents\",\"text\":\"Events\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fcontents\",\"text\":\"Contents\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhtml5\",\"text\":\"HTML5\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fhidden\",\"text\":\"Hidden\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fsizes\",\"text\":\"Sizes\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fspacings\",\"text\":\"Spacings\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fglobals\u002Fsveltekit\",\"text\":\"SvelteKit\"}]},{\"text\":\"Typography\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fblockquote\",\"text\":\"Blockquote\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fcode\",\"text\":\"Code\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Ftypography\u002Fheading\",\"text\":\"Heading\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ftypography\u002Ftext\",\"text\":\"Text\"}]},{\"text\":\"Embedded\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fembedded\u002Ffigure\",\"text\":\"Figure\"}]},{\"text\":\"Display\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fbadge\",\"text\":\"Badge\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatestamp\",\"text\":\"DateStamp\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fdatetimestamp\",\"text\":\"DateTimeStamp\"},{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Fkbd\",\"text\":\"Kbd\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Flist\",\"text\":\"List\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftable\",\"text\":\"Table\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisplay\u002Ftimestamp\",\"text\":\"TimeStamp\"}]},{\"text\":\"Disclosure\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Faccordion\",\"text\":\"Accordion\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Fcarousel\",\"text\":\"Carousel\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fdisclosure\u002Ftab\",\"text\":\"Tab\"}]},{\"text\":\"Feedback\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fdot\",\"text\":\"Dot\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fellipsis\",\"text\":\"Ellipsis\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Ffeedback\u002Fprogress\",\"text\":\"Progress\"}]},{\"text\":\"Interactables\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fbutton\",\"text\":\"Button\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fcheck\",\"text\":\"Check\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ffiledropinput\",\"text\":\"FileDropInput\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fform\",\"text\":\"Form\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fhiddeninput\",\"text\":\"HiddenInput\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fnumberinput\",\"text\":\"NumberInput\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fradio\",\"text\":\"Radio\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Finteractables\u002Fswitch\",\"text\":\"Switch\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Finteractables\u002Ftextinput\",\"text\":\"TextInput\"}]},{\"text\":\"Widgets\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdatatable\",\"text\":\"DataTable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaypicker\",\"text\":\"DayPicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fdaystepper\",\"text\":\"DayStepper\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fpagination\",\"text\":\"Pagination\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthpicker\",\"text\":\"MonthPicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fmonthstepper\",\"text\":\"MonthStepper\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Ftimepicker\",\"text\":\"TimePicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearpicker\",\"text\":\"YearPicker\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fwidgets\u002Fyearstepper\",\"text\":\"YearStepper\"}]},{\"text\":\"Layouts\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Flayouts\u002Farticle\",\"text\":\"Article\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcenter\",\"text\":\"Center\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fcontainer\",\"text\":\"Container\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fdivider\",\"text\":\"Divider\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgrid\",\"text\":\"Grid\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fgroup\",\"text\":\"Group\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fmosaic\",\"text\":\"Mosaic\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fposition\",\"text\":\"Position\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fscrollable\",\"text\":\"Scrollable\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fspacer\",\"text\":\"Spacer\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Flayouts\u002Fstack\",\"text\":\"Stack\"}]},{\"text\":\"Surfaces\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fbox\",\"text\":\"Box\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fcard\",\"text\":\"Card\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Fhero\",\"text\":\"Hero\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fsurfaces\u002Ftile\",\"text\":\"Tile\"}]},{\"text\":\"Navigation\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fanchor\",\"text\":\"Anchor\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Faside\",\"text\":\"Aside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fbreadcrumb\",\"text\":\"Breadcrumb\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fmenu\",\"text\":\"Menu\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fnavigation\u002Fomni\",\"text\":\"Omni\"}]},{\"text\":\"Overlays\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fbackdrop\",\"text\":\"Backdrop\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fclickable\",\"text\":\"Clickable\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Foverlay\",\"text\":\"Overlay\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Foverlays\u002Fpopover\",\"text\":\"Popover\"}]},{\"text\":\"Utilities\",\"items\":[{\"badge\":\"NEW\",\"href\":\"\u002Fdocs\u002Futilities\u002Fanimation\",\"text\":\"Animation\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fbrowserrender\",\"text\":\"BrowserRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fintersectionrender\",\"text\":\"IntersectionRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fmediaqueryrender\",\"text\":\"MediaQueryRender\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fportal\",\"text\":\"Portal\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fserverrender\",\"text\":\"ServerRender\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Futilities\u002Ftransition\",\"text\":\"Transition\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Futilities\u002Fviewportrender\",\"text\":\"ViewportRender\"}]},{\"text\":\"Actions\",\"items\":[{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fauto_focus\",\"text\":\"auto_focus\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_inside\",\"text\":\"click_inside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fclick_outside\",\"text\":\"click_outside\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fintersection_observer\",\"text\":\"intersection_observer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fkeybind\",\"text\":\"keybind\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Flost_focus\",\"text\":\"lost_focus\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Fmutation_observer\",\"text\":\"mutation_observer\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Foverflow_clipping\",\"text\":\"overflow_clipping\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Factions\u002Ftrap_focus\",\"text\":\"trap_focus\"}]},{\"text\":\"Stores\",\"items\":[{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fstores\u002Fdarkmode\",\"text\":\"darkmode\"},{\"badge\":\"UPDATED\",\"href\":\"\u002Fdocs\u002Fstores\u002Fhtmlmode\",\"text\":\"htmlmode\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fmediaquery\",\"text\":\"mediaquery\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fprefersscheme\",\"text\":\"prefersscheme\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fscrolllock\",\"text\":\"scrolllock\"},{\"badge\":\"\",\"href\":\"\u002Fdocs\u002Fstores\u002Fviewport\",\"text\":\"viewport\"}]}]}"}</script>
+	<script type="application/json" data-type="svelte-data" data-url="/api/v4/content/docs/globals/spacings.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"data\":{\"metadata\":{\"authors\":{},\"created_at\":1637605563000,\"identifier\":\"\u002Fdocs\u002Fglobals\u002Fspacings\",\"modified_at\":1645838554000,\"sections\":[{\"identifier\":\"spacings\",\"level\":1,\"text\":\"Spacings\"},{\"identifier\":\"margin\",\"level\":2,\"text\":\"Margin\"},{\"identifier\":\"padding\",\"level\":2,\"text\":\"Padding\"},{\"identifier\":\"directional\",\"level\":2,\"text\":\"Directional\"}],\"snippets\":[{\"identifier\":\"spacings-margin\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack.Container\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"none\\\"\u003ENONE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"nano\\\"\u003ENANO\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"tiny\\\"\u003ETINY\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"small\\\"\u003E\\n            SMALL\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"medium\\\"\u003E\\n            MEDIUM\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"large\\\"\u003E\\n            LARGE\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"huge\\\"\u003EHUGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"negative\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\" margin=\\\"massive\\\"\u003E\\n            MASSIVE\\n        \u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\u003C\u002FStack.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Margin\"},{\"identifier\":\"spacings-padding\",\"script\":\"\u003Cscript\u003E\\n    import {\\n        Box,\\n        Stack,\\n        Text,\\n    } from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CStack.Container\\n    orientation=\\\"horizontal\\\"\\n    alignment_y=\\\"top\\\"\\n    spacing=\\\"medium\\\"\\n    variation=\\\"wrap\\\"\\n\u003E\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"none\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003ENONE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"nano\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003ENANO\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"tiny\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003ETINY\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"small\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003ESMALL\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"medium\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003EMEDIUM\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"large\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003ELARGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"huge\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003EHUGE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\\n    \u003CBox palette=\\\"informative\\\" padding=\\\"massive\\\"\u003E\\n        \u003CBox palette=\\\"neutral\\\"\u003EMASSIVE\u003C\u002FBox\u003E\\n    \u003C\u002FBox\u003E\\n\u003C\u002FStack.Container\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Padding\"},{\"identifier\":\"spacings-direction\",\"script\":\"\u003Cscript\u003E\\n    import {Box, Code} from \\\"@kahi-ui\u002Fframework\\\";\\n\u003C\u002Fscript\u003E\\n\\n\u003CBox palette=\\\"affirmative\\\" padding_y=\\\"small\\\"\u003E\\n    \u003CCode\u003Epadding_y=\\\"small\\\"\u003C\u002FCode\u003E\\n\u003C\u002FBox\u003E\\n\\n\u003CBox palette=\\\"negative\\\" margin_top=\\\"large\\\"\u003E\\n    \u003CCode\u003Emargin_top=\\\"large\\\"\u003C\u002FCode\u003E\\n\u003C\u002FBox\u003E\",\"syntax\":\"svelte\",\"title\":\"Spacings Direction\"}],\"title\":\"Spacings\"},\"references\":{\"custom_properties\":{},\"events\":{},\"properties\":{\"*\":[{\"name\":\"margin\",\"description\":\"Alters the visual spacing around the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_x\",\"description\":\"Alters the visual spacing around the horizontal axis of the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_y\",\"description\":\"Alters the visual spacing around the vertical axis of the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_left\",\"description\":\"Alters the visual spacing to the left of the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_top\",\"description\":\"Alters the visual spacing to the top of the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_right\",\"description\":\"Alters the visual spacing to the right of the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"margin_bottom\",\"description\":\"Alters the visual spacing to the bottom of the Component.\",\"types\":[\"auto\",\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding\",\"description\":\"Alters the inner visual spacing of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_x\",\"description\":\"Alters the inner visual spacing along the horizontal axis of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_y\",\"description\":\"Alters the inner visual spacing along the vertical axis of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_left\",\"description\":\"Alters the inner visual spacing on the left side of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_top\",\"description\":\"Alters the inner visual spacing on the top side of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_right\",\"description\":\"Alters the inner visual spacing on the right side of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]},{\"name\":\"padding_bottom\",\"description\":\"Alters the inner visual spacing on the bottom side of the Component.\",\"types\":[\"none\",\"nano\",\"tiny\",\"small\",\"medium\",\"large\",\"huge\",\"massive\",\"{VIEWPORT}:{SPACING}\"]}]},\"slots\":{}},\"render\":\"\u003Cp\u003EAll Components have access to the global margin and padding HTML data attributes. All of which, supports \u003Ca href=\\\"..\u002Fframework\u002Fresponsitivity\\\" svelte:prefetch=\\\"true\\\"\u003EResponsitivity\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\\n\u003Ch2 id=\\\"margin\\\"\u003EMargin\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: Introduced feature in \u003Ccode\u003Ev0.2.0\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsitivity\\\" svelte:prefetch=\\\"true\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Emargin={[&quot;small&quot;, &quot;tablet:large&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can set margins for your Components via the \u003Ccode\u003Emargin\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"spacings-margin\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003E\\n        Box\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Stack\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Text\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EStack.Container\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Eorientation\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ehorizontal\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Ealignment_y\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etop\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Espacing\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Emedium\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Evariation\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ewrap\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enone\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ENONE\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enano\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ENANO\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etiny\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ETINY\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Esmall\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            SMALL\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Emedium\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            MEDIUM\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Elarge\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            LARGE\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ehuge\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003EHUGE\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Emassive\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n            MASSIVE\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EStack.Container\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"padding\\\"\u003EPadding\u003C\u002Fh2\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: Introduced feature in \u003Ccode\u003Ev0.2.0\u003C\u002Fcode\u003E.\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cblockquote data-palette=\\\"accent\\\"\u003E\\n\u003Cp\u003E\u003Cstrong\u003ENOTE\u003C\u002Fstrong\u003E: By passing an array, you can set \u003Ca href=\\\"..\u002Fframework\u002Fresponsitivity\\\" svelte:prefetch=\\\"true\\\"\u003Eresponsive values\u003C\u002Fa\u003E. e.g. \u003Ccode\u003Epadding={[&quot;small&quot;, &quot;tablet:large&quot;]}\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\\n\u003C\u002Fblockquote\u003E\\n\u003Cp\u003EYou can set paddings for your Components via the \u003Ccode\u003Epadding\u003C\u002Fcode\u003E property.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"spacings-padding\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003E\\n        Box\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Stack\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n        Text\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EStack.Container\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Eorientation\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ehorizontal\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Ealignment_y\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etop\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Espacing\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Emedium\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token attr-name\\\"\u003Evariation\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ewrap\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enone\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ENONE\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enano\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ENANO\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Etiny\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ETINY\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Esmall\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ESMALL\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Emedium\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003EMEDIUM\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Elarge\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003ELARGE\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Ehuge\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003EHUGE\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Einformative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Emassive\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n        \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eneutral\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003EMASSIVE\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EStack.Container\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\u003Ch2 id=\\\"directional\\\"\u003EDirectional\u003C\u002Fh2\u003E\\n\u003Cp\u003EAll \u003Ccode\u003ESpacings\u003C\u002Fcode\u003E properties have directional support via the \u003Ccode\u003E*_x\u003C\u002Fcode\u003E, \u003Ccode\u003E*_y\u003C\u002Fcode\u003E, \u003Ccode\u003E*_left\u003C\u002Fcode\u003E, \u003Ccode\u003E*_top\u003C\u002Fcode\u003E, \u003Ccode\u003E*_right\u003C\u002Fcode\u003E, and \u003Ccode\u003E*_bottom\u003C\u002Fcode\u003E suffixes.\u003C\u002Fp\u003E\\n\u003Cpre class=\\\"highlight language-svelte\\\" data-identifier=\\\"spacings-direction\\\" data-mode=\\\"repl\\\" data-syntax=\\\"svelte\\\"\u003E\u003Ccode\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token script\\\"\u003E\u003Cspan class=\\\"token language-javascript\\\"\u003E\\n    \u003Cspan class=\\\"token keyword\\\"\u003Eimport\u003C\u002Fspan\u003E \u003Cspan class=\\\"token punctuation\\\"\u003E{\u003C\u002Fspan\u003EBox\u003Cspan class=\\\"token punctuation\\\"\u003E,\u003C\u002Fspan\u003E Code\u003Cspan class=\\\"token punctuation\\\"\u003E}\u003C\u002Fspan\u003E \u003Cspan class=\\\"token keyword\\\"\u003Efrom\u003C\u002Fspan\u003E \u003Cspan class=\\\"token string\\\"\u003E\\\"@kahi-ui\u002Fframework\\\"\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E;\u003C\u002Fspan\u003E\\n\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003Escript\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Eaffirmative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epadding_y\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Esmall\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ECode\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003Epadding_y=\\\"small\\\"\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003ECode\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Epalette\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Enegative\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E \u003Cspan class=\\\"token attr-name\\\"\u003Emargin_top\u003C\u002Fspan\u003E\u003Cspan class=\\\"token attr-value\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E=\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003Elarge\u003Cspan class=\\\"token punctuation\\\"\u003E\\\"\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n    \u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u003C\u002Fspan\u003ECode\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003Emargin_top=\\\"large\\\"\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003ECode\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\\n\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token tag\\\"\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E&lt;\u002F\u003C\u002Fspan\u003EBox\u003C\u002Fspan\u003E\u003Cspan class=\\\"token punctuation\\\"\u003E\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fcode\u003E\u003C\u002Fpre\u003E\"}}"}</script>
+    </body>
+</html>

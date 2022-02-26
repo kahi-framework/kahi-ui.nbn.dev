@@ -1,0 +1,1 @@
+{"data":{"identifier":"7xuprs","script":"<script>\n    import {DayStepper} from \"@kahi-ui/framework\";\n</script>\n\n<DayStepper step={5} />","syntax":"svelte","title":"7xuprs"}}

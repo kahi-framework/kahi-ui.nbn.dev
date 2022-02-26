@@ -1,0 +1,1 @@
+{"data":{"identifier":"py8d7m","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput max={10} min={3} />","syntax":"svelte","title":"py8d7m"}}

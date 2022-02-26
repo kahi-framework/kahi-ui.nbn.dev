@@ -1,0 +1,1 @@
+{"data":{"identifier":"1gj4who","script":"<script>\n    import {Spinner} from \"@kahi-ui/framework\";\n</script>\n\n<Spinner palette=\"accent\" />","syntax":"svelte","title":"1gj4who"}}
