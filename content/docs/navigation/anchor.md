@@ -2,7 +2,7 @@
 [[properties.Anchor]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Anchor]]
 name="current"
@@ -52,7 +52,7 @@ types=["<text-decoration>"]
 
 # Anchor
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Anchor` are used for navigating from page to page, or to external websites.
 
@@ -108,9 +108,36 @@ When navigating to external links, for **security purposes** it's recommended to
 </Anchor>
 ```
 
+## States
+
+You can control the state of the `Anchor` via the `disabled` property.
+
+```svelte {title="Anchor States" mode="repl"}
+<script>
+    import {Anchor} from "@kahi-ui/framework";
+</script>
+
+<Anchor
+    href="https://google.com"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    Goto google.com DEFAULT
+</Anchor>
+
+<Anchor
+    href="https://google.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    disabled
+>
+    Goto google.com DISABLED
+</Anchor>
+```
+
 ## Palette
 
-> **NOTE**: New since `v0.4.3`.
+> **NOTE**: Introduced feature in `v0.4.3`.
 
 You can change the color palette of the `Anchor` via the `palette` property.
 
@@ -119,7 +146,7 @@ You can change the color palette of the `Anchor` via the `palette` property.
     import {Anchor, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -139,6 +166,15 @@ You can change the color palette of the `Anchor` via the `palette` property.
         palette="accent"
     >
         Goto google.com ACCENT
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        palette="neutral"
+    >
+        Goto google.com NEUTRAL
     </Anchor>
 
     <Anchor
@@ -181,9 +217,18 @@ You can change the color palette of the `Anchor` via the `palette` property.
         href="https://google.com"
         target="_blank"
         rel="noopener noreferrer"
+        palette="informative"
+    >
+        Goto google.com INFORMATIVE
+    </Anchor>
+
+    <Anchor
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
         palette="negative"
     >
         Goto google.com NEGATIVE
     </Anchor>
-</Stack>
+</Stack.Container>
 ```

@@ -22,17 +22,17 @@ types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 [[properties.Stack]]
 name="spacing"
 description="Adjusts the visual spacing between child items in the `Stack`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Stack]]
 name="spacing_x"
 description="Adjusts the horizontal visual spacing between child items in the `Stack`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties.Stack]]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child items in the `Stack`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[slots.Stack]]
 name="default"
@@ -42,38 +42,31 @@ types=["{}"]
 
 # Stack
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
-> **DEPRECATED**: This feature will be renamed from `<Stack>` -> `<Stack.Container>` in `v0.6.0` to facilitate per-item customization.
+> **WARNING**: This feature was renamed from `<Stack>` to `<Stack.Container>` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-`Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children. With optional wrapping.
+`Stack` is a layout primitive for setting up a horizontal / vertical stacking of items with even spacing between children.
 
 ```svelte {title="Stack Preview" mode="repl"}
 <script>
     import {Box, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack class="stack-preview">
-    <Box palette="alert" />
-    <Box palette="affirmative" />
-    <Box palette="negative" />
-</Stack>
-
-<style>
-    :global(.stack-preview .box) {
-        width: 3rem;
-        height: 3rem;
-    }
-</style>
+<Stack.Container>
+    <Box palette="alert" size="icon-massive" />
+    <Box palette="affirmative" size="icon-massive" />
+    <Box palette="negative" size="icon-massive" />
+</Stack.Container>
 ```
 
 ## Imports
 
-> **DEPRECATED**: `<Stack>` will be renamed to `<Stack.Container>` in `v0.6.0`.
-
 ```svelte {title="Stack Imports"}
 <script>
     import {Stack} from "@kahi-ui/framework";
+
+    const {Container, Item} = Stack;
 </script>
 ```
 
@@ -92,8 +85,7 @@ You can set the `Stack` to render horizontally via the `orientation` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="stack-orientation"
+<Stack.Container
     alignment_y="top"
     orientation="horizontal"
     spacing="medium"
@@ -102,36 +94,51 @@ You can set the `Stack` to render horizontally via the `orientation` property.
     <div>
         <Text is="strong">DEFAULT</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack>
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container>
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">HORIZONTAL</Text>
-        <Box palette="dark" padding="small">
-            <Stack orientation="horizontal">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+        <Box palette="inverse" padding="small">
+            <Stack.Container orientation="horizontal">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
-</Stack>
-
-<style>
-    :global(.stack-orientation .stack .box) {
-        width: 3rem;
-        height: 3rem;
-    }
-</style>
+</Stack.Container>
 ```
 
 ## Spacing
@@ -149,8 +156,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="stack-spacing"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -158,100 +164,211 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
     <div>
         <Text is="strong">DEFAULT</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack>
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container>
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
+        </Box>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <Box
+            palette="inverse"
+            padding="small"
+            width="content-min"
+        >
+            <Stack.Container spacing="nano">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">TINY</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack spacing="tiny">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container spacing="tiny">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack spacing="small">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container spacing="small">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack spacing="medium">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container spacing="medium">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack spacing="large">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container spacing="large">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack spacing="huge">
-                <Box palette="alert" />
-                <Box palette="affirmative" />
-                <Box palette="negative" />
-            </Stack>
+            <Stack.Container spacing="huge">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
         </Box>
     </div>
-</Stack>
 
-<style>
-    :global(.stack-spacing .stack .box) {
-        width: 3rem;
-        height: 3rem;
-    }
-</style>
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Box
+            palette="inverse"
+            padding="small"
+            width="content-min"
+        >
+            <Stack.Container spacing="massive">
+                <Box
+                    palette="alert"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="affirmative"
+                    size="icon-massive"
+                />
+
+                <Box
+                    palette="negative"
+                    size="icon-massive"
+                />
+            </Stack.Container>
+        </Box>
+    </div>
+</Stack.Container>
 ```
 
 ## Alignment
@@ -269,7 +386,7 @@ You can adjust the spacing between items via the `alignment`, `alignment_x`, and
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="stack-alignment"
     orientation="horizontal"
     spacing="medium"
@@ -278,92 +395,92 @@ You can adjust the spacing between items via the `alignment`, `alignment_x`, and
     <div>
         <Text is="strong">DEFAULT</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack>
+            <Stack.Container>
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">CENTER X/Y</Text>
-        <Box palette="dark" padding="small">
-            <Stack alignment="center">
+        <Box palette="inverse" padding="small">
+            <Stack.Container alignment="center">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">STRETCH X</Text>
-        <Box palette="dark" padding="small">
-            <Stack alignment_x="stretch">
+        <Box palette="inverse" padding="small">
+            <Stack.Container alignment_x="stretch">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">LEFT X</Text>
-        <Box palette="dark" padding="small">
-            <Stack alignment_x="left">
+        <Box palette="inverse" padding="small">
+            <Stack.Container alignment_x="left">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">RIGHT X</Text>
-        <Box palette="dark" padding="small">
-            <Stack alignment_x="right">
+        <Box palette="inverse" padding="small">
+            <Stack.Container alignment_x="right">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">TOP Y</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack alignment_y="top">
+            <Stack.Container alignment_y="top">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
 
     <div>
         <Text is="strong">BOTTOM Y</Text>
         <Box
-            palette="dark"
+            palette="inverse"
             padding="small"
             width="content-min"
         >
-            <Stack alignment_y="bottom">
+            <Stack.Container alignment_y="bottom">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
                 <Box palette="negative" />
-            </Stack>
+            </Stack.Container>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.stack-alignment .stack .box) {
@@ -408,27 +525,54 @@ You can alter the `Stack` to wraps its children into the next line via the `vari
     import {Box, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="stack-wrap"
+<Stack.Container
     orientation="horizontal"
     spacing="huge"
     variation="wrap"
 >
-    <Box palette="alert" />
-    <Box palette="affirmative" />
-    <Box palette="negative" />
+    <Box palette="alert" size="icon-massive" />
+    <Box palette="affirmative" size="icon-massive" />
+    <Box palette="negative" size="icon-massive" />
 
-    <Box palette="alert" />
-    <Box palette="affirmative" />
-    <Box palette="negative" />
+    <Box palette="alert" size="icon-massive" />
+    <Box palette="affirmative" size="icon-massive" />
+    <Box palette="negative" size="icon-massive" />
 
-    <Box palette="alert" />
-</Stack>
+    <Box palette="alert" size="icon-massive" />
+</Stack.Container>
+```
 
-<style>
-    :global(.stack-wrap .box) {
-        width: 6rem;
-        height: 6rem;
-    }
-</style>
+## Item Stretch
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can adjust span of individual items via the `variation="stretch"` property, when wrapping an item in `Stack.Item`.
+
+```svelte {title="Stack Item Stretch" mode="repl"}
+<script>
+    import {Box, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container orientation="horizontal" width="100">
+    <Box
+        palette="alert"
+        variation="borders"
+        size="icon-massive"
+    />
+
+    <Stack.Item variation="stretch">
+        <Box
+            palette="affirmative"
+            variation="borders"
+            min_width="icon-massive"
+            height="icon-massive"
+        />
+    </Stack.Item>
+
+    <Box
+        palette="negative"
+        variation="borders"
+        size="icon-massive"
+    />
+</Stack.Container>
 ```

@@ -17,7 +17,7 @@ As mentioned above, Kahi UI has the concept of four pre-defined breakpoints that
 
 To be able to use Viewport-specific values, you just need to prefix your values with `{VIEWPORT}:`, e.g. `<Grid points="mobile:3">`. But then you can't specify default values or other Viewport-specifics. For that you need to pass an array in like below.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 ```svelte {title="Responsitivity Syntax" mode="repl"}
 <script>

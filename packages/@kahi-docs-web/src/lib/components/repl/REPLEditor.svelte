@@ -5,7 +5,7 @@
 </script>
 
 <script lang="ts">
-    import {Wave} from "@kahi-ui/framework";
+    import {Dot, Ellipsis} from "@kahi-ui/framework";
     import {createEventDispatcher, onMount} from "svelte";
 
     import REPLOverlay from "./REPLOverlay.svelte";
@@ -39,7 +39,9 @@
     <CodeJar class="repl-editor {_class}" syntax="svelte" {highlight} {style} bind:value />
 {:else}
     <REPLOverlay {style}>
-        <Wave />
+        <Ellipsis animation="bounce" iterations="5">
+            <Dot palette="inverse" />
+        </Ellipsis>
     </REPLOverlay>
 {/if}
 

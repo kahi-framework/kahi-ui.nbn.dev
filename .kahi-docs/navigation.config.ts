@@ -1,38 +1,69 @@
 import {define_navigation} from "@kahi-docs/config";
 
 export default define_navigation({
+    blog: [
+        {
+            text: "2022 Feburary",
+            items: [{href: "/blog/2022-02/0.6.0-alpha-1", badge: "NEW"}],
+        },
+    ],
+
     docs: [
         {
             text: "Resources",
-            items: [{href: "/docs/resources/official"}, {href: "/docs/resources/community"}],
+            items: [
+                {href: "/docs/resources/official"},
+                {href: "/docs/resources/community"},
+                {href: "/docs/resources/faq"},
+            ],
         },
 
         {
             text: "Migrations",
-            items: [{href: "/docs/migrations/0.4.x-to-0.5.x"}],
+            items: [
+                {href: "/docs/migrations/0.5.x-to-0.6.x", badge: "NEW"},
+                {href: "/docs/migrations/0.4.x-to-0.5.x"},
+            ],
+        },
+
+        {
+            text: "Guides",
+            items: [{href: "/docs/guides/getting-started", badge: "UPDATED"}],
         },
 
         {
             text: "Framework",
             items: [
-                {href: "/docs/framework/getting-started", badge: "UPDATED"},
-                {href: "/docs/framework/faq"},
                 {href: "/docs/framework/browser-support"},
                 {href: "/docs/framework/responsitivity"},
-                {href: "/docs/framework/custom-properties"},
-                {href: "/docs/framework/actions"},
-                {href: "/docs/framework/elements"},
-                {href: "/docs/framework/events"},
+                {href: "/docs/framework/custom-builds", badge: "NEW"},
+            ],
+        },
+
+        {
+            text: "Themeing",
+            items: [
+                {href: "/docs/themeing/manual-mode", badge: "NEW"},
+                {href: "/docs/themeing/custom-properties"},
+                {href: "/docs/themeing/custom-themes", badge: "NEW"},
+                {href: "/docs/themeing/elevations", badge: "NEW"},
+                {href: "/docs/themeing/fonts", badge: "NEW"},
+                {href: "/docs/themeing/palettes", badge: "NEW"},
+                {href: "/docs/themeing/sizes", badge: "NEW"},
+                {href: "/docs/themeing/spacings", badge: "NEW"},
             ],
         },
 
         {
             text: "Globals",
             items: [
+                {href: "/docs/globals/actions"},
+                {href: "/docs/globals/elements"},
+                {href: "/docs/globals/events"},
                 {href: "/docs/globals/contents"},
                 {href: "/docs/globals/html5"},
                 {href: "/docs/globals/hidden"},
-                {href: "/docs/globals/sizings"},
+                {href: "/docs/globals/sizes", badge: "UPDATED"},
                 {href: "/docs/globals/spacings"},
                 {href: "/docs/globals/sveltekit"},
             ],
@@ -59,6 +90,7 @@ export default define_navigation({
                 {href: "/docs/display/badge"},
                 {href: "/docs/display/datestamp"},
                 {href: "/docs/display/datetimestamp"},
+                {href: "/docs/display/kbd", badge: "NEW"},
                 {href: "/docs/display/list"},
                 {href: "/docs/display/table", badge: "UPDATED"},
                 {href: "/docs/display/timestamp"},
@@ -78,10 +110,8 @@ export default define_navigation({
             text: "Feedback",
             items: [
                 {href: "/docs/feedback/dot", badge: "UPDATED"},
-                {href: "/docs/feedback/ellipsis"},
-                {href: "/docs/feedback/progress"},
-                {href: "/docs/feedback/spinner", badge: "DEPRECATED"},
-                {href: "/docs/feedback/wave", badge: "DEPRECATED"},
+                {href: "/docs/feedback/ellipsis", badge: "UPDATED"},
+                {href: "/docs/feedback/progress", badge: "UPDATED"},
             ],
         },
 
@@ -91,9 +121,9 @@ export default define_navigation({
                 {href: "/docs/interactables/button", badge: "UPDATED"},
                 {href: "/docs/interactables/check"},
                 {href: "/docs/interactables/filedropinput"},
-                {href: "/docs/interactables/form"},
+                {href: "/docs/interactables/form", badge: "UPDATED"},
                 {href: "/docs/interactables/hiddeninput"},
-                {href: "/docs/interactables/numberinput"},
+                {href: "/docs/interactables/numberinput", badge: "UPDATED"},
                 {href: "/docs/interactables/radio"},
                 {href: "/docs/interactables/switch"},
                 {href: "/docs/interactables/textinput", badge: "UPDATED"},
@@ -118,11 +148,12 @@ export default define_navigation({
         {
             text: "Layouts",
             items: [
+                {href: "/docs/layouts/article", badge: "NEW"},
                 {href: "/docs/layouts/center"},
                 {href: "/docs/layouts/container"},
                 {href: "/docs/layouts/divider"},
                 {href: "/docs/layouts/grid"},
-                {href: "/docs/layouts/group"},
+                {href: "/docs/layouts/group", badge: "UPDATED"},
                 {href: "/docs/layouts/mosaic", badge: "UPDATED"},
                 {href: "/docs/layouts/position"},
                 {href: "/docs/layouts/scrollable"},
@@ -134,7 +165,7 @@ export default define_navigation({
         {
             text: "Surfaces",
             items: [
-                {href: "/docs/surfaces/box"},
+                {href: "/docs/surfaces/box", badge: "UPDATED"},
                 {href: "/docs/surfaces/card"},
                 {href: "/docs/surfaces/hero"},
                 {href: "/docs/surfaces/tile"},
@@ -165,12 +196,13 @@ export default define_navigation({
         {
             text: "Utilities",
             items: [
+                {href: "/docs/utilities/animation", badge: "NEW"},
                 {href: "/docs/utilities/browserrender"},
                 {href: "/docs/utilities/intersectionrender"},
                 {href: "/docs/utilities/mediaqueryrender"},
                 {href: "/docs/utilities/portal"},
                 {href: "/docs/utilities/serverrender"},
-                {href: "/docs/utilities/transition"},
+                {href: "/docs/utilities/transition", badge: "UPDATED"},
                 {href: "/docs/utilities/viewportrender"},
             ],
         },
@@ -193,8 +225,8 @@ export default define_navigation({
         {
             text: "Stores",
             items: [
-                {href: "/docs/stores/darkmode"},
-                {href: "/docs/stores/htmlpalette", badge: "UPDATED"},
+                {href: "/docs/stores/darkmode", badge: "UPDATED"},
+                {href: "/docs/stores/htmlmode", badge: "UPDATED"},
                 {href: "/docs/stores/mediaquery"},
                 {href: "/docs/stores/prefersscheme"},
                 {href: "/docs/stores/scrolllock"},

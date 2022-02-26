@@ -2,7 +2,7 @@
 [[properties."Table.Container"]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `Table.Container`."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties."Table.Container"]]
 name="variation"
@@ -112,7 +112,7 @@ types=["<length>"]
 
 # Table
 
-> **NOTE**: New since `v0.2.7`.
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 `Table` is typically used to render tabular data in a structured row -> columns format, for end-users to easily read the contents.
 
@@ -222,9 +222,9 @@ types=["<length>"]
 
 ## Spans
 
-> **NOTE**: New since `v0.4.4`.
+> **NOTE**: Introduced feature in `v0.4.4`.
 
-> **DEPRECATED**: This feature will be renamed from `colspan` / `rowspan` -> `span_x` / `span_y` in `v0.6.0` to consolidate API surface.
+> **WARNING**: This feature was renamed from `colspan` / `rowspan` to `span_x` / `span_y` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md) respectively.
 
 You can use the `span_x` / `span_y` properties on `<Table.Column>` / `<Table.Heading>` to adjust the size of table items they take up.
 
@@ -546,7 +546,7 @@ You can make a `Table` have both borders **AND** stripes via the `variation` pro
 
 ## Sizing
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
@@ -560,11 +560,108 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
 
         <Table.Container variation="borders">
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="nano"
+        >
             <Table.Header>
                 <Table.Row>
                     <Table.Heading />
@@ -1139,7 +1236,104 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
             </Table.Footer>
         </Table.Container>
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <Table.Container
+            variation="borders"
+            sizing="massive"
+        >
+            <Table.Header>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Header>
+
+            <Table.Section>
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">mobile</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>0px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>640px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">tablet</Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>641px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>768px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            desktop
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>769px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1024px</Code>
+                    </Table.Column>
+                </Table.Row>
+
+                <Table.Row>
+                    <Table.Column>
+                        <Text is="strong">
+                            widescreen
+                        </Text>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>1025px</Code>
+                    </Table.Column>
+
+                    <Table.Column>
+                        <Code>∞</Code>
+                    </Table.Column>
+                </Table.Row>
+            </Table.Section>
+
+            <Table.Footer>
+                <Table.Row>
+                    <Table.Heading />
+                    <Table.Heading>
+                        Minimum
+                    </Table.Heading>
+
+                    <Table.Heading>
+                        Maximum
+                    </Table.Heading>
+                </Table.Row>
+            </Table.Footer>
+        </Table.Container>
+    </div>
+</Stack.Container>
 ```
 
 ## Scrollable Tables
@@ -1156,7 +1350,7 @@ You can make a `Table` scrollable by wrapping it with a [`Scrollable`](../layout
     } from "@kahi-ui/framework";
 </script>
 
-<Scrollable>
+<Scrollable width="medium">
     <Table.Container>
         <Table.Header>
             <Table.Row>

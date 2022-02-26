@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-    import {Wave} from "@kahi-ui/framework";
+    import {Box, Code, Dot, Ellipsis, Text} from "@kahi-ui/framework";
     import type {IPipelineSvelteStore} from "@novacbn/svelte-pipeline";
     import type {SvelteComponent} from "svelte";
     import {createEventDispatcher, onMount} from "svelte";
@@ -28,12 +28,16 @@
 
     const dispatch = createEventDispatcher();
 
+    let PIPELINE_RESULT_TYPES:
+        | typeof import("@novacbn/svelte-pipeline").PIPELINE_RESULT_TYPES
+        | undefined;
     let PipelineRenderComponent:
         | typeof import("@novacbn/svelte-pipeline/components").PipelineRenderComponent
         | undefined;
     let store: IPipelineSvelteStore | undefined;
 
     let is_mounted: boolean = false;
+    let error: string | null = null;
 
     let _class: string = "";
     export let style: string | undefined = undefined;
@@ -41,9 +45,19 @@
 
     export let value: string;
 
+    function on_error(event: CustomEvent<{error: Error}>): void {
+        error = event.detail.error.message;
+    }
+
+    function on_mount(event: CustomEvent): void {
+        error = null;
+        is_mounted = true;
+    }
+
     onMount(async () => {
         const [config, module, components] = await import_modules();
 
+        ({PIPELINE_RESULT_TYPES} = module);
         ({PipelineRenderComponent} = components);
 
         store = module.pipeline_svelte({
@@ -62,6 +76,17 @@
     });
 
     $: if (store) $store = value;
+
+    $: {
+        if (
+            store &&
+            PIPELINE_RESULT_TYPES &&
+            $store &&
+            $store.type === PIPELINE_RESULT_TYPES.error
+        ) {
+            error = $store.message;
+        }
+    }
 </script>
 
 {#if PipelineRenderComponent && store}
@@ -70,8 +95,8 @@
         pipeline={store}
         style={is_mounted ? style : "display:none;"}
         on:destroy={() => (is_mounted = false)}
-        on:error={() => (is_mounted = false)}
-        on:mount={() => (is_mounted = true)}
+        on:error={on_error}
+        on:mount={on_mount}
         on:destroy
         on:error
         on:mount
@@ -79,8 +104,18 @@
 {/if}
 
 {#if !is_mounted}
-    <REPLOverlay {style}>
-        <Wave />
+    <REPLOverlay>
+        <Ellipsis animation="bounce" iterations="5">
+            <Dot palette="inverse" />
+        </Ellipsis>
+    </REPLOverlay>
+{/if}
+
+{#if error}
+    <REPLOverlay alignment_x="stretch" alignment_y="top">
+        <Box palette="negative" padding="small">
+            <Text is="strong">ERROR</Text>: <Code>{error}</Code>
+        </Box>
     </REPLOverlay>
 {/if}
 
@@ -88,6 +123,6 @@
     :global(.repl-render) {
         height: 100%;
 
-        padding: var(--spacing-root-small) var(--spacing-root-medium);
+        padding: calc(var(--spacings-block-small) * 1rem) calc(var(--spacings-block-medium) * 1rem);
     }
 </style>

@@ -2,13 +2,13 @@
 [[properties."Tile.Container"]]
 name="elevation"
 description="Alters how \"high\" the `Tile` appears to be off the page."
-default="lowest"
-types=["none", "lowest", "low", "medium", "high", "highest"]
+default="lower"
+types=["none", "lowest", "lower", "low", "medium", "high", "higher", "highest", "{VIEWPORT}:{ELEVATION}"]
 
 [[properties."Tile.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Tile.Container"]]
 name="variation"
@@ -178,7 +178,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 # Tile
 
-> **NOTE**: New since `v0.2.1`.
+> **NOTE**: Introduced feature in `v0.2.1`.
 
 `Tile` is a multi-part surface pattern for displaying a section of content in a short-form horizontal format.
 
@@ -189,10 +189,11 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {UserPlus, Slash} from "lucide-svelte";
 </script>
 
-<Tile.Container palette="auto" width="content-max">
-    <Tile.Figure shape="pill">
+<Tile.Container width="content-max">
+    <Tile.Figure>
         <img src={IMAGE_AVATAR} />
     </Tile.Figure>
 
@@ -209,9 +210,12 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
     <Tile.Footer>
         <Button palette="affirmative">
-            Add Friend
+            <UserPlus size="1em" />
         </Button>
-        <Button palette="negative">Ban User</Button>
+
+        <Button palette="negative">
+            <Slash size="1em" />
+        </Button>
     </Tile.Footer>
 </Tile.Container>
 ```
@@ -245,9 +249,9 @@ You can change the color palette of the `Tile` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <Tile.Container width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -263,7 +267,7 @@ You can change the color palette of the `Tile` via the `palette` property.
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">NEUTRAL / DEFAULT</Text>
+            <Text is="small">DEFAULT</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -271,7 +275,7 @@ You can change the color palette of the `Tile` via the `palette` property.
         palette="accent"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -291,8 +295,32 @@ You can change the color palette of the `Tile` via the `palette` property.
         </Tile.Footer>
     </Tile.Container>
 
+    <Tile.Container
+        palette="neutral"
+        width="content-max"
+    >
+        <Tile.Figure>
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    joined 2018 &bullet; last online
+                    2021/05/29
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Text is="small">NEUTRAL</Text>
+        </Tile.Footer>
+    </Tile.Container>
+
     <Tile.Container palette="dark" width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -316,7 +344,7 @@ You can change the color palette of the `Tile` via the `palette` property.
         palette="light"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -340,7 +368,7 @@ You can change the color palette of the `Tile` via the `palette` property.
         palette="alert"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -364,7 +392,7 @@ You can change the color palette of the `Tile` via the `palette` property.
         palette="affirmative"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -385,10 +413,34 @@ You can change the color palette of the `Tile` via the `palette` property.
     </Tile.Container>
 
     <Tile.Container
+        palette="informative"
+        width="content-max"
+    >
+        <Tile.Figure>
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    joined 2018 &bullet; last online
+                    2021/05/29
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Text is="small">INFORMATIVE</Text>
+        </Tile.Footer>
+    </Tile.Container>
+
+    <Tile.Container
         palette="negative"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -407,12 +459,14 @@ You can change the color palette of the `Tile` via the `palette` property.
             <Text is="small">NEGATIVE</Text>
         </Tile.Footer>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Elevation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `elevation={["low", "tablet:lowest", "mobile:lowest"]}`
 
 You can set how "high" your `Tile` will appear to be over top the page via the `elevation` property.
 
@@ -425,12 +479,9 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="large">
-    <Tile.Container
-        elevation="lowest"
-        width="content-max"
-    >
-        <Tile.Figure shape="pill">
+<Stack.Container spacing="large">
+    <Tile.Container width="content-max">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -446,7 +497,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         </Tile.Section>
 
         <Tile.Footer>
-            <Text is="small">LOWEST / DEFAULT</Text>
+            <Text is="small">DEFAULT</Text>
         </Tile.Footer>
     </Tile.Container>
 
@@ -454,7 +505,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         elevation="none"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -475,10 +526,58 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
     </Tile.Container>
 
     <Tile.Container
+        elevation="lowest"
+        width="content-max"
+    >
+        <Tile.Figure>
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    joined 2018 &bullet; last online
+                    2021/05/29
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Text is="small">LOWEST</Text>
+        </Tile.Footer>
+    </Tile.Container>
+
+    <Tile.Container
+        elevation="lower"
+        width="content-max"
+    >
+        <Tile.Figure>
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NovacBN</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    joined 2018 &bullet; last online
+                    2021/05/29
+                </Text>
+            </Text>
+        </Tile.Section>
+
+        <Tile.Footer>
+            <Text is="small">LOWER</Text>
+        </Tile.Footer>
+    </Tile.Container>
+
+    <Tile.Container
         elevation="low"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -502,7 +601,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         elevation="medium"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -526,7 +625,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         elevation="high"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -550,7 +649,7 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
         elevation="highest"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -569,12 +668,12 @@ You can set how "high" your `Tile` will appear to be over top the page via the `
             <Text is="small">HIGHEST</Text>
         </Tile.Footer>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Orientation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
 
@@ -588,11 +687,12 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {UserPlus, Slash} from "lucide-svelte";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <Tile.Container width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -608,20 +708,17 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
 
         <Tile.Footer>
             <Button palette="affirmative">
-                Add Friend
+                <UserPlus size="1em" />
             </Button>
 
             <Button palette="negative">
-                Ban User
+                <Slash size="1em" />
             </Button>
         </Tile.Footer>
     </Tile.Container>
 
-    <Tile.Container
-        palette="accent"
-        width="content-max"
-    >
-        <Tile.Figure shape="pill">
+    <Tile.Container width="content-max">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -633,25 +730,24 @@ You can set the `Tile.Footer` to render vertically via the `orientation` propert
             </Text>
         </Tile.Section>
 
-        <Tile.Footer
-            orientation="vertical"
-            alignment_x="stretch"
-        >
+        <Tile.Footer orientation="vertical">
             <Button palette="affirmative">
-                Add Friend
+                <UserPlus size="1em" />
             </Button>
 
             <Button palette="negative">
-                Ban User
+                <Slash size="1em" />
             </Button>
         </Tile.Footer>
     </Tile.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Sizing
 
-> **NOTE**: New since `v0.3.3`.
+> **NOTE**: Introduced feature in `v0.3.3`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
@@ -664,14 +760,14 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     alignment_y="top"
     variation="wrap"
 >
     <Tile.Container width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -687,8 +783,25 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         </Tile.Section>
     </Tile.Container>
 
+    <Tile.Container sizing="nano" width="content-max">
+        <Tile.Figure>
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>NANO</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+
     <Tile.Container sizing="tiny" width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -705,7 +818,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Tile.Container>
 
     <Tile.Container sizing="small" width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -725,7 +838,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
         sizing="medium"
         width="content-max"
     >
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -742,7 +855,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Tile.Container>
 
     <Tile.Container sizing="large" width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -759,7 +872,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     </Tile.Container>
 
     <Tile.Container sizing="huge" width="content-max">
-        <Tile.Figure shape="pill">
+        <Tile.Figure>
             <img src={IMAGE_AVATAR} />
         </Tile.Figure>
 
@@ -774,12 +887,32 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
             </Text>
         </Tile.Section>
     </Tile.Container>
-</Stack>
+
+    <Tile.Container
+        sizing="massive"
+        width="content-max"
+    >
+        <Tile.Figure>
+            <img src={IMAGE_AVATAR} />
+        </Tile.Figure>
+
+        <Tile.Section>
+            <Tile.Header>MASSIVE</Tile.Header>
+
+            <Text>
+                <Text is="small">
+                    Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </Text>
+            </Text>
+        </Tile.Section>
+    </Tile.Container>
+</Stack.Container>
 ```
 
 ## Flush
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 You can change the appearance of the `Tile` to be flush with the rest of the Application content via the `variation` property.
 
@@ -790,14 +923,11 @@ You can change the appearance of the `Tile` to be flush with the rest of the App
         Text,
         Tile,
     } from "@kahi-ui/framework";
+    import {UserPlus, Slash} from "lucide-svelte";
 </script>
 
-<Tile.Container
-    palette="auto"
-    width="content-max"
-    variation="flush"
->
-    <Tile.Figure shape="pill">
+<Tile.Container width="content-max" variation="flush">
+    <Tile.Figure>
         <img src={IMAGE_AVATAR} />
     </Tile.Figure>
 
@@ -814,9 +944,12 @@ You can change the appearance of the `Tile` to be flush with the rest of the App
 
     <Tile.Footer>
         <Button palette="affirmative">
-            Add Friend
+            <UserPlus size="1em" />
         </Button>
-        <Button palette="negative">Ban User</Button>
+
+        <Button palette="negative">
+            <Slash size="1em" />
+        </Button>
     </Tile.Footer>
 </Tile.Container>
 ```

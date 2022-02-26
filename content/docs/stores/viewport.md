@@ -1,10 +1,10 @@
 # viewport
 
-> **NOTE**: New since `v0.2.14`.
+> **NOTE**: Introduced feature in `v0.2.14`.
 
-`viewport` / `viewports` are [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a [Viewport](../framework/responsitivity.md) selected in initialization is currently active.
+`viewport` / `viewports` are **readonly** [Svelte Stores](https://svelte.dev/docs#svelte_store), which returns `true` whenever a [Viewport](../framework/responsitivity.md) selected in initialization is currently active.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 ```svelte {title="viewport Preview" mode="repl"}
 <script>

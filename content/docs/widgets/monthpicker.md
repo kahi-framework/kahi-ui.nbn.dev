@@ -47,17 +47,12 @@ types=["string"]
 [[properties.MonthPicker]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.MonthPicker]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `MonthPicker`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.MonthPicker]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.MonthPicker]]
 name="locale"
@@ -77,9 +72,9 @@ types=["CustomEvent<void>"]
 
 # MonthPicker
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
-> **DEPRECATED**: This feature will only accept ISO 8601 calendar datestamps in `v0.6.0`.
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 `MonthPicker` is a Widget that displays a fiscal quaterly grid of months that a user can select from.
 
@@ -87,8 +82,8 @@ types=["CustomEvent<void>"]
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
-    const value = ["2021-06-01[u-ca=gregory]"];
+    const timestamp = "2021-01-01";
+    const value = ["2021-06-01"];
 </script>
 
 <MonthPicker
@@ -115,7 +110,7 @@ You can disable all interactivity via the `disabled` property.
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 </script>
 
 <MonthPicker
@@ -134,12 +129,9 @@ You can disable specific months from being selected via the `disabled` property.
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 
-    const disabled = [
-        "2021-06-01[u-ca=gregory]",
-        "2021-12-01[u-ca=gregory]",
-    ];
+    const disabled = ["2021-06-01", "2021-12-01"];
 </script>
 
 <MonthPicker
@@ -158,11 +150,8 @@ You can allow for multiple months to be selected via the `multiple` property.
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
-    const value = [
-        "2021-06-01[u-ca=gregory]",
-        "2021-12-01[u-ca=gregory]",
-    ];
+    const timestamp = "2021-01-01";
+    const value = ["2021-06-01", "2021-12-01"];
 </script>
 
 <MonthPicker
@@ -182,8 +171,8 @@ You can disable selected months from being unselected via the `once` property.
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
-    const value = ["2021-06-01[u-ca=gregory]"];
+    const timestamp = "2021-01-01";
+    const value = ["2021-06-01"];
 </script>
 
 <MonthPicker
@@ -203,7 +192,7 @@ You can disable interactivity without changing the visuals via the `readonly` pr
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 </script>
 
 <MonthPicker
@@ -224,12 +213,12 @@ You can select a specific set of months to be highlighted as outlines via the `h
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 
     const highlight = [
-        "2021-10-01[u-ca=gregory]",
-        "2021-11-01[u-ca=gregory]",
-        "2021-12-01[u-ca=gregory]",
+        "2021-10-01",
+        "2021-11-01",
+        "2021-12-01",
     ];
 </script>
 
@@ -243,16 +232,16 @@ You can select a specific set of months to be highlighted as outlines via the `h
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of selectable months via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of selectable months via the `max` / `min` properties.
 
 ```svelte {title="MonthPicker Maximum + Minimum" mode="repl"}
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 
-    const max = "2021-07-01[u-ca=gregory]";
-    const min = "2021-05-01[u-ca=gregory]";
+    const max = "2021-07-01";
+    const min = "2021-05-01";
 </script>
 
 <MonthPicker
@@ -272,7 +261,7 @@ You can customize how the month component of the available timestamps is display
 <script>
     import {MonthPicker} from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 </script>
 
 <MonthPicker
@@ -295,10 +284,10 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         Text,
     } from "@kahi-ui/framework";
 
-    const timestamp = "2021-01-01[u-ca=gregory]";
+    const timestamp = "2021-01-01";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     alignment_y="top"
@@ -309,6 +298,17 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
 
         <MonthPicker
             palette="accent"
+            width="content-max"
+            {timestamp}
+        />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <MonthPicker
+            palette="accent"
+            sizing="nano"
             width="content-max"
             {timestamp}
         />
@@ -368,5 +368,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
             {timestamp}
         />
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <MonthPicker
+            palette="accent"
+            sizing="massive"
+            width="content-max"
+            {timestamp}
+        />
+    </div>
+</Stack.Container>
 ```

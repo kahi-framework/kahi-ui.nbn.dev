@@ -1,24 +1,19 @@
 +++
 [[properties.Figure]]
 name="fit"
-description="Alters how the media of the `Figure` should fit within its containing box."
-types=["contain", "cover", "fill", "none", "scale-down"]
+description="Alters the inner media content should fit within `Figure`."
+types=["contain", "cover", "fill", "none", "scale-down", "{VIEWPORT}:{FIT}"]
+
+[[properties.Figure]]
+name="radius"
+description="Changes the border radius of the `Figure`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
 
 [[properties.Figure]]
 name="shape"
 description="Changes the shape of the `Figure`."
-default="none"
-types=["none", "pill", "rounded"]
-
-[[properties.Figure]]
-name="size"
-description="Changes how big the `Figure` should be forced to render, while keeping the aspect ratio. When `variation=\"icon\"`, sizes are smaller and aspect ratio is ignored."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.Figure]]
-name="variation"
-description="**(DEPRECATED)** Alters how some of the other properties changes the `Figure`. e.g. `size`"
-types=["icon"]
+types=["circle", "pill", "{VIEWPORT}:{SHAPE}"]
 
 [[slots.Figure]]
 name="default"
@@ -28,7 +23,9 @@ types=["{}"]
 
 # Figure
 
-> **NOTE**: New since `v0.2.1`.
+> **NOTE**: Introduced feature in `v0.2.1`.
+
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 `Figure` is a multimedia container Component, providing modifications for things such as images and videos.
 
@@ -50,151 +47,9 @@ types=["{}"]
 </script>
 ```
 
-## Shape
-
-You can modify the shape of the child content via the `shape` property.
-
-```svelte {title="Figure Shape" mode="repl"}
-<script>
-    import {
-        Figure,
-        Mosaic,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Mosaic spacing="medium" sizing="tiny">
-    <div>
-        <Text is="strong">DEFAULT</Text>
-        <Figure>
-            <img src={IMAGE_BACKGROUND} />
-        </Figure>
-    </div>
-
-    <div>
-        <Text is="strong">PILL</Text>
-        <Figure shape="pill">
-            <img src={IMAGE_BACKGROUND} />
-        </Figure>
-    </div>
-
-    <div>
-        <Text is="strong">ROUNDED</Text>
-        <Figure shape="rounded">
-            <img src={IMAGE_BACKGROUND} />
-        </Figure>
-    </div>
-</Mosaic>
-```
-
-## Size
-
-> **DEPRECATED**: This property will be elevated to becoming a global property in `v0.6.0`.
-
-> **DEPRECATED**: `variation="icon"` will be removed in favor `size="icon-{SIZE}"` in `v0.6.0`, e.g. `size="icon-huge"`.
-
-You can modify the size of the child content between five presets via the `size` property. Along with separate set of sizes meant for icon-sized content by including `variation="icon"`.
-
-```svelte {title="Figure Size" mode="repl"}
-<script>
-    import {
-        Figure,
-        Stack,
-        Text,
-    } from "@kahi-ui/framework";
-</script>
-
-<Stack class="figure-size" spacing="medium">
-    <div>
-        <Text is="strong">DEFAULT</Text>
-        <Figure max_width="25">
-            <img src={IMAGE_BACKGROUND} />
-        </Figure>
-    </div>
-
-    <Stack orientation="horizontal" spacing="medium">
-        <div>
-            <Text is="strong">TINY (ICON)</Text>
-            <Figure size="tiny" variation="icon">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">SMALL (ICON)</Text>
-            <Figure size="small" variation="icon">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">MEDIUM (ICON)</Text>
-            <Figure size="medium" variation="icon">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">LARGE (ICON)</Text>
-            <Figure size="large" variation="icon">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">HUGE (ICON)</Text>
-            <Figure size="huge" variation="icon">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-    </Stack>
-
-    <Stack spacing="medium">
-        <div>
-            <Text is="strong">TINY</Text>
-            <Figure size="tiny">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">SMALL</Text>
-            <Figure size="small">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">MEDIUM</Text>
-            <Figure size="medium">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">LARGE</Text>
-            <Figure size="large">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-
-        <div>
-            <Text is="strong">HUGE</Text>
-            <Figure size="huge">
-                <img src={IMAGE_BACKGROUND} />
-            </Figure>
-        </div>
-    </Stack>
-</Stack>
-
-<style>
-    :global(.figure-size figure[data-size] > img) {
-        max-width: max-content;
-    }
-</style>
-```
-
 ## Fit
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `fit={["contain", "tablet:cover", "mobile:cover"]}`
 
 You can change how the child content is stretched across the `Figure` container via the `fit` property.
 
@@ -207,59 +62,199 @@ You can change how the child content is stretched across the `Figure` container 
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="figure-fit"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
-        <Figure variation="icon">
-            <img src={IMAGE_BACKGROUND} />
+        <Figure size="small">
+            <img
+                src={IMAGE_BACKGROUND}
+                data-width="tiny"
+                data-height="medium"
+            />
         </Figure>
     </div>
 
     <div>
         <Text is="strong">CONTAIN</Text>
-        <Figure fit="contain" variation="icon">
-            <img src={IMAGE_BACKGROUND} />
+        <Figure fit="contain">
+            <img
+                src={IMAGE_BACKGROUND}
+                data-width="tiny"
+                data-height="medium"
+            />
         </Figure>
     </div>
 
     <div>
         <Text is="strong">COVER</Text>
-        <Figure fit="cover" variation="icon">
-            <img src={IMAGE_BACKGROUND} />
+        <Figure fit="cover">
+            <img
+                src={IMAGE_BACKGROUND}
+                data-width="tiny"
+                data-height="medium"
+            />
         </Figure>
     </div>
 
     <div>
         <Text is="strong">FILL</Text>
-        <Figure fit="fill" variation="icon">
+        <Figure fit="fill">
+            <img
+                src={IMAGE_BACKGROUND}
+                data-width="tiny"
+                data-height="medium"
+            />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">NONE</Text>
+        <Figure fit="none">
+            <img
+                src={IMAGE_BACKGROUND}
+                data-width="tiny"
+                data-height="medium"
+            />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">SCALE-DOWN</Text>
+        <Figure fit="scale-down">
+            <img
+                src={IMAGE_BACKGROUND}
+                data-width="tiny"
+                data-height="medium"
+            />
+        </Figure>
+    </div>
+</Stack.Container>
+```
+
+## Radius
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can modify the border radius of the child content via the `radius` property.
+
+```svelte {title="Figure Radius" mode="repl"}
+<script>
+    import {
+        Figure,
+        Mosaic,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic.Container spacing="medium" sizing="tiny">
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Figure>
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
         <Text is="strong">NONE</Text>
-        <Figure fit="none" variation="icon">
+        <Figure radius="none">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
 
     <div>
-        <Text is="strong">SCALE-DOWN</Text>
-        <Figure fit="scale-down" variation="icon">
+        <Text is="strong">NANO</Text>
+        <Figure radius="nano">
             <img src={IMAGE_BACKGROUND} />
         </Figure>
     </div>
-</Stack>
 
-<style>
-    :global(.figure-fit img) {
-        width: 12rem;
-        height: 18rem;
-    }
-</style>
+    <div>
+        <Text is="strong">TINY</Text>
+        <Figure radius="tiny">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+        <Figure radius="small">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+        <Figure radius="medium">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+        <Figure radius="large">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+        <Figure radius="huge">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Figure radius="massive">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+</Mosaic.Container>
+```
+
+## Shape
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
+
+You can modify the shape of the child content via the `shape` property.
+
+```svelte {title="Figure Shape" mode="repl"}
+<script>
+    import {
+        Figure,
+        Mosaic,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic.Container spacing="medium" sizing="tiny">
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">CIRCLE</Text>
+        <Figure shape="circle">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+
+    <div>
+        <Text is="strong">PILL</Text>
+        <Figure shape="pill">
+            <img src={IMAGE_BACKGROUND} />
+        </Figure>
+    </div>
+</Mosaic.Container>
 ```

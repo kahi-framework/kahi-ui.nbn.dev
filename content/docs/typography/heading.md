@@ -13,7 +13,7 @@ types=["center", "justify", "left", "right"]
 [[properties.Heading]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Heading]]
 name="transform"
@@ -158,7 +158,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 # Heading
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Heading` is typically used for delineating sections of content within your Web Application.
 
@@ -185,7 +185,7 @@ types=["<normal>", "<number>", "<length>", "<percentage>"]
 
 You can adjust the size of `Heading` by passing the `is` property.
 
-```svelte {title="Heading Sizing" mode="repl"}
+```svelte {title="Heading Sizing Inline" mode="repl"}
 <script>
     import {
         Heading,
@@ -194,8 +194,8 @@ You can adjust the size of `Heading` by passing the `is` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="heading-sizing"
+<Stack.Container
+    class="heading-sizing-inline"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -259,10 +259,95 @@ You can adjust the size of `Heading` by passing the `is` property.
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
-    :global(.heading-sizing > div) {
+    :global(.heading-sizing-inline > div) {
+        max-width: 25ch;
+    }
+</style>
+```
+
+You can also access bigger font sizing via the `variation` property.
+
+```svelte {title="Heading Sizing Block" mode="repl"}
+<script>
+    import {
+        Heading,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    class="heading-sizing-block"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">H1</Text>
+        <Heading is="h1" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H2</Text>
+        <Heading is="h2" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H3</Text>
+        <Heading is="h3" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H4</Text>
+        <Heading is="h4" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H5</Text>
+        <Heading is="h5" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">H6</Text>
+        <Heading is="h6" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+</Stack.Container>
+
+<style>
+    :global(.heading-sizing-block > div) {
         max-width: 25ch;
     }
 </style>
@@ -270,7 +355,7 @@ You can adjust the size of `Heading` by passing the `is` property.
 
 ## Palette
 
-> **NOTE**: New since `v0.2.16`.
+> **NOTE**: Introduced feature in `v0.2.16`.
 
 You can change the color palette of `Heading` via the `palette` property.
 
@@ -283,7 +368,7 @@ You can change the color palette of `Heading` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="heading-palette"
     orientation="horizontal"
     spacing="medium"
@@ -302,6 +387,16 @@ You can change the color palette of `Heading` via the `palette` property.
     <div>
         <Text is="strong">ACCENT</Text>
         <Heading palette="accent">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+        <Heading palette="neutral">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -350,6 +445,16 @@ You can change the color palette of `Heading` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <Heading palette="informative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien.
+        </Heading>
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
         <Heading palette="negative">
             Lorem ipsum dolor sit amet, consectetur
@@ -358,7 +463,7 @@ You can change the color palette of `Heading` via the `palette` property.
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-palette > div) {
@@ -369,7 +474,7 @@ You can change the color palette of `Heading` via the `palette` property.
 
 ## Alignment
 
-> **DEPRECATED**: This property will be renamed `align` -> `alignment_x` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can adjust the text alignment of the `Heading` via the `alignment_x` property.
 
@@ -382,7 +487,7 @@ You can adjust the text alignment of the `Heading` via the `alignment_x` propert
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Heading>
@@ -432,7 +537,7 @@ You can adjust the text alignment of the `Heading` via the `alignment_x` propert
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Transform
@@ -448,7 +553,7 @@ You can alter the rendered text capitalization via the `transform` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="heading-transform"
     orientation="horizontal"
     spacing="medium"
@@ -485,7 +590,7 @@ You can alter the rendered text capitalization via the `transform` property.
             adipiscing elit.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-transform > div) {
@@ -507,7 +612,10 @@ You can apply variations to the rendered text, like truncating, via the `variati
     } from "@kahi-ui/framework";
 </script>
 
-<Stack class="heading-variation" spacing="medium">
+<Stack.Container
+    class="heading-variation"
+    spacing="medium"
+>
     <div>
         <Text is="strong">DEFAULT</Text>
         <Heading>
@@ -527,7 +635,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
             sapien.
         </Heading>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.heading-variation > div) {

@@ -22,17 +22,17 @@ types=["center", "stretch", "bottom", "top", "{VIEWPORT}:{ALIGNMENT}"]
 [[properties."Grid.Container"]]
 name="spacing"
 description="Adjusts the visual spacing between child items in the `Grid.Container`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Container"]]
 name="spacing_x"
 description="Adjusts the horizontal visual spacing between child items in the `Grid.Container`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Container"]]
 name="spacing_y"
 description="Adjusts the vertical visual spacing between child items in the `Grid.Container`."
-types=["tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."Grid.Item"]]
 name="span"
@@ -62,11 +62,11 @@ types=["{}"]
 
 # Grid
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Grid` is a multi-part layout pattern for setting up a grid of items organized to a 12-point system.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 ```svelte {title="Grid Preview" mode="repl"}
 <script>
@@ -132,7 +132,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="grid-points"
     orientation="horizontal"
     spacing="medium"
@@ -140,7 +140,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 >
     <div>
         <Text is="strong">12</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="12"
                 spacing="medium"
@@ -166,7 +166,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">11</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="11"
                 spacing="medium"
@@ -192,7 +192,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">10</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="10"
                 spacing="medium"
@@ -218,7 +218,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">9</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="9"
                 spacing="medium"
@@ -244,7 +244,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">8</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="8"
                 spacing="medium"
@@ -270,7 +270,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">7</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="7"
                 spacing="medium"
@@ -296,7 +296,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">6</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="6"
                 spacing="medium"
@@ -322,7 +322,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">5</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="5"
                 spacing="medium"
@@ -348,7 +348,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">4</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="4"
                 spacing="medium"
@@ -374,7 +374,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">3</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="3"
                 spacing="medium"
@@ -400,7 +400,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">2</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="2"
                 spacing="medium"
@@ -426,7 +426,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
 
     <div>
         <Text is="strong">1</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="1"
                 spacing="medium"
@@ -449,7 +449,7 @@ You can adjust how many points the `Grid.Container` items are divided by via the
             </Grid.Container>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.grid-points .grid) {
@@ -478,7 +478,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="grid-spacing"
     orientation="horizontal"
     spacing="medium"
@@ -486,7 +486,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 >
     <div>
         <Text is="strong">DEFAULT</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container points="3">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
@@ -501,7 +501,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
     <div>
         <Text is="strong">TINY</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container points="3" spacing="tiny">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
@@ -516,7 +516,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
     <div>
         <Text is="strong">SMALL</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container points="3" spacing="small">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
@@ -531,7 +531,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
     <div>
         <Text is="strong">MEDIUM</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container
                 points="3"
                 spacing="medium"
@@ -549,7 +549,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
     <div>
         <Text is="strong">LARGE</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container points="3" spacing="large">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
@@ -564,7 +564,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
     <div>
         <Text is="strong">HUGE</Text>
-        <Box palette="dark" padding="small">
+        <Box palette="inverse" padding="small">
             <Grid.Container points="3" spacing="huge">
                 <Box palette="alert" />
                 <Box palette="affirmative" />
@@ -576,7 +576,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
             </Grid.Container>
         </Box>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.grid-spacing .grid) {
@@ -591,7 +591,7 @@ You can adjust the spacing between items via the `spacing`, `spacing_x`, and `sp
 
 ## Item Span
 
-> **NOTE**: New since `v0.2.10`.
+> **NOTE**: Introduced feature in `v0.2.10`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `span={["3", "tablet:2", "mobile:1"]}`
 

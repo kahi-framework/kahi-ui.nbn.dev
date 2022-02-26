@@ -1,13 +1,30 @@
 +++
 [[properties.Button]]
+name="is"
+description="Alters the HTML tag rendered to the DOM."
+default="button"
+types=["a", "button", "input", "label"]
+
+[[properties.Button]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties.Button]]
+name="radius"
+description="Changes the border radius of the `Button`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
+
+[[properties.Button]]
+name="shape"
+description="Changes the shape of the `Button`."
+types=["circle", "pill", "{VIEWPORT}:{SHAPE}"]
 
 [[properties.Button]]
 name="sizing"
 description="Renders the `Button` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Button]]
 name="variation"
@@ -25,14 +42,14 @@ description="Renders the `Button` with `disabled` / `aria-disabled` attributes, 
 types=["boolean"]
 
 [[properties.Button]]
-name="type"
-description="Renders the `Button` as a `<input />` as a specific form type."
-types=["button", "reset", "submit"]
-
-[[properties.Button]]
 name="name"
 description="Sets the form name of the `Button` whenever `Button.type` is set."
 types=["string"]
+
+[[properties.Button]]
+name="type"
+description="Renders the `Button` as a `<input />` as a specific form type."
+types=["button", "reset", "submit"]
 
 [[properties.Button]]
 name="value"
@@ -40,13 +57,13 @@ description="Sets the form value of the `Button` whenever `Button.type` is set."
 types=["string"]
 
 [[properties.Button]]
-name="href"
-description="Renders the `Button` as a `<a role=\"button\">` and links to the specified `href` property."
+name="download"
+description="If linking to a downloadable file, this property will be used as the suggested file name."
 types=["string"]
 
 [[properties.Button]]
-name="download"
-description="If linking to a downloadable file, this property will be used as the suggested file name."
+name="href"
+description="Renders the `Button` as a `<a role=\"button\">` and links to the specified `href` property."
 types=["string"]
 
 [[properties.Button]]
@@ -162,7 +179,7 @@ types=["<alpha-value>"]
 
 # Button
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Button` is used to usually trigger an action in the Web Application, such as submitting forms or opening an Overlay.
 
@@ -191,7 +208,7 @@ You can change the color palette of the `Button` via the `palette` property.
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -200,6 +217,10 @@ You can change the color palette of the `Button` via the `palette` property.
 
     <Button palette="accent">
         This is a ACCENT Button!
+    </Button>
+
+    <Button palette="neutral">
+        This is a NEUTRAL Button!
     </Button>
 
     <Button palette="light">
@@ -218,15 +239,220 @@ You can change the color palette of the `Button` via the `palette` property.
         This is a AFFIRMATIVE Button!
     </Button>
 
+    <Button palette="informative">
+        This is a INFORMATIVE Button!
+    </Button>
+
     <Button palette="negative">
         This is a NEGATIVE Button!
     </Button>
-</Stack>
+</Stack.Container>
+```
+
+## Clear
+
+`Button` components have a special variation that renders as text with no background, that lightly fills in when clicked.
+
+```svelte {title="Button Clear" mode="repl"}
+<script>
+    import {Button, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="clear">
+        This is a DEFAULT Button!
+    </Button>
+
+    <Button variation="clear" palette="accent">
+        This is a ACCENT Button!
+    </Button>
+
+    <Button variation="clear" palette="neutral">
+        This is a NEUTRAL Button!
+    </Button>
+
+    <Button variation="clear" palette="light">
+        This is a LIGHT Button!
+    </Button>
+
+    <Button variation="clear" palette="dark">
+        This is a DARK Button!
+    </Button>
+
+    <Button variation="clear" palette="alert">
+        This is a ALERT Button!
+    </Button>
+
+    <Button variation="clear" palette="affirmative">
+        This is a AFFIRMATIVE Button!
+    </Button>
+
+    <Button variation="clear" palette="informative">
+        This is a INFORMATIVE Button!
+    </Button>
+
+    <Button variation="clear" palette="negative">
+        This is a NEGATIVE Button!
+    </Button>
+</Stack.Container>
+```
+
+## Outline
+
+`Button` components have a special variation that renders them as text with an outline, the fills in when clicked.
+
+```svelte {title="Button Outline" mode="repl"}
+<script>
+    import {Button, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="outline">
+        This is a DEFAULT Button!
+    </Button>
+
+    <Button variation="outline" palette="accent">
+        This is a ACCENT Button!
+    </Button>
+
+    <Button variation="outline" palette="neutral">
+        This is a NEUTRAL Button!
+    </Button>
+
+    <Button variation="outline" palette="light">
+        This is a LIGHT Button!
+    </Button>
+
+    <Button variation="outline" palette="dark">
+        This is a DARK Button!
+    </Button>
+
+    <Button variation="outline" palette="alert">
+        This is a ALERT Button!
+    </Button>
+
+    <Button variation="outline" palette="affirmative">
+        This is a AFFIRMATIVE Button!
+    </Button>
+
+    <Button variation="outline" palette="informative">
+        This is a INFORMATIVE Button!
+    </Button>
+
+    <Button variation="outline" palette="negative">
+        This is a NEGATIVE Button!
+    </Button>
+</Stack.Container>
+```
+
+## Subtle
+
+> **NOTE**: Introduced feature in `v0.5.1`.
+
+You can alter the `Button` Component to use less intense / remove "attention grabbing" animations via the `variation` property.
+
+```svelte {title="Button Subtle" mode="repl"}
+<script>
+    import {Button, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button palette="inverse" variation="subtle">
+        This is a SUBTLE BLOCK Button!
+    </Button>
+
+    <Button
+        palette="inverse"
+        variation={["subtle", "clear"]}
+    >
+        This is a CLEAR OUTLINE Button!
+    </Button>
+
+    <Button
+        palette="inverse"
+        variation={["subtle", "outline"]}
+    >
+        This is a SUBTLE OUTLINE Button!
+    </Button>
+</Stack.Container>
+```
+
+## States
+
+You can control the state of the `Button` via the `active` and `disabled` properties.
+
+```svelte {title="Button States" mode="repl"}
+<script>
+    import {
+        Button,
+        Stack,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Text is="strong">DEFAULT</Text>
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button>DEFAULT</Button>
+    <Button disabled>DISABLED INACTIVE</Button>
+    <Button active>ACTIVE</Button>
+    <Button active disabled>DISABLED ACTIVE</Button>
+</Stack.Container>
+
+<Text is="strong">OUTLINE</Text>
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="outline">DEFAULT</Button>
+    <Button variation="outline" disabled>
+        DISABLED INACTIVE
+    </Button>
+
+    <Button variation="outline" active>ACTIVE</Button>
+    <Button variation="outline" active disabled>
+        DISABLED ACTIVE
+    </Button>
+</Stack.Container>
+
+<Text is="strong">CLEAR</Text>
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Button variation="clear">DEFAULT</Button>
+    <Button variation="clear" disabled>
+        DISABLED INACTIVE
+    </Button>
+    <Button variation="clear" active>ACTIVE</Button>
+    <Button variation="clear" active disabled>
+        DISABLED ACTIVE
+    </Button>
+</Stack.Container>
 ```
 
 ## Sizing
 
-> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the size of the `Button` via the `sizing` property.
 
@@ -235,13 +461,17 @@ You can change the size of the `Button` via the `sizing` property.
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
     variation="wrap"
 >
     <Button>This is a DEFAULT Button!</Button>
+
+    <Button sizing="nano">
+        This is a NANO Button!
+    </Button>
 
     <Button sizing="tiny">
         This is a TINY Button!
@@ -262,134 +492,106 @@ You can change the size of the `Button` via the `sizing` property.
     <Button sizing="huge">
         This is a HUGE Button!
     </Button>
-</Stack>
+
+    <Button sizing="massive">
+        This is a MASSIVE Button!
+    </Button>
+</Stack.Container>
 ```
 
-## Clear
+## Radius
 
-`Button` components have a special variation that renders as text with no background, that lightly fills in when clicked.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
-```svelte {title="Button Clear" mode="repl"}
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can change the border radius of the `Button` via the `radius` property.
+
+```svelte {title="Button Radius" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
+    alignment_y="top"
     spacing="medium"
     variation="wrap"
 >
-    <Button variation="clear">
-        This is a DEFAULT Button!
+    <Button>This is a DEFAULT Button!</Button>
+
+    <Button radius="none">
+        This is a NONE Button!
     </Button>
 
-    <Button variation="clear" palette="accent">
-        This is a ACCENT Button!
+    <Button radius="nano">
+        This is a NANO Button!
     </Button>
 
-    <Button variation="clear" palette="light">
-        This is a LIGHT Button!
+    <Button radius="tiny">
+        This is a TINY Button!
     </Button>
 
-    <Button variation="clear" palette="dark">
-        This is a DARK Button!
+    <Button radius="small">
+        This is a SMALL Button!
     </Button>
 
-    <Button variation="clear" palette="alert">
-        This is a ALERT Button!
+    <Button radius="medium">
+        This is a MEDIUM Button!
     </Button>
 
-    <Button variation="clear" palette="affirmative">
-        This is a AFFIRMATIVE Button!
+    <Button radius="large">
+        This is a LARGE Button!
     </Button>
 
-    <Button variation="clear" palette="negative">
-        This is a NEGATIVE Button!
+    <Button radius="huge">
+        This is a HUGE Button!
     </Button>
-</Stack>
+
+    <Button radius="massive">
+        This is a MASSIVE Button!
+    </Button>
+</Stack.Container>
 ```
 
-## Outline
+## Shapes
 
-`Button` components have a special variation that renders them as text with an outline, the fills in when clicked.
+> **NOTE**: Introduced feature in `v0.6.0`.
 
-```svelte {title="Button Outline" mode="repl"}
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
+
+You can change the shape of the `Button` via the `shape` property.
+
+```svelte {title="Button Shapes" mode="repl"}
 <script>
     import {Button, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
+    alignment_y="top"
     spacing="medium"
     variation="wrap"
 >
-    <Button variation="outline">
-        This is a DEFAULT Button!
+    <Button>This is a DEFAULT Button!</Button>
+
+    <Button shape="circle">
+        This is a CIRCLE Button!
     </Button>
 
-    <Button variation="outline" palette="accent">
-        This is a ACCENT Button!
+    <Button shape="pill">
+        This is a PILL Button!
     </Button>
-
-    <Button variation="outline" palette="light">
-        This is a LIGHT Button!
-    </Button>
-
-    <Button variation="outline" palette="dark">
-        This is a DARK Button!
-    </Button>
-
-    <Button variation="outline" palette="alert">
-        This is a ALERT Button!
-    </Button>
-
-    <Button variation="outline" palette="affirmative">
-        This is a AFFIRMATIVE Button!
-    </Button>
-
-    <Button variation="outline" palette="negative">
-        This is a NEGATIVE Button!
-    </Button>
-</Stack>
+</Stack.Container>
 ```
 
-## Subtle
+## Elements
 
-> **NOTE**: New since `v0.5.1`.
+> **WARNING**: This feature was updated to require explicit `is` property in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
-You can alter the `Button` Component to use less intense / remove "attention grabbing" animations via the `variation` property.
+You can alter the HTML element tag rendered to DOM via the `is` property to render things like links and form buttons.
 
-```svelte {title="Button Subtle" mode="repl"}
-<script>
-    import {Button, Stack} from "@kahi-ui/framework";
-</script>
-
-<Stack
-    orientation="horizontal"
-    spacing="medium"
-    variation="wrap"
->
-    <Button variation="subtle">
-        This is a SUBTLE BLOCK Button!
-    </Button>
-
-    <Button variation={["subtle", "clear"]}>
-        This is a CLEAR OUTLINE Button!
-    </Button>
-
-    <Button variation={["subtle", "outline"]}>
-        This is a SUBTLE OUTLINE Button!
-    </Button>
-</Stack>
-```
-
-## Types
-
-> **DEPRECATED**: This feature will require an explicit `is` property in `v0.6.0`.
-
-You can change make the `Button` a `<a>` by passing the `href` property, or a `<label>` by passing the `for` property. And also, change the input type between `<input type="button" />` **(DEFAULT)**, `<input type="reset" />`, `<input type="submit" />` via the `type` / `value` properties.
-
-```svelte {title="Button Types" mode="repl"}
+```svelte {title="Button Elements" mode="repl"}
 <script>
     import {
         Button,
@@ -400,7 +602,7 @@ You can change make the `Button` a `<a>` by passing the `href` property, or a `<
 
 <Check id="button-types-label" />
 
-<Stack
+<Stack.Container
     alignment_y="top"
     orientation="horizontal"
     spacing="medium"
@@ -437,5 +639,5 @@ You can change make the `Button` a `<a>` by passing the `href` property, or a `<
         type="reset"
         value="This is a RESET Button!"
     />
-</Stack>
+</Stack.Container>
 ```

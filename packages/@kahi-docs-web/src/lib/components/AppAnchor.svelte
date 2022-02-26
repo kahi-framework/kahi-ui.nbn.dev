@@ -8,6 +8,9 @@
 
     import {is_current_page, is_external_url} from "@kahi-docs/shared";
 
+    let _class: string = "";
+    export {_class as class};
+
     export let is: "a" | "button" = "a";
 
     export let href: string;
@@ -18,7 +21,7 @@
 
     export let palette: PROPERTY_PALETTE | undefined = undefined;
     export let variation: PROPERTY_VARIATION_BUTTON | undefined = undefined;
-    export let size: PROPERTY_SIZING | undefined = undefined;
+    export let sizing: PROPERTY_SIZING | undefined = undefined;
 
     $: _is_current = no_handle ? false : is_current_page($page, href);
     $: _is_external = is_external_url(href);
@@ -29,7 +32,7 @@
 
 {#if is === "button"}
     <a
-        class="button"
+        class="button {_class}"
         aria-current={_is_current ? "page" : undefined}
         {href}
         target={_is_external ? "_blank" : undefined}
@@ -37,13 +40,14 @@
         sveltekit:noscroll={_no_scroll}
         sveltekit:prefetch={_prefetch}
         data-palette={palette}
-        data-size={size}
+        data-sizing={sizing}
         data-variation={variation}
     >
         <slot />
     </a>
 {:else}
     <a
+        class={_class || undefined}
         aria-current={_is_current ? "page" : undefined}
         {href}
         target={_is_external ? "_blank" : undefined}
@@ -55,3 +59,9 @@
         <slot />
     </a>
 {/if}
+
+<style>
+    a :global(svg) {
+        display: inline-block;
+    }
+</style>

@@ -16,7 +16,7 @@ All Components have access to all global [SvelteKit](https://kit.svelte.dev) att
 
 ## sveltekit:noscroll
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 [`sveltekit:noscroll`](https://kit.svelte.dev/docs#anchor-options-sveltekit-noscroll) configures SvelteKit to disable scrolling to top / linked element ID #hash whenever the link is clicked.
 
@@ -35,7 +35,7 @@ All Components have access to all global [SvelteKit](https://kit.svelte.dev) att
 
 ## sveltekit:prefetch
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 [`sveltekit:prefetch`](https://kit.svelte.dev/docs#anchor-options-sveltekit-prefetch) configures SvelteKit to fetch the linked route's [`load`](https://kit.svelte.dev/docs#loading) whenever the link is hovered.
 

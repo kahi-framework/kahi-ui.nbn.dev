@@ -23,12 +23,12 @@ types=["number", "string"]
 [[properties.Pagination]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Pagination]]
 name="sizing"
 description="Sets the sizing of the paging buttons."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[events.Pagination]]
 name="select"
@@ -48,7 +48,7 @@ types=["{}"]
 
 # Pagination
 
-> **NOTE**: New since `v0.5.1`.
+> **NOTE**: Introduced feature in `v0.5.1`.
 
 `Pagination` is typically used for allowing the user to navigate data or content that is separated into groupings of information, or "pages".
 
@@ -93,7 +93,9 @@ You can set how many pages there are for the associated content and which page i
 
 ## Anchors
 
-> **IMPORTANT**: The `${page}` token is non-standard, it needs to be set as a Javascript string literal, e.g. `href={"/path/to/list/${href}"}`
+> **WARNING**: This feature was updated to require explicit `is` property in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
+> **IMPORTANT**: The `${page}` token is non-standard string substitution provided by this feature, and must be set via string expressions, e.g. `href={"/path/to/list/${page}"}`.
 
 You can have the paging buttons be anchors via `href` property. And adding `${page}` in your link where you want the page number to be inserted.
 
@@ -103,6 +105,7 @@ You can have the paging buttons be anchors via `href` property. And adding `${pa
 </script>
 
 <Pagination
+    is="a"
     href={"/path/to/list?page=${page}"}
     pages={42}
     value={24}
@@ -161,7 +164,7 @@ You can change the color palette of the `Pagination` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Pagination pages={10} value={5} />
@@ -174,6 +177,16 @@ You can change the color palette of the `Pagination` via the `palette` property.
             pages={10}
             value={5}
             palette="accent"
+        />
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            palette="neutral"
         />
     </div>
 
@@ -218,6 +231,16 @@ You can change the color palette of the `Pagination` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            palette="informative"
+        />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
 
         <Pagination
@@ -226,7 +249,7 @@ You can change the color palette of the `Pagination` via the `palette` property.
             palette="negative"
         />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ### Sizing
@@ -242,10 +265,20 @@ You can alter the overall sizing look and feel via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Pagination pages={10} value={5} />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            sizing="nano"
+        />
     </div>
 
     <div>
@@ -297,5 +330,15 @@ You can alter the overall sizing look and feel via the `sizing` property.
             sizing="huge"
         />
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <Pagination
+            pages={10}
+            value={5}
+            sizing="massive"
+        />
+    </div>
+</Stack.Container>
 ```

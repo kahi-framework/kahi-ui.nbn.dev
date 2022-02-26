@@ -7,7 +7,7 @@ types=["string"]
 [[properties.TimePicker]]
 name="disabled"
 description="Disables any component of time from being selected."
-types=["boolean"]
+types=["boolean", "string[]"]
 
 [[properties.TimePicker]]
 name="readonly"
@@ -27,7 +27,7 @@ types=["boolean"]
 [[properties.TimePicker]]
 name="highlight"
 description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp of the current time to be highlighted as outlines."
-types=["string"]
+types=["string[]"]
 
 [[properties.TimePicker]]
 name="max"
@@ -42,17 +42,12 @@ types=["string"]
 [[properties.TimePicker]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.TimePicker]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `TimePicker`."
-types=["tiny", "small", "medium", "large", "huge"]
-
-[[properties.TimePicker]]
-name="calendar"
-description="Alters the calendar used for calculations / formatting via [Temporal Calendar Codes](https://tc39.es/proposal-temporal/docs/calendar.html)."
-types=["string"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.TimePicker]]
 name="locale"
@@ -92,7 +87,7 @@ types=["CustomEvent<void>"]
 
 # TimePicker
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `TimePicker` is a Widget that displays a set of hour, minute, second clock scrollable areas that a user can select from.
 
@@ -130,7 +125,7 @@ You can enable the displaying of a "NOW" button to allow the user to set the pic
 
 ## Auto Scroll
 
-> **WARNING**: This property will cause layout reflowing. And can result poor performance when mounted during points of high activity. e.g. when your web page first loads
+> **WARNING**: This feature can cause performance degradation in when mounted.
 
 You can enable auto scrolling to the currently set `value` when `TimePicker` is mounted, via the `scroll` property.
 
@@ -190,11 +185,29 @@ You can disable all interactivity via the `disabled` property.
 <TimePicker palette="accent" {value} disabled />
 ```
 
+## Disabled Timestamps
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can disable specific timestamps from being selected via the `disabled` property.
+
+```svelte {title="TimePicker Disabled" mode="repl"}
+<script>
+    import {TimePicker} from "@kahi-ui/framework";
+
+    const value = "13:30:15";
+
+    const disabled = ["11:00:00", "15:00:00"];
+</script>
+
+<TimePicker palette="accent" {disabled} {value} />
+```
+
 ## Highlight
 
 > **NOTE**: By default, the current time is used.
 
-> **DEPRECATED**: This feature will be switched from supporting singular strings (_`string`_) to string arrays (_`string[]`_) in `v0.6.0`.
+> **WARNING**: This feature was changed to accept `string[]` instead of `string` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can select a specific timestamp to be highlighted as outlines via the `highlight` property.
 
@@ -204,7 +217,7 @@ You can select a specific timestamp to be highlighted as outlines via the `highl
 
     const value = "13:30:15";
 
-    const highlight = "15:00:00";
+    const highlight = ["15:00:00"];
 </script>
 
 <TimePicker palette="accent" {highlight} {value} />
@@ -212,7 +225,7 @@ You can select a specific timestamp to be highlighted as outlines via the `highl
 
 ## Maximum + Minimum
 
-You can set maximum and minimum range of selectable times via the `maximum` / `minimum` properties.
+You can set maximum and minimum range of selectable times via the `max` / `min` properties.
 
 ```svelte {title="TimePicker Maximum + Minimum" mode="repl"}
 <script>
@@ -263,7 +276,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
     const value = "13:30:15";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     alignment_y="top"
@@ -273,6 +286,16 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
         <Text is="strong">DEFAULT</Text>
 
         <TimePicker palette="accent" {value} />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+
+        <TimePicker
+            palette="accent"
+            sizing="nano"
+            {value}
+        />
     </div>
 
     <div>
@@ -324,5 +347,15 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
             {value}
         />
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+
+        <TimePicker
+            palette="accent"
+            sizing="massive"
+            {value}
+        />
+    </div>
+</Stack.Container>
 ```

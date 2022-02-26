@@ -34,7 +34,7 @@
     :global(.aside-layout) :global(.aside-container) {
         grid-area: content;
 
-        padding-top: 4.4rem;
+        padding-top: 80px;
 
         overflow-x: hidden;
     }

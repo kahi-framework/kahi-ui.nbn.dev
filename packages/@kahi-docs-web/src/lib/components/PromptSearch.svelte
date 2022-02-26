@@ -1,6 +1,14 @@
-<script lang="ts">
-    import {tick} from "svelte";
+<script context="module" lang="ts">
+    import {Book, Megaphone} from "lucide-svelte";
+    import type {SvelteComponent} from "svelte";
 
+    const CONTENT_ICONS: Record<string, typeof SvelteComponent | undefined> = {
+        blog: Megaphone,
+        docs: Book,
+    };
+</script>
+
+<script lang="ts">
     import type {IKeybindEvent} from "@kahi-ui/framework";
     import {
         Card,
@@ -14,6 +22,8 @@
         TextInput,
         Tile,
     } from "@kahi-ui/framework";
+    import {ArrowRight} from "lucide-svelte";
+    import {tick} from "svelte";
 
     import {scroll_into_container} from "../client/element";
     import {next_keybind, previous_keybind} from "../client/keybind";
@@ -21,14 +31,11 @@
     import {make_searcher} from "../../lib/client/search";
 
     import AppAnchor from "./AppAnchor.svelte";
-    import ArrowRight from "./icons/ArrowRight.svelte";
-    import File from "./icons/File.svelte";
 
     export let logic_state: boolean = false;
 
-    let container_element: HTMLDivElement;
-    let input_element: HTMLInputElement;
-    let scrollable_element: HTMLDivElement;
+    let input_element: HTMLInputElement | undefined;
+    let scrollable_element: HTMLDivElement | undefined;
 
     let current: number = -1;
     let results: ISearchResult[] | null = null;
@@ -37,12 +44,12 @@
     let promise: Promise<any> | null = null;
 
     function get_current(): [HTMLDivElement | null, HTMLAnchorElement | null] {
-        const tile_element = container_element.querySelector<HTMLDivElement>(
-            `.tile[data-palette="accent"]`
-        );
+        if (!scrollable_element) return [null, null];
+
+        const tile_element = scrollable_element.querySelectorAll<HTMLDivElement>(`.tile`)[current];
         if (!tile_element) return [null, null];
 
-        const anchor_element = tile_element.querySelector<HTMLAnchorElement>(".clickable-item");
+        const anchor_element = tile_element.querySelector<HTMLAnchorElement>(".clickable--item");
         return [tile_element, anchor_element];
     }
 
@@ -74,6 +81,12 @@
         anchor_element.focus();
     }
 
+    function get_icon(href: string): typeof SvelteComponent | null {
+        const category = href.split("/")[1];
+
+        return CONTENT_ICONS[category] ?? null;
+    }
+
     async function handle_current(): Promise<void> {
         if (current > -1) {
             await tick();
@@ -82,8 +95,8 @@
             if (!anchor_element || !tile_element) return;
 
             anchor_element.focus();
-            scroll_into_container(tile_element, scrollable_element, "center", "smooth");
-        } else input_element.focus();
+            scroll_into_container(tile_element, "center", "smooth", scrollable_element);
+        } else if (input_element) input_element.focus();
     }
 
     $: if (!logic_state) value = "";
@@ -106,7 +119,6 @@
     <Overlay.Section animation="slide" direction="top" alignment_y="top">
         {#if searcher}
             <Card.Container
-                bind:element={container_element}
                 palette="auto"
                 margin_top="huge"
                 width="prose"
@@ -128,16 +140,19 @@
                 {#if results}
                     <Card.Section>
                         <Scrollable bind:element={scrollable_element} max_height="viewport-50">
-                            <Stack spacing="small">
+                            <Stack.Container spacing="small">
                                 {#each results as result, index (result.identifier)}
                                     <Clickable.Container>
                                         <Tile.Container
                                             palette={index === current ? "accent" : undefined}
-                                            sizing="small"
+                                            elevation="none"
+                                            sizing="tiny"
                                             on:pointerenter={on_select_enter.bind(null, index)}
                                         >
-                                            <Tile.Figure style="font-size:24px;">
-                                                <File />
+                                            <Tile.Figure>
+                                                <svelte:component
+                                                    this={get_icon(result.identifier)}
+                                                />
                                             </Tile.Figure>
 
                                             <Tile.Section>
@@ -152,18 +167,22 @@
                                             </Tile.Section>
 
                                             <Tile.Footer>
-                                                <ArrowRight />
+                                                <ArrowRight size="1em" />
                                             </Tile.Footer>
                                         </Tile.Container>
                                     </Clickable.Container>
                                 {/each}
-                            </Stack>
+                            </Stack.Container>
                         </Scrollable>
                     </Card.Section>
                 {/if}
 
                 <Card.Section>
-                    <AppAnchor href="https://github.com/nextapps-de/flexsearch" palette="accent">
+                    <AppAnchor
+                        class="anchor"
+                        href="https://github.com/nextapps-de/flexsearch"
+                        palette="accent"
+                    >
                         Powered by FlexSearch
                     </AppAnchor>
                 </Card.Section>

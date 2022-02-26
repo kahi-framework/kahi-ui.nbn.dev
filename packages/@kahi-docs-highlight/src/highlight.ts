@@ -1,6 +1,7 @@
 import Prism from "prismjs";
 
 import "./syntaxes/prism-bash";
+import "./syntaxes/prism-scss";
 import "./syntaxes/prism-svelte";
 
 /**

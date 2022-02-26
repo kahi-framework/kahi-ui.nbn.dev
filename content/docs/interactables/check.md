@@ -2,12 +2,12 @@
 [[properties.Check]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Check]]
 name="sizing"
 description="Renders the `Check` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Check]]
 name="variation"
@@ -137,9 +137,7 @@ types=["<alpha-value>"]
 
 # Check
 
-> **NOTE**: New since `v0.2.7`.
-
-> **WARNING**: Received a breaking change in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 `Check` is typically used to present a set of options to the end-user, which they can then choose from.
 
@@ -160,7 +158,7 @@ types=["<alpha-value>"]
     <Text is="sup">{logic_state}</Text>
 </Text>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="small"
     variation="wrap"
@@ -203,7 +201,7 @@ types=["<alpha-value>"]
             Pineapple
         </Check>
     </Form.Group>
-</Stack>
+</Stack.Container>
 ```
 
 ## Imports
@@ -227,48 +225,47 @@ You can control the state of the `Check` via the `active`, `disabled`, and `stat
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="check-states"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Check />
     </div>
 
     <div>
         <Text is="strong">STATE</Text>
+        <br />
         <Check state />
     </div>
 
     <div>
         <Text is="strong">ACTIVE NO-STATE</Text>
+        <br />
         <Check active />
     </div>
 
     <div>
         <Text is="strong">ACTIVE STATE</Text>
+        <br />
         <Check active state />
     </div>
 
     <div>
         <Text is="strong">DISABLED NO-STATE</Text>
+        <br />
         <Check disabled />
     </div>
 
     <div>
         <Text is="strong">DISABLED STATE</Text>
+        <br />
         <Check disabled state />
     </div>
-</Stack>
-
-<style>
-    :global(.check-states strong) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
 
 ## Palette
@@ -284,58 +281,72 @@ You can change the color palette of the `Check` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="check-palette"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Check />
     </div>
 
     <div>
         <Text is="strong">ACCENT</Text>
+        <br />
         <Check palette="accent" />
     </div>
 
     <div>
+        <Text is="strong">NEUTRAL</Text>
+        <br />
+        <Check palette="neutral" />
+    </div>
+
+    <div>
         <Text is="strong">DARK</Text>
+        <br />
         <Check palette="dark" />
     </div>
 
     <div>
         <Text is="strong">LIGHT</Text>
+        <br />
         <Check palette="light" />
     </div>
 
     <div>
         <Text is="strong">ALERT</Text>
+        <br />
         <Check palette="alert" />
     </div>
 
     <div>
         <Text is="strong">AFFIRMATIVE</Text>
+        <br />
         <Check palette="affirmative" />
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <br />
+        <Check palette="informative" />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
+        <br />
         <Check palette="negative" />
     </div>
-</Stack>
-
-<style>
-    :global(.check-palette strong) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
 
 ## Sizing
 
-> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the size of the `Check` via the `sizing` property.
 
@@ -348,53 +359,64 @@ You can change the size of the `Check` via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="check-sizing"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Check />
     </div>
 
     <div>
+        <Text is="strong">NANO</Text>
+        <br />
+        <Check sizing="nano" />
+    </div>
+
+    <div>
         <Text is="strong">TINY</Text>
+        <br />
         <Check sizing="tiny" />
     </div>
 
     <div>
         <Text is="strong">SMALL</Text>
+        <br />
         <Check sizing="small" />
     </div>
 
     <div>
         <Text is="strong">MEDIUM</Text>
+        <br />
         <Check sizing="medium" />
     </div>
 
     <div>
         <Text is="strong">LARGE</Text>
+        <br />
         <Check sizing="large" />
     </div>
 
     <div>
         <Text is="strong">HUGE</Text>
+        <br />
         <Check sizing="huge" />
     </div>
-</Stack>
 
-<style>
-    :global(.check-sizing strong) {
-        display: block;
-    }
-</style>
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <br />
+        <Check sizing="massive" />
+    </div>
+</Stack.Container>
 ```
 
 ## Flush
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 You can change the appearance of the `Check` to be flush with the rest of the Application content via the `variation` property.
 

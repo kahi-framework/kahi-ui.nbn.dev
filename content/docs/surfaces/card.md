@@ -2,18 +2,18 @@
 [[properties."Card.Container"]]
 name="elevation"
 description="Alters how \"high\" the `Card` appears to be off the page."
-default="lowest"
-types=["none", "lowest", "low", "medium", "high", "highest"]
+default="lower"
+types=["none", "lowest", "lower", "low", "medium", "high", "higher", "highest", "{VIEWPORT}:{ELEVATION}"]
 
 [[properties."Card.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Card.Container"]]
 name="sizing"
 description="Sets the size of children / spacing relative to the font size of the `Card`."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties."Card.Container"]]
 name="variation"
@@ -193,7 +193,7 @@ types=["<length>"]
 
 # Card
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Card` is a multi-part surface pattern for displaying a section of content in a long-form vertical format.
 
@@ -208,7 +208,7 @@ types=["<length>"]
     } from "@kahi-ui/framework";
 </script>
 
-<Card.Container class="card-preview" palette="auto">
+<Card.Container class="card-preview">
     <Card.Figure>
         <img src={IMAGE_BACKGROUND} />
     </Card.Figure>
@@ -275,7 +275,7 @@ You can change the color palette of the `Card` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="medium">
+<Mosaic.Container sizing="medium" spacing="medium">
     <Card.Container>
         <Card.Figure>
             <img src={IMAGE_BACKGROUND} />
@@ -284,7 +284,7 @@ You can change the color palette of the `Card` via the `palette` property.
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>NEUTRAL / DEFAULT</Badge>
+            <Badge>DEFAULT</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -308,6 +308,29 @@ You can change the color palette of the `Card` via the `palette` property.
             Ocean Rockies
             <Spacer />
             <Badge>ACCENT</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container palette="neutral">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>NEUTRAL</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -414,6 +437,29 @@ You can change the color palette of the `Card` via the `palette` property.
         </Card.Section>
     </Card.Container>
 
+    <Card.Container palette="informative">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>INFORMATIVE</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
     <Card.Container palette="negative">
         <Card.Figure>
             <img src={IMAGE_BACKGROUND} />
@@ -436,12 +482,14 @@ You can change the color palette of the `Card` via the `palette` property.
             </Text>
         </Card.Section>
     </Card.Container>
-</Mosaic>
+</Mosaic.Container>
 ```
 
 ## Elevation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `elevation={["low", "tablet:lowest", "mobile:lowest"]}`
 
 You can set how "high" your `Card` will appear to be over top the page via the `elevation` property.
 
@@ -457,7 +505,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="large">
+<Mosaic.Container sizing="medium" spacing="large">
     <Card.Container elevation="lowest">
         <Card.Figure>
             <img src={IMAGE_BACKGROUND} />
@@ -466,7 +514,7 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         <Card.Header>
             Ocean Rockies
             <Spacer />
-            <Badge>LOWEST / DEFAULT</Badge>
+            <Badge>DEFAULT</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -490,6 +538,52 @@ You can set how "high" your `Card` will appear to be over top the page via the `
             Ocean Rockies
             <Spacer />
             <Badge>NONE</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container elevation="lowest">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>LOWEST</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container elevation="lower">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>LOWER</Badge>
         </Card.Header>
 
         <Card.Section>
@@ -573,6 +667,29 @@ You can set how "high" your `Card` will appear to be over top the page via the `
         </Card.Section>
     </Card.Container>
 
+    <Card.Container elevation="higher">
+        <Card.Figure>
+            <img src={IMAGE_BACKGROUND} />
+        </Card.Figure>
+
+        <Card.Header>
+            Ocean Rockies
+            <Spacer />
+            <Badge>HIGHER</Badge>
+        </Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
     <Card.Container elevation="highest">
         <Card.Figure>
             <img src={IMAGE_BACKGROUND} />
@@ -595,12 +712,12 @@ You can set how "high" your `Card` will appear to be over top the page via the `
             </Text>
         </Card.Section>
     </Card.Container>
-</Mosaic>
+</Mosaic.Container>
 ```
 
 ## Orientation
 
-> **NOTE**: New since `v0.3.5`.
+> **NOTE**: Introduced feature in `v0.3.5`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `orientation={["desktop:vertical", "widescreen:vertical"]}`
 
@@ -618,7 +735,7 @@ You can set the `Card.Footer` to render vertically via the `orientation` propert
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="large">
+<Mosaic.Container sizing="medium" spacing="large">
     <Card.Container>
         <Card.Figure>
             <img src={IMAGE_BACKGROUND} />
@@ -682,12 +799,14 @@ You can set the `Card.Footer` to render vertically via the `orientation` propert
             <Button variation="clear">Cancel</Button>
         </Card.Footer>
     </Card.Container>
-</Mosaic>
+</Mosaic.Container>
 ```
 
 ## Sizing
 
-> **NOTE**: New since `v0.3.3`.
+> **NOTE**: Introduced feature in `v0.3.3`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the sizes / spacings of the child elements via the `sizing` property.
 
@@ -700,7 +819,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="card-sizing"
     orientation="horizontal"
     spacing="medium"
@@ -709,6 +828,21 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 >
     <Card.Container>
         <Card.Header>DEFAULT</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+
+    <Card.Container sizing="nano">
+        <Card.Header>NANO</Card.Header>
 
         <Card.Section>
             <Text>
@@ -796,7 +930,22 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
             </Text>
         </Card.Section>
     </Card.Container>
-</Stack>
+
+    <Card.Container sizing="massive">
+        <Card.Header>MASSIVE</Card.Header>
+
+        <Card.Section>
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non.
+            </Text>
+        </Card.Section>
+    </Card.Container>
+</Stack.Container>
 
 <style>
     :global(.card-sizing > .card) {
@@ -807,7 +956,7 @@ You can change the sizes / spacings of the child elements via the `sizing` prope
 
 ## Flush
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 You can change the appearance of the `Card` to be flush with the rest of the Application content via the `variation` property.
 
@@ -822,11 +971,7 @@ You can change the appearance of the `Card` to be flush with the rest of the App
     } from "@kahi-ui/framework";
 </script>
 
-<Card.Container
-    class="card-flush"
-    palette="auto"
-    variation="flush"
->
+<Card.Container class="card-flush" variation="flush">
     <Card.Figure>
         <img src={IMAGE_BACKGROUND} />
     </Card.Figure>

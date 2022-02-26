@@ -7,13 +7,13 @@ types=["{}"]
 
 # BrowserRender
 
-> **NOTE**: New since `v0.4.1`.
+> **NOTE**: Introduced feature in `v0.4.1`.
 
-> **NOTE**: This Component is renderless, it does not render its own DOM nodes.
+> **NOTE**: This feature is renderless, meaning it does not render anything extra to the DOM.
 
 `BrowserRender` disables rendering of child content that either doesn't work in a SSR environment or doesn't make sense there. e.g. `<canvas>` rendering
 
-> **NOTE**: The REPL runs on your Browser, so this will always show the content.
+> **USAGE**: REPL renders in your Browser, so this feature will always render the content.
 
 ```svelte {title="BrowserRender Preview" mode="repl"}
 <script>

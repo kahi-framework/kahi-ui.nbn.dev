@@ -2,12 +2,12 @@
 [[properties.Radio]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Radio]]
 name="sizing"
 description="Renders the `Radio` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Radio]]
 name="variation"
@@ -137,9 +137,7 @@ types=["<alpha-value>"]
 
 # Radio
 
-> **NOTE**: New since `v0.2.7`.
-
-> **WARNING**: Received a breaking change in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+> **NOTE**: Introduced feature in `v0.2.7`.
 
 `Radio` is typically used to present a set of mutually-exclusive options to the end-user, which they can then choose from.
 
@@ -160,7 +158,7 @@ types=["<alpha-value>"]
     <Text is="sup">{logic_state}</Text>
 </Text>
 
-<Stack spacing="small" margin_top="small">
+<Stack.Container spacing="small" margin_top="small">
     <Form.Group
         logic_name="radio-preview"
         bind:logic_state
@@ -192,7 +190,7 @@ types=["<alpha-value>"]
             Vanilla
         </Radio>
     </Form.Group>
-</Stack>
+</Stack.Container>
 ```
 
 ## Imports
@@ -216,48 +214,47 @@ You can control the state of the `Radio` via the `active`, `disabled`, and `stat
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="radio-states"
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
     <div>
         <Text is="strong">DEFAULT</Text>
+        <br />
         <Radio />
     </div>
 
     <div>
         <Text is="strong">STATE</Text>
+        <br />
         <Radio state />
     </div>
 
     <div>
         <Text is="strong">ACTIVE NO-STATE</Text>
+        <br />
         <Radio active />
     </div>
 
     <div>
         <Text is="strong">ACTIVE STATE</Text>
+        <br />
         <Radio active state />
     </div>
 
     <div>
         <Text is="strong">DISABLED NO-STATE</Text>
+        <br />
         <Radio disabled />
     </div>
 
     <div>
         <Text is="strong">DISABLED STATE</Text>
+        <br />
         <Radio disabled state />
     </div>
-</Stack>
-
-<style>
-    :global(.radio-states strong) {
-        display: block;
-    }
-</style>
+</Stack.Container>
 ```
 
 ## Palette
@@ -275,59 +272,73 @@ You can change the color palette of the `Radio` via the `palette` property.
 </script>
 
 <Form.Group logic_name="radio-palette">
-    <Stack
-        class="radio-palette"
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
     >
         <div>
             <Text is="strong">DEFAULT</Text>
+            <br />
             <Radio />
         </div>
 
         <div>
             <Text is="strong">ACCENT</Text>
+            <br />
             <Radio palette="accent" />
         </div>
 
         <div>
+            <Text is="strong">NEUTRAL</Text>
+            <br />
+            <Radio palette="neutral" />
+        </div>
+
+        <div>
             <Text is="strong">DARK</Text>
+            <br />
             <Radio palette="dark" />
         </div>
 
         <div>
             <Text is="strong">LIGHT</Text>
+            <br />
             <Radio palette="light" />
         </div>
 
         <div>
             <Text is="strong">ALERT</Text>
+            <br />
             <Radio palette="alert" />
         </div>
 
         <div>
             <Text is="strong">AFFIRMATIVE</Text>
+            <br />
             <Radio palette="affirmative" />
         </div>
 
         <div>
+            <Text is="strong">INFORMATIVE</Text>
+            <br />
+            <Radio palette="informative" />
+        </div>
+
+        <div>
             <Text is="strong">NEGATIVE</Text>
+            <br />
             <Radio palette="negative" />
         </div>
-    </Stack>
+    </Stack.Container>
 </Form.Group>
-
-<style>
-    :global(.radio-palette strong) {
-        display: block;
-    }
-</style>
 ```
 
 ## Sizing
 
-> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `sizing={["tiny", "tablet:medium", "mobile:medium"]}`
 
 You can change the size of the `Radio` via the `sizing` property.
 
@@ -342,54 +353,65 @@ You can change the size of the `Radio` via the `sizing` property.
 </script>
 
 <Form.Group logic_name="radio-sizing">
-    <Stack
-        class="radio-sizing"
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
     >
         <div>
             <Text is="strong">DEFAULT</Text>
+            <br />
             <Radio />
         </div>
 
         <div>
+            <Text is="strong">NANO</Text>
+            <br />
+            <Radio sizing="nano" />
+        </div>
+
+        <div>
             <Text is="strong">TINY</Text>
+            <br />
             <Radio sizing="tiny" />
         </div>
 
         <div>
             <Text is="strong">SMALL</Text>
+            <br />
             <Radio sizing="small" />
         </div>
 
         <div>
             <Text is="strong">MEDIUM</Text>
+            <br />
             <Radio sizing="medium" />
         </div>
 
         <div>
             <Text is="strong">LARGE</Text>
+            <br />
             <Radio sizing="large" />
         </div>
 
         <div>
             <Text is="strong">HUGE</Text>
+            <br />
             <Radio sizing="huge" />
         </div>
-    </Stack>
-</Form.Group>
 
-<style>
-    :global(.radio-sizing strong) {
-        display: block;
-    }
-</style>
+        <div>
+            <Text is="strong">MASSIVE</Text>
+            <br />
+            <Radio sizing="massive" />
+        </div>
+    </Stack.Container>
+</Form.Group>
 ```
 
 ## Flush
 
-> **NOTE**: New since `v0.2.13`.
+> **NOTE**: Introduced feature in `v0.2.13`.
 
 You can change the appearance of the `Radio` to be flush with the rest of the Application content via the `variation` property.
 

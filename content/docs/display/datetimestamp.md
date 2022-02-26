@@ -57,7 +57,7 @@ types=["2-digit", "numeric"]
 
 # DateTimeStamp
 
-> **NOTE**: New since `v0.4.10`.
+> **NOTE**: Introduced feature in `v0.4.10`.
 
 `DateTimeStamp` formats an [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp into a human readable string, using the user preferences provided by the Browser.
 
@@ -65,7 +65,7 @@ types=["2-digit", "numeric"]
 <script>
     import {DateTimeStamp} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10T13:00:42Z";
+    const timestamp = "2021-11-10T13:00:42-05:00";
 </script>
 
 <DateTimeStamp {timestamp} />
@@ -87,7 +87,7 @@ You can have the timestamp render as 12-hour time (1...12 AM/PM) instead of 24-h
 <script>
     import {DateTimeStamp} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10T13:00:42Z";
+    const timestamp = "2021-11-10T13:00:42-05:00";
 </script>
 
 <DateTimeStamp hour="numeric" hour_12 {timestamp} />
@@ -103,7 +103,7 @@ You can customize how each individual component of the timestamp is displayed vi
 <script>
     import {DateTimeStamp} from "@kahi-ui/framework";
 
-    const timestamp = "2021-11-10T13:00:42Z";
+    const timestamp = "2021-11-10T13:00:42-05:00";
 </script>
 
 <DateTimeStamp

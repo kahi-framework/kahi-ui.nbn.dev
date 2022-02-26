@@ -2,81 +2,81 @@
 [[properties."*"]]
 name="margin"
 description="Alters the visual spacing around the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="margin_x"
 description="Alters the visual spacing around the horizontal axis of the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="margin_y"
 description="Alters the visual spacing around the vertical axis of the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="margin_left"
 description="Alters the visual spacing to the left of the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="margin_top"
 description="Alters the visual spacing to the top of the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="margin_right"
 description="Alters the visual spacing to the right of the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="margin_bottom"
 description="Alters the visual spacing to the bottom of the Component."
-types=["auto", "none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["auto", "none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding"
 description="Alters the inner visual spacing of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding_x"
 description="Alters the inner visual spacing along the horizontal axis of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding_y"
 description="Alters the inner visual spacing along the vertical axis of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding_left"
 description="Alters the inner visual spacing on the left side of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding_top"
 description="Alters the inner visual spacing on the top side of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding_right"
 description="Alters the inner visual spacing on the right side of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 
 [[properties."*"]]
 name="padding_bottom"
 description="Alters the inner visual spacing on the bottom side of the Component."
-types=["none", "tiny", "small", "medium", "large", "huge", "{VIEWPORT}:{SPACING}"]
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SPACING}"]
 +++
 
 # Spacings
 
-All Components have access to the global margin and padding HTML data attributes. All of which, supports [Responitivity](../framework/responsitivity.md).
+All Components have access to the global margin and padding HTML data attributes. All of which, supports [Responsitivity](../framework/responsitivity.md).
 
 ## Margin
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `margin={["small", "tablet:large"]}`
 
@@ -91,43 +91,57 @@ You can set margins for your Components via the `margin` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
     variation="wrap"
 >
     <Box palette="negative">
-        <Box palette="alert" margin="none">NONE</Box>
+        <Box palette="neutral" margin="none">NONE</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="tiny">TINY</Box>
+        <Box palette="neutral" margin="nano">NANO</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="small">SMALL</Box>
+        <Box palette="neutral" margin="tiny">TINY</Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="medium">
+        <Box palette="neutral" margin="small">
+            SMALL
+        </Box>
+    </Box>
+
+    <Box palette="negative">
+        <Box palette="neutral" margin="medium">
             MEDIUM
         </Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="large">LARGE</Box>
+        <Box palette="neutral" margin="large">
+            LARGE
+        </Box>
     </Box>
 
     <Box palette="negative">
-        <Box palette="alert" margin="huge">HUGE</Box>
+        <Box palette="neutral" margin="huge">HUGE</Box>
     </Box>
-</Stack>
+
+    <Box palette="negative">
+        <Box palette="neutral" margin="massive">
+            MASSIVE
+        </Box>
+    </Box>
+</Stack.Container>
 ```
 
 ## Padding
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `padding={["small", "tablet:large"]}`
 
@@ -142,36 +156,44 @@ You can set paddings for your Components via the `padding` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     alignment_y="top"
     spacing="medium"
     variation="wrap"
 >
-    <Box palette="alert" padding="none">
-        <Box palette="negative">NONE</Box>
+    <Box palette="informative" padding="none">
+        <Box palette="neutral">NONE</Box>
     </Box>
 
-    <Box palette="alert" padding="tiny">
-        <Box palette="negative">TINY</Box>
+    <Box palette="informative" padding="nano">
+        <Box palette="neutral">NANO</Box>
     </Box>
 
-    <Box palette="alert" padding="small">
-        <Box palette="negative">SMALL</Box>
+    <Box palette="informative" padding="tiny">
+        <Box palette="neutral">TINY</Box>
     </Box>
 
-    <Box palette="alert" padding="medium">
-        <Box palette="negative">MEDIUM</Box>
+    <Box palette="informative" padding="small">
+        <Box palette="neutral">SMALL</Box>
     </Box>
 
-    <Box palette="alert" padding="large">
-        <Box palette="negative">LARGE</Box>
+    <Box palette="informative" padding="medium">
+        <Box palette="neutral">MEDIUM</Box>
     </Box>
 
-    <Box palette="alert" padding="huge">
-        <Box palette="negative">HUGE</Box>
+    <Box palette="informative" padding="large">
+        <Box palette="neutral">LARGE</Box>
     </Box>
-</Stack>
+
+    <Box palette="informative" padding="huge">
+        <Box palette="neutral">HUGE</Box>
+    </Box>
+
+    <Box palette="informative" padding="massive">
+        <Box palette="neutral">MASSIVE</Box>
+    </Box>
+</Stack.Container>
 ```
 
 ## Directional

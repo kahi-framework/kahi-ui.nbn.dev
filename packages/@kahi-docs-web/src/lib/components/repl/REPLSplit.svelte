@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {Box, Center, Wave} from "@kahi-ui/framework";
+    import {Box, Center, Dot, Ellipsis} from "@kahi-ui/framework";
 
     import Split, {SPLIT_MODE, SPLIT_ORIENTATION} from "../Split.svelte";
 
@@ -31,9 +31,11 @@
 
     {#if !_initial_load}
         <REPLOverlay>
-            <Box palette="auto" width="100" height="100">
+            <Box width="100" height="100">
                 <Center height="100">
-                    <Wave />
+                    <Ellipsis animation="bounce" iterations="5">
+                        <Dot palette="inverse" />
+                    </Ellipsis>
                 </Center>
             </Box>
         </REPLOverlay>

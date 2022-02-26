@@ -17,7 +17,7 @@ types=["string"]
 [[properties."Accordion.Label"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Accordion.Section"]]
 name="loading"
@@ -102,9 +102,9 @@ types=["<alpha-value>"]
 
 # Accordion
 
-> **NOTE**: New since `v0.4.5`.
+> **NOTE**: Introduced feature in `v0.4.5`.
 
-`Accordion` Components are typically used for displaying related content into collapsible stack of buttons, that toggles between views.
+`Accordion` Components are used for displaying related content in a collapsible stack of buttons, that toggles between views.
 
 ```svelte {title="Accordion Preview" mode="repl"}
 <script>
@@ -199,9 +199,9 @@ types=["<alpha-value>"]
 
 ## Logic State
 
-> **NOTE**: New since `v0.5.2`.
+> **NOTE**: Introduced feature in `v0.5.2`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can manually choose which `<Accordion.Section>` Components are active via the `logic_state` property.
 
@@ -397,7 +397,7 @@ You can change the behavior of the `Accordion` to allow multiple items to be rev
 
 ## Slot
 
-> **NOTE**: New since `v0.5.2`.
+> **NOTE**: Introduced feature in `v0.5.2`.
 
 You can customize the icons the icons that represent the if an `<Accordion.Section>` Component is open or not via the `close` / `open` slots.
 
@@ -560,6 +560,29 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
         </Accordion.Section>
     </Accordion.Group>
 
+    <Accordion.Group
+        logic_id="accordion-palette-neutral"
+    >
+        <Accordion.Label palette="neutral">
+            NEUTRAL Section
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>NEUTRAL Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
     <Accordion.Group logic_id="accordion-palette-dark">
         <Accordion.Label palette="dark">
             DARK Section
@@ -651,6 +674,29 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
     </Accordion.Group>
 
     <Accordion.Group
+        logic_id="accordion-palette-informative"
+    >
+        <Accordion.Label palette="informative">
+            INFORMATIVE Section
+        </Accordion.Label>
+
+        <Accordion.Section>
+            <Heading>INFORMATIVE Content</Heading>
+
+            <Text>
+                Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Proin et consectetur
+                orci. Curabitur a egestas turpis, vitae
+                convallis sapien. Sed pellentesque
+                rutrum tellus, in iaculis dolor
+                tincidunt non. Orci varius natoque
+                penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus.
+            </Text>
+        </Accordion.Section>
+    </Accordion.Group>
+
+    <Accordion.Group
         logic_id="accordion-palette-negative"
     >
         <Accordion.Label palette="negative">
@@ -677,7 +723,7 @@ You can change the color palette of the `Accordion` buttons via the `palette` pr
 
 ## Loading
 
-> **NOTE**: Use the in-Browser developer tools to see this functionality in action.
+> **USAGE**: Use your Browser's devtools to observe this feature.
 
 You can customize the slot loading behavior of individual `Accordion.Section` Components to not render their children, via the `loading` property.
 

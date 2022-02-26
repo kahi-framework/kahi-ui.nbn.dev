@@ -1,14 +1,45 @@
 +++
 [[properties.Badge]]
+name="is"
+description="Alters the HTML tag rendered to the DOM."
+default="span"
+types=["a", "button", "span"]
+
+[[properties.Badge]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties.Badge]]
+name="radius"
+description="Changes the border radius of the `Badge`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
 
 [[properties.Badge]]
 name="shape"
 description="Changes the shape of the `Badge`."
-default="none"
-types=["none", "pill", "rounded"]
+types=["circle", "pill", "{VIEWPORT}:{SHAPE}"]
+
+[[properties.Badge]]
+name="href"
+description="Sets the web page being linked to, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-href) for more information."
+types=["string"]
+
+[[properties.Badge]]
+name="download"
+description="If linking to a downloadable file, this property will be used as the suggested file name."
+types=["string"]
+
+[[properties.Badge]]
+name="rel"
+description="Sets how the Anchor relates to the current page, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-rel) for more information."
+types=["string"]
+
+[[properties.Badge]]
+name="target"
+description="Sets the target of the Anchor being navigated, see [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attr-target) for more information."
+types=["string"]
 
 [[slots.Badge]]
 name="default"
@@ -63,9 +94,9 @@ types=["<offset-x> <offset-y> <blur-radius>"]
 
 # Badge
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 `Badge` is typically used to subtlely display to the user some type of ancillary information, relating to its siblings / parent UI elements.
 
@@ -94,7 +125,7 @@ You can change the color palette of the `Badge` via the `palette` property.
     import {Badge, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     spacing="medium"
     orientation="horizontal"
     variation="wrap"
@@ -103,6 +134,10 @@ You can change the color palette of the `Badge` via the `palette` property.
 
     <Badge palette="accent">
         This is a ACCENT Badge
+    </Badge>
+
+    <Badge palette="neutral">
+        This is a NEUTRAL Badge
     </Badge>
 
     <Badge palette="dark">This is a DARK Badge</Badge>
@@ -119,36 +154,92 @@ You can change the color palette of the `Badge` via the `palette` property.
         This is a AFFIRMATIVE Badge
     </Badge>
 
+    <Badge palette="informative">
+        This is a INFORMATIVE Badge
+    </Badge>
+
     <Badge palette="negative">
         This is a NEGATIVE Badge
     </Badge>
-</Stack>
+</Stack.Container>
+```
+
+## Radius
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can modify the border radius of the `Badge` via the `radius` property.
+
+```svelte {title="Badge Radius" mode="repl"}
+<script>
+    import {Badge, Stack} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <Badge palette="inverse">DEFAULT Badge</Badge>
+
+    <Badge palette="inverse" radius="nano">
+        NANO Badge
+    </Badge>
+
+    <Badge palette="inverse" radius="tiny">
+        TINY Badge
+    </Badge>
+
+    <Badge palette="inverse" radius="small">
+        SMALL Badge
+    </Badge>
+
+    <Badge palette="inverse" radius="medium">
+        MEDIUM Badge
+    </Badge>
+
+    <Badge palette="inverse" radius="large">
+        LARGE Badge
+    </Badge>
+
+    <Badge palette="inverse" radius="huge">
+        HUGE Badge
+    </Badge>
+
+    <Badge palette="inverse" radius="massive">
+        MASSIVE Badge
+    </Badge>
+</Stack.Container>
 ```
 
 ## Shape
 
-You can modify the shape of the `Shape` via the `shape` property.
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `shape={["circle", "tablet:pill", "mobile:pill"]}`
+
+You can modify the shape of the `Badge` via the `shape` property.
 
 ```svelte {title="Badge Shape" mode="repl"}
 <script>
     import {Badge, Stack} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
 >
-    <Badge palette="inverse">
-        NONE / DEFAULT Badge
+    <Badge palette="inverse">DEFAULT Badge</Badge>
+
+    <Badge palette="inverse" shape="circle">
+        CIRCLE Badge
     </Badge>
 
     <Badge palette="inverse" shape="pill">
-        NONE / DEFAULT Badge
+        PILL Badge
     </Badge>
-
-    <Badge palette="inverse" shape="rounded">
-        NONE / DEFAULT Badge
-    </Badge>
-</Stack>
+</Stack.Container>
 ```

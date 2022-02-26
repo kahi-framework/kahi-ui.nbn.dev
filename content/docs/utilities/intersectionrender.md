@@ -53,7 +53,7 @@ types=["{}"]
 
 # IntersectionRender
 
-> **NOTE**: New since `v0.4.1`.
+> **NOTE**: Introduced feature in `v0.4.1`.
 
 `IntersectionRender` disables rendering of child content before it has come into the root element's viewport at least once. Useful for lazy loading content besides media.
 
@@ -239,7 +239,7 @@ You can change the behavior of `IntersectionObserver` by passing in the `loading
 
 ## Fallthrough
 
-> **NOTE**: The REPL runs on your Browser, so this will always render anyway.
+> **USAGE**: REPL renders in your Browser, so this feature will always conditionally render anyway.
 
 By default, `IntersectionRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 

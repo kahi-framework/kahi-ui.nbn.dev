@@ -7,7 +7,7 @@ types=["{}"]
 
 # Center
 
-> **NOTE**: New since `v0.4.2`.
+> **NOTE**: Introduced feature in `v0.4.2`.
 
 `Center` is a layout primitive used to quickly center the child content within its self.
 

@@ -2,7 +2,7 @@
 [[properties."Omni.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Omni.Container"]]
 name="placement"
@@ -38,9 +38,7 @@ types=["{}"]
 
 # Omni
 
-> **NOTE**: New since `v0.2.0`.
-
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Omni` is used to horizontally present the end-user with actions and links that can be accessed anytime on the Web Application.
 
@@ -60,12 +58,15 @@ types=["{}"]
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
 
     <Omni.Section>
-        <Menu.Container orientation="horizontal">
+        <Menu.Container
+            orientation="horizontal"
+            sizing="tiny"
+        >
             <Menu.Button active>Docs</Menu.Button>
             <Menu.Button>Playground</Menu.Button>
             <Menu.Button>Storybook</Menu.Button>
@@ -73,7 +74,10 @@ types=["{}"]
     </Omni.Section>
 
     <Omni.Footer>
-        <Menu.Container orientation="horizontal">
+        <Menu.Container
+            orientation="horizontal"
+            sizing="tiny"
+        >
             <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
     </Omni.Footer>
@@ -99,25 +103,18 @@ You can change the color palette of the `Omni` via the `palette` property.
     import {
         Anchor,
         Divider,
-        Menu,
         Omni,
         Stack,
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <Omni.Container width="100">
         <Omni.Header>
             <Anchor href="#">Kahi UI</Anchor>
             <Divider orientation="vertical" />
             DEFAULT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="accent" width="100">
@@ -126,12 +123,14 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             ACCENT
         </Omni.Header>
+    </Omni.Container>
 
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
+    <Omni.Container palette="neutral" width="100">
+        <Omni.Header>
+            <Anchor href="#">Kahi UI</Anchor>
+            <Divider orientation="vertical" />
+            NEUTRAL
+        </Omni.Header>
     </Omni.Container>
 
     <Omni.Container palette="dark" width="100">
@@ -140,12 +139,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             DARK
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="light" width="100">
@@ -154,12 +147,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             LIGHT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="alert" width="100">
@@ -168,12 +155,6 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             ALERT
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
 
     <Omni.Container palette="affirmative" width="100">
@@ -182,12 +163,14 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             AFFIRMATIVE
         </Omni.Header>
+    </Omni.Container>
 
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
+    <Omni.Container palette="informative" width="100">
+        <Omni.Header>
+            <Anchor href="#">Kahi UI</Anchor>
+            <Divider orientation="vertical" />
+            INFORMATIVE
+        </Omni.Header>
     </Omni.Container>
 
     <Omni.Container palette="negative" width="100">
@@ -196,14 +179,8 @@ You can change the color palette of the `Omni` via the `palette` property.
             <Divider orientation="vertical" />
             NEGATIVE
         </Omni.Header>
-
-        <Omni.Footer>
-            <Menu.Container orientation="horizontal">
-                <Menu.Button>GitHub</Menu.Button>
-            </Menu.Container>
-        </Omni.Footer>
     </Omni.Container>
-</Stack>
+</Stack.Container>
 ```
 
 ## Placement
@@ -217,7 +194,6 @@ You can adjust which side the content divider border will appear via the `placem
     import {
         Anchor,
         Divider,
-        Menu,
         Omni,
         Text,
     } from "@kahi-ui/framework";
@@ -232,31 +208,17 @@ You can adjust which side the content divider border will appear via the `placem
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
-
-    <Omni.Section>
-        <Menu.Container orientation="horizontal">
-            <Menu.Button active>Docs</Menu.Button>
-            <Menu.Button>Playground</Menu.Button>
-            <Menu.Button>Storybook</Menu.Button>
-        </Menu.Container>
-    </Omni.Section>
-
-    <Omni.Footer>
-        <Menu.Container orientation="horizontal">
-            <Menu.Button>GitHub</Menu.Button>
-        </Menu.Container>
-    </Omni.Footer>
 </Omni.Container>
 ```
 
 ## Collapsing
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
-While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinionated collapsable navigations interfaces. Via Components like [`Popover`](../overlays/popover.md) and features like [`hidden`](../globals/hidden.md).
+While `Omni` does not have built-in collapsing, the Framework provides the primitives for you to build collapsable interfaces. Via Components like [`Popover`](../overlays/popover.md) and features like [`hidden`](../globals/hidden.md).
 
 ```svelte {title="Omni Collapsing" mode="repl"}
 <script>
@@ -276,12 +238,15 @@ While this Component does not have built-in collapsing, the Framework provides t
         <Anchor href="#">Kahi UI</Anchor>
         <Divider orientation="vertical" />
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Omni.Header>
 
     <Omni.Section hidden={["mobile", "tablet"]}>
-        <Menu.Container orientation="horizontal">
+        <Menu.Container
+            orientation="horizontal"
+            sizing="tiny"
+        >
             <Menu.Button active>Docs</Menu.Button>
             <Menu.Button>Playground</Menu.Button>
             <Menu.Button>Storybook</Menu.Button>
@@ -292,6 +257,7 @@ While this Component does not have built-in collapsing, the Framework provides t
         <Menu.Container
             hidden={["mobile", "tablet"]}
             orientation="horizontal"
+            sizing="tiny"
         >
             <Menu.Button>GitHub</Menu.Button>
         </Menu.Container>
@@ -301,7 +267,10 @@ While this Component does not have built-in collapsing, the Framework provides t
             logic_id="omni-collapsing"
             dismissible
         >
-            <Popover.Button variation="clear">
+            <Popover.Button
+                palette="light"
+                variation="clear"
+            >
                 +
             </Popover.Button>
 
@@ -310,12 +279,12 @@ While this Component does not have built-in collapsing, the Framework provides t
                 spacing="small"
             >
                 <Box
-                    palette="auto"
-                    elevation="high"
+                    variation="borders"
+                    elevation="medium"
                     padding="medium"
-                    shape="rounded"
+                    radius="tiny"
                 >
-                    <Menu.Container>
+                    <Menu.Container sizing="tiny">
                         <Menu.Button active>
                             Docs
                         </Menu.Button>

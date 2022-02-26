@@ -1,4 +1,35 @@
-<script>
+<script context="module" lang="ts">
+    import type {Load} from "@sveltejs/kit";
+
+    import type {IRouteError, ISnippetGet} from "../lib/shared/api";
+
+    const SNIPPET_IDENTIFIER = "getting-started-patterns";
+
+    export const load: Load = async ({fetch}) => {
+        const response = await fetch(`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`);
+        if (!response.ok) {
+            const data = (await response.json()) as IRouteError;
+
+            return {
+                status: response.status,
+                error: data.code,
+            };
+        }
+
+        const data = (await response.json()) as ISnippetGet;
+
+        return {
+            props: {
+                snippet: data.data,
+            },
+            stuff: {
+                prerender: [`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`],
+            },
+        };
+    };
+</script>
+
+<script lang="ts">
     import {
         Box,
         Card,
@@ -10,188 +41,174 @@
         Spacer,
         Text,
     } from "@kahi-ui/framework";
+    import {ArrowRight, Code, LayoutTemplate, Moon, Zap} from "lucide-svelte";
 
-    import ArrowRight from "../lib/components/icons/ArrowRight.svelte";
-    import Code from "../lib/components/icons/Code.svelte";
-    import LayoutTemplate from "../lib/components/icons/LayoutTemplate.svelte";
-    import Moon from "../lib/components/icons/Moon.svelte";
-    import Zap from "../lib/components/icons/Zap.svelte";
+    import type {ISnippet} from "@kahi-docs/markdown";
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
-    import AppLayout from "../lib/components/AppLayout.svelte";
-    import PageMetadata from "../lib/components/PageMetadata.svelte";
+    import REPLEmbed from "../lib/components/repl/REPLEmbed.svelte";
+
+    export let snippet: ISnippet;
 </script>
 
-<PageMetadata separator="::" />
-
-<!--
-    NOTE: Layout stuff is here in index so nested Application
-    routes don't inherit it automatically.
--->
-
-<AppLayout>
-    <Hero.Container palette="dark" padding_y="huge">
-        <Hero.Header>
-            Easy to use Svelte UI for
-            <Box palette="accent">rapid prototyping</Box>
-            <!--
+<Hero.Container padding_y="huge">
+    <Hero.Header>
+        Easy to use Svelte UI for
+        <Box palette="accent">rapid prototyping</Box>
+        <!--
                 TODO: Typing animation for couple different phrases
             -->
-        </Hero.Header>
+    </Hero.Header>
 
-        <Hero.Section>
-            Kahi UI is a composable and flexible design library for Svelte that allows you to go
-            from <Text is="strong">0</Text>
-            to <Text is="strong">60</Text> in no time.
-        </Hero.Section>
-
-        <Hero.Footer>
-            <AppAnchor
-                is="button"
-                href="https://github.com/novacbn/kahi-ui"
-                palette="light"
-                size="large"
-                variation="clear"
-            >
-                <Code />
-                Source
-            </AppAnchor>
-
-            <AppAnchor
-                is="button"
-                href="/docs/framework/getting-started"
-                palette="accent"
-                size="large"
-                no_handle
-                prefetch
-            >
-                Getting Started
-                <ArrowRight />
-            </AppAnchor>
-        </Hero.Footer>
-    </Hero.Container>
-
-    <Container viewport="widescreen" padding_y="huge">
-        <Heading is="h2" align="center" variation="headline" padding_x="mobile:tiny">
-            Straight-forward. Minimal Markup.
-        </Heading>
-
-        <Text
-            align="center"
-            size="tiny"
-            variation="headline"
-            margin_top="small"
-            margin_bottom="large"
+    <Hero.Section>
+        Kahi UI is a composable and flexible design library for Svelte that allows you to go from <Text
+            is="strong">0</Text
         >
-            <Text is="small">Develop more UI without writing essays worth of markup.</Text>
-        </Text>
+        to <Text is="strong">60</Text> in no time.
+    </Hero.Section>
 
-        <iframe
-            class="repl-snippet"
-            src="/playground/embed/?snippet=getting-started-patterns"
-            loading="lazy"
-        />
-
-        <Divider palette="accent" margin_y="huge" />
-
-        <Heading is="h2" align="center" variation="headline" padding_x="mobile:tiny">
-            Features expected of a modern UI.
-        </Heading>
-
-        <Text
-            align="center"
-            size="tiny"
-            variation="headline"
-            margin_top="small"
-            margin_bottom="large"
+    <Hero.Footer>
+        <AppAnchor
+            is="button"
+            href="https://github.com/novacbn/kahi-ui"
+            palette="inverse"
+            sizing="large"
+            variation="clear"
         >
-            <Text is="small">Opinonated when needed. Flexible when wanted.</Text>
-        </Text>
+            <Code size="1em" />
+            Source
+        </AppAnchor>
 
-        <Grid.Container
-            points={["2", "mobile:1"]}
-            spacing={["large", "tablet:medium", "mobile:medium"]}
+        <AppAnchor
+            is="button"
+            href="/docs/guides/getting-started"
+            palette="accent"
+            sizing="large"
+            no_handle
+            prefetch
         >
-            <Card.Container>
-                <Card.Header>
-                    Composable
-                    <Spacer />
+            Getting Started
+            <ArrowRight size="1em" />
+        </AppAnchor>
+    </Hero.Footer>
+</Hero.Container>
 
-                    <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <LayoutTemplate />
-                    </Box>
-                </Card.Header>
+<Container width="100" max_width="widescreen" padding_y="huge">
+    <Heading is="h3" alignment_x="center" variation="block" padding_x="mobile:tiny">
+        Straight-forward. Minimal Markup.
+    </Heading>
 
-                <Card.Section padding_bottom="medium">
-                    <Text size="medium">
-                        Designed with <Text is="strong">Composability</Text> in mind, author new Components
-                        <Text is="strong">easily</Text>.
+    <Text
+        alignment_x="center"
+        sizing="nano"
+        variation="block"
+        margin_top="small"
+        margin_bottom="large"
+    >
+        <Text is="small">Develop more UI without writing essays worth of markup.</Text>
+    </Text>
+
+    <div class="repl-snippet">
+        <REPLEmbed identifier={snippet.identifier} value={snippet.script} />
+    </div>
+
+    <Divider palette="accent" margin_y="huge" />
+
+    <Heading is="h3" alignment_x="center" variation="block" padding_x="mobile:tiny">
+        Features expected of a modern UI.
+    </Heading>
+
+    <Text
+        alignment_x="center"
+        sizing="nano"
+        variation="block"
+        margin_top="small"
+        margin_bottom="large"
+    >
+        <Text is="small">Opinonated when needed. Flexible when wanted.</Text>
+    </Text>
+
+    <Grid.Container
+        points={["2", "mobile:1"]}
+        spacing={["large", "tablet:medium", "mobile:medium"]}
+    >
+        <Card.Container>
+            <Card.Header>
+                Composable
+                <Spacer />
+
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <LayoutTemplate size="1em" />
+                </Box>
+            </Card.Header>
+
+            <Card.Section padding_bottom="medium">
+                <Text sizing="medium">
+                    Designed with <Text is="strong">Composability</Text> in mind, author new Components
+                    <Text is="strong">easily</Text>.
+                </Text>
+            </Card.Section>
+        </Card.Container>
+
+        <Card.Container>
+            <Card.Header>
+                Staticly Typed
+                <Spacer />
+
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <Code size="1em" />
+                </Box>
+            </Card.Header>
+
+            <Card.Section padding_bottom="medium">
+                <Text sizing="medium">
+                    Created using <Text is="strong">Typescript</Text>, so a pleasent IDE experience
+                    <Text is="strong">comes out-of-box</Text>.
+                </Text>
+            </Card.Section>
+        </Card.Container>
+
+        <Card.Container>
+            <Card.Header>
+                Dark Mode
+                <Spacer />
+
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <Moon size="1em" />
+                </Box>
+            </Card.Header>
+
+            <Card.Section padding_bottom="medium">
+                <Text sizing="medium">
+                    Supports automatic <Text is="strong">Dark Mode</Text>, or your choice from the
+                    <Text is="strong">built-in palette</Text>.
+                </Text>
+            </Card.Section>
+        </Card.Container>
+
+        <Card.Container>
+            <Card.Header>
+                Progressively Enhanced
+                <Spacer />
+
+                <Box palette="accent" shape="pill" padding="small" width="content-max">
+                    <Zap size="1em" />
+                </Box>
+            </Card.Header>
+
+            <Card.Section padding_bottom="medium">
+                <Text sizing="medium">
+                    Most logic is embedded within <Text is="strong">HTML / CSS</Text>, with <Text
+                        is="strong"
+                    >
+                        Javascript
                     </Text>
-                </Card.Section>
-            </Card.Container>
-
-            <Card.Container>
-                <Card.Header>
-                    Staticly Typed
-                    <Spacer />
-
-                    <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <Code />
-                    </Box>
-                </Card.Header>
-
-                <Card.Section padding_bottom="medium">
-                    <Text size="medium">
-                        Created using <Text is="strong">Typescript</Text>, so a pleasent IDE
-                        experience
-                        <Text is="strong">comes out-of-box</Text>.
-                    </Text>
-                </Card.Section>
-            </Card.Container>
-
-            <Card.Container>
-                <Card.Header>
-                    Dark Mode
-                    <Spacer />
-
-                    <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <Moon />
-                    </Box>
-                </Card.Header>
-
-                <Card.Section padding_bottom="medium">
-                    <Text size="medium">
-                        Supports automatic <Text is="strong">Dark Mode</Text>, or your choice from
-                        the
-                        <Text is="strong">built-in palette</Text>.
-                    </Text>
-                </Card.Section>
-            </Card.Container>
-
-            <Card.Container>
-                <Card.Header>
-                    Progressively Enhanced
-                    <Spacer />
-
-                    <Box palette="accent" shape="pill" padding="small" width="content-max">
-                        <Zap />
-                    </Box>
-                </Card.Header>
-
-                <Card.Section padding_bottom="medium">
-                    <Text size="medium">
-                        Most logic is embedded within <Text is="strong">HTML / CSS</Text>, with <Text
-                            is="strong"
-                        >
-                            Javascript
-                        </Text>
-                        enhancing the <Text is="strong">UX</Text>.
-                    </Text>
-                </Card.Section>
-            </Card.Container>
-        </Grid.Container>
-    </Container>
-</AppLayout>
+                    enhancing the <Text is="strong">UX</Text>.
+                </Text>
+            </Card.Section>
+        </Card.Container>
+    </Grid.Container>
+</Container>
 
 <style>
     :global(.app-container) :global(.hero) > :global(header),

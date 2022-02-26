@@ -7,11 +7,11 @@ types=["boolean", "{VIEWPORT}"]
 
 # Contents
 
-> **NOTE**: New since `v0.5.0`.
+> **NOTE**: Introduced feature in `v0.5.0`.
 
 All Components have access to the `data-contents` global HTML attribute via the `contents` property which [removes the Component's bounding box / stylings](https://developer.mozilla.org/en-US/docs/Web/CSS/display#box) from the DOM tree.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 > **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `contents={["mobile", "tablet"]}`
 

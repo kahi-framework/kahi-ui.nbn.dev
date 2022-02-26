@@ -2,7 +2,13 @@
 [[properties.Progress]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
+
+[[properties.Progress]]
+name="radius"
+description="Changes the border radius of the `Progress`."
+default="none"
+types=["none", "nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{RADIUS}"]
 
 [[properties.Progress]]
 name="shape"
@@ -12,12 +18,13 @@ types=["circle"]
 [[properties.Progress]]
 name="sizing"
 description="Renders the `Progress` at a different sizes."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Progress]]
 name="value"
-description="Changes the percentage value _(0.0...1.0)_ that is rendered."
-types=["number", "string", "undefined"]
+description="Changes the percentage value _(0.0...1.0)_ that is rendered. If `undefined`, a loading animation is played."
+default="undefined"
+types=["undefined", "number", "string"]
 
 [[slots.Progress]]
 name="default"
@@ -47,7 +54,7 @@ types=["<length>", "<percentage>"]
 
 # Progress
 
-> **NOTE**: New since `v0.3.1`.
+> **NOTE**: Introduced feature in `v0.3.1`.
 
 `Progress` is typically used to render feedback to the end-user about how complete a current task is.
 
@@ -89,6 +96,71 @@ types=["<length>", "<percentage>"]
 </script>
 ```
 
+## Radius
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+> **NOTE**: By passing an array, you can set [responsive values](../framework/responsitivity.md). e.g. `radius={["tiny", "tablet:medium", "mobile:medium"]}`
+
+You can modify the border radius of a bar `Progress` via the `radius` property.
+
+```svelte {title="Progress Radius" mode="repl"}
+<script>
+    import {
+        Mosaic,
+        Progress,
+        Text,
+    } from "@kahi-ui/framework";
+</script>
+
+<Mosaic.Container sizing="small" spacing="medium">
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Progress value={0.5} />
+    </div>
+
+    <div>
+        <Text is="strong">NONE</Text>
+        <Progress value={0.5} radius="none" />
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <Progress value={0.5} radius="nano" />
+    </div>
+
+    <div>
+        <Text is="strong">TINY</Text>
+        <Progress value={0.5} radius="tiny" />
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+        <Progress value={0.5} radius="small" />
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+        <Progress value={0.5} radius="medium" />
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+        <Progress value={0.5} radius="large" />
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+        <Progress value={0.5} radius="huge" />
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Progress value={0.5} radius="massive" />
+    </div>
+</Mosaic.Container>
+```
+
 ## Shape
 
 You can modify the shape of the `Progress` via the `shape` property.
@@ -116,8 +188,8 @@ You can change the color palette of the `Progress` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium" variation="wrap">
-    <Stack
+<Stack.Container spacing="medium" variation="wrap">
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
@@ -137,6 +209,17 @@ You can change the color palette of the `Progress` via the `palette` property.
                 shape="circle"
                 value={0.5}
                 palette="accent"
+            />
+        </div>
+
+        <div>
+            <Text is="strong">NEUTRAL</Text>
+            <br />
+
+            <Progress
+                shape="circle"
+                value={0.5}
+                palette="neutral"
             />
         </div>
 
@@ -185,6 +268,17 @@ You can change the color palette of the `Progress` via the `palette` property.
         </div>
 
         <div>
+            <Text is="strong">INFORMATIVE</Text>
+            <br />
+
+            <Progress
+                shape="circle"
+                value={0.5}
+                palette="informative"
+            />
+        </div>
+
+        <div>
             <Text is="strong">NEGATIVE</Text>
             <br />
 
@@ -194,9 +288,9 @@ You can change the color palette of the `Progress` via the `palette` property.
                 palette="negative"
             />
         </div>
-    </Stack>
+    </Stack.Container>
 
-    <Mosaic sizing="small" spacing="medium">
+    <Mosaic.Container sizing="small" spacing="medium">
         <div>
             <Text is="strong">DEFAULT</Text>
             <Progress value={0.5} />
@@ -205,6 +299,11 @@ You can change the color palette of the `Progress` via the `palette` property.
         <div>
             <Text is="strong">ACCENT</Text>
             <Progress value={0.5} palette="accent" />
+        </div>
+
+        <div>
+            <Text is="strong">NEUTRAL</Text>
+            <Progress value={0.5} palette="neutral" />
         </div>
 
         <div>
@@ -231,20 +330,28 @@ You can change the color palette of the `Progress` via the `palette` property.
         </div>
 
         <div>
+            <Text is="strong">INFORMATIVE</Text>
+            <Progress
+                value={0.5}
+                palette="informative"
+            />
+        </div>
+
+        <div>
             <Text is="strong">NEGATIVE</Text>
             <Progress value={0.5} palette="negative" />
         </div>
-    </Mosaic>
-</Stack>
+    </Mosaic.Container>
+</Stack.Container>
 ```
 
 ## Sizing
 
-> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can change the size of the `Progress` via the `sizing` property.
 
-```svelte {title="Progress Palette" mode="repl"}
+```svelte {title="Progress Sizing" mode="repl"}
 <script>
     import {
         Mosaic,
@@ -254,8 +361,8 @@ You can change the size of the `Progress` via the `sizing` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium" variation="wrap">
-    <Stack
+<Stack.Container spacing="medium" variation="wrap">
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
@@ -321,9 +428,9 @@ You can change the size of the `Progress` via the `sizing` property.
                 sizing="huge"
             />
         </div>
-    </Stack>
+    </Stack.Container>
 
-    <Mosaic sizing="small" spacing="medium">
+    <Mosaic.Container sizing="small" spacing="medium">
         <div>
             <Text is="strong">DEFAULT</Text>
             <Progress value={0.5} />
@@ -353,8 +460,8 @@ You can change the size of the `Progress` via the `sizing` property.
             <Text is="strong">HUGE</Text>
             <Progress value={0.5} sizing="huge" />
         </div>
-    </Mosaic>
-</Stack>
+    </Mosaic.Container>
+</Stack.Container>
 ```
 
 ## Indeterminate
@@ -371,8 +478,8 @@ By not passing the `value` property, the `Progress` will render with an animatio
     } from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium" variation="wrap">
-    <Stack
+<Stack.Container spacing="medium" variation="wrap">
+    <Stack.Container
         orientation="horizontal"
         spacing="medium"
         variation="wrap"
@@ -391,6 +498,16 @@ By not passing the `value` property, the `Progress` will render with an animatio
             <Progress
                 shape="circle"
                 palette="accent"
+            />
+        </div>
+
+        <div>
+            <Text is="strong">NEUTRAL</Text>
+            <br />
+
+            <Progress
+                shape="circle"
+                palette="neutral"
             />
         </div>
 
@@ -426,6 +543,16 @@ By not passing the `value` property, the `Progress` will render with an animatio
         </div>
 
         <div>
+            <Text is="strong">INFORMATIVE</Text>
+            <br />
+
+            <Progress
+                shape="circle"
+                palette="informative"
+            />
+        </div>
+
+        <div>
             <Text is="strong">NEGATIVE</Text>
             <br />
 
@@ -434,9 +561,9 @@ By not passing the `value` property, the `Progress` will render with an animatio
                 palette="negative"
             />
         </div>
-    </Stack>
+    </Stack.Container>
 
-    <Mosaic sizing="small" spacing="medium">
+    <Mosaic.Container sizing="small" spacing="medium">
         <div>
             <Text is="strong">DEFAULT</Text>
             <Progress />
@@ -445,6 +572,11 @@ By not passing the `value` property, the `Progress` will render with an animatio
         <div>
             <Text is="strong">ACCENT</Text>
             <Progress palette="accent" />
+        </div>
+
+        <div>
+            <Text is="strong">NEUTRAL</Text>
+            <Progress palette="neutral" />
         </div>
 
         <div>
@@ -468,9 +600,14 @@ By not passing the `value` property, the `Progress` will render with an animatio
         </div>
 
         <div>
+            <Text is="strong">INFORMATIVE</Text>
+            <Progress palette="informative" />
+        </div>
+
+        <div>
             <Text is="strong">NEGATIVE</Text>
             <Progress palette="negative" />
         </div>
-    </Mosaic>
-</Stack>
+    </Mosaic.Container>
+</Stack.Container>
 ```

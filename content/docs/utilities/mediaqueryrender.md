@@ -23,9 +23,9 @@ types=["{}"]
 
 # MediaQueryRender
 
-> **NOTE**: New since `v0.5.1`.
+> **NOTE**: Introduced feature in `v0.5.1`.
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 `MediaQueryRender` disables rendering of child content while the provided [Media Quer(y/eries)](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) are not active.
 
@@ -61,7 +61,7 @@ The Component only runs on clientside Browsers with Javascript enabled. So you n
 
 ## Multiple Queries
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 You can specify multiple Media Queries by passing in a string array (`string[]`) via the `queries` property.
 
@@ -91,7 +91,7 @@ You can specify multiple Media Queries by passing in a string array (`string[]`)
 
 ## Behavior
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
 When working with multiple Media Queries, you can specify that **ALL** Media Queries must be valid in order to render. Via the `behavior` property.
 
@@ -137,7 +137,7 @@ When working with multiple Media Queries, you can specify that **ALL** Media Que
 
 ## Fallthrough
 
-> **NOTE**: The REPL runs on your Browser, so this will always render anyway.
+> **USAGE**: REPL renders in your Browser, so this feature will always conditionally render anyway.
 
 By default, `MediaQueryRender` will never render when running in SSR environments. You can change it to always render in those environments via the `fallthrough` property.
 

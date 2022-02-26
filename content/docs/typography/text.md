@@ -3,7 +3,7 @@
 name="is"
 description="Changes the HTML tag used for rendering the text, altering its appearance."
 default="p"
-types=["abbr", "b", "del", "em", "i", "ins", "kbd", "mark", "p", "pre", "s", "samp", "small", "span", "strong", "sub", "sup", "u"]
+types=["abbr", "b", "del", "em", "i", "ins", "mark", "p", "s", "samp", "small", "span", "strong", "sub", "sup", "u"]
 
 [[properties.Text]]
 name="alignment_x"
@@ -13,12 +13,12 @@ types=["center", "justify", "left", "right"]
 [[properties.Text]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.Text]]
 name="sizing"
 description="Changes how big the text will be rendered."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.Text]]
 name="transform"
@@ -103,7 +103,7 @@ types=["<alpha-value>"]
 
 # Text
 
-> **NOTE**: New since `v0.2.0`.
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Text` is used to render paragraphs of text in your interface, among other types of text.
 
@@ -133,17 +133,17 @@ types=["<alpha-value>"]
 
 ## Sizing
 
-> **DEPRECATED**: This property will be renamed `size` -> `sizing` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `size` to `sizing` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can adjust the size of `Text` by passing the `sizing` property.
 
-```svelte {title="Text Sizing" mode="repl"}
+```svelte {title="Text Sizing Inline" mode="repl"}
 <script>
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
-    class="text-sizing"
+<Stack.Container
+    class="text-sizing-inline"
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -151,6 +151,19 @@ You can adjust the size of `Text` by passing the `sizing` property.
     <div>
         <Text is="strong">DEFAULT</Text>
         <Text>
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <Text sizing="nano">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -225,10 +238,148 @@ You can adjust the size of `Text` by passing the `sizing` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Text sizing="massive">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+</Stack.Container>
 
 <style>
-    :global(.text-sizing > div) {
+    :global(.text-sizing-inline > div) {
+        max-width: 25ch;
+    }
+</style>
+```
+
+You can also access bigger font sizing via the `variation` property.
+
+```svelte {title="Text Sizing Block" mode="repl"}
+<script>
+    import {Stack, Text} from "@kahi-ui/framework";
+</script>
+
+<Stack.Container
+    class="text-sizing-block"
+    orientation="horizontal"
+    spacing="medium"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DEFAULT</Text>
+        <Text variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">NANO</Text>
+        <Text sizing="nano" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">TINY</Text>
+        <Text sizing="tiny" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">SMALL</Text>
+        <Text sizing="small" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">MEDIUM</Text>
+        <Text sizing="medium" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">LARGE</Text>
+        <Text sizing="large" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">HUGE</Text>
+        <Text sizing="huge" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">MASSIVE</Text>
+        <Text sizing="massive" variation="block">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+</Stack.Container>
+
+<style>
+    :global(.text-sizing-block > div) {
         max-width: 25ch;
     }
 </style>
@@ -243,7 +394,7 @@ You can change the color palette of `Text` via the `palette` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="text-palette"
     orientation="horizontal"
     spacing="medium"
@@ -265,6 +416,19 @@ You can change the color palette of `Text` via the `palette` property.
     <div>
         <Text is="strong">ACCENT</Text>
         <Text palette="accent">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+        <Text palette="neutral">
             Lorem ipsum dolor sit amet, consectetur
             adipiscing elit. Proin et consectetur orci.
             Curabitur a egestas turpis, vitae convallis
@@ -328,6 +492,19 @@ You can change the color palette of `Text` via the `palette` property.
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+        <Text palette="informative">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Proin et consectetur orci.
+            Curabitur a egestas turpis, vitae convallis
+            sapien. Sed pellentesque rutrum tellus, in
+            iaculis dolor tincidunt non. Orci varius
+            natoque penatibus et magnis dis parturient
+            montes, nascetur ridiculus mus.
+        </Text>
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
         <Text palette="negative">
             Lorem ipsum dolor sit amet, consectetur
@@ -339,7 +516,7 @@ You can change the color palette of `Text` via the `palette` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-palette > div) {
@@ -350,7 +527,7 @@ You can change the color palette of `Text` via the `palette` property.
 
 ## Alignment
 
-> **DEPRECATED**: This property will be renamed `align` -> `alignment_x` in `v0.6.0`.
+> **WARNING**: This feature was renamed from `align` to `alignment_x` in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can adjust the text alignment of the `Text` via the `alignment_x` property.
 
@@ -359,7 +536,7 @@ You can adjust the text alignment of the `Text` via the `alignment_x` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <Text>
@@ -424,7 +601,7 @@ You can adjust the text alignment of the `Text` via the `alignment_x` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Transform
@@ -436,7 +613,7 @@ You can alter the rendered text capitalization via the `transform` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     class="text-transform"
     orientation="horizontal"
     spacing="medium"
@@ -493,7 +670,7 @@ You can alter the rendered text capitalization via the `transform` property.
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-transform > div) {
@@ -511,7 +688,10 @@ You can apply variations to the rendered text, like truncating, via the `variati
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack class="text-variation" spacing="medium">
+<Stack.Container
+    class="text-variation"
+    spacing="medium"
+>
     <div>
         <Text is="strong">DEFAULT</Text>
         <Text>
@@ -537,7 +717,7 @@ You can apply variations to the rendered text, like truncating, via the `variati
             montes, nascetur ridiculus mus.
         </Text>
     </div>
-</Stack>
+</Stack.Container>
 
 <style>
     :global(.text-variation > div) {
@@ -546,26 +726,9 @@ You can apply variations to the rendered text, like truncating, via the `variati
 </style>
 ```
 
-## Pre Formatted
+## Elements
 
-You can render text with whitespace and linebreaks preserved via the `is` property.
-
-<!-- prettier-ignore -->
-```svelte {title="Text Pre Formatted" mode="repl"}
-<script>
-    import {Text} from "@kahi-ui/framework";
-</script>
-
-<Text is="pre">
-P R E F O R M A T T E D T E X T
-! " # $ % & ' ( ) * + , - . /
-0 1 2 3 4 5 6 7 8 9
-</Text>
-```
-
-## Other Tags
-
-> **DEPRECATED**: The feature `<Text is="kbd">` will be elevated to a standalone `<Kbd>` Component in `v0.6.0`.
+> **WARNING**: The feature `<Text is="kbd">` was moved to standalone Component [`<Kbd>`](../display/kbd.md) in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 You can also access most of the other HTML text tags via the `is` property.
 
@@ -574,7 +737,7 @@ You can also access most of the other HTML text tags via the `is` property.
     import {Stack, Text} from "@kahi-ui/framework";
 </script>
 
-<Stack alignment_x="left" spacing="medium">
+<Stack.Container alignment_x="left" spacing="medium">
     <Text is="abbr">Abbreviation</Text>
 
     <Text is="b">Bold</Text>
@@ -589,11 +752,10 @@ You can also access most of the other HTML text tags via the `is` property.
     <Text is="ins">Inserted</Text>
     <Text is="u">Underline</Text>
 
-    <Text is="kbd">CTRL + C</Text>
     <Text is="mark">Highlighted</Text>
     <Text is="samp">Sample</Text>
 
     <Text is="sub">sub</Text>
     <Text is="sup">sup</Text>
-</Stack>
+</Stack.Container>
 ```

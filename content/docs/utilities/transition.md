@@ -1,5 +1,11 @@
 +++
 [[properties.Transition]]
+name="is"
+description="Alters the HTML tag rendered to the DOM."
+default="div"
+types=["div", "span"]
+
+[[properties.Transition]]
 name="animation"
 description="Selects the animation to be ran on the containing `Transition` element."
 types=["clip", "fade", "scale", "slide"]
@@ -59,7 +65,7 @@ types=["{}"]
 
 # Transition
 
-> **NOTE**: New since `v0.4.0`.
+> **NOTE**: Introduced feature in `v0.4.0`.
 
 `Transition` is used to apply transitional animations on a containing element that will also include its children. Typically used for situations like changing between pages.
 
@@ -91,7 +97,7 @@ types=["{}"]
 
 ## Imports
 
-```svelte {title="Transition Imports" mode="repl"}
+```svelte {title="Transition Imports"}
 <script>
     import {Transition} from "@kahi-ui/framework";
 </script>
@@ -99,9 +105,9 @@ types=["{}"]
 
 ## Explicit
 
-> **NOTE**: New since `v0.5.0`.
+> **NOTE**: Introduced feature in `v0.5.0`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can alter `Transition` to use its [CSS Transitions](https://developer.mozilla.org/en-US/docs/Web/CSS/transition) implementation instead of the [CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) implementation for animations. Which skips the first-paint iteration of the animation via the `behavior` property.
 
@@ -167,7 +173,7 @@ Based on the animaton duration properties in the currently loaded theme. You can
 
 ## Duration
 
-> **NOTE**: New since `v0.4.2`.
+> **NOTE**: Introduced feature in `v0.4.2`.
 
 Based on the animaton duration properties in the currently loaded theme. You can use a multiplier percentage decimal to increase / shorten the animation duration via the `duration` property.
 
@@ -269,6 +275,67 @@ You can control which direction the `Transition` animation will "expand", "move"
         hello world!
     </Box>
 </Transition>
+```
+
+## Elements
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can change the HTML tag rendered to DOM via the `is` property.
+
+```svelte {title="Transition Elements" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        Stack,
+        Transition,
+    } from "@kahi-ui/framework";
+
+    let variation = undefined;
+</script>
+
+<Button
+    on:click={() =>
+        (variation =
+            variation === "exit" ? "enter" : "exit")}
+>
+    Toggle Variation
+</Button>
+
+<Stack.Container
+    spacing="medium"
+    orientation="horizontal"
+    variation="wrap"
+>
+    <div>
+        <Text is="strong">DIV / BLOCK</Text>
+
+        <Transition
+            is="div"
+            animation="clip"
+            {variation}
+        >
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+    </div>
+
+    <div>
+        <Text is="strong">SPAN / INLINE</Text>
+
+        <Transition
+            is="span"
+            animation="clip"
+            {variation}
+        >
+            <Box palette="inverse" padding="medium">
+                hello world!
+            </Box>
+        </Transition>
+    </div>
+</Stack.Container>
 ```
 
 ## Fade

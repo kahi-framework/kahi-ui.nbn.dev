@@ -24,6 +24,11 @@ name="once"
 description="Enables dismissing of the `<Popover.Container>` whenever inner content is clicked."
 types=["boolean"]
 
+[[properties."Popover.Container"]]
+name="variation"
+description="Alters the functionality of the `<Popover.Container>` to activate via hovering / focusing."
+types=["tooltip"]
+
 [[properties."Popover.Section"]]
 name="animation"
 description="Selects the animation to be ran whenever `logic_state` is active."
@@ -81,9 +86,9 @@ types=["{}"]
 
 # Popover
 
-> **NOTE**: New since `v0.2.11`.
+> **NOTE**: Introduced feature in `v0.2.11`.
 
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+> **WARNING**: This feature received a breaking change in [`v0.6.0`](../migrations/0.5.x-to-0.6.x.md).
 
 `Popover` is typically used for hiding content that'll clip onto the page when activated via a button or something else.
 
@@ -111,41 +116,42 @@ types=["{}"]
         spacing="medium"
     >
         <Box
+            variation="borders"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             <Menu.Container>
                 <Menu.Button>
                     Copy
                     <Spacer
                         is="span"
-                        spacing="medium"
+                        spacing_y="medium"
                     />
 
-                    <Text is="kbd">CTRL+C</Text>
+                    <Text is="small">CTRL+C</Text>
                 </Menu.Button>
 
                 <Menu.Button>
                     Cut
                     <Spacer
                         is="span"
-                        spacing="medium"
+                        spacing_y="medium"
                     />
 
-                    <Text is="kbd">CTRL+X</Text>
+                    <Text is="small">CTRL+X</Text>
                 </Menu.Button>
 
-                <Menu.Divider />
+                <Menu.Heading />
 
                 <Menu.Button>
                     Delete
                     <Spacer
                         is="span"
-                        spacing="medium"
+                        spacing_y="medium"
                     />
 
-                    <Text is="kbd">DEL</Text>
+                    <Text is="small">DEL</Text>
                 </Menu.Button>
             </Menu.Container>
         </Box>
@@ -188,7 +194,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             <Popover.Button
                 palette="auto"
@@ -203,7 +209,7 @@ You can make the `Popover` toggleable via the `logic_id` property, and then refe
 
 ## Logic State
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can manually open / close the `Popover` via the `logic_state` property.
 
@@ -231,7 +237,7 @@ You can manually open / close the `Popover` via the `logic_state` property.
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             TOGGABLE Popover
             <br />
@@ -249,9 +255,9 @@ You can manually open / close the `Popover` via the `logic_state` property.
 
 ## Dismissible
 
-> **NOTE**: Added keybinding support since `v0.4.13`.
+> **NOTE**: Introduced keybinding support in `v0.4.13`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can optionally have the `Popover` dismissible by clicking outside the `<Popover.Section>` child content, pressing the `ESC` key, or inner content losing focus, via the `dismissible` property.
 
@@ -272,7 +278,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             NON-DISMISSIBLE Popover
         </Box>
@@ -292,7 +298,7 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             DISMISSIBLE Popover
         </Box>
@@ -302,9 +308,9 @@ You can optionally have the `Popover` dismissible by clicking outside the `<Popo
 
 ## Once
 
-> **NOTE**: New since `v0.4.11`.
+> **NOTE**: Introduced feature in `v0.4.11`.
 
-> **WARNING**: This feature is only available in Javascript-enabled Browsers.
+> **WARNING**: This feature is only available in Javascript-enabled clients.
 
 You can enable having the `Popover` dismissed whenever inner content is clicked via the `once` property.
 
@@ -323,7 +329,7 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             NON-ONCE Popover
         </Box>
@@ -341,9 +347,70 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+```
+
+## Tooltip
+
+> **NOTE**: Introduced feature in `v0.6.0`.
+
+You can alter the functionality of a `<Popover.Container>` Component to activate by hovering or focusing the inner content via the `variation` property.
+
+```svelte {title="Popover Tooltip" mode="repl"}
+<script>
+    import {
+        Box,
+        Button,
+        Popover,
+    } from "@kahi-ui/framework";
+</script>
+
+<Popover.Container variation="tooltip">
+    Hover me!
+
+    <Popover.Section
+        alignment_x="right"
+        spacing="nano"
+        animation="fade"
+    >
+        <Box
+            elevation="low"
+            palette="neutral"
+            padding="small"
+            radius="nano"
+        >
+            I contain extra information!
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+
+Plus some other text...
+
+<br />
+<br />
+
+<Popover.Container variation="tooltip">
+    <Button palette="accent">
+        Some Undescriptive Button
+    </Button>
+
+    <Popover.Section
+        alignment_x="right"
+        spacing="nano"
+        animation="fade"
+    >
+        <Box
+            elevation="low"
+            palette="neutral"
+            padding="small"
+            radius="nano"
+        >
+            I describe the button!
         </Box>
     </Popover.Section>
 </Popover.Container>
@@ -375,7 +442,7 @@ You can adjust which side your content is placed on via the `placement` property
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a RIGHT Popover.
         </Box>
@@ -398,7 +465,7 @@ You can adjust which side your content is placed on via the `placement` property
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a BOTTOM Popover.
         </Box>
@@ -435,7 +502,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a RIGHT X Popover.
         </Box>
@@ -455,7 +522,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a CENTER X Popover.
         </Box>
@@ -478,7 +545,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a LEFT X Popover.
         </Box>
@@ -504,7 +571,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a TOP Y Popover.
         </Box>
@@ -527,7 +594,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a CENTER Y Popover.
         </Box>
@@ -551,7 +618,7 @@ You can align `Popover` which direction the child content breaks, via the `align
             palette="inverse"
             elevation="high"
             padding="medium"
-            shape="rounded"
+            radius="tiny"
         >
             This is a BOTTOM Y Popover.
         </Box>

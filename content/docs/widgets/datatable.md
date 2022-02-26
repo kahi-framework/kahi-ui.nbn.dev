@@ -49,12 +49,12 @@ types=["(row: T) => boolean"]
 [[properties.DataTable]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties.DataTable]]
 name="sizing"
 description="Alters the overall spacing / sizing."
-types=["tiny", "small", "medium", "large", "huge"]
+types=["nano", "tiny", "small", "medium", "large", "huge", "massive", "{VIEWPORT}:{SIZING}"]
 
 [[properties.DataTable]]
 name="variation"
@@ -94,9 +94,9 @@ types=["{}"]
 
 # DataTable
 
-> **NOTE**: New since `v0.5.3`.
+> **NOTE**: Introduced feature in `v0.5.3`.
 
-> **WARNING**: While this Widget is available in Javascript-disabled Browsers, it can result in [Cumulative Layout Shift](https://web.dev/cls/).
+> **WARNING**: This feature can cause layout shifting and performance degradation during rehydration.
 
 `DataTable` is a subset of [`Table`](../display/table.md) Widget which automatically handles formatting tabular data into HTML.
 
@@ -1793,7 +1793,7 @@ Just like the [`Table`](../display/table.md) Component, you can customize the `v
     ];
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
 
@@ -1836,7 +1836,7 @@ Just like the [`Table`](../display/table.md) Component, you can customize the `v
             paginate
         />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Palette
@@ -1960,9 +1960,9 @@ You can change the color palette of all the interactables via the `palette` prop
     ];
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
-        <Text is="strong">NEUTRAL</Text>
+        <Text is="strong">DEFAULT</Text>
 
         <DataTable
             columns={COLUMNS}
@@ -1978,6 +1978,17 @@ You can change the color palette of all the interactables via the `palette` prop
             columns={COLUMNS}
             rows={ROWS}
             palette="accent"
+            paginate
+        />
+    </div>
+
+    <div>
+        <Text is="strong">NEUTRAL</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="neutral"
             paginate
         />
     </div>
@@ -2027,6 +2038,17 @@ You can change the color palette of all the interactables via the `palette` prop
     </div>
 
     <div>
+        <Text is="strong">INFORMATIVE</Text>
+
+        <DataTable
+            columns={COLUMNS}
+            rows={ROWS}
+            palette="informative"
+            paginate
+        />
+    </div>
+
+    <div>
         <Text is="strong">NEGATIVE</Text>
 
         <DataTable
@@ -2036,7 +2058,7 @@ You can change the color palette of all the interactables via the `palette` prop
             paginate
         />
     </div>
-</Stack>
+</Stack.Container>
 ```
 
 ## Sizing
@@ -2160,7 +2182,7 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
     ];
 </script>
 
-<Stack spacing="medium">
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
 
@@ -2225,5 +2247,5 @@ You can alter the overall spacing / sizing look and feel via the `sizing` proper
             paginate
         />
     </div>
-</Stack>
+</Stack.Container>
 ```

@@ -2,7 +2,7 @@
 [[properties."Blockquote.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[slots."Blockquote.Container"]]
 name="default"
@@ -57,7 +57,7 @@ types=["<length>"]
 
 # Blockquote
 
-> **NOTE**: New since `v0.2.5`.
+> **NOTE**: Introduced feature in `v0.2.5`.
 
 `Blockquote` is typically used to render a block of text, that's attributed to a certain source of information.
 
@@ -121,7 +121,7 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
     } from "@kahi-ui/framework";
 </script>
 
-<Stack
+<Stack.Container
     orientation="horizontal"
     spacing="medium"
     variation="wrap"
@@ -159,6 +159,25 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
         </Text>
 
         <Blockquote.Cite>— ACCENT</Blockquote.Cite>
+    </Blockquote.Container>
+
+    <Blockquote.Container
+        max_width="prose"
+        palette="neutral"
+    >
+        <Text margin_bottom="medium">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Mauris porta, urna vel
+            tristique varius, ipsum erat auctor odio,
+            id imperdiet mauris velit eget quam. Donec
+            viverra urna eu ligula eleifend, sed
+            molestie lectus convallis. Nullam gravida
+            placerat ex, sodales porttitor nibh.
+            Suspendisse vitae nisi euismod, venenatis
+            dui eu, hendrerit risus.
+        </Text>
+
+        <Blockquote.Cite>— NEUTRAL</Blockquote.Cite>
     </Blockquote.Container>
 
     <Blockquote.Container
@@ -241,6 +260,26 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
 
     <Blockquote.Container
         max_width="prose"
+        palette="informative"
+    >
+        <Text margin_bottom="medium">
+            Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Mauris porta, urna vel
+            tristique varius, ipsum erat auctor odio,
+            id imperdiet mauris velit eget quam. Donec
+            viverra urna eu ligula eleifend, sed
+            molestie lectus convallis. Nullam gravida
+            placerat ex, sodales porttitor nibh.
+            Suspendisse vitae nisi euismod, venenatis
+            dui eu, hendrerit risus.
+        </Text>
+
+        <Blockquote.Cite>— INFORMATIVE</Blockquote.Cite
+        >
+    </Blockquote.Container>
+
+    <Blockquote.Container
+        max_width="prose"
         palette="negative"
     >
         <Text margin_bottom="medium">
@@ -257,5 +296,5 @@ You can change the color palette of the `Blockquote.Container` via the `palette`
 
         <Blockquote.Cite>— NEGATIVE</Blockquote.Cite>
     </Blockquote.Container>
-</Stack>
+</Stack.Container>
 ```

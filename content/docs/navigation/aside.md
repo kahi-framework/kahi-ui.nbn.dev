@@ -2,7 +2,7 @@
 [[properties."Aside.Container"]]
 name="palette"
 description="Alters the displayed color scheme."
-types=["auto", "inverse", "inherit", "accent", "dark", "light", "alert", "affirmative", "negative"]
+types=["auto", "inverse", "inherit", "accent", "neutral", "off", "dark", "light", "alert", "affirmative", "informative", "negative"]
 
 [[properties."Aside.Container"]]
 name="placement"
@@ -38,9 +38,7 @@ types=["{}"]
 
 # Aside
 
-> **NOTE**: New since `v0.2.0`.
-
-> **WARNING**: Received a breaking refactoring in [`v0.5.0`](../migrations/0.4.x-to-0.5.x.md).
+> **NOTE**: Introduced feature in `v0.2.0`.
 
 `Aside` is used to vertically present the end-user with actions and links that can be accessed anytime on the Web Application.
 
@@ -94,7 +92,7 @@ types=["{}"]
 
     <Aside.Footer>
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Aside.Footer>
 </Aside.Container>
@@ -127,7 +125,7 @@ You can change the color palette of the `Aside` via the `palette` property.
     } from "@kahi-ui/framework";
 </script>
 
-<Mosaic sizing="medium" spacing="medium">
+<Mosaic.Container sizing="medium" spacing="medium">
     <Aside.Container>
         <Aside.Header>
             <Anchor href="#">Kahi UI</Anchor>
@@ -180,6 +178,33 @@ You can change the color palette of the `Aside` via the `palette` property.
         </Aside.Section>
 
         <Aside.Footer>ACCENT</Aside.Footer>
+    </Aside.Container>
+
+    <Aside.Container palette="neutral">
+        <Aside.Header>
+            <Anchor href="#">Kahi UI</Anchor>
+            <Divider />
+        </Aside.Header>
+
+        <Aside.Section>
+            <Menu.Container>
+                <Menu.Heading>FEEDBACK</Menu.Heading>
+
+                <Menu.Button>
+                    Dot
+                    <Spacer />
+                    <span>ICON</span>
+                </Menu.Button>
+
+                <Menu.Button active>
+                    Spinner
+                    <Spacer />
+                    <span>ICON</span>
+                </Menu.Button>
+            </Menu.Container>
+        </Aside.Section>
+
+        <Aside.Footer>NEUTRAL</Aside.Footer>
     </Aside.Container>
 
     <Aside.Container palette="dark">
@@ -290,6 +315,33 @@ You can change the color palette of the `Aside` via the `palette` property.
         <Aside.Footer>AFFIRMATIVE</Aside.Footer>
     </Aside.Container>
 
+    <Aside.Container palette="informative">
+        <Aside.Header>
+            <Anchor href="#">Kahi UI</Anchor>
+            <Divider />
+        </Aside.Header>
+
+        <Aside.Section>
+            <Menu.Container>
+                <Menu.Heading>FEEDBACK</Menu.Heading>
+
+                <Menu.Button>
+                    Dot
+                    <Spacer />
+                    <span>ICON</span>
+                </Menu.Button>
+
+                <Menu.Button active>
+                    Spinner
+                    <Spacer />
+                    <span>ICON</span>
+                </Menu.Button>
+            </Menu.Container>
+        </Aside.Section>
+
+        <Aside.Footer>INFORMATIVE</Aside.Footer>
+    </Aside.Container>
+
     <Aside.Container palette="negative">
         <Aside.Header>
             <Anchor href="#">Kahi UI</Anchor>
@@ -316,7 +368,7 @@ You can change the color palette of the `Aside` via the `palette` property.
 
         <Aside.Footer>NEGATIVE</Aside.Footer>
     </Aside.Container>
-</Mosaic>
+</Mosaic.Container>
 ```
 
 ## Placement
@@ -368,7 +420,7 @@ You can adjust which side the content divider border will appear via the `placem
 
     <Aside.Footer>
         <Anchor href="#">
-            <Text is="small">v0.5.0</Text>
+            <Text is="small">v0.6.0</Text>
         </Anchor>
     </Aside.Footer>
 </Aside.Container>
@@ -376,9 +428,9 @@ You can adjust which side the content divider border will appear via the `placem
 
 ## Collapsing
 
-> **NOTE**: The REPL currently does not support viewport values. Resize your Browser instead.
+> **USAGE**: REPL does not support viewport values, resize your Browser to observe this feature.
 
-While this Component does not have built-in collapsing, the Framework provides the primitives for you to build unopinionated collapsable navigations interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
+While `Aside` does not have built-in collapsing, the Framework provides the primitives for you to build collapsable interfaces. Via Components like [`Overlay`](../overlays/overlay.md) and features like [`contents`](../globals/contents.md).
 
 ```svelte {title="Aside Collapsing" mode="repl"}
 <script>
@@ -400,7 +452,9 @@ While this Component does not have built-in collapsing, the Framework provides t
     alignment_x="left"
     hidden={["desktop", "widescreen"]}
 >
-    <Button for="aside-collapsing">+</Button>
+    <Button is="label" for="aside-collapsing">
+        +
+    </Button>
 </Position>
 
 <Overlay.Container
@@ -459,7 +513,7 @@ While this Component does not have built-in collapsing, the Framework provides t
 
             <Aside.Footer>
                 <Anchor href="#">
-                    <Text is="small">v0.5.0</Text>
+                    <Text is="small">v0.6.0</Text>
                 </Anchor>
             </Aside.Footer>
 

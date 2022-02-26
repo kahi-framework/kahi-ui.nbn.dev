@@ -12,7 +12,7 @@ types=["{}"]
 
 # Scrollable
 
-> **NOTE**: New since `v0.2.3`.
+> **NOTE**: Introduced feature in `v0.2.3`.
 
 `Scrollable` is a layout primitive for encapsulating a given available space into its own scrollable context.
 

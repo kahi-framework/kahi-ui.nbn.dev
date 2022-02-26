@@ -15,7 +15,8 @@
     "dependencies": {
         "@kahi-docs/config": "workspace:^",
         "@kahi-docs/shared": "workspace:^",
-        "@kahi-ui/framework": "0.5.7"
+        "@kahi-ui/framework": "0.6.1",
+        "lucide-svelte": "^0.17.2"
     },
     "devDependencies": {
         "prettier": "^2.4.1",

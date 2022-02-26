@@ -62,22 +62,14 @@
 
 <script lang="ts">
     import {Box, Menu, Stack, Text, viewports} from "@kahi-ui/framework";
+    import {Copy, Code, Image, RotateCw, Share2, Sidebar} from "lucide-svelte";
     import {onMount} from "svelte";
 
     import type {ISnippet} from "@kahi-docs/markdown";
     import {session} from "@kahi-docs/shared";
 
-    import PageMetadata from "../../lib/components/PageMetadata.svelte";
     import PromptShare from "../../lib/components/PromptShare.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
-    import StaticLayout from "../../lib/components/StaticLayout.svelte";
-
-    import Copy from "../../lib/components/icons/Copy.svelte";
-    import Code from "../../lib/components/icons/Code.svelte";
-    import Image from "../../lib/components/icons/Image.svelte";
-    import RotateCW from "../../lib/components/icons/RotateCW.svelte";
-    import Share2 from "../../lib/components/icons/Share2.svelte";
-    import Sidebar from "../../lib/components/icons/Sidebar.svelte";
 
     import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
 
@@ -109,68 +101,64 @@
     $: $session = value;
 </script>
 
-<PageMetadata title="Playground" separator="—" />
+<Box padding="small">
+    <Stack.Container
+        alignment_x={["center", "desktop:right", "widescreen:right"]}
+        orientation="horizontal"
+    >
+        <Menu.Container orientation="horizontal" sizing="tiny">
+            <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
+                <Share2 size="1em" />
+                Share
+            </Menu.Button>
 
-<StaticLayout>
-    <Box padding="small">
-        <Stack
-            alignment_x={["center", "desktop:right", "widescreen:right"]}
-            orientation="horizontal"
-        >
-            <Menu.Container orientation="horizontal" sizing="small">
-                <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
-                    <Share2 />
-                    Share
-                </Menu.Button>
+            <Menu.Button palette="affirmative" on:click={on_copy_click}>
+                <Copy size="1em" />
+                Copy
+            </Menu.Button>
 
-                <Menu.Button palette="affirmative" on:click={on_copy_click}>
-                    <Copy />
-                    Copy
-                </Menu.Button>
+            <Menu.Button
+                palette="inverse"
+                on:click={() =>
+                    (orientation =
+                        orientation === SPLIT_ORIENTATION.horizontal
+                            ? SPLIT_ORIENTATION.vertical
+                            : SPLIT_ORIENTATION.horizontal)}
+            >
+                <RotateCw size="1em" />
+                <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
+            </Menu.Button>
 
-                <Menu.Button
-                    palette="inverse"
-                    on:click={() =>
-                        (orientation =
-                            orientation === SPLIT_ORIENTATION.horizontal
-                                ? SPLIT_ORIENTATION.vertical
-                                : SPLIT_ORIENTATION.horizontal)}
-                >
-                    <RotateCW />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
-                </Menu.Button>
+            <Menu.Button
+                active={mode === SPLIT_MODE.split}
+                palette="inverse"
+                on:click={() => (mode = SPLIT_MODE.split)}
+            >
+                <Sidebar size="1em" />
+                <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
+            </Menu.Button>
 
-                <Menu.Button
-                    active={mode === SPLIT_MODE.split}
-                    palette="inverse"
-                    on:click={() => (mode = SPLIT_MODE.split)}
-                >
-                    <Sidebar />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Split</Text>
-                </Menu.Button>
+            <Menu.Button
+                active={mode === SPLIT_MODE.first}
+                palette="inverse"
+                on:click={() => (mode = SPLIT_MODE.first)}
+            >
+                <Code size="1em" />
+                <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
+            </Menu.Button>
 
-                <Menu.Button
-                    active={mode === SPLIT_MODE.first}
-                    palette="inverse"
-                    on:click={() => (mode = SPLIT_MODE.first)}
-                >
-                    <Code />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Editor</Text>
-                </Menu.Button>
+            <Menu.Button
+                active={mode === SPLIT_MODE.last}
+                palette="inverse"
+                on:click={() => (mode = SPLIT_MODE.last)}
+            >
+                <Image size="1em" />
+                <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
+            </Menu.Button>
+        </Menu.Container>
+    </Stack.Container>
+</Box>
 
-                <Menu.Button
-                    active={mode === SPLIT_MODE.last}
-                    palette="inverse"
-                    on:click={() => (mode = SPLIT_MODE.last)}
-                >
-                    <Image />
-                    <Text is="span" hidden={["mobile", "tablet"]}>Render</Text>
-                </Menu.Button>
-            </Menu.Container>
-        </Stack>
-    </Box>
-
-    <REPLSplit {mode} {orientation} bind:value />
-</StaticLayout>
+<REPLSplit {mode} {orientation} bind:value />
 
 <PromptShare {value} bind:logic_state />
