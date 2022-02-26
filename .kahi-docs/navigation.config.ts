@@ -12,7 +12,7 @@ export default define_navigation({
         {
             text: "Resources",
             items: [
-                {href: "/docs/resources/official"},
+                {href: "/docs/resources/official", badge: "UPDATED"},
                 {href: "/docs/resources/community"},
                 {href: "/docs/resources/faq"},
             ],
