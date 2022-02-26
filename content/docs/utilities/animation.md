@@ -202,6 +202,7 @@ You can change the HTML tag rendered to DOM via the `is` property.
         Box,
         Button,
         Stack,
+        Text,
     } from "@kahi-ui/framework";
 </script>
 

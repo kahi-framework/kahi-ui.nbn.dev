@@ -42,7 +42,7 @@ To check if lightmode is enabled, the `lightmode` Store is available.
 <Text>
     {$lightmode_store
         ? "Lightmode is enabled!"
-        : "Darkmode is enabled!"}
+        : "Lightmode is disabled!"}
 </Text>
 ```
 

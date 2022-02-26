@@ -286,7 +286,7 @@ You can alter how large each `Mosaic` item should be via the `sizing` property.
 
         <Box palette="inverse" padding="small">
             <Mosaic.Container
-                sizing="huge"
+                sizing="massive"
                 spacing="medium"
             >
                 <Box

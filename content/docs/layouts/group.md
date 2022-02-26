@@ -195,11 +195,7 @@ When the `variation` property is set to `stacked`, you can control the negative 
     } from "@kahi-ui/framework";
 </script>
 
-<Stack.Container
-    orientation="horizontal"
-    spacing="medium"
-    variation="wrap"
->
+<Stack.Container spacing="medium">
     <div>
         <Text is="strong">DEFAULT</Text>
         <br />
