@@ -708,10 +708,7 @@ You can alter the alignment of the Component via the `alignment_x` property.
     spacing="medium"
     variation="wrap"
 >
-    <TextInput
-        value="DEFAULT TextInput"
-        span_x="20"
-    />
+    <TextInput value="DEFAULT TextInput" span_x="20" />
 
     <TextInput
         alignment_x="left"
