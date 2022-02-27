@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
     const DESCRIPTION = "Straight-forward Svelte UI for the Web";
 
-    const IMAGE = "https://kahi-ui.nbn.dev/assets/images/logo-social.png";
+    const IMAGE = "https://kahi-ui.nbn.dev/assets/images/social.png";
 
     const SITE_NAME = "Kahi UI";
 </script>
