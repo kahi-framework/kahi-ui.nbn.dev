@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-6c7b9d3e.js",
+    "file": "start-849fda28.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -23,13 +23,13 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-2da1eac9.js",
+    "file": "pages/__layout.svelte-03541079.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-b10044b0.js",
-      "_PageHeader-52834eae.js",
+      "_PageHeader-a6cc2385.js",
       "_AppNavigation-c011a202.js",
       "_stores-e763cd27.js",
       "_AppAnchor-eef73d8c.js",
@@ -68,13 +68,13 @@
     ]
   },
   "src/routes/playground/__layout.reset.svelte": {
-    "file": "pages/playground/__layout.reset.svelte-9216ede4.js",
+    "file": "pages/playground/__layout.reset.svelte-490eb826.js",
     "src": "src/routes/playground/__layout.reset.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-b10044b0.js",
-      "_PageHeader-52834eae.js",
+      "_PageHeader-a6cc2385.js",
       "_AppNavigation-c011a202.js",
       "_preferences-f3c864d1.js",
       "_stores-e763cd27.js",
@@ -110,13 +110,13 @@
     ]
   },
   "src/routes/chat/__layout.reset.svelte": {
-    "file": "pages/chat/__layout.reset.svelte-4ba17c04.js",
+    "file": "pages/chat/__layout.reset.svelte-f968788d.js",
     "src": "src/routes/chat/__layout.reset.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-b10044b0.js",
-      "_PageHeader-52834eae.js",
+      "_PageHeader-a6cc2385.js",
       "_preferences-f3c864d1.js",
       "_stores-e763cd27.js"
     ]
@@ -173,8 +173,8 @@
   "_preload-helper-ec9aa979.js": {
     "file": "chunks/preload-helper-ec9aa979.js"
   },
-  "_PageHeader-52834eae.js": {
-    "file": "chunks/PageHeader-52834eae.js",
+  "_PageHeader-a6cc2385.js": {
+    "file": "chunks/PageHeader-a6cc2385.js",
     "imports": [
       "_vendor-b10044b0.js",
       "_preferences-f3c864d1.js",
