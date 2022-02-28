@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-849fda28.js",
+    "file": "start-f5a930b2.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -23,14 +23,14 @@
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-03541079.js",
+    "file": "pages/__layout.svelte-1c7fa638.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-b10044b0.js",
-      "_PageHeader-a6cc2385.js",
-      "_AppNavigation-c011a202.js",
+      "_PageHeader-69cc5fd3.js",
+      "_AppNavigation-b5ea6d38.js",
       "_stores-e763cd27.js",
       "_AppAnchor-eef73d8c.js",
       "_preferences-f3c864d1.js",
@@ -68,14 +68,14 @@
     ]
   },
   "src/routes/playground/__layout.reset.svelte": {
-    "file": "pages/playground/__layout.reset.svelte-490eb826.js",
+    "file": "pages/playground/__layout.reset.svelte-c737a890.js",
     "src": "src/routes/playground/__layout.reset.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-b10044b0.js",
-      "_PageHeader-a6cc2385.js",
-      "_AppNavigation-c011a202.js",
+      "_PageHeader-69cc5fd3.js",
+      "_AppNavigation-b5ea6d38.js",
       "_preferences-f3c864d1.js",
       "_stores-e763cd27.js",
       "_paths-4b3c6e7e.js",
@@ -110,13 +110,13 @@
     ]
   },
   "src/routes/chat/__layout.reset.svelte": {
-    "file": "pages/chat/__layout.reset.svelte-f968788d.js",
+    "file": "pages/chat/__layout.reset.svelte-e931ca74.js",
     "src": "src/routes/chat/__layout.reset.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-b10044b0.js",
-      "_PageHeader-a6cc2385.js",
+      "_PageHeader-69cc5fd3.js",
       "_preferences-f3c864d1.js",
       "_stores-e763cd27.js"
     ]
@@ -173,8 +173,8 @@
   "_preload-helper-ec9aa979.js": {
     "file": "chunks/preload-helper-ec9aa979.js"
   },
-  "_PageHeader-a6cc2385.js": {
-    "file": "chunks/PageHeader-a6cc2385.js",
+  "_PageHeader-69cc5fd3.js": {
+    "file": "chunks/PageHeader-69cc5fd3.js",
     "imports": [
       "_vendor-b10044b0.js",
       "_preferences-f3c864d1.js",
@@ -184,8 +184,8 @@
       "assets/PageHeader-bd0525c2.css"
     ]
   },
-  "_AppNavigation-c011a202.js": {
-    "file": "chunks/AppNavigation-c011a202.js",
+  "_AppNavigation-b5ea6d38.js": {
+    "file": "chunks/AppNavigation-b5ea6d38.js",
     "imports": [
       "_vendor-b10044b0.js",
       "_paths-4b3c6e7e.js",
