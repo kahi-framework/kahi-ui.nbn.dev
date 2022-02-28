@@ -60,7 +60,7 @@
 
 <svelte:window use:search_keybind={on_search_active} />
 
-<Omni.Container class="app-navigation" palette="dark">
+<Omni.Container class="app-navigation">
     <Omni.Header>
         <AppAnchor class="anchor" href={base || "/"} no_handle prefetch>Kahi UI</AppAnchor>
         <Divider orientation="vertical" />
@@ -83,6 +83,7 @@
         <TextInput
             type="search"
             placeholder="[CTRL+/] Search"
+            palette="auto"
             sizing="tiny"
             variation="block"
             alignment_x="center"
@@ -98,7 +99,7 @@
             dismissible
             bind:logic_state
         >
-            <Popover.Button palette="light" variation="clear">
+            <Popover.Button palette="inverse" variation="clear">
                 <MoreVertical size="1em" />
             </Popover.Button>
 
