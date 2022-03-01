@@ -4,7 +4,7 @@ export default define_navigation({
     blog: [
         {
             text: "2022 March",
-            items: [{href: "/blog/2022-02/0.6.2-introducing-dataselect", badge: "NEW"}],
+            items: [{href: "/blog/2022-03/0.6.2-introducing-dataselect", badge: "NEW"}],
         },
         {
             text: "2022 Feburary",

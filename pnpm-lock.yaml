@@ -139,6 +139,7 @@ importers:
       markdown-it: ^12.0.6
       markdown-it-attrs: ^4.1.0
       markdown-it-emoji: ^2.0.0
+      markdown-it-html5-media: ^0.7.1
       prettier: ^2.3.1
       prettier-plugin-svelte: ^2.3.1
       prismjs: ^1.23.0
@@ -175,6 +176,7 @@ importers:
       markdown-it: 12.2.0
       markdown-it-attrs: 4.1.0_markdown-it@12.2.0
       markdown-it-emoji: 2.0.0
+      markdown-it-html5-media: 0.7.1
       prettier: 2.4.1
       prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.0
       svelte-check: 2.4.1_svelte@3.44.0
@@ -957,7 +959,6 @@ packages:
     engines: {node: '>=10.0'}
     dependencies:
       markdown-it: 12.3.2
-    dev: false
 
   /markdown-it/12.2.0:
     resolution: {integrity: sha512-Wjws+uCrVQRqOoJvze4HCqkKl1AsSh95iFAeQDwnyfxM09divCBSXlDR1uTvyUP3Grzpn4Ru8GeCxYPM8vkCQg==}
@@ -978,7 +979,6 @@ packages:
       linkify-it: 3.0.3
       mdurl: 1.0.1
       uc.micro: 1.0.6
-    dev: false
 
   /mdurl/1.0.1:
     resolution: {integrity: sha1-/oWy7HWlkDfyrf7BAP1sYBdhFS4=}

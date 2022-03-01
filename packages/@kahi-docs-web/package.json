@@ -37,6 +37,7 @@
         "markdown-it": "^12.0.6",
         "markdown-it-attrs": "^4.1.0",
         "markdown-it-emoji": "^2.0.0",
+        "markdown-it-html5-media": "^0.7.1",
         "prettier": "^2.3.1",
         "prettier-plugin-svelte": "^2.3.1",
         "svelte-check": "2.4.1",
