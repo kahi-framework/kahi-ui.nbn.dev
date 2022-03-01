@@ -3,11 +3,12 @@ import {define_navigation} from "@kahi-docs/config";
 export default define_navigation({
     blog: [
         {
+            text: "2022 March",
+            items: [{href: "/blog/2022-02/0.6.2-introducing-dataselect", badge: "NEW"}],
+        },
+        {
             text: "2022 Feburary",
-            items: [
-                {href: "/blog/2022-02/0.6.2-introducing-dataselect", badge: "NEW"},
-                {href: "/blog/2022-02/0.6.0-alpha-1"},
-            ],
+            items: [{href: "/blog/2022-02/0.6.0-alpha-1"}],
         },
     ],
 
