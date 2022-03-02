@@ -1,0 +1,1 @@
+{"data":{"identifier":"dataselect-imports","script":"<script>\n    import {DataSelect} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"DataSelect Imports"}}

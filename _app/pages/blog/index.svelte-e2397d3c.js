@@ -1,0 +1,1 @@
+import{S as s,i as e,s as o}from"../../chunks/vendor-b1b19190.js";const n=()=>({status:302,redirect:"/blog/2022-03/0.6.2-introducing-dataselect"});class r extends s{constructor(t){super();e(this,t,null,null,o,{})}}export{r as default,n as load};

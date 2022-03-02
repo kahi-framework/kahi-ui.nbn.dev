@@ -1,1 +1,0 @@
-import{S as s,i as e,s as a}from"../../chunks/vendor-b10044b0.js";const n=()=>({status:302,redirect:"/blog/2022-02/0.6.0-alpha-1"});class r extends s{constructor(t){super();e(this,t,null,null,a,{})}}export{r as default,n as load};
