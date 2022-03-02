@@ -34,6 +34,7 @@ declare module "lucide-svelte" {
     export declare class Menu extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class Moon extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class Package extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
+    export declare class Pencil extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class MessageCircle extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class MoreVertical extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
     export declare class RotateCw extends SvelteComponentTyped<IconProps, IconEvents, {}> {}
