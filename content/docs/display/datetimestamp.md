@@ -1,8 +1,8 @@
 +++
 [[properties.DateTimeStamp]]
 name="timestamp"
-description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) timestamp being formatted for display."
-types=["string"]
+description="Sets the [ISO 8601 / RFC 3339](https://www.w3.org/TR/NOTE-datetime) or UNIX Epoch timestamp being formatted for display."
+types=["number", "string"]
 
 [[properties.DateTimeStamp]]
 name="calendar"
