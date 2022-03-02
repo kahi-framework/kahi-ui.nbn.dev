@@ -47,7 +47,7 @@
                 <Text class="content-metadata--timestamps" is="small">
                     <Clock size="1em" />
                     <DateTimeStamp
-                        timestamp={$page.stuff.content.metadata.modified_at}
+                        timestamp={$page.stuff.content.metadata.created_at}
                         day="2-digit"
                         month="2-digit"
                         year="2-digit"
@@ -57,7 +57,7 @@
 
                     <Pencil size="1em" />
                     <DateTimeStamp
-                        timestamp={$page.stuff.content.metadata.created_at}
+                        timestamp={$page.stuff.content.metadata.modified_at}
                         day="2-digit"
                         month="2-digit"
                         year="2-digit"
@@ -69,7 +69,7 @@
             <Text class="content-metadata--timestamps" is="small">
                 <Clock size="1em" />
                 <DateTimeStamp
-                    timestamp={$page.stuff.content.metadata.modified_at}
+                    timestamp={$page.stuff.content.metadata.created_at}
                     day="2-digit"
                     month="2-digit"
                     year="2-digit"
@@ -79,7 +79,7 @@
 
                 <Pencil size="1em" />
                 <DateTimeStamp
-                    timestamp={$page.stuff.content.metadata.created_at}
+                    timestamp={$page.stuff.content.metadata.modified_at}
                     day="2-digit"
                     month="2-digit"
                     year="2-digit"
