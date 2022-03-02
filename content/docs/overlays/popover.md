@@ -26,8 +26,8 @@ types=["boolean"]
 
 [[properties."Popover.Container"]]
 name="variation"
-description="Alters the functionality of the `<Popover.Container>` to activate via hovering / focusing."
-types=["tooltip"]
+description="Alters the functionality of the `<Popover.Container>` to activate via hovering and / or focusing."
+types=["control", "tooltip"]
 
 [[properties."Popover.Section"]]
 name="animation"
@@ -350,6 +350,99 @@ You can enable having the `Popover` dismissed whenever inner content is clicked 
             radius="tiny"
         >
             ONCE Popover
+        </Box>
+    </Popover.Section>
+</Popover.Container>
+```
+
+## Control
+
+> **NOTE**: Introduced feature in `v0.6.2`
+
+You can alter the functionality of a `<Popover.Container>` Component to activate by focusing the inner content via the `variation` property.
+
+```svelte {title="Popover Control" mode="repl"}
+<script>
+    import {
+        Box,
+        Check,
+        Menu,
+        Popover,
+        Spacer,
+        TextInput,
+    } from "@kahi-ui/framework";
+
+    let searching = "";
+</script>
+
+<Popover.Container variation="control">
+    <TextInput
+        placeholder="...filter options"
+        bind:value={searching}
+    />
+
+    <Popover.Section
+        alignment_x="right"
+        spacing="small"
+    >
+        <Box
+            elevation="medium"
+            padding="medium"
+            variation="borders"
+            radius="tiny"
+        >
+            <Menu.Container sizing="tiny">
+                <Menu.Heading>Filter</Menu.Heading>
+
+                <Menu.Label
+                    for="popover-preview-control-cpus"
+                    hidden={searching &&
+                        !"cpus".includes(
+                            searching.toLowerCase()
+                        )}
+                >
+                    CPUs
+                    <Spacer />
+                    <Check
+                        value="cpus"
+                        palette="accent"
+                        variation="flush"
+                    />
+                </Menu.Label>
+
+                <Menu.Label
+                    for="popover-preview-control-hard-drives"
+                    hidden={searching &&
+                        !"hard drives".includes(
+                            searching.toLowerCase()
+                        )}
+                >
+                    Hard Drives
+                    <Spacer />
+                    <Check
+                        value="hard-drives"
+                        palette="accent"
+                        variation="flush"
+                        state
+                    />
+                </Menu.Label>
+
+                <Menu.Label
+                    for="popover-preview-control-solid-state-drives"
+                    hidden={searching &&
+                        !"solid state drives".includes(
+                            searching.toLowerCase()
+                        )}
+                >
+                    Solid State Drives
+                    <Spacer />
+                    <Check
+                        value="solid-state-drives"
+                        palette="accent"
+                        variation="flush"
+                    />
+                </Menu.Label>
+            </Menu.Container>
         </Box>
     </Popover.Section>
 </Popover.Container>

@@ -68,7 +68,7 @@
                                 <Code>{property.name}</Code>
                             </Table.Column>
 
-                            <Table.Column>
+                            <Table.Column class="article">
                                 {@html property.description}
                             </Table.Column>
 

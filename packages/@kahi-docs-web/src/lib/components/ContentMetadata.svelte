@@ -4,19 +4,14 @@
 </script>
 
 <script lang="ts">
-    import {browser} from "$app/env";
     import {page} from "$app/stores";
-    import {Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
+    import {DateTimeStamp, Heading, Spacer, Stack, Text} from "@kahi-ui/framework";
+    import {Clock, Pencil} from "lucide-svelte";
 
     import AppAnchor from "./AppAnchor.svelte";
 
     $: _edit_url = $page.stuff.content
         ? TEMPLATE_EDIT_URL({identifier: $page.stuff.content.metadata.identifier})
-        : "";
-    $: _timestamp = $page.stuff.content
-        ? new Date($page.stuff.content.metadata.modified_at).toLocaleString(
-              browser ? navigator.language : "en-US"
-          )
         : "";
 </script>
 
@@ -49,13 +44,47 @@
                     {/each}
                 </Stack.Container>
 
-                <Text is="small">
-                    {_timestamp}
+                <Text class="content-metadata--timestamps" is="small">
+                    <Clock size="1em" />
+                    <DateTimeStamp
+                        timestamp={$page.stuff.content.metadata.created_at}
+                        day="2-digit"
+                        month="2-digit"
+                        year="2-digit"
+                        margin_left="tiny"
+                        margin_right="small"
+                    />
+
+                    <Pencil size="1em" />
+                    <DateTimeStamp
+                        timestamp={$page.stuff.content.metadata.modified_at}
+                        day="2-digit"
+                        month="2-digit"
+                        year="2-digit"
+                        margin_left="tiny"
+                    />
                 </Text>
             </div>
         {:else}
-            <Text is="small">
-                {_timestamp}
+            <Text class="content-metadata--timestamps" is="small">
+                <Clock size="1em" />
+                <DateTimeStamp
+                    timestamp={$page.stuff.content.metadata.created_at}
+                    day="2-digit"
+                    month="2-digit"
+                    year="2-digit"
+                    margin_left="tiny"
+                    margin_right="small"
+                />
+
+                <Pencil size="1em" />
+                <DateTimeStamp
+                    timestamp={$page.stuff.content.metadata.modified_at}
+                    day="2-digit"
+                    month="2-digit"
+                    year="2-digit"
+                    margin_left="tiny"
+                />
             </Text>
         {/if}
 
@@ -68,3 +97,10 @@
 {:else}
     <Text is="strong" palette="negative">Error</Text>: failed to load content metadata
 {/if}
+
+<style>
+    :global(.content-metadata--timestamps) {
+        display: flex;
+        align-items: center;
+    }
+</style>

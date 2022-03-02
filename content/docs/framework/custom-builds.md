@@ -150,6 +150,10 @@ npm run build:framework -- --disable-globals-intrinsics-responsitivity --disable
     -   `--disable-components-utilities-portal` — [`Portal`](../utilities/portal.md)
     -   `--disable-components-utilities-transition` — [`Transition`](../utilities/transition.md)
 
+-   Widgets
+
+    -   `--disable-components-widgets-dataselect` — [`DataSelect`](../widgets/dataselect.md)
+
 ### Globals
 
 > **WARNING**: Most non-Component specific properties are implemented as global CSS attributes to reduce redundancy. If you turn off the feature, it turns off for **ALL** Components.

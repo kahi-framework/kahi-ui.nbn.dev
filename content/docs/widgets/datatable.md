@@ -44,7 +44,7 @@ types=["string"]
 [[properties.DataTable]]
 name="searching_algorithm"
 description="Optional custom searching filter. By default, all row members are lowercased and fuzzy searched."
-types=["(row: T) => boolean"]
+types=["(row: T, searching?: string) => boolean"]
 
 [[properties.DataTable]]
 name="palette"

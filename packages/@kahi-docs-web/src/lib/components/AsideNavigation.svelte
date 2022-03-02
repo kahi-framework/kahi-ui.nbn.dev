@@ -74,10 +74,14 @@
             alignment_x="left"
             contents={["desktop", "widescreen"]}
         >
-            <Aside.Container palette="off" variation="sticky">
+            <Aside.Container
+                palette="off"
+                variation="sticky"
+                width={["large", "mobile:huge", "tablet:huge"]}
+            >
                 <!-- TODO: Margin modifier is temp until Framework update to fix it -->
                 <Aside.Section bind:element={section_element} margin_bottom="none">
-                    <Menu.Container>
+                    <Menu.Container sizing={["tiny", "mobile:small", "tablet:small"]}>
                         {#each $page.stuff.navigation as menu (menu.text)}
                             <Menu.Heading variation="divider">
                                 {menu.text}
@@ -124,7 +128,6 @@
     :global(.aside-navigation .aside) {
         grid-area: aside;
 
-        width: 20rem;
         height: 100vh;
         max-height: 100%;
     }

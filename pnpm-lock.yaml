@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@kahi-docs/config': workspace:^
       '@kahi-docs/shared': workspace:^
-      '@kahi-ui/framework': 0.6.1
+      '@kahi-ui/framework': 0.6.2
       lucide-svelte: ^0.17.2
       prettier: ^2.4.1
       prettier-plugin-svelte: ^2.4.0
@@ -14,7 +14,7 @@ importers:
     dependencies:
       '@kahi-docs/config': link:packages/@kahi-docs-config
       '@kahi-docs/shared': link:packages/@kahi-docs-shared
-      '@kahi-ui/framework': 0.6.1
+      '@kahi-ui/framework': 0.6.2
       lucide-svelte: 0.17.2_svelte@3.44.0
     devDependencies:
       prettier: 2.4.1
@@ -62,6 +62,7 @@ importers:
       markdown-it: ^12.2.0
       markdown-it-attrs: ^4.1.0
       markdown-it-emoji: ^2.0.0
+      markdown-it-html5-media: ^0.7.1
       prettier: ^2.3.1
       typescript: ^4.3.5
     dependencies:
@@ -75,6 +76,7 @@ importers:
       markdown-it: 12.2.0
       markdown-it-attrs: 4.1.0_markdown-it@12.2.0
       markdown-it-emoji: 2.0.0
+      markdown-it-html5-media: 0.7.1
     devDependencies:
       '@types/github-slugger': 1.3.0
       '@types/markdown-it': 12.2.3
@@ -120,7 +122,7 @@ importers:
       '@kahi-docs/markdown': workspace:^
       '@kahi-docs/node': workspace:^
       '@kahi-docs/shared': workspace:^
-      '@kahi-ui/framework': 0.6.1
+      '@kahi-ui/framework': 0.6.2
       '@novacbn/svelte-codejar': ^0.1.1
       '@novacbn/svelte-pipeline': 0.3.0
       '@sveltejs/adapter-static': 1.0.0-next.27
@@ -137,6 +139,7 @@ importers:
       markdown-it: ^12.0.6
       markdown-it-attrs: ^4.1.0
       markdown-it-emoji: ^2.0.0
+      markdown-it-html5-media: ^0.7.1
       prettier: ^2.3.1
       prettier-plugin-svelte: ^2.3.1
       prismjs: ^1.23.0
@@ -151,7 +154,7 @@ importers:
       '@kahi-docs/markdown': link:../@kahi-docs-markdown
       '@kahi-docs/node': link:../@kahi-docs-node
       '@kahi-docs/shared': link:../@kahi-docs-shared
-      '@kahi-ui/framework': 0.6.1
+      '@kahi-ui/framework': 0.6.2
       '@novacbn/svelte-codejar': 0.1.1
       '@novacbn/svelte-pipeline': 0.3.0
       flexsearch: 0.7.21
@@ -173,6 +176,7 @@ importers:
       markdown-it: 12.2.0
       markdown-it-attrs: 4.1.0_markdown-it@12.2.0
       markdown-it-emoji: 2.0.0
+      markdown-it-html5-media: 0.7.1
       prettier: 2.4.1
       prettier-plugin-svelte: 2.4.0_prettier@2.4.1+svelte@3.44.0
       svelte-check: 2.4.1_svelte@3.44.0
@@ -188,8 +192,8 @@ packages:
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  /@kahi-ui/framework/0.6.1:
-    resolution: {integrity: sha512-aCeIBW7Fzgmm0veK9EfFFp8NqW83vKpZX/GkyDo6Iwwse1fYxQmFDgZ8jUCwF8DjAp/Cr95aTliV4jkJH7aG8w==}
+  /@kahi-ui/framework/0.6.2:
+    resolution: {integrity: sha512-sG/l61XZD2Hnq4Nlt7kGqZRPiU8+69L9ZL0HjnqgVs2VPs5Ot4UY17YdnZAPqnzUZxUAmBiQs1DPEzJDcsf1MQ==}
     dependencies:
       svelte: 3.44.0
     dev: false
@@ -950,8 +954,24 @@ packages:
   /markdown-it-emoji/2.0.0:
     resolution: {integrity: sha512-39j7/9vP/CPCKbEI44oV8yoPJTpvfeReTn/COgRhSpNrjWF3PfP/JUxxB0hxV6ynOY8KH8Y8aX9NMDdo6z+6YQ==}
 
+  /markdown-it-html5-media/0.7.1:
+    resolution: {integrity: sha512-PfKFD+K1Vpw8+OwfV/VO6Y5Sy1xSS/F1BgbW8Q281LylBBoW47fm4k9Zh0IpsPpM3/HObBD6rooMTaMVlC3PqA==}
+    engines: {node: '>=10.0'}
+    dependencies:
+      markdown-it: 12.3.2
+
   /markdown-it/12.2.0:
     resolution: {integrity: sha512-Wjws+uCrVQRqOoJvze4HCqkKl1AsSh95iFAeQDwnyfxM09divCBSXlDR1uTvyUP3Grzpn4Ru8GeCxYPM8vkCQg==}
+    hasBin: true
+    dependencies:
+      argparse: 2.0.1
+      entities: 2.1.0
+      linkify-it: 3.0.3
+      mdurl: 1.0.1
+      uc.micro: 1.0.6
+
+  /markdown-it/12.3.2:
+    resolution: {integrity: sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==}
     hasBin: true
     dependencies:
       argparse: 2.0.1

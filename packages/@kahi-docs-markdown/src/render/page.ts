@@ -1,9 +1,11 @@
 import {promises} from "fs";
 const {readFile} = promises;
 
-// @ts-expect-error - HACK:
+// @ts-expect-error - HACK: no types
 import attrs from "markdown-it-attrs";
 import emoji from "markdown-it-emoji";
+// @ts-expect-error - HACK: no types
+import {html5Media} from "markdown-it-html5-media";
 
 import {read_timestamps} from "@kahi-docs/node";
 
@@ -169,6 +171,7 @@ export function render_page(text: string, options: Partial<IPageOptions> = {}): 
             HighlightPlugin,
             SnippetsPlugin,
             emoji,
+            html5Media,
             ...normalized_options.plugins,
         ]
     );
