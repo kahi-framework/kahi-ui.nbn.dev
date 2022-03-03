@@ -1,10 +1,11 @@
 <script context="module" lang="ts">
-    import {Book, Megaphone} from "lucide-svelte";
+    import {Book, Edit, Megaphone} from "lucide-svelte";
     import type {SvelteComponent} from "svelte";
 
     const CONTENT_ICONS: Record<string, typeof SvelteComponent | undefined> = {
         blog: Megaphone,
         docs: Book,
+        playground: Edit,
     };
 
     function get_icon(href: string): typeof SvelteComponent | null {
