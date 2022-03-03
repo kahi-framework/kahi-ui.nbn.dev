@@ -2,6 +2,8 @@
     import {Book, Edit, Megaphone} from "lucide-svelte";
     import type {SvelteComponent} from "svelte";
 
+    import {normalize_pathname} from "@kahi-docs/shared";
+
     const CONTENT_ICONS: Record<string, typeof SvelteComponent | undefined> = {
         blog: Megaphone,
         docs: Book,
@@ -9,7 +11,7 @@
     };
 
     function get_icon(href: string): typeof SvelteComponent | null {
-        const category = href.split("/")[1];
+        const category = normalize_pathname(href).split("/")[1];
 
         return CONTENT_ICONS[category] ?? null;
     }
