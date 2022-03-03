@@ -1,4 +1,4 @@
-import{bx as Y}from"./vendor-b1b19190.js";var W={exports:{}};(function(o){var E=typeof window!="undefined"?window:typeof WorkerGlobalScope!="undefined"&&self instanceof WorkerGlobalScope?self:{};/**
+import{bB as Y}from"./vendor-5751dbf2.js";var W={exports:{}};(function(o){var E=typeof window!="undefined"?window:typeof WorkerGlobalScope!="undefined"&&self instanceof WorkerGlobalScope?self:{};/**
  * Prism: Lightweight, robust, elegant syntax highlighting
  *
  * @license MIT <https://opensource.org/licenses/MIT>
