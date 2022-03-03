@@ -34,7 +34,6 @@ async function get_snippets_index(): Promise<ISnippetIndex> {
             return {
                 title: content.metadata.title,
                 snippets: content.metadata.snippets
-                    .filter(({draft, repl, syntax}) => !draft && repl && syntax === "svelte")
                     .map((snippet) => {
                         return {
                             identifier: snippet.identifier,

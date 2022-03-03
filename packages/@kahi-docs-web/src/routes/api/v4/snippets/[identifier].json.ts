@@ -28,15 +28,13 @@ async function get_snippets_index(): Promise<ISnippetRecord[]> {
             // TODO: error handling
             const content = await read_content(file_path);
 
-            return content.metadata.snippets
-                .filter(({draft, repl, syntax}) => !draft && repl && syntax === "svelte")
-                .map((snippet) => {
-                    return {
-                        identifier: snippet.identifier,
-                        script: snippet.script,
-                        title: snippet.title,
-                    };
-                });
+            return content.metadata.snippets.map((snippet) => {
+                return {
+                    identifier: snippet.identifier,
+                    script: snippet.script,
+                    title: snippet.title,
+                };
+            });
         })
     );
 
