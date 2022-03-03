@@ -17,19 +17,31 @@ async function get_search_index(): Promise<ISearchIndex> {
             // TODO: error handling
             const content = await read_content(file_path);
 
-            return {
-                identifier: content.metadata.identifier,
-                title: content.metadata.title,
-                text: content.text,
-            };
+            return [
+                ...content.metadata.snippets
+                    .filter(({syntax}) => syntax === "svelte")
+                    .map((snippet) => {
+                        const {identifier, script, title} = snippet;
+
+                        return {
+                            identifier: `/playground?snippet=${identifier}`,
+                            title: title,
+                            text: script,
+                        };
+                    }),
+
+                {
+                    identifier: content.metadata.identifier,
+                    title: content.metadata.title,
+                    text: content.text,
+                },
+            ];
         })
     );
 
-    index.sort((entry_a, entry_b) => {
+    return index.flat().sort((entry_a, entry_b) => {
         return entry_a.identifier > entry_b.identifier ? 1 : -1;
     });
-
-    return index;
 }
 
 const _get_search_index = dev ? get_search_index : memoize(get_search_index)[0];

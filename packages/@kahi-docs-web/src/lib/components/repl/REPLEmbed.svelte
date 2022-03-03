@@ -26,8 +26,8 @@
 
     $: _href =
         identifier && initial_value === value
-            ? `/playground/?snippet=${identifier}`
-            : `/playground/?script=${compress_safe(value)}`;
+            ? `/playground?snippet=${identifier}`
+            : `/playground?script=${compress_safe(value)}`;
 </script>
 
 <REPLSplit
