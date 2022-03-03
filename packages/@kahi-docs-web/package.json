@@ -39,7 +39,7 @@
         "markdown-it-html5-media": "^0.7.1",
         "markdown-it-plain-text": "^0.3.0",
         "prettier": "^2.3.1",
-        "prettier-plugin-svelte": "^2.3.1",
+        "prettier-plugin-svelte": "^2.6.0",
         "svelte-check": "2.4.1",
         "svelte-preprocess": "4.10.2",
         "svelte2tsx": "0.4.14",
@@ -57,6 +57,6 @@
         "flexsearch": "^0.7.21",
         "lucide-svelte": "^0.17.2",
         "prismjs": "^1.23.0",
-        "svelte": "^3.44.0"
+        "svelte": "^3.46.4"
     }
 }
