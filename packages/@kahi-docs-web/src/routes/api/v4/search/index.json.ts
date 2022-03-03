@@ -1,5 +1,4 @@
 import {dev} from "$app/env";
-import {load} from "cheerio";
 import fg from "fast-glob";
 import type {RequestHandler} from "@sveltejs/kit";
 
@@ -17,14 +16,11 @@ async function get_search_index(): Promise<ISearchIndex> {
         file_paths.map(async (file_path) => {
             // TODO: error handling
             const content = await read_content(file_path);
-            const $ = load(content.render);
-
-            $("iframe, hr, pre").remove();
 
             return {
                 identifier: content.metadata.identifier,
                 title: content.metadata.title,
-                text: $.text(),
+                text: content.text,
             };
         })
     );
