@@ -115,12 +115,12 @@
         orientation="horizontal"
     >
         <Menu.Container orientation="horizontal" sizing="tiny">
-            <Menu.Label for="snippet-prompt" palette="accent">
+            <Menu.Label for="snippet-prompt" palette="alert">
                 <Search size="1em" />
                 Snippets
             </Menu.Label>
 
-            <Menu.Label for="share-prompt" palette="accent">
+            <Menu.Label for="share-prompt" palette="informative">
                 <Share2 size="1em" />
                 Share
             </Menu.Label>
