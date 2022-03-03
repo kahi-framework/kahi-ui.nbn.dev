@@ -1,1 +1,0 @@
-{"data":{"identifier":"clickable-imports","script":"<script>\n    import {Clickable} from \"@kahi-ui/framework\";\n\n    const {Container, Anchor, Label} = Clickable;\n</script>","syntax":"svelte","title":"Clickable Imports"}}

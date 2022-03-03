@@ -1,1 +1,0 @@
-{"data":{"identifier":"popover-imports","script":"<script>\n    import {Popover} from \"@kahi-ui/framework\";\n\n    const {\n        Container,\n        Button,\n        Group,\n        Section\n    } = Popover;\n</script>","syntax":"svelte","title":"Popover Imports"}}

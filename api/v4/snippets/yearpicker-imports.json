@@ -1,1 +1,0 @@
-{"data":{"identifier":"yearpicker-imports","script":"<script>\n    import {YearPicker} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"YearPicker Imports"}}

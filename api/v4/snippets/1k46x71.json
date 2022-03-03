@@ -1,1 +1,0 @@
-{"data":{"identifier":"1k46x71","script":"@include variables.define(\n    (\n        \"fonts\": (\n            \"sizes\": (\n                \"<TIER>\": generators.modular(\n                    $base: <BASE-MULTIPLIER>,\n                    $ratio: <RATIO>\n                ),\n            ),\n        ),\n    )\n);","syntax":"scss","title":"1k46x71"}}

@@ -1,1 +1,1 @@
-{"data":{"identifier":"pagination-steps","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>\n\n<Pagination\n    pages={10}\n    steps={3}\n    value={5}\n    palette=\"accent\"\n/>","syntax":"svelte","title":"Pagination Steps"}}
+{"data":{"identifier":"pagination-steps","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>\n\n<Pagination\n    pages={10}\n    steps={3}\n    value={5}\n    palette=\"accent\"\n/>","title":"Pagination Steps"}}

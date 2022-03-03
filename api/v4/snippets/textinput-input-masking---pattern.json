@@ -1,1 +1,1 @@
-{"data":{"identifier":"textinput-input-masking---pattern","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput pattern=\"[0-9a-fA-F]+\" mask />","syntax":"svelte","title":"TextInput Input Masking - Pattern"}}
+{"data":{"identifier":"textinput-input-masking---pattern","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n</script>\n\n<TextInput pattern=\"[0-9a-fA-F]+\" mask />","title":"TextInput Input Masking - Pattern"}}

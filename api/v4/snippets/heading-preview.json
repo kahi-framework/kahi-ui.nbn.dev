@@ -1,1 +1,1 @@
-{"data":{"identifier":"heading-preview","script":"<script>\n    import {Heading} from \"@kahi-ui/framework\";\n</script>\n\n<Heading>\n    Lorem ipsum dolor sit amet, consectetur adipiscing\n    elit.\n</Heading>","syntax":"svelte","title":"Heading Preview"}}
+{"data":{"identifier":"heading-preview","script":"<script>\n    import {Heading} from \"@kahi-ui/framework\";\n</script>\n\n<Heading>\n    Lorem ipsum dolor sit amet, consectetur adipiscing\n    elit.\n</Heading>","title":"Heading Preview"}}

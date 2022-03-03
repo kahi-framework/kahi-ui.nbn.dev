@@ -1,1 +1,0 @@
-{"data":{"identifier":"1ghc64v","script":"// For non-minified:\nimport \"@kahi-ui/framework/dist/kahi-ui.framework.css\";\nimport \"@kahi-ui/framework/dist/kahi-ui.theme.default.css\";\n\n// For minified:\nimport \"@kahi-ui/framework/dist/kahi-ui.framework.min.css\";\nimport \"@kahi-ui/framework/dist/kahi-ui.theme.default.min.css\";","syntax":"javascript","title":"1ghc64v"}}

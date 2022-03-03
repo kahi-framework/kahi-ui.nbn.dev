@@ -1,1 +1,1 @@
-{"data":{"identifier":"box-preview","script":"<script>\n    import {Box} from \"@kahi-ui/framework\";\n</script>\n\n<Box>This is a Box!</Box>","syntax":"svelte","title":"Box Preview"}}
+{"data":{"identifier":"box-preview","script":"<script>\n    import {Box} from \"@kahi-ui/framework\";\n</script>\n\n<Box>This is a Box!</Box>","title":"Box Preview"}}

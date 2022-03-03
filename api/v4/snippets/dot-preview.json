@@ -1,1 +1,1 @@
-{"data":{"identifier":"dot-preview","script":"<script>\n    import {Dot} from \"@kahi-ui/framework\";\n</script>\n\n<Dot />","syntax":"svelte","title":"Dot Preview"}}
+{"data":{"identifier":"dot-preview","script":"<script>\n    import {Dot} from \"@kahi-ui/framework\";\n</script>\n\n<Dot />","title":"Dot Preview"}}

@@ -1,1 +1,0 @@
-{"data":{"identifier":"11npmsv","script":"<script>\n    import {Menu} from \"@kahi-ui/framework\";\n</script>\n\n<Menu.SubMenu>...</Menu.SubMenu>","syntax":"svelte","title":"11npmsv"}}

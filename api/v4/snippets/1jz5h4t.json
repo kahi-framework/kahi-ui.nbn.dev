@@ -1,1 +1,0 @@
-{"data":{"identifier":"1jz5h4t","script":"<script>\n    import {Dot, Ellipsis} from \"@kahi-ui/framework\";\n</script>\n\n<Ellipsis animation=\"bounce\" iterations={5}>\n    <Dot />\n</Ellipsis>","syntax":"svelte","title":"1jz5h4t"}}

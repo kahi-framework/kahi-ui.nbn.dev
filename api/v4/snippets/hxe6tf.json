@@ -1,1 +1,0 @@
-{"data":{"identifier":"hxe6tf","script":"<script>\n    import {Text} from \"@kahi-ui/framework\";\n</script>\n\n<Text align=\"right\">I'm aligned to the right!</Text>","syntax":"svelte","title":"hxe6tf"}}

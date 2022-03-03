@@ -1,1 +1,0 @@
-{"data":{"identifier":"1acrguq","script":"<script>\n    import {Kbd} from \"@kahi-ui/framework\";\n</script>\n\n<Kbd>CTRL+C</Kbd>","syntax":"svelte","title":"1acrguq"}}

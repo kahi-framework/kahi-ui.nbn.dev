@@ -1,1 +1,0 @@
-{"data":{"identifier":"keybind-imports","script":"import {\n    keybind,\n    action_activate,\n    action_exit,\n    action_submit,\n    navigate_down,\n    navigate_left,\n    navigate_right,\n    navigate_up,\n} from \"@kahi-ui/framework\";","syntax":"javascript","title":"keybind Imports"}}

@@ -1,1 +1,0 @@
-{"data":{"identifier":"ellipsis-imports","script":"<script>\n    import {Ellipsis} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Ellipsis Imports"}}

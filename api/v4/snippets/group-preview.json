@@ -1,1 +1,1 @@
-{"data":{"identifier":"group-preview","script":"<script>\n    import {Button, Group} from \"@kahi-ui/framework\";\n</script>\n\n<Group>\n    <Button>Button 1</Button>\n    <Button>Button 2</Button>\n    <Button>Button 3</Button>\n</Group>","syntax":"svelte","title":"Group Preview"}}
+{"data":{"identifier":"group-preview","script":"<script>\n    import {Button, Group} from \"@kahi-ui/framework\";\n</script>\n\n<Group>\n    <Button>Button 1</Button>\n    <Button>Button 2</Button>\n    <Button>Button 3</Button>\n</Group>","title":"Group Preview"}}

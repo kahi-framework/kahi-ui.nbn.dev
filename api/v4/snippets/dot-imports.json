@@ -1,1 +1,0 @@
-{"data":{"identifier":"dot-imports","script":"<script>\n    import {Dot} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Dot Imports"}}

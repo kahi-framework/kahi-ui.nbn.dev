@@ -1,1 +1,1 @@
-{"data":{"identifier":"numberinput-maximum--minimum","script":"<script>\n    import {NumberInput} from \"@kahi-ui/framework\";\n\n    let value = 42;\n</script>\n\n<NumberInput max={84} min={-84} bind:value />","syntax":"svelte","title":"NumberInput Maximum + Minimum"}}
+{"data":{"identifier":"numberinput-maximum--minimum","script":"<script>\n    import {NumberInput} from \"@kahi-ui/framework\";\n\n    let value = 42;\n</script>\n\n<NumberInput max={84} min={-84} bind:value />","title":"NumberInput Maximum + Minimum"}}

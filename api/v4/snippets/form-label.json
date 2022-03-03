@@ -1,1 +1,1 @@
-{"data":{"identifier":"form-label","script":"<script>\n    import {Check, Form} from \"@kahi-ui/framework\";\n</script>\n\n<Form.Label for=\"form-label-group\">\n    <Check />\n    Click me!\n</Form.Label>","syntax":"svelte","title":"Form Label"}}
+{"data":{"identifier":"form-label","script":"<script>\n    import {Check, Form} from \"@kahi-ui/framework\";\n</script>\n\n<Form.Label for=\"form-label-group\">\n    <Check />\n    Click me!\n</Form.Label>","title":"Form Label"}}

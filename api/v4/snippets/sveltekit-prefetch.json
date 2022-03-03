@@ -1,1 +1,1 @@
-{"data":{"identifier":"sveltekit-prefetch","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>\n\n<Anchor\n    href=\"/docs/interactables/button\"\n    sveltekit:prefetch\n>\n    Goto Button\n</Anchor>","syntax":"svelte","title":"SvelteKit Prefetch"}}
+{"data":{"identifier":"sveltekit-prefetch","script":"<script>\n    import {Anchor} from \"@kahi-ui/framework\";\n</script>\n\n<Anchor\n    href=\"/docs/interactables/button\"\n    sveltekit:prefetch\n>\n    Goto Button\n</Anchor>","title":"SvelteKit Prefetch"}}

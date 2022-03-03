@@ -1,1 +1,1 @@
-{"data":{"identifier":"code-block","script":"<script>\n    import {Code} from \"@kahi-ui/framework\";\n</script>\n\n<Code is=\"pre\">\nimport math from \"a-math-library\";\n\nconst result = math.add(1, 1);\nconsole.log(\"Our value is:\", result);\n</Code>","syntax":"svelte","title":"Code Block"}}
+{"data":{"identifier":"code-block","script":"<script>\n    import {Code} from \"@kahi-ui/framework\";\n</script>\n\n<Code is=\"pre\">\nimport math from \"a-math-library\";\n\nconst result = math.add(1, 1);\nconsole.log(\"Our value is:\", result);\n</Code>","title":"Code Block"}}

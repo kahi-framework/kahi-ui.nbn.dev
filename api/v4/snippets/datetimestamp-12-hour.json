@@ -1,1 +1,1 @@
-{"data":{"identifier":"datetimestamp-12-hour","script":"<script>\n    import {DateTimeStamp} from \"@kahi-ui/framework\";\n\n    const timestamp = \"2021-11-10T13:00:42-05:00\";\n</script>\n\n<DateTimeStamp hour=\"numeric\" hour_12 {timestamp} />","syntax":"svelte","title":"DateTimeStamp 12 Hour"}}
+{"data":{"identifier":"datetimestamp-12-hour","script":"<script>\n    import {DateTimeStamp} from \"@kahi-ui/framework\";\n\n    const timestamp = \"2021-11-10T13:00:42-05:00\";\n</script>\n\n<DateTimeStamp hour=\"numeric\" hour_12 {timestamp} />","title":"DateTimeStamp 12 Hour"}}

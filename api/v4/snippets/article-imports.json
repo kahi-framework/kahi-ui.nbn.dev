@@ -1,1 +1,0 @@
-{"data":{"identifier":"article-imports","script":"<script>\n    import {Article} from \"@kahi-ui/framework\";\n</script>","syntax":"svelte","title":"Article Imports"}}

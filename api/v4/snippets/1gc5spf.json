@@ -1,1 +1,0 @@
-{"data":{"identifier":"1gc5spf","script":"<script>\n    import {TextInput} from \"@kahi-ui/framework\";\n\n    function on_focus_in(event) {\n        // ...\n    }\n\n    function on_focus_out(event) {\n        // ...\n    }\n</script>\n\n<TextInput\n    on:focusin={on_focus_in}\n    on:focusout={on_focus_out}\n/>","syntax":"svelte","title":"1gc5spf"}}

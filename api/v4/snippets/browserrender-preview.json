@@ -1,1 +1,1 @@
-{"data":{"identifier":"browserrender-preview","script":"<script>\n    import {BrowserRender} from \"@kahi-ui/framework\";\n</script>\n\n<BrowserRender>\n    This will only render on the Browser.\n</BrowserRender>","syntax":"svelte","title":"BrowserRender Preview"}}
+{"data":{"identifier":"browserrender-preview","script":"<script>\n    import {BrowserRender} from \"@kahi-ui/framework\";\n</script>\n\n<BrowserRender>\n    This will only render on the Browser.\n</BrowserRender>","title":"BrowserRender Preview"}}

@@ -1,1 +1,0 @@
-{"data":{"identifier":"1vhfh31","script":"<script>\n    import {DayStepper} from \"@kahi-ui/framework\";\n</script>\n\n<DayStepper steps={5} />","syntax":"svelte","title":"1vhfh31"}}

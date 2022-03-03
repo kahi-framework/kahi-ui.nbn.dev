@@ -1,1 +1,0 @@
-{"data":{"identifier":"1vl26pp","script":"<script>\n    import {Check} from \"@kahi-ui/framework\";\n\n    function on_blur(event) {\n        // ...\n    }\n\n    function on_focus(event) {\n        // ...\n    }\n</script>\n\n<Check on:blur={on_blur} on:focus={on_focus} />","syntax":"svelte","title":"1vl26pp"}}

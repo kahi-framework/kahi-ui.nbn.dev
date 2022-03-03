@@ -1,1 +1,0 @@
-{"data":{"identifier":"tile-imports","script":"<script>\n    import {Tile} from \"@kahi-ui/framework\";\n\n    const {\n        Container,\n        Figure,\n        Footer,\n        Header,\n        Section,\n    } = Tile;\n</script>","syntax":"svelte","title":"Tile Imports"}}

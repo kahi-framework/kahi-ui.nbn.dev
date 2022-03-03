@@ -1,1 +1,1 @@
-{"data":{"identifier":"pagination-paging","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>\n\n<Pagination pages={42} value={24} palette=\"accent\" />","syntax":"svelte","title":"Pagination Paging"}}
+{"data":{"identifier":"pagination-paging","script":"<script>\n    import {Pagination} from \"@kahi-ui/framework\";\n</script>\n\n<Pagination pages={42} value={24} palette=\"accent\" />","title":"Pagination Paging"}}

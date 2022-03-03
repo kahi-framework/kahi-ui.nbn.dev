@@ -1,1 +1,0 @@
-{"data":{"identifier":"x5apmm","script":"@include variables.define(\n    (\n        \"radius\": (\n            \"nano\": 0.125,\n            \"tiny\": 0.25,\n            \"small\": 0.5,\n            \"medium\": 1,\n            \"large\": 2,\n            \"huge\": 4,\n            \"massive\": 8,\n        ),\n    )\n);","syntax":"scss","title":"x5apmm"}}

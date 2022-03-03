@@ -1,1 +1,0 @@
-{"data":{"identifier":"3mmux9","script":"<script>\n    import {Spacer} from \"@kahi-ui/framework\";\n</script>\n\n<Spacer is=\"span\" />","syntax":"svelte","title":"3mmux9"}}

@@ -1,0 +1,1 @@
+function r(...n){return JSON.stringify(n)}function f(n){let t=new Map;return[(...i)=>{const e=r(...i);return t.has(e)||t.set(e,n(...i)),t.get(e)},(...i)=>{const e=r(...i);t.delete(e)}]}export{f as m};

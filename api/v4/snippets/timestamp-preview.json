@@ -1,1 +1,1 @@
-{"data":{"identifier":"timestamp-preview","script":"<script>\n    import {TimeStamp} from \"@kahi-ui/framework\";\n\n    const timestamp = \"13:00:42\";\n</script>\n\n<TimeStamp {timestamp} />","syntax":"svelte","title":"TimeStamp Preview"}}
+{"data":{"identifier":"timestamp-preview","script":"<script>\n    import {TimeStamp} from \"@kahi-ui/framework\";\n\n    const timestamp = \"13:00:42\";\n</script>\n\n<TimeStamp {timestamp} />","title":"TimeStamp Preview"}}

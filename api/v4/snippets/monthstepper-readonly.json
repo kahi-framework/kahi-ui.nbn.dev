@@ -1,1 +1,1 @@
-{"data":{"identifier":"monthstepper-readonly","script":"<script>\n    import {MonthStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2021-06-01\";\n</script>\n\n<MonthStepper palette=\"accent\" {value} readonly />","syntax":"svelte","title":"MonthStepper Readonly"}}
+{"data":{"identifier":"monthstepper-readonly","script":"<script>\n    import {MonthStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2021-06-01\";\n</script>\n\n<MonthStepper palette=\"accent\" {value} readonly />","title":"MonthStepper Readonly"}}

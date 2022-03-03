@@ -1,1 +1,0 @@
-{"data":{"identifier":"stack-imports","script":"<script>\n    import {Stack} from \"@kahi-ui/framework\";\n\n    const {Container, Item} = Stack;\n</script>","syntax":"svelte","title":"Stack Imports"}}

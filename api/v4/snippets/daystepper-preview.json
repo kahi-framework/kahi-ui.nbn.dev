@@ -1,1 +1,1 @@
-{"data":{"identifier":"daystepper-preview","script":"<script>\n    import {DayStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2021-11-10\";\n</script>\n\n<DayStepper palette=\"accent\" {value} />","syntax":"svelte","title":"DayStepper Preview"}}
+{"data":{"identifier":"daystepper-preview","script":"<script>\n    import {DayStepper} from \"@kahi-ui/framework\";\n\n    const value = \"2021-11-10\";\n</script>\n\n<DayStepper palette=\"accent\" {value} />","title":"DayStepper Preview"}}

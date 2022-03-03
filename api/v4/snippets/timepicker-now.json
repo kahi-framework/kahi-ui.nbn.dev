@@ -1,1 +1,1 @@
-{"data":{"identifier":"timepicker-now","script":"<script>\n    import {TimePicker} from \"@kahi-ui/framework\";\n\n    const value = \"13:30:15\";\n</script>\n\n<TimePicker palette=\"accent\" {value} now />","syntax":"svelte","title":"TimePicker Now"}}
+{"data":{"identifier":"timepicker-now","script":"<script>\n    import {TimePicker} from \"@kahi-ui/framework\";\n\n    const value = \"13:30:15\";\n</script>\n\n<TimePicker palette=\"accent\" {value} now />","title":"TimePicker Now"}}

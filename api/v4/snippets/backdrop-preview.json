@@ -1,1 +1,1 @@
-{"data":{"identifier":"backdrop-preview","script":"<script>\n    import {Backdrop} from \"@kahi-ui/framework\";\n</script>\n\nHello World!\n\n<Backdrop />","syntax":"svelte","title":"Backdrop Preview"}}
+{"data":{"identifier":"backdrop-preview","script":"<script>\n    import {Backdrop} from \"@kahi-ui/framework\";\n</script>\n\nHello World!\n\n<Backdrop />","title":"Backdrop Preview"}}

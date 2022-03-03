@@ -1,1 +1,1 @@
-{"data":{"identifier":"animation-bounce","script":"<script>\n    import {Animation, Dot} from \"@kahi-ui/framework\";\n</script>\n\n<Animation animation=\"bounce\">\n    <Dot palette=\"accent\" />\n</Animation>","syntax":"svelte","title":"Animation Bounce"}}
+{"data":{"identifier":"animation-bounce","script":"<script>\n    import {Animation, Dot} from \"@kahi-ui/framework\";\n</script>\n\n<Animation animation=\"bounce\">\n    <Dot palette=\"accent\" />\n</Animation>","title":"Animation Bounce"}}

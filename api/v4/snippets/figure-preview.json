@@ -1,1 +1,1 @@
-{"data":{"identifier":"figure-preview","script":"<script>\n    import {Figure} from \"@kahi-ui/framework\";\n</script>\n\n<Figure max_width=\"33\">\n    <img src={IMAGE_BACKGROUND} />\n</Figure>","syntax":"svelte","title":"Figure Preview"}}
+{"data":{"identifier":"figure-preview","script":"<script>\n    import {Figure} from \"@kahi-ui/framework\";\n</script>\n\n<Figure max_width=\"33\">\n    <img src={IMAGE_BACKGROUND} />\n</Figure>","title":"Figure Preview"}}
