@@ -7,7 +7,7 @@
                 metadata: {
                     description: "Playground",
                 },
-                prerender: [`/api/v4/snippets/getting-started-usage.json`],
+                prerender: [`/api/v4/snippets.json`, `/api/v4/snippets/getting-started-usage.json`],
             },
         };
     };

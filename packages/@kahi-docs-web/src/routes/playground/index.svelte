@@ -4,7 +4,9 @@
 
     import {decompress_safe} from "@kahi-docs/shared";
 
-    import type {IRouteError, ISnippetGet} from "../../lib/shared/api";
+    import type {IRouteError} from "../../lib/shared/api";
+
+    import type {ISnippetGet} from "../api/v4/snippets/[identifier].json";
 
     export const load: Load = async ({fetch}) => {
         // HACK: SvelteKit errors out when accessing query params during build,
@@ -62,20 +64,22 @@
 
 <script lang="ts">
     import {Box, Menu, Stack, Text, viewports} from "@kahi-ui/framework";
-    import {Copy, Code, Image, RotateCw, Share2, Sidebar} from "lucide-svelte";
+    import {Copy, Code, Image, RotateCw, Search, Share2, Sidebar} from "lucide-svelte";
     import {onMount} from "svelte";
 
-    import type {ISnippet} from "@kahi-docs/markdown";
     import {session} from "@kahi-docs/shared";
 
+    import type {ISnippetRecord} from "../api/v4/snippets/[identifier].json";
+
     import PromptShare from "../../lib/components/PromptShare.svelte";
+    import PromptSnippets from "../../lib/components/PromptSnippets.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
 
     import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
 
-    export let fallback: ISnippet | undefined;
+    export let fallback: ISnippetRecord | undefined;
     export let script: string | undefined;
-    export let snippet: ISnippet | undefined;
+    export let snippet: ISnippetRecord | undefined;
 
     const vertical_viewports = viewports({
         mobile: true,
@@ -86,11 +90,15 @@
     let orientation: keyof typeof SPLIT_ORIENTATION = $vertical_viewports
         ? SPLIT_ORIENTATION.vertical
         : SPLIT_ORIENTATION.horizontal;
-    let logic_state: boolean = false;
     let value: string = (snippet?.script ?? script ?? $session) || (fallback?.script ?? "");
 
     function on_copy_click(event: MouseEvent): void {
         navigator.clipboard.writeText(value);
+    }
+
+    function on_snippet(event: CustomEvent<{snippet: ISnippetRecord}>): void {
+        snippet = event.detail.snippet;
+        value = snippet.script;
     }
 
     onMount(() => {
@@ -107,10 +115,15 @@
         orientation="horizontal"
     >
         <Menu.Container orientation="horizontal" sizing="tiny">
-            <Menu.Button palette="accent" on:click={() => (logic_state = true)}>
+            <Menu.Label for="snippet-prompt" palette="alert">
+                <Search size="1em" />
+                Snippets
+            </Menu.Label>
+
+            <Menu.Label for="share-prompt" palette="informative">
                 <Share2 size="1em" />
                 Share
-            </Menu.Button>
+            </Menu.Label>
 
             <Menu.Button palette="affirmative" on:click={on_copy_click}>
                 <Copy size="1em" />
@@ -161,4 +174,5 @@
 
 <REPLSplit {mode} {orientation} bind:value />
 
-<PromptShare {value} bind:logic_state />
+<PromptSnippets on:snippet={on_snippet} />
+<PromptShare snippet={snippet ?? fallback} {value} />

@@ -1,7 +1,9 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
-    import type {IRouteError, ISnippetGet} from "../lib/shared/api";
+    import type {IRouteError} from "../lib/shared/api";
+
+    import type {ISnippetGet} from "./api/v4/snippets/[identifier].json";
 
     const SNIPPET_IDENTIFIER = "getting-started-patterns";
 

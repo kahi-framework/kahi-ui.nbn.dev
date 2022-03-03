@@ -1,13 +1,19 @@
 <script lang="ts">
-    import {Card, Code, Form, Overlay, Text} from "@kahi-ui/framework";
+    import {Card, Code, Overlay} from "@kahi-ui/framework";
 
     import {compress_safe} from "@kahi-docs/shared";
 
+    import type {ISnippetRecord} from "../../routes/api/v4/snippets/[identifier].json";
+
     export let logic_state: boolean = false;
+
+    export let snippet: ISnippetRecord | undefined;
     export let value: string;
 
-    $: _compressed = compress_safe(value);
-    $: _href_playground = `${location.origin}/playground/?script=${_compressed}`;
+    $: _playground_href =
+        snippet && snippet.script === value
+            ? `${location.origin}/playground?snippet=${snippet.identifier}`
+            : `${location.origin}/playground?script=${compress_safe(value)}`;
 </script>
 
 <Overlay.Container class="share-prompt" logic_id="share-prompt" dismissible bind:logic_state>
@@ -18,7 +24,7 @@
             <Card.Header>Share Playground</Card.Header>
 
             <Card.Section>
-                <Code is="pre">{_href_playground}</Code>
+                <Code is="pre">{_playground_href}</Code>
             </Card.Section>
         </Card.Container>
     </Overlay.Section>
