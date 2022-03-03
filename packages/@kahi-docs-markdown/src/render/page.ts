@@ -115,6 +115,11 @@ export interface IPageRender {
      * Represents the rendered HTML of the page
      */
     readonly render: string;
+
+    /**
+     * Represents the plaintext render of the page
+     */
+    readonly text: string;
 }
 
 export function render_references(map: IReferenceMap, options: IPageOptions): IReferenceMap {
@@ -150,31 +155,30 @@ function PageOptions(options: Partial<IPageOptions> = {}): IPageOptions {
 export function render_page(text: string, options: Partial<IPageOptions> = {}): IPageRender {
     const normalized_options = PageOptions(options);
 
-    const [frontmatter, results, render] = render_markdown<IPageFrontmatter, IPageResults>(
-        text,
-        PAGE_FRONTMATTER_SCHEMA,
+    const [frontmatter, results, plain_text, render] = render_markdown<
+        IPageFrontmatter,
+        IPageResults
+    >(text, PAGE_FRONTMATTER_SCHEMA, [
         [
-            [
-                attrs,
-                {
-                    leftDelimiter: "{",
-                    rightDelimiter: "}",
-                    allowedAttributes: [],
-                },
-            ],
-            TitlePlugin,
-            LocalLinkPlugin,
-            ExternalLinkPlugin,
-            BlockquotePlugin,
-            ScrollablesPlugin,
-            SectionsPlugin,
-            HighlightPlugin,
-            SnippetsPlugin,
-            emoji,
-            html5Media,
-            ...normalized_options.plugins,
-        ]
-    );
+            attrs,
+            {
+                leftDelimiter: "{",
+                rightDelimiter: "}",
+                allowedAttributes: [],
+            },
+        ],
+        TitlePlugin,
+        LocalLinkPlugin,
+        ExternalLinkPlugin,
+        BlockquotePlugin,
+        ScrollablesPlugin,
+        SectionsPlugin,
+        HighlightPlugin,
+        SnippetsPlugin,
+        emoji,
+        html5Media,
+        ...normalized_options.plugins,
+    ]);
 
     const authors = frontmatter.authors ?? {};
     const created_at = frontmatter.created_at ? Date.parse(frontmatter.created_at) : -1;
@@ -206,6 +210,7 @@ export function render_page(text: string, options: Partial<IPageOptions> = {}): 
             title,
         },
 
+        text: plain_text,
         render,
 
         references: {
@@ -227,7 +232,7 @@ export async function read_page(
     ]);
 
     const text = buffer.toString();
-    const {metadata, references, render} = render_page(text, options);
+    const {metadata, references, text: plain_text, render} = render_page(text, options);
     const {authors, created_at, modified_at, identifier, sections, snippets, title} = metadata;
 
     return {
@@ -241,6 +246,7 @@ export async function read_page(
             title,
         },
 
+        text: plain_text,
         references,
         render,
     };
