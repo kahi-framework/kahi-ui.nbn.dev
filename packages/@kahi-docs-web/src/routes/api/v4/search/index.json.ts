@@ -24,7 +24,7 @@ async function get_search_index(): Promise<ISearchIndex> {
                         const {identifier, script, title} = snippet;
 
                         return {
-                            identifier: `/playground/?snippet=${identifier}`,
+                            identifier: `/playground?snippet=${identifier}`,
                             title: title,
                             text: script,
                         };
