@@ -17,24 +17,22 @@
 </script>
 
 <script lang="ts">
-    /**
-     * TODO: Detect page update and scroll menu to new page if applicable
-     *
-     * TODO: Scroll to current active item when collapsed on Mobile / Tablet
-     */
-
+    import {afterNavigate, beforeNavigate} from "$app/navigation";
     import {page} from "$app/stores";
     import {Aside, Badge, Button, Menu, Overlay, Position, Spacer, Text} from "@kahi-ui/framework";
     import {Menu as MenuIcon, X} from "lucide-svelte";
-    import {onMount, tick} from "svelte";
+    import {tick} from "svelte";
 
     import {scroll_into_container} from "../client/element";
 
     import AppAnchor from "./AppAnchor.svelte";
 
+    let logic_state: boolean = false;
     let section_element: HTMLElement | undefined = undefined;
 
-    function on_active(event: CustomEvent<void>): void {
+    async function on_active(event: CustomEvent<void>): Promise<void> {
+        await tick();
+
         handle_current();
     }
 
@@ -45,10 +43,14 @@
         if (link_element) scroll_into_container(link_element, "center", "smooth", section_element);
     }
 
-    onMount(async () => {
+    afterNavigate(async () => {
         await tick();
 
         handle_current();
+    });
+
+    beforeNavigate(() => {
+        logic_state = false;
     });
 </script>
 
@@ -64,6 +66,7 @@
         logic_id="aside-navigation"
         contents={["desktop", "widescreen"]}
         dismissible
+        bind:logic_state
         on:active={on_active}
     >
         <Overlay.Backdrop hidden={["desktop", "widescreen"]} />
