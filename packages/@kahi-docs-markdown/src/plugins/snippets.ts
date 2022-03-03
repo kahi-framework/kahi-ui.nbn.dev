@@ -30,6 +30,7 @@ export function SnippetsPlugin(md: MarkdownIt) {
         const script = token.content.trim();
         const syntax = token.info.trim();
 
+        const draft = token.attrGet("draft") ?? SNIPPET_MODE.default;
         const mode = token.attrGet("mode") ?? SNIPPET_MODE.default;
         const title = token.attrGet("title") ?? hash_string(script);
         const identifier = token.attrGet("identifier") ?? slugger.slug(title);
@@ -41,7 +42,9 @@ export function SnippetsPlugin(md: MarkdownIt) {
         token.attrSet("title", title);
 
         snippets.push({
+            draft: draft.toLowerCase() === "true",
             identifier,
+            repl: mode === SNIPPET_MODE.repl,
             script,
             syntax,
             title,

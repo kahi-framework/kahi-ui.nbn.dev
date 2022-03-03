@@ -68,9 +68,19 @@ export interface ISection {
  */
 export interface ISnippet {
     /**
+     * Represents if the snippet is non-public yet and should be hidden from search
+     */
+    draft: boolean;
+
+    /**
      * Represents the string used to uniquely the snippet, if applicable. Otherwise a slug of [[ISnippet.title]]
      */
     identifier: string;
+
+    /**
+     * Represents if the snippet is presented as a REPL to the user
+     */
+    repl: boolean;
 
     /**
      * Represents the content of the snippet
