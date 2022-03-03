@@ -9,25 +9,21 @@ import {read_content} from "../../../../lib/server/content";
 
 import type {IRouteSuccess} from "../../../../lib/shared/api";
 
-export type ISnippetIndex = readonly ISnippetRecord[];
+import type {ISnippetRecord} from "./[identifier].json";
+
+export type ISnippetIndex = readonly ISnippetsRecord[];
 
 export interface ISnippetsGet extends IRouteSuccess {
     data: ISnippetIndex;
 }
 
-export interface ISnippetRecord {
+export interface ISnippetsRecord {
     readonly title: string;
 
-    readonly snippets: {
-        readonly identifier: string;
-
-        readonly title: string;
-
-        readonly script: string;
-    }[];
+    readonly snippets: ISnippetRecord[];
 }
 
-async function get_snippet_index(): Promise<ISnippetIndex> {
+async function get_snippets_index(): Promise<ISnippetIndex> {
     const file_paths = await fg(GLOB_CONTENT);
 
     const index = await Promise.all(
@@ -40,12 +36,10 @@ async function get_snippet_index(): Promise<ISnippetIndex> {
                 snippets: content.metadata.snippets
                     .filter(({draft, repl, syntax}) => !draft && repl && syntax === "svelte")
                     .map((snippet) => {
-                        const {identifier, script, title} = snippet;
-
                         return {
-                            identifier,
-                            title,
-                            script,
+                            identifier: snippet.identifier,
+                            script: snippet.script,
+                            title: snippet.title,
                         };
                     })
                     .sort((snippet_a, snippet_b) =>
@@ -62,7 +56,7 @@ async function get_snippet_index(): Promise<ISnippetIndex> {
         );
 }
 
-const _get_snippet_index = dev ? get_snippet_index : memoize(get_snippet_index)[0];
+const _get_snippets_index = dev ? get_snippets_index : memoize(get_snippets_index)[0];
 
 export const get: RequestHandler = async (request) => {
     return {
@@ -70,7 +64,7 @@ export const get: RequestHandler = async (request) => {
 
         // HACK: Apparently `JSONValue` doesn't like my purely JSON data?
         body: {
-            data: await _get_snippet_index(),
+            data: await _get_snippets_index(),
         } as ISnippetsGet as any,
     };
 };
