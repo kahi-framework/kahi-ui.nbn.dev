@@ -64,7 +64,7 @@
 
 <script lang="ts">
     import {Box, Menu, Stack, Text, viewports} from "@kahi-ui/framework";
-    import {Copy, Code, Image, RotateCw, Share2, Sidebar} from "lucide-svelte";
+    import {Copy, Code, Image, RotateCw, Search, Share2, Sidebar} from "lucide-svelte";
     import {onMount} from "svelte";
 
     import {session} from "@kahi-docs/shared";
@@ -72,6 +72,7 @@
     import type {ISnippetRecord} from "../api/v4/snippets/[identifier].json";
 
     import PromptShare from "../../lib/components/PromptShare.svelte";
+    import PromptSnippets from "../../lib/components/PromptSnippets.svelte";
     import {SPLIT_MODE, SPLIT_ORIENTATION} from "../../lib/components/Split.svelte";
 
     import REPLSplit from "../../lib/components/repl/REPLSplit.svelte";
@@ -95,6 +96,11 @@
         navigator.clipboard.writeText(value);
     }
 
+    function on_snippet(event: CustomEvent<{snippet: ISnippetRecord}>): void {
+        snippet = event.detail.snippet;
+        value = snippet.script;
+    }
+
     onMount(() => {
         // NOTE: Better UX (User Experience) to clear any previously selected snippets / shared playgrounds
         history.replaceState(null, "", `${location.origin}${location.pathname}`);
@@ -109,6 +115,11 @@
         orientation="horizontal"
     >
         <Menu.Container orientation="horizontal" sizing="tiny">
+            <Menu.Label for="snippet-prompt" palette="accent">
+                <Search size="1em" />
+                Snippets
+            </Menu.Label>
+
             <Menu.Label for="share-prompt" palette="accent">
                 <Share2 size="1em" />
                 Share
@@ -163,4 +174,5 @@
 
 <REPLSplit {mode} {orientation} bind:value />
 
+<PromptSnippets on:snippet={on_snippet} />
 <PromptShare snippet={snippet ?? fallback} {value} />
