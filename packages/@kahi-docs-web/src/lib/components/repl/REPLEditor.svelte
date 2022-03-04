@@ -1,11 +1,11 @@
 <script context="module" lang="ts">
-    function import_modules() {
-        return Promise.all([import("@kahi-docs/highlight"), import("@novacbn/svelte-codejar")]);
-    }
+    import {memoize} from "@kahi-docs/shared";
+
+    const import_code_editor = memoize(() => import("../CodeEditor.svelte"))[0];
 </script>
 
 <script lang="ts">
-    import {Dot, Ellipsis} from "@kahi-ui/framework";
+    import {Box, Center, Dot, Ellipsis} from "@kahi-ui/framework";
     import {createEventDispatcher, onMount} from "svelte";
 
     import REPLOverlay from "./REPLOverlay.svelte";
@@ -15,44 +15,27 @@
     };
 
     const dispatch = createEventDispatcher();
-
-    let CodeJar: typeof import("@novacbn/svelte-codejar").CodeJar | undefined;
-    let highlight: ((text: string, syntax?: string) => string) | undefined;
-
-    let _class: string = "";
-    export let style: string | undefined = undefined;
-    export {_class as class};
+    const import_promise = import_code_editor();
 
     export let value: string;
 
     onMount(async () => {
-        const [highlight_module, codejar_module] = await import_modules();
-
-        CodeJar = codejar_module.CodeJar;
-        highlight = (text) => highlight_module.highlight(text, "svelte");
+        await import_promise;
 
         dispatch("ready");
     });
 </script>
 
-{#if CodeJar && highlight}
-    <CodeJar class="repl-editor {_class}" syntax="svelte" {highlight} {style} bind:value />
-{:else}
-    <REPLOverlay {style}>
-        <Ellipsis animation="bounce" iterations="5">
-            <Dot palette="inverse" />
-        </Ellipsis>
+{#await import_promise}
+    <REPLOverlay>
+        <Box size="100">
+            <Center height="100">
+                <Ellipsis animation="bounce" iterations="5">
+                    <Dot palette="inverse" />
+                </Ellipsis>
+            </Center>
+        </Box>
     </REPLOverlay>
-{/if}
-
-<style>
-    :global(.repl-editor) {
-        margin: 0 !important;
-
-        height: 100%;
-
-        border-radius: 0;
-
-        white-space: pre !important;
-    }
-</style>
+{:then CodeEditor}
+    <CodeEditor.default bind:value />
+{/await}

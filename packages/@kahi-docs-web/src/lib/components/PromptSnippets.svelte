@@ -42,6 +42,7 @@
     import {createEventDispatcher} from "svelte";
 
     import {scroll_into_container} from "../client/element";
+    import {debounce} from "../client/functional";
 
     import type {ISnippetRecord} from "../../routes/api/v4/snippets/[identifier].json";
 
@@ -56,7 +57,10 @@
     let input_element: HTMLInputElement | undefined;
     let scrollable_element: HTMLDivElement | undefined;
 
+    let filter: string = "";
     let value: string = "";
+
+    const update_filter = debounce((text: string) => (filter = text), 100);
 
     function has_snippets(snippets: ISnippetRecord[], filter: string): boolean {
         // HACK: We would just inline this as `{@const}` but the compiler kept freaking
@@ -70,11 +74,14 @@
         logic_state = false;
     }
 
+    $: update_filter(value);
+
     $: if (logic_state && input_element) input_element.focus();
+
     $: {
         if (logic_state && scrollable_element) {
             // HACK: This is just here to mark this block as reactive
-            value;
+            filter;
 
             const title_element = scrollable_element.querySelector<HTMLElement>(".text");
             if (title_element) {
@@ -128,11 +135,11 @@
                                         via CSS rather than recreating them all the time via JS-based filtering
                                     -->
 
-                                    {@const includes_title = value
-                                        ? record.title.toLowerCase().includes(value)
+                                    {@const includes_title = filter
+                                        ? record.title.toLowerCase().includes(filter)
                                         : true}
-                                    {@const includes_snippet = value
-                                        ? has_snippets(record.snippets, value)
+                                    {@const includes_snippet = filter
+                                        ? has_snippets(record.snippets, filter)
                                         : true}
                                     {@const is_hidden = !includes_title && !includes_snippet}
 
@@ -146,8 +153,8 @@
                                         {#each record.snippets as snippet (snippet.identifier)}
                                             <Card.Container
                                                 sizing="nano"
-                                                hidden={!includes_title && value
-                                                    ? !snippet.title.toLowerCase().includes(value)
+                                                hidden={!includes_title && filter
+                                                    ? !snippet.title.toLowerCase().includes(filter)
                                                     : false}
                                             >
                                                 <Card.Header>{snippet.title}</Card.Header>
