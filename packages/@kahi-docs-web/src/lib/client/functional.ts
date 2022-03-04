@@ -1,4 +1,4 @@
-export function debounce<F extends (...args: any[]) => void | Promise<void>>(
+export function debounce<F extends (...args: any[]) => any | Promise<any>>(
     func: F,
     duration: number = 0
 ): (...args: Parameters<F>) => void | Promise<void> {

@@ -156,6 +156,7 @@
     import {tick} from "svelte";
 
     import {scroll_into_container} from "../client/element";
+    import {debounce} from "../client/functional";
 
     import AppAnchor from "./AppAnchor.svelte";
 
@@ -165,7 +166,10 @@
     let scrollable_element: HTMLDivElement | undefined;
 
     let current: number = -1;
+    let query: string = "";
     let value: string = "";
+
+    const update_search = debounce((text: string) => (query = text), 100);
 
     function get_current(): [HTMLDivElement | null, HTMLAnchorElement | null] {
         if (!scrollable_element) return [null, null];
@@ -227,11 +231,13 @@
     }
 
     $: if (!logic_state) value = "";
+    $: update_search(value);
+
     $: if (logic_state && input_element) input_element.focus();
 
     $: {
-        // HACK: Marking `value` here to make this block reactive
-        value;
+        // HACK: This is just here to mark this block as reactive
+        query;
 
         current = -1;
     }
@@ -253,7 +259,7 @@
                     </Card.Header>
                 </Card.Container>
             {:then searcher}
-                {@const results = value ? searcher(value) : null}
+                {@const results = query ? searcher(query) : null}
 
                 <Card.Container
                     margin_top="huge"
