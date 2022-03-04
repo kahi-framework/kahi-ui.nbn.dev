@@ -39,9 +39,9 @@
     }
 
     const SEARCH_WEIGHTS_TYPE = {
+        [CONTENT_TYPES.blog]: 1,
+        [CONTENT_TYPES.docs]: 2,
         [CONTENT_TYPES.playground]: 0,
-        [CONTENT_TYPES.docs]: 1,
-        [CONTENT_TYPES.blog]: 2,
     } as const;
 
     type ISearcher = (query: string) => ISearchResult[];
