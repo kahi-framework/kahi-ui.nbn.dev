@@ -12,19 +12,37 @@
         ISearchRecord,
     } from "../../routes/api/v4/search/index.json";
 
+    enum CONTENT_TYPES {
+        blog = "blog",
+
+        docs = "docs",
+
+        playground = "playground",
+    }
+
     const CONTENT_ICONS: Record<string, typeof SvelteComponent | undefined> = {
-        blog: Megaphone,
-        docs: Book,
-        playground: Edit,
+        [CONTENT_TYPES.blog]: Megaphone,
+        [CONTENT_TYPES.docs]: Book,
+        [CONTENT_TYPES.playground]: Edit,
     };
 
-    enum SEARCH_WEIGHTS {
+    enum SEARCH_WEIGHTS_FIELD {
         text,
 
         title,
 
         identifier,
     }
+
+    enum SEARCH_WEIGHTS_SPECIAL {
+        preview = 1,
+    }
+
+    const SEARCH_WEIGHTS_TYPE = {
+        [CONTENT_TYPES.blog]: 1,
+        [CONTENT_TYPES.docs]: 2,
+        [CONTENT_TYPES.playground]: 0,
+    } as const;
 
     type ISearcher = (query: string) => ISearchResult[];
 
@@ -41,10 +59,14 @@
         return data.data;
     }
 
-    function get_icon(href: string): typeof SvelteComponent | null {
-        const category = normalize_pathname(href).split("/")[1];
+    function get_content_type(identifier: string): CONTENT_TYPES {
+        return normalize_pathname(identifier).split("/")[1] as CONTENT_TYPES;
+    }
 
-        return CONTENT_ICONS[category] ?? null;
+    function get_icon(identifier: string): typeof SvelteComponent | null {
+        const type = get_content_type(identifier);
+
+        return CONTENT_ICONS[type] ?? null;
     }
 
     async function _make_searcher(): Promise<ISearcher> {
@@ -75,13 +97,25 @@
             const search_results = documents.search(query, 10);
 
             for (const results of search_results) {
-                const weight = SEARCH_WEIGHTS[results.field as keyof typeof SEARCH_WEIGHTS];
+                const field_weight =
+                    SEARCH_WEIGHTS_FIELD[results.field as keyof typeof SEARCH_WEIGHTS_FIELD];
 
                 for (const identifier of results.result) {
                     const rank = rankings.get(identifier as string) ?? 0;
 
-                    rankings.set(identifier as string, rank + weight);
+                    rankings.set(identifier as string, rank + field_weight);
                 }
+            }
+
+            for (let [identifier, ranking] of rankings.entries()) {
+                const content_type = get_content_type(identifier);
+
+                if (content_type === CONTENT_TYPES.playground && identifier.includes("preview")) {
+                    ranking += SEARCH_WEIGHTS_SPECIAL.preview;
+                }
+
+                ranking += SEARCH_WEIGHTS_TYPE[content_type];
+                rankings.set(identifier, ranking);
             }
 
             return Array.from(rankings.entries())
