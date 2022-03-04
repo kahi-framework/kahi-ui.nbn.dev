@@ -8,6 +8,8 @@
 
     import type {ISnippetGet} from "../api/v4/snippets/[identifier].json";
 
+    import {FALLBACK_SNIPPET} from "./__layout.reset.svelte";
+
     export const load: Load = async ({fetch}) => {
         // HACK: SvelteKit errors out when accessing query params during build,
         // so we need to special case SSR to just skip the backend functionality
@@ -42,7 +44,7 @@
             };
         }
 
-        const response = await fetch(`/api/v4/snippets/getting-started-usage.json`);
+        const response = await fetch(`/api/v4/snippets/${FALLBACK_SNIPPET}.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 

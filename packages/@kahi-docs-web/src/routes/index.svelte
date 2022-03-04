@@ -5,10 +5,10 @@
 
     import type {ISnippetGet} from "./api/v4/snippets/[identifier].json";
 
-    const SNIPPET_IDENTIFIER = "getting-started-patterns";
+    const FRONTPAGE_SNIPPET = "getting-started-patterns";
 
     export const load: Load = async ({fetch}) => {
-        const response = await fetch(`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`);
+        const response = await fetch(`/api/v4/snippets/${FRONTPAGE_SNIPPET}.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 
@@ -25,7 +25,7 @@
                 snippet: data.data,
             },
             stuff: {
-                prerender: [`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`],
+                prerender: [`/api/v4/snippets/${FRONTPAGE_SNIPPET}.json`],
             },
         };
     };
