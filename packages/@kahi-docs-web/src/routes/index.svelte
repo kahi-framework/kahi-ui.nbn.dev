@@ -45,12 +45,12 @@
     } from "@kahi-ui/framework";
     import {ArrowRight, Code, LayoutTemplate, Moon, Zap} from "lucide-svelte";
 
-    import type {ISnippet} from "@kahi-docs/markdown";
+    import type {ISnippetRecord} from "./api/v4/snippets/[identifier].json";
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
     import REPLEmbed from "../lib/components/repl/REPLEmbed.svelte";
 
-    export let snippet: ISnippet;
+    export let snippet: ISnippetRecord;
 </script>
 
 <Hero.Container padding_y="huge">
