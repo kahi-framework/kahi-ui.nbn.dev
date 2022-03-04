@@ -7,9 +7,18 @@
 
     async function _fetch_snippet_index(): Promise<ISnippetIndex> {
         const response = await fetch("/api/v4/snippets.json");
-        const data = (await response.json()) as ISnippetsGet;
+        const {data} = (await response.json()) as ISnippetsGet;
 
-        return data.data;
+        return data.map((record) => {
+            return {
+                title: record.title,
+                snippets: record.snippets.sort((snippet_a, snippet_b) => {
+                    if (snippet_a.title.toLowerCase().includes("preview")) return -1;
+                    else if (snippet_b.title.toLowerCase().includes("preview")) return 1;
+                    return 0;
+                }),
+            };
+        });
     }
 
     export const fetch_snippet_index = dev
@@ -33,6 +42,7 @@
     import {createEventDispatcher} from "svelte";
 
     import type {ISnippetRecord} from "../../routes/api/v4/snippets/[identifier].json";
+    import {snippets} from "../client/snippets";
 
     type $$Events = {
         snippet: CustomEvent<{snippet: ISnippetRecord}>;
