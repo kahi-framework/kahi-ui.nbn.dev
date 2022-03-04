@@ -290,7 +290,7 @@
                         <AppAnchor
                             class="anchor"
                             href="https://github.com/nextapps-de/flexsearch"
-                            palette="accent"
+                            palette="informative"
                         >
                             Powered by FlexSearch
                         </AppAnchor>
