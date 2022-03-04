@@ -6,6 +6,14 @@ import {memoize} from "@kahi-docs/shared";
 import type {ISearchGet} from "../shared/api";
 import type {ISearchIndex, ISearchRecord} from "../shared/search";
 
+enum SEARCH_WEIGHTS {
+    text,
+
+    title,
+
+    identifier,
+}
+
 export type ISearcher = (query: string) => ISearchResult[];
 
 export interface ISearchResult {
@@ -28,40 +36,48 @@ async function _make_searcher(): Promise<ISearcher> {
 
         document: {
             id: "identifier",
-            index: ["title", "text"],
+            index: ["identifier", "text", "title"],
         },
     });
 
-    const title_lookup = new Map();
     const index = await fetch_search_index();
+    const lookup = new Map<string, string>();
 
     await Promise.all(
         index.map((entry) => {
-            title_lookup.set(entry.identifier, entry.title);
-            return documents.addAsync(entry.identifier, entry);
+            const {identifier, text, title} = entry;
+
+            lookup.set(identifier, title);
+            return documents.addAsync(entry.identifier, {identifier, text, title});
         })
     );
 
     return (query) => {
-        const combined_results = new Set<string>();
+        const rankings = new Map<string, number>();
         const search_results = documents.search(query, 10);
 
-        for (const unit of search_results) {
-            for (const identifier of unit.result) combined_results.add(identifier as string);
+        for (const results of search_results) {
+            const weight = SEARCH_WEIGHTS[results.field as keyof typeof SEARCH_WEIGHTS];
+
+            for (const identifier of results.result) {
+                const rank = rankings.get(identifier as string) ?? 0;
+
+                rankings.set(identifier as string, rank + weight);
+            }
         }
 
-        return (
-            Array.from(combined_results)
-                // NOTE: When combining title + text search results, there
-                // might be more than ten (10) results. So we need to limit here
-                .slice(0, 9)
-                .map((identifier) => {
-                    return {
-                        identifier,
-                        title: title_lookup.get(identifier),
-                    };
-                })
-        );
+        return Array.from(rankings.entries())
+            .sort((ranking_a, ranking_b) => ranking_b[1] - ranking_a[1])
+            .slice(0, 9)
+            .map((ranking) => {
+                const [identifier] = ranking;
+                const title = lookup.get(identifier) as string;
+
+                return {
+                    identifier,
+                    title,
+                };
+            });
     };
 }
 
