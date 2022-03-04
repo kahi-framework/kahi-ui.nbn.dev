@@ -7,8 +7,21 @@ import {memoize} from "@kahi-docs/shared";
 import {GLOB_CONTENT} from "../../../../lib/server/constants";
 import {read_content} from "../../../../lib/server/content";
 
-import type {ISearchGet} from "../../../../lib/shared/api";
-import type {ISearchIndex} from "../../../../lib/shared/search";
+import type {IRouteSuccess} from "../../../../lib/shared/api";
+
+export type ISearchIndex = readonly ISearchRecord[];
+
+export interface ISearchGet extends IRouteSuccess {
+    data: ISearchIndex;
+}
+
+export interface ISearchRecord {
+    readonly identifier: string;
+
+    readonly text: string;
+
+    readonly title: string;
+}
 
 async function get_search_index(): Promise<ISearchIndex> {
     const file_paths = await fg(GLOB_CONTENT);

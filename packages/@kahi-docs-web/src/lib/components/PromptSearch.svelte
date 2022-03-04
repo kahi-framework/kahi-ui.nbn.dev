@@ -1,8 +1,16 @@
 <script context="module" lang="ts">
+    import {dev} from "$app/env";
+    import FlexSearch from "flexsearch";
     import {Book, Edit, Megaphone} from "lucide-svelte";
     import type {SvelteComponent} from "svelte";
 
-    import {normalize_pathname} from "@kahi-docs/shared";
+    import {memoize, normalize_pathname} from "@kahi-docs/shared";
+
+    import type {
+        ISearchGet,
+        ISearchIndex,
+        ISearchRecord,
+    } from "../../routes/api/v4/search/index.json";
 
     const CONTENT_ICONS: Record<string, typeof SvelteComponent | undefined> = {
         blog: Megaphone,
@@ -10,11 +18,88 @@
         playground: Edit,
     };
 
+    enum SEARCH_WEIGHTS {
+        text,
+
+        title,
+
+        identifier,
+    }
+
+    type ISearcher = (query: string) => ISearchResult[];
+
+    interface ISearchResult {
+        identifier: string;
+
+        title: string;
+    }
+
+    async function fetch_search_index(): Promise<ISearchIndex> {
+        const response = await fetch("/api/v4/search.json");
+        const data = (await response.json()) as ISearchGet;
+
+        return data.data;
+    }
+
     function get_icon(href: string): typeof SvelteComponent | null {
         const category = normalize_pathname(href).split("/")[1];
 
         return CONTENT_ICONS[category] ?? null;
     }
+
+    async function _make_searcher(): Promise<ISearcher> {
+        const documents = new FlexSearch.Document<ISearchRecord>({
+            tokenize: "full",
+            preset: "match",
+
+            document: {
+                id: "identifier",
+                index: ["identifier", "text", "title"],
+            },
+        });
+
+        const index = await fetch_search_index();
+        const lookup = new Map<string, string>();
+
+        await Promise.all(
+            index.map((entry) => {
+                const {identifier, text, title} = entry;
+
+                lookup.set(identifier, title);
+                return documents.addAsync(entry.identifier, {identifier, text, title});
+            })
+        );
+
+        return (query) => {
+            const rankings = new Map<string, number>();
+            const search_results = documents.search(query, 10);
+
+            for (const results of search_results) {
+                const weight = SEARCH_WEIGHTS[results.field as keyof typeof SEARCH_WEIGHTS];
+
+                for (const identifier of results.result) {
+                    const rank = rankings.get(identifier as string) ?? 0;
+
+                    rankings.set(identifier as string, rank + weight);
+                }
+            }
+
+            return Array.from(rankings.entries())
+                .sort((ranking_a, ranking_b) => ranking_b[1] - ranking_a[1])
+                .slice(0, 9)
+                .map((ranking) => {
+                    const [identifier] = ranking;
+                    const title = lookup.get(identifier) as string;
+
+                    return {
+                        identifier,
+                        title,
+                    };
+                });
+        };
+    }
+
+    const make_searcher = dev ? _make_searcher : memoize(_make_searcher)[0];
 </script>
 
 <script lang="ts">
@@ -37,8 +122,6 @@
     import {tick} from "svelte";
 
     import {scroll_into_container} from "../client/element";
-    import type {ISearchResult} from "../../lib/client/search";
-    import {make_searcher} from "../../lib/client/search";
 
     import AppAnchor from "./AppAnchor.svelte";
 
