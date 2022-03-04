@@ -111,7 +111,11 @@
                     </Card.Section>
 
                     <Card.Section>
-                        <Scrollable bind:element={scrollable_element} max_height="viewport-50">
+                        <Scrollable
+                            bind:element={scrollable_element}
+                            height="massive"
+                            max_height="viewport-50"
+                        >
                             <Stack.Container spacing="small">
                                 <!--
                                     NOTE: Since multiple pages might have the same title, we can't
