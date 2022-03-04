@@ -1,8 +1,6 @@
 import type {INavigationMenu} from "@kahi-docs/config";
 import type {IPageRender} from "@kahi-docs/markdown";
 
-import type {ISearchIndex} from "../shared/search";
-
 export interface IRouteError {
     code: string;
 
@@ -22,8 +20,4 @@ export interface INavigationGet extends IRouteSuccess {
     // HACK: well uh, we can't bail out of build errors when a route fetches
     // during preload... So we gotta just return this instead
     data: INavigationMenu[] | null;
-}
-
-export interface ISearchGet extends IRouteSuccess {
-    data: ISearchIndex;
 }
