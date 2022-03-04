@@ -81,14 +81,7 @@
             Source
         </AppAnchor>
 
-        <AppAnchor
-            is="button"
-            href="/docs/guides/getting-started"
-            palette="accent"
-            sizing="large"
-            no_handle
-            prefetch
-        >
+        <AppAnchor is="button" href="/docs" palette="accent" sizing="large" no_handle prefetch>
             Getting Started
             <ArrowRight size="1em" />
         </AppAnchor>
