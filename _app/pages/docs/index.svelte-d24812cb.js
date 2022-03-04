@@ -1,0 +1,1 @@
+import{S as s,i as e,s as o}from"../../chunks/vendor-7fbbcfcb.js";const n="guides/getting-started",l=()=>({status:302,redirect:`/docs/${n}`});class u extends s{constructor(t){super();e(this,t,null,null,o,{})}}export{n as INITIAL_DOCS,u as default,l as load};

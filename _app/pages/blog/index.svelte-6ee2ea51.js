@@ -1,0 +1,1 @@
+import{S as t,i as e,s as o}from"../../chunks/vendor-7fbbcfcb.js";const n="2022-03/snippet-search-support",l=()=>({status:302,redirect:`/blog/${n}`});class u extends t{constructor(s){super();e(this,s,null,null,o,{})}}export{n as INITIAL_BLOG,u as default,l as load};
