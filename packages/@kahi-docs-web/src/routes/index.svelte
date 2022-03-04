@@ -5,10 +5,10 @@
 
     import type {ISnippetGet} from "./api/v4/snippets/[identifier].json";
 
-    const SNIPPET_IDENTIFIER = "getting-started-patterns";
+    const FRONTPAGE_SNIPPET = "getting-started-patterns";
 
     export const load: Load = async ({fetch}) => {
-        const response = await fetch(`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`);
+        const response = await fetch(`/api/v4/snippets/${FRONTPAGE_SNIPPET}.json`);
         if (!response.ok) {
             const data = (await response.json()) as IRouteError;
 
@@ -25,7 +25,7 @@
                 snippet: data.data,
             },
             stuff: {
-                prerender: [`/api/v4/snippets/${SNIPPET_IDENTIFIER}.json`],
+                prerender: [`/api/v4/snippets/${FRONTPAGE_SNIPPET}.json`],
             },
         };
     };
@@ -45,12 +45,12 @@
     } from "@kahi-ui/framework";
     import {ArrowRight, Code, LayoutTemplate, Moon, Zap} from "lucide-svelte";
 
-    import type {ISnippet} from "@kahi-docs/markdown";
+    import type {ISnippetRecord} from "./api/v4/snippets/[identifier].json";
 
     import AppAnchor from "../lib/components/AppAnchor.svelte";
     import REPLEmbed from "../lib/components/repl/REPLEmbed.svelte";
 
-    export let snippet: ISnippet;
+    export let snippet: ISnippetRecord;
 </script>
 
 <Hero.Container padding_y="huge">

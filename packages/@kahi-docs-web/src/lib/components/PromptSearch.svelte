@@ -209,12 +209,7 @@
     <Overlay.Section animation="slide" direction="top" alignment_y="top">
         {#if logic_state}
             {#await make_searcher()}
-                <Card.Container
-                    palette="auto"
-                    margin_top="huge"
-                    width="prose"
-                    max_width="viewport-75"
-                >
+                <Card.Container margin_top="huge" width="prose" max_width="viewport-75">
                     <Card.Header>
                         <Center width="100">
                             <Text is="span">
@@ -227,7 +222,6 @@
                 {@const results = value ? searcher(value) : null}
 
                 <Card.Container
-                    palette="auto"
                     margin_top="huge"
                     width="prose"
                     max_width="viewport-75"

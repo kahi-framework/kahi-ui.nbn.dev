@@ -1,13 +1,15 @@
 <script context="module" lang="ts">
     import type {Load} from "@sveltejs/kit";
 
+    export const FALLBACK_SNIPPET = "getting-started-usage";
+
     export const load: Load = () => {
         return {
             stuff: {
                 metadata: {
                     description: "Playground",
                 },
-                prerender: [`/api/v4/snippets.json`, `/api/v4/snippets/getting-started-usage.json`],
+                prerender: [`/api/v4/snippets.json`, `/api/v4/snippets/${FALLBACK_SNIPPET}.json`],
             },
         };
     };
