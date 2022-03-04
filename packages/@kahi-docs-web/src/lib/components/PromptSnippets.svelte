@@ -41,8 +41,9 @@
     } from "@kahi-ui/framework";
     import {createEventDispatcher} from "svelte";
 
+    import {scroll_into_container} from "../client/element";
+
     import type {ISnippetRecord} from "../../routes/api/v4/snippets/[identifier].json";
-    import {snippets} from "../client/snippets";
 
     type $$Events = {
         snippet: CustomEvent<{snippet: ISnippetRecord}>;
@@ -53,6 +54,7 @@
     export let logic_state: boolean = false;
 
     let input_element: HTMLInputElement | undefined;
+    let scrollable_element: HTMLDivElement | undefined;
 
     let value: string = "";
 
@@ -69,6 +71,17 @@
     }
 
     $: if (logic_state && input_element) input_element.focus();
+    $: {
+        if (logic_state && scrollable_element) {
+            // HACK: This is just here to mark this block as reactive
+            value;
+
+            const title_element = scrollable_element.querySelector<HTMLElement>(".text");
+            if (title_element) {
+                scroll_into_container(title_element, "center", "smooth", scrollable_element);
+            }
+        }
+    }
 </script>
 
 <Overlay.Container class="snippet-prompt" logic_id="snippet-prompt" dismissible bind:logic_state>
@@ -98,7 +111,7 @@
                     </Card.Section>
 
                     <Card.Section>
-                        <Scrollable max_height="viewport-50">
+                        <Scrollable bind:element={scrollable_element} max_height="viewport-50">
                             <Stack.Container spacing="small">
                                 <!--
                                     NOTE: Since multiple pages might have the same title, we can't
