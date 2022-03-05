@@ -119,21 +119,21 @@
         <Menu.Container orientation="horizontal" sizing="tiny">
             <Menu.Label for="snippet-prompt" palette="alert">
                 <Search size="1em" />
-                Snippets
+                <Text is="span" hidden="mobile">Snippets</Text>
             </Menu.Label>
 
             <Menu.Label for="share-prompt" palette="informative">
                 <Share2 size="1em" />
-                Share
+                <Text is="span" hidden="mobile">Share</Text>
             </Menu.Label>
 
             <Menu.Button palette="affirmative" on:click={on_copy_click}>
                 <Copy size="1em" />
-                Copy
+                <Text is="span" hidden="mobile">Copy</Text>
             </Menu.Button>
 
             <Menu.Button
-                palette="inverse"
+                palette="negative"
                 on:click={() =>
                     (orientation =
                         orientation === SPLIT_ORIENTATION.horizontal
@@ -141,7 +141,7 @@
                             : SPLIT_ORIENTATION.horizontal)}
             >
                 <RotateCw size="1em" />
-                <Text is="span" hidden={["mobile", "tablet"]}>Rotate</Text>
+                <Text is="span" hidden="mobile">Rotate</Text>
             </Menu.Button>
 
             <Menu.Button

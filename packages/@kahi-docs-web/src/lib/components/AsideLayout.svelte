@@ -9,10 +9,10 @@
         <slot />
     </main>
 
+    <AppFooter />
+
     <AsideNavigation />
     <AppNavigation />
-
-    <AppFooter />
 </div>
 
 <style>

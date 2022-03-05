@@ -3,11 +3,11 @@
 </script>
 
 <div class="static-layout">
-    <AppNavigation />
-
     <main class="static-container">
         <slot />
     </main>
+
+    <AppNavigation />
 </div>
 
 <style>

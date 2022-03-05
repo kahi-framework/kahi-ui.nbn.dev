@@ -8,8 +8,8 @@
         <slot />
     </main>
 
-    <AppNavigation />
     <AppFooter />
+    <AppNavigation />
 </div>
 
 <style>
