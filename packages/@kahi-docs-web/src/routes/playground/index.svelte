@@ -116,7 +116,7 @@
         alignment_x={["center", "desktop:right", "widescreen:right"]}
         orientation="horizontal"
     >
-        <Menu.Container orientation="horizontal" sizing="tiny">
+        <Menu.Container orientation="horizontal" sizing={["tiny", "mobile:small", "tablet:small"]}>
             <Menu.Label for="snippet-prompt" palette="alert">
                 <Search size="1em" />
                 <Text is="span" hidden="mobile">Snippets</Text>
