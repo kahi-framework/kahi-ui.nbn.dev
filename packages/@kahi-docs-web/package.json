@@ -52,7 +52,7 @@
         "@kahi-docs/node": "workspace:^",
         "@kahi-docs/shared": "workspace:^",
         "@kahi-ui/framework": "0.6.2",
-        "@novacbn/svelte-codejar": "^0.1.1",
+        "@novacbn/svelte-codejar": "0.1.2",
         "@novacbn/svelte-pipeline": "0.3.0",
         "flexsearch": "^0.7.21",
         "lucide-svelte": "^0.17.2",

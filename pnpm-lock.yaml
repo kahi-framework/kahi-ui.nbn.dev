@@ -125,7 +125,7 @@ importers:
       '@kahi-docs/node': workspace:^
       '@kahi-docs/shared': workspace:^
       '@kahi-ui/framework': 0.6.2
-      '@novacbn/svelte-codejar': ^0.1.1
+      '@novacbn/svelte-codejar': 0.1.2
       '@novacbn/svelte-pipeline': 0.3.0
       '@sveltejs/adapter-static': 1.0.0-next.27
       '@sveltejs/kit': 1.0.0-next.277
@@ -157,7 +157,7 @@ importers:
       '@kahi-docs/node': link:../@kahi-docs-node
       '@kahi-docs/shared': link:../@kahi-docs-shared
       '@kahi-ui/framework': 0.6.2
-      '@novacbn/svelte-codejar': 0.1.1
+      '@novacbn/svelte-codejar': 0.1.2
       '@novacbn/svelte-pipeline': 0.3.0
       flexsearch: 0.7.21
       lucide-svelte: 0.17.2_svelte2tsx@0.4.14+svelte@3.46.4
@@ -221,8 +221,8 @@ packages:
       fastq: 1.13.0
     dev: true
 
-  /@novacbn/svelte-codejar/0.1.1:
-    resolution: {integrity: sha512-/Kfc5JwOCcxF3WgjWSfNGoqPsjL3Rr8bwEBoNCZHothVS1Xs+UY7Z7VrqnX//d1JiM1wp/fCoyS5QYNI7qoJuw==}
+  /@novacbn/svelte-codejar/0.1.2:
+    resolution: {integrity: sha512-lZd6r+dbdU+zN8d4QW005QEmTT6WDKjpTXvbPIcqIWGSnbWBVoEMFPOwJ0C3PYM4hHAjb2GHF4DBywlWQogNLw==}
     dependencies:
       codejar: 3.5.0
       svelte: 3.46.4
