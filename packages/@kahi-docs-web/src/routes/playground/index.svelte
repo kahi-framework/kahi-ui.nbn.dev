@@ -124,12 +124,12 @@
 
             <Menu.Label for="share-prompt" palette="informative">
                 <Share2 size="1em" />
-                Share
+                <Text is="span" hidden="mobile">Share</Text>
             </Menu.Label>
 
             <Menu.Button palette="affirmative" on:click={on_copy_click}>
                 <Copy size="1em" />
-                Copy
+                <Text is="span" hidden="mobile">Copy</Text>
             </Menu.Button>
 
             <Menu.Button
